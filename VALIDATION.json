@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "validation_scope": "Docker",
   "quality_gate": {
     "command": "./run.sh check",
@@ -43,5 +43,153 @@
     "z3_unknowns": 0,
     "command": "./run.sh fuzz-differential",
     "result": "PASS"
+  },
+  "business_validation_benchmark": {
+    "benchmark_version": "0.3.0",
+    "cases_checked": 300,
+    "catalog": "benchmarks/v0.3/catalog.json",
+    "correct_cases": 60,
+    "counterexample_coverage": 1.0,
+    "enum_false_disproved": 0,
+    "enum_false_proved": 0,
+    "enum_unknowns": 0,
+    "enum_z3_verdict_disagreements": 0,
+    "expected_disproved": 240,
+    "expected_proved": 60,
+    "invalid_replays": 0,
+    "missing_counterexamples": 0,
+    "mutant_cases": 240,
+    "mutation_kill_rate": 1.0,
+    "oracle_label_mismatches": 0,
+    "passed": true,
+    "per_domain": {
+      "banking": {
+        "cases": 100,
+        "disagreements": 0,
+        "expected_disproved": 80,
+        "expected_proved": 20,
+        "z3_disproved": 80,
+        "z3_proved": 20,
+        "z3_unknown": 0
+      },
+      "ecommerce": {
+        "cases": 100,
+        "disagreements": 0,
+        "expected_disproved": 80,
+        "expected_proved": 20,
+        "z3_disproved": 80,
+        "z3_proved": 20,
+        "z3_unknown": 0
+      },
+      "insurance": {
+        "cases": 100,
+        "disagreements": 0,
+        "expected_disproved": 80,
+        "expected_proved": 20,
+        "z3_disproved": 80,
+        "z3_proved": 20,
+        "z3_unknown": 0
+      }
+    },
+    "per_family": {
+      "conditional_flag": {
+        "cases": 30,
+        "disagreements": 0,
+        "expected_disproved": 24,
+        "expected_proved": 6,
+        "z3_disproved": 24,
+        "z3_proved": 6,
+        "z3_unknown": 0
+      },
+      "dual_and": {
+        "cases": 30,
+        "disagreements": 0,
+        "expected_disproved": 24,
+        "expected_proved": 6,
+        "z3_disproved": 24,
+        "z3_proved": 6,
+        "z3_unknown": 0
+      },
+      "dual_or": {
+        "cases": 30,
+        "disagreements": 0,
+        "expected_disproved": 24,
+        "expected_proved": 6,
+        "z3_disproved": 24,
+        "z3_proved": 6,
+        "z3_unknown": 0
+      },
+      "not_blocked_threshold": {
+        "cases": 30,
+        "disagreements": 0,
+        "expected_disproved": 24,
+        "expected_proved": 6,
+        "z3_disproved": 24,
+        "z3_proved": 6,
+        "z3_unknown": 0
+      },
+      "range_and_flag": {
+        "cases": 30,
+        "disagreements": 0,
+        "expected_disproved": 24,
+        "expected_proved": 6,
+        "z3_disproved": 24,
+        "z3_proved": 6,
+        "z3_unknown": 0
+      },
+      "threshold_and_flag": {
+        "cases": 30,
+        "disagreements": 0,
+        "expected_disproved": 24,
+        "expected_proved": 6,
+        "z3_disproved": 24,
+        "z3_proved": 6,
+        "z3_unknown": 0
+      },
+      "threshold_or_flag": {
+        "cases": 30,
+        "disagreements": 0,
+        "expected_disproved": 24,
+        "expected_proved": 6,
+        "z3_disproved": 24,
+        "z3_proved": 6,
+        "z3_unknown": 0
+      },
+      "tiered_threshold": {
+        "cases": 30,
+        "disagreements": 0,
+        "expected_disproved": 24,
+        "expected_proved": 6,
+        "z3_disproved": 24,
+        "z3_proved": 6,
+        "z3_unknown": 0
+      },
+      "two_bool_and": {
+        "cases": 30,
+        "disagreements": 0,
+        "expected_disproved": 24,
+        "expected_proved": 6,
+        "z3_disproved": 24,
+        "z3_proved": 6,
+        "z3_unknown": 0
+      },
+      "two_bool_or": {
+        "cases": 30,
+        "disagreements": 0,
+        "expected_disproved": 24,
+        "expected_proved": 6,
+        "z3_disproved": 24,
+        "z3_proved": 6,
+        "z3_unknown": 0
+      }
+    },
+    "proof_coverage": 1.0,
+    "rules_checked": 60,
+    "runtime_seconds": 4.709285251999972,
+    "unexpected_crashes": 0,
+    "z3_false_disproved": 0,
+    "z3_false_proved": 0,
+    "z3_mutants_killed": 240,
+    "z3_unknowns": 0
   }
 }
