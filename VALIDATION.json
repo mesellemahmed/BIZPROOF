@@ -29,7 +29,7 @@
     "invalid_replays": 0,
     "oracle_label_mismatches": 0,
     "passed": true,
-    "runtime_seconds": 214.72008126002038,
+    "runtime_seconds": 179.2112244910095,
     "seed": 20260923,
     "templates": {
       "arithmetic": 167,
