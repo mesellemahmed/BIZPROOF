@@ -113,3 +113,35 @@ The finite enumeration backend imports and executes the target Python module. Re
 ## Research scope
 
 V0.1.1 is a verifier-hardening milestone. It is not yet the full multi-language BSIR architecture. The next scientific step is to validate semantic fidelity and proof coverage on a controlled benchmark before expanding language coverage.
+
+## V0.2 differential semantic validation
+
+V0.2 adds deterministic differential fuzzing for the supported Python semantic subset.
+The generator produces correct and intentionally mutated implementations from six template families:
+
+- threshold comparisons;
+- Boolean conjunction/disjunction;
+- arithmetic assignments;
+- conditional branches with Boolean inputs;
+- nested branches;
+- early-return control flow.
+
+Each generated contract is checked independently by finite enumeration and Z3. The finite bounded domain acts as the reference oracle. Every Z3 counterexample must still pass concrete replay.
+
+Run the 1,000-case campaign with:
+
+```bash
+./run.sh fuzz-differential
+```
+
+The campaign passes only if all of the following are zero:
+
+- oracle-label mismatches;
+- enum/Z3 verdict disagreements;
+- false `PROVED` verdicts;
+- false `DISPROVED` verdicts;
+- unexpected `UNKNOWN` verdicts;
+- invalid concrete replays;
+- unexpected crashes.
+
+The deterministic seed is `20260923`. Generated artifacts and result files are excluded from Git and can be reproduced from the seed.

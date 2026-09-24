@@ -27,6 +27,19 @@ def _build_parser() -> argparse.ArgumentParser:
         default="contracts/differential",
     )
 
+    fuzz = subparsers.add_parser("fuzz-differential")
+    fuzz.add_argument("--cases", type=int, default=1000)
+    fuzz.add_argument("--seed", type=int, default=20260923)
+    fuzz.add_argument("--timeout-ms", type=int, default=10000)
+    fuzz.add_argument(
+        "--generated-dir",
+        default="experiments/generated/v0.2",
+    )
+    fuzz.add_argument(
+        "--report",
+        default="experiments/results/v0.2-differential-summary.json",
+    )
+
     return parser
 
 
@@ -71,6 +84,35 @@ def _run_differential(args: argparse.Namespace) -> int:
     return 0 if summary.passed else 1
 
 
+def _run_fuzz_differential(args: argparse.Namespace) -> int:
+    from .fuzzing import run_fuzz_differential, write_summary
+
+    summary = run_fuzz_differential(
+        Path(args.generated_dir),
+        cases=args.cases,
+        seed=args.seed,
+        timeout_ms=args.timeout_ms,
+    )
+    write_summary(summary, Path(args.report))
+
+    print("Differential semantic fuzzing")
+    print(f"Seed: {summary.seed}")
+    print(f"Cases checked: {summary.cases_checked}")
+    print(f"Expected PROVED: {summary.expected_proved}")
+    print(f"Expected DISPROVED: {summary.expected_disproved}")
+    print(f"Oracle label mismatches: {summary.oracle_label_mismatches}")
+    print(f"Enum/Z3 verdict disagreements: {summary.verdict_disagreements}")
+    print(f"False PROVED: {summary.false_proved}")
+    print(f"False DISPROVED: {summary.false_disproved}")
+    print(f"Enum UNKNOWN: {summary.enum_unknowns}")
+    print(f"Z3 UNKNOWN: {summary.z3_unknowns}")
+    print(f"Invalid replayed counterexamples: {summary.invalid_replays}")
+    print(f"Unexpected crashes: {summary.crashes}")
+    print(f"Runtime seconds: {summary.runtime_seconds:.3f}")
+    print("PASS" if summary.passed else "FAIL")
+    return 0 if summary.passed else 1
+
+
 def main() -> int:
     parser = _build_parser()
     args = parser.parse_args()
@@ -79,6 +121,8 @@ def main() -> int:
         return _run_verify(args)
     if args.command == "differential":
         return _run_differential(args)
+    if args.command == "fuzz-differential":
+        return _run_fuzz_differential(args)
 
     parser.error("unsupported command")
     return 2

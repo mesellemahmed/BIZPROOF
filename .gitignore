@@ -7,3 +7,6 @@ dist/
 build/
 *.egg-info/
 experiments/results/
+experiments/generated/
+
+bizproof-*.zip

@@ -1,24 +1,47 @@
 {
-  "version": "0.1.1",
+  "version": "0.2.0",
   "validation_scope": "Docker",
   "quality_gate": {
     "command": "./run.sh check",
     "result": "PASS",
     "ruff": "PASS",
     "format": "PASS",
-    "mypy": "PASS - 13 source files",
-    "pytest": "PASS - 13 tests"
+    "mypy": "PASS",
+    "pytest": "PASS"
   },
-  "functional_validation": {
-    "enum_demo": "DISPROVED - counterexample replay validated",
-    "z3_demo": "DISPROVED - counterexample replay validated",
-    "vacuous_demo": "UNKNOWN - unsatisfiable_precondition"
-  },
-  "differential_validation": {
+  "regression_validation": {
+    "command": "./run.sh differential",
     "contracts_checked": 3,
     "enum_z3_verdict_disagreements": 0,
     "invalid_z3_counterexamples_after_replay": 0,
     "unexpected_unknown_verdicts": 0,
+    "result": "PASS"
+  },
+  "differential_semantic_fuzzing": {
+    "cases_checked": 1000,
+    "cases_requested": 1000,
+    "crashes": 0,
+    "enum_unknowns": 0,
+    "expected_disproved": 500,
+    "expected_proved": 500,
+    "false_disproved": 0,
+    "false_proved": 0,
+    "invalid_replays": 0,
+    "oracle_label_mismatches": 0,
+    "passed": true,
+    "runtime_seconds": 214.72008126002038,
+    "seed": 20260923,
+    "templates": {
+      "arithmetic": 167,
+      "boolean": 167,
+      "branch": 167,
+      "early_return": 166,
+      "nested": 166,
+      "threshold": 167
+    },
+    "verdict_disagreements": 0,
+    "z3_unknowns": 0,
+    "command": "./run.sh fuzz-differential",
     "result": "PASS"
   }
 }
