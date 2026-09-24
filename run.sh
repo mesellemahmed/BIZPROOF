@@ -36,6 +36,16 @@ case "$cmd" in
       --generated-dir experiments/generated/v0.2 \
       --report experiments/results/v0.2-differential-summary.json
     ;;
+  baseline-comparison)
+    docker compose run --rm --entrypoint python bizproof \
+      -m bizproof.baseline_comparison \
+      --catalog benchmarks/v0.3/catalog.json \
+      --output experiments/results/v0.4-baseline-comparison-summary.json \
+      --details experiments/results/v0.4-baseline-comparison-details.csv \
+      --hypothesis-examples 100 \
+      --crosshair-condition-timeout 0.5 \
+      --crosshair-process-timeout 5.0
+    ;;
   check)
     docker compose run --rm --entrypoint sh bizproof -lc \
       'ruff check . && ruff format --check . && mypy src && pytest'
@@ -51,6 +61,7 @@ Usage:
   ./run.sh demo-vacuous
   ./run.sh differential
   ./run.sh fuzz-differential
+  ./run.sh baseline-comparison
 EOF
     ;;
 esac

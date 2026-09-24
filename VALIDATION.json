@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "validation_scope": "Docker",
   "quality_gate": {
     "command": "./run.sh check",
@@ -191,5 +191,214 @@
     "z3_false_proved": 0,
     "z3_mutants_killed": 240,
     "z3_unknowns": 0
+  },
+  "baseline_comparison": {
+    "benchmark_version": "0.4.0",
+    "cases_checked": 300,
+    "catalog": "benchmarks/v0.3/catalog.json",
+    "crosshair_per_condition_timeout": 0.5,
+    "crosshair_process_timeout": 5.0,
+    "environment": {
+      "crosshair_tool": "0.0.110",
+      "hypothesis": "6.168.1",
+      "python": "3.12.14"
+    },
+    "hypothesis_max_examples": 100,
+    "interpretation": {
+      "bizproof_no_counterexample": "formal verdict PROVED within the supported BIZPROOF semantics",
+      "crosshair_no_counterexample": "no counterexample reported within the configured analysis budget; not treated as a proof",
+      "hypothesis_no_counterexample": "no counterexample found within the configured search budget; not a proof"
+    },
+    "methods": {
+      "bizproof": {
+        "cases": 300,
+        "classification_accuracy": 1.0,
+        "correct_cases": 60,
+        "correct_false_alarm_rate": 0.0,
+        "correct_false_alarms": 0,
+        "missed_mutants": 0,
+        "mutant_detection_rate": 1.0,
+        "mutants": 240,
+        "mutants_detected": 240,
+        "no_counterexample_on_correct": 60,
+        "runtime_seconds": 2.501781,
+        "unknown_or_error": 0
+      },
+      "crosshair": {
+        "cases": 300,
+        "classification_accuracy": 1.0,
+        "correct_cases": 60,
+        "correct_false_alarm_rate": 0.0,
+        "correct_false_alarms": 0,
+        "missed_mutants": 0,
+        "mutant_detection_rate": 1.0,
+        "mutants": 240,
+        "mutants_detected": 240,
+        "no_counterexample_on_correct": 60,
+        "runtime_seconds": 276.819441,
+        "unknown_or_error": 0
+      },
+      "hypothesis": {
+        "cases": 300,
+        "classification_accuracy": 1.0,
+        "correct_cases": 60,
+        "correct_false_alarm_rate": 0.0,
+        "correct_false_alarms": 0,
+        "missed_mutants": 0,
+        "mutant_detection_rate": 1.0,
+        "mutants": 240,
+        "mutants_detected": 240,
+        "no_counterexample_on_correct": 60,
+        "runtime_seconds": 9.408688,
+        "unknown_or_error": 0
+      }
+    },
+    "mutants_per_rule": 4,
+    "pairwise_mutant_detection": {
+      "bizproof_vs_crosshair": {
+        "both_detected": 240
+      },
+      "bizproof_vs_hypothesis": {
+        "both_detected": 240
+      }
+    },
+    "passed": true,
+    "per_domain": {
+      "banking": {
+        "bizproof": {
+          "cases": 100,
+          "classification_accuracy": 1.0,
+          "correct_cases": 20,
+          "correct_false_alarm_rate": 0.0,
+          "correct_false_alarms": 0,
+          "missed_mutants": 0,
+          "mutant_detection_rate": 1.0,
+          "mutants": 80,
+          "mutants_detected": 80,
+          "no_counterexample_on_correct": 20,
+          "runtime_seconds": 0.859592,
+          "unknown_or_error": 0
+        },
+        "crosshair": {
+          "cases": 100,
+          "classification_accuracy": 1.0,
+          "correct_cases": 20,
+          "correct_false_alarm_rate": 0.0,
+          "correct_false_alarms": 0,
+          "missed_mutants": 0,
+          "mutant_detection_rate": 1.0,
+          "mutants": 80,
+          "mutants_detected": 80,
+          "no_counterexample_on_correct": 20,
+          "runtime_seconds": 90.445148,
+          "unknown_or_error": 0
+        },
+        "hypothesis": {
+          "cases": 100,
+          "classification_accuracy": 1.0,
+          "correct_cases": 20,
+          "correct_false_alarm_rate": 0.0,
+          "correct_false_alarms": 0,
+          "missed_mutants": 0,
+          "mutant_detection_rate": 1.0,
+          "mutants": 80,
+          "mutants_detected": 80,
+          "no_counterexample_on_correct": 20,
+          "runtime_seconds": 3.547988,
+          "unknown_or_error": 0
+        }
+      },
+      "ecommerce": {
+        "bizproof": {
+          "cases": 100,
+          "classification_accuracy": 1.0,
+          "correct_cases": 20,
+          "correct_false_alarm_rate": 0.0,
+          "correct_false_alarms": 0,
+          "missed_mutants": 0,
+          "mutant_detection_rate": 1.0,
+          "mutants": 80,
+          "mutants_detected": 80,
+          "no_counterexample_on_correct": 20,
+          "runtime_seconds": 0.809688,
+          "unknown_or_error": 0
+        },
+        "crosshair": {
+          "cases": 100,
+          "classification_accuracy": 1.0,
+          "correct_cases": 20,
+          "correct_false_alarm_rate": 0.0,
+          "correct_false_alarms": 0,
+          "missed_mutants": 0,
+          "mutant_detection_rate": 1.0,
+          "mutants": 80,
+          "mutants_detected": 80,
+          "no_counterexample_on_correct": 20,
+          "runtime_seconds": 92.381461,
+          "unknown_or_error": 0
+        },
+        "hypothesis": {
+          "cases": 100,
+          "classification_accuracy": 1.0,
+          "correct_cases": 20,
+          "correct_false_alarm_rate": 0.0,
+          "correct_false_alarms": 0,
+          "missed_mutants": 0,
+          "mutant_detection_rate": 1.0,
+          "mutants": 80,
+          "mutants_detected": 80,
+          "no_counterexample_on_correct": 20,
+          "runtime_seconds": 2.823981,
+          "unknown_or_error": 0
+        }
+      },
+      "insurance": {
+        "bizproof": {
+          "cases": 100,
+          "classification_accuracy": 1.0,
+          "correct_cases": 20,
+          "correct_false_alarm_rate": 0.0,
+          "correct_false_alarms": 0,
+          "missed_mutants": 0,
+          "mutant_detection_rate": 1.0,
+          "mutants": 80,
+          "mutants_detected": 80,
+          "no_counterexample_on_correct": 20,
+          "runtime_seconds": 0.832501,
+          "unknown_or_error": 0
+        },
+        "crosshair": {
+          "cases": 100,
+          "classification_accuracy": 1.0,
+          "correct_cases": 20,
+          "correct_false_alarm_rate": 0.0,
+          "correct_false_alarms": 0,
+          "missed_mutants": 0,
+          "mutant_detection_rate": 1.0,
+          "mutants": 80,
+          "mutants_detected": 80,
+          "no_counterexample_on_correct": 20,
+          "runtime_seconds": 93.992832,
+          "unknown_or_error": 0
+        },
+        "hypothesis": {
+          "cases": 100,
+          "classification_accuracy": 1.0,
+          "correct_cases": 20,
+          "correct_false_alarm_rate": 0.0,
+          "correct_false_alarms": 0,
+          "missed_mutants": 0,
+          "mutant_detection_rate": 1.0,
+          "mutants": 80,
+          "mutants_detected": 80,
+          "no_counterexample_on_correct": 20,
+          "runtime_seconds": 3.036718,
+          "unknown_or_error": 0
+        }
+      }
+    },
+    "rules_checked": 60,
+    "tool_errors": [],
+    "wall_runtime_seconds": 288.897944
   }
 }
