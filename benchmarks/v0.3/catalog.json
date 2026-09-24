@@ -1,0 +1,1356 @@
+{
+  "benchmark": "BIZPROOF Independent Business Validation Benchmark",
+  "version": "0.3.0",
+  "nature": "curated synthetic business-rule benchmark independent of verifier execution",
+  "domains": [
+    "banking",
+    "ecommerce",
+    "insurance"
+  ],
+  "rules": [
+    {
+      "id": "BANK-001",
+      "domain": "banking",
+      "title": "An operation is allowed when the primary eligibility score reaches 1 or a manual override is present",
+      "business_text": "An operation is allowed when the primary eligibility score reaches 1 or a manual override is present.",
+      "family": "threshold_or_flag",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 5,
+          "label": "Primary banking metric"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Primary banking control"
+        }
+      },
+      "params": {
+        "threshold": 1
+      }
+    },
+    {
+      "id": "BANK-002",
+      "domain": "banking",
+      "title": "An operation is allowed when the primary eligibility score reaches 2 or a manual override is present",
+      "business_text": "An operation is allowed when the primary eligibility score reaches 2 or a manual override is present.",
+      "family": "threshold_or_flag",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 5,
+          "label": "Primary banking metric"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Primary banking control"
+        }
+      },
+      "params": {
+        "threshold": 2
+      }
+    },
+    {
+      "id": "BANK-003",
+      "domain": "banking",
+      "title": "A credit decision is eligible only when the primary score reaches 2 and verification is complete",
+      "business_text": "A credit decision is eligible only when the primary score reaches 2 and verification is complete.",
+      "family": "threshold_and_flag",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 5,
+          "label": "Primary banking metric"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Primary banking control"
+        }
+      },
+      "params": {
+        "threshold": 2
+      }
+    },
+    {
+      "id": "BANK-004",
+      "domain": "banking",
+      "title": "A credit decision is eligible only when the primary score reaches 3 and verification is complete",
+      "business_text": "A credit decision is eligible only when the primary score reaches 3 and verification is complete.",
+      "family": "threshold_and_flag",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 5,
+          "label": "Primary banking metric"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Primary banking control"
+        }
+      },
+      "params": {
+        "threshold": 3
+      }
+    },
+    {
+      "id": "BANK-005",
+      "domain": "banking",
+      "title": "A transaction is permitted when the risk score is between -1 and 2 inclusive and the account is verified",
+      "business_text": "A transaction is permitted when the risk score is between -1 and 2 inclusive and the account is verified.",
+      "family": "range_and_flag",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -3,
+          "max": 5,
+          "label": "Primary banking metric"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Primary banking control"
+        }
+      },
+      "params": {
+        "low": -1,
+        "high": 2
+      }
+    },
+    {
+      "id": "BANK-006",
+      "domain": "banking",
+      "title": "A transaction is permitted when the risk score is between 0 and 3 inclusive and the account is verified",
+      "business_text": "A transaction is permitted when the risk score is between 0 and 3 inclusive and the account is verified.",
+      "family": "range_and_flag",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -3,
+          "max": 5,
+          "label": "Primary banking metric"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Primary banking control"
+        }
+      },
+      "params": {
+        "low": 0,
+        "high": 3
+      }
+    },
+    {
+      "id": "BANK-007",
+      "domain": "banking",
+      "title": "A request is eligible only when metric X reaches 0 and metric Y reaches 1",
+      "business_text": "A request is eligible only when metric X reaches 0 and metric Y reaches 1.",
+      "family": "dual_and",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 4,
+          "label": "Primary banking metric"
+        },
+        "y": {
+          "type": "int",
+          "min": -2,
+          "max": 4,
+          "label": "Secondary banking metric"
+        }
+      },
+      "params": {
+        "x_threshold": 0,
+        "y_threshold": 1
+      }
+    },
+    {
+      "id": "BANK-008",
+      "domain": "banking",
+      "title": "A request is eligible only when metric X reaches 1 and metric Y reaches 2",
+      "business_text": "A request is eligible only when metric X reaches 1 and metric Y reaches 2.",
+      "family": "dual_and",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 4,
+          "label": "Primary banking metric"
+        },
+        "y": {
+          "type": "int",
+          "min": -2,
+          "max": 4,
+          "label": "Secondary banking metric"
+        }
+      },
+      "params": {
+        "x_threshold": 1,
+        "y_threshold": 2
+      }
+    },
+    {
+      "id": "BANK-009",
+      "domain": "banking",
+      "title": "A request is eligible when either metric X reaches 0 or metric Y reaches 1",
+      "business_text": "A request is eligible when either metric X reaches 0 or metric Y reaches 1.",
+      "family": "dual_or",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 4,
+          "label": "Primary banking metric"
+        },
+        "y": {
+          "type": "int",
+          "min": -2,
+          "max": 4,
+          "label": "Secondary banking metric"
+        }
+      },
+      "params": {
+        "x_threshold": 0,
+        "y_threshold": 1
+      }
+    },
+    {
+      "id": "BANK-010",
+      "domain": "banking",
+      "title": "A request is eligible when either metric X reaches 1 or metric Y reaches 2",
+      "business_text": "A request is eligible when either metric X reaches 1 or metric Y reaches 2.",
+      "family": "dual_or",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 4,
+          "label": "Primary banking metric"
+        },
+        "y": {
+          "type": "int",
+          "min": -2,
+          "max": 4,
+          "label": "Secondary banking metric"
+        }
+      },
+      "params": {
+        "x_threshold": 1,
+        "y_threshold": 2
+      }
+    },
+    {
+      "id": "BANK-011",
+      "domain": "banking",
+      "title": "A transaction is allowed only when the amount indicator is at most 2 and the account is not blocked",
+      "business_text": "A transaction is allowed only when the amount indicator is at most 2 and the account is not blocked.",
+      "family": "not_blocked_threshold",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 5,
+          "label": "Primary banking metric"
+        },
+        "blocked": {
+          "type": "bool",
+          "label": "Account blocked"
+        }
+      },
+      "params": {
+        "max_x": 2
+      }
+    },
+    {
+      "id": "BANK-012",
+      "domain": "banking",
+      "title": "A transaction is allowed only when the amount indicator is at most 3 and the account is not blocked",
+      "business_text": "A transaction is allowed only when the amount indicator is at most 3 and the account is not blocked.",
+      "family": "not_blocked_threshold",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 5,
+          "label": "Primary banking metric"
+        },
+        "blocked": {
+          "type": "bool",
+          "label": "Account blocked"
+        }
+      },
+      "params": {
+        "max_x": 3
+      }
+    },
+    {
+      "id": "BANK-013",
+      "domain": "banking",
+      "title": "The operation is allowed only when both required banking controls are satisfied",
+      "business_text": "The operation is allowed only when both required banking controls are satisfied.",
+      "family": "two_bool_and",
+      "inputs": {
+        "a": {
+          "type": "bool",
+          "label": "Authorization A"
+        },
+        "b": {
+          "type": "bool",
+          "label": "Authorization B"
+        }
+      },
+      "params": {}
+    },
+    {
+      "id": "BANK-014",
+      "domain": "banking",
+      "title": "The operation is allowed only when both required banking controls are satisfied",
+      "business_text": "The operation is allowed only when both required banking controls are satisfied.",
+      "family": "two_bool_and",
+      "inputs": {
+        "a": {
+          "type": "bool",
+          "label": "Authorization A"
+        },
+        "b": {
+          "type": "bool",
+          "label": "Authorization B"
+        }
+      },
+      "params": {}
+    },
+    {
+      "id": "BANK-015",
+      "domain": "banking",
+      "title": "The operation is allowed when at least one of the two independent banking authorizations is present",
+      "business_text": "The operation is allowed when at least one of the two independent banking authorizations is present.",
+      "family": "two_bool_or",
+      "inputs": {
+        "a": {
+          "type": "bool",
+          "label": "Authorization A"
+        },
+        "b": {
+          "type": "bool",
+          "label": "Authorization B"
+        }
+      },
+      "params": {}
+    },
+    {
+      "id": "BANK-016",
+      "domain": "banking",
+      "title": "The operation is allowed when at least one of the two independent banking authorizations is present",
+      "business_text": "The operation is allowed when at least one of the two independent banking authorizations is present.",
+      "family": "two_bool_or",
+      "inputs": {
+        "a": {
+          "type": "bool",
+          "label": "Authorization A"
+        },
+        "b": {
+          "type": "bool",
+          "label": "Authorization B"
+        }
+      },
+      "params": {}
+    },
+    {
+      "id": "BANK-017",
+      "domain": "banking",
+      "title": "Premium customers qualify from score 0; standard customers qualify from score 3",
+      "business_text": "Premium customers qualify from score 0; standard customers qualify from score 3.",
+      "family": "tiered_threshold",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 6,
+          "label": "Primary banking metric"
+        },
+        "premium": {
+          "type": "bool",
+          "label": "Premium customer"
+        }
+      },
+      "params": {
+        "premium_threshold": 0,
+        "standard_threshold": 3
+      }
+    },
+    {
+      "id": "BANK-018",
+      "domain": "banking",
+      "title": "Premium customers qualify from score 1; standard customers qualify from score 4",
+      "business_text": "Premium customers qualify from score 1; standard customers qualify from score 4.",
+      "family": "tiered_threshold",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 6,
+          "label": "Primary banking metric"
+        },
+        "premium": {
+          "type": "bool",
+          "label": "Premium customer"
+        }
+      },
+      "params": {
+        "premium_threshold": 1,
+        "standard_threshold": 4
+      }
+    },
+    {
+      "id": "BANK-019",
+      "domain": "banking",
+      "title": "When score is at least 1, approval follows the primary control; below it, approval follows the fallback control",
+      "business_text": "When score is at least 1, approval follows the primary control; below it, approval follows the fallback control.",
+      "family": "conditional_flag",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 5,
+          "label": "Primary banking metric"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Primary banking control"
+        },
+        "fallback": {
+          "type": "bool",
+          "label": "Fallback banking control"
+        }
+      },
+      "params": {
+        "threshold": 1
+      }
+    },
+    {
+      "id": "BANK-020",
+      "domain": "banking",
+      "title": "When score is at least 2, approval follows the primary control; below it, approval follows the fallback control",
+      "business_text": "When score is at least 2, approval follows the primary control; below it, approval follows the fallback control.",
+      "family": "conditional_flag",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 5,
+          "label": "Primary banking metric"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Primary banking control"
+        },
+        "fallback": {
+          "type": "bool",
+          "label": "Fallback banking control"
+        }
+      },
+      "params": {
+        "threshold": 2
+      }
+    },
+    {
+      "id": "ECOM-001",
+      "domain": "ecommerce",
+      "title": "An order qualifies when the basket metric reaches 1 or the customer has a membership override",
+      "business_text": "An order qualifies when the basket metric reaches 1 or the customer has a membership override.",
+      "family": "threshold_or_flag",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 5,
+          "label": "Primary order metric"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Primary commerce condition"
+        }
+      },
+      "params": {
+        "threshold": 1
+      }
+    },
+    {
+      "id": "ECOM-002",
+      "domain": "ecommerce",
+      "title": "An order qualifies when the basket metric reaches 2 or the customer has a membership override",
+      "business_text": "An order qualifies when the basket metric reaches 2 or the customer has a membership override.",
+      "family": "threshold_or_flag",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 5,
+          "label": "Primary order metric"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Primary commerce condition"
+        }
+      },
+      "params": {
+        "threshold": 2
+      }
+    },
+    {
+      "id": "ECOM-003",
+      "domain": "ecommerce",
+      "title": "A promotion applies only when the basket metric reaches 2 and the promotion flag is active",
+      "business_text": "A promotion applies only when the basket metric reaches 2 and the promotion flag is active.",
+      "family": "threshold_and_flag",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 5,
+          "label": "Primary order metric"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Primary commerce condition"
+        }
+      },
+      "params": {
+        "threshold": 2
+      }
+    },
+    {
+      "id": "ECOM-004",
+      "domain": "ecommerce",
+      "title": "A promotion applies only when the basket metric reaches 3 and the promotion flag is active",
+      "business_text": "A promotion applies only when the basket metric reaches 3 and the promotion flag is active.",
+      "family": "threshold_and_flag",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 5,
+          "label": "Primary order metric"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Primary commerce condition"
+        }
+      },
+      "params": {
+        "threshold": 3
+      }
+    },
+    {
+      "id": "ECOM-005",
+      "domain": "ecommerce",
+      "title": "An order qualifies when the basket metric is between -1 and 2 inclusive and eligibility is confirmed",
+      "business_text": "An order qualifies when the basket metric is between -1 and 2 inclusive and eligibility is confirmed.",
+      "family": "range_and_flag",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -3,
+          "max": 5,
+          "label": "Primary order metric"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Primary commerce condition"
+        }
+      },
+      "params": {
+        "low": -1,
+        "high": 2
+      }
+    },
+    {
+      "id": "ECOM-006",
+      "domain": "ecommerce",
+      "title": "An order qualifies when the basket metric is between 0 and 3 inclusive and eligibility is confirmed",
+      "business_text": "An order qualifies when the basket metric is between 0 and 3 inclusive and eligibility is confirmed.",
+      "family": "range_and_flag",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -3,
+          "max": 5,
+          "label": "Primary order metric"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Primary commerce condition"
+        }
+      },
+      "params": {
+        "low": 0,
+        "high": 3
+      }
+    },
+    {
+      "id": "ECOM-007",
+      "domain": "ecommerce",
+      "title": "The order qualifies only when metric X reaches 0 and metric Y reaches 1",
+      "business_text": "The order qualifies only when metric X reaches 0 and metric Y reaches 1.",
+      "family": "dual_and",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 4,
+          "label": "Primary order metric"
+        },
+        "y": {
+          "type": "int",
+          "min": -2,
+          "max": 4,
+          "label": "Secondary order metric"
+        }
+      },
+      "params": {
+        "x_threshold": 0,
+        "y_threshold": 1
+      }
+    },
+    {
+      "id": "ECOM-008",
+      "domain": "ecommerce",
+      "title": "The order qualifies only when metric X reaches 1 and metric Y reaches 2",
+      "business_text": "The order qualifies only when metric X reaches 1 and metric Y reaches 2.",
+      "family": "dual_and",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 4,
+          "label": "Primary order metric"
+        },
+        "y": {
+          "type": "int",
+          "min": -2,
+          "max": 4,
+          "label": "Secondary order metric"
+        }
+      },
+      "params": {
+        "x_threshold": 1,
+        "y_threshold": 2
+      }
+    },
+    {
+      "id": "ECOM-009",
+      "domain": "ecommerce",
+      "title": "The order qualifies when either metric X reaches 0 or metric Y reaches 1",
+      "business_text": "The order qualifies when either metric X reaches 0 or metric Y reaches 1.",
+      "family": "dual_or",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 4,
+          "label": "Primary order metric"
+        },
+        "y": {
+          "type": "int",
+          "min": -2,
+          "max": 4,
+          "label": "Secondary order metric"
+        }
+      },
+      "params": {
+        "x_threshold": 0,
+        "y_threshold": 1
+      }
+    },
+    {
+      "id": "ECOM-010",
+      "domain": "ecommerce",
+      "title": "The order qualifies when either metric X reaches 1 or metric Y reaches 2",
+      "business_text": "The order qualifies when either metric X reaches 1 or metric Y reaches 2.",
+      "family": "dual_or",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 4,
+          "label": "Primary order metric"
+        },
+        "y": {
+          "type": "int",
+          "min": -2,
+          "max": 4,
+          "label": "Secondary order metric"
+        }
+      },
+      "params": {
+        "x_threshold": 1,
+        "y_threshold": 2
+      }
+    },
+    {
+      "id": "ECOM-011",
+      "domain": "ecommerce",
+      "title": "The order action is allowed only when the amount indicator is at most 2 and the order is not blocked",
+      "business_text": "The order action is allowed only when the amount indicator is at most 2 and the order is not blocked.",
+      "family": "not_blocked_threshold",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 5,
+          "label": "Primary order metric"
+        },
+        "blocked": {
+          "type": "bool",
+          "label": "Order blocked"
+        }
+      },
+      "params": {
+        "max_x": 2
+      }
+    },
+    {
+      "id": "ECOM-012",
+      "domain": "ecommerce",
+      "title": "The order action is allowed only when the amount indicator is at most 3 and the order is not blocked",
+      "business_text": "The order action is allowed only when the amount indicator is at most 3 and the order is not blocked.",
+      "family": "not_blocked_threshold",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 5,
+          "label": "Primary order metric"
+        },
+        "blocked": {
+          "type": "bool",
+          "label": "Order blocked"
+        }
+      },
+      "params": {
+        "max_x": 3
+      }
+    },
+    {
+      "id": "ECOM-013",
+      "domain": "ecommerce",
+      "title": "The checkout action is allowed only when both required commerce conditions are satisfied",
+      "business_text": "The checkout action is allowed only when both required commerce conditions are satisfied.",
+      "family": "two_bool_and",
+      "inputs": {
+        "a": {
+          "type": "bool",
+          "label": "Condition A"
+        },
+        "b": {
+          "type": "bool",
+          "label": "Condition B"
+        }
+      },
+      "params": {}
+    },
+    {
+      "id": "ECOM-014",
+      "domain": "ecommerce",
+      "title": "The checkout action is allowed only when both required commerce conditions are satisfied",
+      "business_text": "The checkout action is allowed only when both required commerce conditions are satisfied.",
+      "family": "two_bool_and",
+      "inputs": {
+        "a": {
+          "type": "bool",
+          "label": "Condition A"
+        },
+        "b": {
+          "type": "bool",
+          "label": "Condition B"
+        }
+      },
+      "params": {}
+    },
+    {
+      "id": "ECOM-015",
+      "domain": "ecommerce",
+      "title": "The checkout action is allowed when at least one of the two independent commerce conditions is satisfied",
+      "business_text": "The checkout action is allowed when at least one of the two independent commerce conditions is satisfied.",
+      "family": "two_bool_or",
+      "inputs": {
+        "a": {
+          "type": "bool",
+          "label": "Condition A"
+        },
+        "b": {
+          "type": "bool",
+          "label": "Condition B"
+        }
+      },
+      "params": {}
+    },
+    {
+      "id": "ECOM-016",
+      "domain": "ecommerce",
+      "title": "The checkout action is allowed when at least one of the two independent commerce conditions is satisfied",
+      "business_text": "The checkout action is allowed when at least one of the two independent commerce conditions is satisfied.",
+      "family": "two_bool_or",
+      "inputs": {
+        "a": {
+          "type": "bool",
+          "label": "Condition A"
+        },
+        "b": {
+          "type": "bool",
+          "label": "Condition B"
+        }
+      },
+      "params": {}
+    },
+    {
+      "id": "ECOM-017",
+      "domain": "ecommerce",
+      "title": "Premium members qualify from basket metric 0; standard customers qualify from 3",
+      "business_text": "Premium members qualify from basket metric 0; standard customers qualify from 3.",
+      "family": "tiered_threshold",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 6,
+          "label": "Primary order metric"
+        },
+        "premium": {
+          "type": "bool",
+          "label": "Premium member"
+        }
+      },
+      "params": {
+        "premium_threshold": 0,
+        "standard_threshold": 3
+      }
+    },
+    {
+      "id": "ECOM-018",
+      "domain": "ecommerce",
+      "title": "Premium members qualify from basket metric 1; standard customers qualify from 4",
+      "business_text": "Premium members qualify from basket metric 1; standard customers qualify from 4.",
+      "family": "tiered_threshold",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 6,
+          "label": "Primary order metric"
+        },
+        "premium": {
+          "type": "bool",
+          "label": "Premium member"
+        }
+      },
+      "params": {
+        "premium_threshold": 1,
+        "standard_threshold": 4
+      }
+    },
+    {
+      "id": "ECOM-019",
+      "domain": "ecommerce",
+      "title": "When the basket metric is at least 1, the primary eligibility flag applies; below it, the fallback flag applies",
+      "business_text": "When the basket metric is at least 1, the primary eligibility flag applies; below it, the fallback flag applies.",
+      "family": "conditional_flag",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 5,
+          "label": "Primary order metric"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Primary commerce condition"
+        },
+        "fallback": {
+          "type": "bool",
+          "label": "Fallback commerce condition"
+        }
+      },
+      "params": {
+        "threshold": 1
+      }
+    },
+    {
+      "id": "ECOM-020",
+      "domain": "ecommerce",
+      "title": "When the basket metric is at least 2, the primary eligibility flag applies; below it, the fallback flag applies",
+      "business_text": "When the basket metric is at least 2, the primary eligibility flag applies; below it, the fallback flag applies.",
+      "family": "conditional_flag",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 5,
+          "label": "Primary order metric"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Primary commerce condition"
+        },
+        "fallback": {
+          "type": "bool",
+          "label": "Fallback commerce condition"
+        }
+      },
+      "params": {
+        "threshold": 2
+      }
+    },
+    {
+      "id": "INS-001",
+      "domain": "insurance",
+      "title": "A claim path is eligible when the primary metric reaches 1 or an authorized exception is present",
+      "business_text": "A claim path is eligible when the primary metric reaches 1 or an authorized exception is present.",
+      "family": "threshold_or_flag",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 5,
+          "label": "Primary insurance metric"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Primary policy control"
+        }
+      },
+      "params": {
+        "threshold": 1
+      }
+    },
+    {
+      "id": "INS-002",
+      "domain": "insurance",
+      "title": "A claim path is eligible when the primary metric reaches 2 or an authorized exception is present",
+      "business_text": "A claim path is eligible when the primary metric reaches 2 or an authorized exception is present.",
+      "family": "threshold_or_flag",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 5,
+          "label": "Primary insurance metric"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Primary policy control"
+        }
+      },
+      "params": {
+        "threshold": 2
+      }
+    },
+    {
+      "id": "INS-003",
+      "domain": "insurance",
+      "title": "A claim is eligible only when the primary metric reaches 2 and policy validation is complete",
+      "business_text": "A claim is eligible only when the primary metric reaches 2 and policy validation is complete.",
+      "family": "threshold_and_flag",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 5,
+          "label": "Primary insurance metric"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Primary policy control"
+        }
+      },
+      "params": {
+        "threshold": 2
+      }
+    },
+    {
+      "id": "INS-004",
+      "domain": "insurance",
+      "title": "A claim is eligible only when the primary metric reaches 3 and policy validation is complete",
+      "business_text": "A claim is eligible only when the primary metric reaches 3 and policy validation is complete.",
+      "family": "threshold_and_flag",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 5,
+          "label": "Primary insurance metric"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Primary policy control"
+        }
+      },
+      "params": {
+        "threshold": 3
+      }
+    },
+    {
+      "id": "INS-005",
+      "domain": "insurance",
+      "title": "A claim is eligible when the risk metric is between -1 and 2 inclusive and policy validation is complete",
+      "business_text": "A claim is eligible when the risk metric is between -1 and 2 inclusive and policy validation is complete.",
+      "family": "range_and_flag",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -3,
+          "max": 5,
+          "label": "Primary insurance metric"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Primary policy control"
+        }
+      },
+      "params": {
+        "low": -1,
+        "high": 2
+      }
+    },
+    {
+      "id": "INS-006",
+      "domain": "insurance",
+      "title": "A claim is eligible when the risk metric is between 0 and 3 inclusive and policy validation is complete",
+      "business_text": "A claim is eligible when the risk metric is between 0 and 3 inclusive and policy validation is complete.",
+      "family": "range_and_flag",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -3,
+          "max": 5,
+          "label": "Primary insurance metric"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Primary policy control"
+        }
+      },
+      "params": {
+        "low": 0,
+        "high": 3
+      }
+    },
+    {
+      "id": "INS-007",
+      "domain": "insurance",
+      "title": "A claim is eligible only when metric X reaches 0 and metric Y reaches 1",
+      "business_text": "A claim is eligible only when metric X reaches 0 and metric Y reaches 1.",
+      "family": "dual_and",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 4,
+          "label": "Primary insurance metric"
+        },
+        "y": {
+          "type": "int",
+          "min": -2,
+          "max": 4,
+          "label": "Secondary insurance metric"
+        }
+      },
+      "params": {
+        "x_threshold": 0,
+        "y_threshold": 1
+      }
+    },
+    {
+      "id": "INS-008",
+      "domain": "insurance",
+      "title": "A claim is eligible only when metric X reaches 1 and metric Y reaches 2",
+      "business_text": "A claim is eligible only when metric X reaches 1 and metric Y reaches 2.",
+      "family": "dual_and",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 4,
+          "label": "Primary insurance metric"
+        },
+        "y": {
+          "type": "int",
+          "min": -2,
+          "max": 4,
+          "label": "Secondary insurance metric"
+        }
+      },
+      "params": {
+        "x_threshold": 1,
+        "y_threshold": 2
+      }
+    },
+    {
+      "id": "INS-009",
+      "domain": "insurance",
+      "title": "A claim is eligible when either metric X reaches 0 or metric Y reaches 1",
+      "business_text": "A claim is eligible when either metric X reaches 0 or metric Y reaches 1.",
+      "family": "dual_or",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 4,
+          "label": "Primary insurance metric"
+        },
+        "y": {
+          "type": "int",
+          "min": -2,
+          "max": 4,
+          "label": "Secondary insurance metric"
+        }
+      },
+      "params": {
+        "x_threshold": 0,
+        "y_threshold": 1
+      }
+    },
+    {
+      "id": "INS-010",
+      "domain": "insurance",
+      "title": "A claim is eligible when either metric X reaches 1 or metric Y reaches 2",
+      "business_text": "A claim is eligible when either metric X reaches 1 or metric Y reaches 2.",
+      "family": "dual_or",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 4,
+          "label": "Primary insurance metric"
+        },
+        "y": {
+          "type": "int",
+          "min": -2,
+          "max": 4,
+          "label": "Secondary insurance metric"
+        }
+      },
+      "params": {
+        "x_threshold": 1,
+        "y_threshold": 2
+      }
+    },
+    {
+      "id": "INS-011",
+      "domain": "insurance",
+      "title": "A claim action is allowed only when the amount indicator is at most 2 and the policy is not blocked",
+      "business_text": "A claim action is allowed only when the amount indicator is at most 2 and the policy is not blocked.",
+      "family": "not_blocked_threshold",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 5,
+          "label": "Primary insurance metric"
+        },
+        "blocked": {
+          "type": "bool",
+          "label": "Policy blocked"
+        }
+      },
+      "params": {
+        "max_x": 2
+      }
+    },
+    {
+      "id": "INS-012",
+      "domain": "insurance",
+      "title": "A claim action is allowed only when the amount indicator is at most 3 and the policy is not blocked",
+      "business_text": "A claim action is allowed only when the amount indicator is at most 3 and the policy is not blocked.",
+      "family": "not_blocked_threshold",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 5,
+          "label": "Primary insurance metric"
+        },
+        "blocked": {
+          "type": "bool",
+          "label": "Policy blocked"
+        }
+      },
+      "params": {
+        "max_x": 3
+      }
+    },
+    {
+      "id": "INS-013",
+      "domain": "insurance",
+      "title": "The claim action is allowed only when both required insurance controls are satisfied",
+      "business_text": "The claim action is allowed only when both required insurance controls are satisfied.",
+      "family": "two_bool_and",
+      "inputs": {
+        "a": {
+          "type": "bool",
+          "label": "Authorization A"
+        },
+        "b": {
+          "type": "bool",
+          "label": "Authorization B"
+        }
+      },
+      "params": {}
+    },
+    {
+      "id": "INS-014",
+      "domain": "insurance",
+      "title": "The claim action is allowed only when both required insurance controls are satisfied",
+      "business_text": "The claim action is allowed only when both required insurance controls are satisfied.",
+      "family": "two_bool_and",
+      "inputs": {
+        "a": {
+          "type": "bool",
+          "label": "Authorization A"
+        },
+        "b": {
+          "type": "bool",
+          "label": "Authorization B"
+        }
+      },
+      "params": {}
+    },
+    {
+      "id": "INS-015",
+      "domain": "insurance",
+      "title": "The claim action is allowed when at least one of the two independent insurance authorizations is present",
+      "business_text": "The claim action is allowed when at least one of the two independent insurance authorizations is present.",
+      "family": "two_bool_or",
+      "inputs": {
+        "a": {
+          "type": "bool",
+          "label": "Authorization A"
+        },
+        "b": {
+          "type": "bool",
+          "label": "Authorization B"
+        }
+      },
+      "params": {}
+    },
+    {
+      "id": "INS-016",
+      "domain": "insurance",
+      "title": "The claim action is allowed when at least one of the two independent insurance authorizations is present",
+      "business_text": "The claim action is allowed when at least one of the two independent insurance authorizations is present.",
+      "family": "two_bool_or",
+      "inputs": {
+        "a": {
+          "type": "bool",
+          "label": "Authorization A"
+        },
+        "b": {
+          "type": "bool",
+          "label": "Authorization B"
+        }
+      },
+      "params": {}
+    },
+    {
+      "id": "INS-017",
+      "domain": "insurance",
+      "title": "Premium policies qualify from metric 0; standard policies qualify from metric 3",
+      "business_text": "Premium policies qualify from metric 0; standard policies qualify from metric 3.",
+      "family": "tiered_threshold",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 6,
+          "label": "Primary insurance metric"
+        },
+        "premium": {
+          "type": "bool",
+          "label": "Premium policy"
+        }
+      },
+      "params": {
+        "premium_threshold": 0,
+        "standard_threshold": 3
+      }
+    },
+    {
+      "id": "INS-018",
+      "domain": "insurance",
+      "title": "Premium policies qualify from metric 1; standard policies qualify from metric 4",
+      "business_text": "Premium policies qualify from metric 1; standard policies qualify from metric 4.",
+      "family": "tiered_threshold",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 6,
+          "label": "Primary insurance metric"
+        },
+        "premium": {
+          "type": "bool",
+          "label": "Premium policy"
+        }
+      },
+      "params": {
+        "premium_threshold": 1,
+        "standard_threshold": 4
+      }
+    },
+    {
+      "id": "INS-019",
+      "domain": "insurance",
+      "title": "When the metric is at least 1, the primary policy control applies; below it, the fallback control applies",
+      "business_text": "When the metric is at least 1, the primary policy control applies; below it, the fallback control applies.",
+      "family": "conditional_flag",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 5,
+          "label": "Primary insurance metric"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Primary policy control"
+        },
+        "fallback": {
+          "type": "bool",
+          "label": "Fallback policy control"
+        }
+      },
+      "params": {
+        "threshold": 1
+      }
+    },
+    {
+      "id": "INS-020",
+      "domain": "insurance",
+      "title": "When the metric is at least 2, the primary policy control applies; below it, the fallback control applies",
+      "business_text": "When the metric is at least 2, the primary policy control applies; below it, the fallback control applies.",
+      "family": "conditional_flag",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": -2,
+          "max": 5,
+          "label": "Primary insurance metric"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Primary policy control"
+        },
+        "fallback": {
+          "type": "bool",
+          "label": "Fallback policy control"
+        }
+      },
+      "params": {
+        "threshold": 2
+      }
+    }
+  ]
+}
