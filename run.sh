@@ -29,6 +29,13 @@ case "$cmd" in
     docker compose run --rm bizproof differential \
       --contracts-dir contracts/differential
     ;;
+  fuzz-differential)
+    docker compose run --rm bizproof fuzz-differential \
+      --cases 1000 \
+      --seed 20260923 \
+      --generated-dir experiments/generated/v0.2 \
+      --report experiments/results/v0.2-differential-summary.json
+    ;;
   check)
     docker compose run --rm --entrypoint sh bizproof -lc \
       'ruff check . && ruff format --check . && mypy src && pytest'
@@ -43,6 +50,7 @@ Usage:
   ./run.sh demo-z3
   ./run.sh demo-vacuous
   ./run.sh differential
+  ./run.sh fuzz-differential
 EOF
     ;;
 esac
