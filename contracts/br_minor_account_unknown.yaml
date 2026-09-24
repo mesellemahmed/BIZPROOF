@@ -1,0 +1,22 @@
+id: BR-001-UNKNOWN
+title: Minor account opening policy with unsupported loop
+
+target:
+  source: examples/banking/account_policy_unknown.py
+  function: can_open_account
+
+inputs:
+  age:
+    type: int
+    min: 0
+    max: 20
+    label: Customer age
+  guardian_present:
+    type: bool
+    label: Legal guardian present
+
+precondition: "age >= 0 and age <= 20"
+postcondition: "result == ((age >= 18) or guardian_present)"
+
+business:
+  expected_outcome: "A minor may open an account only when a legal guardian is present."

@@ -1,0 +1,24 @@
+{
+  "version": "0.1.1",
+  "validation_scope": "Docker",
+  "quality_gate": {
+    "command": "./run.sh check",
+    "result": "PASS",
+    "ruff": "PASS",
+    "format": "PASS",
+    "mypy": "PASS - 13 source files",
+    "pytest": "PASS - 13 tests"
+  },
+  "functional_validation": {
+    "enum_demo": "DISPROVED - counterexample replay validated",
+    "z3_demo": "DISPROVED - counterexample replay validated",
+    "vacuous_demo": "UNKNOWN - unsatisfiable_precondition"
+  },
+  "differential_validation": {
+    "contracts_checked": 3,
+    "enum_z3_verdict_disagreements": 0,
+    "invalid_z3_counterexamples_after_replay": 0,
+    "unexpected_unknown_verdicts": 0,
+    "result": "PASS"
+  }
+}

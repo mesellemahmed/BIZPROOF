@@ -1,0 +1,7 @@
+services:
+  bizproof:
+    build:
+      context: .
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
