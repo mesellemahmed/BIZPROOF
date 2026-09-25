@@ -145,3 +145,19 @@ The campaign passes only if all of the following are zero:
 - unexpected crashes.
 
 The deterministic seed is `20260923`. Generated artifacts and result files are excluded from Git and can be reproduced from the seed.
+
+
+## V0.4 — Baseline comparison
+
+V0.4 compares BIZPROOF on the fixed V0.3 business benchmark against two independent baselines:
+
+- Hypothesis property-based testing;
+- CrossHair symbolic contract checking.
+
+Run:
+
+```bash
+./run.sh baseline-comparison
+```
+
+The comparison reports violation-detection rate, false alarms, inconclusive/error cases, runtime, and paired mutant-detection counts. `NO_COUNTEREXAMPLE` from a testing baseline is never reported as a formal proof.
