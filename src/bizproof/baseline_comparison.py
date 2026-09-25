@@ -255,16 +255,40 @@ def _record_detection(
             summary["unknown_or_error"] += 1
 
 
-def _finalize_method(summary: dict[str, Any]) -> dict[str, Any]:
+def _finalize_method(
+    summary: dict[str, Any],
+    *,
+    method_name: str,
+) -> dict[str, Any]:
     mutants = int(summary["mutants"])
     correct_cases = int(summary["correct_cases"])
     cases = int(summary["cases"])
+
     summary["mutant_detection_rate"] = summary["mutants_detected"] / mutants if mutants else 0.0
     summary["correct_false_alarm_rate"] = (
         summary["correct_false_alarms"] / correct_cases if correct_cases else 0.0
     )
-    summary["classification_accuracy"] = (
-        (summary["mutants_detected"] + summary["no_counterexample_on_correct"]) / cases
+
+    proof_capable = method_name == "bizproof"
+    summary["proof_capable"] = proof_capable
+
+    if proof_capable:
+        summary["correct_cases_proved"] = summary["no_counterexample_on_correct"]
+        summary["correct_cases_inconclusive"] = 0
+    else:
+        summary["correct_cases_proved"] = 0
+        summary["correct_cases_inconclusive"] = summary["no_counterexample_on_correct"]
+
+    summary["proof_rate_on_correct"] = (
+        summary["correct_cases_proved"] / correct_cases if correct_cases else 0.0
+    )
+    summary["conclusive_case_rate"] = (
+        (
+            summary["mutants_detected"]
+            + summary["correct_false_alarms"]
+            + summary["correct_cases_proved"]
+        )
+        / cases
         if cases
         else 0.0
     )
@@ -458,10 +482,14 @@ def run_baseline_comparison(
                 )
 
     finalized_methods = {
-        name: _finalize_method(summary) for name, summary in method_summaries.items()
+        name: _finalize_method(summary, method_name=name)
+        for name, summary in method_summaries.items()
     }
     finalized_domains = {
-        domain: {method: _finalize_method(summary) for method, summary in methods.items()}
+        domain: {
+            method: _finalize_method(summary, method_name=method)
+            for method, summary in methods.items()
+        }
         for domain, methods in sorted(per_domain.items())
     }
 
@@ -474,7 +502,7 @@ def run_baseline_comparison(
     )
 
     summary: dict[str, Any] = {
-        "benchmark_version": "0.4.0",
+        "benchmark_version": "0.4.1",
         "catalog": str(catalog_path),
         "rules_checked": len(rules),
         "cases_checked": len(rows),
@@ -499,11 +527,16 @@ def run_baseline_comparison(
                 "formal verdict PROVED within the supported BIZPROOF semantics"
             ),
             "hypothesis_no_counterexample": (
-                "no counterexample found within the configured search budget; not a proof"
+                "no counterexample found within the configured search budget; "
+                "reported as inconclusive on correct cases, not as a proof"
             ),
             "crosshair_no_counterexample": (
                 "no counterexample reported within the configured analysis budget; "
-                "not treated as a proof"
+                "reported as inconclusive on correct cases, not as a proof"
+            ),
+            "classification_accuracy": (
+                "not reported for search-based baselines because absence of a "
+                "counterexample is not a proof of correctness"
             ),
         },
         "passed": passed,
@@ -527,6 +560,13 @@ def _print_method(name: str, summary: Mapping[str, Any]) -> None:
     print(f"  mutants detected: {summary['mutants_detected']}/{summary['mutants']}")
     print(f"  mutant detection rate: {summary['mutant_detection_rate']:.6f}")
     print(f"  correct false alarms: {summary['correct_false_alarms']}/{summary['correct_cases']}")
+    print(f"  correct cases proved: {summary['correct_cases_proved']}/{summary['correct_cases']}")
+    print(
+        "  correct cases inconclusive: "
+        f"{summary['correct_cases_inconclusive']}/{summary['correct_cases']}"
+    )
+    print(f"  proof rate on correct: {summary['proof_rate_on_correct']:.6f}")
+    print(f"  conclusive case rate: {summary['conclusive_case_rate']:.6f}")
     print(f"  unknown/error: {summary['unknown_or_error']}")
     print(f"  runtime seconds: {summary['runtime_seconds']:.3f}")
 

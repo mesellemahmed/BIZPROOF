@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.4.1",
   "validation_scope": "Docker",
   "quality_gate": {
     "command": "./run.sh check",
@@ -193,7 +193,7 @@
     "z3_unknowns": 0
   },
   "baseline_comparison": {
-    "benchmark_version": "0.4.0",
+    "benchmark_version": "0.4.1",
     "cases_checked": 300,
     "catalog": "benchmarks/v0.3/catalog.json",
     "crosshair_per_condition_timeout": 0.5,
@@ -206,14 +206,17 @@
     "hypothesis_max_examples": 100,
     "interpretation": {
       "bizproof_no_counterexample": "formal verdict PROVED within the supported BIZPROOF semantics",
-      "crosshair_no_counterexample": "no counterexample reported within the configured analysis budget; not treated as a proof",
-      "hypothesis_no_counterexample": "no counterexample found within the configured search budget; not a proof"
+      "classification_accuracy": "not reported for search-based baselines because absence of a counterexample is not a proof of correctness",
+      "crosshair_no_counterexample": "no counterexample reported within the configured analysis budget; reported as inconclusive on correct cases, not as a proof",
+      "hypothesis_no_counterexample": "no counterexample found within the configured search budget; reported as inconclusive on correct cases, not as a proof"
     },
     "methods": {
       "bizproof": {
         "cases": 300,
-        "classification_accuracy": 1.0,
+        "conclusive_case_rate": 1.0,
         "correct_cases": 60,
+        "correct_cases_inconclusive": 0,
+        "correct_cases_proved": 60,
         "correct_false_alarm_rate": 0.0,
         "correct_false_alarms": 0,
         "missed_mutants": 0,
@@ -221,13 +224,17 @@
         "mutants": 240,
         "mutants_detected": 240,
         "no_counterexample_on_correct": 60,
-        "runtime_seconds": 2.501781,
+        "proof_capable": true,
+        "proof_rate_on_correct": 1.0,
+        "runtime_seconds": 2.381691,
         "unknown_or_error": 0
       },
       "crosshair": {
         "cases": 300,
-        "classification_accuracy": 1.0,
+        "conclusive_case_rate": 0.8,
         "correct_cases": 60,
+        "correct_cases_inconclusive": 60,
+        "correct_cases_proved": 0,
         "correct_false_alarm_rate": 0.0,
         "correct_false_alarms": 0,
         "missed_mutants": 0,
@@ -235,13 +242,17 @@
         "mutants": 240,
         "mutants_detected": 240,
         "no_counterexample_on_correct": 60,
-        "runtime_seconds": 276.819441,
+        "proof_capable": false,
+        "proof_rate_on_correct": 0.0,
+        "runtime_seconds": 257.885089,
         "unknown_or_error": 0
       },
       "hypothesis": {
         "cases": 300,
-        "classification_accuracy": 1.0,
+        "conclusive_case_rate": 0.8,
         "correct_cases": 60,
+        "correct_cases_inconclusive": 60,
+        "correct_cases_proved": 0,
         "correct_false_alarm_rate": 0.0,
         "correct_false_alarms": 0,
         "missed_mutants": 0,
@@ -249,7 +260,9 @@
         "mutants": 240,
         "mutants_detected": 240,
         "no_counterexample_on_correct": 60,
-        "runtime_seconds": 9.408688,
+        "proof_capable": false,
+        "proof_rate_on_correct": 0.0,
+        "runtime_seconds": 8.830778,
         "unknown_or_error": 0
       }
     },
@@ -267,8 +280,10 @@
       "banking": {
         "bizproof": {
           "cases": 100,
-          "classification_accuracy": 1.0,
+          "conclusive_case_rate": 1.0,
           "correct_cases": 20,
+          "correct_cases_inconclusive": 0,
+          "correct_cases_proved": 20,
           "correct_false_alarm_rate": 0.0,
           "correct_false_alarms": 0,
           "missed_mutants": 0,
@@ -276,13 +291,17 @@
           "mutants": 80,
           "mutants_detected": 80,
           "no_counterexample_on_correct": 20,
-          "runtime_seconds": 0.859592,
+          "proof_capable": true,
+          "proof_rate_on_correct": 1.0,
+          "runtime_seconds": 0.83603,
           "unknown_or_error": 0
         },
         "crosshair": {
           "cases": 100,
-          "classification_accuracy": 1.0,
+          "conclusive_case_rate": 0.8,
           "correct_cases": 20,
+          "correct_cases_inconclusive": 20,
+          "correct_cases_proved": 0,
           "correct_false_alarm_rate": 0.0,
           "correct_false_alarms": 0,
           "missed_mutants": 0,
@@ -290,13 +309,17 @@
           "mutants": 80,
           "mutants_detected": 80,
           "no_counterexample_on_correct": 20,
-          "runtime_seconds": 90.445148,
+          "proof_capable": false,
+          "proof_rate_on_correct": 0.0,
+          "runtime_seconds": 85.800372,
           "unknown_or_error": 0
         },
         "hypothesis": {
           "cases": 100,
-          "classification_accuracy": 1.0,
+          "conclusive_case_rate": 0.8,
           "correct_cases": 20,
+          "correct_cases_inconclusive": 20,
+          "correct_cases_proved": 0,
           "correct_false_alarm_rate": 0.0,
           "correct_false_alarms": 0,
           "missed_mutants": 0,
@@ -304,15 +327,19 @@
           "mutants": 80,
           "mutants_detected": 80,
           "no_counterexample_on_correct": 20,
-          "runtime_seconds": 3.547988,
+          "proof_capable": false,
+          "proof_rate_on_correct": 0.0,
+          "runtime_seconds": 3.227778,
           "unknown_or_error": 0
         }
       },
       "ecommerce": {
         "bizproof": {
           "cases": 100,
-          "classification_accuracy": 1.0,
+          "conclusive_case_rate": 1.0,
           "correct_cases": 20,
+          "correct_cases_inconclusive": 0,
+          "correct_cases_proved": 20,
           "correct_false_alarm_rate": 0.0,
           "correct_false_alarms": 0,
           "missed_mutants": 0,
@@ -320,13 +347,17 @@
           "mutants": 80,
           "mutants_detected": 80,
           "no_counterexample_on_correct": 20,
-          "runtime_seconds": 0.809688,
+          "proof_capable": true,
+          "proof_rate_on_correct": 1.0,
+          "runtime_seconds": 0.758576,
           "unknown_or_error": 0
         },
         "crosshair": {
           "cases": 100,
-          "classification_accuracy": 1.0,
+          "conclusive_case_rate": 0.8,
           "correct_cases": 20,
+          "correct_cases_inconclusive": 20,
+          "correct_cases_proved": 0,
           "correct_false_alarm_rate": 0.0,
           "correct_false_alarms": 0,
           "missed_mutants": 0,
@@ -334,13 +365,17 @@
           "mutants": 80,
           "mutants_detected": 80,
           "no_counterexample_on_correct": 20,
-          "runtime_seconds": 92.381461,
+          "proof_capable": false,
+          "proof_rate_on_correct": 0.0,
+          "runtime_seconds": 84.217743,
           "unknown_or_error": 0
         },
         "hypothesis": {
           "cases": 100,
-          "classification_accuracy": 1.0,
+          "conclusive_case_rate": 0.8,
           "correct_cases": 20,
+          "correct_cases_inconclusive": 20,
+          "correct_cases_proved": 0,
           "correct_false_alarm_rate": 0.0,
           "correct_false_alarms": 0,
           "missed_mutants": 0,
@@ -348,15 +383,19 @@
           "mutants": 80,
           "mutants_detected": 80,
           "no_counterexample_on_correct": 20,
-          "runtime_seconds": 2.823981,
+          "proof_capable": false,
+          "proof_rate_on_correct": 0.0,
+          "runtime_seconds": 2.752206,
           "unknown_or_error": 0
         }
       },
       "insurance": {
         "bizproof": {
           "cases": 100,
-          "classification_accuracy": 1.0,
+          "conclusive_case_rate": 1.0,
           "correct_cases": 20,
+          "correct_cases_inconclusive": 0,
+          "correct_cases_proved": 20,
           "correct_false_alarm_rate": 0.0,
           "correct_false_alarms": 0,
           "missed_mutants": 0,
@@ -364,13 +403,17 @@
           "mutants": 80,
           "mutants_detected": 80,
           "no_counterexample_on_correct": 20,
-          "runtime_seconds": 0.832501,
+          "proof_capable": true,
+          "proof_rate_on_correct": 1.0,
+          "runtime_seconds": 0.787084,
           "unknown_or_error": 0
         },
         "crosshair": {
           "cases": 100,
-          "classification_accuracy": 1.0,
+          "conclusive_case_rate": 0.8,
           "correct_cases": 20,
+          "correct_cases_inconclusive": 20,
+          "correct_cases_proved": 0,
           "correct_false_alarm_rate": 0.0,
           "correct_false_alarms": 0,
           "missed_mutants": 0,
@@ -378,13 +421,17 @@
           "mutants": 80,
           "mutants_detected": 80,
           "no_counterexample_on_correct": 20,
-          "runtime_seconds": 93.992832,
+          "proof_capable": false,
+          "proof_rate_on_correct": 0.0,
+          "runtime_seconds": 87.866975,
           "unknown_or_error": 0
         },
         "hypothesis": {
           "cases": 100,
-          "classification_accuracy": 1.0,
+          "conclusive_case_rate": 0.8,
           "correct_cases": 20,
+          "correct_cases_inconclusive": 20,
+          "correct_cases_proved": 0,
           "correct_false_alarm_rate": 0.0,
           "correct_false_alarms": 0,
           "missed_mutants": 0,
@@ -392,13 +439,15 @@
           "mutants": 80,
           "mutants_detected": 80,
           "no_counterexample_on_correct": 20,
-          "runtime_seconds": 3.036718,
+          "proof_capable": false,
+          "proof_rate_on_correct": 0.0,
+          "runtime_seconds": 2.850794,
           "unknown_or_error": 0
         }
       }
     },
     "rules_checked": 60,
     "tool_errors": [],
-    "wall_runtime_seconds": 288.897944
+    "wall_runtime_seconds": 269.258921
   }
 }
