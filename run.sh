@@ -82,6 +82,9 @@ case "$cmd" in
   adapter-preservation)
     docker compose run --rm --entrypoint python bizproof -m bizproof.adapter_preservation --catalog benchmarks/v0.8/catalog.json --lock benchmarks/v0.6/LOCK.json --external-root external_sources/v0.6 --repo-root . --output-dir benchmarks/v0.8/results
     ;;
+  symbolic-equivalence)
+    docker compose run --rm --entrypoint python bizproof -m bizproof.symbolic_equivalence --catalog benchmarks/v0.9/catalog.json --lock benchmarks/v0.6/LOCK.json --external-root external_sources/v0.6 --repo-root . --output-dir benchmarks/v0.9/results
+    ;;
   *)
     cat <<'EOF'
 Usage:
@@ -100,6 +103,7 @@ Usage:
   ./run.sh external-corpus
   ./run.sh external-semantic
   ./run.sh adapter-preservation
+  ./run.sh symbolic-equivalence
 EOF
     ;;
 esac
