@@ -1,0 +1,118 @@
+{
+  "benchmark_version": "0.7.0",
+  "title": "External Semantic Validation Pilot",
+  "claim_scope": "BIZPROOF verifies explicit scalar semantic adapters derived from locked external business-rule implementations and independently traceable tests/specifications. It does not claim end-to-end proof of the original frameworks.",
+  "rules": [
+    {
+      "id": "EXT-OF-TA-001",
+      "source_id": "openfisca_france",
+      "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+      "domain": "tax_and_social_benefits",
+      "external_source": "openfisca_france/model/prelevements_obligatoires/prelevements_sociaux/taxes_salaires_main_oeuvre.py",
+      "external_symbol": "redevable_taxe_apprentissage.formula",
+      "source_anchors": [
+        "class redevable_taxe_apprentissage(Variable):",
+        "return not_(association)"
+      ],
+      "evidence_file": "tests/fiches_de_paie/apprenti.yaml",
+      "evidence_anchors": [
+        "redevable_taxe_apprentissage"
+      ],
+      "adapter": "benchmarks/v0.7/adapters/openfisca_apprenticeship.py",
+      "correct_contract": "contracts/external/v0.7/of_apprenticeship_correct.yaml",
+      "mutant_contract": "contracts/external/v0.7/of_apprenticeship_mutant.yaml",
+      "adaptation_scope": "RETURN_EXPRESSION",
+      "adapter_operations": [
+        "flatten one external entity lookup into one boolean input",
+        "replace OpenFisca vectorized not_ with scalar boolean not"
+      ],
+      "representation_change": "none",
+      "expected_correct_verdict": "PROVED",
+      "expected_mutant_verdict": "DISPROVED"
+    },
+    {
+      "id": "EXT-OF-TH-001",
+      "source_id": "openfisca_france",
+      "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+      "domain": "tax_and_social_benefits",
+      "external_source": "openfisca_france/model/prelevements_obligatoires/taxe_habitation/taxe_habitation.py",
+      "external_symbol": "taxe_habitation_commune_epci_apres_degrevement_plafonnement.formula_2017_01_01",
+      "source_anchors": [
+        "class taxe_habitation_commune_epci_apres_degrevement_plafonnement(Variable):",
+        "return max_(taxe_habitation_commune_epci_avant_degrevement - degrevement_plafonnement_taxe_habitation, 0)"
+      ],
+      "evidence_file": "tests/formulas/taxe_habitation.yaml",
+      "evidence_anchors": [
+        "taxe_habitation_commune_epci_apres_degrevement_plafonnement"
+      ],
+      "adapter": "benchmarks/v0.7/adapters/openfisca_housing_tax.py",
+      "correct_contract": "contracts/external/v0.7/of_housing_tax_correct.yaml",
+      "mutant_contract": "contracts/external/v0.7/of_housing_tax_mutant.yaml",
+      "adaptation_scope": "RETURN_EXPRESSION_WITH_REPRESENTATION",
+      "adapter_operations": [
+        "flatten two OpenFisca entity lookups into scalar inputs",
+        "replace max_(x, 0) with equivalent branch semantics"
+      ],
+      "representation_change": "external monetary float values are represented as non-negative integer monetary units; the clamped-subtraction ordering property is preserved",
+      "expected_correct_verdict": "PROVED",
+      "expected_mutant_verdict": "DISPROVED"
+    },
+    {
+      "id": "EXT-OSCAR-COUNT-PARTIAL-001",
+      "source_id": "django_oscar",
+      "resolved_commit": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+      "domain": "ecommerce",
+      "external_source": "src/oscar/apps/offer/conditions.py",
+      "external_symbol": "CountCondition.is_partially_satisfied",
+      "source_anchors": [
+        "class CountCondition(Condition):",
+        "return 0 < num_matches < self.value"
+      ],
+      "evidence_file": "tests/integration/offer/test_condition.py",
+      "evidence_anchors": [
+        "test_empty_basket_fails_partial_condition",
+        "test_smaller_quantity_basket_passes_partial_condition",
+        "test_matching_quantity_basket_fails_partial_condition"
+      ],
+      "adapter": "benchmarks/v0.7/adapters/oscar_count_partial.py",
+      "correct_contract": "contracts/external/v0.7/oscar_count_partial_correct.yaml",
+      "mutant_contract": "contracts/external/v0.7/oscar_count_partial_mutant.yaml",
+      "adaptation_scope": "POST_AGGREGATION_THRESHOLD",
+      "adapter_operations": [
+        "replace _get_num_matches(...) with its scalar aggregated result",
+        "replace self.value with required_count scalar input"
+      ],
+      "representation_change": "none",
+      "expected_correct_verdict": "PROVED",
+      "expected_mutant_verdict": "DISPROVED"
+    },
+    {
+      "id": "EXT-OSCAR-COUNT-SAT-001",
+      "source_id": "django_oscar",
+      "resolved_commit": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+      "domain": "ecommerce",
+      "external_source": "src/oscar/apps/offer/conditions.py",
+      "external_symbol": "CountCondition.is_satisfied threshold subrule",
+      "source_anchors": [
+        "class CountCondition(Condition):",
+        "if num_matches >= self.value:"
+      ],
+      "evidence_file": "tests/integration/offer/test_condition.py",
+      "evidence_anchors": [
+        "test_matching_quantity_basket_passes_condition",
+        "test_greater_quantity_basket_passes_condition"
+      ],
+      "adapter": "benchmarks/v0.7/adapters/oscar_count_satisfied.py",
+      "correct_contract": "contracts/external/v0.7/oscar_count_satisfied_correct.yaml",
+      "mutant_contract": "contracts/external/v0.7/oscar_count_satisfied_mutant.yaml",
+      "adaptation_scope": "POST_AGGREGATION_THRESHOLD",
+      "adapter_operations": [
+        "abstract the basket iteration as final scalar num_matches",
+        "replace self.value with required_count scalar input"
+      ],
+      "representation_change": "none",
+      "expected_correct_verdict": "PROVED",
+      "expected_mutant_verdict": "DISPROVED"
+    }
+  ]
+}

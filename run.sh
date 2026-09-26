@@ -76,6 +76,9 @@ case "$cmd" in
     docker compose run --rm --entrypoint sh bizproof -lc \
       'ruff check . && ruff format --check . && mypy src && pytest'
     ;;
+  external-semantic)
+    docker compose run --rm --entrypoint python bizproof -m bizproof.external_semantic_validation --catalog benchmarks/v0.7/catalog.json --lock benchmarks/v0.6/LOCK.json --external-root external_sources/v0.6 --repo-root . --output-dir benchmarks/v0.7/results
+    ;;
   *)
     cat <<'EOF'
 Usage:
@@ -92,6 +95,7 @@ Usage:
   ./run.sh external-acquire
   ./run.sh external-audit
   ./run.sh external-corpus
+  ./run.sh external-semantic
 EOF
     ;;
 esac

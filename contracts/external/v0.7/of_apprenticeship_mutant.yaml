@@ -1,0 +1,17 @@
+id: EXT-OF-TA-001-MUT
+title: Mutated OpenFisca apprenticeship-tax liability semantic slice
+
+target:
+  source: benchmarks/v0.7/adapters/openfisca_apprenticeship.py
+  function: mutant_is_apprenticeship_tax_liable
+
+inputs:
+  nonprofit_association:
+    type: bool
+    label: Enterprise is a nonprofit association
+
+precondition: "True"
+postcondition: "result == (not nonprofit_association)"
+
+business:
+  expected_outcome: "The injected mutation must be disproved with a concrete replay."

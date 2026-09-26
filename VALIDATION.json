@@ -1,5 +1,5 @@
 {
-  "version": "0.6.2",
+  "version": "0.7.0",
   "validation_scope": "Docker",
   "quality_gate": {
     "command": "./run.sh check",
@@ -700,5 +700,21 @@
     ],
     "sources_checked": 3,
     "unsupported": 325
+  },
+  "external_semantic_validation": {
+    "benchmark_version": "0.7.0",
+    "external_systems": [
+      "django_oscar",
+      "openfisca_france"
+    ],
+    "external_system_count": 2,
+    "rules_checked": 4,
+    "correct_adapters_proved": 4,
+    "mutants_disproved": 4,
+    "invalid_mutant_replays": 0,
+    "provenance_failures": [],
+    "runtime_seconds": 1.4748547399940435,
+    "passed": true,
+    "claim_scope": "BIZPROOF verifies explicit scalar semantic adapters derived from locked external business-rule implementations and independently traceable tests/specifications. It does not claim end-to-end proof of the original frameworks."
   }
 }
