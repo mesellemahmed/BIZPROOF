@@ -52,6 +52,26 @@ case "$cmd" in
       --catalog benchmarks/v0.5/catalog.json \
       --output experiments/results/v0.5-challenge-summary.json
     ;;
+  external-acquire)
+    bash scripts/acquire_external_corpus.sh
+    ;;
+  external-audit)
+    docker compose run --rm --entrypoint python bizproof \
+      -m bizproof.external_corpus \
+      --sources benchmarks/v0.6/sources.json \
+      --lock benchmarks/v0.6/LOCK.json \
+      --external-root external_sources/v0.6 \
+      --output-dir benchmarks/v0.6/results
+    ;;
+  external-corpus)
+    bash scripts/acquire_external_corpus.sh
+    docker compose run --rm --entrypoint python bizproof \
+      -m bizproof.external_corpus \
+      --sources benchmarks/v0.6/sources.json \
+      --lock benchmarks/v0.6/LOCK.json \
+      --external-root external_sources/v0.6 \
+      --output-dir benchmarks/v0.6/results
+    ;;
   check)
     docker compose run --rm --entrypoint sh bizproof -lc \
       'ruff check . && ruff format --check . && mypy src && pytest'
@@ -69,6 +89,9 @@ Usage:
   ./run.sh fuzz-differential
   ./run.sh baseline-comparison
   ./run.sh challenge-benchmark
+  ./run.sh external-acquire
+  ./run.sh external-audit
+  ./run.sh external-corpus
 EOF
     ;;
 esac

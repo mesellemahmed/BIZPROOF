@@ -180,3 +180,25 @@ Run:
 ```
 
 Search-based methods are credited only when they find a counterexample. Absence of a counterexample remains inconclusive.
+
+
+## V0.6 — External Business Rule Corpus
+
+V0.6 introduces independently developed Python systems to measure external applicability and
+coverage of the current verifier semantics.
+
+External repositories are cloned outside the tracked corpus and pinned by commit SHA:
+
+```bash
+./run.sh external-acquire
+./run.sh external-audit
+```
+
+Or run both:
+
+```bash
+./run.sh external-corpus
+```
+
+Reviewer-facing provenance and audit results are committed under `benchmarks/v0.6/`.
+Unsupported external functions remain in the reported denominator.

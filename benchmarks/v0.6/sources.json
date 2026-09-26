@@ -1,0 +1,70 @@
+{
+  "corpus_version": "0.6.0",
+  "acquisition_policy": {
+    "mode": "shallow_clone_then_lock",
+    "vendor_source_code": false,
+    "lock_file": "benchmarks/v0.6/LOCK.json",
+    "external_root": "external_sources/v0.6"
+  },
+  "sources": [
+    {
+      "id": "openfisca_france",
+      "name": "OpenFisca-France",
+      "repository": "https://github.com/openfisca/openfisca-france.git",
+      "ref": "master",
+      "domain": "tax_and_social_benefits",
+      "license": "AGPL-3.0-or-later",
+      "code_roots": [
+        "openfisca_france/model"
+      ],
+      "test_roots": [
+        "tests"
+      ],
+      "doc_roots": [
+        "README.md"
+      ],
+      "max_code_files": 900
+    },
+    {
+      "id": "django_oscar",
+      "name": "Django-Oscar",
+      "repository": "https://github.com/django-oscar/django-oscar.git",
+      "ref": "master",
+      "domain": "ecommerce",
+      "license": "BSD-3-Clause",
+      "code_roots": [
+        "src/oscar/apps/offer",
+        "src/oscar/apps/partner",
+        "src/oscar/apps/basket",
+        "src/oscar/apps/order"
+      ],
+      "test_roots": [
+        "tests"
+      ],
+      "doc_roots": [
+        "docs"
+      ],
+      "max_code_files": 500
+    },
+    {
+      "id": "pretix",
+      "name": "pretix",
+      "repository": "https://github.com/pretix/pretix.git",
+      "ref": "master",
+      "domain": "ticketing_and_payments",
+      "license": "AGPL-3.0-with-additional-terms",
+      "code_roots": [
+        "src/pretix/base/services",
+        "src/pretix/base/models"
+      ],
+      "test_roots": [
+        "src/pretix",
+        "tests"
+      ],
+      "doc_roots": [
+        "doc"
+      ],
+      "max_code_files": 700
+    }
+  ]
+}
