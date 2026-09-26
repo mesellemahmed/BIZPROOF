@@ -1,0 +1,80 @@
+{
+  "benchmark_version": "0.8.0",
+  "title": "Source-Executed Adapter Semantic Preservation",
+  "claim_scope": "V0.8 compares V0.7 adapters against methods extracted directly from the locked external source files and executed in controlled scalar harnesses. Zero observed mismatches is evidence of semantic preservation over the declared validation domains; it is not a universal proof outside those domains.",
+  "seed": 20260926,
+  "rules": [
+    {
+      "id": "PRES-OF-TA-001",
+      "source_id": "openfisca_france",
+      "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+      "external_source": "openfisca_france/model/prelevements_obligatoires/prelevements_sociaux/taxes_salaires_main_oeuvre.py",
+      "external_class": "redevable_taxe_apprentissage",
+      "external_method": "formula",
+      "adapter": "benchmarks/v0.7/adapters/openfisca_apprenticeship.py",
+      "adapter_function": "is_apprenticeship_tax_liable",
+      "mutant_function": "mutant_is_apprenticeship_tax_liable",
+      "harness": "OPENFISCA_BOOLEAN_LOOKUP",
+      "validation_domain": {
+        "kind": "EXHAUSTIVE_BOOLEAN",
+        "cases": 2
+      }
+    },
+    {
+      "id": "PRES-OF-TH-001",
+      "source_id": "openfisca_france",
+      "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+      "external_source": "openfisca_france/model/prelevements_obligatoires/taxe_habitation/taxe_habitation.py",
+      "external_class": "taxe_habitation_commune_epci_apres_degrevement_plafonnement",
+      "external_method": "formula_2017_01_01",
+      "adapter": "benchmarks/v0.7/adapters/openfisca_housing_tax.py",
+      "adapter_function": "housing_tax_after_relief",
+      "mutant_function": "mutant_housing_tax_after_relief",
+      "harness": "OPENFISCA_CLAMPED_SUBTRACTION",
+      "validation_domain": {
+        "kind": "BOUNDARY_PLUS_DETERMINISTIC_RANDOM",
+        "min": 0,
+        "max": 1000000,
+        "random_cases": 20000
+      }
+    },
+    {
+      "id": "PRES-OSCAR-PARTIAL-001",
+      "source_id": "django_oscar",
+      "resolved_commit": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+      "external_source": "src/oscar/apps/offer/conditions.py",
+      "external_class": "CountCondition",
+      "external_method": "is_partially_satisfied",
+      "adapter": "benchmarks/v0.7/adapters/oscar_count_partial.py",
+      "adapter_function": "count_condition_partially_satisfied",
+      "mutant_function": "mutant_count_condition_partially_satisfied",
+      "harness": "OSCAR_POST_AGGREGATION_PARTIAL",
+      "validation_domain": {
+        "kind": "EXHAUSTIVE_BOUNDED_GRID",
+        "num_matches_min": 0,
+        "num_matches_max": 128,
+        "required_count_min": 1,
+        "required_count_max": 64
+      }
+    },
+    {
+      "id": "PRES-OSCAR-SAT-001",
+      "source_id": "django_oscar",
+      "resolved_commit": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+      "external_source": "src/oscar/apps/offer/conditions.py",
+      "external_class": "CountCondition",
+      "external_method": "is_satisfied",
+      "adapter": "benchmarks/v0.7/adapters/oscar_count_satisfied.py",
+      "adapter_function": "count_condition_satisfied",
+      "mutant_function": "mutant_count_condition_satisfied",
+      "harness": "OSCAR_CONTROLLED_BASKET_THRESHOLD",
+      "validation_domain": {
+        "kind": "EXHAUSTIVE_BOUNDED_GRID_WITH_PARTITIONS",
+        "num_matches_min": 0,
+        "num_matches_max": 128,
+        "required_count_min": 1,
+        "required_count_max": 64
+      }
+    }
+  ]
+}

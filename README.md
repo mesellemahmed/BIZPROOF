@@ -216,3 +216,16 @@ Command:
 A V0.7 PROVED result applies to the tracked scalar adapter and
 its contract only. It is not an end-to-end proof of the complete
 external framework function.
+
+
+## V0.8 — Source-Executed Adapter Semantic Preservation
+
+V0.8 executes methods extracted directly from the locked external OpenFisca-France and
+Django-Oscar source files and differentially compares them with the V0.7 scalar adapters.
+
+Command:
+
+./run.sh adapter-preservation
+
+Zero mismatch is evidence of semantic preservation over the declared deterministic
+validation domain. It is not presented as a universal proof outside that domain.
