@@ -202,3 +202,17 @@ Or run both:
 
 Reviewer-facing provenance and audit results are committed under `benchmarks/v0.6/`.
 Unsupported external functions remain in the reported denominator.
+
+
+## V0.7 — External Semantic Validation Pilot
+
+V0.7 validates explicit scalar semantic adapters derived from
+locked OpenFisca-France and Django-Oscar business rules.
+
+Command:
+
+./run.sh external-semantic
+
+A V0.7 PROVED result applies to the tracked scalar adapter and
+its contract only. It is not an end-to-end proof of the complete
+external framework function.

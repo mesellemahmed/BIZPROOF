@@ -1,0 +1,24 @@
+id: EXT-OSCAR-COUNT-PARTIAL-001
+title: Django-Oscar count-condition partial satisfaction semantic slice
+
+target:
+  source: benchmarks/v0.7/adapters/oscar_count_partial.py
+  function: count_condition_partially_satisfied
+
+inputs:
+  num_matches:
+    type: int
+    min: 0
+    max: 1000
+    label: Number of matching basket items after aggregation
+  required_count:
+    type: int
+    min: 1
+    max: 1000
+    label: Required count for the offer condition
+
+precondition: "num_matches >= 0 and required_count >= 1"
+postcondition: "result == ((num_matches > 0) and (num_matches < required_count))"
+
+business:
+  expected_outcome: "A count condition is partially satisfied only when matches are positive but below the required count."
