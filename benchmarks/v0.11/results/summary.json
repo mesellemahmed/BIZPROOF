@@ -1,0 +1,92 @@
+{
+  "allocation": "10_PER_SOURCE_X_COMPLEXITY_STRATUM",
+  "benchmark_version": "0.11.0",
+  "candidate_dataset_sha256": "a8a706aa831427478b1b3e96bd7a60800865436a28ead2367b2c4edcdae8871f",
+  "cohort_sha256": "3144f973a166ebee41a059c538b81ffac5a5d15737982c6d95e59175325ca108",
+  "complexity_counts": {
+    "HIGH": 30,
+    "LOW": 30,
+    "MEDIUM": 30
+  },
+  "eligible_pool_sha256": "33be87ff55ceb6ea0518a76dfcf0244fa4e103593cea2afb4cfb5dc2c9cc8ab3",
+  "eligible_pool_size": 730,
+  "evidence_counts": {
+    "DOC_ONLY": 24,
+    "NONE": 29,
+    "TEST_AND_DOC": 19,
+    "TEST_ONLY": 18
+  },
+  "passed": true,
+  "sample_size": 90,
+  "selection_seed": "BIZPROOF-V0.11-20260926",
+  "source_counts": {
+    "django_oscar": 30,
+    "openfisca_france": 30,
+    "pretix": 30
+  },
+  "strata": [
+    {
+      "adaptation_complexity": "HIGH",
+      "design_weight": 5.2,
+      "population_size": 52,
+      "sample_size": 10,
+      "source_id": "django_oscar"
+    },
+    {
+      "adaptation_complexity": "LOW",
+      "design_weight": 3.2,
+      "population_size": 32,
+      "sample_size": 10,
+      "source_id": "django_oscar"
+    },
+    {
+      "adaptation_complexity": "MEDIUM",
+      "design_weight": 25.1,
+      "population_size": 251,
+      "sample_size": 10,
+      "source_id": "django_oscar"
+    },
+    {
+      "adaptation_complexity": "HIGH",
+      "design_weight": 3.6,
+      "population_size": 36,
+      "sample_size": 10,
+      "source_id": "openfisca_france"
+    },
+    {
+      "adaptation_complexity": "LOW",
+      "design_weight": 2.9,
+      "population_size": 29,
+      "sample_size": 10,
+      "source_id": "openfisca_france"
+    },
+    {
+      "adaptation_complexity": "MEDIUM",
+      "design_weight": 12.8,
+      "population_size": 128,
+      "sample_size": 10,
+      "source_id": "openfisca_france"
+    },
+    {
+      "adaptation_complexity": "HIGH",
+      "design_weight": 6.3,
+      "population_size": 63,
+      "sample_size": 10,
+      "source_id": "pretix"
+    },
+    {
+      "adaptation_complexity": "LOW",
+      "design_weight": 1.5,
+      "population_size": 15,
+      "sample_size": 10,
+      "source_id": "pretix"
+    },
+    {
+      "adaptation_complexity": "MEDIUM",
+      "design_weight": 12.4,
+      "population_size": 124,
+      "sample_size": 10,
+      "source_id": "pretix"
+    }
+  ]
+}
