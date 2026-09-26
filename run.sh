@@ -85,6 +85,9 @@ case "$cmd" in
   symbolic-equivalence)
     docker compose run --rm --entrypoint python bizproof -m bizproof.symbolic_equivalence --catalog benchmarks/v0.9/catalog.json --lock benchmarks/v0.6/LOCK.json --external-root external_sources/v0.6 --repo-root . --output-dir benchmarks/v0.9/results
     ;;
+  certification-bundle)
+    docker compose run --rm --entrypoint python bizproof -m bizproof.certification_pipeline --registry benchmarks/v0.10/registry.json --lock benchmarks/v0.6/LOCK.json --repo-root . --external-root external_sources/v0.6 --certificates-dir benchmarks/v0.10/certificates --results-dir benchmarks/v0.10/results
+    ;;
   *)
     cat <<'EOF'
 Usage:
@@ -104,6 +107,7 @@ Usage:
   ./run.sh external-semantic
   ./run.sh adapter-preservation
   ./run.sh symbolic-equivalence
+  ./run.sh certification-bundle
 EOF
     ;;
 esac

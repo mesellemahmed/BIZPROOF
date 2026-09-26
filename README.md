@@ -243,3 +243,18 @@ Command:
 
 A PROVED result means that the negated equivalence obligation is UNSAT over the declared
 domain. The claim applies to the selected semantic slice, not the complete external framework.
+
+
+## V0.10 — Evidence-Carrying Certification Pipeline
+
+V0.10 assembles the locked provenance, V0.7 contract-verification evidence, V0.8
+source-executed preservation evidence and V0.9 symbolic-equivalence evidence into
+mechanically checked reviewer-facing certification bundles.
+
+Command:
+
+./run.sh certification-bundle
+
+Each certificate includes cryptographic hashes for its source, adapter, contract and
+evidence layers. CERTIFIED applies to the selected semantic slice and declared domain,
+not to the complete external framework.

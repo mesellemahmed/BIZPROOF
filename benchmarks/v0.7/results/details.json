@@ -13,7 +13,7 @@
       "counterexample": null,
       "metadata": {
         "path_count": 1,
-        "runtime_seconds": 0.03173365899419878,
+        "runtime_seconds": 0.026199038009508513,
         "timeout_ms": 10000,
         "z3_version": "5.1.0"
       },
@@ -37,7 +37,7 @@
       "metadata": {
         "path_count": 1,
         "path_index": 0,
-        "runtime_seconds": 0.0329207890026737,
+        "runtime_seconds": 0.019468646991299465,
         "timeout_ms": 10000,
         "z3_version": "5.1.0"
       },
@@ -82,7 +82,7 @@
       "counterexample": null,
       "metadata": {
         "path_count": 2,
-        "runtime_seconds": 0.05908308399375528,
+        "runtime_seconds": 0.015036629993119277,
         "timeout_ms": 10000,
         "z3_version": "5.1.0"
       },
@@ -107,7 +107,7 @@
       "metadata": {
         "path_count": 1,
         "path_index": 0,
-        "runtime_seconds": 0.0449810440040892,
+        "runtime_seconds": 0.027531571002327837,
         "timeout_ms": 10000,
         "z3_version": "5.1.0"
       },
@@ -152,7 +152,7 @@
       "counterexample": null,
       "metadata": {
         "path_count": 1,
-        "runtime_seconds": 0.03726124900276773,
+        "runtime_seconds": 0.032731771003454924,
         "timeout_ms": 10000,
         "z3_version": "5.1.0"
       },
@@ -177,7 +177,7 @@
       "metadata": {
         "path_count": 1,
         "path_index": 0,
-        "runtime_seconds": 0.05144537799060345,
+        "runtime_seconds": 0.06664075099979527,
         "timeout_ms": 10000,
         "z3_version": "5.1.0"
       },
@@ -224,7 +224,7 @@
       "counterexample": null,
       "metadata": {
         "path_count": 1,
-        "runtime_seconds": 0.01989327599585522,
+        "runtime_seconds": 0.019568592993891798,
         "timeout_ms": 10000,
         "z3_version": "5.1.0"
       },
@@ -249,7 +249,7 @@
       "metadata": {
         "path_count": 1,
         "path_index": 0,
-        "runtime_seconds": 0.04051407599763479,
+        "runtime_seconds": 0.03717863399651833,
         "timeout_ms": 10000,
         "z3_version": "5.1.0"
       },

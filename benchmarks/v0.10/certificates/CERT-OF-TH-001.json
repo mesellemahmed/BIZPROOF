@@ -1,0 +1,202 @@
+{
+  "artifacts": {
+    "adapter_function": "housing_tax_after_relief",
+    "adapter_path": "benchmarks/v0.7/adapters/openfisca_housing_tax.py",
+    "adapter_sha256": "27a36f8902c4a73a8ab9ab3d5be4d25ac878191ac2282e5798b447604d2bf772",
+    "contract_path": "contracts/external/v0.7/of_housing_tax_correct.yaml",
+    "contract_sha256": "bb677be0843e214c2eb982a2f22ccca6669d8e49bd8ad7c975c529198dc9893c"
+  },
+  "certificate_digest": "f9938f1c41fa80c8a7433e73ff1412614981fc18b30a0e09d0745a355c26998b",
+  "certificate_id": "CERT-OF-TH-001",
+  "certificate_version": "0.10.0",
+  "certification_scope": "RETURN_EXPRESSION_WITH_REPRESENTATION",
+  "checks": [
+    {
+      "detail": "openfisca_france",
+      "name": "lock-source-present",
+      "passed": true
+    },
+    {
+      "detail": "ebcb7782d17058495c6ca33c278e373e167b641b",
+      "name": "registry-lock-commit",
+      "passed": true
+    },
+    {
+      "detail": "ebcb7782d17058495c6ca33c278e373e167b641b",
+      "name": "checkout-lock-commit",
+      "passed": true
+    },
+    {
+      "detail": "openfisca_france/model/prelevements_obligatoires/taxe_habitation/taxe_habitation.py",
+      "name": "external-source-present",
+      "passed": true
+    },
+    {
+      "detail": "benchmarks/v0.7/adapters/openfisca_housing_tax.py",
+      "name": "adapter-present",
+      "passed": true
+    },
+    {
+      "detail": "contracts/external/v0.7/of_housing_tax_correct.yaml",
+      "name": "contract-present",
+      "passed": true
+    },
+    {
+      "detail": "EXT-OF-TH-001",
+      "name": "v0.7-evidence-present",
+      "passed": true
+    },
+    {
+      "detail": "PRES-OF-TH-001",
+      "name": "v0.8-evidence-present",
+      "passed": true
+    },
+    {
+      "detail": "SYM-OF-TH-001",
+      "name": "v0.9-evidence-present",
+      "passed": true
+    },
+    {
+      "detail": "summary passed",
+      "name": "v0.7-summary-pass",
+      "passed": true
+    },
+    {
+      "detail": "summary passed",
+      "name": "v0.8-summary-pass",
+      "passed": true
+    },
+    {
+      "detail": "summary passed",
+      "name": "v0.9-summary-pass",
+      "passed": true
+    },
+    {
+      "detail": "PROVED",
+      "name": "v0.7-correct-proved",
+      "passed": true
+    },
+    {
+      "detail": "DISPROVED",
+      "name": "v0.7-mutant-disproved",
+      "passed": true
+    },
+    {
+      "detail": "True",
+      "name": "v0.7-mutant-replay",
+      "passed": true
+    },
+    {
+      "detail": "0",
+      "name": "v0.8-zero-correct-mismatch",
+      "passed": true
+    },
+    {
+      "detail": "10099",
+      "name": "v0.8-mutant-sensitive",
+      "passed": true
+    },
+    {
+      "detail": "True",
+      "name": "v0.8-rule-pass",
+      "passed": true
+    },
+    {
+      "detail": "PROVED",
+      "name": "v0.9-correct-proved",
+      "passed": true
+    },
+    {
+      "detail": "unsat",
+      "name": "v0.9-correct-unsat",
+      "passed": true
+    },
+    {
+      "detail": "DISPROVED",
+      "name": "v0.9-mutant-disproved",
+      "passed": true
+    },
+    {
+      "detail": "sat",
+      "name": "v0.9-mutant-sat",
+      "passed": true
+    },
+    {
+      "detail": "{'relief': 1, 'tax_before_relief': 0}",
+      "name": "v0.9-mutant-witness",
+      "passed": true
+    },
+    {
+      "detail": "ebcb7782d17058495c6ca33c278e373e167b641b",
+      "name": "v0.8-commit-consistency",
+      "passed": true
+    },
+    {
+      "detail": "ebcb7782d17058495c6ca33c278e373e167b641b",
+      "name": "v0.9-commit-consistency",
+      "passed": true
+    },
+    {
+      "detail": "23a5d0046648b12616caa113be5df727c6e77ac885d23ce7c7eac1dd48ba588f",
+      "name": "v0.8-source-hash",
+      "passed": true
+    },
+    {
+      "detail": "23a5d0046648b12616caa113be5df727c6e77ac885d23ce7c7eac1dd48ba588f",
+      "name": "v0.9-source-hash",
+      "passed": true
+    },
+    {
+      "detail": "27a36f8902c4a73a8ab9ab3d5be4d25ac878191ac2282e5798b447604d2bf772",
+      "name": "v0.8-adapter-hash",
+      "passed": true
+    },
+    {
+      "detail": "27a36f8902c4a73a8ab9ab3d5be4d25ac878191ac2282e5798b447604d2bf772",
+      "name": "v0.9-adapter-hash",
+      "passed": true
+    }
+  ],
+  "claim_scope": "V0.10 certifies selected business-semantic slices only when their locked provenance, V0.7 contract verification evidence, V0.8 source-executed preservation evidence, and V0.9 symbolic equivalence evidence are mutually consistent. CERTIFIED does not mean that the complete external framework has been verified.",
+  "evidence": {
+    "v0.7": {
+      "correct_verdict": "PROVED",
+      "evidence_sha256": "72c763c819920b41ec96c20fc3fa91443a94e3d02e5c304c9350a17b976f9822",
+      "mutant_replay_validated": true,
+      "mutant_verdict": "DISPROVED",
+      "rule_id": "EXT-OF-TH-001"
+    },
+    "v0.8": {
+      "comparisons": 20169,
+      "correct_mismatches": 0,
+      "evidence_sha256": "177d710dc1daf8dec45fb7062c11f994fb058d72dc0b3dde3c13e3bf2b050c15",
+      "mutant_mismatches": 10099,
+      "rule_id": "PRES-OF-TH-001"
+    },
+    "v0.9": {
+      "correct_verdict": "PROVED",
+      "evidence_sha256": "055e1a60cf754aef6ff43981a4809a63206aed5a360d54291f71d12aea6ce707",
+      "external_mode": "FULL_FUNCTION",
+      "external_slice": "def formula_2017_01_01(menage, period, parameters):\n    taxe_habitation_commune_epci_avant_degrevement = menage('taxe_habitation_commune_epci_avant_degrevement', period)\n    degrevement_plafonnement_taxe_habitation = menage('degrevement_plafonnement_taxe_habitation', period)\n    return max_(taxe_habitation_commune_epci_avant_degrevement - degrevement_plafonnement_taxe_habitation, 0)",
+      "external_slice_sha256": "fa55c14e5bde27fa6e2bf43bb7455fd752f1063c61f3ce285f942bcb16a9ab64",
+      "mutant_counterexample": {
+        "relief": 1,
+        "tax_before_relief": 0
+      },
+      "mutant_solver_status": "sat",
+      "mutant_verdict": "DISPROVED",
+      "rule_id": "SYM-OF-TH-001",
+      "solver_status": "unsat"
+    }
+  },
+  "failed_checks": [],
+  "provenance": {
+    "external_class": "taxe_habitation_commune_epci_apres_degrevement_plafonnement",
+    "external_method": "formula_2017_01_01",
+    "external_source": "openfisca_france/model/prelevements_obligatoires/taxe_habitation/taxe_habitation.py",
+    "external_source_sha256": "23a5d0046648b12616caa113be5df727c6e77ac885d23ce7c7eac1dd48ba588f",
+    "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+    "source_id": "openfisca_france"
+  },
+  "status": "CERTIFIED"
+}
