@@ -46,6 +46,12 @@ case "$cmd" in
       --crosshair-condition-timeout 0.5 \
       --crosshair-process-timeout 5.0
     ;;
+  challenge-benchmark)
+    docker compose run --rm --entrypoint python bizproof \
+      -m bizproof.challenge_benchmark \
+      --catalog benchmarks/v0.5/catalog.json \
+      --output experiments/results/v0.5-challenge-summary.json
+    ;;
   check)
     docker compose run --rm --entrypoint sh bizproof -lc \
       'ruff check . && ruff format --check . && mypy src && pytest'
@@ -62,6 +68,7 @@ Usage:
   ./run.sh differential
   ./run.sh fuzz-differential
   ./run.sh baseline-comparison
+  ./run.sh challenge-benchmark
 EOF
     ;;
 esac

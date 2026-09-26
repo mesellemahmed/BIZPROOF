@@ -1,5 +1,5 @@
 {
-  "version": "0.4.1",
+  "version": "0.5.0",
   "validation_scope": "Docker",
   "quality_gate": {
     "command": "./run.sh check",
@@ -449,5 +449,140 @@
     "rules_checked": 60,
     "tool_errors": [],
     "wall_runtime_seconds": 269.258921
+  },
+  "rare_witness_challenge": {
+    "benchmark_version": "0.5.0",
+    "bizproof": {
+      "cases": 60,
+      "correct_cases": 30,
+      "correct_proved": 30,
+      "false_disproved": 0,
+      "false_proved": 0,
+      "mutant_detection_rate": 1.0,
+      "mutants": 30,
+      "mutants_detected": 30,
+      "proof_rate_on_correct": 1.0,
+      "runtime_seconds": 0.68626,
+      "unknown": 0
+    },
+    "cases_checked": 60,
+    "catalog": "benchmarks/v0.5/catalog.json",
+    "crosshair_by_budget": {
+      "0.5": {
+        "correct_cases": 30,
+        "correct_false_alarm_rate": 0.0,
+        "correct_false_alarms": 0,
+        "correct_inconclusive": 30,
+        "mutant_detection_rate": 1.0,
+        "mutants": 30,
+        "mutants_detected": 30,
+        "mutants_inconclusive": 0,
+        "mutants_missed": 0,
+        "runtime_seconds": 58.649701
+      },
+      "2.0": {
+        "correct_cases": 30,
+        "correct_false_alarm_rate": 0.0,
+        "correct_false_alarms": 0,
+        "correct_inconclusive": 30,
+        "mutant_detection_rate": 1.0,
+        "mutants": 30,
+        "mutants_detected": 30,
+        "mutants_inconclusive": 0,
+        "mutants_missed": 0,
+        "runtime_seconds": 58.581976
+      }
+    },
+    "hypothesis_by_budget": {
+      "100": {
+        "correct_cases": 30,
+        "correct_false_alarm_rate": 0.0,
+        "correct_false_alarms": 0,
+        "correct_inconclusive": 30,
+        "mutant_detection_rate": 0.0,
+        "mutants": 30,
+        "mutants_detected": 0,
+        "mutants_inconclusive": 0,
+        "mutants_missed": 30,
+        "runtime_seconds": 7.300479
+      },
+      "1000": {
+        "correct_cases": 30,
+        "correct_false_alarm_rate": 0.0,
+        "correct_false_alarms": 0,
+        "correct_inconclusive": 30,
+        "mutant_detection_rate": 0.03333333333333333,
+        "mutants": 30,
+        "mutants_detected": 1,
+        "mutants_inconclusive": 0,
+        "mutants_missed": 29,
+        "runtime_seconds": 61.256144
+      },
+      "10000": {
+        "correct_cases": 30,
+        "correct_false_alarm_rate": 0.0,
+        "correct_false_alarms": 0,
+        "correct_inconclusive": 30,
+        "mutant_detection_rate": 0.2,
+        "mutants": 30,
+        "mutants_detected": 6,
+        "mutants_inconclusive": 0,
+        "mutants_missed": 24,
+        "runtime_seconds": 599.33127
+      }
+    },
+    "interpretation": {
+      "bizproof_proved": "formal proof within the supported BIZPROOF semantics",
+      "crosshair_no_counterexample": "inconclusive under the configured symbolic-analysis budget",
+      "hypothesis_no_counterexample": "inconclusive under the configured search budget"
+    },
+    "passed": true,
+    "per_family": {
+      "guarded_magic": {
+        "domain_size_sum": 1000010,
+        "max_witness_density": 9.99990000099999e-06,
+        "min_witness_density": 9.99990000099999e-06,
+        "rules": 5,
+        "witness_count_sum": 10
+      },
+      "linear_magic": {
+        "domain_size_sum": 50001000005,
+        "max_witness_density": 1.969060618590722e-06,
+        "min_witness_density": 1.1386772263416054e-06,
+        "rules": 5,
+        "witness_count_sum": 77695
+      },
+      "narrow_boundary": {
+        "domain_size_sum": 5000005,
+        "max_witness_density": 9.99999000001e-07,
+        "min_witness_density": 9.99999000001e-07,
+        "rules": 5,
+        "witness_count_sum": 5
+      },
+      "pair_magic": {
+        "domain_size_sum": 20020005,
+        "max_witness_density": 4.995003747501561e-07,
+        "min_witness_density": 4.995003747501561e-07,
+        "rules": 5,
+        "witness_count_sum": 10
+      },
+      "single_magic": {
+        "domain_size_sum": 500005,
+        "max_witness_density": 1.999980000199998e-05,
+        "min_witness_density": 1.999980000199998e-05,
+        "rules": 5,
+        "witness_count_sum": 10
+      },
+      "triple_magic": {
+        "domain_size_sum": 5151505,
+        "max_witness_density": 1.941180295855289e-06,
+        "min_witness_density": 1.941180295855289e-06,
+        "rules": 5,
+        "witness_count_sum": 10
+      }
+    },
+    "rules_checked": 30,
+    "tool_errors": [],
+    "wall_runtime_seconds": 785.850229
   }
 }

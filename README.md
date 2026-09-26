@@ -161,3 +161,22 @@ Run:
 ```
 
 The comparison reports violation-detection rate, false alarms, inconclusive/error cases, runtime, and paired mutant-detection counts. `NO_COUNTEREXAMPLE` from a testing baseline is never reported as a formal proof.
+
+
+## V0.5 — Rare-Witness Challenge Benchmark
+
+V0.5 addresses the ceiling effect observed in V0.4 by introducing fixed business rules whose mutant behavior differs from the reference behavior only on sparse regions of large bounded domains.
+
+The challenge compares:
+
+- BIZPROOF symbolic verification;
+- Hypothesis with 100, 1,000, and 10,000-example budgets;
+- CrossHair with 0.5-second and 2.0-second per-condition budgets.
+
+Run:
+
+```bash
+./run.sh challenge-benchmark
+```
+
+Search-based methods are credited only when they find a counterexample. Absence of a counterexample remains inconclusive.
