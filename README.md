@@ -229,3 +229,17 @@ Command:
 
 Zero mismatch is evidence of semantic preservation over the declared deterministic
 validation domain. It is not presented as a universal proof outside that domain.
+
+
+## V0.9 — Symbolic Adapter Equivalence Certification
+
+V0.9 symbolically translates selected semantic slices directly from the locked external
+source AST and proves equivalence with the corresponding V0.7 adapter over the declared
+BVC domain.
+
+Command:
+
+./run.sh symbolic-equivalence
+
+A PROVED result means that the negated equivalence obligation is UNSAT over the declared
+domain. The claim applies to the selected semantic slice, not the complete external framework.

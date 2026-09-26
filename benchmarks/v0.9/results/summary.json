@@ -1,0 +1,13 @@
+{
+  "benchmark_version": "0.9.0",
+  "claim_scope": "V0.9 symbolically translates selected semantic slices directly from locked external Python ASTs and proves their equivalence to the corresponding V0.7 adapters over the declared BVC domains. For the Django-Oscar satisfaction case, the certified external slice is explicitly the post-aggregation threshold predicate, not the preceding basket aggregation loop.",
+  "correct_equivalences_proved": 4,
+  "failures": [],
+  "mutants_disproved": 4,
+  "passed": true,
+  "rules_checked": 4,
+  "rules_configured": 4,
+  "rules_passed": 4,
+  "runtime_seconds": 0.23762281201197766,
+  "unknown_results": 0
+}

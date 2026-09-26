@@ -1,0 +1,222 @@
+[
+  {
+    "adapter_file_sha256": "9962017188d963faa9ff690fdbc7b385ae3c070e2d8b4f73234672946ab8056d",
+    "adapter_function_lines": {
+      "end": 5,
+      "start": 1
+    },
+    "adapter_function_sha256": "3f7d2ae918cc7c27439d30e3f1a28aa8bdb06bd67763dc01b8d62b0710c6f829",
+    "adapter_symbolic_expression": "Not(nonprofit_association)",
+    "correct": {
+      "counterexample": null,
+      "runtime_seconds": 0.00015571899712085724,
+      "solver_status": "unsat",
+      "verdict": "PROVED"
+    },
+    "domain": {
+      "nonprofit_association": {
+        "type": "bool"
+      }
+    },
+    "expected_correct": "PROVED",
+    "expected_mutant": "DISPROVED",
+    "external_class": "redevable_taxe_apprentissage",
+    "external_method": "formula",
+    "external_method_lines": {
+      "end": 54,
+      "start": 49
+    },
+    "external_method_sha256": "120c42e074595de233ec3e5db9c83d365e0e01c7ddc9736ec7bec569fd13336a",
+    "external_mode": "FULL_FUNCTION",
+    "external_slice": "def formula(individu, period):\n    association = individu('entreprise_est_association_non_lucrative', period)\n    return not_(association)",
+    "external_slice_sha256": "120c42e074595de233ec3e5db9c83d365e0e01c7ddc9736ec7bec569fd13336a",
+    "external_source": "openfisca_france/model/prelevements_obligatoires/prelevements_sociaux/taxes_salaires_main_oeuvre.py",
+    "external_source_sha256": "ff84932a59b238328b8a5f4633378fd9ba9824d51403aef3717a24534dce30b1",
+    "external_symbolic_expression": "Not(nonprofit_association)",
+    "mutant": {
+      "counterexample": {
+        "nonprofit_association": false
+      },
+      "runtime_seconds": 4.813499981537461e-05,
+      "solver_status": "sat",
+      "verdict": "DISPROVED"
+    },
+    "mutant_function_sha256": "d4f672252d76a3abeef8399c989f9934bdd6c1f2ae5e4e8ef3732f54dc2f1420",
+    "mutant_symbolic_expression": "nonprofit_association",
+    "passed": true,
+    "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+    "rule_id": "SYM-OF-TA-001",
+    "source_id": "openfisca_france"
+  },
+  {
+    "adapter_file_sha256": "27a36f8902c4a73a8ab9ab3d5be4d25ac878191ac2282e5798b447604d2bf772",
+    "adapter_function_lines": {
+      "end": 8,
+      "start": 1
+    },
+    "adapter_function_sha256": "0ecc15b6e2b1d82611fac7eff8f68dc3b7f63e56ffb31dfb1c1781d2de0cfc13",
+    "adapter_symbolic_expression": "If(tax_before_relief + -1*relief <= 0,\n   0,\n   tax_before_relief + -1*relief)",
+    "correct": {
+      "counterexample": null,
+      "runtime_seconds": 0.0035122879926348105,
+      "solver_status": "unsat",
+      "verdict": "PROVED"
+    },
+    "domain": {
+      "relief": {
+        "max": 1000000,
+        "min": 0,
+        "type": "int"
+      },
+      "tax_before_relief": {
+        "max": 1000000,
+        "min": 0,
+        "type": "int"
+      }
+    },
+    "expected_correct": "PROVED",
+    "expected_mutant": "DISPROVED",
+    "external_class": "taxe_habitation_commune_epci_apres_degrevement_plafonnement",
+    "external_method": "formula_2017_01_01",
+    "external_method_lines": {
+      "end": 372,
+      "start": 369
+    },
+    "external_method_sha256": "fa55c14e5bde27fa6e2bf43bb7455fd752f1063c61f3ce285f942bcb16a9ab64",
+    "external_mode": "FULL_FUNCTION",
+    "external_slice": "def formula_2017_01_01(menage, period, parameters):\n    taxe_habitation_commune_epci_avant_degrevement = menage('taxe_habitation_commune_epci_avant_degrevement', period)\n    degrevement_plafonnement_taxe_habitation = menage('degrevement_plafonnement_taxe_habitation', period)\n    return max_(taxe_habitation_commune_epci_avant_degrevement - degrevement_plafonnement_taxe_habitation, 0)",
+    "external_slice_sha256": "fa55c14e5bde27fa6e2bf43bb7455fd752f1063c61f3ce285f942bcb16a9ab64",
+    "external_source": "openfisca_france/model/prelevements_obligatoires/taxe_habitation/taxe_habitation.py",
+    "external_source_sha256": "23a5d0046648b12616caa113be5df727c6e77ac885d23ce7c7eac1dd48ba588f",
+    "external_symbolic_expression": "If(0 <= tax_before_relief + -1*relief,\n   tax_before_relief + -1*relief,\n   0)",
+    "mutant": {
+      "counterexample": {
+        "relief": 1,
+        "tax_before_relief": 0
+      },
+      "runtime_seconds": 0.002368207002291456,
+      "solver_status": "sat",
+      "verdict": "DISPROVED"
+    },
+    "mutant_function_sha256": "2c515f7cd5112e178676637ec0ed6f59400ce36c82d31684cf17d890e4a46120",
+    "mutant_symbolic_expression": "tax_before_relief + -1*relief",
+    "passed": true,
+    "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+    "rule_id": "SYM-OF-TH-001",
+    "source_id": "openfisca_france"
+  },
+  {
+    "adapter_file_sha256": "1f15c19276e129add2cf9eb54ab73eab1214a46b8b309abd6210ad6d5c45ccb0",
+    "adapter_function_lines": {
+      "end": 6,
+      "start": 1
+    },
+    "adapter_function_sha256": "152856a262f3c991e97f942fcdf667ba7af0dcaad3d40c493701969dfcfca675",
+    "adapter_symbolic_expression": "And(Not(num_matches <= 0),\n    Not(required_count <= num_matches))",
+    "correct": {
+      "counterexample": null,
+      "runtime_seconds": 0.00015847600298002362,
+      "solver_status": "unsat",
+      "verdict": "PROVED"
+    },
+    "domain": {
+      "num_matches": {
+        "max": 1000,
+        "min": 0,
+        "type": "int"
+      },
+      "required_count": {
+        "max": 1000,
+        "min": 1,
+        "type": "int"
+      }
+    },
+    "expected_correct": "PROVED",
+    "expected_mutant": "DISPROVED",
+    "external_class": "CountCondition",
+    "external_method": "is_partially_satisfied",
+    "external_method_lines": {
+      "end": 69,
+      "start": 67
+    },
+    "external_method_sha256": "59b1062942d37a23679133a7582434517de068df3fd8c4b8ad153b4d91c10450",
+    "external_mode": "FULL_FUNCTION",
+    "external_slice": "def is_partially_satisfied(self, offer, basket):\n    num_matches = self._get_num_matches(basket, offer)\n    return 0 < num_matches < self.value",
+    "external_slice_sha256": "59b1062942d37a23679133a7582434517de068df3fd8c4b8ad153b4d91c10450",
+    "external_source": "src/oscar/apps/offer/conditions.py",
+    "external_source_sha256": "c0d503080546b2e85e4a028df8322496ecdfde4924355afb1cc9ebedb123925b",
+    "external_symbolic_expression": "And(Not(num_matches <= 0),\n    Not(required_count <= num_matches))",
+    "mutant": {
+      "counterexample": {
+        "num_matches": 1,
+        "required_count": 1
+      },
+      "runtime_seconds": 0.0017768059915397316,
+      "solver_status": "sat",
+      "verdict": "DISPROVED"
+    },
+    "mutant_function_sha256": "27f3670630abece7d2c20571e0a05e859a420d6728303fd7fbd3042bd25ca47e",
+    "mutant_symbolic_expression": "And(Not(num_matches <= 0), num_matches <= required_count)",
+    "passed": true,
+    "resolved_commit": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+    "rule_id": "SYM-OSCAR-PARTIAL-001",
+    "source_id": "django_oscar"
+  },
+  {
+    "adapter_file_sha256": "4f9671b32aef5561526577b107f00316682792b88dc3543c0864d57e7be9463d",
+    "adapter_function_lines": {
+      "end": 6,
+      "start": 1
+    },
+    "adapter_function_sha256": "e42dcad283c7dd8a7272d4e8db70588d400da86cd13eed1b9e612801d1b331af",
+    "adapter_symbolic_expression": "num_matches >= required_count",
+    "correct": {
+      "counterexample": null,
+      "runtime_seconds": 9.606000094208866e-05,
+      "solver_status": "unsat",
+      "verdict": "PROVED"
+    },
+    "domain": {
+      "num_matches": {
+        "max": 1000,
+        "min": 0,
+        "type": "int"
+      },
+      "required_count": {
+        "max": 1000,
+        "min": 1,
+        "type": "int"
+      }
+    },
+    "expected_correct": "PROVED",
+    "expected_mutant": "DISPROVED",
+    "external_class": "CountCondition",
+    "external_method": "is_satisfied",
+    "external_method_lines": {
+      "end": 54,
+      "start": 44
+    },
+    "external_method_sha256": "98ef386aeee88695fde3102de1f2863b2efe70676b34838c4ea9e9a43c8eacf6",
+    "external_mode": "IF_CONDITION",
+    "external_slice": "num_matches >= self.value",
+    "external_slice_sha256": "8b10fc3c5d17d3ae07f34d3a9afd2f5e9156b51e81fdb541e575e3dac3f8fa6d",
+    "external_source": "src/oscar/apps/offer/conditions.py",
+    "external_source_sha256": "c0d503080546b2e85e4a028df8322496ecdfde4924355afb1cc9ebedb123925b",
+    "external_symbolic_expression": "num_matches >= required_count",
+    "mutant": {
+      "counterexample": {
+        "num_matches": 1,
+        "required_count": 1
+      },
+      "runtime_seconds": 0.0015701459924457595,
+      "solver_status": "sat",
+      "verdict": "DISPROVED"
+    },
+    "mutant_function_sha256": "09b5de0b07f2732fe2b1b5bb0c2febd360eddfcd94561d2a6ce42b38e6961695",
+    "mutant_symbolic_expression": "Not(num_matches <= required_count)",
+    "passed": true,
+    "resolved_commit": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+    "rule_id": "SYM-OSCAR-SAT-001",
+    "source_id": "django_oscar"
+  }
+]

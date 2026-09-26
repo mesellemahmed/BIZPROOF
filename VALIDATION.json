@@ -1,5 +1,5 @@
 {
-  "version": "0.8.0",
+  "version": "0.9.0",
   "validation_scope": "Docker",
   "quality_gate": {
     "command": "./run.sh check",
@@ -730,5 +730,17 @@
     "runtime_seconds": 0.3790851040103007,
     "passed": true,
     "claim_scope": "V0.8 compares V0.7 adapters against methods extracted directly from the locked external source files and executed in controlled scalar harnesses. Zero observed mismatches is evidence of semantic preservation over the declared validation domains; it is not a universal proof outside those domains."
+  },
+  "symbolic_adapter_equivalence": {
+    "benchmark_version": "0.9.0",
+    "method": "Symbolic translation of locked external AST semantic slices and SMT equivalence certification",
+    "rules_checked": 4,
+    "correct_equivalences_proved": 4,
+    "mutants_disproved": 4,
+    "unknown_results": 0,
+    "failures": 0,
+    "runtime_seconds": 0.23762281201197766,
+    "passed": true,
+    "claim_scope": "V0.9 symbolically translates selected semantic slices directly from locked external Python ASTs and proves their equivalence to the corresponding V0.7 adapters over the declared BVC domains. For the Django-Oscar satisfaction case, the certified external slice is explicitly the post-aggregation threshold predicate, not the preceding basket aggregation loop."
   }
 }
