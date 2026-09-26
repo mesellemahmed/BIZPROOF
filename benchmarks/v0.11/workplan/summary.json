@@ -1,0 +1,42 @@
+{
+  "benchmark_version": "0.11.0",
+  "by_source": {
+    "django_oscar": {
+      "AUTO_DIRECT_FORMALIZATION": 3,
+      "BINDING_DEFINITION": 6,
+      "CONTROLLED_EXECUTION_REVIEW": 6,
+      "EXPLICIT_ADAPTER": 15
+    },
+    "openfisca_france": {
+      "BINDING_DEFINITION": 22,
+      "CONTROLLED_EXECUTION_REVIEW": 2,
+      "EXPLICIT_ADAPTER": 5,
+      "STRUCTURAL_REVIEW": 1
+    },
+    "pretix": {
+      "BINDING_DEFINITION": 7,
+      "CONTROLLED_EXECUTION_REVIEW": 9,
+      "EXPLICIT_ADAPTER": 13,
+      "STRUCTURAL_REVIEW": 1
+    }
+  },
+  "certification_claim": false,
+  "cohort_sha256": "3144f973a166ebee41a059c538b81ffac5a5d15737982c6d95e59175325ca108",
+  "passed": true,
+  "phase": "GENERALIZATION_EXECUTION_WORKPLAN",
+  "route_counts": {
+    "AUTO_DIRECT_FORMALIZATION": 3,
+    "BINDING_DEFINITION": 35,
+    "CONTROLLED_EXECUTION_REVIEW": 17,
+    "EXPLICIT_ADAPTER": 33,
+    "STRUCTURAL_REVIEW": 2
+  },
+  "routes": [
+    "AUTO_DIRECT_FORMALIZATION",
+    "BINDING_DEFINITION",
+    "STRUCTURAL_REVIEW",
+    "EXPLICIT_ADAPTER",
+    "CONTROLLED_EXECUTION_REVIEW"
+  ],
+  "total_candidates": 90
+}

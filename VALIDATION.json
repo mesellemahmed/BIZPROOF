@@ -822,6 +822,31 @@
       "certification_claim": false,
       "passed": true
     },
-    "final_certification_complete": false
+    "final_certification_complete": false,
+    "symbolic_frontend_probe": {
+      "attempted_candidates": 40,
+      "probe_counts": {
+        "STRUCTURAL_REVIEW": 2,
+        "SYMBOLIC_FRONTEND_READY": 38
+      },
+      "binding_primitives": 57,
+      "binding_occurrences": 170,
+      "source_mismatches": 0,
+      "extraction_failures": 0,
+      "certification_claim": false,
+      "passed": true
+    },
+    "execution_workplan": {
+      "total_candidates": 90,
+      "route_counts": {
+        "AUTO_DIRECT_FORMALIZATION": 3,
+        "BINDING_DEFINITION": 35,
+        "CONTROLLED_EXECUTION_REVIEW": 17,
+        "EXPLICIT_ADAPTER": 33,
+        "STRUCTURAL_REVIEW": 2
+      },
+      "certification_claim": false,
+      "passed": true
+    }
   }
 }

@@ -275,3 +275,16 @@ Commands:
 
 ./run.sh generalization-cohort
 ./run.sh generalization-feasibility
+
+
+### V0.11 symbolic front-end probe
+
+The V0.11 symbolic front-end probe attempts conservative structural translation
+of all preregistered F0/F1 candidates into a BSIR skeleton. External calls and
+attributes are preserved as explicit binding obligations.
+
+Command:
+
+./run.sh generalization-symbolic-probe
+
+`SYMBOLIC_FRONTEND_READY` is not a proof or certification verdict.

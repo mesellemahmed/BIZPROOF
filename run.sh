@@ -94,6 +94,12 @@ case "$cmd" in
   generalization-feasibility)
     docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_feasibility --cohort benchmarks/v0.11/results/cohort.jsonl --cohort-summary benchmarks/v0.11/results/summary.json --lock benchmarks/v0.6/LOCK.json --external-root external_sources/v0.6 --output-dir benchmarks/v0.11/feasibility
     ;;
+  generalization-symbolic-probe)
+    docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_symbolic_probe --assessment benchmarks/v0.11/feasibility/assessment.jsonl --cohort-summary benchmarks/v0.11/results/summary.json --lock benchmarks/v0.6/LOCK.json --external-root external_sources/v0.6 --output-dir benchmarks/v0.11/symbolic_probe
+    ;;
+  generalization-workplan)
+    docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_workplan --feasibility-summary benchmarks/v0.11/feasibility/summary.json --assessment benchmarks/v0.11/feasibility/assessment.jsonl --probe-summary benchmarks/v0.11/symbolic_probe/summary.json --probe benchmarks/v0.11/symbolic_probe/probe.jsonl --output-dir benchmarks/v0.11/workplan
+    ;;
   *)
     cat <<'EOF'
 Usage:
