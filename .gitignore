@@ -10,3 +10,6 @@ experiments/results/
 experiments/generated/
 
 bizproof-*.zip
+
+# BIZPROOF V0.6 external source checkouts
+external_sources/

@@ -1,0 +1,63 @@
+{
+  "acquisition_mode": "shallow-filtered-sparse-checkout",
+  "corpus_version": "0.6.0",
+  "generated_at_utc": "2026-09-26T02:39:27.894871+00:00",
+  "sources": [
+    {
+      "commit_date": "2026-09-18T17:10:29+02:00",
+      "describe": "176.1.0",
+      "id": "openfisca_france",
+      "license_declared": "AGPL-3.0-or-later",
+      "license_file": "LICENSE.AGPL.txt",
+      "license_sha256": "6da1054eef20b8949622f2acc5a89c3243ff3b3d7aa8c2bb8fa5c04d15113c00",
+      "materialized_roots": [
+        "openfisca_france/model",
+        "tests",
+        "README.md"
+      ],
+      "repository": "https://github.com/openfisca/openfisca-france.git",
+      "requested_ref": "master",
+      "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+      "sparse_checkout": true
+    },
+    {
+      "commit_date": "2026-09-25T18:41:38+01:00",
+      "describe": "4.2.0-jenkins-1075",
+      "id": "django_oscar",
+      "license_declared": "BSD-3-Clause",
+      "license_file": "LICENSE",
+      "license_sha256": "748034a55b47f185ad8bcbc8db37bed8fadf7006f70bcf6ce544d04bf037f47c",
+      "materialized_roots": [
+        "src/oscar/apps/offer",
+        "src/oscar/apps/partner",
+        "src/oscar/apps/basket",
+        "src/oscar/apps/order",
+        "tests",
+        "docs"
+      ],
+      "repository": "https://github.com/django-oscar/django-oscar.git",
+      "requested_ref": "master",
+      "resolved_commit": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+      "sparse_checkout": true
+    },
+    {
+      "commit_date": "2026-09-25T16:54:58+02:00",
+      "describe": "2af8d29",
+      "id": "pretix",
+      "license_declared": "AGPL-3.0-with-additional-terms",
+      "license_file": "LICENSE",
+      "license_sha256": "e6a50eda5e2cb74a8d2f05a1da0620147cff65e93e32bfbceb50803d6d73034a",
+      "materialized_roots": [
+        "src/pretix/base/services",
+        "src/pretix/base/models",
+        "src/pretix",
+        "tests",
+        "doc"
+      ],
+      "repository": "https://github.com/pretix/pretix.git",
+      "requested_ref": "master",
+      "resolved_commit": "2af8d29ca99510612fdb005d4ec7d39d83aed6ba",
+      "sparse_checkout": true
+    }
+  ]
+}
