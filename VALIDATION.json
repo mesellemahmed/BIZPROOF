@@ -1,5 +1,5 @@
 {
-  "version": "0.7.0",
+  "version": "0.8.0",
   "validation_scope": "Docker",
   "quality_gate": {
     "command": "./run.sh check",
@@ -716,5 +716,19 @@
     "runtime_seconds": 1.4748547399940435,
     "passed": true,
     "claim_scope": "BIZPROOF verifies explicit scalar semantic adapters derived from locked external business-rule implementations and independently traceable tests/specifications. It does not claim end-to-end proof of the original frameworks."
+  },
+  "adapter_semantic_preservation": {
+    "benchmark_version": "0.8.0",
+    "method": "AST extraction and execution of methods from locked external source files, differentially compared with V0.7 semantic adapters",
+    "rules_checked": 4,
+    "rules_passed": 4,
+    "total_comparisons": 52939,
+    "correct_adapter_mismatches": 0,
+    "mutant_mismatches": 10354,
+    "failures": 0,
+    "seed": 20260926,
+    "runtime_seconds": 0.3790851040103007,
+    "passed": true,
+    "claim_scope": "V0.8 compares V0.7 adapters against methods extracted directly from the locked external source files and executed in controlled scalar harnesses. Zero observed mismatches is evidence of semantic preservation over the declared validation domains; it is not a universal proof outside those domains."
   }
 }
