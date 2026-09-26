@@ -1,0 +1,23 @@
+# BIZPROOF V0.10 — Evidence-Carrying Certification Pipeline
+
+V0.10 turns the validated V0.7–V0.9 evidence into a reviewer-facing certification bundle.
+
+A semantic slice receives `CERTIFIED` only when all of the following agree:
+
+1. the external repository commit equals the frozen V0.6.2 lock;
+2. the external source file and adapter exist and their hashes are recorded;
+3. V0.7 proves the adapter contract and disproves the controlled mutant with replay;
+4. V0.8 observes zero source/adaptor mismatches and detects the controlled mutant;
+5. V0.9 proves symbolic external/adaptor equivalence and disproves the mutant;
+6. cross-version provenance fields and file hashes are consistent.
+
+Outputs:
+
+- one JSON certificate per semantic slice;
+- a canonical SHA-256 digest for each certificate;
+- `results/index.json`;
+- `results/summary.json`;
+- `results/REVIEWER_REPORT.md`.
+
+`CERTIFIED` applies to the selected semantic slice and declared domain. It is not an
+end-to-end certification of OpenFisca-France or Django-Oscar.

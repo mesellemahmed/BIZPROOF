@@ -1,5 +1,5 @@
 {
-  "version": "0.9.0",
+  "version": "0.10.0",
   "validation_scope": "Docker",
   "quality_gate": {
     "command": "./run.sh check",
@@ -742,5 +742,18 @@
     "runtime_seconds": 0.23762281201197766,
     "passed": true,
     "claim_scope": "V0.9 symbolically translates selected semantic slices directly from locked external Python ASTs and proves their equivalence to the corresponding V0.7 adapters over the declared BVC domains. For the Django-Oscar satisfaction case, the certified external slice is explicitly the post-aggregation threshold predicate, not the preceding basket aggregation loop."
+  },
+  "evidence_carrying_certification": {
+    "benchmark_version": "0.10.0",
+    "certificates_configured": 4,
+    "certificates_issued": 4,
+    "certificates_failed": 0,
+    "external_system_count": 2,
+    "v08_total_comparisons": 52939,
+    "v08_correct_mismatches": 0,
+    "v09_equivalences_proved": 4,
+    "certificate_index_digest": "93e7732e6004946f403bd87810a8e3d323dc7ca1fc14efd1665c8c84abae85c1",
+    "passed": true,
+    "claim_scope": "V0.10 certifies selected business-semantic slices only when their locked provenance, V0.7 contract verification evidence, V0.8 source-executed preservation evidence, and V0.9 symbolic equivalence evidence are mutually consistent. CERTIFIED does not mean that the complete external framework has been verified."
   }
 }
