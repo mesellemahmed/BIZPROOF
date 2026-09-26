@@ -88,6 +88,12 @@ case "$cmd" in
   certification-bundle)
     docker compose run --rm --entrypoint python bizproof -m bizproof.certification_pipeline --registry benchmarks/v0.10/registry.json --lock benchmarks/v0.6/LOCK.json --repo-root . --external-root external_sources/v0.6 --certificates-dir benchmarks/v0.10/certificates --results-dir benchmarks/v0.10/results
     ;;
+  generalization-cohort)
+    docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_cohort --candidates benchmarks/v0.6/results/candidates.jsonl --registry benchmarks/v0.10/registry.json --output-dir benchmarks/v0.11/results
+    ;;
+  generalization-feasibility)
+    docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_feasibility --cohort benchmarks/v0.11/results/cohort.jsonl --cohort-summary benchmarks/v0.11/results/summary.json --lock benchmarks/v0.6/LOCK.json --external-root external_sources/v0.6 --output-dir benchmarks/v0.11/feasibility
+    ;;
   *)
     cat <<'EOF'
 Usage:

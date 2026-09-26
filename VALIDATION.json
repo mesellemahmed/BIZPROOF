@@ -1,5 +1,5 @@
 {
-  "version": "0.10.1",
+  "version": "0.11.0",
   "validation_scope": "Docker",
   "quality_gate": {
     "command": "./run.sh check",
@@ -765,5 +765,63 @@
       "v0.9": "v0.9.0"
     },
     "certification_reads_frozen_evidence": true
+  },
+  "external_generalization": {
+    "benchmark_version": "0.11.0",
+    "status": "IN_PROGRESS",
+    "cohort": {
+      "eligible_population": 730,
+      "sample_size": 90,
+      "cohort_sha256": "3144f973a166ebee41a059c538b81ffac5a5d15737982c6d95e59175325ca108",
+      "allocation": "10_PER_SOURCE_X_COMPLEXITY_STRATUM"
+    },
+    "static_feasibility": {
+      "assessed_candidates": 90,
+      "source_mismatches": 0,
+      "extraction_failures": 0,
+      "feasibility_counts": {
+        "F0_DIRECT_SYMBOLIC": 3,
+        "F1_DECLARATIVE_BINDING": 37,
+        "F2_EXPLICIT_ADAPTER": 33,
+        "F3_SEMANTIC_EXECUTION_REVIEW": 17
+      },
+      "weighted_estimates": {
+        "F0_DIRECT_SYMBOLIC": {
+          "approx_ci95_high": 0.024032665183926393,
+          "approx_ci95_low": 0.0022687046790873036,
+          "approx_standard_error": 0.00555203074103038,
+          "ci_interpretation": "Approximate design-based interval under the preregistered hash-as-uniform stratified sampling assumption.",
+          "estimated_population_count": 9.6,
+          "estimated_rate": 0.013150684931506848
+        },
+        "F1_DECLARATIVE_BINDING": {
+          "approx_ci95_high": 0.32428485221787134,
+          "approx_ci95_low": 0.22557816148075885,
+          "approx_standard_error": 0.025180278249263395,
+          "ci_interpretation": "Approximate design-based interval under the preregistered hash-as-uniform stratified sampling assumption.",
+          "estimated_population_count": 200.70000000000002,
+          "estimated_rate": 0.2749315068493151
+        },
+        "F2_EXPLICIT_ADAPTER": {
+          "approx_ci95_high": 0.6077321383043972,
+          "approx_ci95_low": 0.3796651219695755,
+          "approx_standard_error": 0.058180361309903485,
+          "ci_interpretation": "Approximate design-based interval under the preregistered hash-as-uniform stratified sampling assumption.",
+          "estimated_population_count": 360.40000000000003,
+          "estimated_rate": 0.49369863013698634
+        },
+        "F3_SEMANTIC_EXECUTION_REVIEW": {
+          "approx_ci95_high": 0.3262851048600045,
+          "approx_ci95_low": 0.11015325130437911,
+          "approx_standard_error": 0.055135676927455454,
+          "ci_interpretation": "Approximate design-based interval under the preregistered hash-as-uniform stratified sampling assumption.",
+          "estimated_population_count": 159.3,
+          "estimated_rate": 0.2182191780821918
+        }
+      },
+      "certification_claim": false,
+      "passed": true
+    },
+    "final_certification_complete": false
   }
 }

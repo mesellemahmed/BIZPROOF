@@ -258,3 +258,20 @@ Command:
 Each certificate includes cryptographic hashes for its source, adapter, contract and
 evidence layers. CERTIFIED applies to the selected semantic slice and declared domain,
 not to the complete external framework.
+
+
+## V0.11 — External Generalization Study
+
+V0.11 evaluates BIZPROOF on a preregistered, deterministic 90-candidate
+cohort sampled from 730 novel STRONG/ADAPTATION_REQUIRED external business-rule
+candidates. The design balances the three external systems and three V0.6.2
+adaptation-complexity levels.
+
+The static feasibility phase routes each frozen candidate to one of four
+engineering paths (`F0`–`F3`). These paths are not proof or certification
+verdicts.
+
+Commands:
+
+./run.sh generalization-cohort
+./run.sh generalization-feasibility
