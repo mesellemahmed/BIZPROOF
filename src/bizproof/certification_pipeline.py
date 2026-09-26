@@ -137,13 +137,13 @@ def run_certification(
     registry = _load_json(registry_path)
     lock = _load_json(lock_path)
 
-    v07_summary = _load_json(repo_root / "benchmarks/v0.7/results/summary.json")
-    v08_summary = _load_json(repo_root / "benchmarks/v0.8/results/summary.json")
-    v09_summary = _load_json(repo_root / "benchmarks/v0.9/results/summary.json")
+    v07_summary = _load_json(repo_root / "benchmarks/v0.10/evidence/v0.7/summary.json")
+    v08_summary = _load_json(repo_root / "benchmarks/v0.10/evidence/v0.8/summary.json")
+    v09_summary = _load_json(repo_root / "benchmarks/v0.10/evidence/v0.9/summary.json")
 
-    v07 = _detail_map(repo_root / "benchmarks/v0.7/results/details.json")
-    v08 = _detail_map(repo_root / "benchmarks/v0.8/results/details.json")
-    v09 = _detail_map(repo_root / "benchmarks/v0.9/results/details.json")
+    v07 = _detail_map(repo_root / "benchmarks/v0.10/evidence/v0.7/details.json")
+    v08 = _detail_map(repo_root / "benchmarks/v0.10/evidence/v0.8/details.json")
+    v09 = _detail_map(repo_root / "benchmarks/v0.10/evidence/v0.9/details.json")
 
     raw_sources = lock.get("sources")
     if not isinstance(raw_sources, list):

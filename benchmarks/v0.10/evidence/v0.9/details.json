@@ -9,7 +9,7 @@
     "adapter_symbolic_expression": "Not(nonprofit_association)",
     "correct": {
       "counterexample": null,
-      "runtime_seconds": 0.00015571899712085724,
+      "runtime_seconds": 0.0003089489910053089,
       "solver_status": "unsat",
       "verdict": "PROVED"
     },
@@ -37,7 +37,7 @@
       "counterexample": {
         "nonprofit_association": false
       },
-      "runtime_seconds": 4.813499981537461e-05,
+      "runtime_seconds": 0.00018546300998423249,
       "solver_status": "sat",
       "verdict": "DISPROVED"
     },
@@ -58,7 +58,7 @@
     "adapter_symbolic_expression": "If(tax_before_relief + -1*relief <= 0,\n   0,\n   tax_before_relief + -1*relief)",
     "correct": {
       "counterexample": null,
-      "runtime_seconds": 0.0035122879926348105,
+      "runtime_seconds": 0.005732174002332613,
       "solver_status": "unsat",
       "verdict": "PROVED"
     },
@@ -94,7 +94,7 @@
         "relief": 1,
         "tax_before_relief": 0
       },
-      "runtime_seconds": 0.002368207002291456,
+      "runtime_seconds": 0.0035177039972040802,
       "solver_status": "sat",
       "verdict": "DISPROVED"
     },
@@ -115,7 +115,7 @@
     "adapter_symbolic_expression": "And(Not(num_matches <= 0),\n    Not(required_count <= num_matches))",
     "correct": {
       "counterexample": null,
-      "runtime_seconds": 0.00015847600298002362,
+      "runtime_seconds": 0.0003252239985158667,
       "solver_status": "unsat",
       "verdict": "PROVED"
     },
@@ -151,7 +151,7 @@
         "num_matches": 1,
         "required_count": 1
       },
-      "runtime_seconds": 0.0017768059915397316,
+      "runtime_seconds": 0.004205757999443449,
       "solver_status": "sat",
       "verdict": "DISPROVED"
     },
@@ -172,7 +172,7 @@
     "adapter_symbolic_expression": "num_matches >= required_count",
     "correct": {
       "counterexample": null,
-      "runtime_seconds": 9.606000094208866e-05,
+      "runtime_seconds": 0.00011489800817798823,
       "solver_status": "unsat",
       "verdict": "PROVED"
     },
@@ -208,7 +208,7 @@
         "num_matches": 1,
         "required_count": 1
       },
-      "runtime_seconds": 0.0015701459924457595,
+      "runtime_seconds": 0.002550991004682146,
       "solver_status": "sat",
       "verdict": "DISPROVED"
     },

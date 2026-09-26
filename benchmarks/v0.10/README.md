@@ -21,3 +21,17 @@ Outputs:
 
 `CERTIFIED` applies to the selected semantic slice and declared domain. It is not an
 end-to-end certification of OpenFisca-France or Django-Oscar.
+
+
+## Frozen evidence snapshots
+
+V0.10.1 freezes the exact V0.7, V0.8 and V0.9 evidence used by the
+certification pipeline under `benchmarks/v0.10/evidence/`.
+
+The original milestone result directories are restored from their
+respective release tags (`v0.7.0`, `v0.8.0`, `v0.9.0`) and are no
+longer used as mutable inputs to V0.10 certification.
+
+This separates historical milestone artifacts from certification-time
+evidence and prevents later reproduction runs from silently changing
+the evidence underlying an issued certificate.

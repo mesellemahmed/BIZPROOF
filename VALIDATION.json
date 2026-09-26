@@ -1,5 +1,5 @@
 {
-  "version": "0.10.0",
+  "version": "0.10.1",
   "validation_scope": "Docker",
   "quality_gate": {
     "command": "./run.sh check",
@@ -755,5 +755,15 @@
     "certificate_index_digest": "93e7732e6004946f403bd87810a8e3d323dc7ca1fc14efd1665c8c84abae85c1",
     "passed": true,
     "claim_scope": "V0.10 certifies selected business-semantic slices only when their locked provenance, V0.7 contract verification evidence, V0.8 source-executed preservation evidence, and V0.9 symbolic equivalence evidence are mutually consistent. CERTIFIED does not mean that the complete external framework has been verified."
+  },
+  "evidence_snapshot_policy": {
+    "version": "0.10.1",
+    "frozen_under": "benchmarks/v0.10/evidence",
+    "historical_results_restored_from_tags": {
+      "v0.7": "v0.7.0",
+      "v0.8": "v0.8.0",
+      "v0.9": "v0.9.0"
+    },
+    "certification_reads_frozen_evidence": true
   }
 }
