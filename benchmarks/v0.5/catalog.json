@@ -1,0 +1,706 @@
+{
+  "benchmark": "BIZPROOF Rare-Witness Challenge",
+  "version": "0.5.0",
+  "rules": [
+    {
+      "id": "BANK-C01",
+      "domain": "banking",
+      "family": "single_magic",
+      "title": "Banking rare-witness rule 1",
+      "business_text": "A reserved business code must be rejected.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 100000,
+          "label": "Business code"
+        }
+      },
+      "params": {
+        "target": 99990
+      }
+    },
+    {
+      "id": "BANK-C02",
+      "domain": "banking",
+      "family": "pair_magic",
+      "title": "Banking rare-witness rule 2",
+      "business_text": "A specific prohibited pair of business codes must be rejected.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 2000,
+          "label": "Primary code"
+        },
+        "y": {
+          "type": "int",
+          "min": 0,
+          "max": 2000,
+          "label": "Secondary code"
+        }
+      },
+      "params": {
+        "target_x": 354,
+        "target_y": 562
+      }
+    },
+    {
+      "id": "BANK-C03",
+      "domain": "banking",
+      "family": "narrow_boundary",
+      "title": "Banking rare-witness rule 3",
+      "business_text": "A narrow forbidden business interval must remain blocked at both boundaries.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 1000000,
+          "label": "Transaction value"
+        }
+      },
+      "params": {
+        "low": 21954,
+        "high": 21956
+      }
+    },
+    {
+      "id": "BANK-C04",
+      "domain": "banking",
+      "family": "guarded_magic",
+      "title": "Banking rare-witness rule 4",
+      "business_text": "A reserved code must be rejected when the restricted context is active.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 100000,
+          "label": "Business code"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Restricted context"
+        }
+      },
+      "params": {
+        "target": 7919
+      }
+    },
+    {
+      "id": "BANK-C05",
+      "domain": "banking",
+      "family": "linear_magic",
+      "title": "Banking rare-witness rule 5",
+      "business_text": "A prohibited exact aggregate amount must be rejected.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 100000,
+          "label": "Amount A"
+        },
+        "y": {
+          "type": "int",
+          "min": 0,
+          "max": 100000,
+          "label": "Amount B"
+        }
+      },
+      "params": {
+        "target": 5692
+      }
+    },
+    {
+      "id": "BANK-C06",
+      "domain": "banking",
+      "family": "triple_magic",
+      "title": "Banking rare-witness rule 6",
+      "business_text": "A specific prohibited three-code combination must be rejected.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 100,
+          "label": "Code A"
+        },
+        "y": {
+          "type": "int",
+          "min": 0,
+          "max": 100,
+          "label": "Code B"
+        },
+        "z": {
+          "type": "int",
+          "min": 0,
+          "max": 100,
+          "label": "Code C"
+        }
+      },
+      "params": {
+        "target_x": 46,
+        "target_y": 68,
+        "target_z": 82
+      }
+    },
+    {
+      "id": "BANK-C07",
+      "domain": "banking",
+      "family": "single_magic",
+      "title": "Banking rare-witness rule 7",
+      "business_text": "A reserved business code must be rejected.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 100000,
+          "label": "Business code"
+        }
+      },
+      "params": {
+        "target": 88069
+      }
+    },
+    {
+      "id": "BANK-C08",
+      "domain": "banking",
+      "family": "pair_magic",
+      "title": "Banking rare-witness rule 8",
+      "business_text": "A specific prohibited pair of business codes must be rejected.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 2000,
+          "label": "Primary code"
+        },
+        "y": {
+          "type": "int",
+          "min": 0,
+          "max": 2000,
+          "label": "Secondary code"
+        }
+      },
+      "params": {
+        "target_x": 576,
+        "target_y": 880
+      }
+    },
+    {
+      "id": "BANK-C09",
+      "domain": "banking",
+      "family": "narrow_boundary",
+      "title": "Banking rare-witness rule 9",
+      "business_text": "A narrow forbidden business interval must remain blocked at both boundaries.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 1000000,
+          "label": "Transaction value"
+        }
+      },
+      "params": {
+        "low": 27816,
+        "high": 27818
+      }
+    },
+    {
+      "id": "BANK-C10",
+      "domain": "banking",
+      "family": "guarded_magic",
+      "title": "Banking rare-witness rule 10",
+      "business_text": "A reserved code must be rejected when the restricted context is active.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 100000,
+          "label": "Business code"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Restricted context"
+        }
+      },
+      "params": {
+        "target": 75011
+      }
+    },
+    {
+      "id": "ECOM-C01",
+      "domain": "ecommerce",
+      "family": "linear_magic",
+      "title": "Ecommerce rare-witness rule 1",
+      "business_text": "A prohibited exact aggregate amount must be rejected.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 100000,
+          "label": "Amount A"
+        },
+        "y": {
+          "type": "int",
+          "min": 0,
+          "max": 100000,
+          "label": "Amount B"
+        }
+      },
+      "params": {
+        "target": 6730
+      }
+    },
+    {
+      "id": "ECOM-C02",
+      "domain": "ecommerce",
+      "family": "triple_magic",
+      "title": "Ecommerce rare-witness rule 2",
+      "business_text": "A specific prohibited three-code combination must be rejected.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 100,
+          "label": "Code A"
+        },
+        "y": {
+          "type": "int",
+          "min": 0,
+          "max": 100,
+          "label": "Code B"
+        },
+        "z": {
+          "type": "int",
+          "min": 0,
+          "max": 100,
+          "label": "Code C"
+        }
+      },
+      "params": {
+        "target_x": 18,
+        "target_y": 64,
+        "target_z": 20
+      }
+    },
+    {
+      "id": "ECOM-C03",
+      "domain": "ecommerce",
+      "family": "single_magic",
+      "title": "Ecommerce rare-witness rule 3",
+      "business_text": "A reserved business code must be rejected.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 100000,
+          "label": "Business code"
+        }
+      },
+      "params": {
+        "target": 65003
+      }
+    },
+    {
+      "id": "ECOM-C04",
+      "domain": "ecommerce",
+      "family": "pair_magic",
+      "title": "Ecommerce rare-witness rule 4",
+      "business_text": "A specific prohibited pair of business codes must be rejected.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 2000,
+          "label": "Primary code"
+        },
+        "y": {
+          "type": "int",
+          "min": 0,
+          "max": 2000,
+          "label": "Secondary code"
+        }
+      },
+      "params": {
+        "target_x": 798,
+        "target_y": 1198
+      }
+    },
+    {
+      "id": "ECOM-C05",
+      "domain": "ecommerce",
+      "family": "narrow_boundary",
+      "title": "Ecommerce rare-witness rule 5",
+      "business_text": "A narrow forbidden business interval must remain blocked at both boundaries.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 1000000,
+          "label": "Transaction value"
+        }
+      },
+      "params": {
+        "low": 33678,
+        "high": 33680
+      }
+    },
+    {
+      "id": "ECOM-C06",
+      "domain": "ecommerce",
+      "family": "guarded_magic",
+      "title": "Ecommerce rare-witness rule 6",
+      "business_text": "A reserved code must be rejected when the restricted context is active.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 100000,
+          "label": "Business code"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Restricted context"
+        }
+      },
+      "params": {
+        "target": 28657
+      }
+    },
+    {
+      "id": "ECOM-C07",
+      "domain": "ecommerce",
+      "family": "linear_magic",
+      "title": "Ecommerce rare-witness rule 7",
+      "business_text": "A prohibited exact aggregate amount must be rejected.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 100000,
+          "label": "Amount A"
+        },
+        "y": {
+          "type": "int",
+          "min": 0,
+          "max": 100000,
+          "label": "Amount B"
+        }
+      },
+      "params": {
+        "target": 7768
+      }
+    },
+    {
+      "id": "ECOM-C08",
+      "domain": "ecommerce",
+      "family": "triple_magic",
+      "title": "Ecommerce rare-witness rule 8",
+      "business_text": "A specific prohibited three-code combination must be rejected.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 100,
+          "label": "Code A"
+        },
+        "y": {
+          "type": "int",
+          "min": 0,
+          "max": 100,
+          "label": "Code B"
+        },
+        "z": {
+          "type": "int",
+          "min": 0,
+          "max": 100,
+          "label": "Code C"
+        }
+      },
+      "params": {
+        "target_x": 60,
+        "target_y": 60,
+        "target_z": 28
+      }
+    },
+    {
+      "id": "ECOM-C09",
+      "domain": "ecommerce",
+      "family": "single_magic",
+      "title": "Ecommerce rare-witness rule 9",
+      "business_text": "A reserved business code must be rejected.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 100000,
+          "label": "Business code"
+        }
+      },
+      "params": {
+        "target": 44449
+      }
+    },
+    {
+      "id": "ECOM-C10",
+      "domain": "ecommerce",
+      "family": "pair_magic",
+      "title": "Ecommerce rare-witness rule 10",
+      "business_text": "A specific prohibited pair of business codes must be rejected.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 2000,
+          "label": "Primary code"
+        },
+        "y": {
+          "type": "int",
+          "min": 0,
+          "max": 2000,
+          "label": "Secondary code"
+        }
+      },
+      "params": {
+        "target_x": 1020,
+        "target_y": 1516
+      }
+    },
+    {
+      "id": "INS-C01",
+      "domain": "insurance",
+      "family": "narrow_boundary",
+      "title": "Insurance rare-witness rule 1",
+      "business_text": "A narrow forbidden business interval must remain blocked at both boundaries.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 1000000,
+          "label": "Transaction value"
+        }
+      },
+      "params": {
+        "low": 39540,
+        "high": 39542
+      }
+    },
+    {
+      "id": "INS-C02",
+      "domain": "insurance",
+      "family": "guarded_magic",
+      "title": "Insurance rare-witness rule 2",
+      "business_text": "A reserved code must be rejected when the restricted context is active.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 100000,
+          "label": "Business code"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Restricted context"
+        }
+      },
+      "params": {
+        "target": 99990
+      }
+    },
+    {
+      "id": "INS-C03",
+      "domain": "insurance",
+      "family": "linear_magic",
+      "title": "Insurance rare-witness rule 3",
+      "business_text": "A prohibited exact aggregate amount must be rejected.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 100000,
+          "label": "Amount A"
+        },
+        "y": {
+          "type": "int",
+          "min": 0,
+          "max": 100000,
+          "label": "Amount B"
+        }
+      },
+      "params": {
+        "target": 8806
+      }
+    },
+    {
+      "id": "INS-C04",
+      "domain": "insurance",
+      "family": "triple_magic",
+      "title": "Insurance rare-witness rule 4",
+      "business_text": "A specific prohibited three-code combination must be rejected.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 100,
+          "label": "Code A"
+        },
+        "y": {
+          "type": "int",
+          "min": 0,
+          "max": 100,
+          "label": "Code B"
+        },
+        "z": {
+          "type": "int",
+          "min": 0,
+          "max": 100,
+          "label": "Code C"
+        }
+      },
+      "params": {
+        "target_x": 32,
+        "target_y": 56,
+        "target_z": 36
+      }
+    },
+    {
+      "id": "INS-C05",
+      "domain": "insurance",
+      "family": "single_magic",
+      "title": "Insurance rare-witness rule 5",
+      "business_text": "A reserved business code must be rejected.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 100000,
+          "label": "Business code"
+        }
+      },
+      "params": {
+        "target": 32771
+      }
+    },
+    {
+      "id": "INS-C06",
+      "domain": "insurance",
+      "family": "pair_magic",
+      "title": "Insurance rare-witness rule 6",
+      "business_text": "A specific prohibited pair of business codes must be rejected.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 2000,
+          "label": "Primary code"
+        },
+        "y": {
+          "type": "int",
+          "min": 0,
+          "max": 2000,
+          "label": "Secondary code"
+        }
+      },
+      "params": {
+        "target_x": 1242,
+        "target_y": 634
+      }
+    },
+    {
+      "id": "INS-C07",
+      "domain": "insurance",
+      "family": "narrow_boundary",
+      "title": "Insurance rare-witness rule 7",
+      "business_text": "A narrow forbidden business interval must remain blocked at both boundaries.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 1000000,
+          "label": "Transaction value"
+        }
+      },
+      "params": {
+        "low": 45402,
+        "high": 45404
+      }
+    },
+    {
+      "id": "INS-C08",
+      "domain": "insurance",
+      "family": "guarded_magic",
+      "title": "Insurance rare-witness rule 8",
+      "business_text": "A reserved code must be rejected when the restricted context is active.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 100000,
+          "label": "Business code"
+        },
+        "flag": {
+          "type": "bool",
+          "label": "Restricted context"
+        }
+      },
+      "params": {
+        "target": 65537
+      }
+    },
+    {
+      "id": "INS-C09",
+      "domain": "insurance",
+      "family": "linear_magic",
+      "title": "Insurance rare-witness rule 9",
+      "business_text": "A prohibited exact aggregate amount must be rejected.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 100000,
+          "label": "Amount A"
+        },
+        "y": {
+          "type": "int",
+          "min": 0,
+          "max": 100000,
+          "label": "Amount B"
+        }
+      },
+      "params": {
+        "target": 9844
+      }
+    },
+    {
+      "id": "INS-C10",
+      "domain": "insurance",
+      "family": "triple_magic",
+      "title": "Insurance rare-witness rule 10",
+      "business_text": "A specific prohibited three-code combination must be rejected.",
+      "inputs": {
+        "x": {
+          "type": "int",
+          "min": 0,
+          "max": 100,
+          "label": "Code A"
+        },
+        "y": {
+          "type": "int",
+          "min": 0,
+          "max": 100,
+          "label": "Code B"
+        },
+        "z": {
+          "type": "int",
+          "min": 0,
+          "max": 100,
+          "label": "Code C"
+        }
+      },
+      "params": {
+        "target_x": 74,
+        "target_y": 52,
+        "target_z": 44
+      }
+    }
+  ]
+}
