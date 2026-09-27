@@ -1,0 +1,23 @@
+{
+  "certification_claim": false,
+  "targets": [
+    {
+      "analysis_status": "TRANSITIVE_FACTORY_REVIEW",
+      "assignment_shape": "FACTORY_CALL",
+      "candidate_id": "635fe113a02cf90b",
+      "certification_claim": false,
+      "factory": "get_class",
+      "primitive": "ZERO_DISCOUNT",
+      "resolution_status": "LOCAL_ASSIGNMENT",
+      "source_id": "django_oscar"
+    },
+    {
+      "analysis_status": "LOCAL_DEFINITION_SEED",
+      "candidate_id": "cb937575ad9957d1",
+      "certification_claim": false,
+      "primitive": "nb_enf",
+      "resolution_status": "LOCAL_DEFINITION",
+      "source_id": "openfisca_france"
+    }
+  ]
+}

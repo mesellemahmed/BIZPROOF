@@ -1,0 +1,180 @@
+{
+  "certification_claim": false,
+  "targets": [
+    {
+      "candidate_ids": [
+        "aab5348ee173d6e3"
+      ],
+      "certification_claim": false,
+      "lock_status": "PYTHON_STDLIB",
+      "manifest_evidence": [],
+      "modules": [
+        "decimal"
+      ],
+      "occurrences": 1,
+      "package_root": "decimal",
+      "primitives": [
+        "D"
+      ],
+      "resolution_status": "UNRESOLVED",
+      "source_id": "django_oscar",
+      "standard_library": true
+    },
+    {
+      "candidate_ids": [
+        "4c7af63af2f89319",
+        "61cf0e4af667580e",
+        "a74d4580a9effb73",
+        "dfd34c86bcd9bfa1",
+        "eb41eb351df073ef",
+        "fd4702ed1d79ff1f"
+      ],
+      "certification_claim": false,
+      "lock_status": "CONSTRAINT_DISCOVERED",
+      "manifest_evidence": [
+        {
+          "exact_pin_detected": false,
+          "file": "pyproject.toml",
+          "line": 25,
+          "text": "\"openfisca-core[web-api] >=43, <45\","
+        },
+        {
+          "exact_pin_detected": false,
+          "file": "pyproject.toml",
+          "line": 47,
+          "text": "\"pytest\",  # Let OpenFisca-Core decide pytest version"
+        },
+        {
+          "exact_pin_detected": false,
+          "file": "uv.lock",
+          "line": 736,
+          "text": "name = \"openfisca-core\""
+        },
+        {
+          "exact_pin_detected": false,
+          "file": "uv.lock",
+          "line": 754,
+          "text": "sdist = { url = \"https://files.pythonhosted.org/packages/69/6e/e5aab6806467e676e87efd7257e03b13b70a1ae3a2e3eb363b500bd660f6/openfisca_core-43.5.0.tar.gz\", hash = \"sha256:85e871638850dad086629ed59a60073352dae17c8188de023ece131b618db7c6\", size = 200638, upload-time = \"2025-12-03T17:33:13.037Z\" }"
+        },
+        {
+          "exact_pin_detected": false,
+          "file": "uv.lock",
+          "line": 756,
+          "text": "{ url = \"https://files.pythonhosted.org/packages/4e/f2/a49ced9de7cceaf7f2d821a6f1517ceae6577e85ebc222daff833c2200ff/openfisca_core-43.5.0-py3-none-any.whl\", hash = \"sha256:de439b7519c9c67ab7b39757fae5620bcb435e46a5314c13caeb0d5b40f5090a\", size = 260443, upload-time = \"2025-12-03T17:33:11.316Z\" },"
+        },
+        {
+          "exact_pin_detected": false,
+          "file": "uv.lock",
+          "line": 768,
+          "text": "name = \"openfisca-core\""
+        },
+        {
+          "exact_pin_detected": false,
+          "file": "uv.lock",
+          "line": 789,
+          "text": "sdist = { url = \"https://files.pythonhosted.org/packages/1b/16/8929a985f2d16d5db4e6ebbd596bd48dfca0da5cfde527d3d2cc4008ae54/openfisca_core-44.0.4.tar.gz\", hash = \"sha256:9307ee8d05bfc1133a1e750734afb35d0927f1eda26a77d94371207c54afb54b\", size = 206473, upload-time = \"2025-12-30T17:17:33.149Z\" }"
+        },
+        {
+          "exact_pin_detected": false,
+          "file": "uv.lock",
+          "line": 791,
+          "text": "{ url = \"https://files.pythonhosted.org/packages/17/d5/66d1c83d17fe189229d32bc654b97f92de60e99967e38d5b37e33a477660/openfisca_core-44.0.4-py3-none-any.whl\", hash = \"sha256:7d34b4a02f024a436e06b76aac993d44b6552a061e72630a2a3bd2144a22b242\", size = 266565, upload-time = \"2025-12-30T17:17:31.224Z\" },"
+        },
+        {
+          "exact_pin_detected": false,
+          "file": "uv.lock",
+          "line": 808,
+          "text": "{ name = \"openfisca-core\", version = \"43.5.0\", source = { registry = \"https://pypi.org/simple\" }, extra = [\"web-api\"], marker = \"python_full_version >= '3.13'\" },"
+        },
+        {
+          "exact_pin_detected": false,
+          "file": "uv.lock",
+          "line": 809,
+          "text": "{ name = \"openfisca-core\", version = \"44.0.4\", source = { registry = \"https://pypi.org/simple\" }, extra = [\"web-api\"], marker = \"python_full_version < '3.13'\" },"
+        },
+        {
+          "exact_pin_detected": false,
+          "file": "uv.lock",
+          "line": 840,
+          "text": "{ name = \"openfisca-core\", extras = [\"web-api\"], specifier = \">=43,<45\" },"
+        }
+      ],
+      "modules": [
+        "openfisca_core.model_api"
+      ],
+      "occurrences": 13,
+      "package_root": "openfisca_core",
+      "primitives": [
+        "min_",
+        "not_",
+        "where"
+      ],
+      "resolution_status": "UNRESOLVED",
+      "source_id": "openfisca_france",
+      "standard_library": false
+    },
+    {
+      "candidate_ids": [
+        "4c7af63af2f89319",
+        "61cf0e4af667580e",
+        "a74d4580a9effb73",
+        "dfd34c86bcd9bfa1",
+        "eb41eb351df073ef",
+        "fd4702ed1d79ff1f"
+      ],
+      "certification_claim": false,
+      "lock_status": "CONSTRAINT_DISCOVERED",
+      "manifest_evidence": [
+        {
+          "exact_pin_detected": false,
+          "file": "pyproject.toml",
+          "line": 2,
+          "text": "name = \"OpenFisca-France\""
+        },
+        {
+          "exact_pin_detected": false,
+          "file": "pyproject.toml",
+          "line": 29,
+          "text": "Homepage = \"https://github.com/openfisca/openfisca-france\""
+        },
+        {
+          "exact_pin_detected": false,
+          "file": "pyproject.toml",
+          "line": 30,
+          "text": "Repository = \"https://github.com/openfisca/openfisca-france\""
+        },
+        {
+          "exact_pin_detected": false,
+          "file": "pyproject.toml",
+          "line": 32,
+          "text": "Issues = \"https://github.com/openfisca/openfisca-france/issues\""
+        },
+        {
+          "exact_pin_detected": false,
+          "file": "pyproject.toml",
+          "line": 33,
+          "text": "Changelog = \"https://github.com/openfisca/openfisca-france/blob/main/CHANGELOG.md\""
+        },
+        {
+          "exact_pin_detected": false,
+          "file": "uv.lock",
+          "line": 803,
+          "text": "name = \"openfisca-france\""
+        }
+      ],
+      "modules": [
+        "openfisca_france.model.base"
+      ],
+      "occurrences": 13,
+      "package_root": "openfisca_france",
+      "primitives": [
+        "min_",
+        "not_",
+        "where"
+      ],
+      "resolution_status": "UNRESOLVED",
+      "source_id": "openfisca_france",
+      "standard_library": false
+    }
+  ]
+}

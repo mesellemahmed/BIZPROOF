@@ -118,6 +118,9 @@ case "$cmd" in
   generalization-name-resolution)
     docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_name_resolution --contract-skeletons benchmarks/v0.11/contracts/contract_skeletons.jsonl --occurrence-evidence benchmarks/v0.11/semantic_evidence/occurrence_evidence.jsonl --semantic-registry benchmarks/v0.11/semantic_evidence/semantic_registry.json --previous-traces benchmarks/v0.11/symbol_trace/occurrence_traces.jsonl --lock benchmarks/v0.6/LOCK.json --external-root external_sources/v0.6 --output-dir benchmarks/v0.11/name_resolution
     ;;
+  generalization-protocol-closure)
+    docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_protocol_closure --name-summary benchmarks/v0.11/name_resolution/summary.json --occurrence-resolution benchmarks/v0.11/name_resolution/occurrence_resolution.jsonl --contract-queue benchmarks/v0.11/name_resolution/contract_queue.json --external-root external_sources/v0.6 --output-dir benchmarks/v0.11/protocol_closure
+    ;;
   *)
     cat <<'EOF'
 Usage:

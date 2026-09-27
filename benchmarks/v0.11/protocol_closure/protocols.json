@@ -1,0 +1,175 @@
+{
+  "certification_claim": false,
+  "groups": [
+    {
+      "candidate_ids": [
+        "19d233058899f735",
+        "244130d6ff9953d0",
+        "2dd784251ccc7dce",
+        "4b583322af591973",
+        "4c7af63af2f89319",
+        "4d2eb60abd9c44c8",
+        "78ca19c5e56cefa7",
+        "80788665d9905741",
+        "9ccbe1be4f59b3ce",
+        "b46358e6c871e1bf",
+        "b70f35ae381f7a3b",
+        "fd4702ed1d79ff1f"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "foyer_fiscal('cd_eparet', period)",
+        "foyer_fiscal('csg_patrimoine_deductible_ir', period)",
+        "foyer_fiscal('pensions_alimentaires_deduites', period)",
+        "foyer_fiscal('rbg', period)",
+        "foyer_fiscal('rev_exo', period)",
+        "foyer_fiscal('rev_or', period)",
+        "foyer_fiscal('revenus_capitaux_prelevement_liberatoire', period)",
+        "foyer_fiscal('rvcm_plus_abat', period)"
+      ],
+      "occurrences": 43,
+      "primitive": "foyer_fiscal",
+      "protocol_status": "DRAFT_ONLY",
+      "resolution_status": "FUNCTION_PARAMETER_BOUNDARY",
+      "signatures": {
+        "FUNCTION|pos=CONST_STR,NAME|kw=": 43
+      },
+      "subject": "foyer_fiscal"
+    },
+    {
+      "candidate_ids": [
+        "019d3a3df4514bac",
+        "051c7ef379178030",
+        "1458ed128652b359",
+        "61cf0e4af667580e",
+        "dfd34c86bcd9bfa1",
+        "eb41eb351df073ef",
+        "eff10167a5398559"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "individu('aide_mobilite_categories_demandeur_emploi_eligibles', period)",
+        "individu('aide_mobilite_date_demande', period)",
+        "individu('aide_mobilite_duree_trajet', period)",
+        "individu('aide_mobilite_ressources_eligibles', period)",
+        "individu('contexte_activite_pole_emploi', period)",
+        "individu('contrat_de_travail_debut', period)",
+        "individu('contrat_de_travail_duree', period)",
+        "individu('contrat_de_travail_type', period)"
+      ],
+      "occurrences": 38,
+      "primitive": "individu",
+      "protocol_status": "DRAFT_ONLY",
+      "resolution_status": "FUNCTION_PARAMETER_BOUNDARY",
+      "signatures": {
+        "FUNCTION|pos=CONST_STR,NAME|kw=": 38
+      },
+      "subject": "individu"
+    },
+    {
+      "candidate_ids": [
+        "019d3a3df4514bac"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "individu.famille('paje_prepare', oct_2021)",
+        "individu.famille('rsa', oct_2021)"
+      ],
+      "occurrences": 2,
+      "primitive": "famille",
+      "protocol_status": "DRAFT_ONLY",
+      "resolution_status": "PARAMETER_METHOD_BOUNDARY",
+      "signatures": {
+        "METHOD:NAME|pos=CONST_STR,NAME|kw=": 2
+      },
+      "subject": "individu"
+    },
+    {
+      "candidate_ids": [
+        "1458ed128652b359",
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "individu.menage('residence', period)",
+        "individu.menage('statut_occupation_logement', period)"
+      ],
+      "occurrences": 2,
+      "primitive": "menage",
+      "protocol_status": "DRAFT_ONLY",
+      "resolution_status": "PARAMETER_METHOD_BOUNDARY",
+      "signatures": {
+        "METHOD:NAME|pos=CONST_STR,NAME|kw=": 2
+      },
+      "subject": "individu"
+    },
+    {
+      "candidate_ids": [
+        "61cf0e4af667580e"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "individu.foyer_fiscal('rfr', period.n_2)"
+      ],
+      "occurrences": 1,
+      "primitive": "foyer_fiscal",
+      "protocol_status": "DRAFT_ONLY",
+      "resolution_status": "PARAMETER_METHOD_BOUNDARY",
+      "signatures": {
+        "METHOD:NAME|pos=CONST_STR,ATTRIBUTE|kw=": 1
+      },
+      "subject": "individu"
+    },
+    {
+      "candidate_ids": [
+        "019d3a3df4514bac"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "individu.has_role(Famille.PARENT)"
+      ],
+      "occurrences": 1,
+      "primitive": "has_role",
+      "protocol_status": "DRAFT_ONLY",
+      "resolution_status": "PARAMETER_METHOD_BOUNDARY",
+      "signatures": {
+        "METHOD:NAME|pos=ATTRIBUTE|kw=": 1
+      },
+      "subject": "individu"
+    },
+    {
+      "candidate_ids": [
+        "244130d6ff9953d0"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "foyer_fiscal.members('maj_cga', period)"
+      ],
+      "occurrences": 1,
+      "primitive": "members",
+      "protocol_status": "DRAFT_ONLY",
+      "resolution_status": "PARAMETER_METHOD_BOUNDARY",
+      "signatures": {
+        "METHOD:NAME|pos=CONST_STR,NAME|kw=": 1
+      },
+      "subject": "foyer_fiscal"
+    },
+    {
+      "candidate_ids": [
+        "244130d6ff9953d0"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "foyer_fiscal.sum(maj_cga_i)"
+      ],
+      "occurrences": 1,
+      "primitive": "sum",
+      "protocol_status": "DRAFT_ONLY",
+      "resolution_status": "PARAMETER_METHOD_BOUNDARY",
+      "signatures": {
+        "METHOD:NAME|pos=NAME|kw=": 1
+      },
+      "subject": "foyer_fiscal"
+    }
+  ]
+}

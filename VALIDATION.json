@@ -986,6 +986,35 @@
       "semantic_contracts_validated": 0,
       "certification_claim": false,
       "passed": true
+    },
+    "protocol_dependency_closure": {
+      "binding_occurrences": 170,
+      "contract_candidates": 15,
+      "protocol_groups": 8,
+      "dependency_targets": 3,
+      "local_source_targets": 2,
+      "closure_action_counts": {
+        "DEPENDENCY_VERSION_RESOLUTION_REQUIRED": 3,
+        "LOCAL_DEFINITION_CONTRACT_SEED": 1,
+        "METHOD_RECEIVER_REVIEW": 2,
+        "PARAMETER_METHOD_PROTOCOL_SPEC_READY": 5,
+        "PARAMETER_PROTOCOL_SPEC_READY": 1,
+        "SPLIT_PROTOCOL_FAMILIES": 1,
+        "STDLIB_CONTRACT_SEED": 1,
+        "TRANSITIVE_FACTORY_REVIEW": 1
+      },
+      "dependency_lock_status_counts": {
+        "CONSTRAINT_DISCOVERED": 2,
+        "PYTHON_STDLIB": 1
+      },
+      "local_analysis_status_counts": {
+        "LOCAL_DEFINITION_SEED": 1,
+        "TRANSITIVE_FACTORY_REVIEW": 1
+      },
+      "semantic_types_resolved": 0,
+      "semantic_contracts_validated": 0,
+      "certification_claim": false,
+      "passed": true
     }
   }
 }

@@ -1,0 +1,33 @@
+{
+  "all_contracts_unresolved": true,
+  "benchmark_version": "0.11.0",
+  "binding_occurrences": 170,
+  "certification_claim": false,
+  "closure_action_counts": {
+    "DEPENDENCY_VERSION_RESOLUTION_REQUIRED": 3,
+    "LOCAL_DEFINITION_CONTRACT_SEED": 1,
+    "METHOD_RECEIVER_REVIEW": 2,
+    "PARAMETER_METHOD_PROTOCOL_SPEC_READY": 5,
+    "PARAMETER_PROTOCOL_SPEC_READY": 1,
+    "SPLIT_PROTOCOL_FAMILIES": 1,
+    "STDLIB_CONTRACT_SEED": 1,
+    "TRANSITIVE_FACTORY_REVIEW": 1
+  },
+  "cohort_sha256": "3144f973a166ebee41a059c538b81ffac5a5d15737982c6d95e59175325ca108",
+  "contract_candidates": 15,
+  "dependency_lock_status_counts": {
+    "CONSTRAINT_DISCOVERED": 2,
+    "PYTHON_STDLIB": 1
+  },
+  "dependency_targets": 3,
+  "local_analysis_status_counts": {
+    "LOCAL_DEFINITION_SEED": 1,
+    "TRANSITIVE_FACTORY_REVIEW": 1
+  },
+  "local_source_targets": 2,
+  "passed": true,
+  "phase": "PROTOCOL_DEPENDENCY_CLOSURE",
+  "protocol_groups": 8,
+  "semantic_contracts_validated": 0,
+  "semantic_types_resolved": 0
+}

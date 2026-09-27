@@ -371,3 +371,16 @@ contracts remain unresolved.
 Command:
 
 ./run.sh generalization-name-resolution
+
+
+### V0.11 protocol and dependency closure
+
+Phase K groups parameter-call and parameter-method protocols, distinguishes
+Python standard-library boundaries from external dependencies, discovers source
+dependency constraints, and analyzes local assignments/definitions transitively.
+
+No semantic type or semantic contract is validated in this phase.
+
+Command:
+
+./run.sh generalization-protocol-closure

@@ -64,3 +64,10 @@ protocols, and local-source evidence. All contracts remain unresolved.
 `name_resolution/` re-resolves all binding occurrences using Python scope and
 module-binding precedence. This removes artificial mixed traces caused by
 combining shadowed evidence sources. No semantic type is resolved.
+
+
+## Protocol and dependency closure
+
+`protocol_closure/` contains callable protocol groups, dependency-lock evidence,
+local-source analysis, and the next-action queue. All semantic contracts remain
+unresolved.
