@@ -116,3 +116,10 @@ protocol context needed for terminal classification.
 certificate, the partial 90-candidate terminal-state ledger, the certification
 summary and a reviewer report. Population-level yield remains unavailable until
 all 90 candidates have terminal outcomes.
+
+
+## Structural declarative binding closure
+
+`declarative_binding_closure/` contains exact declarative binding manifests,
+locked source slices, per-candidate readiness status, and the A1 proof worklist
+for the structural-protocol-only frontier.

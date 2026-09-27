@@ -140,6 +140,9 @@ case "$cmd" in
   generalization-terminal-certification)
     docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_terminal_certification --repo-root . --output-dir benchmarks/v0.11/terminal_certification
     ;;
+  generalization-declarative-binding-closure)
+    docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_declarative_binding_closure --repo-root . --output-dir benchmarks/v0.11/declarative_binding_closure
+    ;;
   *)
     cat <<'EOF'
 Usage:

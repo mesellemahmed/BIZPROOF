@@ -476,3 +476,21 @@ explicitly pending; no overall V0.11 yield is reported yet.
 Command:
 
 ./run.sh generalization-terminal-certification
+
+
+### V0.11 structural declarative binding closure
+
+Phase R closes the exact declarative source-to-BVC bindings for the sampled
+candidates whose remaining frontier consists only of validated OpenFisca
+structural protocols.
+
+Every source lookup is matched against the frozen protocol signature catalog,
+the locked source/function SHA is revalidated, and the result is joined with
+the hardened symbolic-front-end probe and frozen workplan. Candidates are
+promoted to `A1_PROOF_READY` only when all three gates agree.
+
+No new terminal outcome is assigned in this phase.
+
+Command:
+
+./run.sh generalization-declarative-binding-closure

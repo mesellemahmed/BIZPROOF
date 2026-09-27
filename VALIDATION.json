@@ -1162,6 +1162,34 @@
       "weighted_metrics_ready": false,
       "final_certification_complete": false,
       "passed": true
+    },
+    "structural_declarative_binding_closure": {
+      "checkout_verification_digest": "4a2406da9ee68368192114f3324d79397ecc68f3b184c3e0c12e689ae36ad797",
+      "checkout_sources": [
+        "openfisca_france"
+      ],
+      "structural_candidates_targeted": 11,
+      "structural_candidates_binding_closed": 11,
+      "structural_occurrences_bound": 35,
+      "declarative_bindings_created": 35,
+      "a1_proof_ready_candidates": 11,
+      "a1_proof_ready_candidate_ids": [
+        "19d233058899f735",
+        "244130d6ff9953d0",
+        "2dd784251ccc7dce",
+        "4b583322af591973",
+        "4d2eb60abd9c44c8",
+        "61cf0e4af667580e",
+        "78ca19c5e56cefa7",
+        "80788665d9905741",
+        "9ccbe1be4f59b3ce",
+        "b46358e6c871e1bf",
+        "b70f35ae381f7a3b"
+      ],
+      "terminal_outcomes_assigned_this_phase": 0,
+      "terminal_outcomes_pending": 89,
+      "certification_claim": false,
+      "passed": true
     }
   }
 }
