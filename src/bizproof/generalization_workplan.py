@@ -14,10 +14,17 @@ EXPECTED_TOTAL = 90
 ROUTES = (
     "AUTO_DIRECT_FORMALIZATION",
     "BINDING_DEFINITION",
+    "SEMANTIC_SCOPE_REVIEW",
     "STRUCTURAL_REVIEW",
     "EXPLICIT_ADAPTER",
     "CONTROLLED_EXECUTION_REVIEW",
 )
+
+SEMANTIC_SCOPE_SHAPES = {
+    "PASS_STUB",
+    "NONE_RETURN",
+    "CONSTANT_RETURN",
+}
 
 
 def _load_json(path: Path) -> JsonDict:
@@ -53,38 +60,37 @@ def _route_candidate(
 ) -> JsonDict:
     tier = str(assessment["feasibility"]["feasibility_tier"])
 
-    if tier == "F0_DIRECT_SYMBOLIC":
+    if tier in {
+        "F0_DIRECT_SYMBOLIC",
+        "F1_DECLARATIVE_BINDING",
+    }:
         if probe is None:
             raise ValueError(f"missing symbolic probe for {assessment['candidate_id']}")
 
-        if probe["probe_status"] == "SYMBOLIC_FRONTEND_READY":
-            if int(probe["binding_count"]) == 0:
-                route = "AUTO_DIRECT_FORMALIZATION"
-                rationale = (
-                    "Conservative BSIR front-end succeeded with no external binding obligations."
-                )
-            else:
-                route = "BINDING_DEFINITION"
-                rationale = (
-                    "Conservative BSIR front-end succeeded but explicit binding obligations remain."
-                )
-        else:
+        if probe["probe_status"] != "SYMBOLIC_FRONTEND_READY":
             route = "STRUCTURAL_REVIEW"
             rationale = str(probe["review_reason"])
 
-    elif tier == "F1_DECLARATIVE_BINDING":
-        if probe is None:
-            raise ValueError(f"missing symbolic probe for {assessment['candidate_id']}")
-
-        if probe["probe_status"] == "SYMBOLIC_FRONTEND_READY":
+        elif int(probe["binding_count"]) > 0:
             route = "BINDING_DEFINITION"
             rationale = (
-                "Conservative BSIR front-end succeeded and external "
-                "call/attribute semantics require declarative bindings."
+                "The hardened BSIR front-end succeeded but explicit binding obligations remain."
             )
+
+        elif str(probe["semantic_shape"]) in SEMANTIC_SCOPE_SHAPES:
+            route = "SEMANTIC_SCOPE_REVIEW"
+            rationale = (
+                "The function is structurally translatable but its body is a "
+                "stub, None-return, or constant default. It must not be counted "
+                "as direct business-rule formalization without scope review."
+            )
+
         else:
-            route = "STRUCTURAL_REVIEW"
-            rationale = str(probe["review_reason"])
+            route = "AUTO_DIRECT_FORMALIZATION"
+            rationale = (
+                "The hardened BSIR front-end succeeded with no unresolved "
+                "bindings and a non-trivial semantic shape."
+            )
 
     elif tier == "F2_EXPLICIT_ADAPTER":
         route = "EXPLICIT_ADAPTER"
@@ -118,6 +124,7 @@ def _route_candidate(
         "function": str(provenance["function"]),
         "line_start": int(provenance["line_start"]),
         "line_end": int(provenance["line_end"]),
+        "semantic_shape": (str(probe["semantic_shape"]) if probe is not None else None),
         "binding_count": (int(probe["binding_count"]) if probe is not None else None),
         "required_bindings": (probe["required_bindings"] if probe is not None else []),
         "certification_claim": False,
@@ -189,12 +196,13 @@ def build_workplan(
 
     summary: JsonDict = {
         "benchmark_version": "0.11.0",
-        "phase": "GENERALIZATION_EXECUTION_WORKPLAN",
+        "phase": "GENERALIZATION_EXECUTION_WORKPLAN_HARDENED",
         "cohort_sha256": EXPECTED_COHORT_SHA256,
         "total_candidates": len(work_items),
         "route_counts": dict(sorted(counts.items())),
         "by_source": by_source,
         "routes": list(ROUTES),
+        "semantic_scope_gate": True,
         "certification_claim": False,
         "passed": len(work_items) == EXPECTED_TOTAL,
     }
@@ -212,11 +220,12 @@ def build_workplan(
     )
 
     report = [
-        "# BIZPROOF V0.11 Execution Workplan",
+        "# BIZPROOF V0.11 Hardened Execution Workplan",
         "",
         (
-            "This workplan routes every preregistered candidate to the next "
-            "engineering action. Routes are not proof or certification verdicts."
+            "Every preregistered candidate is routed to its next engineering "
+            "action. Structurally trivial default/stub functions are separated "
+            "from direct business-rule formalization."
         ),
         "",
         f"- Candidates: {len(work_items)}",
@@ -231,17 +240,12 @@ def build_workplan(
     report.extend(
         [
             "",
-            "## Execution order",
-            "",
-            "1. AUTO_DIRECT_FORMALIZATION",
-            "2. BINDING_DEFINITION",
-            "3. STRUCTURAL_REVIEW",
-            "4. EXPLICIT_ADAPTER",
-            "5. CONTROLLED_EXECUTION_REVIEW",
+            "## Interpretation boundary",
             "",
             (
-                "No sampled candidate may be dropped or replaced because its "
-                "assigned route is difficult."
+                "Routes are not proof or certification verdicts. A semantic "
+                "scope review prevents trivial defaults/stubs from inflating "
+                "generalization or certification yield."
             ),
             "",
         ]
@@ -294,7 +298,7 @@ def main() -> int:
         output_dir=args.output_dir,
     )
 
-    print("BIZPROOF V0.11 execution workplan")
+    print("BIZPROOF V0.11 hardened execution workplan")
     print(f"Candidates: {summary['total_candidates']}")
     print(f"Routes: {summary['route_counts']}")
     print("Certification claim: NO")

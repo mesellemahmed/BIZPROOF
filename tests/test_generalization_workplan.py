@@ -30,67 +30,86 @@ def _assessment(tier: str) -> dict[str, Any]:
 
 
 def _probe(
-    status: str,
-    binding_count: int,
+    *,
+    status: str = "SYMBOLIC_FRONTEND_READY",
+    binding_count: int = 0,
+    semantic_shape: str = "SUBSTANTIVE_EXPRESSION",
 ) -> dict[str, Any]:
     return {
         "probe_status": status,
         "review_reason": "review",
         "binding_count": binding_count,
         "required_bindings": [],
+        "semantic_shape": semantic_shape,
     }
 
 
-def test_f0_ready_without_bindings_is_direct() -> None:
+def test_substantive_f0_without_bindings_is_direct() -> None:
     module = _module()
 
     item = module._route_candidate(
         _assessment("F0_DIRECT_SYMBOLIC"),
-        _probe("SYMBOLIC_FRONTEND_READY", 0),
+        _probe(),
     )
 
     assert item["route"] == "AUTO_DIRECT_FORMALIZATION"
 
 
-def test_f1_ready_routes_to_binding_definition() -> None:
+def test_free_binding_routes_to_binding_definition() -> None:
     module = _module()
 
     item = module._route_candidate(
-        _assessment("F1_DECLARATIVE_BINDING"),
-        _probe("SYMBOLIC_FRONTEND_READY", 2),
+        _assessment("F0_DIRECT_SYMBOLIC"),
+        _probe(binding_count=1),
     )
 
     assert item["route"] == "BINDING_DEFINITION"
 
 
-def test_probe_review_routes_to_structural_review() -> None:
+def test_stub_routes_to_semantic_scope_review() -> None:
+    module = _module()
+
+    item = module._route_candidate(
+        _assessment("F0_DIRECT_SYMBOLIC"),
+        _probe(semantic_shape="PASS_STUB"),
+    )
+
+    assert item["route"] == "SEMANTIC_SCOPE_REVIEW"
+
+
+def test_none_return_routes_to_semantic_scope_review() -> None:
+    module = _module()
+
+    item = module._route_candidate(
+        _assessment("F0_DIRECT_SYMBOLIC"),
+        _probe(semantic_shape="NONE_RETURN"),
+    )
+
+    assert item["route"] == "SEMANTIC_SCOPE_REVIEW"
+
+
+def test_structural_failure_routes_to_review() -> None:
     module = _module()
 
     item = module._route_candidate(
         _assessment("F1_DECLARATIVE_BINDING"),
-        _probe("STRUCTURAL_REVIEW", 0),
+        _probe(status="STRUCTURAL_REVIEW"),
     )
 
     assert item["route"] == "STRUCTURAL_REVIEW"
 
 
-def test_f2_routes_to_explicit_adapter() -> None:
+def test_f2_and_f3_routes_are_preserved() -> None:
     module = _module()
 
-    item = module._route_candidate(
+    f2 = module._route_candidate(
         _assessment("F2_EXPLICIT_ADAPTER"),
         None,
     )
-
-    assert item["route"] == "EXPLICIT_ADAPTER"
-
-
-def test_f3_routes_to_controlled_execution() -> None:
-    module = _module()
-
-    item = module._route_candidate(
+    f3 = module._route_candidate(
         _assessment("F3_SEMANTIC_EXECUTION_REVIEW"),
         None,
     )
 
-    assert item["route"] == "CONTROLLED_EXECUTION_REVIEW"
+    assert f2["route"] == "EXPLICIT_ADAPTER"
+    assert f3["route"] == "CONTROLLED_EXECUTION_REVIEW"

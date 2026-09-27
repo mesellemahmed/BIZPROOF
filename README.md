@@ -288,3 +288,19 @@ Command:
 ./run.sh generalization-symbolic-probe
 
 `SYMBOLIC_FRONTEND_READY` is not a proof or certification verdict.
+
+
+### V0.11 semantic hardening and family census
+
+The hardened symbolic front-end distinguishes declared function parameters from
+free/global names. Free names become explicit `GLOBAL_NAME` binding obligations.
+
+Trivial stubs/default constant returns are routed to semantic-scope review and
+are not counted as direct business-rule formalization.
+
+The family census groups unresolved bindings, explicit-adapter blockers and
+controlled-execution blockers into reusable engineering families.
+
+Command:
+
+./run.sh generalization-families

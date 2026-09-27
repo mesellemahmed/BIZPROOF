@@ -2,10 +2,10 @@
   "benchmark_version": "0.11.0",
   "by_source": {
     "django_oscar": {
-      "AUTO_DIRECT_FORMALIZATION": 3,
-      "BINDING_DEFINITION": 6,
+      "BINDING_DEFINITION": 7,
       "CONTROLLED_EXECUTION_REVIEW": 6,
-      "EXPLICIT_ADAPTER": 15
+      "EXPLICIT_ADAPTER": 15,
+      "SEMANTIC_SCOPE_REVIEW": 2
     },
     "openfisca_france": {
       "BINDING_DEFINITION": 22,
@@ -23,20 +23,22 @@
   "certification_claim": false,
   "cohort_sha256": "3144f973a166ebee41a059c538b81ffac5a5d15737982c6d95e59175325ca108",
   "passed": true,
-  "phase": "GENERALIZATION_EXECUTION_WORKPLAN",
+  "phase": "GENERALIZATION_EXECUTION_WORKPLAN_HARDENED",
   "route_counts": {
-    "AUTO_DIRECT_FORMALIZATION": 3,
-    "BINDING_DEFINITION": 35,
+    "BINDING_DEFINITION": 36,
     "CONTROLLED_EXECUTION_REVIEW": 17,
     "EXPLICIT_ADAPTER": 33,
+    "SEMANTIC_SCOPE_REVIEW": 2,
     "STRUCTURAL_REVIEW": 2
   },
   "routes": [
     "AUTO_DIRECT_FORMALIZATION",
     "BINDING_DEFINITION",
+    "SEMANTIC_SCOPE_REVIEW",
     "STRUCTURAL_REVIEW",
     "EXPLICIT_ADAPTER",
     "CONTROLLED_EXECUTION_REVIEW"
   ],
+  "semantic_scope_gate": true,
   "total_candidates": 90
 }

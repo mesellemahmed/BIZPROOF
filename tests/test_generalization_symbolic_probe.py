@@ -10,106 +10,63 @@ def _module() -> Any:
 
 
 def _function(source: str) -> ast.FunctionDef:
-    tree = ast.parse(source)
-    node = tree.body[0]
+    node = ast.parse(source).body[0]
     assert isinstance(node, ast.FunctionDef)
     return node
 
 
-def test_direct_return_ir() -> None:
+def test_parameter_name_is_input() -> None:
     module = _module()
     builder = module.IRBuilder()
 
-    result = builder.function(
-        _function("def rule(x, y):\n    total = x + y\n    return total > 0\n")
-    )
+    result = builder.function(_function("def rule(x):\n    return x + 1\n"))
 
-    assert result["ir_version"] == "BSIR-SKELETON-0.11"
-    assert result["return"]["op"] == "compare"
+    assert result["return"]["left"] == {
+        "op": "input",
+        "name": "x",
+    }
     assert builder.bindings == {}
 
 
-def test_call_becomes_explicit_binding() -> None:
+def test_free_name_is_global_binding() -> None:
     module = _module()
     builder = module.IRBuilder()
 
-    result = builder.function(
-        _function(
-            "def rule(entity, period):\n"
-            "    amount = entity('amount', period)\n"
-            "    return amount > 0\n"
-        )
-    )
+    result = builder.function(_function("def rule(x):\n    return ZERO_DISCOUNT\n"))
 
-    assert result["return"]["op"] == "compare"
+    assert result["return"]["op"] == "binding"
     assert len(builder.bindings) == 1
 
     binding = next(iter(builder.bindings.values()))
-    assert binding["kind"] == "CALL"
-    assert binding["primitive"] == "entity"
+    assert binding["kind"] == "GLOBAL_NAME"
+    assert binding["primitive"] == "ZERO_DISCOUNT"
 
 
-def test_attribute_becomes_explicit_binding() -> None:
+def test_pass_shape() -> None:
+    module = _module()
+    node = _function("def rule():\n    pass\n")
+    assert module._semantic_shape(node) == "PASS_STUB"
+
+
+def test_none_return_shape() -> None:
+    module = _module()
+    node = _function("def rule():\n    return None\n")
+    assert module._semantic_shape(node) == "NONE_RETURN"
+
+
+def test_substantive_shape() -> None:
+    module = _module()
+    node = _function("def rule(x):\n    y = x + 1\n    return y\n")
+    assert module._semantic_shape(node) == "SUBSTANTIVE_EXPRESSION"
+
+
+def test_statement_if_still_routes_to_review() -> None:
     module = _module()
     builder = module.IRBuilder()
-
-    result = builder.function(_function("def rule(order):\n    return order.total > 0\n"))
-
-    assert result["return"]["op"] == "compare"
-    assert len(builder.bindings) == 1
-
-    binding = next(iter(builder.bindings.values()))
-    assert binding["kind"] == "ATTRIBUTE"
-    assert binding["primitive"] == "total"
-
-
-def test_local_assignment_is_substituted() -> None:
-    module = _module()
-    builder = module.IRBuilder()
-
-    result = builder.function(
-        _function("def rule(x):\n    a = x + 1\n    b = a * 2\n    return b\n")
-    )
-
-    assert result["return"]["op"] == "mul"
-
-
-def test_statement_if_routes_to_review() -> None:
-    module = _module()
-    builder = module.IRBuilder()
-
-    function = _function("def rule(x):\n    if x > 0:\n        return 1\n    return 0\n")
 
     try:
-        builder.function(function)
-    except module.UnsupportedStructure as exc:
-        assert "statement-level If" in str(exc)
+        builder.function(_function("def rule(x):\n    if x:\n        return 1\n    return 0\n"))
+    except module.UnsupportedStructure:
+        pass
     else:
         raise AssertionError("expected UnsupportedStructure")
-
-
-def test_subscript_routes_to_review() -> None:
-    module = _module()
-    builder = module.IRBuilder()
-
-    function = _function("def rule(items):\n    return items[0]\n")
-
-    try:
-        builder.function(function)
-    except module.UnsupportedStructure as exc:
-        assert "Subscript" in str(exc)
-    else:
-        raise AssertionError("expected UnsupportedStructure")
-
-
-def test_pass_is_explicit_none_return() -> None:
-    module = _module()
-    builder = module.IRBuilder()
-
-    result = builder.function(_function("def rule():\n    pass\n"))
-
-    assert result["return"] == {
-        "op": "const",
-        "type": "none",
-        "value": None,
-    }

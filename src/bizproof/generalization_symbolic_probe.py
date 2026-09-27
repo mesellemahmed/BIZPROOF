@@ -81,10 +81,84 @@ def _attribute_leaf(node: ast.Attribute) -> str:
     return node.attr
 
 
+def _function_parameters(
+    node: ast.FunctionDef | ast.AsyncFunctionDef,
+) -> set[str]:
+    names = {
+        argument.arg
+        for argument in (
+            list(node.args.posonlyargs) + list(node.args.args) + list(node.args.kwonlyargs)
+        )
+    }
+
+    if node.args.vararg is not None:
+        names.add(node.args.vararg.arg)
+
+    if node.args.kwarg is not None:
+        names.add(node.args.kwarg.arg)
+
+    return names
+
+
+def _semantic_shape(
+    node: ast.FunctionDef | ast.AsyncFunctionDef,
+) -> str:
+    statements = list(node.body)
+
+    if (
+        statements
+        and isinstance(statements[0], ast.Expr)
+        and isinstance(statements[0].value, ast.Constant)
+        and isinstance(statements[0].value.value, str)
+    ):
+        statements = statements[1:]
+
+    if len(statements) == 1:
+        statement = statements[0]
+
+        if isinstance(statement, ast.Pass):
+            return "PASS_STUB"
+
+        if isinstance(statement, ast.Return):
+            value = statement.value
+
+            if value is None:
+                return "NONE_RETURN"
+
+            if isinstance(value, ast.Constant) and value.value is None:
+                return "NONE_RETURN"
+
+            if isinstance(value, ast.Constant):
+                return "CONSTANT_RETURN"
+
+            if isinstance(value, ast.Name):
+                return "NAME_RETURN"
+
+    return "SUBSTANTIVE_EXPRESSION"
+
+
+def _walk_ir(value: Any) -> list[JsonDict]:
+    result: list[JsonDict] = []
+
+    if isinstance(value, dict):
+        if "op" in value:
+            result.append(value)
+
+        for child in value.values():
+            result.extend(_walk_ir(child))
+
+    elif isinstance(value, list):
+        for child in value:
+            result.extend(_walk_ir(child))
+
+    return result
+
+
 class IRBuilder:
     def __init__(self) -> None:
         self.bindings: dict[str, JsonDict] = {}
         self.environment: dict[str, JsonDict] = {}
+        self.input_names: set[str] = set()
 
     def _binding(
         self,
@@ -136,10 +210,17 @@ class IRBuilder:
             if node.id in self.environment:
                 return self.environment[node.id]
 
-            return {
-                "op": "input",
-                "name": node.id,
-            }
+            if node.id in self.input_names:
+                return {
+                    "op": "input",
+                    "name": node.id,
+                }
+
+            return self._binding(
+                kind="GLOBAL_NAME",
+                expression=node,
+                primitive=node.id,
+            )
 
         if isinstance(node, ast.Attribute):
             return self._binding(
@@ -255,6 +336,8 @@ class IRBuilder:
     ) -> JsonDict:
         if isinstance(node, ast.AsyncFunctionDef):
             raise UnsupportedStructure("async function")
+
+        self.input_names = _function_parameters(node)
 
         statements = list(node.body)
 
@@ -501,6 +584,15 @@ def run_probe(
             ),
         )
 
+        input_references: list[str] = []
+
+        if ir is not None:
+            input_references = sorted(
+                {str(ir_node["name"]) for ir_node in _walk_ir(ir) if ir_node.get("op") == "input"}
+            )
+
+        semantic_shape = _semantic_shape(node)
+
         probes.append(
             {
                 "candidate_id": str(assessment["candidate_id"]),
@@ -513,14 +605,18 @@ def run_probe(
                 "file": str(provenance["file"]),
                 "enclosing_class": provenance["enclosing_class"],
                 "function": str(provenance["function"]),
+                "function_parameters": sorted(_function_parameters(node)),
                 "line_start": int(provenance["line_start"]),
                 "line_end": int(provenance["line_end"]),
                 "snippet_line_start": snippet_start,
                 "snippet_sha256": _sha256_bytes(snippet.encode("utf-8")),
+                "semantic_shape": semantic_shape,
                 "ir": ir,
                 "ir_sha256": (_json_digest(ir) if ir is not None else None),
                 "required_bindings": required_bindings,
                 "binding_count": len(required_bindings),
+                "input_references": input_references,
+                "input_reference_count": len(input_references),
                 "certification_claim": False,
             }
         )
@@ -539,11 +635,17 @@ def run_probe(
 
     binding_counts = Counter(int(item["binding_count"]) for item in ready)
 
+    semantic_shapes = Counter(str(item["semantic_shape"]) for item in ready)
+
+    binding_kinds = Counter(
+        str(binding["kind"]) for item in ready for binding in item["required_bindings"]
+    )
+
     catalog = _binding_catalog(probes)
 
     summary: JsonDict = {
         "benchmark_version": "0.11.0",
-        "phase": "SYMBOLIC_FRONTEND_PROBE",
+        "phase": "SYMBOLIC_FRONTEND_PROBE_HARDENED",
         "cohort_sha256": EXPECTED_COHORT_SHA256,
         "attempted_candidates": len(probes),
         "source_mismatches": source_mismatches,
@@ -553,8 +655,13 @@ def run_probe(
         "ready_binding_count_distribution": {
             str(key): value for key, value in sorted(binding_counts.items())
         },
+        "semantic_shape_counts": dict(sorted(semantic_shapes.items())),
+        "binding_kind_counts": dict(sorted(binding_kinds.items())),
         "binding_primitives": len(catalog),
         "binding_occurrences": sum(int(item["occurrences"]) for item in catalog),
+        "free_name_policy": (
+            "FUNCTION_PARAMETERS_ARE_INPUTS; UNBOUND_NAMES_ARE_GLOBAL_NAME_BINDINGS"
+        ),
         "certification_claim": False,
         "passed": (
             len(probes) == EXPECTED_ATTEMPTED
@@ -574,7 +681,7 @@ def run_probe(
         json.dumps(
             {
                 "benchmark_version": "0.11.0",
-                "phase": "SYMBOLIC_BINDING_CATALOG",
+                "phase": "SYMBOLIC_BINDING_CATALOG_HARDENED",
                 "certification_claim": False,
                 "bindings": catalog,
             },
@@ -591,19 +698,15 @@ def run_probe(
     )
 
     report_lines = [
-        "# BIZPROOF V0.11 Symbolic Front-End Probe",
+        "# BIZPROOF V0.11 Hardened Symbolic Front-End Probe",
         "",
         (
-            "This phase tests structural translation into a conservative "
-            "BSIR skeleton for the preregistered F0/F1 candidates."
+            "Function parameters are symbolic inputs. Free names that are not "
+            "local assignments or declared function parameters are preserved as "
+            "GLOBAL_NAME binding obligations."
         ),
         "",
-        (
-            "A `SYMBOLIC_FRONTEND_READY` result is NOT a proof and is NOT "
-            "a certification verdict. It only means the selected function "
-            "can be represented by the current structural front-end while "
-            "leaving external calls/attributes as explicit binding obligations."
-        ),
+        ("A `SYMBOLIC_FRONTEND_READY` result is NOT a proof and is NOT a certification verdict."),
         "",
         f"- Attempted candidates: {len(probes)}",
         f"- Ready: {counts.get(READY, 0)}",
@@ -612,17 +715,23 @@ def run_probe(
         f"- Extraction failures: {extraction_failures}",
         f"- Distinct binding primitives: {len(catalog)}",
         "",
-        "## Most recurrent binding primitives",
+        "## Semantic shapes",
         "",
     ]
 
-    for item in catalog[:20]:
-        report_lines.append(
-            "- "
-            f"`{item['kind']}:{item['primitive']}` — "
-            f"{item['candidate_count']} candidates / "
-            f"{item['occurrences']} occurrences"
-        )
+    for key, value in sorted(semantic_shapes.items()):
+        report_lines.append(f"- `{key}`: {value}")
+
+    report_lines.extend(
+        [
+            "",
+            "## Binding kinds",
+            "",
+        ]
+    )
+
+    for key, value in sorted(binding_kinds.items()):
+        report_lines.append(f"- `{key}`: {value}")
 
     report_lines.extend(
         [
@@ -630,9 +739,9 @@ def run_probe(
             "## Interpretation boundary",
             "",
             (
-                "The generated IR and binding catalog are engineering evidence "
-                "for subsequent contract/domain construction. No candidate is "
-                "reported as PROVED, DISPROVED, or CERTIFIED in this phase."
+                "Generated IR and binding obligations are intermediate formal "
+                "artifacts only. No candidate is reported as PROVED, DISPROVED, "
+                "or CERTIFIED in this phase."
             ),
             "",
         ]
@@ -685,11 +794,11 @@ def main() -> int:
         output_dir=args.output_dir,
     )
 
-    print("BIZPROOF V0.11 symbolic front-end probe")
+    print("BIZPROOF V0.11 hardened symbolic front-end probe")
     print(f"Attempted candidates: {summary['attempted_candidates']}")
     print(f"Probe counts: {summary['probe_counts']}")
-    print(f"Binding primitives: {summary['binding_primitives']}")
-    print(f"Binding occurrences: {summary['binding_occurrences']}")
+    print(f"Semantic shapes: {summary['semantic_shape_counts']}")
+    print(f"Binding kinds: {summary['binding_kind_counts']}")
     print("Certification claim: NO")
     print("PASS" if summary["passed"] else "FAIL")
 

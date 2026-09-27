@@ -1,23 +1,18 @@
-# BIZPROOF V0.11 Execution Workplan
+# BIZPROOF V0.11 Hardened Execution Workplan
 
-This workplan routes every preregistered candidate to the next engineering action. Routes are not proof or certification verdicts.
+Every preregistered candidate is routed to its next engineering action. Structurally trivial default/stub functions are separated from direct business-rule formalization.
 
 - Candidates: 90
 
 ## Route counts
 
-- `AUTO_DIRECT_FORMALIZATION`: 3
-- `BINDING_DEFINITION`: 35
+- `AUTO_DIRECT_FORMALIZATION`: 0
+- `BINDING_DEFINITION`: 36
+- `SEMANTIC_SCOPE_REVIEW`: 2
 - `STRUCTURAL_REVIEW`: 2
 - `EXPLICIT_ADAPTER`: 33
 - `CONTROLLED_EXECUTION_REVIEW`: 17
 
-## Execution order
+## Interpretation boundary
 
-1. AUTO_DIRECT_FORMALIZATION
-2. BINDING_DEFINITION
-3. STRUCTURAL_REVIEW
-4. EXPLICIT_ADAPTER
-5. CONTROLLED_EXECUTION_REVIEW
-
-No sampled candidate may be dropped or replaced because its assigned route is difficult.
+Routes are not proof or certification verdicts. A semantic scope review prevents trivial defaults/stubs from inflating generalization or certification yield.

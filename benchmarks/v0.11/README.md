@@ -19,3 +19,13 @@ No F0–F3 label is a certification verdict.
 F0/F1 subset selected by the static feasibility phase. Calls and attributes
 are left as explicit binding obligations. The probe never reports proof or
 certification verdicts.
+
+
+## Semantic hardening
+
+Function parameters are modeled as symbolic inputs. Free/global names are
+preserved as explicit `GLOBAL_NAME` binding obligations. Stub, `None`, and
+constant-return bodies are routed to semantic-scope review.
+
+`families/` groups recurrent unresolved obligations without assigning business
+meaning or certification verdicts.
