@@ -954,6 +954,38 @@
       "all_contracts_unresolved": true,
       "certification_claim": false,
       "passed": true
+    },
+    "python_name_resolution_hardening": {
+      "registry_entries": 58,
+      "binding_occurrences": 170,
+      "semantic_contract_candidates": 15,
+      "resolution_status_counts": {
+        "ATTRIBUTE_CONTEXT_BOUNDARY": 30,
+        "EXTERNAL_DEPENDENCY_BOUNDARY": 7,
+        "FUNCTION_PARAMETER_BOUNDARY": 81,
+        "LOCAL_ASSIGNMENT": 1,
+        "LOCAL_DEFINITION": 1,
+        "METHOD_CONTEXT_BOUNDARY": 3,
+        "PARAMETER_ATTRIBUTE_BOUNDARY": 32,
+        "PARAMETER_METHOD_BOUNDARY": 8,
+        "WILDCARD_IMPORT_BOUNDARY": 7
+      },
+      "contract_action_counts": {
+        "EXTERNAL_DEPENDENCY_LOCK_REQUIRED": 1,
+        "LOCAL_SOURCE_CONTRACT_DRAFT": 2,
+        "METHOD_CONTEXT_REVIEW": 2,
+        "PARAMETER_METHOD_PROTOCOL_DRAFT": 5,
+        "PARAMETER_PROTOCOL_DRAFT": 1,
+        "RESOLUTION_REVIEW_REQUIRED": 3,
+        "WILDCARD_EXPORT_REVIEW": 1
+      },
+      "previous_mixed_trace_occurrences": 60,
+      "current_unresolved_occurrences": 0,
+      "mixed_trace_status_eliminated": true,
+      "semantic_types_resolved": 0,
+      "semantic_contracts_validated": 0,
+      "certification_claim": false,
+      "passed": true
     }
   }
 }

@@ -356,3 +356,18 @@ No semantic type or certification verdict is produced by this phase.
 Command:
 
 ./run.sh generalization-contract-readiness
+
+
+### V0.11 Python name-resolution hardening
+
+Phase J applies Python lexical and module-level name-resolution precedence to the
+170 binding occurrences. Function parameters shadow globals/imports, method
+calls retain receiver context, and the last relevant module-level binding is
+treated as authoritative.
+
+This phase improves provenance precision only. Semantic types and semantic
+contracts remain unresolved.
+
+Command:
+
+./run.sh generalization-name-resolution

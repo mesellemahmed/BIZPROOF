@@ -57,3 +57,10 @@ remain explicit. No semantic type is resolved by tracing alone.
 `contract_readiness/` transforms the 15 semantic-contract candidates into
 explicit work queues and records external dependency targets, callable-parameter
 protocols, and local-source evidence. All contracts remain unresolved.
+
+
+## Python name-resolution hardening
+
+`name_resolution/` re-resolves all binding occurrences using Python scope and
+module-binding precedence. This removes artificial mixed traces caused by
+combining shadowed evidence sources. No semantic type is resolved.
