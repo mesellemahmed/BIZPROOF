@@ -71,3 +71,9 @@ combining shadowed evidence sources. No semantic type is resolved.
 `protocol_closure/` contains callable protocol groups, dependency-lock evidence,
 local-source analysis, and the next-action queue. All semantic contracts remain
 unresolved.
+
+
+## Certification-engine safety audit
+
+`certification_gate/` inventories the exact proof/certification implementation
+and its negative-path risk surfaces before V0.11 certification attempts.

@@ -384,3 +384,16 @@ No semantic type or semantic contract is validated in this phase.
 Command:
 
 ./run.sh generalization-protocol-closure
+
+
+### V0.11 certification-engine safety audit
+
+Phase L inventories the exact V0.9/V0.10 proof and certification implementation
+before V0.11 semantic contracts reuse it. It records the certificate reporter,
+hashing helper, callsites, proof-related functions and relevant tests.
+
+No semantic contract or new certification verdict is produced.
+
+Command:
+
+./run.sh generalization-certification-audit

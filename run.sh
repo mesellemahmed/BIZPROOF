@@ -121,6 +121,9 @@ case "$cmd" in
   generalization-protocol-closure)
     docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_protocol_closure --name-summary benchmarks/v0.11/name_resolution/summary.json --occurrence-resolution benchmarks/v0.11/name_resolution/occurrence_resolution.jsonl --contract-queue benchmarks/v0.11/name_resolution/contract_queue.json --external-root external_sources/v0.6 --output-dir benchmarks/v0.11/protocol_closure
     ;;
+  generalization-certification-audit)
+    docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_certification_audit --repo-root . --output-dir benchmarks/v0.11/certification_gate
+    ;;
   *)
     cat <<'EOF'
 Usage:
