@@ -1,0 +1,521 @@
+{
+  "certification_claim": false,
+  "cohort_sha256": "3144f973a166ebee41a059c538b81ffac5a5d15737982c6d95e59175325ca108",
+  "targets": [
+    {
+      "call_shapes": [
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'cd_eparet'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'csg_patrimoine_deductible_ir'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'pensions_alimentaires_deduites'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'rbg'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'rev_exo'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'rev_or'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'revenus_capitaux_prelevement_liberatoire'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'rvcm_plus_abat'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'f7db'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'f7dg'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'f7dl'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'f7dq'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'nb_pac2'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'f7dd_2016'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'f7df_2016'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'cd_sofipe'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'cd_acc75a'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'cd_deddiv'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'pertes_capital_societes_nouvelles'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'souscriptions_cinema_audiovisuel'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'epargne_codeveloppement_deduc'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'cd_doment'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'bouclier_imp_gen'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'restitutions'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'f3vf'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'grosses_reparations'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'f3vi'",
+            "period"
+          ]
+        }
+      ],
+      "candidate_ids": [
+        "19d233058899f735",
+        "244130d6ff9953d0",
+        "2dd784251ccc7dce",
+        "4b583322af591973",
+        "4c7af63af2f89319",
+        "4d2eb60abd9c44c8",
+        "78ca19c5e56cefa7",
+        "80788665d9905741",
+        "9ccbe1be4f59b3ce",
+        "b46358e6c871e1bf",
+        "b70f35ae381f7a3b",
+        "fd4702ed1d79ff1f"
+      ],
+      "certification_claim": false,
+      "occurrences": 43,
+      "parameter": "foyer_fiscal",
+      "primitive": "foyer_fiscal",
+      "protocol_status": "UNRESOLVED",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_status": "MISSING",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "call_shapes": [
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'aide_mobilite_categories_demandeur_emploi_eligibles'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'aide_mobilite_date_demande'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'aide_mobilite_duree_trajet'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'aide_mobilite_ressources_eligibles'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'contexte_activite_pole_emploi'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'contrat_de_travail_debut'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'contrat_de_travail_duree'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'contrat_de_travail_type'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'date_debut_recherche_emploi'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'dispositifs_formation'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'distance_activite_domicile'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'duree_formation'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'formation_financee_ou_cofinancee'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'formation_validee_pole_emploi'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'types_activite_en_recherche_emploi'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'scolarite'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'aah'",
+            "oct_2021"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'asi'",
+            "oct_2021"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'eligibilite_indemnite_inflation_non_salarie'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'eligibilite_indemnite_inflation_public'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'eligibilite_indemnite_inflation_retraite'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'eligibilite_indemnite_inflation_salarie_prive'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'pensions_invalidite'",
+            "oct_2021"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'age'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'alternant'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'peec_employeur'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'salaire_de_base'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'smic_proratise'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'livret_epargne_populaire_plafond'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'aah'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'activite'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'age_en_mois'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'ass_eligibilite_cumul_individu'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'ass_precondition_remplie'",
+            "period"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'chomage_net'",
+            "period"
+          ]
+        }
+      ],
+      "candidate_ids": [
+        "019d3a3df4514bac",
+        "051c7ef379178030",
+        "1458ed128652b359",
+        "61cf0e4af667580e",
+        "dfd34c86bcd9bfa1",
+        "eb41eb351df073ef",
+        "eff10167a5398559"
+      ],
+      "certification_claim": false,
+      "occurrences": 38,
+      "parameter": "individu",
+      "primitive": "individu",
+      "protocol_status": "UNRESOLVED",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_status": "MISSING",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "call_shapes": [
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'2021-10'"
+          ]
+        },
+        {
+          "keyword_arguments": [],
+          "positional_arguments": [
+            "'2022-06'"
+          ]
+        }
+      ],
+      "candidate_ids": [
+        "019d3a3df4514bac",
+        "a74d4580a9effb73"
+      ],
+      "certification_claim": false,
+      "occurrences": 2,
+      "parameter": "period",
+      "primitive": "period",
+      "protocol_status": "UNRESOLVED",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_status": "MISSING",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    }
+  ]
+}

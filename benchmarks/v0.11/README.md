@@ -50,3 +50,10 @@ separated. Semantic types remain `UNRESOLVED` in this phase.
 `symbol_trace/` recursively follows imported symbols inside the locked external
 repositories. External dependencies and parameter/builtin/attribute boundaries
 remain explicit. No semantic type is resolved by tracing alone.
+
+
+## Contract readiness
+
+`contract_readiness/` transforms the 15 semantic-contract candidates into
+explicit work queues and records external dependency targets, callable-parameter
+protocols, and local-source evidence. All contracts remain unresolved.

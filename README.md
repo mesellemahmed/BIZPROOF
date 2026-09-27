@@ -343,3 +343,16 @@ types or certify a business contract.
 Command:
 
 ./run.sh generalization-symbol-trace
+
+
+### V0.11 contract readiness
+
+Phase I converts source-trace outcomes into explicit contract-authoring queues:
+local-source contracts, parameter protocols, external dependency locks, and
+trace-review cases.
+
+No semantic type or certification verdict is produced by this phase.
+
+Command:
+
+./run.sh generalization-contract-readiness

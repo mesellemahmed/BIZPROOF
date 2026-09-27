@@ -938,6 +938,22 @@
       "all_semantic_types_unresolved": true,
       "certification_claim": false,
       "passed": true
+    },
+    "contract_readiness": {
+      "contract_candidates": 15,
+      "action_counts": {
+        "EXTERNAL_DEPENDENCY_LOCK_REQUIRED": 7,
+        "LOCAL_SOURCE_CONTRACT_DRAFT": 1,
+        "TRACE_REVIEW_REQUIRED": 7
+      },
+      "external_dependency_targets": 12,
+      "parameter_protocol_targets": 3,
+      "local_source_evidence_records": 2,
+      "semantic_types_resolved": 0,
+      "semantic_contracts_validated": 0,
+      "all_contracts_unresolved": true,
+      "certification_claim": false,
+      "passed": true
     }
   }
 }
