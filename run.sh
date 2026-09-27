@@ -127,6 +127,13 @@ case "$cmd" in
   generalization-semantic-contract-batch)
     docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_semantic_contract_batch --occurrences benchmarks/v0.11/name_resolution/occurrence_resolution.jsonl --protocols benchmarks/v0.11/protocol_closure/protocols.json --dependency-lock benchmarks/v0.11/semantic_contracts/openfisca_core_lock.json --external-root external_sources/v0.6 --dependency-source-root external_sources/v0.11/openfisca_core_44_0_4 --output-dir benchmarks/v0.11/semantic_contracts
     ;;
+  generalization-semantic-contract-closure)
+    docker compose run --rm -T --entrypoint sh bizproof -lc '
+      rm -rf /tmp/bizproof-numpy &&
+      python -m pip install --disable-pip-version-check --quiet --no-deps --require-hashes --target /tmp/bizproof-numpy -r benchmarks/v0.11/semantic_contract_closure/numpy_requirements.txt &&
+      PYTHONPATH=/tmp/bizproof-numpy:/workspace/src python -m bizproof.generalization_semantic_contract_closure --phase-n-root benchmarks/v0.11/semantic_contracts --numpy-lock benchmarks/v0.11/semantic_contract_closure/numpy_lock.json --output-dir benchmarks/v0.11/semantic_contract_closure
+    '
+    ;;
   *)
     cat <<'EOF'
 Usage:

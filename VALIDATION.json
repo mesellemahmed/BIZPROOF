@@ -1107,6 +1107,27 @@
       "terminal_outcomes_assigned": 0,
       "certification_claim": false,
       "passed": true
+    },
+    "semantic_contract_closure": {
+      "new_semantic_contracts_validated": 4,
+      "cumulative_semantic_contracts_validated": 5,
+      "new_contract_ids": [
+        "SC-NB-ENF-001",
+        "SC-NP-MIN-001",
+        "SC-NP-NOT-001",
+        "SC-NP-WHERE-001"
+      ],
+      "numpy_alias_contracts_validated": 3,
+      "numpy_version": "1.26.4",
+      "numpy_wheel_sha256": "675d61ffbfa78604709862923189bad94014bef562cc35cf61d3a07bba02a7ed",
+      "nb_enf_contract_status": "VALIDATED_BOUNDED_EXHAUSTIVE",
+      "nb_enf_exhaustive_comparisons": 657,
+      "zero_discount_trace_status": "DEFAULT_SOURCE_AND_LOADER_RESOLVED_RUNTIME_CONFIGURATION_UNRESOLVED",
+      "zero_discount_semantic_contract_status": "UNRESOLVED_DYNAMIC_LOADING_CONTEXT",
+      "candidate_certifications_issued": 0,
+      "terminal_outcomes_assigned": 0,
+      "certification_claim": false,
+      "passed": true
     }
   }
 }

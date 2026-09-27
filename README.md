@@ -426,3 +426,17 @@ semantics or business-rule certification.
 Command:
 
 ./run.sh generalization-semantic-contract-batch
+
+
+### V0.11 semantic contract closure
+
+Phase O validates the source-level aliases from OpenFisca-Core to the exact
+NumPy runtime selected by the locked OpenFisca-France environment and validates
+a bounded exhaustive semantic contract for `nb_enf`.
+
+The NumPy environment is reconstructed with hashes from `uv.lock`. Candidate
+certification remains separate from primitive semantic-contract validation.
+
+Command:
+
+./run.sh generalization-semantic-contract-closure

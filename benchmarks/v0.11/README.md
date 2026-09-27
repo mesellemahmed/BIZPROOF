@@ -94,3 +94,10 @@ outcomes are assigned.
 structurally validated protocol contracts, exact `nb_enf` binding evidence,
 locked OpenFisca-Core provenance traces, and the transitive `ZERO_DISCOUNT`
 factory trace.
+
+
+## Semantic contract closure
+
+`semantic_contract_closure/` contains the exact NumPy lock, delegated primitive
+contracts for `not_`, `min_`, and `where`, and the bounded exhaustive `nb_enf`
+semantic contract.
