@@ -1,0 +1,20 @@
+{
+  "benchmark_version": "0.11.0",
+  "binding_occurrences": 170,
+  "candidate_certifications_issued": 0,
+  "certification_claim": false,
+  "dependency_locks_validated": 1,
+  "dependency_symbol_traces": 3,
+  "nb_enf_binding_resolved": true,
+  "nb_enf_definition_kind": "FUNCTION",
+  "openfisca_core_version": "44.0.4",
+  "passed": true,
+  "phase": "FIRST_SEMANTIC_CONTRACT_BATCH",
+  "semantic_contracts_validated": 1,
+  "structural_protocols_validated": 8,
+  "terminal_outcomes_assigned": 0,
+  "validated_semantic_contract_ids": [
+    "SC-D-DECIMAL-001"
+  ],
+  "zero_discount_factory_traced": true
+}

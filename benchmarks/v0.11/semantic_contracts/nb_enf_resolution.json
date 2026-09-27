@@ -1,0 +1,42 @@
+{
+  "authoritative_binding": {
+    "binding_kind": "LOCAL_DEFINITION",
+    "line": 207,
+    "source": "def nb_enf(famille, period, age_min, age_max):",
+    "trace_evidence": "benchmarks/v0.11/contract_readiness/local_source_contracts.json"
+  },
+  "binding_resolution_status": "RESOLVED",
+  "called_symbols": [
+    "famille.members",
+    "famille.sum",
+    "not_"
+  ],
+  "candidate_certification": false,
+  "candidate_file": "openfisca_france/model/prestations/aides_logement.py",
+  "candidate_id": "cb937575ad9957d1",
+  "certification_claim": false,
+  "definition_header": "def nb_enf(famille, period, age_min, age_max):",
+  "definition_kind": "FUNCTION",
+  "definition_sha256": "06ed0e2b7c40a1a4ab5f4fc67b1c9df05abd0a1d36bf2c67eb62292157f2a343",
+  "definition_source": "def nb_enf(famille, period, age_min, age_max):\n    '''\n    Renvoie le nombre d'enfant au sens des allocations familiales dont l'\u00e2ge est compris entre ag1 et ag2\n    '''\n\n    assert period.unit == 'month'\n    assert period.size == 1\n\n    age = famille.members('age', period)\n    autonomie_financiere = famille.members('autonomie_financiere', period)\n\n#        Les allocations sont dues \u00e0 compter du mois civil qui suit la naissance\n#        ag1==0 ou suivant les anniversaires ag1>0.\n#        Un enfant est reconnu \u00e0 charge pour le versement des prestations\n#        jusqu'au mois pr\u00e9c\u00e9dant son age limite sup\u00e9rieur (ag2 + 1) mais\n#        le versement \u00e0 lieu en d\u00e9but de mois suivant\n    condition = (\n        (age >= age_min)\n        * (age <= age_max)\n        * not_(autonomie_financiere)\n        )\n\n    return famille.sum(condition, role = Famille.ENFANT)",
+  "exact_line_matches": 1,
+  "expected_source_sha256": "7de3b24f732795d65220d756a1c695242f6db18b88d9aa64b53caa9be3f1144f",
+  "named_top_level_matches": 1,
+  "node_type": "FunctionDef",
+  "parameters": [
+    "famille",
+    "period",
+    "age_min",
+    "age_max"
+  ],
+  "primitive": "nb_enf",
+  "provenance_basis": "PHASE_I_SOURCE_SYMBOL_TRACE",
+  "resolved_definition_file": "openfisca_france/model/prestations/prestations_familiales/base_ressource.py",
+  "resolved_definition_line": 207,
+  "return_expressions": [
+    "famille.sum(condition, role=Famille.ENFANT)"
+  ],
+  "semantic_contract_status": "UNRESOLVED",
+  "source_id": "openfisca_france",
+  "source_sha256": "7de3b24f732795d65220d756a1c695242f6db18b88d9aa64b53caa9be3f1144f"
+}

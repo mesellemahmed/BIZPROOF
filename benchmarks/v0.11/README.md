@@ -86,3 +86,11 @@ for missing certification artifacts and reduced FAILED certificates.
 
 `terminal_policy/` freezes the objective semantic-ambiguity rule before terminal
 outcomes are assigned.
+
+
+## First semantic contract batch
+
+`semantic_contracts/` records the first validated primitive semantic contract,
+structurally validated protocol contracts, exact `nb_enf` binding evidence,
+locked OpenFisca-Core provenance traces, and the transitive `ZERO_DISCOUNT`
+factory trace.

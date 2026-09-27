@@ -124,6 +124,9 @@ case "$cmd" in
   generalization-certification-audit)
     docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_certification_audit --repo-root . --output-dir benchmarks/v0.11/certification_gate
     ;;
+  generalization-semantic-contract-batch)
+    docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_semantic_contract_batch --occurrences benchmarks/v0.11/name_resolution/occurrence_resolution.jsonl --protocols benchmarks/v0.11/protocol_closure/protocols.json --dependency-lock benchmarks/v0.11/semantic_contracts/openfisca_core_lock.json --external-root external_sources/v0.6 --dependency-source-root external_sources/v0.11/openfisca_core_44_0_4 --output-dir benchmarks/v0.11/semantic_contracts
+    ;;
   *)
     cat <<'EOF'
 Usage:

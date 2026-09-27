@@ -410,3 +410,19 @@ The objective `NOT_CERTIFIED_SEMANTIC_AMBIGUITY` policy is frozen before
 V0.11 terminal-outcome assignment.
 
 No semantic contract is certified by Phase M itself.
+
+
+### V0.11 first semantic contract batch
+
+Phase N validates the first source-backed semantic primitive contract, validates
+the observed callable protocol shapes independently, resolves the exact local
+binding kind of `nb_enf`, locks the Python-3.12 OpenFisca-Core dependency from
+the corpus lockfile, and advances `not_`, `min_`, `where`, and `ZERO_DISCOUNT`
+through their transitive provenance.
+
+Structural protocol validation does not imply validation of return-value
+semantics or business-rule certification.
+
+Command:
+
+./run.sh generalization-semantic-contract-batch
