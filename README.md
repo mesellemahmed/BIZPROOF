@@ -460,3 +460,19 @@ preregistered V0.11 protocol.
 Command:
 
 ./run.sh generalization-candidate-proof
+
+
+### V0.11 first terminal certification
+
+Phase Q terminalizes the first fully proved sampled candidate. The frozen
+`AbstractBenefit.shipping_discount` source slice is assigned `CERTIFIED_A2`
+because certification uses an explicit scalar semantic adapter in addition to
+the locked declarative `Decimal` contract.
+
+The certificate carries hashes for the source, Phase-P proof bundle, primitive
+contract and adapter implementation. The remaining 89 sampled candidates stay
+explicitly pending; no overall V0.11 yield is reported yet.
+
+Command:
+
+./run.sh generalization-terminal-certification

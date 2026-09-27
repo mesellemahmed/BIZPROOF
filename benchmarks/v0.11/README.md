@@ -108,3 +108,11 @@ semantic contract.
 `candidate_proof_frontier/` contains the 90-candidate semantic-contract frontier,
 the first complete candidate source-slice proof, and the extracted A0/A1/A2
 protocol context needed for terminal classification.
+
+
+## First terminal certification
+
+`terminal_certification/` contains the first evidence-carrying V0.11 terminal
+certificate, the partial 90-candidate terminal-state ledger, the certification
+summary and a reviewer report. Population-level yield remains unavailable until
+all 90 candidates have terminal outcomes.

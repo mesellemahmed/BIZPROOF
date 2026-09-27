@@ -1,0 +1,105 @@
+{
+  "artifacts": {
+    "adapter_module": "src/bizproof/generalization_candidate_proof.py",
+    "adapter_module_sha256": "f766e700bca6d0829ef2fc8bd08aefc61ee7ab9a482702573198038e526096d9",
+    "decimal_contract": "benchmarks/v0.11/semantic_contracts/decimal_contract.json",
+    "decimal_contract_sha256": "23839b5c6fc97a2fd06c2bce2cf95e6a765697c4cadbce0349ad9b3d46d69d9f",
+    "phase_p_proof": "benchmarks/v0.11/candidate_proof_frontier/shipping_discount_proof.json",
+    "phase_p_proof_sha256": "eb33e1726497cb52aa7d0856c5d347d0b17226cf714d88c6a7d693c15c68a9e5"
+  },
+  "assistance": {
+    "classification_precedence": "explicit scalar adapter takes precedence over declarative bindings",
+    "declarative_primitive_contracts": [
+      "SC-D-DECIMAL-001"
+    ],
+    "explicit_scalar_adapter": {
+      "adapter_function": "_adapter_shipping_discount",
+      "adapter_function_sha256": "29ce22eb207b219f1643eabcfba4bc47f0ae190052d365c1018357886a193984",
+      "adapter_lines": {
+        "end": 481,
+        "start": 479
+      },
+      "adapter_literal": "0.00",
+      "mechanism": "EXPLICIT_SCALAR_SEMANTIC_ADAPTER",
+      "module": "/workspace/src/bizproof/generalization_candidate_proof.py",
+      "module_sha256": "f766e700bca6d0829ef2fc8bd08aefc61ee7ab9a482702573198038e526096d9",
+      "mutant_function": "_mutant_shipping_discount",
+      "mutant_function_sha256": "b16e12643287c11a649a88dd3fd5509f466ee008be3c694b102394dd6ad2309a",
+      "mutant_literal": "0.01"
+    },
+    "level": "A2",
+    "protocol_definition": {
+      "line": 75,
+      "text": "- `CERTIFIED_A2`: certified with an explicit human-authored scalar semantic adapter."
+    },
+    "terminal_outcome": "CERTIFIED_A2"
+  },
+  "candidate_id": "aab5348ee173d6e3",
+  "certificate_digest": "39eac47f3c71bde8cddf3d35e0e56b5e4825e93eb10b5af23045c06341cfd033",
+  "certificate_id": "CERT-V011-OSCAR-SHIPPING-001",
+  "certification_scope": "RETURN_EXPRESSION",
+  "checks": {
+    "candidate-id": true,
+    "decimal-contract-id": true,
+    "decimal-contract-validated": true,
+    "explicit-scalar-adapter": true,
+    "frozen-function-sha": true,
+    "frozen-source-file-sha": true,
+    "locked-oscar-commit": true,
+    "phase-p-evidence-complete": true,
+    "phase-p-proof-digest": true,
+    "phase-p-status": true,
+    "proof-obligations": true,
+    "required-contract": true,
+    "runtime-comparisons": true,
+    "runtime-correct-mismatches": true,
+    "runtime-mutant-sensitivity": true,
+    "source-file-exists": true,
+    "source-file-sha": true,
+    "source-slice-sha": true,
+    "symbolic-equivalence": true,
+    "symbolic-mutant": true
+  },
+  "claim_scope": "Certification applies only to the locked AbstractBenefit.shipping_discount source slice represented by this evidence bundle; it does not certify the complete django-oscar framework.",
+  "cohort": {
+    "sample_size": 90,
+    "sha256": "3144f973a166ebee41a059c538b81ffac5a5d15737982c6d95e59175325ca108"
+  },
+  "evidence": {
+    "phase_p_proof_digest": "52efb425b35c4c7262ae038a730ec572c0225feae3779cc9e8f8de5274797ed1",
+    "semantic_contracts": {
+      "required": [
+        "SC-D-DECIMAL-001"
+      ],
+      "satisfied": true
+    },
+    "source_executed_preservation": {
+      "comparisons": 18,
+      "correct_mismatches": 0,
+      "mutant_mismatches": 18
+    },
+    "symbolic_equivalence": {
+      "correct_verdict": "PROVED",
+      "mutant_solver_status": "sat",
+      "mutant_verdict": "DISPROVED",
+      "solver_status": "unsat"
+    }
+  },
+  "failed_checks": [],
+  "final_study_complete": false,
+  "provenance": {
+    "external_source": "src/oscar/apps/offer/abstract_models.py",
+    "external_source_sha256": "d1508fbc726b868c4c849cd88e7669f3bc1ca31a2e7f2ccb26ec3a119f29b78e",
+    "resolved_commit": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+    "source_id": "django_oscar",
+    "source_lines": [
+      819,
+      820
+    ],
+    "source_slice_sha256": "61b4a802fdf262e5bab6692bc7978326417675b78cbb64c93d1d532e7a38fa9a"
+  },
+  "schema_version": "BIZPROOF-V0.11-TERMINAL-CERTIFICATE-1",
+  "status": "CERTIFIED_A2",
+  "terminal_outcome": "CERTIFIED_A2",
+  "terminal_outcome_assigned": true
+}

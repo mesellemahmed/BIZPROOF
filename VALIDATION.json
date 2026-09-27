@@ -1149,6 +1149,19 @@
       "PRIMITIVE_CONTRACTS_CLOSED": 1,
       "STRUCTURAL_PROTOCOL_SEMANTICS_REMAIN": 11,
       "UNRESOLVED_PRIMITIVES_REMAIN": 24
+    },
+    "first_terminal_certification": {
+      "candidate_id": "aab5348ee173d6e3",
+      "certificate_id": "CERT-V011-OSCAR-SHIPPING-001",
+      "terminal_outcome": "CERTIFIED_A2",
+      "certificate_digest": "39eac47f3c71bde8cddf3d35e0e56b5e4825e93eb10b5af23045c06341cfd033",
+      "terminal_outcomes_assigned": 1,
+      "terminal_outcomes_pending": 89,
+      "certificates_issued": 1,
+      "certificates_failed": 0,
+      "weighted_metrics_ready": false,
+      "final_certification_complete": false,
+      "passed": true
     }
   }
 }

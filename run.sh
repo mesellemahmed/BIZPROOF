@@ -137,6 +137,9 @@ case "$cmd" in
   generalization-candidate-proof)
     docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_candidate_proof --repo-root . --external-root external_sources/v0.6 --output-dir benchmarks/v0.11/candidate_proof_frontier
     ;;
+  generalization-terminal-certification)
+    docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_terminal_certification --repo-root . --output-dir benchmarks/v0.11/terminal_certification
+    ;;
   *)
     cat <<'EOF'
 Usage:

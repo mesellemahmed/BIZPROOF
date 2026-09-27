@@ -1,0 +1,27 @@
+{
+  "benchmark_version": "0.11.0",
+  "certificates_failed": 0,
+  "certificates_issued": 1,
+  "claim_scope": "Certification applies only to the locked AbstractBenefit.shipping_discount source slice represented by this evidence bundle; it does not certify the complete django-oscar framework.",
+  "cohort_size": 90,
+  "final_certification_complete": false,
+  "first_candidate_id": "aab5348ee173d6e3",
+  "first_certificate_id": "CERT-V011-OSCAR-SHIPPING-001",
+  "first_terminal_outcome": "CERTIFIED_A2",
+  "partial_certification_claim": true,
+  "passed": true,
+  "phase": "FIRST_TERMINAL_CERTIFICATION",
+  "terminal_distribution": {
+    "CERTIFIED_A0": 0,
+    "CERTIFIED_A1": 0,
+    "CERTIFIED_A2": 1,
+    "NOT_CERTIFIED_EXECUTION": 0,
+    "NOT_CERTIFIED_PROVENANCE": 0,
+    "NOT_CERTIFIED_SEMANTIC_AMBIGUITY": 0,
+    "NOT_CERTIFIED_UNKNOWN": 0,
+    "NOT_CERTIFIED_UNSUPPORTED": 0
+  },
+  "terminal_outcomes_assigned": 1,
+  "terminal_outcomes_pending": 89,
+  "weighted_metrics_ready": false
+}
