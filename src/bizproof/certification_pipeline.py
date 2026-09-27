@@ -23,6 +23,16 @@ def _sha256_file(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+MISSING_FILE_SHA256 = "MISSING_FILE"
+
+
+def _sha256_or_missing(path: Path) -> str:
+    if not path.is_file():
+        return MISSING_FILE_SHA256
+
+    return _sha256_file(path)
+
+
 def _canonical_bytes(value: JsonDict) -> bytes:
     return json.dumps(
         value,
@@ -67,23 +77,43 @@ def _first_failed(checks: list[JsonDict]) -> list[str]:
 
 
 def _reviewer_report(summary: JsonDict, certificates: list[JsonDict]) -> str:
+    def _safe_get(value: object, *keys: str) -> object:
+        current = value
+
+        for key in keys:
+            if not isinstance(current, dict):
+                return "MISSING"
+
+            if key not in current:
+                return "MISSING"
+
+            current = current[key]
+
+        return current
+
     lines = [
         "# BIZPROOF V0.10 Reviewer Certification Report",
         "",
         "## Scope",
         "",
-        str(summary["claim_scope"]),
+        str(_safe_get(summary, "claim_scope")),
         "",
         "## Global result",
         "",
-        f"- Certificates configured: {summary['certificates_configured']}",
-        f"- Certificates issued: {summary['certificates_issued']}",
-        f"- Certificates failed: {summary['certificates_failed']}",
-        f"- External systems: {summary['external_system_count']}",
-        f"- V0.8 concrete comparisons represented: {summary['v08_total_comparisons']}",
-        f"- V0.8 correct-adapter mismatches represented: {summary['v08_correct_mismatches']}",
-        f"- V0.9 symbolic equivalences represented: {summary['v09_equivalences_proved']}",
-        f"- Pipeline result: {'PASS' if summary['passed'] else 'FAIL'}",
+        (f"- Certificates configured: {_safe_get(summary, 'certificates_configured')}"),
+        (f"- Certificates issued: {_safe_get(summary, 'certificates_issued')}"),
+        (f"- Certificates failed: {_safe_get(summary, 'certificates_failed')}"),
+        (f"- External systems: {_safe_get(summary, 'external_system_count')}"),
+        (f"- V0.8 concrete comparisons represented: {_safe_get(summary, 'v08_total_comparisons')}"),
+        (
+            "- V0.8 correct-adapter mismatches represented: "
+            f"{_safe_get(summary, 'v08_correct_mismatches')}"
+        ),
+        (
+            "- V0.9 symbolic equivalences represented: "
+            f"{_safe_get(summary, 'v09_equivalences_proved')}"
+        ),
+        (f"- Pipeline result: {'PASS' if _safe_get(summary, 'passed') is True else 'FAIL'}"),
         "",
         "## Certificates",
         "",
@@ -92,32 +122,50 @@ def _reviewer_report(summary: JsonDict, certificates: list[JsonDict]) -> str:
     for item in certificates:
         lines.extend(
             [
-                f"### {item['certificate_id']}",
+                f"### {_safe_get(item, 'certificate_id')}",
                 "",
-                f"- Status: **{item['status']}**",
-                f"- Certification scope: `{item['certification_scope']}`",
-                f"- External system: `{item['provenance']['source_id']}`",
-                f"- Commit: `{item['provenance']['resolved_commit']}`",
-                f"- Source: `{item['provenance']['external_source']}`",
-                f"- Adapter: `{item['artifacts']['adapter_path']}`",
-                f"- Contract: `{item['artifacts']['contract_path']}`",
-                f"- V0.7: `{item['evidence']['v0.7']['correct_verdict']}`",
+                f"- Status: **{_safe_get(item, 'status')}**",
+                (f"- Certification scope: `{_safe_get(item, 'certification_scope')}`"),
+                (f"- External system: `{_safe_get(item, 'provenance', 'source_id')}`"),
+                (f"- Commit: `{_safe_get(item, 'provenance', 'resolved_commit')}`"),
+                (f"- Source: `{_safe_get(item, 'provenance', 'external_source')}`"),
+                (f"- Adapter: `{_safe_get(item, 'artifacts', 'adapter_path')}`"),
+                (f"- Contract: `{_safe_get(item, 'artifacts', 'contract_path')}`"),
+                (f"- V0.7: `{_safe_get(item, 'evidence', 'v0.7', 'correct_verdict')}`"),
                 (
-                    f"- V0.8: {item['evidence']['v0.8']['comparisons']} comparisons, "
-                    f"{item['evidence']['v0.8']['correct_mismatches']} correct mismatches"
+                    "- V0.8: "
+                    f"{_safe_get(item, 'evidence', 'v0.8', 'comparisons')} "
+                    "comparisons, "
+                    f"{_safe_get(item, 'evidence', 'v0.8', 'correct_mismatches')} "
+                    "correct mismatches"
                 ),
                 (
-                    f"- V0.9: `{item['evidence']['v0.9']['correct_verdict']}` "
-                    f"(`{item['evidence']['v0.9']['solver_status']}`)"
+                    "- V0.9: "
+                    f"`{_safe_get(item, 'evidence', 'v0.9', 'correct_verdict')}` "
+                    f"(`{_safe_get(item, 'evidence', 'v0.9', 'solver_status')}`)"
                 ),
-                f"- Certified symbolic slice: `{item['evidence']['v0.9']['external_slice']}`",
-                f"- Certificate digest: `{item['certificate_digest']}`",
+                (
+                    "- Certified symbolic slice: "
+                    f"`{_safe_get(item, 'evidence', 'v0.9', 'external_slice')}`"
+                ),
+                (f"- Certificate digest: `{_safe_get(item, 'certificate_digest')}`"),
                 "",
             ]
         )
 
-        if item["failed_checks"]:
-            lines.append("- Failed checks: " + ", ".join(item["failed_checks"]))
+        failed_checks = item.get(
+            "failed_checks",
+            [],
+        )
+
+        if (
+            isinstance(
+                failed_checks,
+                list,
+            )
+            and failed_checks
+        ):
+            lines.append("- Failed checks: " + ", ".join(str(value) for value in failed_checks))
             lines.append("")
 
     return "\n".join(lines) + "\n"
@@ -343,9 +391,9 @@ def run_certification(
             str(d09["mutant"]["counterexample"]),
         )
 
-        external_sha = _sha256_file(external_path)
-        adapter_sha = _sha256_file(adapter_path)
-        contract_sha = _sha256_file(contract_path)
+        external_sha = _sha256_or_missing(external_path)
+        adapter_sha = _sha256_or_missing(adapter_path)
+        contract_sha = _sha256_or_missing(contract_path)
 
         _require(
             str(d08["resolved_commit"]) == expected_commit,

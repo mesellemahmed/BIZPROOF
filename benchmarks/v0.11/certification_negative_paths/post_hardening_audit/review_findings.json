@@ -1,0 +1,85 @@
+{
+  "certification_claim": false,
+  "reviewer_report_direct_parameter_subscripts": [
+    {
+      "expression": "summary['weighted_estimates']",
+      "file": "src/bizproof/generalization_feasibility.py",
+      "line": 516,
+      "parameter": "summary"
+    },
+    {
+      "expression": "summary['cohort_sha256']",
+      "file": "src/bizproof/generalization_feasibility.py",
+      "line": 496,
+      "parameter": "summary"
+    },
+    {
+      "expression": "summary['assessed_candidates']",
+      "file": "src/bizproof/generalization_feasibility.py",
+      "line": 497,
+      "parameter": "summary"
+    },
+    {
+      "expression": "summary['source_mismatches']",
+      "file": "src/bizproof/generalization_feasibility.py",
+      "line": 498,
+      "parameter": "summary"
+    },
+    {
+      "expression": "summary['extraction_failures']",
+      "file": "src/bizproof/generalization_feasibility.py",
+      "line": 499,
+      "parameter": "summary"
+    },
+    {
+      "expression": "summary['feasibility_counts']",
+      "file": "src/bizproof/generalization_feasibility.py",
+      "line": 506,
+      "parameter": "summary"
+    }
+  ],
+  "sha256_callsites": [
+    {
+      "context": "0031:         raise ValueError(f\"expected JSON object: {path}\")\n0032:     return value\n0033: \n0034: \n0035: def _load_module(path: Path) -> ModuleType:\n0036:     name = f\"_bizproof_adapter_{_sha256_file(path)[:16]}\"\n0037:     spec = importlib.util.spec_from_file_location(name, path)\n0038:     if spec is None or spec.loader is None:\n0039:         raise ValueError(f\"cannot load adapter module: {path}\")\n0040:     module = importlib.util.module_from_spec(spec)\n0041:     spec.loader.exec_module(module)",
+      "expression": "_sha256_file(path)",
+      "file": "src/bizproof/adapter_preservation.py",
+      "line": 36,
+      "symbol": "_sha256_file"
+    },
+    {
+      "context": "0088:     segment = ast.get_source_segment(source, method_node) or \"\"\n0089:     return ExtractedMethod(\n0090:         function=execution_namespace[method_name],\n0091:         line_start=method_node.lineno,\n0092:         line_end=getattr(method_node, \"end_lineno\", method_node.lineno),\n0093:         source_sha256=_sha256_file(path),\n0094:         method_sha256=_sha256_bytes(segment.encode(\"utf-8\")),\n0095:     )\n0096: \n0097: \n0098: def _checkout_commit(repo: Path) -> str:",
+      "expression": "_sha256_file(path)",
+      "file": "src/bizproof/adapter_preservation.py",
+      "line": 93,
+      "symbol": "_sha256_file"
+    },
+    {
+      "context": "0464:                     \"external_method_lines\": {\n0465:                         \"start\": extracted.line_start,\n0466:                         \"end\": extracted.line_end,\n0467:                     },\n0468:                     \"adapter\": str(rule[\"adapter\"]),\n0469:                     \"adapter_sha256\": _sha256_file(adapter_path),\n0470:                     \"adapter_function\": str(rule[\"adapter_function\"]),\n0471:                     \"mutant_function\": str(rule[\"mutant_function\"]),\n0472:                     \"harness\": harness,\n0473:                     \"validation_domain\": domain,\n0474:                     **result,",
+      "expression": "_sha256_file(adapter_path)",
+      "file": "src/bizproof/adapter_preservation.py",
+      "line": 469,
+      "symbol": "_sha256_file"
+    },
+    {
+      "context": "0028: \n0029: def _sha256_or_missing(path: Path) -> str:\n0030:     if not path.is_file():\n0031:         return MISSING_FILE_SHA256\n0032: \n0033:     return _sha256_file(path)\n0034: \n0035: \n0036: def _canonical_bytes(value: JsonDict) -> bytes:\n0037:     return json.dumps(\n0038:         value,",
+      "expression": "_sha256_file(path)",
+      "file": "src/bizproof/certification_pipeline.py",
+      "line": 33,
+      "symbol": "_sha256_file"
+    },
+    {
+      "context": "0405:     else:\n0406:         raise ValueError(f\"unsupported external mode: {mode}\")\n0407: \n0408:     metadata = {\n0409:         \"external_mode\": mode,\n0410:         \"external_source_sha256\": _sha256_file(external_path),\n0411:         \"external_method_sha256\": _node_hash(source, method),\n0412:         \"external_slice_sha256\": _node_hash(source, selected_node),\n0413:         \"external_method_lines\": {\n0414:             \"start\": method.lineno,\n0415:             \"end\": getattr(method, \"end_lineno\", method.lineno),",
+      "expression": "_sha256_file(external_path)",
+      "file": "src/bizproof/symbolic_equivalence.py",
+      "line": 410,
+      "symbol": "_sha256_file"
+    },
+    {
+      "context": "0434:     )\n0435: \n0436:     expression = _compile_statements(function.body, context)\n0437: \n0438:     return expression, {\n0439:         \"adapter_file_sha256\": _sha256_file(path),\n0440:         \"adapter_function_sha256\": _node_hash(source, function),\n0441:         \"adapter_function_lines\": {\n0442:             \"start\": function.lineno,\n0443:             \"end\": getattr(function, \"end_lineno\", function.lineno),\n0444:         },",
+      "expression": "_sha256_file(path)",
+      "file": "src/bizproof/symbolic_equivalence.py",
+      "line": 439,
+      "symbol": "_sha256_file"
+    }
+  ]
+}

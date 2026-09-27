@@ -397,3 +397,16 @@ No semantic contract or new certification verdict is produced.
 Command:
 
 ./run.sh generalization-certification-audit
+
+
+### V0.11 certification negative-path hardening
+
+Phase M hardens certification against missing artifact files and reduced FAILED
+evidence. Critical artifact hashes fail closed without FileNotFoundError after
+explicit existence checks, and the certification reviewer report tolerates
+incomplete negative evidence.
+
+The objective `NOT_CERTIFIED_SEMANTIC_AMBIGUITY` policy is frozen before
+V0.11 terminal-outcome assignment.
+
+No semantic contract is certified by Phase M itself.

@@ -77,3 +77,12 @@ unresolved.
 
 `certification_gate/` inventories the exact proof/certification implementation
 and its negative-path risk surfaces before V0.11 certification attempts.
+
+
+## Certification negative-path hardening
+
+`certification_negative_paths/` records runtime and static regression evidence
+for missing certification artifacts and reduced FAILED certificates.
+
+`terminal_policy/` freezes the objective semantic-ambiguity rule before terminal
+outcomes are assigned.

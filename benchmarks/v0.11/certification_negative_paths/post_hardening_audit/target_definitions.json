@@ -1,0 +1,93 @@
+{
+  "_reviewer_report": [
+    {
+      "direct_parameter_subscripts": [],
+      "end_line": 171,
+      "file": "src/bizproof/certification_pipeline.py",
+      "line": 79,
+      "name": "_reviewer_report",
+      "parameters": [
+        "certificates",
+        "summary"
+      ],
+      "source": "def _reviewer_report(summary: JsonDict, certificates: list[JsonDict]) -> str:\n    def _safe_get(value: object, *keys: str) -> object:\n        current = value\n\n        for key in keys:\n            if not isinstance(current, dict):\n                return \"MISSING\"\n\n            if key not in current:\n                return \"MISSING\"\n\n            current = current[key]\n\n        return current\n\n    lines = [\n        \"# BIZPROOF V0.10 Reviewer Certification Report\",\n        \"\",\n        \"## Scope\",\n        \"\",\n        str(_safe_get(summary, \"claim_scope\")),\n        \"\",\n        \"## Global result\",\n        \"\",\n        (f\"- Certificates configured: {_safe_get(summary, 'certificates_configured')}\"),\n        (f\"- Certificates issued: {_safe_get(summary, 'certificates_issued')}\"),\n        (f\"- Certificates failed: {_safe_get(summary, 'certificates_failed')}\"),\n        (f\"- External systems: {_safe_get(summary, 'external_system_count')}\"),\n        (f\"- V0.8 concrete comparisons represented: {_safe_get(summary, 'v08_total_comparisons')}\"),\n        (\n            \"- V0.8 correct-adapter mismatches represented: \"\n            f\"{_safe_get(summary, 'v08_correct_mismatches')}\"\n        ),\n        (\n            \"- V0.9 symbolic equivalences represented: \"\n            f\"{_safe_get(summary, 'v09_equivalences_proved')}\"\n        ),\n        (f\"- Pipeline result: {'PASS' if _safe_get(summary, 'passed') is True else 'FAIL'}\"),\n        \"\",\n        \"## Certificates\",\n        \"\",\n    ]\n\n    for item in certificates:\n        lines.extend(\n            [\n                f\"### {_safe_get(item, 'certificate_id')}\",\n                \"\",\n                f\"- Status: **{_safe_get(item, 'status')}**\",\n                (f\"- Certification scope: `{_safe_get(item, 'certification_scope')}`\"),\n                (f\"- External system: `{_safe_get(item, 'provenance', 'source_id')}`\"),\n                (f\"- Commit: `{_safe_get(item, 'provenance', 'resolved_commit')}`\"),\n                (f\"- Source: `{_safe_get(item, 'provenance', 'external_source')}`\"),\n                (f\"- Adapter: `{_safe_get(item, 'artifacts', 'adapter_path')}`\"),\n                (f\"- Contract: `{_safe_get(item, 'artifacts', 'contract_path')}`\"),\n                (f\"- V0.7: `{_safe_get(item, 'evidence', 'v0.7', 'correct_verdict')}`\"),\n                (\n                    \"- V0.8: \"\n                    f\"{_safe_get(item, 'evidence', 'v0.8', 'comparisons')} \"\n                    \"comparisons, \"\n                    f\"{_safe_get(item, 'evidence', 'v0.8', 'correct_mismatches')} \"\n                    \"correct mismatches\"\n                ),\n                (\n                    \"- V0.9: \"\n                    f\"`{_safe_get(item, 'evidence', 'v0.9', 'correct_verdict')}` \"\n                    f\"(`{_safe_get(item, 'evidence', 'v0.9', 'solver_status')}`)\"\n                ),\n                (\n                    \"- Certified symbolic slice: \"\n                    f\"`{_safe_get(item, 'evidence', 'v0.9', 'external_slice')}`\"\n                ),\n                (f\"- Certificate digest: `{_safe_get(item, 'certificate_digest')}`\"),\n                \"\",\n            ]\n        )\n\n        failed_checks = item.get(\n            \"failed_checks\",\n            [],\n        )\n\n        if (\n            isinstance(\n                failed_checks,\n                list,\n            )\n            and failed_checks\n        ):\n            lines.append(\"- Failed checks: \" + \", \".join(str(value) for value in failed_checks))\n            lines.append(\"\")\n\n    return \"\\n\".join(lines) + \"\\n\""
+    },
+    {
+      "direct_parameter_subscripts": [
+        {
+          "expression": "summary['weighted_estimates']",
+          "line": 516,
+          "parameter": "summary"
+        },
+        {
+          "expression": "summary['cohort_sha256']",
+          "line": 496,
+          "parameter": "summary"
+        },
+        {
+          "expression": "summary['assessed_candidates']",
+          "line": 497,
+          "parameter": "summary"
+        },
+        {
+          "expression": "summary['source_mismatches']",
+          "line": 498,
+          "parameter": "summary"
+        },
+        {
+          "expression": "summary['extraction_failures']",
+          "line": 499,
+          "parameter": "summary"
+        },
+        {
+          "expression": "summary['feasibility_counts']",
+          "line": 506,
+          "parameter": "summary"
+        }
+      ],
+      "end_line": 542,
+      "file": "src/bizproof/generalization_feasibility.py",
+      "line": 481,
+      "name": "_reviewer_report",
+      "parameters": [
+        "summary"
+      ],
+      "source": "def _reviewer_report(summary: JsonDict) -> str:\n    lines = [\n        \"# BIZPROOF V0.11 Static Generalization Feasibility Census\",\n        \"\",\n        \"## Scope\",\n        \"\",\n        (\n            \"This phase is a static feasibility assessment over the preregistered \"\n            \"90-candidate cohort. Feasibility tiers are routing decisions for the \"\n            \"next validation stage; they are NOT proof verdicts and are NOT \"\n            \"certification outcomes.\"\n        ),\n        \"\",\n        \"## Cohort integrity\",\n        \"\",\n        f\"- Cohort SHA-256: `{summary['cohort_sha256']}`\",\n        f\"- Candidates assessed: {summary['assessed_candidates']}\",\n        f\"- Source mismatches: {summary['source_mismatches']}\",\n        f\"- Extraction failures: {summary['extraction_failures']}\",\n        \"\",\n        \"## Unweighted cohort counts\",\n        \"\",\n    ]\n\n    for tier in FEASIBILITY_TIERS:\n        lines.append(f\"- `{tier}`: {summary['feasibility_counts'].get(tier, 0)}\")\n\n    lines.extend(\n        [\n            \"\",\n            \"## Weighted eligible-population estimates\",\n            \"\",\n        ]\n    )\n\n    weighted = summary[\"weighted_estimates\"]\n\n    for tier in FEASIBILITY_TIERS:\n        item = weighted[tier]\n        lines.append(\n            \"- \"\n            f\"`{tier}`: estimated rate {item['estimated_rate']:.4f}, \"\n            f\"approx. 95% CI \"\n            f\"[{item['approx_ci95_low']:.4f}, \"\n            f\"{item['approx_ci95_high']:.4f}]\"\n        )\n\n    lines.extend(\n        [\n            \"\",\n            \"## Interpretation boundary\",\n            \"\",\n            (\n                \"`F0`\u2013`F3` describe the amount of semantic machinery expected \"\n                \"before attempting V0.7/V0.8/V0.9 obligations. They must not be \"\n                \"reported as CERTIFIED, PROVED, or DISPROVED.\"\n            ),\n            \"\",\n        ]\n    )\n\n    return \"\\n\".join(lines)"
+    }
+  ],
+  "_sha256_file": [
+    {
+      "direct_parameter_subscripts": [],
+      "end_line": 25,
+      "file": "src/bizproof/adapter_preservation.py",
+      "line": 24,
+      "name": "_sha256_file",
+      "parameters": [
+        "path"
+      ],
+      "source": "def _sha256_file(path: Path) -> str:\n    return _sha256_bytes(path.read_bytes())"
+    },
+    {
+      "direct_parameter_subscripts": [],
+      "end_line": 23,
+      "file": "src/bizproof/certification_pipeline.py",
+      "line": 22,
+      "name": "_sha256_file",
+      "parameters": [
+        "path"
+      ],
+      "source": "def _sha256_file(path: Path) -> str:\n    return hashlib.sha256(path.read_bytes()).hexdigest()"
+    },
+    {
+      "direct_parameter_subscripts": [],
+      "end_line": 25,
+      "file": "src/bizproof/symbolic_equivalence.py",
+      "line": 24,
+      "name": "_sha256_file",
+      "parameters": [
+        "path"
+      ],
+      "source": "def _sha256_file(path: Path) -> str:\n    return _sha256_bytes(path.read_bytes())"
+    }
+  ]
+}

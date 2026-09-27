@@ -1,0 +1,43 @@
+{
+  "aggregate_reviewer_definition_count": 2,
+  "aggregate_reviewer_direct_subscripts": 6,
+  "audit_certification_pipeline_reviewer_direct_subscripts": [],
+  "benchmark_version": "0.11.0",
+  "certification_claim": false,
+  "certification_pipeline_reviewer_direct_subscripts": [],
+  "direct_critical_hashes": [],
+  "existence_guard_lines": {
+    "adapter_path": [
+      257
+    ],
+    "contract_path": [
+      263
+    ],
+    "external_path": [
+      251
+    ]
+  },
+  "missing_file_safe": true,
+  "passed": true,
+  "phase": "CERTIFICATION_NEGATIVE_PATH_HARDENING",
+  "reduced_failed_report_safe": true,
+  "runtime_probe_passed": true,
+  "safe_critical_hashes": [
+    {
+      "argument": "external_path",
+      "helper": "_sha256_or_missing",
+      "line": 394
+    },
+    {
+      "argument": "adapter_path",
+      "helper": "_sha256_or_missing",
+      "line": 395
+    },
+    {
+      "argument": "contract_path",
+      "helper": "_sha256_or_missing",
+      "line": 396
+    }
+  ],
+  "semantic_contracts_validated": 0
+}
