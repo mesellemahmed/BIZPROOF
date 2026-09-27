@@ -329,3 +329,17 @@ defined and validated.
 Command:
 
 ./run.sh generalization-semantic-evidence
+
+
+### V0.11 source symbol tracing
+
+Phase H recursively traces semantic-contract symbols through the locked source
+snapshots. Local definitions, re-exports, dependency boundaries, callable
+parameters, builtins and unresolved/ambiguous paths are recorded explicitly.
+
+Tracing a definition establishes provenance only. It does not resolve semantic
+types or certify a business contract.
+
+Command:
+
+./run.sh generalization-symbol-trace

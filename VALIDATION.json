@@ -916,6 +916,28 @@
       "all_semantic_types_unresolved": true,
       "certification_claim": false,
       "passed": true
+    },
+    "symbol_definition_trace": {
+      "registry_entries": 58,
+      "binding_occurrences": 170,
+      "semantic_contract_candidates": 15,
+      "terminal_status_counts": {
+        "ATTRIBUTE_CONTEXT_BOUNDARY": 30,
+        "ATTRIBUTE_PARAMETER_BOUNDARY": 32,
+        "EXTERNAL_DEPENDENCY_BOUNDARY": 18,
+        "FUNCTION_PARAMETER_BOUNDARY": 25,
+        "LOCAL_ASSIGNMENT": 1,
+        "MIXED_TRACE_BOUNDARY": 60,
+        "NO_TRACE_EVIDENCE": 4
+      },
+      "contract_trace_readiness": {
+        "TRACE_COMPLETE": 8,
+        "TRACE_REVIEW": 7
+      },
+      "semantic_types_resolved": 0,
+      "all_semantic_types_unresolved": true,
+      "certification_claim": false,
+      "passed": true
     }
   }
 }

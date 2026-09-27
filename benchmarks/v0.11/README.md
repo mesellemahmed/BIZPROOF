@@ -43,3 +43,10 @@ business-domain definition or certification result.
 `semantic_evidence/` records source/import/parameter provenance for binding
 occurrences. `context_inferred_type` and `semantic_type` are deliberately
 separated. Semantic types remain `UNRESOLVED` in this phase.
+
+
+## Source symbol tracing
+
+`symbol_trace/` recursively follows imported symbols inside the locked external
+repositories. External dependencies and parameter/builtin/attribute boundaries
+remain explicit. No semantic type is resolved by tracing alone.

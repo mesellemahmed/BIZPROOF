@@ -109,6 +109,9 @@ case "$cmd" in
   generalization-semantic-evidence)
     docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_semantic_evidence --contract-summary benchmarks/v0.11/contracts/summary.json --contract-skeletons benchmarks/v0.11/contracts/contract_skeletons.jsonl --binding-registry benchmarks/v0.11/contracts/binding_registry.json --lock benchmarks/v0.6/LOCK.json --external-root external_sources/v0.6 --output-dir benchmarks/v0.11/semantic_evidence
     ;;
+  generalization-symbol-trace)
+    docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_symbol_trace --semantic-summary benchmarks/v0.11/semantic_evidence/summary.json --occurrence-evidence benchmarks/v0.11/semantic_evidence/occurrence_evidence.jsonl --semantic-registry benchmarks/v0.11/semantic_evidence/semantic_registry.json --lock benchmarks/v0.6/LOCK.json --external-root external_sources/v0.6 --output-dir benchmarks/v0.11/symbol_trace
+    ;;
   *)
     cat <<'EOF'
 Usage:
