@@ -304,3 +304,15 @@ controlled-execution blockers into reusable engineering families.
 Command:
 
 ./run.sh generalization-families
+
+
+### V0.11 contract and binding skeleton
+
+The Phase-F contract skeleton derives conservative type/context obligations for
+all `BINDING_DEFINITION` candidates. It recognizes recurring OpenFisca entity
+lookups and semantic-library calls, but all binding semantics and domains remain
+explicitly unresolved until validated.
+
+Command:
+
+./run.sh generalization-contract-skeleton

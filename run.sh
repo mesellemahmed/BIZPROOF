@@ -103,6 +103,9 @@ case "$cmd" in
   generalization-families)
     docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_families --feasibility-summary benchmarks/v0.11/feasibility/summary.json --assessment benchmarks/v0.11/feasibility/assessment.jsonl --probe-summary benchmarks/v0.11/symbolic_probe/summary.json --probe benchmarks/v0.11/symbolic_probe/probe.jsonl --workplan-summary benchmarks/v0.11/workplan/summary.json --queue benchmarks/v0.11/workplan/queue.jsonl --output-dir benchmarks/v0.11/families
     ;;
+  generalization-contract-skeleton)
+    docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_contract_skeleton --probe-summary benchmarks/v0.11/symbolic_probe/summary.json --probe benchmarks/v0.11/symbolic_probe/probe.jsonl --workplan-summary benchmarks/v0.11/workplan/summary.json --queue benchmarks/v0.11/workplan/queue.jsonl --output-dir benchmarks/v0.11/contracts
+    ;;
   *)
     cat <<'EOF'
 Usage:

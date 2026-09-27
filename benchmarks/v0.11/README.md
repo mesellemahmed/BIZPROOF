@@ -29,3 +29,10 @@ constant-return bodies are routed to semantic-scope review.
 
 `families/` groups recurrent unresolved obligations without assigning business
 meaning or certification verdicts.
+
+
+## Contract skeleton
+
+`contracts/` contains conservative per-candidate type/context skeletons and an
+unresolved binding registry. Structural type inference is not treated as a
+business-domain definition or certification result.

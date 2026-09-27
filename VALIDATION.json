@@ -877,6 +877,29 @@
       "semantic_scope_family_count": 2,
       "certification_claim": false,
       "passed": true
+    },
+    "contract_binding_skeleton": {
+      "binding_candidates": 36,
+      "readiness_counts": {
+        "TYPE_SKELETON_PARTIAL": 30,
+        "TYPE_SKELETON_READY": 6
+      },
+      "family_class_counts": {
+        "EXTERNAL_CALL": 8,
+        "GLOBAL_CONSTANT": 1,
+        "OBJECT_ATTRIBUTE": 62,
+        "OPENFISCA_ENTITY_LOOKUP": 86,
+        "SEMANTIC_LIBRARY_PRIMITIVE": 13
+      },
+      "inferred_type_counts": {
+        "ANY": 90,
+        "NUMERIC": 57,
+        "ORDERABLE": 23
+      },
+      "binding_registry_entries": 58,
+      "all_bindings_unresolved": true,
+      "certification_claim": false,
+      "passed": true
     }
   }
 }

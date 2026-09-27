@@ -1,0 +1,1377 @@
+{
+  "benchmark_version": "0.11.0",
+  "certification_claim": false,
+  "cohort_sha256": "3144f973a166ebee41a059c538b81ffac5a5d15737982c6d95e59175325ca108",
+  "entries": [
+    {
+      "candidate_count": 13,
+      "candidate_ids": [
+        "19d233058899f735",
+        "244130d6ff9953d0",
+        "2dd784251ccc7dce",
+        "4b583322af591973",
+        "4c7af63af2f89319",
+        "4d2eb60abd9c44c8",
+        "61cf0e4af667580e",
+        "78ca19c5e56cefa7",
+        "80788665d9905741",
+        "9ccbe1be4f59b3ce",
+        "b46358e6c871e1bf",
+        "b70f35ae381f7a3b",
+        "fd4702ed1d79ff1f"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "foyer_fiscal('cd_eparet', period)",
+        "foyer_fiscal('csg_patrimoine_deductible_ir', period)",
+        "foyer_fiscal('pensions_alimentaires_deduites', period)",
+        "foyer_fiscal('rbg', period)",
+        "foyer_fiscal('rev_exo', period)",
+        "foyer_fiscal('rev_or', period)",
+        "foyer_fiscal('revenus_capitaux_prelevement_liberatoire', period)",
+        "foyer_fiscal('rvcm_plus_abat', period)",
+        "foyer_fiscal('f7db', period)",
+        "foyer_fiscal('f7dg', period)"
+      ],
+      "family_class": "OPENFISCA_ENTITY_LOOKUP",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "CALL",
+      "observed_inferred_types": [
+        "ANY",
+        "NUMERIC",
+        "ORDERABLE"
+      ],
+      "occurrence_count": 44,
+      "primitive": "foyer_fiscal",
+      "registry_id": "BR-9a048588cef7",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 7,
+      "candidate_ids": [
+        "019d3a3df4514bac",
+        "051c7ef379178030",
+        "1458ed128652b359",
+        "61cf0e4af667580e",
+        "dfd34c86bcd9bfa1",
+        "eb41eb351df073ef",
+        "eff10167a5398559"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "individu('aide_mobilite_categories_demandeur_emploi_eligibles', period)",
+        "individu('aide_mobilite_date_demande', period)",
+        "individu('aide_mobilite_duree_trajet', period)",
+        "individu('aide_mobilite_ressources_eligibles', period)",
+        "individu('contexte_activite_pole_emploi', period)",
+        "individu('contrat_de_travail_debut', period)",
+        "individu('contrat_de_travail_duree', period)",
+        "individu('contrat_de_travail_type', period)",
+        "individu('date_debut_recherche_emploi', period)",
+        "individu('dispositifs_formation', period)"
+      ],
+      "family_class": "OPENFISCA_ENTITY_LOOKUP",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "CALL",
+      "observed_inferred_types": [
+        "ANY",
+        "NUMERIC",
+        "ORDERABLE"
+      ],
+      "occurrence_count": 38,
+      "primitive": "individu",
+      "registry_id": "BR-6c651fb5205a",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 4,
+      "candidate_ids": [
+        "1b63ce825a129c0a",
+        "55fe61b67000b53a",
+        "5ea2122f340b1558",
+        "d033593e9fc6fbc6"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "self.name",
+        "self.name",
+        "other.name",
+        "self.name",
+        "self.name"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 5,
+      "primitive": "name",
+      "registry_id": "BR-1fff61ca13cc",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 3,
+      "candidate_ids": [
+        "61cf0e4af667580e",
+        "dfd34c86bcd9bfa1",
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "not_((activite_en_recherche_emploi == TypesActiviteEnRechercheEmploi.entretien_embauche) + (activite_en_recherche_emploi == TypesActiviteEnRechercheEmploi.indeterminee))",
+        "not_(individu('lieu_emploi_ou_formation', period) == TypesLieuEmploiFormation.non_renseigne)",
+        "not_(lieu_de_residence == TypesLieuResidence.non_renseigne)",
+        "not_(reside_en_metropole)",
+        "not_(individu('enfant_a_charge', period.this_year))",
+        "not_(aah_eligible)"
+      ],
+      "family_class": "SEMANTIC_LIBRARY_PRIMITIVE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "CALL",
+      "observed_inferred_types": [
+        "NUMERIC"
+      ],
+      "occurrence_count": 6,
+      "primitive": "not_",
+      "registry_id": "BR-70ddb43e1b3f",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 3,
+      "candidate_ids": [
+        "4c7af63af2f89319",
+        "eb41eb351df073ef",
+        "fd4702ed1d79ff1f"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "min_(plaf, f7db)",
+        "min_(contrat_de_travail_debut_en_mois + 1 + (contrat_travail_debut - contrat_de_travail_debut_en_mois), contrat_de_travail_debut_en_mois + 2 - timedelta64(1, 'D'))",
+        "min_(plaf - base_ci, f7df + f7dd)",
+        "min_(plaf, f7db)"
+      ],
+      "family_class": "SEMANTIC_LIBRARY_PRIMITIVE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "CALL",
+      "observed_inferred_types": [
+        "ANY",
+        "NUMERIC",
+        "ORDERABLE"
+      ],
+      "occurrence_count": 4,
+      "primitive": "min_",
+      "registry_id": "BR-8a35e02922cb",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 3,
+      "candidate_ids": [
+        "4c7af63af2f89319",
+        "a74d4580a9effb73",
+        "fd4702ed1d79ff1f"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "where(invalide, P.plafond_invalides, where(annee1, min_(P.plafond_maximum_1ere_annee, P.plafond_1ere_annee + P.increment_plafond * (nb_pac_majoration_plafond + f7dl)), min_(P.plafond_maximum, P.plafond + P.increment_plafond * (nb_pac_majoration_plafond + f7dl))))",
+        "where(invalide, P.plafond_invalides, where(annee1, min_(P.plafond_maximum_1ere_annee, P.plafond_1ere_annee + P.increment_plafond * (nb_pac_majoration_plafond + f7dl)), min_(P.plafond_maximum, P.plafond + P.increment_plafond * (nb_pac_majoration_plafond + f7dl))))",
+        "where(not_(or_(individu('bourse_criteres_sociaux', juin_2022) > 0, individu('bourse_enseignement_sup', juin_2022) > 0)), False, where(and_(individu.has_role(Famille.PARENT), individu.famille('eligibilite_per', period)), False, True))"
+      ],
+      "family_class": "SEMANTIC_LIBRARY_PRIMITIVE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "CALL",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 3,
+      "primitive": "where",
+      "registry_id": "BR-7fc7f7fa3795",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "0f2fcfc48ffea4af",
+        "55fe61b67000b53a"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "self.code",
+        "other.code",
+        "self.code"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 3,
+      "primitive": "code",
+      "registry_id": "BR-486873ad5a9e",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "4ab5aeba4c85b4c0",
+        "55fe61b67000b53a"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "self.rate",
+        "other.rate",
+        "self.rate"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 3,
+      "primitive": "rate",
+      "registry_id": "BR-d5f6cb20e0eb",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "019d3a3df4514bac",
+        "a74d4580a9effb73"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "periods.period('2021-10')",
+        "periods.period('2022-06')"
+      ],
+      "family_class": "EXTERNAL_CALL",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "CALL",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 2,
+      "primitive": "period",
+      "registry_id": "BR-8be61c3f6f69",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "dfd34c86bcd9bfa1",
+        "eff10167a5398559"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "parameters(period).chomage.allocations_assurance_chomage.ass.age_max",
+        "parameters(period).prestations_sociales.aides_logement.action_logement.locapass.age_max"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ORDERABLE"
+      ],
+      "occurrence_count": 2,
+      "primitive": "age_max",
+      "registry_id": "BR-a1c70f8733f1",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "dfd34c86bcd9bfa1",
+        "eff10167a5398559"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "TypesActivite.chomeur",
+        "TypesActivite.chomeur"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 2,
+      "primitive": "chomeur",
+      "registry_id": "BR-634b854b3979",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "4c7af63af2f89319",
+        "fd4702ed1d79ff1f"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "parameters(period).impot_revenu.credits_impots.emploi_salarie_domicile",
+        "parameters(period).impot_revenu.calcul_reductions_impots.emploi_salarie_domicile"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 2,
+      "primitive": "emploi_salarie_domicile",
+      "registry_id": "BR-b1a835661469",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "62aa728fdef86058",
+        "d821bbc9b1df03ae"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "self.full_id",
+        "self.full_id"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 2,
+      "primitive": "full_id",
+      "registry_id": "BR-5b7b49c45d6b",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "4c7af63af2f89319",
+        "fd4702ed1d79ff1f"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "P.taux",
+        "P.taux"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "NUMERIC"
+      ],
+      "occurrence_count": 2,
+      "primitive": "taux",
+      "registry_id": "BR-b8e84b84e451",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "1458ed128652b359",
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "individu.menage('residence', period)",
+        "individu.menage('statut_occupation_logement', period)"
+      ],
+      "family_class": "OPENFISCA_ENTITY_LOOKUP",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "CALL",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 2,
+      "primitive": "menage",
+      "registry_id": "BR-3f5c07308214",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "ContexteActivitePoleEmploi.formation",
+        "TypesContrat.formation"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 2,
+      "primitive": "formation",
+      "registry_id": "BR-0539a77018ca",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "55fe61b67000b53a"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "other.gross",
+        "self.gross"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 2,
+      "primitive": "gross",
+      "registry_id": "BR-9fe2c5d982da",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "TypesLieuResidence.metropole",
+        "parametres_amob.distance_minimum.metropole"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY",
+        "ORDERABLE"
+      ],
+      "occurrence_count": 2,
+      "primitive": "metropole",
+      "registry_id": "BR-f933ef3ba7dd",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "55fe61b67000b53a"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "other.net",
+        "self.net"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 2,
+      "primitive": "net",
+      "registry_id": "BR-e858d3c667ce",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "972b76d53a12b8ad"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "P_micro.microentreprise.regime_micro_bic.marchandises.plafond",
+        "P_micro.microentreprise.regime_micro_bic.services.plafond"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ORDERABLE"
+      ],
+      "occurrence_count": 2,
+      "primitive": "plafond",
+      "registry_id": "BR-4a06adf0d462",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "55fe61b67000b53a"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "other.tax",
+        "self.tax"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 2,
+      "primitive": "tax",
+      "registry_id": "BR-9a22981609ab",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "019d3a3df4514bac"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "individu.famille('paje_prepare', oct_2021)",
+        "individu.famille('rsa', oct_2021)"
+      ],
+      "family_class": "OPENFISCA_ENTITY_LOOKUP",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "CALL",
+      "observed_inferred_types": [
+        "NUMERIC"
+      ],
+      "occurrence_count": 2,
+      "primitive": "famille",
+      "registry_id": "BR-2a38dbaeec41",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "aab5348ee173d6e3"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "D('0.00')"
+      ],
+      "family_class": "EXTERNAL_CALL",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "CALL",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "D",
+      "registry_id": "BR-5fb03032990e",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "contrat_travail_debut.astype('M8[M]')"
+      ],
+      "family_class": "EXTERNAL_CALL",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "CALL",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "astype",
+      "registry_id": "BR-3cb6b02997b3",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "019d3a3df4514bac"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "individu.has_role(Famille.PARENT)"
+      ],
+      "family_class": "EXTERNAL_CALL",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "CALL",
+      "observed_inferred_types": [
+        "NUMERIC"
+      ],
+      "occurrence_count": 1,
+      "primitive": "has_role",
+      "registry_id": "BR-fab22a366f60",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "244130d6ff9953d0"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "foyer_fiscal.members('maj_cga', period)"
+      ],
+      "family_class": "EXTERNAL_CALL",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "CALL",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "members",
+      "registry_id": "BR-98211b71dec4",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "cb937575ad9957d1"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "nb_enf(famille, period, age_min_enfant, age_max_enfant - 1)"
+      ],
+      "family_class": "EXTERNAL_CALL",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "CALL",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "nb_enf",
+      "registry_id": "BR-bf37d3b32d85",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "244130d6ff9953d0"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "foyer_fiscal.sum(maj_cga_i)"
+      ],
+      "family_class": "EXTERNAL_CALL",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "CALL",
+      "observed_inferred_types": [
+        "NUMERIC"
+      ],
+      "occurrence_count": 1,
+      "primitive": "sum",
+      "registry_id": "BR-4bcfe78de1d4",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "635fe113a02cf90b"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "ZERO_DISCOUNT"
+      ],
+      "family_class": "GLOBAL_CONSTANT",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "GLOBAL_NAME",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "ZERO_DISCOUNT",
+      "registry_id": "BR-56764950efb5",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "db6bd6fe0c9b8cd4"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "self._totaldiff_guesstimate"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "_totaldiff_guesstimate",
+      "registry_id": "BR-f8a5c22ba754",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "972b76d53a12b8ad"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "TypesTnsTypeActivite.achat_revente"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "achat_revente",
+      "registry_id": "BR-4dcc4bbaf476",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "cb937575ad9957d1"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "parameters(period).prestations_sociales.prestations_familiales.prestations_generales.af.af_cm.age1"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "age1",
+      "registry_id": "BR-8974fbfab24e",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "1458ed128652b359"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "parameters(period).prestations_sociales.education.mobilite.mobili_jeune.age_maximum"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ORDERABLE"
+      ],
+      "occurrence_count": 1,
+      "primitive": "age_maximum",
+      "registry_id": "BR-da78997c5131",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "parameters(period).prestations_sociales.transport.aide_mobilite"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "aide_mobilite",
+      "registry_id": "BR-fb61132d2694",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "DispositifsDeFormation.autre"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "autre",
+      "registry_id": "BR-1f30bbe22acc",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "972b76d53a12b8ad"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "TypesTnsTypeActivite.bic"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "bic",
+      "registry_id": "BR-1223cfa3956f",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "972b76d53a12b8ad"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "TypesTnsTypeActivite.bnc"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "bnc",
+      "registry_id": "BR-f3ad52d295a9",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "TypesContrat.cdd"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "cdd",
+      "registry_id": "BR-811d969eee96",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "TypesContrat.cdi"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "cdi",
+      "registry_id": "BR-0d6e8391b16a",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "TypesContrat.ctt"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "ctt",
+      "registry_id": "BR-e3589c06ab71",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "parametres_amob.delai_max"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "NUMERIC"
+      ],
+      "occurrence_count": 1,
+      "primitive": "delai_max",
+      "registry_id": "BR-893571710d0d",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "parametres_amob.duree_de_contrat_minimum"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ORDERABLE"
+      ],
+      "occurrence_count": 1,
+      "primitive": "duree_de_contrat_minimum",
+      "registry_id": "BR-49dbab563ff4",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "parametres_amob.duree_de_formation_minimum"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ORDERABLE"
+      ],
+      "occurrence_count": 1,
+      "primitive": "duree_de_formation_minimum",
+      "registry_id": "BR-91386a1ee517",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "parametres_amob.duree_trajet_minimum"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ORDERABLE"
+      ],
+      "occurrence_count": 1,
+      "primitive": "duree_trajet_minimum",
+      "registry_id": "BR-c6ca93a13f34",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "051c7ef379178030"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "TypesScolarite.enseignement_superieur"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "enseignement_superieur",
+      "registry_id": "BR-1f723ab34af1",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "TypesActiviteEnRechercheEmploi.entretien_embauche"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "entretien_embauche",
+      "registry_id": "BR-c42f1cc0c148",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eff10167a5398559"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "TypesActivite.etudiant"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "etudiant",
+      "registry_id": "BR-26876021b97a",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "parametres_amob.distance_minimum.hors_metropole"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ORDERABLE"
+      ],
+      "occurrence_count": 1,
+      "primitive": "hors_metropole",
+      "registry_id": "BR-cfaeea2a823f",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "28b1b63cc241f487"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "self.internal_name"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "internal_name",
+      "registry_id": "BR-f619aa65f143",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "460c0ee11314458e"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "user.is_staff"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "is_staff",
+      "registry_id": "BR-e1501cff8b01",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "1458ed128652b359"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "TypesStatutOccupationLogement.locataire_foyer"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "locataire_foyer",
+      "registry_id": "BR-3f5014a72935",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "1458ed128652b359"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "TypesStatutOccupationLogement.locataire_hlm"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "locataire_hlm",
+      "registry_id": "BR-fe4680fe8031",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "1458ed128652b359"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "TypesStatutOccupationLogement.locataire_meuble"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "locataire_meuble",
+      "registry_id": "BR-d26469a3c197",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "1458ed128652b359"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "TypesStatutOccupationLogement.locataire_vide"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "locataire_vide",
+      "registry_id": "BR-f7e29b020df1",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "972b76d53a12b8ad"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "type_activite.possible_values"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "possible_values",
+      "registry_id": "BR-02ab24b145a9",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "ContexteActivitePoleEmploi.recherche_emploi"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "recherche_emploi",
+      "registry_id": "BR-dff5203a0838",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "ContexteActivitePoleEmploi.reprise_emploi"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "reprise_emploi",
+      "registry_id": "BR-aa74430564e4",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "0fe04e3572c7203e"
+      ],
+      "certification_claim": false,
+      "domain_definition_status": "MISSING",
+      "examples": [
+        "line.unit_effective_price"
+      ],
+      "family_class": "OBJECT_ATTRIBUTE",
+      "implementation_status": "NOT_IMPLEMENTED",
+      "kind": "ATTRIBUTE",
+      "observed_inferred_types": [
+        "ANY"
+      ],
+      "occurrence_count": 1,
+      "primitive": "unit_effective_price",
+      "registry_id": "BR-ecd5262c8b3e",
+      "resolution_status": "UNRESOLVED",
+      "semantic_definition_status": "MISSING"
+    }
+  ],
+  "phase": "BINDING_REGISTRY_SKELETON"
+}
