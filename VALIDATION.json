@@ -900,6 +900,22 @@
       "all_bindings_unresolved": true,
       "certification_claim": false,
       "passed": true
+    },
+    "semantic_source_evidence": {
+      "contract_candidates": 36,
+      "registry_entries": 58,
+      "binding_occurrences": 170,
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 62,
+        "NO_SOURCE_EVIDENCE": 4,
+        "SOURCE_EVIDENCE_IDENTIFIED": 93,
+        "SOURCE_EVIDENCE_PARTIAL": 11
+      },
+      "context_type_variation_entries": 4,
+      "semantic_types_resolved": 0,
+      "all_semantic_types_unresolved": true,
+      "certification_claim": false,
+      "passed": true
     }
   }
 }

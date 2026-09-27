@@ -316,3 +316,16 @@ explicitly unresolved until validated.
 Command:
 
 ./run.sh generalization-contract-skeleton
+
+
+### V0.11 semantic source evidence
+
+Phase G separates structural usage constraints from source-backed semantic
+evidence. Contextual types are never promoted to semantic types automatically.
+
+All semantic types remain explicitly unresolved until a semantic contract is
+defined and validated.
+
+Command:
+
+./run.sh generalization-semantic-evidence

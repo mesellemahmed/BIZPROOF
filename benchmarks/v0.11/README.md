@@ -36,3 +36,10 @@ meaning or certification verdicts.
 `contracts/` contains conservative per-candidate type/context skeletons and an
 unresolved binding registry. Structural type inference is not treated as a
 business-domain definition or certification result.
+
+
+## Semantic source evidence
+
+`semantic_evidence/` records source/import/parameter provenance for binding
+occurrences. `context_inferred_type` and `semantic_type` are deliberately
+separated. Semantic types remain `UNRESOLVED` in this phase.
