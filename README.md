@@ -440,3 +440,23 @@ certification remains separate from primitive semantic-contract validation.
 Command:
 
 ./run.sh generalization-semantic-contract-closure
+
+
+### V0.11 first candidate proof
+
+Phase P computes the semantic-contract frontier for all 90 preregistered
+candidates and constructs the first complete source-slice proof bundle.
+
+The first target is the frozen Django-Oscar candidate
+`aab5348ee173d6e3` (`AbstractBenefit.shipping_discount`). Its locked source,
+validated `Decimal` primitive semantics, source-executed preservation,
+independent mutant, and symbolic constant-representation equivalence are
+checked together.
+
+A completed source-slice proof is not automatically assigned a terminal
+`CERTIFIED_A0/A1/A2` outcome. Terminal level assignment follows the exact
+preregistered V0.11 protocol.
+
+Command:
+
+./run.sh generalization-candidate-proof

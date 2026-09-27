@@ -101,3 +101,10 @@ factory trace.
 `semantic_contract_closure/` contains the exact NumPy lock, delegated primitive
 contracts for `not_`, `min_`, and `where`, and the bounded exhaustive `nb_enf`
 semantic contract.
+
+
+## First candidate proof
+
+`candidate_proof_frontier/` contains the 90-candidate semantic-contract frontier,
+the first complete candidate source-slice proof, and the extracted A0/A1/A2
+protocol context needed for terminal classification.

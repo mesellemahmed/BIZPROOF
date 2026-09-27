@@ -1128,6 +1128,27 @@
       "terminal_outcomes_assigned": 0,
       "certification_claim": false,
       "passed": true
+    },
+    "first_candidate_proof": {
+      "candidate_id": "aab5348ee173d6e3",
+      "proof_id": "PROOF-V011-OSCAR-SHIPPING-001",
+      "candidate_proof_status": "PROVED_SOURCE_SLICE",
+      "proof_digest_sha256": "52efb425b35c4c7262ae038a730ec572c0225feae3779cc9e8f8de5274797ed1",
+      "primitive_contracts_satisfied": true,
+      "source_execution_comparisons": 18,
+      "source_execution_mismatches": 0,
+      "mutant_mismatches": 18,
+      "symbolic_equivalences_proved": 1,
+      "terminal_outcome_assigned": false,
+      "candidate_certification_issued": false,
+      "certification_claim": false,
+      "passed": true
+    },
+    "candidate_frontier_status_counts": {
+      "NO_CONTRACT_OCCURRENCES": 54,
+      "PRIMITIVE_CONTRACTS_CLOSED": 1,
+      "STRUCTURAL_PROTOCOL_SEMANTICS_REMAIN": 11,
+      "UNRESOLVED_PRIMITIVES_REMAIN": 24
     }
   }
 }

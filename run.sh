@@ -134,6 +134,9 @@ case "$cmd" in
       PYTHONPATH=/tmp/bizproof-numpy:/workspace/src python -m bizproof.generalization_semantic_contract_closure --phase-n-root benchmarks/v0.11/semantic_contracts --numpy-lock benchmarks/v0.11/semantic_contract_closure/numpy_lock.json --output-dir benchmarks/v0.11/semantic_contract_closure
     '
     ;;
+  generalization-candidate-proof)
+    docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_candidate_proof --repo-root . --external-root external_sources/v0.6 --output-dir benchmarks/v0.11/candidate_proof_frontier
+    ;;
   *)
     cat <<'EOF'
 Usage:
