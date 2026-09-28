@@ -1,0 +1,34 @@
+{
+  "candidate_id": "e8850260c2763222",
+  "certification_claim": false,
+  "interpretation": "Unsupported means unsupported by the frozen A2 scalar certification scope. It does not claim that the external function is intrinsically unverifiable by another formalism.",
+  "negative_evidence_digest": "19001fc0d8db014c3d000879299184788c4f35e2e32dc90d927c845452049073",
+  "prior_review": {
+    "candidate_id": "e8850260c2763222",
+    "certification_claim": false,
+    "class": "MultibuyDiscountBenefit",
+    "function": "apply",
+    "reason": "The function combines domain-object returns with discount and consumption side effects.",
+    "reason_code": "DOMAIN_DISCOUNT_OBJECT_AND_SIDE_EFFECTS",
+    "source": "django_oscar",
+    "status": "A2_REVIEW_REQUIRED",
+    "terminal_outcome": null
+  },
+  "reason": "The function combines domain-object returns with discount and consumption side effects.",
+  "reason_code": "DOMAIN_DISCOUNT_OBJECT_AND_SIDE_EFFECTS",
+  "schema_version": "BIZPROOF-V0.11-NEGATIVE-EVIDENCE-1",
+  "scope": "V0.11 A2 explicit scalar semantic adapter",
+  "source": {
+    "class": "MultibuyDiscountBenefit",
+    "file": "src/oscar/apps/offer/benefits.py",
+    "function": "apply",
+    "function_sha256": "43caf35ba88294b43ebf679eb34e8e77c76d4ed43dbd2676aaef38e9010280af",
+    "lines": [
+      346,
+      361
+    ],
+    "source_file_sha256": "8dd2cad6d160d25fcc009817453801672433cfdab59583da131ced04c76038b9",
+    "source_id": "django_oscar"
+  },
+  "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+}

@@ -1,0 +1,34 @@
+{
+  "candidate_id": "87d2f0b3b15f0ea6",
+  "certification_claim": false,
+  "interpretation": "Unsupported means unsupported by the frozen A2 scalar certification scope. It does not claim that the external function is intrinsically unverifiable by another formalism.",
+  "negative_evidence_digest": "852031b101623a194fddf1a11dad9e7287dbbbc2426e36a4a8ccd50bd0674c31",
+  "prior_review": {
+    "candidate_id": "87d2f0b3b15f0ea6",
+    "certification_claim": false,
+    "class": "PercentageDiscountBenefit",
+    "function": "description",
+    "reason": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision.",
+    "return_shape": "TEXT_RETURN",
+    "source": "django_oscar",
+    "status": "A2_SCALAR_SCOPE_REVIEW_REQUIRED",
+    "terminal_outcome": null
+  },
+  "reason": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision.",
+  "reason_code": "TEXT_RETURN",
+  "schema_version": "BIZPROOF-V0.11-NEGATIVE-EVIDENCE-1",
+  "scope": "V0.11 A2 explicit scalar semantic adapter",
+  "source": {
+    "class": "PercentageDiscountBenefit",
+    "file": "src/oscar/apps/offer/benefits.py",
+    "function": "description",
+    "function_sha256": "45a854d0f0556c564eeb44c746da3837faec78cca180de724bdb99ac22099f65",
+    "lines": [
+      54,
+      58
+    ],
+    "source_file_sha256": "8dd2cad6d160d25fcc009817453801672433cfdab59583da131ced04c76038b9",
+    "source_id": "django_oscar"
+  },
+  "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+}

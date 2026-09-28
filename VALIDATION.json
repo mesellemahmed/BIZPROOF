@@ -1557,6 +1557,31 @@
       "terminalized_before": 21,
       "v3_candidates_reviewed": 13,
       "weighted_metrics_ready": false
+    },
+    "a2_residual_closure": {
+      "a2_remaining_worklist": [
+        "53abfcd7d20a9cd6",
+        "7bc9603bfbda7dc9"
+      ],
+      "benchmark_version": "0.11.0",
+      "complex_scalar_pending": 2,
+      "final_certification_complete": false,
+      "passed": true,
+      "pending_after": 45,
+      "phase": "A2_RESIDUAL_CLOSURE",
+      "residual_a2_candidates": 21,
+      "scalar_projections_attempted": 2,
+      "scalar_projections_proved": 2,
+      "terminal_distribution": {
+        "CERTIFIED_A1": 11,
+        "CERTIFIED_A2": 15,
+        "NOT_CERTIFIED_SEMANTIC_AMBIGUITY": 2,
+        "NOT_CERTIFIED_UNSUPPORTED": 17
+      },
+      "terminalized_after": 45,
+      "terminalized_before": 26,
+      "unsupported_terminalized": 17,
+      "weighted_metrics_ready": false
     }
   }
 }

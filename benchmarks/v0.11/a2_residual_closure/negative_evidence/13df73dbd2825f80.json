@@ -1,0 +1,34 @@
+{
+  "candidate_id": "13df73dbd2825f80",
+  "certification_claim": false,
+  "interpretation": "Unsupported means unsupported by the frozen A2 scalar certification scope. It does not claim that the external function is intrinsically unverifiable by another formalism.",
+  "negative_evidence_digest": "a7f61ad74ea9a6d42f797a9358cb651dc0cbcf80a25ce3c71f37de66a97b06be",
+  "prior_review": {
+    "candidate_id": "13df73dbd2825f80",
+    "certification_claim": false,
+    "class": "OrderSyncResult",
+    "function": "to_result_dict",
+    "reason": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision.",
+    "return_shape": "DICT_RETURN",
+    "source": "pretix",
+    "status": "A2_SCALAR_SCOPE_REVIEW_REQUIRED",
+    "terminal_outcome": null
+  },
+  "reason": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision.",
+  "reason_code": "DICT_RETURN",
+  "schema_version": "BIZPROOF-V0.11-NEGATIVE-EVIDENCE-1",
+  "scope": "V0.11 A2 explicit scalar semantic adapter",
+  "source": {
+    "class": "OrderSyncResult",
+    "file": "src/pretix/base/models/datasync.py",
+    "function": "to_result_dict",
+    "function_sha256": "83bc3d5ba2e5d0e531026937ed7caaa92fd3bb434e53ca7e4b91a049fab42da1",
+    "lines": [
+      140,
+      149
+    ],
+    "source_file_sha256": "d19ee5b66e703544bba4671a19d650e14c044a8b01415348fd986acbe457b661",
+    "source_id": "pretix"
+  },
+  "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+}

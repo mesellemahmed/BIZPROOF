@@ -1,0 +1,56 @@
+{
+  "adapter": {
+    "function": "adapt_stock_purchase_permission",
+    "function_sha256": "41cb26cb29645139511c7a0827e7f9ef3df2d6aa7e0d529b6e14aa2718aeb34c",
+    "mutant_function": "mutant_stock_purchase_permission",
+    "mutant_function_sha256": "e7243ba5f094fcd824151f41f97ab1e7a302ae67d2ab16ad2302b3817f9db734",
+    "semantic_adapter": "STOCK_PURCHASE_PERMISSION"
+  },
+  "assistance_level": "A2",
+  "authoring_mode": "EXPLICIT_MANUAL_SCALAR_SEMANTIC_PROJECTION",
+  "candidate_id": "f3ebe6cce422947e",
+  "certificate_digest": "66e886bf43e51944291bafa6b48be8478e07d0d08a310486ca3c47f2e7013f1d",
+  "certificate_id": "CERT-V011-A2-F3EBE6CCE422947E",
+  "claim_scope": "Certification covers only the explicit first boolean component of the locked tuple return. Human-readable reason text and surrounding framework behavior are outside this certificate.",
+  "evidence": {
+    "proof_digest": "a9bfe6a497565bd9526f3d52bdda570dac7031d4e7c376449db01abf6a857bb3",
+    "runtime": {
+      "adapter_mismatches": 0,
+      "comparisons": 25,
+      "mutant_mismatches": 3,
+      "projection": "return[0]",
+      "validation_domain": "num_available in {-1,0,1,2,5}; quantity in {0,1,2,5,6}"
+    },
+    "symbolic": {
+      "correct_proved": true,
+      "correct_solver_status": "unsat",
+      "mutant_disproved": true,
+      "mutant_solver_status": "sat",
+      "projection": "return[0]",
+      "symbolic_domain": "unrestricted integer availability and requested quantity"
+    }
+  },
+  "final_study_complete": false,
+  "projection": "return[0]",
+  "protocol_definition": {
+    "line": 75,
+    "text": "- `CERTIFIED_A2`: certified with an explicit human-authored scalar semantic adapter."
+  },
+  "schema_version": "BIZPROOF-V0.11-A2-CERTIFICATE-1",
+  "semantic_binding_scope": "The scalar projection is the first boolean component of the locked `(permitted, reason)` return contract. The human-readable reason is explicitly outside this A2 scalar certificate.",
+  "source": {
+    "class": "StockRequired",
+    "file": "src/oscar/apps/partner/availability.py",
+    "function": "is_purchase_permitted",
+    "function_sha256": "bf85b7dee0f8955aa0125b5172f9ce4c8ad0d69cce7d2955cd98f50c7304b946",
+    "lines": [
+      89,
+      95
+    ],
+    "source_file_sha256": "ea715e2631fae710417e6227e9e2cb9e8868cdaaa5a52f19c944286f02e459ba",
+    "source_id": "django_oscar"
+  },
+  "status": "CERTIFIED_A2",
+  "terminal_outcome": "CERTIFIED_A2",
+  "terminal_outcome_assigned": true
+}
