@@ -1469,6 +1469,33 @@
           "route": "STRUCTURAL_REVIEW"
         }
       ]
+    },
+    "a2_adapter_authoring": {
+      "authoring_route_family_counts": {
+        "V1_SCALAR_EXPRESSION": 9,
+        "V2_STRAIGHT_LINE": 9,
+        "V3_BRANCHING": 12
+      },
+      "benchmark_version": "0.11.0",
+      "candidate_count": 33,
+      "certification_claim": false,
+      "complexity_counts": {
+        "HIGH": 15,
+        "LOW": 4,
+        "MEDIUM": 14
+      },
+      "family_count": 30,
+      "passed": true,
+      "pending_total": 76,
+      "phase": "A2_AUTHORING_PROFILE",
+      "source_counts": {
+        "django_oscar": 15,
+        "openfisca_france": 5,
+        "pretix": 13
+      },
+      "source_verified_candidates": 33,
+      "terminal_outcomes_assigned": 0,
+      "terminalized_total": 14
     }
   }
 }

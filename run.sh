@@ -149,6 +149,9 @@ case "$cmd" in
   generalization-remaining-cohort-sweep)
     docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_remaining_cohort_sweep --repo-root . --output-dir benchmarks/v0.11/remaining_cohort_sweep
     ;;
+  generalization-a2-authoring)
+    docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_a2_authoring --repo-root . --output-dir benchmarks/v0.11/a2_adapter_authoring
+    ;;
   *)
     cat <<'EOF'
 Usage:
