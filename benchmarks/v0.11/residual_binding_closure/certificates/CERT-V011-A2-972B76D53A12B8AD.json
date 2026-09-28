@@ -1,0 +1,43 @@
+{
+  "assistance_level": "A2",
+  "authoring_mode": "EXPLICIT_MANUAL_SCALAR_SEMANTIC_ADAPTER",
+  "candidate_id": "972b76d53a12b8ad",
+  "certificate_digest": "3bad66a985136d5e87bdd0f859189ee3f644d9dd015518238436dc63e0e25471",
+  "certificate_id": "CERT-V011-A2-972B76D53A12B8AD",
+  "claim_scope": "Certification applies to the explicit scalar projection of turnover eligibility under activity-category membership predicates and scalar ceilings.",
+  "evidence": {
+    "proof_digest": "c78ff9b79974942aa1bfc681ac9f08d04edadf3fe26717f3e4d12069001cfed3",
+    "runtime": {
+      "adapter_mismatches": 0,
+      "comparisons": 108,
+      "mutant_mismatches": 3,
+      "validation_domain": "4 activity categories x 9 turnover values x 3 sales/service ceiling pairs"
+    },
+    "symbolic": {
+      "correct_proved": true,
+      "correct_solver_status": "unsat",
+      "mutant_disproved": true,
+      "mutant_solver_status": "sat",
+      "symbolic_domain": "numeric turnover and ceilings with explicit activity-category membership predicates"
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 75,
+    "text": "- `CERTIFIED_A2`: certified with an explicit human-authored scalar semantic adapter."
+  },
+  "schema_version": "BIZPROOF-V0.11-A2-CERTIFICATE-1",
+  "semantic_binding_scope": "The activity enum is projected to three explicit category-membership predicates (achat_revente, bic, bnc); turnover and both micro-enterprise ceilings are scalar bindings.",
+  "source": {
+    "class": "rsa_eligibilite_tns",
+    "file": "openfisca_france/model/prestations/minima_sociaux/rsa.py",
+    "function": "eligibilite_chiffre_affaire",
+    "function_sha256": "8b4d4bf9aeb61874c16c47c1f39449f8516ed6f69550808d2599ac7f43763fc1",
+    "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+    "source_file_sha256": "085b7071764ffb6eb38df9c8673982ae3586fbacfa6de4ab1198af40fa2c3492",
+    "source_id": "openfisca_france"
+  },
+  "status": "CERTIFIED_A2",
+  "terminal_outcome": "CERTIFIED_A2",
+  "terminal_outcome_assigned": true
+}

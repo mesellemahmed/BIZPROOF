@@ -1,0 +1,27 @@
+{
+  "candidate_id": "972b76d53a12b8ad",
+  "certification_claim": true,
+  "class": "rsa_eligibilite_tns",
+  "function": "eligibilite_chiffre_affaire",
+  "function_sha256": "8b4d4bf9aeb61874c16c47c1f39449f8516ed6f69550808d2599ac7f43763fc1",
+  "proof_digest": "c78ff9b79974942aa1bfc681ac9f08d04edadf3fe26717f3e4d12069001cfed3",
+  "runtime": {
+    "adapter_mismatches": 0,
+    "comparisons": 108,
+    "mutant_mismatches": 3,
+    "validation_domain": "4 activity categories x 9 turnover values x 3 sales/service ceiling pairs"
+  },
+  "semantic_adapter": "RSA_TNS_TURNOVER_ELIGIBILITY",
+  "semantic_binding_scope": "The activity enum is projected to three explicit category-membership predicates (achat_revente, bic, bnc); turnover and both micro-enterprise ceilings are scalar bindings.",
+  "source": "openfisca_france",
+  "source_file_sha256": "085b7071764ffb6eb38df9c8673982ae3586fbacfa6de4ab1198af40fa2c3492",
+  "status": "PROVED_A2_SCALAR",
+  "symbolic": {
+    "correct_proved": true,
+    "correct_solver_status": "unsat",
+    "mutant_disproved": true,
+    "mutant_solver_status": "sat",
+    "symbolic_domain": "numeric turnover and ceilings with explicit activity-category membership predicates"
+  },
+  "terminal_outcome": "CERTIFIED_A2"
+}

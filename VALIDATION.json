@@ -1626,6 +1626,20 @@
       "terminalized_after": 67,
       "terminalized_before": 57,
       "weighted_metrics_ready": false
+    },
+    "residual_binding_closure": {
+      "a2_attempted": 1,
+      "a2_certified": 1,
+      "benchmark_version": "0.11.0",
+      "candidates_reviewed": 2,
+      "final_certification_complete": false,
+      "passed": true,
+      "pending_after": 21,
+      "phase": "RESIDUAL_BINDING_CLOSURE",
+      "terminalized_after": 69,
+      "terminalized_before": 67,
+      "unsupported_terminalized": 1,
+      "weighted_metrics_ready": false
     }
   }
 }
