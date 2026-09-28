@@ -146,6 +146,9 @@ case "$cmd" in
   generalization-a1-batch-proof)
     docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_a1_batch_proof --repo-root . --output-dir benchmarks/v0.11/a1_batch_proofs
     ;;
+  generalization-remaining-cohort-sweep)
+    docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_remaining_cohort_sweep --repo-root . --output-dir benchmarks/v0.11/remaining_cohort_sweep
+    ;;
   *)
     cat <<'EOF'
 Usage:

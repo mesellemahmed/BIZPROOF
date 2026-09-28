@@ -1,0 +1,72 @@
+{
+  "candidate_id": "6c9c5d18966c42d0",
+  "certification_claim": false,
+  "class": "AbstractCondition",
+  "evidence_digest": "ca6c9fda7ebc71e72db629ea2cb74cfa1fd663330cf2a588ac40a04091b2e070",
+  "file": "src/oscar/apps/offer/abstract_models.py",
+  "frontier_status": "NO_CONTRACT_OCCURRENCES",
+  "frozen_policy": {
+    "path": "benchmarks/v0.11/terminal_policy/semantic_ambiguity_policy.json",
+    "policy": {
+      "anti_inflation_rules": [
+        "difficulty_is_not_semantic_ambiguity",
+        "wildcard_import_alone_is_not_semantic_ambiguity",
+        "unlocked_dependency_alone_is_not_semantic_ambiguity",
+        "missing_type_information_alone_is_not_semantic_ambiguity",
+        "candidate_must_not_be_dropped_or_replaced",
+        "no_terminal_certification_outcome_may_be_assigned_from_contextual_type_inference_only"
+      ],
+      "benchmark_version": "0.11.0",
+      "certification_claim": false,
+      "exclusions": {
+        "missing_or_mismatched_source_identity": "NOT_CERTIFIED_PROVENANCE",
+        "required_concrete_execution_cannot_be_completed": "NOT_CERTIFIED_EXECUTION",
+        "required_construct_outside_supported_semantics": "NOT_CERTIFIED_UNSUPPORTED",
+        "single_interpretation_with_missing_evidence": "NOT_CERTIFIED_UNKNOWN",
+        "supported_semantics_but_verifier_cannot_decide": "NOT_CERTIFIED_UNKNOWN"
+      },
+      "frozen_before_terminal_outcome_assignment": true,
+      "policy": "SEMANTIC_AMBIGUITY_TERMINAL_POLICY",
+      "scope": "preregistered V0.11 90-candidate deep cohort",
+      "semantic_ambiguity_rule": {
+        "all_required": [
+          "source_identity_and_provenance_checks_have_passed",
+          "relevant_symbol_name_resolution_has_been_exhausted",
+          "relevant_dependency_and_protocol_resolution_has_been_exhausted",
+          "at_least_two_mutually_incompatible_source_consistent_semantic_interpretations_remain",
+          "available_BVC_source_domain_and_execution_evidence_does_not_select_a_unique_interpretation"
+        ],
+        "outcome": "NOT_CERTIFIED_SEMANTIC_AMBIGUITY"
+      },
+      "terminal_outcomes": [
+        "CERTIFIED_A0",
+        "CERTIFIED_A1",
+        "CERTIFIED_A2",
+        "NOT_CERTIFIED_UNKNOWN",
+        "NOT_CERTIFIED_UNSUPPORTED",
+        "NOT_CERTIFIED_PROVENANCE",
+        "NOT_CERTIFIED_EXECUTION",
+        "NOT_CERTIFIED_SEMANTIC_AMBIGUITY"
+      ]
+    },
+    "sha256": "137ecdc6a5766570293747308b6d8ee58abf806ecbf5329b601345a14b00a5bc"
+  },
+  "function": "get_upsell_message",
+  "function_sha256": "ed1a390d7f4c7660a22a0d937afae7f379d96fd5e3fdb0c60c5002d089165439",
+  "lines": [
+    938,
+    939
+  ],
+  "protocol_definition": {
+    "line": 80,
+    "text": "- `NOT_CERTIFIED_SEMANTIC_AMBIGUITY`: no defensible business-semantic slice can be fixed"
+  },
+  "reason": "No defensible business-semantic slice can be fixed for the frozen NONE_RETURN function shape.",
+  "required_bindings": [],
+  "schema_version": "BIZPROOF-V0.11-NEGATIVE-TERMINAL-1",
+  "semantic_shape": "NONE_RETURN",
+  "source_id": "django_oscar",
+  "terminal_outcome": "NOT_CERTIFIED_SEMANTIC_AMBIGUITY",
+  "terminal_outcome_assigned": true,
+  "workplan_route": "SEMANTIC_SCOPE_REVIEW"
+}
