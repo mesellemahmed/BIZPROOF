@@ -1,0 +1,57 @@
+{
+  "assistance_level": "A1",
+  "bindings": {
+    "count": 1,
+    "manifest_sha256": "7c53ff6e2f7b75f2b85652bddfcf6f5e2caac06c94cf8189f9c3d39adf1b1922",
+    "mechanism": "DECLARATIVE_SOURCE_TO_BVC_BINDINGS_ONLY"
+  },
+  "bsir": {
+    "ir_sha256": "20fa56d3c2bd91217f8d90cf3b41250f48436d18de6025b3fd0f85f9bc298ce9",
+    "version": "BSIR-SKELETON-0.11"
+  },
+  "candidate_id": "19d233058899f735",
+  "certificate_digest": "eda0ac0c0adb4c94ae13180fd125875a6c46da30a116964936fce06bb276efd8",
+  "certificate_id": "CERT-V011-A1-19D233058899F735",
+  "claim_scope": "Certification applies to the locked source function under the declared source-to-BVC call bindings and any explicitly listed validated semantic-contract abstractions.",
+  "explicit_scalar_adapter": false,
+  "final_study_complete": false,
+  "proof": {
+    "concrete_replay_cases": 5,
+    "correct_solver_status": "unsat",
+    "mutant_solver_status": "sat",
+    "mutant_witness": {
+      "b_19d233_0": "0"
+    },
+    "mutation": "binding-plus-one",
+    "obligations": {
+      "bsir_compile": true,
+      "concrete_replay": true,
+      "declarative_bindings_closed": true,
+      "frozen_function_sha": true,
+      "independent_source_ast_compile": true,
+      "locked_source": true,
+      "mutant_detected_sat": true,
+      "mutant_witness_replayed": true,
+      "semantic_contracts_validated": true,
+      "symbolic_equivalence_unsat": true
+    },
+    "proof_digest": "f266b304338581e1873c80d883694c5172a154dd3d6028da16e6b50e33302f53"
+  },
+  "protocol_definition": {
+    "line": 74,
+    "text": "- `CERTIFIED_A1`: certified with declarative source-to-BVC bindings only."
+  },
+  "schema_version": "BIZPROOF-V0.11-A1-CERTIFICATE-1",
+  "semantic_contract_abstractions": {},
+  "source": {
+    "class": "cd2",
+    "function": "formula_2006_01_01",
+    "function_sha256": "4bdc844c6ae407443c70b71e637693187a5c99b195f7cad80fd64f732d67b196",
+    "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+    "source_file_sha256": "5ca503135a96b6797645b4bdbc6baa0c34fcf2e6ad579598383cbbf2c6619aef",
+    "source_id": "openfisca_france"
+  },
+  "status": "CERTIFIED_A1",
+  "terminal_outcome": "CERTIFIED_A1",
+  "terminal_outcome_assigned": true
+}

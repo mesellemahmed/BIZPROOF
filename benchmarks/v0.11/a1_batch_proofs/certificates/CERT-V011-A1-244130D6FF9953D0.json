@@ -1,0 +1,66 @@
+{
+  "assistance_level": "A1",
+  "bindings": {
+    "count": 10,
+    "manifest_sha256": "f9fa6629b38d2292ef5cff98046f18d0553bb8f5d4df4065776459ab0a0b4648",
+    "mechanism": "DECLARATIVE_SOURCE_TO_BVC_BINDINGS_ONLY"
+  },
+  "bsir": {
+    "ir_sha256": "23572e640694b2dd7ef61e909d91e87ea2d7457219aad3ca534f53b54bc0d8cd",
+    "version": "BSIR-SKELETON-0.11"
+  },
+  "candidate_id": "244130d6ff9953d0",
+  "certificate_digest": "487408cac25c7c3578bacec446bae92dfaef3b4095ddaf4f3298e9abc7baf6d7",
+  "certificate_id": "CERT-V011-A1-244130D6FF9953D0",
+  "claim_scope": "Certification applies to the locked source function under the declared source-to-BVC call bindings and any explicitly listed validated semantic-contract abstractions.",
+  "explicit_scalar_adapter": false,
+  "final_study_complete": false,
+  "proof": {
+    "concrete_replay_cases": 12,
+    "correct_solver_status": "unsat",
+    "mutant_solver_status": "sat",
+    "mutant_witness": {
+      "b_244130_0": "0",
+      "b_244130_1": "0",
+      "b_244130_2": "-1/2",
+      "b_244130_3": "0",
+      "b_244130_4": "0",
+      "b_244130_5": "0",
+      "b_244130_6": "0",
+      "b_244130_7": "0",
+      "b_244130_8": "0",
+      "b_244130_9": "0"
+    },
+    "mutation": "sub-to-add",
+    "obligations": {
+      "bsir_compile": true,
+      "concrete_replay": true,
+      "declarative_bindings_closed": true,
+      "frozen_function_sha": true,
+      "independent_source_ast_compile": true,
+      "locked_source": true,
+      "mutant_detected_sat": true,
+      "mutant_witness_replayed": true,
+      "semantic_contracts_validated": true,
+      "symbolic_equivalence_unsat": true
+    },
+    "proof_digest": "d726b5bd57ad7c4c4f75217bf3aca500518c8dc4ef0079e69dc04a452537365c"
+  },
+  "protocol_definition": {
+    "line": 74,
+    "text": "- `CERTIFIED_A1`: certified with declarative source-to-BVC bindings only."
+  },
+  "schema_version": "BIZPROOF-V0.11-A1-CERTIFICATE-1",
+  "semantic_contract_abstractions": {},
+  "source": {
+    "class": "bouclier_rev",
+    "function": "formula_2006",
+    "function_sha256": "40c3f3a9f74857300a7a005e08339065693ece573e6712eb35b2ebf04bd5e950",
+    "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+    "source_file_sha256": "4ad3ba12d41e4387ae0b7c2c64bae61bb427354162d0953166003d7e9487b554",
+    "source_id": "openfisca_france"
+  },
+  "status": "CERTIFIED_A1",
+  "terminal_outcome": "CERTIFIED_A1",
+  "terminal_outcome_assigned": true
+}

@@ -143,6 +143,9 @@ case "$cmd" in
   generalization-declarative-binding-closure)
     docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_declarative_binding_closure --repo-root . --output-dir benchmarks/v0.11/declarative_binding_closure
     ;;
+  generalization-a1-batch-proof)
+    docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_a1_batch_proof --repo-root . --output-dir benchmarks/v0.11/a1_batch_proofs
+    ;;
   *)
     cat <<'EOF'
 Usage:

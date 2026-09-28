@@ -494,3 +494,17 @@ No new terminal outcome is assigned in this phase.
 Command:
 
 ./run.sh generalization-declarative-binding-closure
+
+
+### V0.11 batch A1 symbolic proofs
+
+Phase S attempts all 11 Phase-R A1-ready candidates in one batch. An independent
+source-AST compiler is checked against the frozen BSIR representation under the
+exact declarative source-to-BVC bindings. A positive A1 certificate requires an
+UNSAT source/BSIR disequality query, concrete replay, and a SAT mutant witness.
+
+Unsupported proof shapes remain pending rather than being certified.
+
+Command:
+
+./run.sh generalization-a1-batch-proof

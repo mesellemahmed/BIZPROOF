@@ -123,3 +123,10 @@ all 90 candidates have terminal outcomes.
 `declarative_binding_closure/` contains exact declarative binding manifests,
 locked source slices, per-candidate readiness status, and the A1 proof worklist
 for the structural-protocol-only frontier.
+
+
+## Batch A1 symbolic proofs
+
+`a1_batch_proofs/` contains the 11 proof attempts, all issued A1 certificates,
+the updated partial terminal-state ledger, summary statistics and reviewer
+evidence.
