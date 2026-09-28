@@ -1,0 +1,57 @@
+{
+  "assistance_level": "A1",
+  "authoring_mode": "DECLARATIVE_SOURCE_TO_BVC_BINDINGS",
+  "bindings": [
+    "self._totaldiff_guesstimate"
+  ],
+  "candidate_id": "db6bd6fe0c9b8cd4",
+  "certificate_digest": "906ed1a21f7e3c40413787c3a8d8e68f5f4230d94c36da6a9a8579da8ee22fb9",
+  "certificate_id": "CERT-V011-A1-DB6BD6FE0C9B8CD4",
+  "claim_scope": "Certification covers the locked source return expression under the explicit declarative attribute bindings listed in this certificate. No handwritten semantic adapter is introduced.",
+  "evidence": {
+    "proof_digest": "f4dc39f82f681119aa25c5d91bf7c2cbcd5bdbf0b2187bdc47f55d6555bc69cd",
+    "runtime": {
+      "adapter_mismatches": 0,
+      "comparisons": 4,
+      "mutant_mismatches": 4,
+      "mutation": "replace-bound-value-with-independent-value",
+      "runtime_domain": "four arbitrary scalar binding tokens"
+    },
+    "symbolic": {
+      "correct_proved": true,
+      "correct_solver_status": "unsat",
+      "mutant_disproved": true,
+      "mutant_solver_status": "sat",
+      "mutation": "independent-binding-symbol",
+      "symbolic_domain": "uninterpreted value domain; proof is type-independent"
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 74,
+    "text": "- `CERTIFIED_A0`: certified without human semantic mapping or adapter rewriting. - `CERTIFIED_A1`: certified with declarative source-to-BVC bindings only. - `CERTIFIED_A2`: certified with an explicit human-authored scalar semantic adapter. - `NOT_CERTIFIED_UNKNOWN`: sound analysis returns UNKNOWN."
+  },
+  "schema_version": "BIZPROOF-V0.11-A1-CERTIFICATE-1",
+  "source": {
+    "class": "OrderChangeManager",
+    "file": "src/pretix/base/services/orders.py",
+    "function": "guess_totaldiff",
+    "function_sha256": "4089ec6466486481921a1a9e83bddd9f27760c539c868647f2e8f9bbe2ae1e29",
+    "lines": [
+      3112,
+      3117
+    ],
+    "source_file_sha256": "6c5127e66313b1ca4f5a568897ec41699b3aa084fb5ef2ad292d0b459d7af778",
+    "source_id": "pretix"
+  },
+  "status": "CERTIFIED_A1",
+  "structural_classification": {
+    "expression": "self._totaldiff_guesstimate",
+    "shape": "DIRECT_ATTRIBUTE_RETURN",
+    "used_bindings": [
+      "self._totaldiff_guesstimate"
+    ]
+  },
+  "terminal_outcome": "CERTIFIED_A1",
+  "terminal_outcome_assigned": true
+}

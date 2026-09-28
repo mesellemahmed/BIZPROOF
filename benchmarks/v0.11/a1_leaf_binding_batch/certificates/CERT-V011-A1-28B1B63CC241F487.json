@@ -1,0 +1,57 @@
+{
+  "assistance_level": "A1",
+  "authoring_mode": "DECLARATIVE_SOURCE_TO_BVC_BINDINGS",
+  "bindings": [
+    "self.internal_name"
+  ],
+  "candidate_id": "28b1b63cc241f487",
+  "certificate_digest": "e08dfea240178c664f1e2c507f2f3e440c0e2cf9f11d60f8b5b6b58fb6952b0f",
+  "certificate_id": "CERT-V011-A1-28B1B63CC241F487",
+  "claim_scope": "Certification covers the locked source return expression under the explicit declarative attribute bindings listed in this certificate. No handwritten semantic adapter is introduced.",
+  "evidence": {
+    "proof_digest": "50348812943068783ca14a63208382042788f2f9df78ef62310bd90b262e78d8",
+    "runtime": {
+      "adapter_mismatches": 0,
+      "comparisons": 4,
+      "mutant_mismatches": 4,
+      "mutation": "replace-bound-value-with-independent-value",
+      "runtime_domain": "four arbitrary scalar binding tokens"
+    },
+    "symbolic": {
+      "correct_proved": true,
+      "correct_solver_status": "unsat",
+      "mutant_disproved": true,
+      "mutant_solver_status": "sat",
+      "mutation": "independent-binding-symbol",
+      "symbolic_domain": "uninterpreted value domain; proof is type-independent"
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 74,
+    "text": "- `CERTIFIED_A0`: certified without human semantic mapping or adapter rewriting. - `CERTIFIED_A1`: certified with declarative source-to-BVC bindings only. - `CERTIFIED_A2`: certified with an explicit human-authored scalar semantic adapter. - `NOT_CERTIFIED_UNKNOWN`: sound analysis returns UNKNOWN."
+  },
+  "schema_version": "BIZPROOF-V0.11-A1-CERTIFICATE-1",
+  "source": {
+    "class": "Discount",
+    "file": "src/pretix/base/models/discount.py",
+    "function": "__str__",
+    "function_sha256": "0856fb917260bf29ba6438b6e12d56f0bf6deb573fe19e0123fe03b1261e84d9",
+    "lines": [
+      197,
+      198
+    ],
+    "source_file_sha256": "a3ff3bf9ad13c289300fc7b8615011a674f497f1078d9d285696ee8012156260",
+    "source_id": "pretix"
+  },
+  "status": "CERTIFIED_A1",
+  "structural_classification": {
+    "expression": "self.internal_name",
+    "shape": "DIRECT_ATTRIBUTE_RETURN",
+    "used_bindings": [
+      "self.internal_name"
+    ]
+  },
+  "terminal_outcome": "CERTIFIED_A1",
+  "terminal_outcome_assigned": true
+}

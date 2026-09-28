@@ -1582,6 +1582,20 @@
       "terminalized_before": 26,
       "unsupported_terminalized": 17,
       "weighted_metrics_ready": false
+    },
+    "a1_leaf_binding_batch": {
+      "benchmark_version": "0.11.0",
+      "candidates_attempted": 12,
+      "candidates_proved": 12,
+      "certificates_issued": 12,
+      "final_certification_complete": false,
+      "passed": true,
+      "pending_after": 33,
+      "phase": "A1_DECLARATIVE_LEAF_BINDINGS",
+      "review_required": 0,
+      "terminalized_after": 57,
+      "terminalized_before": 45,
+      "weighted_metrics_ready": false
     }
   }
 }
