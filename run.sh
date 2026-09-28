@@ -158,6 +158,9 @@ case "$cmd" in
   generalization-a2-v2-proof)
     docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_a2_v2_proof --repo-root . --output-dir benchmarks/v0.11/a2_v2_straight_proofs
     ;;
+  generalization-a2-v3-proof)
+    docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_a2_v3_proof --repo-root . --output-dir benchmarks/v0.11/a2_v3_branching_proofs
+    ;;
   *)
     cat <<'EOF'
 Usage:

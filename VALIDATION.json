@@ -1537,6 +1537,26 @@
       "terminalized_before": 18,
       "v2_candidates_reviewed": 9,
       "weighted_metrics_ready": false
+    },
+    "a2_v3_branching_proofs": {
+      "benchmark_version": "0.11.0",
+      "certificates_issued": 5,
+      "final_certification_complete": false,
+      "passed": true,
+      "pending_after": 64,
+      "phase": "A2_V3_BRANCHING",
+      "review_required": 8,
+      "scalar_candidates_attempted": 5,
+      "scalar_candidates_proved": 5,
+      "terminal_distribution": {
+        "CERTIFIED_A1": 11,
+        "CERTIFIED_A2": 13,
+        "NOT_CERTIFIED_SEMANTIC_AMBIGUITY": 2
+      },
+      "terminalized_after": 26,
+      "terminalized_before": 21,
+      "v3_candidates_reviewed": 13,
+      "weighted_metrics_ready": false
     }
   }
 }
