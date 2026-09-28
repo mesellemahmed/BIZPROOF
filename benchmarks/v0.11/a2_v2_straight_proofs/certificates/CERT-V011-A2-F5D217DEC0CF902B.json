@@ -1,0 +1,52 @@
+{
+  "adapter": {
+    "function": "adapt_special_allowance",
+    "function_sha256": "d88522f9123c49c333fd42b95fd02268224a22a93abf2a821783da2d3726501c",
+    "mutant_function": "mutant_special_allowance",
+    "mutant_function_sha256": "d06099a8e386eb1b55221ebb46a7122df1b64e5dac544546b3c0720e27b88d4a",
+    "semantic_adapter": "SPECIAL_ALLOWANCE"
+  },
+  "assistance_level": "A2",
+  "authoring_mode": "EXPLICIT_MANUAL_SCALAR_SEMANTIC_ADAPTER",
+  "candidate_id": "f5d217dec0cf902b",
+  "certificate_digest": "2651a5ce89a95254db1d2d52e87cdbfa9a5b9ca3df60d442b955714b57841905",
+  "certificate_id": "CERT-V011-A2-F5D217DEC0CF902B",
+  "claim_scope": "Certification is restricted to the explicit scalar semantic projection and primitive-output bindings represented by this evidence bundle.",
+  "evidence": {
+    "proof_digest": "49d80c44def5456607b141c45410228527d6fd24664d95fc7c7d66bc37d95339",
+    "runtime": {
+      "adapter_mismatches": 0,
+      "comparisons": 1536,
+      "mutant_mismatches": 1154,
+      "validation_domain": "bounded scalar age, invalidity, income, child and allowance grid"
+    },
+    "symbolic": {
+      "correct_proved": true,
+      "correct_solver_status": "unsat",
+      "mutant_disproved": true,
+      "mutant_solver_status": "sat",
+      "symbolic_domain": "nonnegative scalar ages, income and allowance values"
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 75,
+    "text": "- `CERTIFIED_A2`: certified with an explicit human-authored scalar semantic adapter."
+  },
+  "schema_version": "BIZPROOF-V0.11-A2-CERTIFICATE-1",
+  "source": {
+    "class": "abat_spe",
+    "file": "openfisca_france/model/prelevements_obligatoires/impot_revenu/ir.py",
+    "function": "formula",
+    "function_sha256": "e64f9843b8c7d32ecfbc09f03e42e0c4db79c74b4063aa6a304b7d1765ed21c6",
+    "lines": [
+      3622,
+      3679
+    ],
+    "source_file_sha256": "2e0d1b6fbd2daa65eaf2bcd1f10d031cadc415f0f2f09bfa353082dfa3feaa1f",
+    "source_id": "openfisca_france"
+  },
+  "status": "CERTIFIED_A2",
+  "terminal_outcome": "CERTIFIED_A2",
+  "terminal_outcome_assigned": true
+}

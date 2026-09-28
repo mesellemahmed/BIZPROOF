@@ -1516,6 +1516,27 @@
       "terminalized_before": 14,
       "v1_candidates": 11,
       "weighted_metrics_ready": false
+    },
+    "a2_v2_straight_proofs": {
+      "benchmark_version": "0.11.0",
+      "certificates_issued": 3,
+      "complex_scalar_review": 2,
+      "final_certification_complete": false,
+      "non_scalar_review": 4,
+      "passed": true,
+      "pending_after": 69,
+      "phase": "A2_V2_STRAIGHT_LINE",
+      "scalar_candidates_attempted": 3,
+      "scalar_candidates_proved": 3,
+      "terminal_distribution": {
+        "CERTIFIED_A1": 11,
+        "CERTIFIED_A2": 8,
+        "NOT_CERTIFIED_SEMANTIC_AMBIGUITY": 2
+      },
+      "terminalized_after": 21,
+      "terminalized_before": 18,
+      "v2_candidates_reviewed": 9,
+      "weighted_metrics_ready": false
     }
   }
 }
