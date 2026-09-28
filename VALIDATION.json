@@ -1496,6 +1496,26 @@
       "source_verified_candidates": 33,
       "terminal_outcomes_assigned": 0,
       "terminalized_total": 14
+    },
+    "a2_v1_scalar_proofs": {
+      "benchmark_version": "0.11.0",
+      "certificates_issued": 4,
+      "final_certification_complete": false,
+      "non_scalar_review_required": 7,
+      "passed": true,
+      "pending_after": 72,
+      "phase": "A2_V1_SCALAR_PROOFS",
+      "scalar_candidates_attempted": 4,
+      "scalar_candidates_proved": 4,
+      "terminal_distribution": {
+        "CERTIFIED_A1": 11,
+        "CERTIFIED_A2": 5,
+        "NOT_CERTIFIED_SEMANTIC_AMBIGUITY": 2
+      },
+      "terminalized_after": 18,
+      "terminalized_before": 14,
+      "v1_candidates": 11,
+      "weighted_metrics_ready": false
     }
   }
 }

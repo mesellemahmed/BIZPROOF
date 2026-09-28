@@ -1,0 +1,51 @@
+{
+  "adapter": {
+    "function": "adapt_basket_discount_success",
+    "function_sha256": "5733ba9503c14312ace6d5b5c183f49cfea7a38df16b4b7e8c4b405235f817d2",
+    "mutant_function": "mutant_basket_discount_success",
+    "mutant_function_sha256": "c27dbf48eb6d93c4116afe53f8ad08f0f5ab7dd6a1528e6c8a62c9ebe0151e81",
+    "semantic_adapter": "BASKET_DISCOUNT_SUCCESS"
+  },
+  "assistance_level": "A2",
+  "authoring_mode": "EXPLICIT_MANUAL_SCALAR_SEMANTIC_ADAPTER",
+  "candidate_id": "331f175e4aa92eef",
+  "certificate_digest": "40eb24848e298bf642733a6c7d68ba6c9d4f675f267f54a54c1d8413b23e6805",
+  "certificate_id": "CERT-V011-A2-331F175E4AA92EEF",
+  "claim_scope": "Certification is restricted to the explicit scalar semantic slice and declared validation domain represented by this certificate; it does not certify the complete external framework.",
+  "evidence": {
+    "proof_digest": "b960a509ff3fcf06a99dfb0100bc3799b2da263a3cd668269238ac46322fe0e9",
+    "runtime": {
+      "adapter_mismatches": 0,
+      "comparisons": 7,
+      "mutant_mismatches": 1
+    },
+    "symbolic": {
+      "correct_proved": true,
+      "correct_solver_status": "unsat",
+      "domain": "REAL_DISCOUNT",
+      "mutant_disproved": true,
+      "mutant_solver_status": "sat"
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 75,
+    "text": "- `CERTIFIED_A2`: certified with an explicit human-authored scalar semantic adapter."
+  },
+  "schema_version": "BIZPROOF-V0.11-A2-CERTIFICATE-1",
+  "source": {
+    "class": "BasketDiscount",
+    "file": "src/oscar/apps/offer/results.py",
+    "function": "is_successful",
+    "function_sha256": "b62b0344499fc7b184b68b507b58d4ed54f776c4a9a0ba8adf2ad254108bba55",
+    "lines": [
+      149,
+      153
+    ],
+    "source_file_sha256": "708eb3f9adca5f7182c8b9139e4e542719762f196fc71281d32c5a347e6bdd6b",
+    "source_id": "django_oscar"
+  },
+  "status": "CERTIFIED_A2",
+  "terminal_outcome": "CERTIFIED_A2",
+  "terminal_outcome_assigned": true
+}

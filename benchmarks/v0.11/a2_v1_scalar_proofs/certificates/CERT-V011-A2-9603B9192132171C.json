@@ -1,0 +1,51 @@
+{
+  "adapter": {
+    "function": "adapt_line_tax_known",
+    "function_sha256": "a8e20412d570965188e5d863bdac4231b1ad6fe4606d32328b656188a1dca886",
+    "mutant_function": "mutant_line_tax_known",
+    "mutant_function_sha256": "4485407d883e3a959df24716f9c3c631083e407246915a137b5b467f89ef8ed0",
+    "semantic_adapter": "LINE_TAX_KNOWN"
+  },
+  "assistance_level": "A2",
+  "authoring_mode": "EXPLICIT_MANUAL_SCALAR_SEMANTIC_ADAPTER",
+  "candidate_id": "9603b9192132171c",
+  "certificate_digest": "7fe005fe94f5fe59fd7ba52d7df334a098d06aadc4e417bd6a53742a55de736d",
+  "certificate_id": "CERT-V011-A2-9603B9192132171C",
+  "claim_scope": "Certification is restricted to the explicit scalar semantic slice and declared validation domain represented by this certificate; it does not certify the complete external framework.",
+  "evidence": {
+    "proof_digest": "fa2d50e287325abb2ac84f70e621ea3e90bf02fd6e0ae9539053800d67c23a15",
+    "runtime": {
+      "adapter_mismatches": 0,
+      "comparisons": 2,
+      "mutant_mismatches": 2
+    },
+    "symbolic": {
+      "correct_proved": true,
+      "correct_solver_status": "unsat",
+      "domain": "BOOLEAN_TAX_STATE",
+      "mutant_disproved": true,
+      "mutant_solver_status": "sat"
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 75,
+    "text": "- `CERTIFIED_A2`: certified with an explicit human-authored scalar semantic adapter."
+  },
+  "schema_version": "BIZPROOF-V0.11-A2-CERTIFICATE-1",
+  "source": {
+    "class": "AbstractLine",
+    "file": "src/oscar/apps/basket/abstract_models.py",
+    "function": "is_tax_known",
+    "function_sha256": "c187a72c9698b45215da3ad5988690a80cfd08fd0c05f8045feacaf82adccebb",
+    "lines": [
+      929,
+      930
+    ],
+    "source_file_sha256": "6940175125ba092d75cf89bbb36a2a1c7a7534896dbc8e682abf4c1d4a18b76f",
+    "source_id": "django_oscar"
+  },
+  "status": "CERTIFIED_A2",
+  "terminal_outcome": "CERTIFIED_A2",
+  "terminal_outcome_assigned": true
+}
