@@ -1,0 +1,93 @@
+{
+  "assistance_level": "A1",
+  "authoring_mode": "DECLARATIVE_BINDINGS_FROZEN_BSIR",
+  "bindings": [
+    {
+      "binding_id": "5f20b9354af28d7f",
+      "kind": "ATTRIBUTE",
+      "primitive": "age_max",
+      "source_expression": "parameters(period).prestations_sociales.aides_logement.action_logement.locapass.age_max"
+    },
+    {
+      "binding_id": "443df1f038ffe2c7",
+      "kind": "ATTRIBUTE",
+      "primitive": "chomeur",
+      "source_expression": "TypesActivite.chomeur"
+    },
+    {
+      "binding_id": "86fd3fdafa549729",
+      "kind": "ATTRIBUTE",
+      "primitive": "etudiant",
+      "source_expression": "TypesActivite.etudiant"
+    },
+    {
+      "binding_id": "4f45cac06e0454be",
+      "kind": "CALL",
+      "primitive": "individu",
+      "source_expression": "individu('activite', period)"
+    },
+    {
+      "binding_id": "ed56ad19dae5a1e6",
+      "kind": "CALL",
+      "primitive": "individu",
+      "source_expression": "individu('age', period)"
+    },
+    {
+      "binding_id": "dac5e7d41ce76952",
+      "kind": "CALL",
+      "primitive": "individu",
+      "source_expression": "individu('alternant', period)"
+    }
+  ],
+  "candidate_id": "eff10167a5398559",
+  "certificate_digest": "1ba70c3c45f14f624745f638ae952e05f1fbc5c3f7e99bb6caab2ed942ccff1c",
+  "certificate_id": "CERT-V011-A1-EFF10167A5398559",
+  "claim_scope": "Certification proves equivalence between the locked source AST and the frozen BSIR under the explicit declarative bindings listed here. External framework/database values and helper semantics without a validated semantic contract remain outside the certificate.",
+  "evidence": {
+    "concrete_replays": 10,
+    "correct_solver_status": "unsat",
+    "ir_sha256": "0140acb65d72de7b85e39554a7bd66c4779eaf5d41966e14fa07ed9678f5c7dc",
+    "mutant_solver_status": "sat",
+    "mutant_witness": {
+      "b_eff101_0": "0",
+      "b_eff101_1": "1",
+      "b_eff101_2": "1",
+      "b_eff101_3": "0",
+      "b_eff101_4": "0",
+      "b_eff101_5": "0"
+    },
+    "mutation": "mul-to-add",
+    "proof_digest": "59ae96a9809109df2234c716174493ceb308cd5f02e776e5dd5176c20c3a9d0d",
+    "proof_obligations": {
+      "bsir_compile": true,
+      "concrete_replay": true,
+      "declarative_bindings": true,
+      "frozen_bsir": true,
+      "independent_source_ast_compile": true,
+      "locked_source_commit": true,
+      "mutant_detected_sat": true,
+      "mutant_witness_replayed": true,
+      "symbolic_equivalence_unsat": true,
+      "validated_semantic_abstractions": true
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 74,
+    "text": "- `CERTIFIED_A1`: certified with declarative source-to-BVC bindings only."
+  },
+  "schema_version": "BIZPROOF-V0.11-A1-CERTIFICATE-1",
+  "semantic_contracts": {},
+  "source": {
+    "class": "locapass_eligibilite_jeunes",
+    "file": "openfisca_france/model/prestations/locapass.py",
+    "function": "formula",
+    "function_sha256": "4682149436c5d8cc9069b67a7c25cc018e9abbc44d22bbf64d402c49ed926be7",
+    "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+    "source_file_sha256": "0dccef9a4ac9f8d459128845352795477396f638d3ebf572511b970bebf39fb3",
+    "source_id": "openfisca_france"
+  },
+  "status": "CERTIFIED_A1",
+  "terminal_outcome": "CERTIFIED_A1",
+  "terminal_outcome_assigned": true
+}

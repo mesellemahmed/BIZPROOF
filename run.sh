@@ -167,6 +167,9 @@ case "$cmd" in
   generalization-a1-leaf-binding)
     docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_a1_leaf_binding --repo-root . --output-dir benchmarks/v0.11/a1_leaf_binding_batch
     ;;
+  generalization-a1-remaining-bindings)
+    docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_a1_remaining_binding_proof --repo-root . --output-dir benchmarks/v0.11/a1_remaining_binding_proofs
+    ;;
   *)
     cat <<'EOF'
 Usage:

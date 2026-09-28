@@ -1596,6 +1596,36 @@
       "terminalized_after": 57,
       "terminalized_before": 45,
       "weighted_metrics_ready": false
+    },
+    "a1_remaining_binding_proofs": {
+      "benchmark_version": "0.11.0",
+      "candidates_attempted": 12,
+      "candidates_proved": 10,
+      "certificates_issued": 10,
+      "final_certification_complete": false,
+      "passed": true,
+      "pending_after": 23,
+      "phase": "A1_REMAINING_DECLARATIVE_BINDINGS",
+      "proved_candidate_ids": [
+        "019d3a3df4514bac",
+        "051c7ef379178030",
+        "1458ed128652b359",
+        "4c7af63af2f89319",
+        "635fe113a02cf90b",
+        "a74d4580a9effb73",
+        "cb937575ad9957d1",
+        "dfd34c86bcd9bfa1",
+        "eff10167a5398559",
+        "fd4702ed1d79ff1f"
+      ],
+      "review_candidate_ids": [
+        "972b76d53a12b8ad",
+        "eb41eb351df073ef"
+      ],
+      "review_required": 2,
+      "terminalized_after": 67,
+      "terminalized_before": 57,
+      "weighted_metrics_ready": false
     }
   }
 }
