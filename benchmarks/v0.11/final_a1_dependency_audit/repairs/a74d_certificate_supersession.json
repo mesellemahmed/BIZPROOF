@@ -1,0 +1,19 @@
+{
+  "candidate_id": "a74d4580a9effb73",
+  "corrected_terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "global_registry_and_matches": 0,
+  "global_registry_or_matches": 0,
+  "nested_semantic_helpers": [
+    "and_",
+    "not_",
+    "or_",
+    "where"
+  ],
+  "previous_declared_contracts": {
+    "where": "SC-NP-WHERE-001"
+  },
+  "previous_terminal_outcome": "CERTIFIED_A1",
+  "rationale": "The prior A1 binding hides nested and_/or_ semantics not closed by the frozen V0.11 semantic-contract set. The candidate is conservatively reclassified rather than extending the formal scope after sampling.",
+  "reason_code": "NESTED_AND_OR_HELPERS_OUTSIDE_FROZEN_A1_CONTRACT_CLOSURE",
+  "scope_extension_performed": false
+}

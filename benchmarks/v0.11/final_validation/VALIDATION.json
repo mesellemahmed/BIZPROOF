@@ -1,0 +1,31 @@
+{
+  "evidence_sha256": {
+    "benchmarks\\v0.11\\controlled_complex_closure\\candidate_terminal_state.jsonl": "da65f828c808c8b6e02379eb650611bc6f7dd4ef87bb9c22d1c7276273406445",
+    "benchmarks\\v0.11\\final_a1_dependency_audit\\repairs\\repair_summary.json": "0919b04b44888e19855652d77c2162aed6f35d43e87dd2c29c9c5a13b9822652",
+    "benchmarks\\v0.11\\final_a2_frontier\\nbptr_a2\\runtime_evidence.json": "3917994cfe7e2e8f09e3401f5947600be5db86bd440d6103cb235824f1d1f6ac",
+    "benchmarks\\v0.11\\final_a2_frontier\\nbptr_a2\\symbolic_proof.json": "feebe63afcfe36377828d9476f11d91ccd41984b8e58be977a09a45ce3d28e2e",
+    "benchmarks\\v0.11\\final_validation\\metrics.json": "f1fc7f2b8f0b93a5f000f27b0aac3ba94d262bc627c2c98fee50950b7ed4e803"
+  },
+  "final_distribution": {
+    "CERTIFIED_A1": 33,
+    "CERTIFIED_A2": 17,
+    "NOT_CERTIFIED_SEMANTIC_AMBIGUITY": 2,
+    "NOT_CERTIFIED_UNSUPPORTED": 38
+  },
+  "gates": {
+    "dependency_closure": true,
+    "differential": true,
+    "final_nbptr_a2": true,
+    "format": true,
+    "historical_checkpoint_test": true,
+    "mypy": true,
+    "pytest": true,
+    "ruff": true,
+    "targeted_final_test": true
+  },
+  "pending": 0,
+  "schema_version": "BIZPROOF-V0.11-VALIDATION-1",
+  "scope_extension_after_sampling": false,
+  "status": "PASS",
+  "terminalized": 90
+}

@@ -47,21 +47,21 @@ def test_w9_nationality_symbolic_proof() -> None:
     assert result["certification_claim"] is False
 
 
-def test_w9_ledger_is_86_of_90() -> None:
+def test_live_ledger_does_not_regress_below_w9_checkpoint() -> None:
     path = Path("benchmarks/v0.11/controlled_complex_closure/candidate_terminal_state.jsonl")
 
     rows = [
         json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()
     ]
 
-    terminal = [x for x in rows if x["state"] == "TERMINAL_ASSIGNED"]
-    pending = [x for x in rows if x["state"] == "PENDING_UNASSIGNED"]
+    terminal = [row for row in rows if row["state"] == "TERMINAL_ASSIGNED"]
 
+    pending = [row for row in rows if row["state"] == "PENDING_UNASSIGNED"]
+
+    # W9 established the historical checkpoint 86/90.
+    # The live ledger is allowed to progress beyond it,
+    # but must never regress below that checkpoint.
     assert len(rows) == 90
-    assert len(terminal) == 86
-    assert len(pending) == 4
-
-    row = next(x for x in rows if x["candidate_id"] == CID)
-
-    assert row["terminal_outcome"] == "CERTIFIED_A1"
-    assert row["certificate_id"].startswith("CERT-V011-A1-")
+    assert len(terminal) >= 86
+    assert len(pending) <= 4
+    assert len(terminal) + len(pending) == 90

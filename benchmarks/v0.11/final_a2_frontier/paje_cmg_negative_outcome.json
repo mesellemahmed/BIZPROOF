@@ -1,0 +1,24 @@
+{
+  "blocking_helpers": [
+    "famille.any",
+    "famille.members",
+    "famille.sum",
+    "nb_enf"
+  ],
+  "candidate_id": "7bc9603bfbda7dc9",
+  "certification_claim": false,
+  "function_sha256": "2720f5f14ba482578701430f1b1370e9a8c2c80456406369ff4e00acbea22758",
+  "observed_calls": [
+    "famille",
+    "famille.any",
+    "famille.members",
+    "famille.sum",
+    "max_",
+    "nb_enf",
+    "not_",
+    "parameters"
+  ],
+  "reason_code": "AGGREGATE_HELPER_SEMANTICS_OUTSIDE_FROZEN_SCALAR_A2_SCOPE",
+  "scope": "Frozen V0.11 scalar A2 subset. Family-member aggregation and child-count helper semantics are not projected into scalar observational inputs.",
+  "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+}

@@ -1,0 +1,17 @@
+{
+  "allowed_external_calls": [
+    "foyer_fiscal",
+    "max_",
+    "min_",
+    "not_",
+    "parameters"
+  ],
+  "candidate_id": "53abfcd7d20a9cd6",
+  "certification_claim": false,
+  "class": "nbptr",
+  "decision": "A2_SYMBOLIC_PROOF_READY",
+  "function": "formula_2008_01_01",
+  "function_sha256": "653fd8c2ec5f05ffe7a827976c2ffc3e9d8755d74acaa61ebc692cc426844c88",
+  "nested_definitions": 0,
+  "structural_blockers": []
+}
