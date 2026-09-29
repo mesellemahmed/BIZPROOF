@@ -1,0 +1,58 @@
+{
+  "candidate_id": "d28505f251600d52",
+  "certification_claim": false,
+  "comparisons": 378,
+  "function_sha256": "4c0cdd7d5ced36267b9310d42ea5857ace57478505d2a89fec9234435da1474e",
+  "mutant_examples": [
+    {
+      "duration": 1,
+      "eee": 0,
+      "eee_threshold": 1,
+      "external": 2,
+      "mutant": 1,
+      "nationality": "CH",
+      "non_eee_threshold": 1
+    },
+    {
+      "duration": 1,
+      "eee": 0,
+      "eee_threshold": 1,
+      "external": 1,
+      "mutant": 0,
+      "nationality": "CH",
+      "non_eee_threshold": 5
+    },
+    {
+      "duration": 1,
+      "eee": 0,
+      "eee_threshold": 1,
+      "external": 1,
+      "mutant": 0,
+      "nationality": "CH",
+      "non_eee_threshold": 10
+    },
+    {
+      "duration": 2,
+      "eee": 0,
+      "eee_threshold": 1,
+      "external": 2,
+      "mutant": 1,
+      "nationality": "CH",
+      "non_eee_threshold": 1
+    },
+    {
+      "duration": 2,
+      "eee": 0,
+      "eee_threshold": 1,
+      "external": 1,
+      "mutant": 0,
+      "nationality": "CH",
+      "non_eee_threshold": 5
+    }
+  ],
+  "mutant_mismatches": 39,
+  "mutant_sensitive": true,
+  "passed": true,
+  "runtime_domain": "nationality in {FR,CH,OTHER}; EEE in {0,1}; duration in {0,1,2,4,5,6,10}; EEE/non-EEE thresholds in {1,5,10}",
+  "source_execution_established": true
+}

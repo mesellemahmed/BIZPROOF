@@ -1,0 +1,55 @@
+{
+  "assistance_level": "A1",
+  "authoring_mode": "DECLARATIVE_SOURCE_TO_BVC",
+  "bytes_frontend": "FR/CH/OTHER opaque equivalence classes",
+  "candidate_id": "d28505f251600d52",
+  "certificate_digest": "9c665b45a2042bf11b92148b4b1f124d09f03ca4a9c4c2ebd3b6a7eff165ae45",
+  "certificate_id": "CERT-V011-A1-9C665B45A2042BF1",
+  "certification_claim": true,
+  "claim_scope": "Certification covers the locked rsa_condition_nationalite.formula_2009_06_01 business rule under the declared source-to-BVC bindings and symbolic domain. The bytes frontend uses the observationally sufficient opaque partition {FR, CH, OTHER}; no additional business meaning is assigned to nationality values.",
+  "declarative_bindings": [
+    "individu('nationalite', period)",
+    "individu('ressortissant_eee', period)",
+    "individu('duree_possession_titre_sejour', period)",
+    "duree_min_titre_sejour.eee",
+    "duree_min_titre_sejour.non_eee"
+  ],
+  "runtime_evidence": {
+    "artifact_sha256": "11026933a3a7427b25b24998df1dab84080f1bb75eb773ce680962ce9f06008d",
+    "comparisons": 378,
+    "mutant_mismatches": 39,
+    "mutant_sensitive": true,
+    "source_execution_established": true
+  },
+  "schema_version": "BIZPROOF-V0.11-A1-CERTIFICATE-1",
+  "source": {
+    "class": "rsa_condition_nationalite",
+    "file": "openfisca_france/model/prestations/minima_sociaux/rsa.py",
+    "function": "formula_2009_06_01",
+    "function_sha256": "4c0cdd7d5ced36267b9310d42ea5857ace57478505d2a89fec9234435da1474e",
+    "lines": [
+      628,
+      639
+    ],
+    "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+    "source_file_sha256": "085b7071764ffb6eb38df9c8673982ae3586fbacfa6de4ab1198af40fa2c3492",
+    "source_id": "openfisca_france"
+  },
+  "symbolic_evidence": {
+    "artifact_sha256": "4cd8fc3835f54b4edaf97a7fdd717f0dcc98c4db7996ffecbf8912d8c3b08107",
+    "correct_proved": true,
+    "correct_solver_status": "unsat",
+    "mutant_counterexample": {
+      "duration": 10,
+      "eee_threshold": 5,
+      "nationality": 1,
+      "non_eee_threshold": 0,
+      "ressortissant_eee": 0
+    },
+    "mutant_disproved": true,
+    "mutant_solver_status": "sat",
+    "proof_digest": "d9205c73a0d491918df0645df129f0f2d787d83dd26d98a2f9bd11c538804816",
+    "symbolic_domain": "nationality partition {FR,CH,OTHER}; EEE in {0,1}; unbounded nonnegative duration and thresholds"
+  },
+  "terminal_outcome": "CERTIFIED_A1"
+}

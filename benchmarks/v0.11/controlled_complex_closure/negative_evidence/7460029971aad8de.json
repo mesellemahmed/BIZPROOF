@@ -1,0 +1,15 @@
+{
+  "candidate_id": "7460029971aad8de",
+  "certification_claim": false,
+  "class": "Quota",
+  "controlled_execution_status": "ESTABLISHED",
+  "execution_cases": 3,
+  "execution_probe_digest": "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5",
+  "function": "availability",
+  "function_sha256": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+  "interpretation": "Controlled execution is established, but certification is withheld because the required mutable framework, object, service, cache, signal, request, model, or collection semantics exceed the frozen V0.11 formal subset.",
+  "negative_evidence_digest": "0830e3da863ca977bff711952c17e4c8e7e1e216174f5bc8431bc88181c03c5a",
+  "reason_code": "SERVICE_CACHE_OBJECT_SEMANTICS_OUTSIDE_FORMAL_SUBSET",
+  "source": "pretix",
+  "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+}

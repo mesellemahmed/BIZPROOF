@@ -1,0 +1,15 @@
+{
+  "candidate_id": "a79d9687185720aa",
+  "certification_claim": false,
+  "class": "AbstractConditionalOffer",
+  "controlled_execution_status": "ESTABLISHED",
+  "execution_cases": 3,
+  "execution_probe_digest": "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104",
+  "function": "save",
+  "function_sha256": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+  "interpretation": "Controlled execution is established, but certification is withheld because the required mutable framework, object, service, cache, signal, request, model, or collection semantics exceed the frozen V0.11 formal subset.",
+  "negative_evidence_digest": "6460cf23dcc3a28e4833ad99699e28758af164e872ef6fd0f00f1ae7df5c6b8e",
+  "reason_code": "MODEL_SAVE_STATE_TRANSITION_OUTSIDE_FORMAL_SUBSET",
+  "source": "django_oscar",
+  "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+}
