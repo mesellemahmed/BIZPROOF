@@ -1640,6 +1640,20 @@
       "terminalized_before": 67,
       "unsupported_terminalized": 1,
       "weighted_metrics_ready": false
+    },
+    "controlled_state_closure": {
+      "benchmark_version": "0.11.0",
+      "candidates_reviewed": 8,
+      "controlled_execution_established": 8,
+      "final_certification_complete": false,
+      "not_certified_execution": 0,
+      "not_certified_unsupported": 8,
+      "passed": true,
+      "pending_after": 13,
+      "phase": "CONTROLLED_STATE_EXECUTION_CLOSURE",
+      "terminalized_after": 77,
+      "terminalized_before": 69,
+      "weighted_metrics_ready": false
     }
   }
 }

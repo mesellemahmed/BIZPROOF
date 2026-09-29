@@ -1,0 +1,19 @@
+{
+  "candidate_id": "d7f578c3a5f20b8a",
+  "certification_claim": false,
+  "controlled_execution_status": "ESTABLISHED",
+  "execution_evidence_digest": "2a2aeb5e19cb5a6209a68ec6f2e49004e2228477ef19bdb1fdab882763aea797",
+  "interpretation": "This is not an execution failure. The candidate executes successfully under controlled deterministic stubs; formal certification is withheld because the required semantics exceed the frozen supported subset.",
+  "negative_evidence_digest": "d87e0f45ae0fe4334c2248571a0d0f66365a8a5dca8aa8240f6af1ced8f95629",
+  "reason": "Controlled execution of the locked source slice is established, but its observable semantics require state transition, collection mutation or non-scalar output semantics outside the frozen V0.11 formal certification subset.",
+  "reason_code": "MULTI_OBJECT_STATE_TRANSITION_OUTSIDE_FORMAL_SUBSET",
+  "schema_version": "BIZPROOF-V0.11-NEGATIVE-EVIDENCE-1",
+  "source": {
+    "class": "OrderChangeManager",
+    "file": "src/pretix/base/services/orders.py",
+    "function": "change_fee",
+    "function_sha256": "1fe1783cc607250e8b4e239f14bf18597d16a99fcb0e516bd623723a93a4f715",
+    "source_id": "pretix"
+  },
+  "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+}

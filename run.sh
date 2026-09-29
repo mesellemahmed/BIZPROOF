@@ -173,6 +173,9 @@ case "$cmd" in
   generalization-residual-binding-closure)
     docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_residual_binding_closure --repo-root . --output-dir benchmarks/v0.11/residual_binding_closure
     ;;
+  generalization-controlled-state-closure)
+    docker compose run --rm --entrypoint python bizproof -m bizproof.generalization_controlled_state_closure --repo-root . --output-dir benchmarks/v0.11/controlled_state_closure
+    ;;
   *)
     cat <<'EOF'
 Usage:
