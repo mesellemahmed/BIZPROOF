@@ -542,8 +542,11 @@ def run(
 
     primary = [row for row in compatibility if row["candidate_id"] in primary_ids]
 
-    if len(primary) != 14:
-        raise ValueError("expected 14 primary candidates")
+    expected_primary = int(freeze["primary_total"])
+    if len(primary) != expected_primary:
+        raise ValueError(
+            f"primary candidate count mismatch: expected {expected_primary}, got {len(primary)}"
+        )
 
     if not all(bool(row["correct_unsat"]) and bool(row["mutant_sat"]) for row in primary):
         raise ValueError("frozen BIZPROOF evidence incomplete")
