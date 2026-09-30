@@ -1,0 +1,353 @@
+{
+  "a2_total": 17,
+  "candidates": {
+    "4008a63ee1ef3b44": {
+      "historical_position": "EXTENDED_TYPED_DEFERRED",
+      "manifest": {
+        "adapter": "adapt_event_permission",
+        "adapter_sha256": "8283aeadf68f87628ea7d9508bffca5d0d2496164ae7873eeac8dab6a01153c3",
+        "candidate_id": "4008a63ee1ef3b44",
+        "module": "bizproof.generalization_a2_v3_proof",
+        "mutant": "mutant_event_permission",
+        "mutant_sha256": "014d5fd4bec27e06e6744d85c46b9febd18c3bbdcb71db07ccd5c40a00ee5dc8",
+        "resolution": "FROZEN_EXISTING_PAIR",
+        "signature": "(all_events: 'bool', organizer_matches: 'bool', event_in_limit: 'bool', permission_set: 'frozenset[str]', perm_name: 'PermissionName') -> 'bool'",
+        "status": "MATCHED_BASELINE_READY"
+      },
+      "post_hoc_promotion": false,
+      "protocol_status": "INTENTIONALLY_OUT_OF_PRIMARY_PROTOCOL",
+      "reason": "Finite-set/domain-specific Enum encoding remained outside the frozen 14-case execution."
+    },
+    "53abfcd7d20a9cd6": {
+      "historical_position": "RECOVERED_AFTER_ORIGINAL_FREEZE",
+      "manifest": {
+        "adapter": "adapt_nbptr",
+        "adapter_sha256": "71e983bcb36e2a0c98b3793d086fc85cc1e850085f8bfb52f2fbc6fbaf9b02a2",
+        "candidate_id": "53abfcd7d20a9cd6",
+        "module": "bizproof.generalization_final_nbptr_a2",
+        "mutant": "mutant_nbptr",
+        "mutant_sha256": "da5f90a9d4f8043787f15af0a8787b1c3eb5f4882cb00eaaae5bf48c856aaf20",
+        "resolution": "MUTANT_AUTO_DISCOVERED",
+        "signature": "(v: 'dict[str, Any]', q: 'dict[str, Any]') -> 'Any'",
+        "status": "MATCHED_BASELINE_READY"
+      },
+      "post_hoc_promotion": false,
+      "protocol_status": "INTENTIONALLY_OUT_OF_PRIMARY_PROTOCOL",
+      "recovery": {
+        "adapter": "adapt_nbptr",
+        "adapter_signature": "(v: 'dict[str, Any]', q: 'dict[str, Any]') -> 'Any'",
+        "adapter_source_sha256": "71e983bcb36e2a0c98b3793d086fc85cc1e850085f8bfb52f2fbc6fbaf9b02a2",
+        "candidate_id": "53abfcd7d20a9cd6",
+        "module": "bizproof.generalization_final_nbptr_a2",
+        "mutant_candidates": [
+          {
+            "name": "mutant_nbptr",
+            "same_signature": true,
+            "signature": "(v: 'dict[str, Any]', q: 'dict[str, Any]') -> 'Any'",
+            "source_sha256": "da5f90a9d4f8043787f15af0a8787b1c3eb5f4882cb00eaaae5bf48c856aaf20"
+          }
+        ],
+        "resolution": "MUTANT_AUTO_DISCOVERED",
+        "same_signature_candidates": [
+          {
+            "name": "mutant_nbptr",
+            "same_signature": true,
+            "signature": "(v: 'dict[str, Any]', q: 'dict[str, Any]') -> 'Any'",
+            "source_sha256": "da5f90a9d4f8043787f15af0a8787b1c3eb5f4882cb00eaaae5bf48c856aaf20"
+          }
+        ],
+        "selected_mutant": "mutant_nbptr",
+        "status": "MATCHED_BASELINE_READY"
+      }
+    },
+    "972b76d53a12b8ad": {
+      "historical_position": "RECOVERED_AFTER_ORIGINAL_FREEZE",
+      "manifest": {
+        "adapter": "adapt_rsa_tns_turnover_eligibility",
+        "adapter_sha256": null,
+        "candidate_id": "972b76d53a12b8ad",
+        "module": "src/bizproof/generalization_residual_binding_closure.py",
+        "mutant": "mutant_rsa_tns_turnover_eligibility",
+        "mutant_sha256": null,
+        "resolution": "PAIR_AUTO_DISCOVERED",
+        "signature": [
+          "ca",
+          "activity_is_purchase_resale",
+          "activity_is_bic",
+          "activity_is_bnc",
+          "sales_ceiling",
+          "service_ceiling"
+        ],
+        "status": "MATCHED_BASELINE_READY"
+      },
+      "post_hoc_promotion": false,
+      "protocol_status": "INTENTIONALLY_OUT_OF_PRIMARY_PROTOCOL",
+      "recovery": {
+        "candidate_id": "972b76d53a12b8ad",
+        "matching_files": [
+          {
+            "functions": [
+              {
+                "args": [
+                  "path"
+                ],
+                "lineno": 88,
+                "looks_adapter": false,
+                "looks_mutant": false,
+                "name": "_load_jsonl"
+              },
+              {
+                "args": [
+                  "path"
+                ],
+                "lineno": 111,
+                "looks_adapter": false,
+                "looks_mutant": false,
+                "name": "_sha256_file"
+              },
+              {
+                "args": [
+                  "value"
+                ],
+                "lineno": 118,
+                "looks_adapter": false,
+                "looks_mutant": false,
+                "name": "_sha256_text"
+              },
+              {
+                "args": [
+                  "source"
+                ],
+                "lineno": 125,
+                "looks_adapter": false,
+                "looks_mutant": false,
+                "name": "_extract_function"
+              },
+              {
+                "args": [
+                  "required",
+                  "validated_contracts"
+                ],
+                "lineno": 171,
+                "looks_adapter": false,
+                "looks_mutant": false,
+                "name": "_validate_binding_semantics"
+              },
+              {
+                "args": [],
+                "lineno": 224,
+                "looks_adapter": false,
+                "looks_mutant": true,
+                "name": "_mutant_witness_replay"
+              },
+              {
+                "args": [],
+                "lineno": 270,
+                "looks_adapter": false,
+                "looks_mutant": false,
+                "name": "_prove_candidate"
+              },
+              {
+                "args": [],
+                "lineno": 539,
+                "looks_adapter": false,
+                "looks_mutant": false,
+                "name": "build"
+              },
+              {
+                "args": [],
+                "lineno": 795,
+                "looks_adapter": false,
+                "looks_mutant": false,
+                "name": "main"
+              },
+              {
+                "args": [
+                  "self",
+                  "node"
+                ],
+                "lineno": 66,
+                "looks_adapter": false,
+                "looks_mutant": false,
+                "name": "expression"
+              }
+            ],
+            "path": "src/bizproof/generalization_a1_remaining_binding_proof.py"
+          },
+          {
+            "functions": [
+              {
+                "args": [
+                  "ca",
+                  "activity_is_purchase_resale",
+                  "activity_is_bic",
+                  "activity_is_bnc",
+                  "sales_ceiling",
+                  "service_ceiling"
+                ],
+                "lineno": 32,
+                "looks_adapter": true,
+                "looks_mutant": false,
+                "name": "adapt_rsa_tns_turnover_eligibility"
+              },
+              {
+                "args": [
+                  "ca",
+                  "activity_is_purchase_resale",
+                  "activity_is_bic",
+                  "activity_is_bnc",
+                  "sales_ceiling",
+                  "service_ceiling"
+                ],
+                "lineno": 48,
+                "looks_adapter": false,
+                "looks_mutant": true,
+                "name": "mutant_rsa_tns_turnover_eligibility"
+              },
+              {
+                "args": [],
+                "lineno": 88,
+                "looks_adapter": false,
+                "looks_mutant": false,
+                "name": "_parameter_object"
+              },
+              {
+                "args": [
+                  "source_slice",
+                  "function_name"
+                ],
+                "lineno": 104,
+                "looks_adapter": false,
+                "looks_mutant": false,
+                "name": "_compile_locked_function"
+              },
+              {
+                "args": [
+                  "source_slice"
+                ],
+                "lineno": 133,
+                "looks_adapter": false,
+                "looks_mutant": false,
+                "name": "_runtime_rsa"
+              },
+              {
+                "args": [],
+                "lineno": 226,
+                "looks_adapter": false,
+                "looks_mutant": false,
+                "name": "_symbolic_rsa"
+              },
+              {
+                "args": [
+                  "repo_root"
+                ],
+                "lineno": 299,
+                "looks_adapter": false,
+                "looks_mutant": false,
+                "name": "_probe_by_id"
+              },
+              {
+                "args": [],
+                "lineno": 316,
+                "looks_adapter": false,
+                "looks_mutant": false,
+                "name": "_locked_source"
+              },
+              {
+                "args": [],
+                "lineno": 357,
+                "looks_adapter": false,
+                "looks_mutant": false,
+                "name": "build"
+              },
+              {
+                "args": [],
+                "lineno": 727,
+                "looks_adapter": false,
+                "looks_mutant": false,
+                "name": "main"
+              },
+              {
+                "args": [
+                  "self",
+                  "code"
+                ],
+                "lineno": 67,
+                "looks_adapter": false,
+                "looks_mutant": false,
+                "name": "__init__"
+              },
+              {
+                "args": [
+                  "self",
+                  "other"
+                ],
+                "lineno": 80,
+                "looks_adapter": false,
+                "looks_mutant": false,
+                "name": "__eq__"
+              }
+            ],
+            "path": "src/bizproof/generalization_residual_binding_closure.py"
+          }
+        ],
+        "resolution": "PAIR_AUTO_DISCOVERED",
+        "same_signature_pairs": [
+          {
+            "adapter": "adapt_rsa_tns_turnover_eligibility",
+            "args": [
+              "ca",
+              "activity_is_purchase_resale",
+              "activity_is_bic",
+              "activity_is_bnc",
+              "sales_ceiling",
+              "service_ceiling"
+            ],
+            "mutant": "mutant_rsa_tns_turnover_eligibility",
+            "path": "src/bizproof/generalization_residual_binding_closure.py"
+          }
+        ],
+        "search_tokens": [
+          "972b76d53a12b8ad",
+          "RSA_TNS_TURNOVER_ELIGIBILITY",
+          "rsa_tns"
+        ],
+        "status": "MATCHED_BASELINE_READY"
+      }
+    }
+  },
+  "deferred": [
+    "4008a63ee1ef3b44"
+  ],
+  "extended_typed_executed": [
+    "2906fe3983a1ebe4",
+    "34748d082751e0cc",
+    "41ae4a7df4780001",
+    "7013ce92618a1e33",
+    "7f523a5041034306",
+    "8b98d0147c79c3fc",
+    "d5b65e1d48eca4dd",
+    "f234f0be14cf3ff3"
+  ],
+  "extended_typed_executed_total": 8,
+  "outside_primary_total": 3,
+  "paper_membership_changed": false,
+  "paper_primary_total": 14,
+  "partition_complete": true,
+  "post_freeze_semantic_extension": false,
+  "recovered_after_original_freeze": [
+    "53abfcd7d20a9cd6",
+    "972b76d53a12b8ad"
+  ],
+  "schema_version": "BIZPROOF-V0.11-OUT-OF-PRIMARY-A2-PROVENANCE-2",
+  "selection_changed_using_baseline_results": false,
+  "strict_core": [
+    "331f175e4aa92eef",
+    "9603b9192132171c",
+    "aab5348ee173d6e3",
+    "e293930485085dac",
+    "f3ebe6cce422947e",
+    "f5d217dec0cf902b"
+  ],
+  "strict_core_total": 6
+}
