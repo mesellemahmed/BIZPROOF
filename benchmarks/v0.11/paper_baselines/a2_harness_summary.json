@@ -1,0 +1,13 @@
+{
+  "a2_total": 17,
+  "adapter_found": 16,
+  "decisions": {
+    "HARNESS_RECONSTRUCTION_REVIEW": 1,
+    "MATCHED_BASELINE_READY": 15,
+    "MUTANT_LOCATION_REVIEW": 1
+  },
+  "explicit_domain": 17,
+  "mutant_found": 15,
+  "same_signature": 15,
+  "source_semantics_found": 17
+}

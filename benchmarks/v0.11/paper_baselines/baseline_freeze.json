@@ -1,0 +1,90 @@
+{
+  "a2_total": 17,
+  "benchmark_claim": "Primary matched tool-capability comparison on six frozen STRICT_CORE A2 projections. Extended typed and post-freeze recovered harnesses are reported separately. The frozen V0.11 certificates remain the source-level correctness evidence.",
+  "crosshair_per_condition_budgets": [
+    0.5,
+    2.0
+  ],
+  "generic_projection_domain": {
+    "decimal": [
+      "-1000.00",
+      "1000.00"
+    ],
+    "decimal_places": 2,
+    "finite_bool_sequence_max_length": 3,
+    "fixed_int_tuple_element_range": [
+      -10,
+      10
+    ],
+    "int": [
+      -100,
+      100
+    ],
+    "optional_int": [
+      null,
+      -100,
+      100
+    ]
+  },
+  "hypothesis_budgets": [
+    100,
+    1000,
+    10000
+  ],
+  "interpretation": {
+    "bizproof": "Frozen V0.11 symbolic result: correct adapter equivalent to the certified source slice and mutant disproved.",
+    "crosshair": "Assertion-based symbolic search on the same frozen projection. No reported counterexample is not credited as source-level proof.",
+    "hypothesis": "Counterexample search only. No counterexample within a budget is inconclusive."
+  },
+  "latest_manifest_matched_ready": 17,
+  "matched_signature_total": 15,
+  "nonmatched": [
+    {
+      "candidate_id": "53abfcd7d20a9cd6",
+      "reason": "Harness pair was recovered after the original pre-execution selection freeze. Retained in the 17/17 A2 manifest but excluded from the primary strict-core benchmark.",
+      "status": "RECOVERED_POST_FREEZE_NOT_PRIMARY"
+    },
+    {
+      "candidate_id": "972b76d53a12b8ad",
+      "reason": "Harness pair was recovered after the original pre-execution selection freeze. Retained in the 17/17 A2 manifest but excluded from the primary strict-core benchmark.",
+      "status": "RECOVERED_POST_FREEZE_NOT_PRIMARY"
+    }
+  ],
+  "nonmatched_total": 2,
+  "primary_candidate_ids": [
+    "331f175e4aa92eef",
+    "9603b9192132171c",
+    "aab5348ee173d6e3",
+    "e293930485085dac",
+    "f3ebe6cce422947e",
+    "f5d217dec0cf902b"
+  ],
+  "primary_total": 6,
+  "recovered_after_original_freeze": [
+    "53abfcd7d20a9cd6",
+    "972b76d53a12b8ad"
+  ],
+  "schema_version": "BIZPROOF-V0.11-A2-BASELINE-FREEZE-2",
+  "secondary_candidate_ids": [
+    "2906fe3983a1ebe4",
+    "34748d082751e0cc",
+    "4008a63ee1ef3b44",
+    "41ae4a7df4780001",
+    "7013ce92618a1e33",
+    "7f523a5041034306",
+    "8b98d0147c79c3fc",
+    "d5b65e1d48eca4dd",
+    "f234f0be14cf3ff3"
+  ],
+  "secondary_total": 9,
+  "selection_frozen_before_baseline_execution": true,
+  "selection_rule": "Primary benchmark membership is restricted to the six candidates frozen in the STRICT_CORE protocol before baseline execution: standalone correct adapter and mutant, identical signatures, and only int/bool scalar inputs or zero inputs. No baseline outcome is used for selection.",
+  "source_level_claim": false,
+  "type_distribution": {
+    "CORE_DIRECT": 6,
+    "EXTEND_DECIMAL": 2,
+    "EXTEND_FINITE_SEQUENCE": 2,
+    "EXTEND_FINITE_SET_ENUM": 1,
+    "EXTEND_OPTIONAL_SCALAR": 4
+  }
+}
