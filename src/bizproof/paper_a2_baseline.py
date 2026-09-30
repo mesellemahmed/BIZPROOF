@@ -615,7 +615,7 @@ def run(
                         "candidate_id": cid,
                         "type_class": row["type_class"],
                         "tool": "crosshair",
-                        "crosshair_budget": crosshair_budget,
+                        "budget": crosshair_budget,
                         "detected": detected,
                         "runtime_seconds": round(
                             runtime,
