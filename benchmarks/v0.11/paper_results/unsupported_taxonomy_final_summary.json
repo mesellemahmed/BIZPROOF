@@ -1,0 +1,65 @@
+{
+  "by_complexity": {
+    "HIGH": {
+      "BINDING_OR_DOMAIN_UNRESOLVED": 1,
+      "FRAMEWORK_OR_EXTERNAL_EFFECTS": 10,
+      "NESTED_OR_HIGHER_ORDER_LOGIC": 2,
+      "NON_SCALAR_OR_REFERENCE_SEMANTICS": 2,
+      "OTHER_FROZEN_SCOPE_LIMITATION": 1,
+      "STATEFUL_SIDE_EFFECTING_LOGIC": 2
+    },
+    "LOW": {
+      "COMPLEX_CONTAINER_SEMANTICS": 1,
+      "NON_SCALAR_OR_REFERENCE_SEMANTICS": 2
+    },
+    "MEDIUM": {
+      "FRAMEWORK_OR_EXTERNAL_EFFECTS": 9,
+      "NESTED_OR_HIGHER_ORDER_LOGIC": 1,
+      "NON_SCALAR_OR_REFERENCE_SEMANTICS": 6,
+      "OTHER_FROZEN_SCOPE_LIMITATION": 1
+    }
+  },
+  "by_source": {
+    "django_oscar": {
+      "FRAMEWORK_OR_EXTERNAL_EFFECTS": 7,
+      "NON_SCALAR_OR_REFERENCE_SEMANTICS": 5,
+      "OTHER_FROZEN_SCOPE_LIMITATION": 1,
+      "STATEFUL_SIDE_EFFECTING_LOGIC": 1
+    },
+    "openfisca_france": {
+      "BINDING_OR_DOMAIN_UNRESOLVED": 1,
+      "FRAMEWORK_OR_EXTERNAL_EFFECTS": 1,
+      "NESTED_OR_HIGHER_ORDER_LOGIC": 3
+    },
+    "pretix": {
+      "COMPLEX_CONTAINER_SEMANTICS": 1,
+      "FRAMEWORK_OR_EXTERNAL_EFFECTS": 11,
+      "NON_SCALAR_OR_REFERENCE_SEMANTICS": 5,
+      "OTHER_FROZEN_SCOPE_LIMITATION": 1,
+      "STATEFUL_SIDE_EFFECTING_LOGIC": 1
+    }
+  },
+  "category_definitions": {
+    "BINDING_OR_DOMAIN_UNRESOLVED": "Required input binding or semantic domain cannot be defensibly reconstructed under the frozen protocol.",
+    "COMPLEX_CONTAINER_SEMANTICS": "Business semantics depend materially on complex mappings, sets, sequences, or nested container structures.",
+    "FRAMEWORK_OR_EXTERNAL_EFFECTS": "Semantics depend on framework services, HTTP responses, signals, cache/Redis, database/ORM behavior, or external I/O.",
+    "NESTED_OR_HIGHER_ORDER_LOGIC": "Nested helpers, closures, comprehensions, higher-order behavior, or dynamically structured control flow outside the frozen formal subset.",
+    "NON_SCALAR_OR_REFERENCE_SEMANTICS": "Observable result is a reference, date, object, collection, response, or otherwise lacks a defensible scalar business projection.",
+    "OTHER_FROZEN_SCOPE_LIMITATION": "Explicit frozen evidence establishes non-certifiability, but the limitation does not fit a more specific category.",
+    "STATEFUL_SIDE_EFFECTING_LOGIC": "Object/model state mutation, transactional mutation, initializer semantics, or side-effect-dominated logic.",
+    "UNSUPPORTED_LANGUAGE_SEMANTICS": "Required language/AST construct lies outside the frozen symbolic semantics."
+  },
+  "counts": {
+    "BINDING_OR_DOMAIN_UNRESOLVED": 1,
+    "COMPLEX_CONTAINER_SEMANTICS": 1,
+    "FRAMEWORK_OR_EXTERNAL_EFFECTS": 19,
+    "NESTED_OR_HIGHER_ORDER_LOGIC": 3,
+    "NON_SCALAR_OR_REFERENCE_SEMANTICS": 10,
+    "OTHER_FROZEN_SCOPE_LIMITATION": 2,
+    "STATEFUL_SIDE_EFFECTING_LOGIC": 2
+  },
+  "method": "Deterministic normalization of frozen candidate-level reason_code and reviewed reason evidence. This supersedes the earlier generic keyword taxonomy.",
+  "residual_other": 2,
+  "schema_version": "BIZPROOF-V0.11-UNSUPPORTED-TAXONOMY-1",
+  "unsupported_total": 38
+}
