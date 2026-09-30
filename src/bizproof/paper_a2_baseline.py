@@ -282,7 +282,7 @@ def _safe_difference(
     except Exception:
         return True
 
-    return correct != altered
+    return bool(correct != altered)
 
 
 def _jsonable(
@@ -599,14 +599,14 @@ def run(
                 crosshair_file,
             )
 
-            for budget in crosshair_budgets:
+            for crosshair_budget in crosshair_budgets:
                 (
                     detected,
                     runtime,
                     error,
                 ) = _run_crosshair(
                     crosshair_file,
-                    per_condition_timeout=budget,
+                    per_condition_timeout=crosshair_budget,
                     process_timeout=8.0,
                 )
 
@@ -615,7 +615,7 @@ def run(
                         "candidate_id": cid,
                         "type_class": row["type_class"],
                         "tool": "crosshair",
-                        "budget": budget,
+                        "crosshair_budget": crosshair_budget,
                         "detected": detected,
                         "runtime_seconds": round(
                             runtime,

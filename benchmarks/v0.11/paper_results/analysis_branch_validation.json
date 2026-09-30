@@ -1,0 +1,25 @@
+{
+  "article_results_changed": false,
+  "evidence_sha256": {
+    "benchmarks\\v0.11\\paper_results\\a2_cohort_closure.json": "d1e0ee33bba5b0f9881447b8d9ee6256e4163678d6b24a544032f96f6299b3cb",
+    "benchmarks\\v0.11\\paper_results\\experimental_section_final.md": "d1d4d308852369f48d9bb473bf44455b0923b18f78e7bca6f5c836dccf94bd4a",
+    "benchmarks\\v0.11\\paper_results\\paper_ready_snapshot.json": "71a9766ebf22733191dc02728a69451f8eab41b9b0267f4cb974a0fbff705c9d",
+    "benchmarks\\v0.11\\paper_results\\paper_results_manifest.json": "774cc6c60d4bdf63832a1a392392edafdbda8607352f41370c3b134b271ffca6",
+    "benchmarks\\v0.11\\paper_results\\protocol_execution_closure.json": "e73e5c048bbeccfb01c6f46171c4e8bf06414eb00ea7de22ba41baaee4699eca",
+    "benchmarks\\v0.11\\paper_results\\runner_type_closure.json": "6d81744a27ea56f0a381ad92276c44884718b6d7c95980e1e9ff0b6e3e9ddc20",
+    "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final_summary.json": "21e3d52c66025be88da440f4c26c0dc9fc3790d23f49b612a88d08929d04754f"
+  },
+  "quality_gates": {
+    "a2_partition": true,
+    "differential_enum_z3": true,
+    "format": true,
+    "mypy": true,
+    "protocol_reconciliation": true,
+    "pytest": true,
+    "ruff": true,
+    "runner_static_typing": true
+  },
+  "schema_version": "BIZPROOF-V0.11-PAPER-BRANCH-VALIDATION-1",
+  "status": "PASS",
+  "validated_parent_commit": "b5c07f6654b35395b8efc89fd519da9645a44c9b"
+}

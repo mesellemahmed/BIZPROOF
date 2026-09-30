@@ -1,0 +1,60 @@
+{
+  "a2_partition": {
+    "extended_typed_executed": [
+      "2906fe3983a1ebe4",
+      "34748d082751e0cc",
+      "41ae4a7df4780001",
+      "7013ce92618a1e33",
+      "7f523a5041034306",
+      "8b98d0147c79c3fc",
+      "d5b65e1d48eca4dd",
+      "f234f0be14cf3ff3"
+    ],
+    "extended_typed_total": 8,
+    "finite_set_enum_deferred": [
+      "4008a63ee1ef3b44"
+    ],
+    "finite_set_enum_deferred_total": 1,
+    "partition_complete": true,
+    "recovered_post_original_freeze": [
+      "53abfcd7d20a9cd6",
+      "972b76d53a12b8ad"
+    ],
+    "recovered_total": 2,
+    "strict_core_primary": [
+      "331f175e4aa92eef",
+      "9603b9192132171c",
+      "aab5348ee173d6e3",
+      "e293930485085dac",
+      "f3ebe6cce422947e",
+      "f5d217dec0cf902b"
+    ],
+    "strict_core_total": 6,
+    "total": 17
+  },
+  "article_results_changed": false,
+  "crosshair_timeout_reconciliation": {
+    "crosshair_search_budgets_per_condition_seconds": [
+      0.5,
+      2.0
+    ],
+    "executed_runner_process_watchdog_seconds": 8.0,
+    "historical_6s_watchdog_reached_by_observed_run": false,
+    "historical_protocol_process_watchdog_seconds": 6.0,
+    "interpretation": "The per-condition CrossHair search budgets are the scientific analysis budgets. The process timeout is an outer subprocess safety watchdog. The executed runner used 8 s although the historical protocol recorded 6 s. This discrepancy is preserved rather than rewritten retroactively.",
+    "max_observed_individual_crosshair_runtime_seconds": 3.135057
+  },
+  "matched_paper_benchmark": {
+    "cases": 14,
+    "composition": "6 STRICT_CORE + 8 EXTENDED_TYPED_SUPPORTED",
+    "finite_set_enum_in_primary_claim": false,
+    "recovered_pairs_in_primary_claim": false
+  },
+  "result_integrity": {
+    "combined_detail_rows": 70,
+    "extended_detail_rows": 40,
+    "strict_detail_rows": 30,
+    "unknown_or_error": 0
+  },
+  "schema_version": "BIZPROOF-V0.11-PROTOCOL-CLOSURE-1"
+}
