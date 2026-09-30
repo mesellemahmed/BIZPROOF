@@ -1,0 +1,4 @@
+Python     = 3.12.14
+Hypothesis = 6.168.1
+CrossHair  = 0.0.110
+Z3         = 5.1.0

@@ -1,0 +1,52 @@
+{
+  "characterized_variability": {
+    "budget_seconds": 0.5,
+    "candidate_id": "f5d217dec0cf902b",
+    "classification": "SHORT_BUDGET_TIME_SENSITIVE",
+    "five_rep_history": [
+      false,
+      true,
+      true,
+      true,
+      true
+    ],
+    "targeted_result": {
+      "detected": 30,
+      "detection_rate": 1.0,
+      "detection_rate_ci95_wilson": [
+        0.8864866068260312,
+        0.9999999999999999
+      ],
+      "errors": 0,
+      "missed": 0,
+      "runtime_cv": 0.039184548662466366,
+      "runtime_max_seconds": 1.7142930860281922,
+      "runtime_mean_seconds": 1.4575046688939135,
+      "runtime_median_seconds": 1.448310802981723,
+      "runtime_min_seconds": 1.4012640520231798,
+      "runtime_stdev_seconds": 0.05711166262404548,
+      "trials": 30,
+      "unknown": 0
+    },
+    "tool": "CrossHair"
+  },
+  "frozen_article_results_changed": false,
+  "full_replication_campaign": {
+    "exact_match_rate": 0.9971428571428571,
+    "exact_matches": 349,
+    "matched_cases_per_rep": 14,
+    "mismatches": 1,
+    "repetitions": 5,
+    "verdict_comparisons": 350
+  },
+  "reproducibility_conclusion": "The benchmark infrastructure is reproducible; one low-budget CrossHair search outcome is intrinsically timing-sensitive under the evaluated execution environment.",
+  "schema_version": "BIZPROOF-V0.11-STABILITY-CLOSURE-1",
+  "scientific_interpretation": "Exact repeated verdict stability is not claimed for the 0.5-second CrossHair search budget. That budget is empirically time-sensitive for one strict-core case. The frozen article value remains a valid record of the frozen execution, but should be interpreted as a budgeted search result, not as a deterministic property of the candidate. BIZPROOF formal evidence and Hypothesis outcomes are unaffected.",
+  "stable_components": {
+    "CrossHair_2.0": "5/5 full replications reproduce 7/14; target unstable candidate additionally detected in 30/30 targeted trials",
+    "Hypothesis_100": "5/5 replications reproduce 14/14",
+    "Hypothesis_1000": "5/5 replications reproduce 14/14",
+    "Hypothesis_10000": "5/5 replications reproduce 14/14"
+  },
+  "status": "PASS_WITH_CHARACTERIZED_SHORT_BUDGET_VARIABILITY"
+}

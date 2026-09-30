@@ -1,0 +1,46 @@
+{
+  "all_candidate_level_verdict_vectors_stable": false,
+  "all_repetitions_exactly_match_frozen_verdicts": false,
+  "candidate_tool_budget_vectors": 70,
+  "detail_rows_per_rep": 70,
+  "exact_match_rate": 0.9971428571428571,
+  "exact_matches_against_frozen": 349,
+  "frozen_article_results_changed": false,
+  "matched_cases_per_rep": 14,
+  "mismatch_count": 1,
+  "mismatches": [
+    {
+      "budget": "0.5",
+      "candidate_id": "f5d217dec0cf902b",
+      "frozen_detected": true,
+      "frozen_error": "",
+      "observed_detected": false,
+      "observed_error": "",
+      "rep": 1,
+      "tier": "STRICT_CORE",
+      "tool": "crosshair",
+      "verdict_match": false
+    }
+  ],
+  "purpose": "Post-publication-artifact diagnostic replication. Frozen paper results are not replaced or recomputed.",
+  "repetitions": 5,
+  "runtime_interpretation": "Runtime is descriptive only. Variability in runtime does not change the formal/search guarantee distinction used in the frozen paper.",
+  "schema_version": "BIZPROOF-V0.11-BASELINE-STABILITY-1",
+  "total_verdict_comparisons": 350,
+  "unstable_candidate_tool_budget_vectors": 1,
+  "unstable_vectors": [
+    {
+      "budget": "0.5",
+      "candidate_id": "f5d217dec0cf902b",
+      "history": [
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "tier": "STRICT_CORE",
+      "tool": "crosshair"
+    }
+  ]
+}

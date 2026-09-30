@@ -1,0 +1,10 @@
+{
+  "bytes": 1003,
+  "candidate_id": "f5d217dec0cf902b",
+  "content_modified": false,
+  "original_generated_filename": "targeted_f5d_crosshair_source.py",
+  "preserved_filename": "targeted_f5d_crosshair_source.txt",
+  "reason_for_non_py_extension": "The file is frozen generated experimental evidence, not repository production source. It is preserved byte-for-byte and intentionally excluded from Python lint/format transformations.",
+  "schema_version": "BIZPROOF-V0.11-RAW-CROSSHAIR-EVIDENCE-1",
+  "sha256": "7adef61cb400709eb1910640b754e5f1b9964bef89225a7904fe2758917a32b9"
+}
