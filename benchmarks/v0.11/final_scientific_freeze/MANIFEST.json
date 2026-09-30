@@ -1,0 +1,20 @@
+{
+  "artifacts": [
+    {
+      "bytes": 1493,
+      "path": "benchmarks\\v0.11\\final_scientific_freeze\\README.md",
+      "sha256": "3c73ef96e7001fd9d2272371fbf3c126a0230928651c7386ab9f6a47980a993d"
+    },
+    {
+      "bytes": 4406,
+      "path": "benchmarks\\v0.11\\final_scientific_freeze\\SCIENTIFIC_FREEZE.json",
+      "sha256": "1ea52ec1755bc020f87b31c68021a7c74ac91b6e7f3707e27f2f33f497406683"
+    },
+    {
+      "bytes": 21243,
+      "path": "benchmarks\\v0.11\\final_scientific_freeze\\TRACKED_EVIDENCE_SHA256.json",
+      "sha256": "b25aefa5fd467c7e0bb2d8933e6ff83b80f46f77db73baf1e2dd3e4b4fefdc97"
+    }
+  ],
+  "schema_version": "BIZPROOF-V0.11-FINAL-FREEZE-MANIFEST-1"
+}
