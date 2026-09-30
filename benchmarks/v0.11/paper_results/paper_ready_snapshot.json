@@ -1,0 +1,29 @@
+{
+  "bizproof_detected": 14,
+  "certified": 50,
+  "certified_a1": 33,
+  "certified_a2": 17,
+  "cohort": 90,
+  "complexity_chi_square": 14.129999999999999,
+  "complexity_cramers_v": 0.396232255123179,
+  "complexity_p_value": 0.0008544949203617717,
+  "crosshair_0_5_detected": 5,
+  "crosshair_2_0_detected": 7,
+  "hypothesis_10000_detected": 14,
+  "hypothesis_1000_detected": 14,
+  "hypothesis_100_detected": 14,
+  "matched_baseline_cases": 14,
+  "schema_version": "BIZPROOF-V0.11-PAPER-READY-SNAPSHOT-1",
+  "semantic_ambiguity": 2,
+  "source_chi_square": 14.67,
+  "source_cramers_v": 0.403732584763727,
+  "source_p_value": 0.0006523039002191786,
+  "unsupported": 38,
+  "unsupported_taxonomy_finalized": false,
+  "unweighted_yield": 0.5555555555555556,
+  "unweighted_yield_ci95_wilson": [
+    0.4527192645595967,
+    0.6538434437110336
+  ],
+  "weighted_yield": 0.459041095890411
+}
