@@ -1,0 +1,26 @@
+{
+  "candidates": 90,
+  "certification_claim": false,
+  "status_counts": {
+    "NO_CONTRACT_OCCURRENCES": 54,
+    "PRIMITIVE_CONTRACTS_CLOSED": 1,
+    "STRUCTURAL_PROTOCOL_SEMANTICS_REMAIN": 11,
+    "UNRESOLVED_PRIMITIVES_REMAIN": 24
+  },
+  "structural_protocol_primitives": [
+    "famille",
+    "foyer_fiscal",
+    "has_role",
+    "individu",
+    "members",
+    "menage",
+    "sum"
+  ],
+  "validated_semantic_primitives": [
+    "D",
+    "min_",
+    "nb_enf",
+    "not_",
+    "where"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "all_required_gates_pass": true,
+  "authoritative_source": {
+    "ast_rewritten": false,
+    "matches_frozen_plan": true,
+    "sha256": "6333627389e891ba1a54761c7ab06169a3cd2fca9a647e81a3154760db0824f7"
+  },
+  "candidate_id": "8a754dadf1672d0a",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_mutant_replay": {
+    "correct": [
+      "B"
+    ],
+    "different": true,
+    "mutant": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  "formal_mutant_refutation": {
+    "model": "[base_mask = 3, plugin_mask = 6]",
+    "property": "there exists a finite position universe where plugin intersection differs from the frozen union mutant",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "function_name": "positions_with_tickets",
+  "mutant": {
+    "name": "UNION_INSTEAD_OF_INTERSECTION",
+    "replacement": "set.union",
+    "semantic_fault": "plugin restrictions are broadened instead of intersected",
+    "target": "set.intersection"
+  },
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-B2-CERT2-A2-1",
+  "scope": {
+    "certified": "the exact frozen business source under the prospectively frozen rich framework semantic projection",
+    "not_certified": [
+      "correctness of Pretix plugin, database or ORM implementations",
+      "correctness of arbitrary external signal providers",
+      "transaction scheduling, concurrency or hidden middleware effects"
+    ]
+  },
+  "semantic_capability": "SIGNAL_GATED_SET_SEMANTICS",
+  "source_projection_equivalence": {
+    "branch_basis": 8,
+    "controlled_exact_source_replay": true,
+    "structural_route_gate": true
+  },
+  "v012_outcome": "CERTIFIED_A2"
+}

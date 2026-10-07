@@ -1,0 +1,44 @@
+{
+  "authoritative_source": true,
+  "candidate_id": "e8850260c2763222",
+  "category": "STATEFUL_SIDE_EFFECTING_LOGIC",
+  "certification_started": false,
+  "evidence_detail": {
+    "direct_hash_name_location_count": 1,
+    "embedded_hash_hit_count": 0,
+    "embedded_hashes": [],
+    "hash_name_location_count": 0,
+    "name_path_location_count": 0
+  },
+  "prior_status": "UNRESOLVED",
+  "recovery_claim": false,
+  "selected": {
+    "class_name": "MultibuyDiscountBenefit",
+    "end_lineno": 361,
+    "fingerprints": {
+      "ast_dump": "e71e2c0502b46ad0537d60e5783c4cacb81d49b518a5be580bf2cedc8c851277",
+      "ast_unparse": "12278f6c01d75a322bf65ad0100ee4ad98ecb1e0f994417abc47390a68a25ef8",
+      "dedent_strip": "43caf35ba88294b43ebf679eb34e8e77c76d4ed43dbd2676aaef38e9010280af",
+      "dedent_strip_newline": "c45fe51688ed1f98f83bf7ad13ef3c82f95215197f556d575bc22dbcc94f4463",
+      "lf": "43caf35ba88294b43ebf679eb34e8e77c76d4ed43dbd2676aaef38e9010280af",
+      "raw": "43caf35ba88294b43ebf679eb34e8e77c76d4ed43dbd2676aaef38e9010280af"
+    },
+    "function_name": "apply",
+    "lineno": 346,
+    "matched_hash": "43caf35ba88294b43ebf679eb34e8e77c76d4ed43dbd2676aaef38e9010280af",
+    "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\offer\\benefits.py",
+    "project": "django_oscar",
+    "source": "def apply(self, basket, condition, offer, **kwargs):\n        line_tuples = self.get_applicable_lines(offer, basket)\n        if not line_tuples:\n            return ZERO_DISCOUNT\n\n        # Cheapest line gives free product\n        discount, line = line_tuples[0]\n        if line.quantity_with_offer_discount(offer) == 0:\n            apply_discount(line, discount, 1, offer)\n\n            affected_lines = [(line, discount, 1)]\n            condition.consume_items(offer, basket, affected_lines)\n\n            return BasketDiscount(discount)\n        else:\n            return ZERO_DISCOUNT"
+  },
+  "source": "def apply(self, basket, condition, offer, **kwargs):\n        line_tuples = self.get_applicable_lines(offer, basket)\n        if not line_tuples:\n            return ZERO_DISCOUNT\n\n        # Cheapest line gives free product\n        discount, line = line_tuples[0]\n        if line.quantity_with_offer_discount(offer) == 0:\n            apply_discount(line, discount, 1, offer)\n\n            affected_lines = [(line, discount, 1)]\n            condition.consume_items(offer, basket, affected_lines)\n\n            return BasketDiscount(discount)\n        else:\n            return ZERO_DISCOUNT",
+  "source_fingerprints": {
+    "ast_dump": "e71e2c0502b46ad0537d60e5783c4cacb81d49b518a5be580bf2cedc8c851277",
+    "ast_unparse": "12278f6c01d75a322bf65ad0100ee4ad98ecb1e0f994417abc47390a68a25ef8",
+    "dedent_strip": "43caf35ba88294b43ebf679eb34e8e77c76d4ed43dbd2676aaef38e9010280af",
+    "dedent_strip_newline": "c45fe51688ed1f98f83bf7ad13ef3c82f95215197f556d575bc22dbcc94f4463",
+    "lf": "43caf35ba88294b43ebf679eb34e8e77c76d4ed43dbd2676aaef38e9010280af",
+    "raw": "43caf35ba88294b43ebf679eb34e8e77c76d4ed43dbd2676aaef38e9010280af"
+  },
+  "status": "SAME_RECORD_DIRECT_HASH_NAME_RESOLVED",
+  "support_record_count": 5
+}

@@ -1,0 +1,37 @@
+{
+  "all_required_gates_pass": true,
+  "authoritative_source": {
+    "ast_rewritten": false,
+    "matches_frozen_plan": true,
+    "sha256": "c0940eb57388bf8cbbaabf04499486b19128fed8e38e5667b6dd5c794fab29ab"
+  },
+  "candidate_id": "eb12d3a44210a486",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "formal_mutant_refutation": {
+    "model": "[item_flag = True,\n order_flag = True,\n variation_text_flag = True,\n variation_id_flag = True]",
+    "property": "there exists an admissible branch state where variation text must be included and the omit-variation mutant returns a shorter ordered sequence",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "function_name": "checkin_texts",
+  "mutant": {
+    "difference": "correct sequence contains variation text when variation_id and variation text are truthy; mutant omits it",
+    "name": "OMIT_VARIATION_TEXT"
+  },
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-B2-CERT1-A2-1",
+  "scope": {
+    "certified": "the frozen source projection over explicit state, sequence, helper, identifier, and effect observations defined by the prospective B2 route",
+    "not_certified": [
+      "correctness of the underlying Django, Oscar, Pretix or database runtime",
+      "unobserved framework side effects outside the frozen projection",
+      "arbitrary external dependency implementations"
+    ]
+  },
+  "semantic_capability": "CONDITIONAL_SEQUENCE_RETURN",
+  "source_projection_equivalence": {
+    "controlled_exact_source_replay": true,
+    "structural_route_gate": true
+  },
+  "v012_outcome": "CERTIFIED_A2"
+}

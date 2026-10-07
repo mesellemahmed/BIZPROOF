@@ -1,0 +1,53 @@
+{
+  "adapter": {
+    "function": "adapt_pending_order_sum",
+    "function_sha256": "2ac4c2badf4b70161b2b44b4c14820979c76069e7df9832003465abfe5a8d897",
+    "mutant_function": "mutant_pending_order_sum",
+    "mutant_function_sha256": "042f4798dddea3c2de360b3945281a4c0f83ea6507d5cb7cf7cc50afb339131a",
+    "semantic_adapter": "PENDING_ORDER_SUM"
+  },
+  "assistance_level": "A2",
+  "authoring_mode": "EXPLICIT_MANUAL_SCALAR_SEMANTIC_ADAPTER",
+  "candidate_id": "41ae4a7df4780001",
+  "certificate_digest": "a4b5ddfee72ae7d07d4fa771df741d81fcab306f9e3fa90838383287ec729194",
+  "certificate_id": "CERT-V011-A2-41AE4A7DF4780001",
+  "claim_scope": "Certification applies only to the explicit scalar semantic projection and declared source-to-adapter bindings. It does not certify database, ORM, localization or framework behavior outside that projection.",
+  "evidence": {
+    "proof_digest": "c2a2162466e368769a514d8128405f0eef8c0e6a0b8c1aece4e0f1bc3734ee87",
+    "runtime": {
+      "adapter_mismatches": 0,
+      "comparisons": 96,
+      "mutant_mismatches": 32,
+      "validation_domain": "bounded Decimal total/payment/refund aggregates with canceled/non-canceled status"
+    },
+    "symbolic": {
+      "correct_proved": true,
+      "correct_solver_status": "unsat",
+      "mutant_disproved": true,
+      "mutant_solver_status": "sat",
+      "symbolic_domain": "numeric totals/aggregates and boolean canceled status"
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 75,
+    "text": "- `CERTIFIED_A2`: certified with an explicit human-authored scalar semantic adapter."
+  },
+  "schema_version": "BIZPROOF-V0.11-A2-CERTIFICATE-1",
+  "semantic_binding_scope": "total, canceled status, payment_sum and refund_sum are explicit scalar bindings of the corresponding locked source fields and aggregate outputs.",
+  "source": {
+    "class": "Order",
+    "file": "src/pretix/base/models/orders.py",
+    "function": "pending_sum",
+    "function_sha256": "de8370aae58f719444a509cf6258b7aa3c748a8e88627e99c3784d59faeaf0c7",
+    "lines": [
+      496,
+      507
+    ],
+    "source_file_sha256": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef",
+    "source_id": "pretix"
+  },
+  "status": "CERTIFIED_A2",
+  "terminal_outcome": "CERTIFIED_A2",
+  "terminal_outcome_assigned": true
+}

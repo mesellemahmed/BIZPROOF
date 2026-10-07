@@ -1,0 +1,232 @@
+{
+  "candidate_id": "972b76d53a12b8ad",
+  "matching_files": [
+    {
+      "functions": [
+        {
+          "args": [
+            "path"
+          ],
+          "lineno": 88,
+          "looks_adapter": false,
+          "looks_mutant": false,
+          "name": "_load_jsonl"
+        },
+        {
+          "args": [
+            "path"
+          ],
+          "lineno": 111,
+          "looks_adapter": false,
+          "looks_mutant": false,
+          "name": "_sha256_file"
+        },
+        {
+          "args": [
+            "value"
+          ],
+          "lineno": 118,
+          "looks_adapter": false,
+          "looks_mutant": false,
+          "name": "_sha256_text"
+        },
+        {
+          "args": [
+            "source"
+          ],
+          "lineno": 125,
+          "looks_adapter": false,
+          "looks_mutant": false,
+          "name": "_extract_function"
+        },
+        {
+          "args": [
+            "required",
+            "validated_contracts"
+          ],
+          "lineno": 171,
+          "looks_adapter": false,
+          "looks_mutant": false,
+          "name": "_validate_binding_semantics"
+        },
+        {
+          "args": [],
+          "lineno": 224,
+          "looks_adapter": false,
+          "looks_mutant": true,
+          "name": "_mutant_witness_replay"
+        },
+        {
+          "args": [],
+          "lineno": 270,
+          "looks_adapter": false,
+          "looks_mutant": false,
+          "name": "_prove_candidate"
+        },
+        {
+          "args": [],
+          "lineno": 539,
+          "looks_adapter": false,
+          "looks_mutant": false,
+          "name": "build"
+        },
+        {
+          "args": [],
+          "lineno": 795,
+          "looks_adapter": false,
+          "looks_mutant": false,
+          "name": "main"
+        },
+        {
+          "args": [
+            "self",
+            "node"
+          ],
+          "lineno": 66,
+          "looks_adapter": false,
+          "looks_mutant": false,
+          "name": "expression"
+        }
+      ],
+      "path": "src/bizproof/generalization_a1_remaining_binding_proof.py"
+    },
+    {
+      "functions": [
+        {
+          "args": [
+            "ca",
+            "activity_is_purchase_resale",
+            "activity_is_bic",
+            "activity_is_bnc",
+            "sales_ceiling",
+            "service_ceiling"
+          ],
+          "lineno": 32,
+          "looks_adapter": true,
+          "looks_mutant": false,
+          "name": "adapt_rsa_tns_turnover_eligibility"
+        },
+        {
+          "args": [
+            "ca",
+            "activity_is_purchase_resale",
+            "activity_is_bic",
+            "activity_is_bnc",
+            "sales_ceiling",
+            "service_ceiling"
+          ],
+          "lineno": 48,
+          "looks_adapter": false,
+          "looks_mutant": true,
+          "name": "mutant_rsa_tns_turnover_eligibility"
+        },
+        {
+          "args": [],
+          "lineno": 88,
+          "looks_adapter": false,
+          "looks_mutant": false,
+          "name": "_parameter_object"
+        },
+        {
+          "args": [
+            "source_slice",
+            "function_name"
+          ],
+          "lineno": 104,
+          "looks_adapter": false,
+          "looks_mutant": false,
+          "name": "_compile_locked_function"
+        },
+        {
+          "args": [
+            "source_slice"
+          ],
+          "lineno": 133,
+          "looks_adapter": false,
+          "looks_mutant": false,
+          "name": "_runtime_rsa"
+        },
+        {
+          "args": [],
+          "lineno": 226,
+          "looks_adapter": false,
+          "looks_mutant": false,
+          "name": "_symbolic_rsa"
+        },
+        {
+          "args": [
+            "repo_root"
+          ],
+          "lineno": 299,
+          "looks_adapter": false,
+          "looks_mutant": false,
+          "name": "_probe_by_id"
+        },
+        {
+          "args": [],
+          "lineno": 316,
+          "looks_adapter": false,
+          "looks_mutant": false,
+          "name": "_locked_source"
+        },
+        {
+          "args": [],
+          "lineno": 357,
+          "looks_adapter": false,
+          "looks_mutant": false,
+          "name": "build"
+        },
+        {
+          "args": [],
+          "lineno": 727,
+          "looks_adapter": false,
+          "looks_mutant": false,
+          "name": "main"
+        },
+        {
+          "args": [
+            "self",
+            "code"
+          ],
+          "lineno": 67,
+          "looks_adapter": false,
+          "looks_mutant": false,
+          "name": "__init__"
+        },
+        {
+          "args": [
+            "self",
+            "other"
+          ],
+          "lineno": 80,
+          "looks_adapter": false,
+          "looks_mutant": false,
+          "name": "__eq__"
+        }
+      ],
+      "path": "src/bizproof/generalization_residual_binding_closure.py"
+    }
+  ],
+  "resolution": "PAIR_AUTO_DISCOVERED",
+  "same_signature_pairs": [
+    {
+      "adapter": "adapt_rsa_tns_turnover_eligibility",
+      "args": [
+        "ca",
+        "activity_is_purchase_resale",
+        "activity_is_bic",
+        "activity_is_bnc",
+        "sales_ceiling",
+        "service_ceiling"
+      ],
+      "mutant": "mutant_rsa_tns_turnover_eligibility",
+      "path": "src/bizproof/generalization_residual_binding_closure.py"
+    }
+  ],
+  "search_tokens": [
+    "972b76d53a12b8ad",
+    "RSA_TNS_TURNOVER_ELIGIBILITY",
+    "rsa_tns"
+  ],
+  "status": "MATCHED_BASELINE_READY"
+}

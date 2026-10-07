@@ -1,0 +1,105 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "0f73ae8d15cf3408",
+      "capability": "SEMANTIC_VALUE_REFERENCE_OPTIONAL_SEQUENCE",
+      "engine_status": "NEEDS_REFERENCE_IDENTITY_CONTRACT",
+      "reason_code": "REFERENCE_DATE_OR_NONE",
+      "recovered": false,
+      "semantic_family": "OPTIONAL_REFERENCE_OR_DATE"
+    },
+    {
+      "candidate_id": "26a1af8837fe7ae4",
+      "capability": "SEMANTIC_VALUE_TEXT_SEQUENCE",
+      "engine_status": "REPRESENTATION_READY_FOR_ADAPTER",
+      "reason_code": "TEXT_RETURN",
+      "recovered": false,
+      "semantic_family": "TEXT_VALUE"
+    },
+    {
+      "candidate_id": "6d009b7961c5d116",
+      "capability": "SEMANTIC_VALUE_REFERENCE_OPTIONAL_SEQUENCE",
+      "engine_status": "NEEDS_REFERENCE_IDENTITY_CONTRACT",
+      "reason_code": "LIST_OF_DOMAIN_OBJECTS_RETURN",
+      "recovered": false,
+      "semantic_family": "FINITE_SEQUENCE_VALUE"
+    },
+    {
+      "candidate_id": "6fd8bd69c26e7954",
+      "capability": "SEMANTIC_VALUE_REFERENCE_OPTIONAL_SEQUENCE",
+      "engine_status": "NEEDS_REFERENCE_IDENTITY_CONTRACT",
+      "reason_code": "DOMAIN_OBJECT_RETURN",
+      "recovered": false,
+      "semantic_family": "DOMAIN_OBJECT_REFERENCE"
+    },
+    {
+      "candidate_id": "75e61ddb4dde4f1a",
+      "capability": "SEMANTIC_VALUE_TEXT_SEQUENCE",
+      "engine_status": "REPRESENTATION_READY_FOR_ADAPTER",
+      "reason_code": "TEXT_RETURN",
+      "recovered": false,
+      "semantic_family": "TEXT_VALUE"
+    },
+    {
+      "candidate_id": "87d2f0b3b15f0ea6",
+      "capability": "SEMANTIC_VALUE_TEXT_SEQUENCE",
+      "engine_status": "REPRESENTATION_READY_FOR_ADAPTER",
+      "reason_code": "TEXT_RETURN",
+      "recovered": false,
+      "semantic_family": "TEXT_VALUE"
+    },
+    {
+      "candidate_id": "9cc9063a46d23cde",
+      "capability": "QUERYSET_SUMMARY_NOT_IMPLEMENTED",
+      "engine_status": "NEEDS_FRAMEWORK_QUERYSET_SUMMARY",
+      "reason_code": "QUERYSET_RETURN",
+      "recovered": false,
+      "semantic_family": "QUERYSET_SUMMARY"
+    },
+    {
+      "candidate_id": "d285ecd86455b150",
+      "capability": "SEMANTIC_VALUE_TEXT_SEQUENCE",
+      "engine_status": "REPRESENTATION_READY_FOR_ADAPTER",
+      "reason_code": "TUPLE_RETURN",
+      "recovered": false,
+      "semantic_family": "FINITE_SEQUENCE_VALUE"
+    },
+    {
+      "candidate_id": "e1cf29f02fa0dadc",
+      "capability": "SEMANTIC_VALUE_TEXT_SEQUENCE",
+      "engine_status": "REPRESENTATION_READY_FOR_ADAPTER",
+      "reason_code": "LIST_RETURN",
+      "recovered": false,
+      "semantic_family": "FINITE_SEQUENCE_VALUE"
+    },
+    {
+      "candidate_id": "fa377c649a747a7d",
+      "capability": "SEMANTIC_VALUE_REFERENCE_OPTIONAL_SEQUENCE",
+      "engine_status": "NEEDS_REFERENCE_IDENTITY_CONTRACT",
+      "reason_code": "OBJECT_RETURN",
+      "recovered": false,
+      "semantic_family": "DOMAIN_OBJECT_REFERENCE"
+    }
+  ],
+  "engine_capabilities_implemented": [
+    "TEXT_VALUE",
+    "FINITE_LIST",
+    "FINITE_TUPLE",
+    "OPTIONAL_NONE",
+    "TEMPORAL_DATE",
+    "TEMPORAL_DATETIME",
+    "EXPLICIT_TYPED_REFERENCE",
+    "FINITE_SEQUENCE_OF_REFERENCES"
+  ],
+  "not_implemented": [
+    "QUERYSET_SUMMARY"
+  ],
+  "recovery_claims": 0,
+  "schema_version": "BIZPROOF-V0.12-A3-ENGINE-READINESS-1",
+  "status_counts": {
+    "NEEDS_FRAMEWORK_QUERYSET_SUMMARY": 1,
+    "NEEDS_REFERENCE_IDENTITY_CONTRACT": 4,
+    "REPRESENTATION_READY_FOR_ADAPTER": 5
+  },
+  "target_population": 10
+}

@@ -1,0 +1,245 @@
+{
+  "category": "FRAMEWORK_OR_EXTERNAL_EFFECTS",
+  "groups": [
+    {
+      "candidate_ids": [
+        "4b57e2d73c695a41",
+        "7cf281a33e5781df"
+      ],
+      "count": 2,
+      "reason_code": "OBJECT_STATE_TRANSITION_OUTSIDE_FORMAL_SUBSET",
+      "resolved_ids": [],
+      "source_resolved": 0,
+      "source_unresolved": 2,
+      "unresolved_ids": [
+        "4b57e2d73c695a41",
+        "7cf281a33e5781df"
+      ]
+    },
+    {
+      "candidate_ids": [
+        "4d7d61b18dde0ad5"
+      ],
+      "count": 1,
+      "reason_code": "HTTP_RESPONSE_RETURN",
+      "resolved_ids": [
+        "4d7d61b18dde0ad5"
+      ],
+      "source_resolved": 1,
+      "source_unresolved": 0,
+      "unresolved_ids": []
+    },
+    {
+      "candidate_ids": [
+        "7bc9603bfbda7dc9"
+      ],
+      "count": 1,
+      "reason_code": "SCALAR_RETURN_LARGE_PARAMETERIZED_FORMULA | AGGREGATE_HELPER_SEMANTICS_OUTSIDE_FROZEN_SCALAR_A2_SCOPE",
+      "resolved_ids": [
+        "7bc9603bfbda7dc9"
+      ],
+      "source_resolved": 1,
+      "source_unresolved": 0,
+      "unresolved_ids": []
+    },
+    {
+      "candidate_ids": [
+        "1311d905af0ebcb5"
+      ],
+      "count": 1,
+      "reason_code": "SIDE_EFFECT_ONLY_REDIS_CACHE",
+      "resolved_ids": [
+        "1311d905af0ebcb5"
+      ],
+      "source_resolved": 1,
+      "source_unresolved": 0,
+      "unresolved_ids": []
+    },
+    {
+      "candidate_ids": [
+        "a09e038870c9b436"
+      ],
+      "count": 1,
+      "reason_code": "CONDITIONAL_STRING_CONSTRUCTION_OUTSIDE_FROZEN_FORMAL_SCOPE",
+      "resolved_ids": [],
+      "source_resolved": 0,
+      "source_unresolved": 1,
+      "unresolved_ids": [
+        "a09e038870c9b436"
+      ]
+    },
+    {
+      "candidate_ids": [
+        "2309036b0c69ad48"
+      ],
+      "count": 1,
+      "reason_code": "FORM_STATE_MUTATION_OUTSIDE_FORMAL_SUBSET",
+      "resolved_ids": [],
+      "source_resolved": 0,
+      "source_unresolved": 1,
+      "unresolved_ids": [
+        "2309036b0c69ad48"
+      ]
+    },
+    {
+      "candidate_ids": [
+        "bcb091a940a8d0dd"
+      ],
+      "count": 1,
+      "reason_code": "FRAMEWORK_DICT_MUTATION_OUTSIDE_FORMAL_SUBSET",
+      "resolved_ids": [],
+      "source_resolved": 0,
+      "source_unresolved": 1,
+      "unresolved_ids": [
+        "bcb091a940a8d0dd"
+      ]
+    },
+    {
+      "candidate_ids": [
+        "63e7979762bf860b"
+      ],
+      "count": 1,
+      "reason_code": "FRAMEWORK_SIGNAL_BASKET_SIDE_EFFECTS_OUTSIDE_FORMAL_SUBSET",
+      "resolved_ids": [],
+      "source_resolved": 0,
+      "source_unresolved": 1,
+      "unresolved_ids": [
+        "63e7979762bf860b"
+      ]
+    },
+    {
+      "candidate_ids": [
+        "a79d9687185720aa"
+      ],
+      "count": 1,
+      "reason_code": "MODEL_SAVE_STATE_TRANSITION_OUTSIDE_FORMAL_SUBSET",
+      "resolved_ids": [],
+      "source_resolved": 0,
+      "source_unresolved": 1,
+      "unresolved_ids": [
+        "a79d9687185720aa"
+      ]
+    },
+    {
+      "candidate_ids": [
+        "03e2adf4e4f323b1"
+      ],
+      "count": 1,
+      "reason_code": "MODEL_SAVE_TRANSACTION_STATE_OUTSIDE_FORMAL_SUBSET",
+      "resolved_ids": [],
+      "source_resolved": 0,
+      "source_unresolved": 1,
+      "unresolved_ids": [
+        "03e2adf4e4f323b1"
+      ]
+    },
+    {
+      "candidate_ids": [
+        "d7f578c3a5f20b8a"
+      ],
+      "count": 1,
+      "reason_code": "MULTI_OBJECT_STATE_TRANSITION_OUTSIDE_FORMAL_SUBSET",
+      "resolved_ids": [],
+      "source_resolved": 0,
+      "source_unresolved": 1,
+      "unresolved_ids": [
+        "d7f578c3a5f20b8a"
+      ]
+    },
+    {
+      "candidate_ids": [
+        "91b2dc32504282fc"
+      ],
+      "count": 1,
+      "reason_code": "MULTI_STATE_MUTATION_OUTSIDE_FORMAL_SUBSET",
+      "resolved_ids": [],
+      "source_resolved": 0,
+      "source_unresolved": 1,
+      "unresolved_ids": [
+        "91b2dc32504282fc"
+      ]
+    },
+    {
+      "candidate_ids": [
+        "eb12d3a44210a486"
+      ],
+      "count": 1,
+      "reason_code": "NONSCALAR_LIST_SEMANTICS_OUTSIDE_FORMAL_SUBSET",
+      "resolved_ids": [],
+      "source_resolved": 0,
+      "source_unresolved": 1,
+      "unresolved_ids": [
+        "eb12d3a44210a486"
+      ]
+    },
+    {
+      "candidate_ids": [
+        "8048a564541f5408"
+      ],
+      "count": 1,
+      "reason_code": "OPERATION_LIST_MUTATION_OUTSIDE_FORMAL_SUBSET",
+      "resolved_ids": [],
+      "source_resolved": 0,
+      "source_unresolved": 1,
+      "unresolved_ids": [
+        "8048a564541f5408"
+      ]
+    },
+    {
+      "candidate_ids": [
+        "8a754dadf1672d0a"
+      ],
+      "count": 1,
+      "reason_code": "PLUGIN_SIGNAL_SET_SEMANTICS_OUTSIDE_FORMAL_SUBSET",
+      "resolved_ids": [],
+      "source_resolved": 0,
+      "source_unresolved": 1,
+      "unresolved_ids": [
+        "8a754dadf1672d0a"
+      ]
+    },
+    {
+      "candidate_ids": [
+        "882c5eae0d8fd4ec"
+      ],
+      "count": 1,
+      "reason_code": "REFUND_OBJECT_SIDE_EFFECTS_OUTSIDE_FORMAL_SUBSET",
+      "resolved_ids": [],
+      "source_resolved": 0,
+      "source_unresolved": 1,
+      "unresolved_ids": [
+        "882c5eae0d8fd4ec"
+      ]
+    },
+    {
+      "candidate_ids": [
+        "7460029971aad8de"
+      ],
+      "count": 1,
+      "reason_code": "SERVICE_CACHE_OBJECT_SEMANTICS_OUTSIDE_FORMAL_SUBSET",
+      "resolved_ids": [],
+      "source_resolved": 0,
+      "source_unresolved": 1,
+      "unresolved_ids": [
+        "7460029971aad8de"
+      ]
+    },
+    {
+      "candidate_ids": [
+        "b2996c3dd81aca55"
+      ],
+      "count": 1,
+      "reason_code": "SESSION_STATE_MUTATION_OUTSIDE_FORMAL_SUBSET",
+      "resolved_ids": [],
+      "source_resolved": 0,
+      "source_unresolved": 1,
+      "unresolved_ids": [
+        "b2996c3dd81aca55"
+      ]
+    }
+  ],
+  "ordering_rule": "Descending frozen reason-code frequency, then descending number of resolved source slices; no recovery outcome is used.",
+  "recovery_claims": 0,
+  "schema_version": "BIZPROOF-V0.12-B0-ATTACK-ORDER-1",
+  "target_count": 19
+}

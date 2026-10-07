@@ -1,0 +1,20 @@
+{
+  "candidate_id": "a74d4580a9effb73",
+  "certification_batch": "B4_BATCH3_VECTOR_LOGIC",
+  "function_name": "formula_2022",
+  "historical_category": "NESTED_OR_HIGHER_ORDER_LOGIC",
+  "normalized_source_sha256": "dcc51cdc8b19bef34bcd4fa812d19b75e8e2ce09aa9d228dc3befd25fef666c6",
+  "physical_location_count": 1,
+  "representative_class": "eligibilite_per_etudiant",
+  "representative_lineno": 47,
+  "representative_path": "external_sources\\v0.6\\openfisca_france\\openfisca_france\\model\\prestations\\aides_exceptionnelles\\prime_exceptionnelle_rentree.py",
+  "representative_project": "openfisca_france",
+  "semantic_family": "VECTOR_DOMAIN_LOGIC",
+  "semantic_observation": "extensional boolean/vector result of nested where/not_/or_/and_ operations under explicit entity-variable and role/family observations",
+  "semantic_route": "VECTOR_BOOLEAN_WHERE_RETURN",
+  "source": "def formula_2022(individu, period):\n        juin_2022 = periods.period('2022-06')\n        eligibilite_etudiant = where(\n            not_(or_(individu('bourse_criteres_sociaux', juin_2022) > 0, individu('bourse_enseignement_sup', juin_2022) > 0)),\n            False,\n            where(\n                and_(individu.has_role(Famille.PARENT), individu.famille('eligibilite_per', period)),\n                False,\n                True\n                )\n            )\n\n        return eligibilite_etudiant",
+  "source_ast_sha256": "990a4d679e2afb147473c5f439dc3ed1af12d3bfc52c886df9fdb813b4aa5103",
+  "source_resolution": "DIRECT_HASH_RESOLVED",
+  "source_sha256": "dcc51cdc8b19bef34bcd4fa812d19b75e8e2ce09aa9d228dc3befd25fef666c6",
+  "unique_physical_location_claim": true
+}

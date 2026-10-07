@@ -1,0 +1,218 @@
+{
+  "authoritative_source": true,
+  "candidate_id": "a79d9687185720aa",
+  "certification_started": false,
+  "class_name": "AbstractConditionalOffer",
+  "end_lineno": 296,
+  "fingerprints": {
+    "ast_dump": "370e0b97030e8a42020d62fc6330a13a74718dd49610e50f856389b45e6e23db",
+    "ast_unparse": "46359036053aff05576b1b5a49179668497bee5db46357ed2625bed138de4d9e",
+    "dedent_strip": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+    "dedent_strip_newline": "89102f0e9c8b49835d3d5858167364626713927e8be4c7d5bc088f58e2a4324c",
+    "lf": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+    "raw": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d"
+  },
+  "function_name": "save",
+  "lineno": 288,
+  "matched_hash": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+  "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\offer\\abstract_models.py",
+  "project": "django_oscar",
+  "reason_codes": "MODEL_SAVE_STATE_TRANSITION_OUTSIDE_FORMAL_SUBSET",
+  "recovery_claim": false,
+  "resolution": "STRUCTURED_DIRECT_HASH_RESOLVED",
+  "source": "def save(self, *args, **kwargs):\n        # Check to see if consumption thresholds have been broken\n        if not self.is_suspended:\n            if self.get_max_applications() == 0:\n                self.status = self.CONSUMED\n            else:\n                self.status = self.OPEN\n\n        return super().save(*args, **kwargs)",
+  "support_records": [
+    {
+      "direct_hashes": [
+        "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+        "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\execution_probe.jsonl",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [
+        "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+        "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+      ],
+      "object_path": "$line[8]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+        },
+        {
+          "key_path": "$.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "6460cf23dcc3a28e4833ad99699e28758af164e872ef6fd0f00f1ae7df5c6b8e",
+        "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+        "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_outcomes.jsonl",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [
+        "6460cf23dcc3a28e4833ad99699e28758af164e872ef6fd0f00f1ae7df5c6b8e",
+        "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+        "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+      ],
+      "object_path": "$line[6]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+        },
+        {
+          "key_path": "$.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "6460cf23dcc3a28e4833ad99699e28758af164e872ef6fd0f00f1ae7df5c6b8e"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "3090b1402638ffd018f006b4216a77d5942fad768f12f25a55eebc0344c8a7a9",
+        "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+        "d1508fbc726b868c4c849cd88e7669f3bc1ca31a2e7f2ccb26ec3a119f29b78e"
+      ],
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [
+        "3090b1402638ffd018f006b4216a77d5942fad768f12f25a55eebc0344c8a7a9",
+        "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+        "d1508fbc726b868c4c849cd88e7669f3bc1ca31a2e7f2ccb26ec3a119f29b78e"
+      ],
+      "object_path": "$line[7]",
+      "path_hints": [
+        "src/oscar/apps/offer/abstract_models.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate.business_keyword_sources.class[0]",
+          "value": "condition"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.class[1]",
+          "value": "offer"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.path[0]",
+          "value": "offer"
+        },
+        {
+          "key_path": "$.candidate.file",
+          "value": "src/oscar/apps/offer/abstract_models.py"
+        },
+        {
+          "key_path": "$.candidate.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.candidate.function_sha256",
+          "value": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d"
+        },
+        {
+          "key_path": "$.candidate.source_file_sha256",
+          "value": "d1508fbc726b868c4c849cd88e7669f3bc1ca31a2e7f2ccb26ec3a119f29b78e"
+        },
+        {
+          "key_path": "$.candidate.source_id",
+          "value": "django_oscar"
+        },
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        },
+        {
+          "key_path": "$.selection_hash",
+          "value": "3090b1402638ffd018f006b4216a77d5942fad768f12f25a55eebc0344c8a7a9"
+        },
+        {
+          "key_path": "$.stratum.source_id",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "6460cf23dcc3a28e4833ad99699e28758af164e872ef6fd0f00f1ae7df5c6b8e",
+        "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+        "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_evidence\\a79d9687185720aa.json",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [
+        "6460cf23dcc3a28e4833ad99699e28758af164e872ef6fd0f00f1ae7df5c6b8e",
+        "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+        "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+      ],
+      "object_path": "$",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+        },
+        {
+          "key_path": "$.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "6460cf23dcc3a28e4833ad99699e28758af164e872ef6fd0f00f1ae7df5c6b8e"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    }
+  ]
+}

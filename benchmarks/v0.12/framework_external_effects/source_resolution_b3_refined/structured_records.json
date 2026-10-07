@@ -1,0 +1,6646 @@
+{
+  "03e2adf4e4f323b1": [
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a1_batch_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[63]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a1_leaf_binding_batch\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[63]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a1_remaining_binding_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[63]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[63]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_v1_scalar_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[63]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_v2_straight_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[63]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_v3_branching_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[63]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [],
+      "object_path": "$line[63]",
+      "path_hints": [
+        "src/pretix/base/models/orders.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        },
+        {
+          "key_path": "$.file",
+          "value": "src/pretix/base/models/orders.py"
+        },
+        {
+          "key_path": "$.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "484ab3244449b78903da0eafb20acb58980e82551ea0d4083696ad13d747e0ae",
+        "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [
+        "484ab3244449b78903da0eafb20acb58980e82551ea0d4083696ad13d747e0ae",
+        "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+      ],
+      "object_path": "$line[63]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "484ab3244449b78903da0eafb20acb58980e82551ea0d4083696ad13d747e0ae"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+        "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\execution_probe.jsonl",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [
+        "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+        "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+      ],
+      "object_path": "$line[1]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+        },
+        {
+          "key_path": "$.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "484ab3244449b78903da0eafb20acb58980e82551ea0d4083696ad13d747e0ae",
+        "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+        "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_outcomes.jsonl",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [
+        "484ab3244449b78903da0eafb20acb58980e82551ea0d4083696ad13d747e0ae",
+        "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+        "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+      ],
+      "object_path": "$line[1]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+        },
+        {
+          "key_path": "$.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "484ab3244449b78903da0eafb20acb58980e82551ea0d4083696ad13d747e0ae"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\controlled_state_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[63]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "0a42c3b2e4a0c81f669faf8a21907dff1bb1ccc802d5b9cf7c5a35faa0fd191f",
+        "1fd991ea0de108b50a07468e4542233bf5cb301a1b98276865d8a6dedc392763",
+        "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef"
+      ],
+      "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [
+        "0a42c3b2e4a0c81f669faf8a21907dff1bb1ccc802d5b9cf7c5a35faa0fd191f",
+        "1fd991ea0de108b50a07468e4542233bf5cb301a1b98276865d8a6dedc392763",
+        "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef"
+      ],
+      "object_path": "$line[63]",
+      "path_hints": [
+        "src/pretix/base/models/orders.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        },
+        {
+          "key_path": "$.provenance.file",
+          "value": "src/pretix/base/models/orders.py"
+        },
+        {
+          "key_path": "$.provenance.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.provenance.snippet_sha256",
+          "value": "1fd991ea0de108b50a07468e4542233bf5cb301a1b98276865d8a6dedc392763"
+        },
+        {
+          "key_path": "$.provenance.source_file_sha256",
+          "value": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef"
+        },
+        {
+          "key_path": "$.provenance.source_id",
+          "value": "pretix"
+        },
+        {
+          "key_path": "$.selection_hash",
+          "value": "0a42c3b2e4a0c81f669faf8a21907dff1bb1ccc802d5b9cf7c5a35faa0fd191f"
+        },
+        {
+          "key_path": "$.stratum.source_id",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [],
+      "object_path": "$line[82]",
+      "path_hints": [
+        "src/pretix/base/models/orders.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        },
+        {
+          "key_path": "$.file",
+          "value": "src/pretix/base/models/orders.py"
+        },
+        {
+          "key_path": "$.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.source_id",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[1]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        },
+        {
+          "key_path": "$.evidence[0].key_path",
+          "value": "frontier_status"
+        },
+        {
+          "key_path": "$.evidence[1].key_path",
+          "value": "execution_status"
+        },
+        {
+          "key_path": "$.evidence[2].key_path",
+          "value": "controlled_execution_status"
+        },
+        {
+          "key_path": "$.evidence[3].key_path",
+          "value": "reason_code"
+        },
+        {
+          "key_path": "$.evidence[4].key_path",
+          "value": "feasibility.adapter_blockers.0"
+        },
+        {
+          "key_path": "$.evidence[5].key_path",
+          "value": "feasibility.adapter_blockers.1"
+        },
+        {
+          "key_path": "$.evidence[6].key_path",
+          "value": "feasibility.adapter_blockers.2"
+        },
+        {
+          "key_path": "$.evidence[7].key_path",
+          "value": "feasibility.adapter_blockers.3"
+        },
+        {
+          "key_path": "$.evidence[8].key_path",
+          "value": "feasibility.adapter_blockers.4"
+        },
+        {
+          "key_path": "$.evidence[9].key_path",
+          "value": "feasibility.adapter_blockers.5"
+        },
+        {
+          "key_path": "$.evidence[10].key_path",
+          "value": "feasibility.adapter_blockers.6"
+        },
+        {
+          "key_path": "$.evidence[11].key_path",
+          "value": "v0.6_classification.classification_reasons.0"
+        },
+        {
+          "key_path": "$.evidence[12].key_path",
+          "value": "v0.6_classification.classification_reasons.1"
+        },
+        {
+          "key_path": "$.evidence[13].key_path",
+          "value": "v0.6_classification.classification_reasons.2"
+        },
+        {
+          "key_path": "$.evidence[14].key_path",
+          "value": "v0.6_classification.classification_reasons.3"
+        },
+        {
+          "key_path": "$.evidence[15].key_path",
+          "value": "v0.6_classification.classification_reasons.4"
+        },
+        {
+          "key_path": "$.evidence[16].key_path",
+          "value": "v0.6_classification.classification_reasons.5"
+        },
+        {
+          "key_path": "$.evidence[17].key_path",
+          "value": "adapter_blockers.0"
+        },
+        {
+          "key_path": "$.evidence[18].key_path",
+          "value": "adapter_blockers.1"
+        },
+        {
+          "key_path": "$.evidence[19].key_path",
+          "value": "adapter_blockers.2"
+        },
+        {
+          "key_path": "$.evidence[20].key_path",
+          "value": "adapter_blockers.3"
+        },
+        {
+          "key_path": "$.evidence[21].key_path",
+          "value": "adapter_blockers.4"
+        },
+        {
+          "key_path": "$.evidence[22].key_path",
+          "value": "adapter_blockers.5"
+        },
+        {
+          "key_path": "$.evidence[23].key_path",
+          "value": "adapter_blockers.6"
+        },
+        {
+          "key_path": "$.evidence[24].key_path",
+          "value": "frontier_status"
+        },
+        {
+          "key_path": "$.evidence[25].key_path",
+          "value": "frontier_status"
+        },
+        {
+          "key_path": "$.evidence[26].key_path",
+          "value": "candidate.classification_reasons.0"
+        },
+        {
+          "key_path": "$.evidence[27].key_path",
+          "value": "candidate.classification_reasons.1"
+        },
+        {
+          "key_path": "$.evidence[28].key_path",
+          "value": "candidate.classification_reasons.2"
+        },
+        {
+          "key_path": "$.evidence[29].key_path",
+          "value": "candidate.classification_reasons.3"
+        },
+        {
+          "key_path": "$.evidence[30].key_path",
+          "value": "candidate.classification_reasons.4"
+        },
+        {
+          "key_path": "$.evidence[31].key_path",
+          "value": "candidate.classification_reasons.5"
+        },
+        {
+          "key_path": "$.evidence[32].artifact",
+          "value": "controlled_complex_closure\\negative_evidence\\03e2adf4e4f323b1.json"
+        },
+        {
+          "key_path": "$.evidence[32].key_path",
+          "value": "controlled_execution_status"
+        },
+        {
+          "key_path": "$.evidence[33].artifact",
+          "value": "controlled_complex_closure\\negative_evidence\\03e2adf4e4f323b1.json"
+        },
+        {
+          "key_path": "$.evidence[33].key_path",
+          "value": "reason_code"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[1].evidence[32]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.artifact",
+          "value": "controlled_complex_closure\\negative_evidence\\03e2adf4e4f323b1.json"
+        },
+        {
+          "key_path": "$.key_path",
+          "value": "controlled_execution_status"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[1].evidence[33]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.artifact",
+          "value": "controlled_complex_closure\\negative_evidence\\03e2adf4e4f323b1.json"
+        },
+        {
+          "key_path": "$.key_path",
+          "value": "reason_code"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_manual_review.csv",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$csv[2]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$csv[2]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_preliminary.csv",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$csv[2]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[63]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\controlled_execution_worklist.jsonl",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [],
+      "object_path": "$line[1]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        },
+        {
+          "key_path": "$.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.semantic_shape",
+          "value": "None"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\remaining_candidates.jsonl",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [],
+      "object_path": "$line[2]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        },
+        {
+          "key_path": "$.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.semantic_shape",
+          "value": "None"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\residual_binding_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[63]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "0a42c3b2e4a0c81f669faf8a21907dff1bb1ccc802d5b9cf7c5a35faa0fd191f",
+        "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef",
+        "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437"
+      ],
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [
+        "0a42c3b2e4a0c81f669faf8a21907dff1bb1ccc802d5b9cf7c5a35faa0fd191f",
+        "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef",
+        "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437"
+      ],
+      "object_path": "$line[63]",
+      "path_hints": [
+        "doc/api/fundamentals.rst",
+        "doc/api/guides/custom_checkout.rst",
+        "doc/api/guides/order_lifecycle.rst",
+        "doc/api/oauth.rst",
+        "doc/api/resources/auto_checkin_rules.rst",
+        "doc/api/resources/banktransfer.rst",
+        "doc/api/resources/carts.rst",
+        "doc/api/resources/certificates.rst",
+        "src/pretix/base/models/orders.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate.business_keyword_sources.class[0]",
+          "value": "order"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.path[0]",
+          "value": "order"
+        },
+        {
+          "key_path": "$.candidate.file",
+          "value": "src/pretix/base/models/orders.py"
+        },
+        {
+          "key_path": "$.candidate.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.candidate.function_sha256",
+          "value": "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437"
+        },
+        {
+          "key_path": "$.candidate.source_file_sha256",
+          "value": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef"
+        },
+        {
+          "key_path": "$.candidate.source_id",
+          "value": "pretix"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[0]",
+          "value": "doc/api/fundamentals.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[1]",
+          "value": "doc/api/guides/custom_checkout.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[2]",
+          "value": "doc/api/guides/order_lifecycle.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[3]",
+          "value": "doc/api/oauth.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[4]",
+          "value": "doc/api/resources/auto_checkin_rules.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[5]",
+          "value": "doc/api/resources/banktransfer.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[6]",
+          "value": "doc/api/resources/carts.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[7]",
+          "value": "doc/api/resources/certificates.rst"
+        },
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        },
+        {
+          "key_path": "$.selection_hash",
+          "value": "0a42c3b2e4a0c81f669faf8a21907dff1bb1ccc802d5b9cf7c5a35faa0fd191f"
+        },
+        {
+          "key_path": "$.stratum.source_id",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\terminal_certification\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[63]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [],
+      "object_path": "$line[82]",
+      "path_hints": [
+        "src/pretix/base/models/orders.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        },
+        {
+          "key_path": "$.file",
+          "value": "src/pretix/base/models/orders.py"
+        },
+        {
+          "key_path": "$.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.semantic_shape",
+          "value": "None"
+        },
+        {
+          "key_path": "$.source_id",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "484ab3244449b78903da0eafb20acb58980e82551ea0d4083696ad13d747e0ae",
+        "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+        "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_evidence\\03e2adf4e4f323b1.json",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [
+        "484ab3244449b78903da0eafb20acb58980e82551ea0d4083696ad13d747e0ae",
+        "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+        "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+      ],
+      "object_path": "$",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+        },
+        {
+          "key_path": "$.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "484ab3244449b78903da0eafb20acb58980e82551ea0d4083696ad13d747e0ae"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    }
+  ],
+  "63e7979762bf860b": [
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a1_batch_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[3]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a1_leaf_binding_batch\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[3]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a1_remaining_binding_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[3]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[3]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_v1_scalar_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[3]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_v2_straight_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[3]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_v3_branching_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[3]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+      "function_names": [
+        "form_valid"
+      ],
+      "hashes": [],
+      "object_path": "$line[3]",
+      "path_hints": [
+        "src/oscar/apps/basket/views.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        },
+        {
+          "key_path": "$.file",
+          "value": "src/oscar/apps/basket/views.py"
+        },
+        {
+          "key_path": "$.function",
+          "value": "form_valid"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "68f36236a098797b2a80dbb5e16a0d2db144b486ea8e1674b8ed258f383521ed",
+        "845c74a54e3e00a528f98190e07c90ce9e9967d9b11d6cd5e86dd37c42b0f1d8"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [
+        "68f36236a098797b2a80dbb5e16a0d2db144b486ea8e1674b8ed258f383521ed",
+        "845c74a54e3e00a528f98190e07c90ce9e9967d9b11d6cd5e86dd37c42b0f1d8"
+      ],
+      "object_path": "$line[3]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "68f36236a098797b2a80dbb5e16a0d2db144b486ea8e1674b8ed258f383521ed"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "845c74a54e3e00a528f98190e07c90ce9e9967d9b11d6cd5e86dd37c42b0f1d8"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "68f36236a098797b2a80dbb5e16a0d2db144b486ea8e1674b8ed258f383521ed",
+        "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\execution_probe.jsonl",
+      "function_names": [
+        "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34",
+        "form_valid"
+      ],
+      "hashes": [
+        "68f36236a098797b2a80dbb5e16a0d2db144b486ea8e1674b8ed258f383521ed",
+        "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34"
+      ],
+      "object_path": "$line[4]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "68f36236a098797b2a80dbb5e16a0d2db144b486ea8e1674b8ed258f383521ed"
+        },
+        {
+          "key_path": "$.function",
+          "value": "form_valid"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "68f36236a098797b2a80dbb5e16a0d2db144b486ea8e1674b8ed258f383521ed",
+        "845c74a54e3e00a528f98190e07c90ce9e9967d9b11d6cd5e86dd37c42b0f1d8",
+        "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_outcomes.jsonl",
+      "function_names": [
+        "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34",
+        "form_valid"
+      ],
+      "hashes": [
+        "68f36236a098797b2a80dbb5e16a0d2db144b486ea8e1674b8ed258f383521ed",
+        "845c74a54e3e00a528f98190e07c90ce9e9967d9b11d6cd5e86dd37c42b0f1d8",
+        "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34"
+      ],
+      "object_path": "$line[2]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "68f36236a098797b2a80dbb5e16a0d2db144b486ea8e1674b8ed258f383521ed"
+        },
+        {
+          "key_path": "$.function",
+          "value": "form_valid"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "845c74a54e3e00a528f98190e07c90ce9e9967d9b11d6cd5e86dd37c42b0f1d8"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\controlled_state_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[3]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "067df36d502f9a04270d290097660554e73d3663240b8585e4fd3cfe9c9a3a55",
+        "0ed2db18c99446c682919838e1a868d94e01e97c3259906a8ffc89e01c2baaf9",
+        "d978ce9eb54de7473cc5f6ba2882acf4a4bca4573eb75af56b32ca0e26866413"
+      ],
+      "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+      "function_names": [
+        "form_valid"
+      ],
+      "hashes": [
+        "067df36d502f9a04270d290097660554e73d3663240b8585e4fd3cfe9c9a3a55",
+        "0ed2db18c99446c682919838e1a868d94e01e97c3259906a8ffc89e01c2baaf9",
+        "d978ce9eb54de7473cc5f6ba2882acf4a4bca4573eb75af56b32ca0e26866413"
+      ],
+      "object_path": "$line[3]",
+      "path_hints": [
+        "src/oscar/apps/basket/views.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        },
+        {
+          "key_path": "$.provenance.file",
+          "value": "src/oscar/apps/basket/views.py"
+        },
+        {
+          "key_path": "$.provenance.function",
+          "value": "form_valid"
+        },
+        {
+          "key_path": "$.provenance.snippet_sha256",
+          "value": "067df36d502f9a04270d290097660554e73d3663240b8585e4fd3cfe9c9a3a55"
+        },
+        {
+          "key_path": "$.provenance.source_file_sha256",
+          "value": "d978ce9eb54de7473cc5f6ba2882acf4a4bca4573eb75af56b32ca0e26866413"
+        },
+        {
+          "key_path": "$.provenance.source_id",
+          "value": "django_oscar"
+        },
+        {
+          "key_path": "$.selection_hash",
+          "value": "0ed2db18c99446c682919838e1a868d94e01e97c3259906a8ffc89e01c2baaf9"
+        },
+        {
+          "key_path": "$.stratum.source_id",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+      "function_names": [
+        "form_valid"
+      ],
+      "hashes": [],
+      "object_path": "$line[75]",
+      "path_hints": [
+        "src/oscar/apps/basket/views.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        },
+        {
+          "key_path": "$.file",
+          "value": "src/oscar/apps/basket/views.py"
+        },
+        {
+          "key_path": "$.function",
+          "value": "form_valid"
+        },
+        {
+          "key_path": "$.source_id",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[11]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        },
+        {
+          "key_path": "$.evidence[0].key_path",
+          "value": "frontier_status"
+        },
+        {
+          "key_path": "$.evidence[1].key_path",
+          "value": "execution_status"
+        },
+        {
+          "key_path": "$.evidence[2].key_path",
+          "value": "controlled_execution_status"
+        },
+        {
+          "key_path": "$.evidence[3].key_path",
+          "value": "reason_code"
+        },
+        {
+          "key_path": "$.evidence[4].key_path",
+          "value": "feasibility.adapter_blockers.0"
+        },
+        {
+          "key_path": "$.evidence[5].key_path",
+          "value": "feasibility.adapter_blockers.1"
+        },
+        {
+          "key_path": "$.evidence[6].key_path",
+          "value": "feasibility.adapter_blockers.2"
+        },
+        {
+          "key_path": "$.evidence[7].key_path",
+          "value": "v0.6_classification.classification_reasons.0"
+        },
+        {
+          "key_path": "$.evidence[8].key_path",
+          "value": "v0.6_classification.classification_reasons.1"
+        },
+        {
+          "key_path": "$.evidence[9].key_path",
+          "value": "v0.6_classification.classification_reasons.2"
+        },
+        {
+          "key_path": "$.evidence[10].key_path",
+          "value": "v0.6_classification.classification_reasons.3"
+        },
+        {
+          "key_path": "$.evidence[11].key_path",
+          "value": "v0.6_classification.classification_reasons.4"
+        },
+        {
+          "key_path": "$.evidence[12].key_path",
+          "value": "adapter_blockers.0"
+        },
+        {
+          "key_path": "$.evidence[13].key_path",
+          "value": "adapter_blockers.1"
+        },
+        {
+          "key_path": "$.evidence[14].key_path",
+          "value": "adapter_blockers.2"
+        },
+        {
+          "key_path": "$.evidence[15].key_path",
+          "value": "frontier_status"
+        },
+        {
+          "key_path": "$.evidence[16].key_path",
+          "value": "frontier_status"
+        },
+        {
+          "key_path": "$.evidence[17].key_path",
+          "value": "candidate.classification_reasons.0"
+        },
+        {
+          "key_path": "$.evidence[18].key_path",
+          "value": "candidate.classification_reasons.1"
+        },
+        {
+          "key_path": "$.evidence[19].key_path",
+          "value": "candidate.classification_reasons.2"
+        },
+        {
+          "key_path": "$.evidence[20].key_path",
+          "value": "candidate.classification_reasons.3"
+        },
+        {
+          "key_path": "$.evidence[21].key_path",
+          "value": "candidate.classification_reasons.4"
+        },
+        {
+          "key_path": "$.evidence[22].artifact",
+          "value": "controlled_complex_closure\\negative_evidence\\63e7979762bf860b.json"
+        },
+        {
+          "key_path": "$.evidence[22].key_path",
+          "value": "controlled_execution_status"
+        },
+        {
+          "key_path": "$.evidence[23].artifact",
+          "value": "controlled_complex_closure\\negative_evidence\\63e7979762bf860b.json"
+        },
+        {
+          "key_path": "$.evidence[23].key_path",
+          "value": "reason_code"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[11].evidence[22]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.artifact",
+          "value": "controlled_complex_closure\\negative_evidence\\63e7979762bf860b.json"
+        },
+        {
+          "key_path": "$.key_path",
+          "value": "controlled_execution_status"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[11].evidence[23]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.artifact",
+          "value": "controlled_complex_closure\\negative_evidence\\63e7979762bf860b.json"
+        },
+        {
+          "key_path": "$.key_path",
+          "value": "reason_code"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_manual_review.csv",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$csv[12]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$csv[12]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_preliminary.csv",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$csv[12]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[3]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\controlled_execution_worklist.jsonl",
+      "function_names": [
+        "form_valid"
+      ],
+      "hashes": [],
+      "object_path": "$line[6]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        },
+        {
+          "key_path": "$.function",
+          "value": "form_valid"
+        },
+        {
+          "key_path": "$.semantic_shape",
+          "value": "None"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\remaining_candidates.jsonl",
+      "function_names": [
+        "form_valid"
+      ],
+      "hashes": [],
+      "object_path": "$line[31]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        },
+        {
+          "key_path": "$.function",
+          "value": "form_valid"
+        },
+        {
+          "key_path": "$.semantic_shape",
+          "value": "None"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\residual_binding_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[3]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "0ed2db18c99446c682919838e1a868d94e01e97c3259906a8ffc89e01c2baaf9",
+        "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34",
+        "d978ce9eb54de7473cc5f6ba2882acf4a4bca4573eb75af56b32ca0e26866413"
+      ],
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "function_names": [
+        "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34",
+        "form_valid"
+      ],
+      "hashes": [
+        "0ed2db18c99446c682919838e1a868d94e01e97c3259906a8ffc89e01c2baaf9",
+        "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34",
+        "d978ce9eb54de7473cc5f6ba2882acf4a4bca4573eb75af56b32ca0e26866413"
+      ],
+      "object_path": "$line[3]",
+      "path_hints": [
+        "docs/source/howto/how_to_integrate_payment.rst",
+        "docs/source/releases/v2.1.rst",
+        "src/oscar/apps/basket/views.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate.business_keyword_sources.class[0]",
+          "value": "basket"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.path[0]",
+          "value": "basket"
+        },
+        {
+          "key_path": "$.candidate.evidence_link_modes.doc:EXACT_FUNCTION_TEXT",
+          "value": "2"
+        },
+        {
+          "key_path": "$.candidate.file",
+          "value": "src/oscar/apps/basket/views.py"
+        },
+        {
+          "key_path": "$.candidate.function",
+          "value": "form_valid"
+        },
+        {
+          "key_path": "$.candidate.function_sha256",
+          "value": "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34"
+        },
+        {
+          "key_path": "$.candidate.source_file_sha256",
+          "value": "d978ce9eb54de7473cc5f6ba2882acf4a4bca4573eb75af56b32ca0e26866413"
+        },
+        {
+          "key_path": "$.candidate.source_id",
+          "value": "django_oscar"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[0]",
+          "value": "docs/source/howto/how_to_integrate_payment.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[1]",
+          "value": "docs/source/releases/v2.1.rst"
+        },
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        },
+        {
+          "key_path": "$.selection_hash",
+          "value": "0ed2db18c99446c682919838e1a868d94e01e97c3259906a8ffc89e01c2baaf9"
+        },
+        {
+          "key_path": "$.stratum.source_id",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\terminal_certification\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[3]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+      "function_names": [
+        "form_valid"
+      ],
+      "hashes": [],
+      "object_path": "$line[75]",
+      "path_hints": [
+        "src/oscar/apps/basket/views.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        },
+        {
+          "key_path": "$.file",
+          "value": "src/oscar/apps/basket/views.py"
+        },
+        {
+          "key_path": "$.function",
+          "value": "form_valid"
+        },
+        {
+          "key_path": "$.semantic_shape",
+          "value": "None"
+        },
+        {
+          "key_path": "$.source_id",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "68f36236a098797b2a80dbb5e16a0d2db144b486ea8e1674b8ed258f383521ed",
+        "845c74a54e3e00a528f98190e07c90ce9e9967d9b11d6cd5e86dd37c42b0f1d8",
+        "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_evidence\\63e7979762bf860b.json",
+      "function_names": [
+        "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34",
+        "form_valid"
+      ],
+      "hashes": [
+        "68f36236a098797b2a80dbb5e16a0d2db144b486ea8e1674b8ed258f383521ed",
+        "845c74a54e3e00a528f98190e07c90ce9e9967d9b11d6cd5e86dd37c42b0f1d8",
+        "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34"
+      ],
+      "object_path": "$",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "63e7979762bf860b"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "68f36236a098797b2a80dbb5e16a0d2db144b486ea8e1674b8ed258f383521ed"
+        },
+        {
+          "key_path": "$.function",
+          "value": "form_valid"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "845c74a54e3e00a528f98190e07c90ce9e9967d9b11d6cd5e86dd37c42b0f1d8"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    }
+  ],
+  "7460029971aad8de": [
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a1_batch_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[66]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a1_leaf_binding_batch\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[66]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a1_remaining_binding_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[66]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[66]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_v1_scalar_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[66]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_v2_straight_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[66]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_v3_branching_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[66]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+      "function_names": [
+        "availability"
+      ],
+      "hashes": [],
+      "object_path": "$line[66]",
+      "path_hints": [
+        "src/pretix/base/models/items.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        },
+        {
+          "key_path": "$.file",
+          "value": "src/pretix/base/models/items.py"
+        },
+        {
+          "key_path": "$.function",
+          "value": "availability"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "0830e3da863ca977bff711952c17e4c8e7e1e216174f5bc8431bc88181c03c5a",
+        "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [
+        "0830e3da863ca977bff711952c17e4c8e7e1e216174f5bc8431bc88181c03c5a",
+        "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+      ],
+      "object_path": "$line[66]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "0830e3da863ca977bff711952c17e4c8e7e1e216174f5bc8431bc88181c03c5a"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+        "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\execution_probe.jsonl",
+      "function_names": [
+        "availability"
+      ],
+      "hashes": [
+        "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+        "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+      ],
+      "object_path": "$line[5]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+        },
+        {
+          "key_path": "$.function",
+          "value": "availability"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+        "0830e3da863ca977bff711952c17e4c8e7e1e216174f5bc8431bc88181c03c5a",
+        "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_outcomes.jsonl",
+      "function_names": [
+        "availability"
+      ],
+      "hashes": [
+        "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+        "0830e3da863ca977bff711952c17e4c8e7e1e216174f5bc8431bc88181c03c5a",
+        "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+      ],
+      "object_path": "$line[3]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+        },
+        {
+          "key_path": "$.function",
+          "value": "availability"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "0830e3da863ca977bff711952c17e4c8e7e1e216174f5bc8431bc88181c03c5a"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\controlled_state_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[66]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "1a7e544e923ae44df55816c50325220efa9d9d52f78d98b0b82c905e31f10453",
+        "817d8b2a8859b612092d0b3b94a1bc39519a17909073d3ea637f881b886fc8f4",
+        "9f31603d7994b3861b7d319eac411392a1748d04c2b9322469565fd2dc69bc7d"
+      ],
+      "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+      "function_names": [
+        "availability"
+      ],
+      "hashes": [
+        "1a7e544e923ae44df55816c50325220efa9d9d52f78d98b0b82c905e31f10453",
+        "817d8b2a8859b612092d0b3b94a1bc39519a17909073d3ea637f881b886fc8f4",
+        "9f31603d7994b3861b7d319eac411392a1748d04c2b9322469565fd2dc69bc7d"
+      ],
+      "object_path": "$line[66]",
+      "path_hints": [
+        "src/pretix/base/models/items.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        },
+        {
+          "key_path": "$.provenance.file",
+          "value": "src/pretix/base/models/items.py"
+        },
+        {
+          "key_path": "$.provenance.function",
+          "value": "availability"
+        },
+        {
+          "key_path": "$.provenance.snippet_sha256",
+          "value": "817d8b2a8859b612092d0b3b94a1bc39519a17909073d3ea637f881b886fc8f4"
+        },
+        {
+          "key_path": "$.provenance.source_file_sha256",
+          "value": "9f31603d7994b3861b7d319eac411392a1748d04c2b9322469565fd2dc69bc7d"
+        },
+        {
+          "key_path": "$.provenance.source_id",
+          "value": "pretix"
+        },
+        {
+          "key_path": "$.selection_hash",
+          "value": "1a7e544e923ae44df55816c50325220efa9d9d52f78d98b0b82c905e31f10453"
+        },
+        {
+          "key_path": "$.stratum.source_id",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+      "function_names": [
+        "availability"
+      ],
+      "hashes": [],
+      "object_path": "$line[83]",
+      "path_hints": [
+        "src/pretix/base/models/items.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        },
+        {
+          "key_path": "$.file",
+          "value": "src/pretix/base/models/items.py"
+        },
+        {
+          "key_path": "$.function",
+          "value": "availability"
+        },
+        {
+          "key_path": "$.source_id",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[15]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        },
+        {
+          "key_path": "$.evidence[0].key_path",
+          "value": "frontier_status"
+        },
+        {
+          "key_path": "$.evidence[1].key_path",
+          "value": "execution_status"
+        },
+        {
+          "key_path": "$.evidence[2].key_path",
+          "value": "controlled_execution_status"
+        },
+        {
+          "key_path": "$.evidence[3].key_path",
+          "value": "reason_code"
+        },
+        {
+          "key_path": "$.evidence[4].key_path",
+          "value": "feasibility.adapter_blockers.0"
+        },
+        {
+          "key_path": "$.evidence[5].key_path",
+          "value": "feasibility.adapter_blockers.1"
+        },
+        {
+          "key_path": "$.evidence[6].key_path",
+          "value": "feasibility.adapter_blockers.2"
+        },
+        {
+          "key_path": "$.evidence[7].key_path",
+          "value": "feasibility.adapter_blockers.3"
+        },
+        {
+          "key_path": "$.evidence[8].key_path",
+          "value": "v0.6_classification.classification_reasons.0"
+        },
+        {
+          "key_path": "$.evidence[9].key_path",
+          "value": "v0.6_classification.classification_reasons.1"
+        },
+        {
+          "key_path": "$.evidence[10].key_path",
+          "value": "v0.6_classification.classification_reasons.2"
+        },
+        {
+          "key_path": "$.evidence[11].key_path",
+          "value": "v0.6_classification.classification_reasons.3"
+        },
+        {
+          "key_path": "$.evidence[12].key_path",
+          "value": "v0.6_classification.classification_reasons.4"
+        },
+        {
+          "key_path": "$.evidence[13].key_path",
+          "value": "adapter_blockers.0"
+        },
+        {
+          "key_path": "$.evidence[14].key_path",
+          "value": "adapter_blockers.1"
+        },
+        {
+          "key_path": "$.evidence[15].key_path",
+          "value": "adapter_blockers.2"
+        },
+        {
+          "key_path": "$.evidence[16].key_path",
+          "value": "adapter_blockers.3"
+        },
+        {
+          "key_path": "$.evidence[17].key_path",
+          "value": "frontier_status"
+        },
+        {
+          "key_path": "$.evidence[18].key_path",
+          "value": "frontier_status"
+        },
+        {
+          "key_path": "$.evidence[19].key_path",
+          "value": "candidate.classification_reasons.0"
+        },
+        {
+          "key_path": "$.evidence[20].key_path",
+          "value": "candidate.classification_reasons.1"
+        },
+        {
+          "key_path": "$.evidence[21].key_path",
+          "value": "candidate.classification_reasons.2"
+        },
+        {
+          "key_path": "$.evidence[22].key_path",
+          "value": "candidate.classification_reasons.3"
+        },
+        {
+          "key_path": "$.evidence[23].key_path",
+          "value": "candidate.classification_reasons.4"
+        },
+        {
+          "key_path": "$.evidence[24].artifact",
+          "value": "controlled_complex_closure\\negative_evidence\\7460029971aad8de.json"
+        },
+        {
+          "key_path": "$.evidence[24].key_path",
+          "value": "controlled_execution_status"
+        },
+        {
+          "key_path": "$.evidence[25].artifact",
+          "value": "controlled_complex_closure\\negative_evidence\\7460029971aad8de.json"
+        },
+        {
+          "key_path": "$.evidence[25].key_path",
+          "value": "reason_code"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[15].evidence[24]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.artifact",
+          "value": "controlled_complex_closure\\negative_evidence\\7460029971aad8de.json"
+        },
+        {
+          "key_path": "$.key_path",
+          "value": "controlled_execution_status"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[15].evidence[25]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.artifact",
+          "value": "controlled_complex_closure\\negative_evidence\\7460029971aad8de.json"
+        },
+        {
+          "key_path": "$.key_path",
+          "value": "reason_code"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_manual_review.csv",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$csv[16]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$csv[16]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_preliminary.csv",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$csv[16]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[66]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\controlled_execution_worklist.jsonl",
+      "function_names": [
+        "availability"
+      ],
+      "hashes": [],
+      "object_path": "$line[7]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        },
+        {
+          "key_path": "$.function",
+          "value": "availability"
+        },
+        {
+          "key_path": "$.semantic_shape",
+          "value": "None"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\remaining_candidates.jsonl",
+      "function_names": [
+        "availability"
+      ],
+      "hashes": [],
+      "object_path": "$line[36]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        },
+        {
+          "key_path": "$.function",
+          "value": "availability"
+        },
+        {
+          "key_path": "$.semantic_shape",
+          "value": "None"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\residual_binding_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[66]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+        "1a7e544e923ae44df55816c50325220efa9d9d52f78d98b0b82c905e31f10453",
+        "9f31603d7994b3861b7d319eac411392a1748d04c2b9322469565fd2dc69bc7d"
+      ],
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "function_names": [
+        "availability"
+      ],
+      "hashes": [
+        "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+        "1a7e544e923ae44df55816c50325220efa9d9d52f78d98b0b82c905e31f10453",
+        "9f31603d7994b3861b7d319eac411392a1748d04c2b9322469565fd2dc69bc7d"
+      ],
+      "object_path": "$line[66]",
+      "path_hints": [
+        "doc/api/guides/custom_checkout.rst",
+        "doc/api/resources/carts.rst",
+        "doc/api/resources/exhibitors.rst",
+        "doc/api/resources/exporters.rst",
+        "doc/api/resources/item_bundles.rst",
+        "doc/api/resources/items.rst",
+        "doc/api/resources/offlinesales.rst",
+        "doc/api/resources/orders.rst",
+        "src/pretix/base/models/items.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate.business_keyword_sources.class[0]",
+          "value": "quota"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.docstring[0]",
+          "value": "account"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.docstring[1]",
+          "value": "availability"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.docstring[2]",
+          "value": "quota"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.function[0]",
+          "value": "availability"
+        },
+        {
+          "key_path": "$.candidate.evidence_link_modes.doc:EXACT_FUNCTION_TEXT",
+          "value": "6"
+        },
+        {
+          "key_path": "$.candidate.file",
+          "value": "src/pretix/base/models/items.py"
+        },
+        {
+          "key_path": "$.candidate.function",
+          "value": "availability"
+        },
+        {
+          "key_path": "$.candidate.function_sha256",
+          "value": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed"
+        },
+        {
+          "key_path": "$.candidate.source_file_sha256",
+          "value": "9f31603d7994b3861b7d319eac411392a1748d04c2b9322469565fd2dc69bc7d"
+        },
+        {
+          "key_path": "$.candidate.source_id",
+          "value": "pretix"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[0]",
+          "value": "doc/api/guides/custom_checkout.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[1]",
+          "value": "doc/api/resources/carts.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[2]",
+          "value": "doc/api/resources/exhibitors.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[3]",
+          "value": "doc/api/resources/exporters.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[4]",
+          "value": "doc/api/resources/item_bundles.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[5]",
+          "value": "doc/api/resources/items.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[6]",
+          "value": "doc/api/resources/offlinesales.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[7]",
+          "value": "doc/api/resources/orders.rst"
+        },
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        },
+        {
+          "key_path": "$.selection_hash",
+          "value": "1a7e544e923ae44df55816c50325220efa9d9d52f78d98b0b82c905e31f10453"
+        },
+        {
+          "key_path": "$.stratum.source_id",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\terminal_certification\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[66]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+      "function_names": [
+        "availability"
+      ],
+      "hashes": [],
+      "object_path": "$line[83]",
+      "path_hints": [
+        "src/pretix/base/models/items.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        },
+        {
+          "key_path": "$.file",
+          "value": "src/pretix/base/models/items.py"
+        },
+        {
+          "key_path": "$.function",
+          "value": "availability"
+        },
+        {
+          "key_path": "$.semantic_shape",
+          "value": "None"
+        },
+        {
+          "key_path": "$.source_id",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+        "0830e3da863ca977bff711952c17e4c8e7e1e216174f5bc8431bc88181c03c5a",
+        "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_evidence\\7460029971aad8de.json",
+      "function_names": [
+        "availability"
+      ],
+      "hashes": [
+        "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+        "0830e3da863ca977bff711952c17e4c8e7e1e216174f5bc8431bc88181c03c5a",
+        "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+      ],
+      "object_path": "$",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+        },
+        {
+          "key_path": "$.function",
+          "value": "availability"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "0830e3da863ca977bff711952c17e4c8e7e1e216174f5bc8431bc88181c03c5a"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    }
+  ],
+  "7cf281a33e5781df": [
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a1_batch_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[89]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a1_leaf_binding_batch\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[89]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a1_remaining_binding_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[89]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[89]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_v1_scalar_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[89]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_v2_straight_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[89]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_v3_branching_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[89]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+      "function_names": [
+        "price"
+      ],
+      "hashes": [],
+      "object_path": "$line[89]",
+      "path_hints": [
+        "src/pretix/base/models/orders.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        },
+        {
+          "key_path": "$.file",
+          "value": "src/pretix/base/models/orders.py"
+        },
+        {
+          "key_path": "$.function",
+          "value": "price"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "af6a75af2e5a52ab0f88464216d1bffa9b4305a84eccbf00378e1d2f907ccddc",
+        "e88486af5832ffd34ce008a2ea859c2835c3381ce755554e639566030d8ac6f0"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [
+        "af6a75af2e5a52ab0f88464216d1bffa9b4305a84eccbf00378e1d2f907ccddc",
+        "e88486af5832ffd34ce008a2ea859c2835c3381ce755554e639566030d8ac6f0"
+      ],
+      "object_path": "$line[89]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        },
+        {
+          "key_path": "$.execution_evidence_digest",
+          "value": "e88486af5832ffd34ce008a2ea859c2835c3381ce755554e639566030d8ac6f0"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "af6a75af2e5a52ab0f88464216d1bffa9b4305a84eccbf00378e1d2f907ccddc"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "af6a75af2e5a52ab0f88464216d1bffa9b4305a84eccbf00378e1d2f907ccddc",
+        "e88486af5832ffd34ce008a2ea859c2835c3381ce755554e639566030d8ac6f0"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_state_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [
+        "af6a75af2e5a52ab0f88464216d1bffa9b4305a84eccbf00378e1d2f907ccddc",
+        "e88486af5832ffd34ce008a2ea859c2835c3381ce755554e639566030d8ac6f0"
+      ],
+      "object_path": "$line[89]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        },
+        {
+          "key_path": "$.execution_evidence_digest",
+          "value": "e88486af5832ffd34ce008a2ea859c2835c3381ce755554e639566030d8ac6f0"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "af6a75af2e5a52ab0f88464216d1bffa9b4305a84eccbf00378e1d2f907ccddc"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "e88486af5832ffd34ce008a2ea859c2835c3381ce755554e639566030d8ac6f0",
+        "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_state_closure\\execution_evidence.jsonl",
+      "function_names": [
+        "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f",
+        "price"
+      ],
+      "hashes": [
+        "e88486af5832ffd34ce008a2ea859c2835c3381ce755554e639566030d8ac6f0",
+        "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f"
+      ],
+      "object_path": "$line[3]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        },
+        {
+          "key_path": "$.execution_evidence_digest",
+          "value": "e88486af5832ffd34ce008a2ea859c2835c3381ce755554e639566030d8ac6f0"
+        },
+        {
+          "key_path": "$.function",
+          "value": "price"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "af6a75af2e5a52ab0f88464216d1bffa9b4305a84eccbf00378e1d2f907ccddc",
+        "e88486af5832ffd34ce008a2ea859c2835c3381ce755554e639566030d8ac6f0",
+        "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_state_closure\\negative_outcomes.jsonl",
+      "function_names": [
+        "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f",
+        "price"
+      ],
+      "hashes": [
+        "af6a75af2e5a52ab0f88464216d1bffa9b4305a84eccbf00378e1d2f907ccddc",
+        "e88486af5832ffd34ce008a2ea859c2835c3381ce755554e639566030d8ac6f0",
+        "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f"
+      ],
+      "object_path": "$line[3]",
+      "path_hints": [
+        "src/pretix/base/models/orders.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        },
+        {
+          "key_path": "$.execution_evidence_digest",
+          "value": "e88486af5832ffd34ce008a2ea859c2835c3381ce755554e639566030d8ac6f0"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "af6a75af2e5a52ab0f88464216d1bffa9b4305a84eccbf00378e1d2f907ccddc"
+        },
+        {
+          "key_path": "$.source.class",
+          "value": "OrderFee"
+        },
+        {
+          "key_path": "$.source.file",
+          "value": "src/pretix/base/models/orders.py"
+        },
+        {
+          "key_path": "$.source.function",
+          "value": "price"
+        },
+        {
+          "key_path": "$.source.function_sha256",
+          "value": "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f"
+        },
+        {
+          "key_path": "$.source.source_id",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "0c9e2fb287543ca709e4b56993a00321bfdaa8b6a4786fb0e1c54b6eab9b71e0",
+        "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef",
+        "d178abc61f7673063e79a00514c6c85edce96c5c7267b338036f15f4cfb6e292"
+      ],
+      "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+      "function_names": [
+        "price"
+      ],
+      "hashes": [
+        "0c9e2fb287543ca709e4b56993a00321bfdaa8b6a4786fb0e1c54b6eab9b71e0",
+        "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef",
+        "d178abc61f7673063e79a00514c6c85edce96c5c7267b338036f15f4cfb6e292"
+      ],
+      "object_path": "$line[89]",
+      "path_hints": [
+        "src/pretix/base/models/orders.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        },
+        {
+          "key_path": "$.provenance.file",
+          "value": "src/pretix/base/models/orders.py"
+        },
+        {
+          "key_path": "$.provenance.function",
+          "value": "price"
+        },
+        {
+          "key_path": "$.provenance.snippet_sha256",
+          "value": "d178abc61f7673063e79a00514c6c85edce96c5c7267b338036f15f4cfb6e292"
+        },
+        {
+          "key_path": "$.provenance.source_file_sha256",
+          "value": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef"
+        },
+        {
+          "key_path": "$.provenance.source_id",
+          "value": "pretix"
+        },
+        {
+          "key_path": "$.selection_hash",
+          "value": "0c9e2fb287543ca709e4b56993a00321bfdaa8b6a4786fb0e1c54b6eab9b71e0"
+        },
+        {
+          "key_path": "$.stratum.source_id",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+      "function_names": [
+        "price"
+      ],
+      "hashes": [],
+      "object_path": "$line[87]",
+      "path_hints": [
+        "src/pretix/base/models/orders.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        },
+        {
+          "key_path": "$.file",
+          "value": "src/pretix/base/models/orders.py"
+        },
+        {
+          "key_path": "$.function",
+          "value": "price"
+        },
+        {
+          "key_path": "$.source_id",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[18]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        },
+        {
+          "key_path": "$.evidence[0].key_path",
+          "value": "frontier_status"
+        },
+        {
+          "key_path": "$.evidence[1].key_path",
+          "value": "status"
+        },
+        {
+          "key_path": "$.evidence[2].key_path",
+          "value": "controlled_execution_status"
+        },
+        {
+          "key_path": "$.evidence[3].key_path",
+          "value": "reason"
+        },
+        {
+          "key_path": "$.evidence[4].key_path",
+          "value": "reason_code"
+        },
+        {
+          "key_path": "$.evidence[5].key_path",
+          "value": "feasibility.adapter_blockers.0"
+        },
+        {
+          "key_path": "$.evidence[6].key_path",
+          "value": "v0.6_classification.classification_reasons.0"
+        },
+        {
+          "key_path": "$.evidence[7].key_path",
+          "value": "v0.6_classification.classification_reasons.1"
+        },
+        {
+          "key_path": "$.evidence[8].key_path",
+          "value": "v0.6_classification.classification_reasons.2"
+        },
+        {
+          "key_path": "$.evidence[9].key_path",
+          "value": "v0.6_classification.classification_reasons.3"
+        },
+        {
+          "key_path": "$.evidence[10].key_path",
+          "value": "adapter_blockers.0"
+        },
+        {
+          "key_path": "$.evidence[11].key_path",
+          "value": "frontier_status"
+        },
+        {
+          "key_path": "$.evidence[12].key_path",
+          "value": "frontier_status"
+        },
+        {
+          "key_path": "$.evidence[13].key_path",
+          "value": "candidate.classification_reasons.0"
+        },
+        {
+          "key_path": "$.evidence[14].key_path",
+          "value": "candidate.classification_reasons.1"
+        },
+        {
+          "key_path": "$.evidence[15].key_path",
+          "value": "candidate.classification_reasons.2"
+        },
+        {
+          "key_path": "$.evidence[16].key_path",
+          "value": "candidate.classification_reasons.3"
+        },
+        {
+          "key_path": "$.evidence[17].artifact",
+          "value": "controlled_state_closure\\negative_evidence\\7cf281a33e5781df.json"
+        },
+        {
+          "key_path": "$.evidence[17].key_path",
+          "value": "controlled_execution_status"
+        },
+        {
+          "key_path": "$.evidence[18].artifact",
+          "value": "controlled_state_closure\\negative_evidence\\7cf281a33e5781df.json"
+        },
+        {
+          "key_path": "$.evidence[18].key_path",
+          "value": "reason"
+        },
+        {
+          "key_path": "$.evidence[19].artifact",
+          "value": "controlled_state_closure\\negative_evidence\\7cf281a33e5781df.json"
+        },
+        {
+          "key_path": "$.evidence[19].key_path",
+          "value": "reason_code"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[18].evidence[17]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.artifact",
+          "value": "controlled_state_closure\\negative_evidence\\7cf281a33e5781df.json"
+        },
+        {
+          "key_path": "$.key_path",
+          "value": "controlled_execution_status"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[18].evidence[18]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.artifact",
+          "value": "controlled_state_closure\\negative_evidence\\7cf281a33e5781df.json"
+        },
+        {
+          "key_path": "$.key_path",
+          "value": "reason"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[18].evidence[19]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.artifact",
+          "value": "controlled_state_closure\\negative_evidence\\7cf281a33e5781df.json"
+        },
+        {
+          "key_path": "$.key_path",
+          "value": "reason_code"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_manual_review.csv",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$csv[19]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$csv[19]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_preliminary.csv",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$csv[19]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[89]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\controlled_execution_worklist.jsonl",
+      "function_names": [
+        "price"
+      ],
+      "hashes": [],
+      "object_path": "$line[8]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        },
+        {
+          "key_path": "$.function",
+          "value": "price"
+        },
+        {
+          "key_path": "$.semantic_shape",
+          "value": "None"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\remaining_candidates.jsonl",
+      "function_names": [
+        "price"
+      ],
+      "hashes": [],
+      "object_path": "$line[39]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        },
+        {
+          "key_path": "$.function",
+          "value": "price"
+        },
+        {
+          "key_path": "$.semantic_shape",
+          "value": "None"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\residual_binding_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[89]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "0c9e2fb287543ca709e4b56993a00321bfdaa8b6a4786fb0e1c54b6eab9b71e0",
+        "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef",
+        "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f"
+      ],
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "function_names": [
+        "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f",
+        "price"
+      ],
+      "hashes": [
+        "0c9e2fb287543ca709e4b56993a00321bfdaa8b6a4786fb0e1c54b6eab9b71e0",
+        "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef",
+        "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f"
+      ],
+      "object_path": "$line[89]",
+      "path_hints": [
+        "doc/api/guides/custom_checkout.rst",
+        "doc/api/resources/carts.rst",
+        "doc/api/resources/checkin.rst",
+        "doc/api/resources/checkinlists.rst",
+        "doc/api/resources/discounts.rst",
+        "doc/api/resources/exhibitors.rst",
+        "doc/api/resources/invoices.rst",
+        "doc/api/resources/item_bundles.rst",
+        "src/pretix/base/models/orders.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate.business_keyword_sources.class[0]",
+          "value": "fee"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.class[1]",
+          "value": "order"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.function[0]",
+          "value": "price"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.path[0]",
+          "value": "order"
+        },
+        {
+          "key_path": "$.candidate.evidence_link_modes.doc:EXACT_FUNCTION_TEXT",
+          "value": "18"
+        },
+        {
+          "key_path": "$.candidate.file",
+          "value": "src/pretix/base/models/orders.py"
+        },
+        {
+          "key_path": "$.candidate.function",
+          "value": "price"
+        },
+        {
+          "key_path": "$.candidate.function_sha256",
+          "value": "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f"
+        },
+        {
+          "key_path": "$.candidate.source_file_sha256",
+          "value": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef"
+        },
+        {
+          "key_path": "$.candidate.source_id",
+          "value": "pretix"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[0]",
+          "value": "doc/api/guides/custom_checkout.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[1]",
+          "value": "doc/api/resources/carts.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[2]",
+          "value": "doc/api/resources/checkin.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[3]",
+          "value": "doc/api/resources/checkinlists.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[4]",
+          "value": "doc/api/resources/discounts.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[5]",
+          "value": "doc/api/resources/exhibitors.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[6]",
+          "value": "doc/api/resources/invoices.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[7]",
+          "value": "doc/api/resources/item_bundles.rst"
+        },
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        },
+        {
+          "key_path": "$.selection_hash",
+          "value": "0c9e2fb287543ca709e4b56993a00321bfdaa8b6a4786fb0e1c54b6eab9b71e0"
+        },
+        {
+          "key_path": "$.stratum.source_id",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\terminal_certification\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[89]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+      "function_names": [
+        "price"
+      ],
+      "hashes": [],
+      "object_path": "$line[87]",
+      "path_hints": [
+        "src/pretix/base/models/orders.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        },
+        {
+          "key_path": "$.file",
+          "value": "src/pretix/base/models/orders.py"
+        },
+        {
+          "key_path": "$.function",
+          "value": "price"
+        },
+        {
+          "key_path": "$.semantic_shape",
+          "value": "None"
+        },
+        {
+          "key_path": "$.source_id",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "af6a75af2e5a52ab0f88464216d1bffa9b4305a84eccbf00378e1d2f907ccddc",
+        "e88486af5832ffd34ce008a2ea859c2835c3381ce755554e639566030d8ac6f0",
+        "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_state_closure\\negative_evidence\\7cf281a33e5781df.json",
+      "function_names": [
+        "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f",
+        "price"
+      ],
+      "hashes": [
+        "af6a75af2e5a52ab0f88464216d1bffa9b4305a84eccbf00378e1d2f907ccddc",
+        "e88486af5832ffd34ce008a2ea859c2835c3381ce755554e639566030d8ac6f0",
+        "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f"
+      ],
+      "object_path": "$",
+      "path_hints": [
+        "src/pretix/base/models/orders.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7cf281a33e5781df"
+        },
+        {
+          "key_path": "$.execution_evidence_digest",
+          "value": "e88486af5832ffd34ce008a2ea859c2835c3381ce755554e639566030d8ac6f0"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "af6a75af2e5a52ab0f88464216d1bffa9b4305a84eccbf00378e1d2f907ccddc"
+        },
+        {
+          "key_path": "$.source.class",
+          "value": "OrderFee"
+        },
+        {
+          "key_path": "$.source.file",
+          "value": "src/pretix/base/models/orders.py"
+        },
+        {
+          "key_path": "$.source.function",
+          "value": "price"
+        },
+        {
+          "key_path": "$.source.function_sha256",
+          "value": "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f"
+        },
+        {
+          "key_path": "$.source.source_id",
+          "value": "pretix"
+        }
+      ]
+    }
+  ],
+  "91b2dc32504282fc": [
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a1_batch_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[21]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a1_leaf_binding_batch\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[21]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a1_remaining_binding_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[21]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[21]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_v1_scalar_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[21]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_v2_straight_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[21]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_v3_branching_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[21]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+      "function_names": [
+        "discount"
+      ],
+      "hashes": [],
+      "object_path": "$line[21]",
+      "path_hints": [
+        "src/oscar/apps/basket/utils.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        },
+        {
+          "key_path": "$.file",
+          "value": "src/oscar/apps/basket/utils.py"
+        },
+        {
+          "key_path": "$.function",
+          "value": "discount"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "5fec4457e1d6a0a9b67a9c1a6b4002097905014884df147f6e8839dd27c39b64",
+        "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [
+        "5fec4457e1d6a0a9b67a9c1a6b4002097905014884df147f6e8839dd27c39b64",
+        "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+      ],
+      "object_path": "$line[21]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        },
+        {
+          "key_path": "$.execution_evidence_digest",
+          "value": "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "5fec4457e1d6a0a9b67a9c1a6b4002097905014884df147f6e8839dd27c39b64"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "5fec4457e1d6a0a9b67a9c1a6b4002097905014884df147f6e8839dd27c39b64",
+        "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_state_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [
+        "5fec4457e1d6a0a9b67a9c1a6b4002097905014884df147f6e8839dd27c39b64",
+        "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+      ],
+      "object_path": "$line[21]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        },
+        {
+          "key_path": "$.execution_evidence_digest",
+          "value": "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "5fec4457e1d6a0a9b67a9c1a6b4002097905014884df147f6e8839dd27c39b64"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+        "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_state_closure\\execution_evidence.jsonl",
+      "function_names": [
+        "discount"
+      ],
+      "hashes": [
+        "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+        "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+      ],
+      "object_path": "$line[5]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        },
+        {
+          "key_path": "$.execution_evidence_digest",
+          "value": "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+        },
+        {
+          "key_path": "$.function",
+          "value": "discount"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+        "5fec4457e1d6a0a9b67a9c1a6b4002097905014884df147f6e8839dd27c39b64",
+        "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_state_closure\\negative_outcomes.jsonl",
+      "function_names": [
+        "discount"
+      ],
+      "hashes": [
+        "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+        "5fec4457e1d6a0a9b67a9c1a6b4002097905014884df147f6e8839dd27c39b64",
+        "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+      ],
+      "object_path": "$line[5]",
+      "path_hints": [
+        "src/oscar/apps/basket/utils.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        },
+        {
+          "key_path": "$.execution_evidence_digest",
+          "value": "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "5fec4457e1d6a0a9b67a9c1a6b4002097905014884df147f6e8839dd27c39b64"
+        },
+        {
+          "key_path": "$.source.class",
+          "value": "LineDiscountRegistry"
+        },
+        {
+          "key_path": "$.source.file",
+          "value": "src/oscar/apps/basket/utils.py"
+        },
+        {
+          "key_path": "$.source.function",
+          "value": "discount"
+        },
+        {
+          "key_path": "$.source.function_sha256",
+          "value": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475"
+        },
+        {
+          "key_path": "$.source.source_id",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "003d9efbfee890158dc4e6557c6d90da07eb3462c9e4771b0b82df73755e8d3a",
+        "1959ed7f6bacdcab8e8e77df53887a0a85e9d248e7e1353def9387616fecf00d",
+        "4ee54178efed633f82c4ecea7f251f6806407fdd13b58041b0d48490ccc65ff2"
+      ],
+      "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+      "function_names": [
+        "discount"
+      ],
+      "hashes": [
+        "003d9efbfee890158dc4e6557c6d90da07eb3462c9e4771b0b82df73755e8d3a",
+        "1959ed7f6bacdcab8e8e77df53887a0a85e9d248e7e1353def9387616fecf00d",
+        "4ee54178efed633f82c4ecea7f251f6806407fdd13b58041b0d48490ccc65ff2"
+      ],
+      "object_path": "$line[21]",
+      "path_hints": [
+        "src/oscar/apps/basket/utils.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        },
+        {
+          "key_path": "$.provenance.file",
+          "value": "src/oscar/apps/basket/utils.py"
+        },
+        {
+          "key_path": "$.provenance.function",
+          "value": "discount"
+        },
+        {
+          "key_path": "$.provenance.snippet_sha256",
+          "value": "1959ed7f6bacdcab8e8e77df53887a0a85e9d248e7e1353def9387616fecf00d"
+        },
+        {
+          "key_path": "$.provenance.source_file_sha256",
+          "value": "4ee54178efed633f82c4ecea7f251f6806407fdd13b58041b0d48490ccc65ff2"
+        },
+        {
+          "key_path": "$.provenance.source_id",
+          "value": "django_oscar"
+        },
+        {
+          "key_path": "$.selection_hash",
+          "value": "003d9efbfee890158dc4e6557c6d90da07eb3462c9e4771b0b82df73755e8d3a"
+        },
+        {
+          "key_path": "$.stratum.source_id",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+      "function_names": [
+        "discount"
+      ],
+      "hashes": [],
+      "object_path": "$line[79]",
+      "path_hints": [
+        "src/oscar/apps/basket/utils.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        },
+        {
+          "key_path": "$.file",
+          "value": "src/oscar/apps/basket/utils.py"
+        },
+        {
+          "key_path": "$.function",
+          "value": "discount"
+        },
+        {
+          "key_path": "$.source_id",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[25]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        },
+        {
+          "key_path": "$.evidence[0].key_path",
+          "value": "frontier_status"
+        },
+        {
+          "key_path": "$.evidence[1].key_path",
+          "value": "status"
+        },
+        {
+          "key_path": "$.evidence[2].key_path",
+          "value": "controlled_execution_status"
+        },
+        {
+          "key_path": "$.evidence[3].key_path",
+          "value": "reason"
+        },
+        {
+          "key_path": "$.evidence[4].key_path",
+          "value": "reason_code"
+        },
+        {
+          "key_path": "$.evidence[5].key_path",
+          "value": "feasibility.adapter_blockers.0"
+        },
+        {
+          "key_path": "$.evidence[6].key_path",
+          "value": "v0.6_classification.classification_reasons.0"
+        },
+        {
+          "key_path": "$.evidence[7].key_path",
+          "value": "v0.6_classification.classification_reasons.1"
+        },
+        {
+          "key_path": "$.evidence[8].key_path",
+          "value": "v0.6_classification.classification_reasons.2"
+        },
+        {
+          "key_path": "$.evidence[9].key_path",
+          "value": "adapter_blockers.0"
+        },
+        {
+          "key_path": "$.evidence[10].key_path",
+          "value": "frontier_status"
+        },
+        {
+          "key_path": "$.evidence[11].key_path",
+          "value": "frontier_status"
+        },
+        {
+          "key_path": "$.evidence[12].key_path",
+          "value": "candidate.classification_reasons.0"
+        },
+        {
+          "key_path": "$.evidence[13].key_path",
+          "value": "candidate.classification_reasons.1"
+        },
+        {
+          "key_path": "$.evidence[14].key_path",
+          "value": "candidate.classification_reasons.2"
+        },
+        {
+          "key_path": "$.evidence[15].artifact",
+          "value": "controlled_state_closure\\negative_evidence\\91b2dc32504282fc.json"
+        },
+        {
+          "key_path": "$.evidence[15].key_path",
+          "value": "controlled_execution_status"
+        },
+        {
+          "key_path": "$.evidence[16].artifact",
+          "value": "controlled_state_closure\\negative_evidence\\91b2dc32504282fc.json"
+        },
+        {
+          "key_path": "$.evidence[16].key_path",
+          "value": "reason"
+        },
+        {
+          "key_path": "$.evidence[17].artifact",
+          "value": "controlled_state_closure\\negative_evidence\\91b2dc32504282fc.json"
+        },
+        {
+          "key_path": "$.evidence[17].key_path",
+          "value": "reason_code"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[25].evidence[15]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.artifact",
+          "value": "controlled_state_closure\\negative_evidence\\91b2dc32504282fc.json"
+        },
+        {
+          "key_path": "$.key_path",
+          "value": "controlled_execution_status"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[25].evidence[16]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.artifact",
+          "value": "controlled_state_closure\\negative_evidence\\91b2dc32504282fc.json"
+        },
+        {
+          "key_path": "$.key_path",
+          "value": "reason"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[25].evidence[17]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.artifact",
+          "value": "controlled_state_closure\\negative_evidence\\91b2dc32504282fc.json"
+        },
+        {
+          "key_path": "$.key_path",
+          "value": "reason_code"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_manual_review.csv",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$csv[26]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$csv[26]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_preliminary.csv",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$csv[26]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[21]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\controlled_execution_worklist.jsonl",
+      "function_names": [
+        "discount"
+      ],
+      "hashes": [],
+      "object_path": "$line[12]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        },
+        {
+          "key_path": "$.function",
+          "value": "discount"
+        },
+        {
+          "key_path": "$.semantic_shape",
+          "value": "None"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\remaining_candidates.jsonl",
+      "function_names": [
+        "discount"
+      ],
+      "hashes": [],
+      "object_path": "$line[48]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        },
+        {
+          "key_path": "$.function",
+          "value": "discount"
+        },
+        {
+          "key_path": "$.semantic_shape",
+          "value": "None"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\residual_binding_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[21]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "003d9efbfee890158dc4e6557c6d90da07eb3462c9e4771b0b82df73755e8d3a",
+        "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+        "4ee54178efed633f82c4ecea7f251f6806407fdd13b58041b0d48490ccc65ff2"
+      ],
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "function_names": [
+        "discount"
+      ],
+      "hashes": [
+        "003d9efbfee890158dc4e6557c6d90da07eb3462c9e4771b0b82df73755e8d3a",
+        "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+        "4ee54178efed633f82c4ecea7f251f6806407fdd13b58041b0d48490ccc65ff2"
+      ],
+      "object_path": "$line[21]",
+      "path_hints": [
+        "docs/source/howto/how_to_create_a_custom_benefit.rst",
+        "docs/source/ref/apps/offer.rst",
+        "docs/source/ref/settings.rst",
+        "docs/source/ref/templatetags.rst",
+        "docs/source/releases/v0.2.x.rst",
+        "docs/source/releases/v0.3.x.rst",
+        "docs/source/releases/v0.5.rst",
+        "docs/source/releases/v1.6.rst",
+        "src/oscar/apps/basket/utils.py",
+        "tests/functional/checkout/__init__.py",
+        "tests/integration/offer/test_absolute_benefit.py",
+        "tests/integration/offer/test_combination.py",
+        "tests/integration/offer/test_fixed_price_benefit.py",
+        "tests/integration/offer/test_fixed_unit_benefit.py",
+        "tests/integration/offer/test_multibuy_benefit.py",
+        "tests/integration/offer/test_percentage_benefit.py",
+        "tests/integration/offer/test_post_order_action.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate.business_keyword_sources.class[0]",
+          "value": "discount"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.function[0]",
+          "value": "discount"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.path[0]",
+          "value": "basket"
+        },
+        {
+          "key_path": "$.candidate.evidence_link_modes.doc:EXACT_FUNCTION_TEXT",
+          "value": "8"
+        },
+        {
+          "key_path": "$.candidate.evidence_link_modes.test:EXACT_FUNCTION_SYMBOL",
+          "value": "15"
+        },
+        {
+          "key_path": "$.candidate.file",
+          "value": "src/oscar/apps/basket/utils.py"
+        },
+        {
+          "key_path": "$.candidate.function",
+          "value": "discount"
+        },
+        {
+          "key_path": "$.candidate.function_sha256",
+          "value": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475"
+        },
+        {
+          "key_path": "$.candidate.source_file_sha256",
+          "value": "4ee54178efed633f82c4ecea7f251f6806407fdd13b58041b0d48490ccc65ff2"
+        },
+        {
+          "key_path": "$.candidate.source_id",
+          "value": "django_oscar"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[0]",
+          "value": "docs/source/howto/how_to_create_a_custom_benefit.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[1]",
+          "value": "docs/source/ref/apps/offer.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[2]",
+          "value": "docs/source/ref/settings.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[3]",
+          "value": "docs/source/ref/templatetags.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[4]",
+          "value": "docs/source/releases/v0.2.x.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[5]",
+          "value": "docs/source/releases/v0.3.x.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[6]",
+          "value": "docs/source/releases/v0.5.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[7]",
+          "value": "docs/source/releases/v1.6.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_test_files[0]",
+          "value": "tests/functional/checkout/__init__.py"
+        },
+        {
+          "key_path": "$.candidate.supporting_test_files[1]",
+          "value": "tests/integration/offer/test_absolute_benefit.py"
+        },
+        {
+          "key_path": "$.candidate.supporting_test_files[2]",
+          "value": "tests/integration/offer/test_combination.py"
+        },
+        {
+          "key_path": "$.candidate.supporting_test_files[3]",
+          "value": "tests/integration/offer/test_fixed_price_benefit.py"
+        },
+        {
+          "key_path": "$.candidate.supporting_test_files[4]",
+          "value": "tests/integration/offer/test_fixed_unit_benefit.py"
+        },
+        {
+          "key_path": "$.candidate.supporting_test_files[5]",
+          "value": "tests/integration/offer/test_multibuy_benefit.py"
+        },
+        {
+          "key_path": "$.candidate.supporting_test_files[6]",
+          "value": "tests/integration/offer/test_percentage_benefit.py"
+        },
+        {
+          "key_path": "$.candidate.supporting_test_files[7]",
+          "value": "tests/integration/offer/test_post_order_action.py"
+        },
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        },
+        {
+          "key_path": "$.selection_hash",
+          "value": "003d9efbfee890158dc4e6557c6d90da07eb3462c9e4771b0b82df73755e8d3a"
+        },
+        {
+          "key_path": "$.stratum.source_id",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\terminal_certification\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[21]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+      "function_names": [
+        "discount"
+      ],
+      "hashes": [],
+      "object_path": "$line[79]",
+      "path_hints": [
+        "src/oscar/apps/basket/utils.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        },
+        {
+          "key_path": "$.file",
+          "value": "src/oscar/apps/basket/utils.py"
+        },
+        {
+          "key_path": "$.function",
+          "value": "discount"
+        },
+        {
+          "key_path": "$.semantic_shape",
+          "value": "None"
+        },
+        {
+          "key_path": "$.source_id",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+        "5fec4457e1d6a0a9b67a9c1a6b4002097905014884df147f6e8839dd27c39b64",
+        "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_state_closure\\negative_evidence\\91b2dc32504282fc.json",
+      "function_names": [
+        "discount"
+      ],
+      "hashes": [
+        "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+        "5fec4457e1d6a0a9b67a9c1a6b4002097905014884df147f6e8839dd27c39b64",
+        "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+      ],
+      "object_path": "$",
+      "path_hints": [
+        "src/oscar/apps/basket/utils.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        },
+        {
+          "key_path": "$.execution_evidence_digest",
+          "value": "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "5fec4457e1d6a0a9b67a9c1a6b4002097905014884df147f6e8839dd27c39b64"
+        },
+        {
+          "key_path": "$.source.class",
+          "value": "LineDiscountRegistry"
+        },
+        {
+          "key_path": "$.source.file",
+          "value": "src/oscar/apps/basket/utils.py"
+        },
+        {
+          "key_path": "$.source.function",
+          "value": "discount"
+        },
+        {
+          "key_path": "$.source.function_sha256",
+          "value": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475"
+        },
+        {
+          "key_path": "$.source.source_id",
+          "value": "django_oscar"
+        }
+      ]
+    }
+  ],
+  "a09e038870c9b436": [
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a1_batch_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[85]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a1_leaf_binding_batch\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[85]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a1_remaining_binding_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[85]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[85]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_v1_scalar_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[85]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_v2_straight_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[85]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_v3_branching_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[85]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+      "function_names": [
+        "__str__"
+      ],
+      "hashes": [],
+      "object_path": "$line[85]",
+      "path_hints": [
+        "src/pretix/base/models/orders.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        },
+        {
+          "key_path": "$.file",
+          "value": "src/pretix/base/models/orders.py"
+        },
+        {
+          "key_path": "$.function",
+          "value": "__str__"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "d1c12d1c956dd72b362bdb493a2405d5eb5f1be91d05b057145a9942366643e8"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [
+        "d1c12d1c956dd72b362bdb493a2405d5eb5f1be91d05b057145a9942366643e8"
+      ],
+      "object_path": "$line[85]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "d1c12d1c956dd72b362bdb493a2405d5eb5f1be91d05b057145a9942366643e8"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\controlled_state_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[85]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "08d793e984e66bc559b14ed55f295b4693531ac07aec4104a69214647b87e94c",
+        "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef",
+        "9bcdb82f3bf19e23d78b37a90f78b8e5f0e0ea7402792ede498cd7be27c5b567"
+      ],
+      "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+      "function_names": [
+        "__str__"
+      ],
+      "hashes": [
+        "08d793e984e66bc559b14ed55f295b4693531ac07aec4104a69214647b87e94c",
+        "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef",
+        "9bcdb82f3bf19e23d78b37a90f78b8e5f0e0ea7402792ede498cd7be27c5b567"
+      ],
+      "object_path": "$line[85]",
+      "path_hints": [
+        "src/pretix/base/models/orders.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        },
+        {
+          "key_path": "$.provenance.file",
+          "value": "src/pretix/base/models/orders.py"
+        },
+        {
+          "key_path": "$.provenance.function",
+          "value": "__str__"
+        },
+        {
+          "key_path": "$.provenance.snippet_sha256",
+          "value": "9bcdb82f3bf19e23d78b37a90f78b8e5f0e0ea7402792ede498cd7be27c5b567"
+        },
+        {
+          "key_path": "$.provenance.source_file_sha256",
+          "value": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef"
+        },
+        {
+          "key_path": "$.provenance.source_id",
+          "value": "pretix"
+        },
+        {
+          "key_path": "$.selection_hash",
+          "value": "08d793e984e66bc559b14ed55f295b4693531ac07aec4104a69214647b87e94c"
+        },
+        {
+          "key_path": "$.stratum.source_id",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+      "function_names": [
+        "__str__"
+      ],
+      "hashes": [],
+      "object_path": "$line[40]",
+      "path_hints": [
+        "src/pretix/base/models/orders.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        },
+        {
+          "key_path": "$.file",
+          "value": "src/pretix/base/models/orders.py"
+        },
+        {
+          "key_path": "$.function",
+          "value": "__str__"
+        },
+        {
+          "key_path": "$.source_id",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[27]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        },
+        {
+          "key_path": "$.evidence[0].key_path",
+          "value": "frontier_status"
+        },
+        {
+          "key_path": "$.evidence[1].key_path",
+          "value": "v0.6_classification.classification_reasons.0"
+        },
+        {
+          "key_path": "$.evidence[2].key_path",
+          "value": "v0.6_classification.classification_reasons.1"
+        },
+        {
+          "key_path": "$.evidence[3].key_path",
+          "value": "v0.6_classification.classification_reasons.2"
+        },
+        {
+          "key_path": "$.evidence[4].key_path",
+          "value": "binding_count"
+        },
+        {
+          "key_path": "$.evidence[5].key_path",
+          "value": "frontier_status"
+        },
+        {
+          "key_path": "$.evidence[6].key_path",
+          "value": "probe_status"
+        },
+        {
+          "key_path": "$.evidence[7].key_path",
+          "value": "binding_count"
+        },
+        {
+          "key_path": "$.evidence[8].key_path",
+          "value": "frontier_status"
+        },
+        {
+          "key_path": "$.evidence[9].key_path",
+          "value": "probe_status"
+        },
+        {
+          "key_path": "$.evidence[10].key_path",
+          "value": "candidate.classification_reasons.0"
+        },
+        {
+          "key_path": "$.evidence[11].key_path",
+          "value": "candidate.classification_reasons.1"
+        },
+        {
+          "key_path": "$.evidence[12].key_path",
+          "value": "candidate.classification_reasons.2"
+        },
+        {
+          "key_path": "$.evidence[13].key_path",
+          "value": "binding_count"
+        },
+        {
+          "key_path": "$.evidence[14].key_path",
+          "value": "probe_status"
+        },
+        {
+          "key_path": "$.evidence[15].key_path",
+          "value": "review_reason"
+        },
+        {
+          "key_path": "$.evidence[16].key_path",
+          "value": "binding_count"
+        },
+        {
+          "key_path": "$.evidence[17].artifact",
+          "value": "controlled_complex_closure\\negative_evidence\\a09e038870c9b436.json"
+        },
+        {
+          "key_path": "$.evidence[17].key_path",
+          "value": "reason"
+        },
+        {
+          "key_path": "$.evidence[18].artifact",
+          "value": "controlled_complex_closure\\negative_evidence\\a09e038870c9b436.json"
+        },
+        {
+          "key_path": "$.evidence[18].key_path",
+          "value": "reason_code"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[27].evidence[17]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.artifact",
+          "value": "controlled_complex_closure\\negative_evidence\\a09e038870c9b436.json"
+        },
+        {
+          "key_path": "$.key_path",
+          "value": "reason"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[27].evidence[18]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.artifact",
+          "value": "controlled_complex_closure\\negative_evidence\\a09e038870c9b436.json"
+        },
+        {
+          "key_path": "$.key_path",
+          "value": "reason_code"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_manual_review.csv",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$csv[28]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$csv[28]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_preliminary.csv",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$csv[28]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[85]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\remaining_candidates.jsonl",
+      "function_names": [
+        "__str__"
+      ],
+      "hashes": [],
+      "object_path": "$line[52]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        },
+        {
+          "key_path": "$.function",
+          "value": "__str__"
+        },
+        {
+          "key_path": "$.semantic_shape",
+          "value": "SUBSTANTIVE_EXPRESSION"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\structural_review_worklist.jsonl",
+      "function_names": [
+        "__str__"
+      ],
+      "hashes": [],
+      "object_path": "$line[1]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        },
+        {
+          "key_path": "$.function",
+          "value": "__str__"
+        },
+        {
+          "key_path": "$.semantic_shape",
+          "value": "SUBSTANTIVE_EXPRESSION"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\residual_binding_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[85]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "08d793e984e66bc559b14ed55f295b4693531ac07aec4104a69214647b87e94c",
+        "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef",
+        "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897"
+      ],
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "function_names": [
+        "__str__"
+      ],
+      "hashes": [
+        "08d793e984e66bc559b14ed55f295b4693531ac07aec4104a69214647b87e94c",
+        "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef",
+        "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897"
+      ],
+      "object_path": "$line[85]",
+      "path_hints": [
+        "doc/development/implementation/models.rst",
+        "src/pretix/base/models/orders.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate.business_keyword_sources.class[0]",
+          "value": "fee"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.class[1]",
+          "value": "order"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.path[0]",
+          "value": "order"
+        },
+        {
+          "key_path": "$.candidate.file",
+          "value": "src/pretix/base/models/orders.py"
+        },
+        {
+          "key_path": "$.candidate.function",
+          "value": "__str__"
+        },
+        {
+          "key_path": "$.candidate.function_sha256",
+          "value": "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897"
+        },
+        {
+          "key_path": "$.candidate.source_file_sha256",
+          "value": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef"
+        },
+        {
+          "key_path": "$.candidate.source_id",
+          "value": "pretix"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[0]",
+          "value": "doc/development/implementation/models.rst"
+        },
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        },
+        {
+          "key_path": "$.selection_hash",
+          "value": "08d793e984e66bc559b14ed55f295b4693531ac07aec4104a69214647b87e94c"
+        },
+        {
+          "key_path": "$.stratum.source_id",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "9bcdb82f3bf19e23d78b37a90f78b8e5f0e0ea7402792ede498cd7be27c5b567"
+      ],
+      "file": "benchmarks\\v0.11\\symbolic_probe\\probe.jsonl",
+      "function_names": [
+        "__str__",
+        "self"
+      ],
+      "hashes": [
+        "9bcdb82f3bf19e23d78b37a90f78b8e5f0e0ea7402792ede498cd7be27c5b567"
+      ],
+      "object_path": "$line[40]",
+      "path_hints": [
+        "src/pretix/base/models/orders.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        },
+        {
+          "key_path": "$.file",
+          "value": "src/pretix/base/models/orders.py"
+        },
+        {
+          "key_path": "$.function",
+          "value": "__str__"
+        },
+        {
+          "key_path": "$.function_parameters[0]",
+          "value": "self"
+        },
+        {
+          "key_path": "$.ir_sha256",
+          "value": "None"
+        },
+        {
+          "key_path": "$.semantic_shape",
+          "value": "SUBSTANTIVE_EXPRESSION"
+        },
+        {
+          "key_path": "$.snippet_sha256",
+          "value": "9bcdb82f3bf19e23d78b37a90f78b8e5f0e0ea7402792ede498cd7be27c5b567"
+        },
+        {
+          "key_path": "$.source_id",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\terminal_certification\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[85]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+      "function_names": [
+        "__str__"
+      ],
+      "hashes": [],
+      "object_path": "$line[40]",
+      "path_hints": [
+        "src/pretix/base/models/orders.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        },
+        {
+          "key_path": "$.file",
+          "value": "src/pretix/base/models/orders.py"
+        },
+        {
+          "key_path": "$.function",
+          "value": "__str__"
+        },
+        {
+          "key_path": "$.semantic_shape",
+          "value": "SUBSTANTIVE_EXPRESSION"
+        },
+        {
+          "key_path": "$.source_id",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897",
+        "d1c12d1c956dd72b362bdb493a2405d5eb5f1be91d05b057145a9942366643e8"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_evidence\\a09e038870c9b436.json",
+      "function_names": [
+        "__str__"
+      ],
+      "hashes": [
+        "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897",
+        "d1c12d1c956dd72b362bdb493a2405d5eb5f1be91d05b057145a9942366643e8"
+      ],
+      "object_path": "$",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        },
+        {
+          "key_path": "$.function",
+          "value": "__str__"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "d1c12d1c956dd72b362bdb493a2405d5eb5f1be91d05b057145a9942366643e8"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    }
+  ],
+  "a79d9687185720aa": [
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a1_batch_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[7]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a1_leaf_binding_batch\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[7]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a1_remaining_binding_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[7]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[7]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_v1_scalar_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[7]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_v2_straight_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[7]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_v3_branching_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[7]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [],
+      "object_path": "$line[7]",
+      "path_hints": [
+        "src/oscar/apps/offer/abstract_models.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        },
+        {
+          "key_path": "$.file",
+          "value": "src/oscar/apps/offer/abstract_models.py"
+        },
+        {
+          "key_path": "$.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "6460cf23dcc3a28e4833ad99699e28758af164e872ef6fd0f00f1ae7df5c6b8e",
+        "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [
+        "6460cf23dcc3a28e4833ad99699e28758af164e872ef6fd0f00f1ae7df5c6b8e",
+        "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+      ],
+      "object_path": "$line[7]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "6460cf23dcc3a28e4833ad99699e28758af164e872ef6fd0f00f1ae7df5c6b8e"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+        "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\execution_probe.jsonl",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [
+        "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+        "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+      ],
+      "object_path": "$line[8]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+        },
+        {
+          "key_path": "$.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "6460cf23dcc3a28e4833ad99699e28758af164e872ef6fd0f00f1ae7df5c6b8e",
+        "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+        "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_outcomes.jsonl",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [
+        "6460cf23dcc3a28e4833ad99699e28758af164e872ef6fd0f00f1ae7df5c6b8e",
+        "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+        "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+      ],
+      "object_path": "$line[6]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+        },
+        {
+          "key_path": "$.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "6460cf23dcc3a28e4833ad99699e28758af164e872ef6fd0f00f1ae7df5c6b8e"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\controlled_state_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[7]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "2b06623d52c9ba24ba7cfc366a2241ad7b6c6a9e1e377b558911a96e3e6863e8",
+        "3090b1402638ffd018f006b4216a77d5942fad768f12f25a55eebc0344c8a7a9",
+        "d1508fbc726b868c4c849cd88e7669f3bc1ca31a2e7f2ccb26ec3a119f29b78e"
+      ],
+      "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [
+        "2b06623d52c9ba24ba7cfc366a2241ad7b6c6a9e1e377b558911a96e3e6863e8",
+        "3090b1402638ffd018f006b4216a77d5942fad768f12f25a55eebc0344c8a7a9",
+        "d1508fbc726b868c4c849cd88e7669f3bc1ca31a2e7f2ccb26ec3a119f29b78e"
+      ],
+      "object_path": "$line[7]",
+      "path_hints": [
+        "src/oscar/apps/offer/abstract_models.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        },
+        {
+          "key_path": "$.provenance.file",
+          "value": "src/oscar/apps/offer/abstract_models.py"
+        },
+        {
+          "key_path": "$.provenance.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.provenance.snippet_sha256",
+          "value": "2b06623d52c9ba24ba7cfc366a2241ad7b6c6a9e1e377b558911a96e3e6863e8"
+        },
+        {
+          "key_path": "$.provenance.source_file_sha256",
+          "value": "d1508fbc726b868c4c849cd88e7669f3bc1ca31a2e7f2ccb26ec3a119f29b78e"
+        },
+        {
+          "key_path": "$.provenance.source_id",
+          "value": "django_oscar"
+        },
+        {
+          "key_path": "$.selection_hash",
+          "value": "3090b1402638ffd018f006b4216a77d5942fad768f12f25a55eebc0344c8a7a9"
+        },
+        {
+          "key_path": "$.stratum.source_id",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [],
+      "object_path": "$line[76]",
+      "path_hints": [
+        "src/oscar/apps/offer/abstract_models.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        },
+        {
+          "key_path": "$.file",
+          "value": "src/oscar/apps/offer/abstract_models.py"
+        },
+        {
+          "key_path": "$.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.source_id",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[29]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        },
+        {
+          "key_path": "$.evidence[0].key_path",
+          "value": "frontier_status"
+        },
+        {
+          "key_path": "$.evidence[1].key_path",
+          "value": "execution_status"
+        },
+        {
+          "key_path": "$.evidence[2].key_path",
+          "value": "controlled_execution_status"
+        },
+        {
+          "key_path": "$.evidence[3].key_path",
+          "value": "reason_code"
+        },
+        {
+          "key_path": "$.evidence[4].key_path",
+          "value": "feasibility.adapter_blockers.0"
+        },
+        {
+          "key_path": "$.evidence[5].key_path",
+          "value": "feasibility.adapter_blockers.1"
+        },
+        {
+          "key_path": "$.evidence[6].key_path",
+          "value": "feasibility.adapter_blockers.2"
+        },
+        {
+          "key_path": "$.evidence[7].key_path",
+          "value": "v0.6_classification.classification_reasons.0"
+        },
+        {
+          "key_path": "$.evidence[8].key_path",
+          "value": "v0.6_classification.classification_reasons.1"
+        },
+        {
+          "key_path": "$.evidence[9].key_path",
+          "value": "v0.6_classification.classification_reasons.2"
+        },
+        {
+          "key_path": "$.evidence[10].key_path",
+          "value": "v0.6_classification.classification_reasons.3"
+        },
+        {
+          "key_path": "$.evidence[11].key_path",
+          "value": "v0.6_classification.classification_reasons.4"
+        },
+        {
+          "key_path": "$.evidence[12].key_path",
+          "value": "adapter_blockers.0"
+        },
+        {
+          "key_path": "$.evidence[13].key_path",
+          "value": "adapter_blockers.1"
+        },
+        {
+          "key_path": "$.evidence[14].key_path",
+          "value": "adapter_blockers.2"
+        },
+        {
+          "key_path": "$.evidence[15].key_path",
+          "value": "frontier_status"
+        },
+        {
+          "key_path": "$.evidence[16].key_path",
+          "value": "frontier_status"
+        },
+        {
+          "key_path": "$.evidence[17].key_path",
+          "value": "candidate.classification_reasons.0"
+        },
+        {
+          "key_path": "$.evidence[18].key_path",
+          "value": "candidate.classification_reasons.1"
+        },
+        {
+          "key_path": "$.evidence[19].key_path",
+          "value": "candidate.classification_reasons.2"
+        },
+        {
+          "key_path": "$.evidence[20].key_path",
+          "value": "candidate.classification_reasons.3"
+        },
+        {
+          "key_path": "$.evidence[21].key_path",
+          "value": "candidate.classification_reasons.4"
+        },
+        {
+          "key_path": "$.evidence[22].artifact",
+          "value": "controlled_complex_closure\\negative_evidence\\a79d9687185720aa.json"
+        },
+        {
+          "key_path": "$.evidence[22].key_path",
+          "value": "controlled_execution_status"
+        },
+        {
+          "key_path": "$.evidence[23].artifact",
+          "value": "controlled_complex_closure\\negative_evidence\\a79d9687185720aa.json"
+        },
+        {
+          "key_path": "$.evidence[23].key_path",
+          "value": "reason_code"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[29].evidence[22]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.artifact",
+          "value": "controlled_complex_closure\\negative_evidence\\a79d9687185720aa.json"
+        },
+        {
+          "key_path": "$.key_path",
+          "value": "controlled_execution_status"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[29].evidence[23]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.artifact",
+          "value": "controlled_complex_closure\\negative_evidence\\a79d9687185720aa.json"
+        },
+        {
+          "key_path": "$.key_path",
+          "value": "reason_code"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_manual_review.csv",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$csv[30]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$csv[30]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_preliminary.csv",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$csv[30]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[7]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\controlled_execution_worklist.jsonl",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [],
+      "object_path": "$line[13]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        },
+        {
+          "key_path": "$.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.semantic_shape",
+          "value": "None"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\remaining_candidates.jsonl",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [],
+      "object_path": "$line[54]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        },
+        {
+          "key_path": "$.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.semantic_shape",
+          "value": "None"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\residual_binding_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[7]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "3090b1402638ffd018f006b4216a77d5942fad768f12f25a55eebc0344c8a7a9",
+        "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+        "d1508fbc726b868c4c849cd88e7669f3bc1ca31a2e7f2ccb26ec3a119f29b78e"
+      ],
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [
+        "3090b1402638ffd018f006b4216a77d5942fad768f12f25a55eebc0344c8a7a9",
+        "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+        "d1508fbc726b868c4c849cd88e7669f3bc1ca31a2e7f2ccb26ec3a119f29b78e"
+      ],
+      "object_path": "$line[7]",
+      "path_hints": [
+        "src/oscar/apps/offer/abstract_models.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate.business_keyword_sources.class[0]",
+          "value": "condition"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.class[1]",
+          "value": "offer"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.path[0]",
+          "value": "offer"
+        },
+        {
+          "key_path": "$.candidate.file",
+          "value": "src/oscar/apps/offer/abstract_models.py"
+        },
+        {
+          "key_path": "$.candidate.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.candidate.function_sha256",
+          "value": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d"
+        },
+        {
+          "key_path": "$.candidate.source_file_sha256",
+          "value": "d1508fbc726b868c4c849cd88e7669f3bc1ca31a2e7f2ccb26ec3a119f29b78e"
+        },
+        {
+          "key_path": "$.candidate.source_id",
+          "value": "django_oscar"
+        },
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        },
+        {
+          "key_path": "$.selection_hash",
+          "value": "3090b1402638ffd018f006b4216a77d5942fad768f12f25a55eebc0344c8a7a9"
+        },
+        {
+          "key_path": "$.stratum.source_id",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\terminal_certification\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[7]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [],
+      "object_path": "$line[76]",
+      "path_hints": [
+        "src/oscar/apps/offer/abstract_models.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        },
+        {
+          "key_path": "$.file",
+          "value": "src/oscar/apps/offer/abstract_models.py"
+        },
+        {
+          "key_path": "$.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.semantic_shape",
+          "value": "None"
+        },
+        {
+          "key_path": "$.source_id",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "6460cf23dcc3a28e4833ad99699e28758af164e872ef6fd0f00f1ae7df5c6b8e",
+        "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+        "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_evidence\\a79d9687185720aa.json",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [
+        "6460cf23dcc3a28e4833ad99699e28758af164e872ef6fd0f00f1ae7df5c6b8e",
+        "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+        "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+      ],
+      "object_path": "$",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a79d9687185720aa"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+        },
+        {
+          "key_path": "$.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "6460cf23dcc3a28e4833ad99699e28758af164e872ef6fd0f00f1ae7df5c6b8e"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    }
+  ],
+  "bcb091a940a8d0dd": [
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a1_batch_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[4]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a1_leaf_binding_batch\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[4]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a1_remaining_binding_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[4]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[4]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_v1_scalar_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[4]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_v2_straight_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[4]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\a2_v3_branching_proofs\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[4]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+      "function_names": [
+        "get_formset_kwargs"
+      ],
+      "hashes": [],
+      "object_path": "$line[4]",
+      "path_hints": [
+        "src/oscar/apps/basket/views.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        },
+        {
+          "key_path": "$.file",
+          "value": "src/oscar/apps/basket/views.py"
+        },
+        {
+          "key_path": "$.function",
+          "value": "get_formset_kwargs"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89",
+        "bec79c3c035f95d04c822c14f18d4839b03fb1d92c5ff92af29d650b9740d2b6"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [
+        "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89",
+        "bec79c3c035f95d04c822c14f18d4839b03fb1d92c5ff92af29d650b9740d2b6"
+      ],
+      "object_path": "$line[4]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "bec79c3c035f95d04c822c14f18d4839b03fb1d92c5ff92af29d650b9740d2b6"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89",
+        "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\execution_probe.jsonl",
+      "function_names": [
+        "get_formset_kwargs"
+      ],
+      "hashes": [
+        "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89",
+        "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72"
+      ],
+      "object_path": "$line[9]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89"
+        },
+        {
+          "key_path": "$.function",
+          "value": "get_formset_kwargs"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89",
+        "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+        "bec79c3c035f95d04c822c14f18d4839b03fb1d92c5ff92af29d650b9740d2b6"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_outcomes.jsonl",
+      "function_names": [
+        "get_formset_kwargs"
+      ],
+      "hashes": [
+        "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89",
+        "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+        "bec79c3c035f95d04c822c14f18d4839b03fb1d92c5ff92af29d650b9740d2b6"
+      ],
+      "object_path": "$line[7]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89"
+        },
+        {
+          "key_path": "$.function",
+          "value": "get_formset_kwargs"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "bec79c3c035f95d04c822c14f18d4839b03fb1d92c5ff92af29d650b9740d2b6"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\controlled_state_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[4]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "131a79559dd1374fd21a988b1d1f177352fbf4ac0c246edbb015de4710bb48b3",
+        "226d0acdabd3d2ac0b82b8c81e261dcb2706750ba7f036d63eaf6fa9800bf9ae",
+        "d978ce9eb54de7473cc5f6ba2882acf4a4bca4573eb75af56b32ca0e26866413"
+      ],
+      "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+      "function_names": [
+        "get_formset_kwargs"
+      ],
+      "hashes": [
+        "131a79559dd1374fd21a988b1d1f177352fbf4ac0c246edbb015de4710bb48b3",
+        "226d0acdabd3d2ac0b82b8c81e261dcb2706750ba7f036d63eaf6fa9800bf9ae",
+        "d978ce9eb54de7473cc5f6ba2882acf4a4bca4573eb75af56b32ca0e26866413"
+      ],
+      "object_path": "$line[4]",
+      "path_hints": [
+        "src/oscar/apps/basket/views.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        },
+        {
+          "key_path": "$.provenance.file",
+          "value": "src/oscar/apps/basket/views.py"
+        },
+        {
+          "key_path": "$.provenance.function",
+          "value": "get_formset_kwargs"
+        },
+        {
+          "key_path": "$.provenance.snippet_sha256",
+          "value": "226d0acdabd3d2ac0b82b8c81e261dcb2706750ba7f036d63eaf6fa9800bf9ae"
+        },
+        {
+          "key_path": "$.provenance.source_file_sha256",
+          "value": "d978ce9eb54de7473cc5f6ba2882acf4a4bca4573eb75af56b32ca0e26866413"
+        },
+        {
+          "key_path": "$.provenance.source_id",
+          "value": "django_oscar"
+        },
+        {
+          "key_path": "$.selection_hash",
+          "value": "131a79559dd1374fd21a988b1d1f177352fbf4ac0c246edbb015de4710bb48b3"
+        },
+        {
+          "key_path": "$.stratum.source_id",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+      "function_names": [
+        "get_formset_kwargs"
+      ],
+      "hashes": [],
+      "object_path": "$line[77]",
+      "path_hints": [
+        "src/oscar/apps/basket/views.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        },
+        {
+          "key_path": "$.file",
+          "value": "src/oscar/apps/basket/views.py"
+        },
+        {
+          "key_path": "$.function",
+          "value": "get_formset_kwargs"
+        },
+        {
+          "key_path": "$.source_id",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[31]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        },
+        {
+          "key_path": "$.evidence[0].key_path",
+          "value": "frontier_status"
+        },
+        {
+          "key_path": "$.evidence[1].key_path",
+          "value": "execution_status"
+        },
+        {
+          "key_path": "$.evidence[2].key_path",
+          "value": "controlled_execution_status"
+        },
+        {
+          "key_path": "$.evidence[3].key_path",
+          "value": "reason_code"
+        },
+        {
+          "key_path": "$.evidence[4].key_path",
+          "value": "feasibility.adapter_blockers.0"
+        },
+        {
+          "key_path": "$.evidence[5].key_path",
+          "value": "v0.6_classification.classification_reasons.0"
+        },
+        {
+          "key_path": "$.evidence[6].key_path",
+          "value": "v0.6_classification.classification_reasons.1"
+        },
+        {
+          "key_path": "$.evidence[7].key_path",
+          "value": "v0.6_classification.classification_reasons.2"
+        },
+        {
+          "key_path": "$.evidence[8].key_path",
+          "value": "v0.6_classification.classification_reasons.3"
+        },
+        {
+          "key_path": "$.evidence[9].key_path",
+          "value": "v0.6_classification.classification_reasons.4"
+        },
+        {
+          "key_path": "$.evidence[10].key_path",
+          "value": "adapter_blockers.0"
+        },
+        {
+          "key_path": "$.evidence[11].key_path",
+          "value": "frontier_status"
+        },
+        {
+          "key_path": "$.evidence[12].key_path",
+          "value": "frontier_status"
+        },
+        {
+          "key_path": "$.evidence[13].key_path",
+          "value": "candidate.classification_reasons.0"
+        },
+        {
+          "key_path": "$.evidence[14].key_path",
+          "value": "candidate.classification_reasons.1"
+        },
+        {
+          "key_path": "$.evidence[15].key_path",
+          "value": "candidate.classification_reasons.2"
+        },
+        {
+          "key_path": "$.evidence[16].key_path",
+          "value": "candidate.classification_reasons.3"
+        },
+        {
+          "key_path": "$.evidence[17].key_path",
+          "value": "candidate.classification_reasons.4"
+        },
+        {
+          "key_path": "$.evidence[18].artifact",
+          "value": "controlled_complex_closure\\negative_evidence\\bcb091a940a8d0dd.json"
+        },
+        {
+          "key_path": "$.evidence[18].key_path",
+          "value": "controlled_execution_status"
+        },
+        {
+          "key_path": "$.evidence[19].artifact",
+          "value": "controlled_complex_closure\\negative_evidence\\bcb091a940a8d0dd.json"
+        },
+        {
+          "key_path": "$.evidence[19].key_path",
+          "value": "reason_code"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[31].evidence[18]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.artifact",
+          "value": "controlled_complex_closure\\negative_evidence\\bcb091a940a8d0dd.json"
+        },
+        {
+          "key_path": "$.key_path",
+          "value": "controlled_execution_status"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[31].evidence[19]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.artifact",
+          "value": "controlled_complex_closure\\negative_evidence\\bcb091a940a8d0dd.json"
+        },
+        {
+          "key_path": "$.key_path",
+          "value": "reason_code"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_manual_review.csv",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$csv[32]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$csv[32]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_preliminary.csv",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$csv[32]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[4]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\controlled_execution_worklist.jsonl",
+      "function_names": [
+        "get_formset_kwargs"
+      ],
+      "hashes": [],
+      "object_path": "$line[15]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        },
+        {
+          "key_path": "$.function",
+          "value": "get_formset_kwargs"
+        },
+        {
+          "key_path": "$.semantic_shape",
+          "value": "None"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\remaining_candidates.jsonl",
+      "function_names": [
+        "get_formset_kwargs"
+      ],
+      "hashes": [],
+      "object_path": "$line[56]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        },
+        {
+          "key_path": "$.function",
+          "value": "get_formset_kwargs"
+        },
+        {
+          "key_path": "$.semantic_shape",
+          "value": "None"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\residual_binding_closure\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[4]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "131a79559dd1374fd21a988b1d1f177352fbf4ac0c246edbb015de4710bb48b3",
+        "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+        "d978ce9eb54de7473cc5f6ba2882acf4a4bca4573eb75af56b32ca0e26866413"
+      ],
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "function_names": [
+        "get_formset_kwargs"
+      ],
+      "hashes": [
+        "131a79559dd1374fd21a988b1d1f177352fbf4ac0c246edbb015de4710bb48b3",
+        "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+        "d978ce9eb54de7473cc5f6ba2882acf4a4bca4573eb75af56b32ca0e26866413"
+      ],
+      "object_path": "$line[4]",
+      "path_hints": [
+        "docs/source/releases/v0.7.2.rst",
+        "docs/source/releases/v1.6.rst",
+        "src/oscar/apps/basket/views.py",
+        "tests/integration/basket/test_views.py",
+        "tests/integration/offer/test_upsell_messages.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate.business_keyword_sources.class[0]",
+          "value": "basket"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.path[0]",
+          "value": "basket"
+        },
+        {
+          "key_path": "$.candidate.evidence_link_modes.test:EXACT_CLASS_SYMBOL",
+          "value": "2"
+        },
+        {
+          "key_path": "$.candidate.file",
+          "value": "src/oscar/apps/basket/views.py"
+        },
+        {
+          "key_path": "$.candidate.function",
+          "value": "get_formset_kwargs"
+        },
+        {
+          "key_path": "$.candidate.function_sha256",
+          "value": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72"
+        },
+        {
+          "key_path": "$.candidate.source_file_sha256",
+          "value": "d978ce9eb54de7473cc5f6ba2882acf4a4bca4573eb75af56b32ca0e26866413"
+        },
+        {
+          "key_path": "$.candidate.source_id",
+          "value": "django_oscar"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[0]",
+          "value": "docs/source/releases/v0.7.2.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[1]",
+          "value": "docs/source/releases/v1.6.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_test_files[0]",
+          "value": "tests/integration/basket/test_views.py"
+        },
+        {
+          "key_path": "$.candidate.supporting_test_files[1]",
+          "value": "tests/integration/offer/test_upsell_messages.py"
+        },
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        },
+        {
+          "key_path": "$.selection_hash",
+          "value": "131a79559dd1374fd21a988b1d1f177352fbf4ac0c246edbb015de4710bb48b3"
+        },
+        {
+          "key_path": "$.stratum.source_id",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\terminal_certification\\candidate_terminal_state.jsonl",
+      "function_names": [],
+      "hashes": [],
+      "object_path": "$line[4]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [],
+      "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+      "function_names": [
+        "get_formset_kwargs"
+      ],
+      "hashes": [],
+      "object_path": "$line[77]",
+      "path_hints": [
+        "src/oscar/apps/basket/views.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        },
+        {
+          "key_path": "$.file",
+          "value": "src/oscar/apps/basket/views.py"
+        },
+        {
+          "key_path": "$.function",
+          "value": "get_formset_kwargs"
+        },
+        {
+          "key_path": "$.semantic_shape",
+          "value": "None"
+        },
+        {
+          "key_path": "$.source_id",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89",
+        "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+        "bec79c3c035f95d04c822c14f18d4839b03fb1d92c5ff92af29d650b9740d2b6"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_evidence\\bcb091a940a8d0dd.json",
+      "function_names": [
+        "get_formset_kwargs"
+      ],
+      "hashes": [
+        "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89",
+        "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+        "bec79c3c035f95d04c822c14f18d4839b03fb1d92c5ff92af29d650b9740d2b6"
+      ],
+      "object_path": "$",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89"
+        },
+        {
+          "key_path": "$.function",
+          "value": "get_formset_kwargs"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "bec79c3c035f95d04c822c14f18d4839b03fb1d92c5ff92af29d650b9740d2b6"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    }
+  ]
+}

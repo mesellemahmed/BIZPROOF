@@ -1,0 +1,548 @@
+{
+  "a2_candidates": 33,
+  "a2_families": 30,
+  "batches": [
+    {
+      "candidate_count": 11,
+      "candidate_ids": [
+        "e1cf29f02fa0dadc",
+        "13df73dbd2825f80",
+        "f234f0be14cf3ff3",
+        "87d2f0b3b15f0ea6",
+        "331f175e4aa92eef",
+        "9603b9192132171c",
+        "fa377c649a747a7d",
+        "75e61ddb4dde4f1a",
+        "34748d082751e0cc",
+        "26a1af8837fe7ae4",
+        "9cc9063a46d23cde"
+      ],
+      "candidates": [
+        {
+          "candidate_id": "e1cf29f02fa0dadc",
+          "class": "Applicator",
+          "complexity": "LOW",
+          "file": "src/oscar/apps/offer/applicator.py",
+          "function": "get_user_offers",
+          "function_sha256": "9d9809d1d2a2b5232149353e125ae232b56ef75120e59dd8055271093deae74a",
+          "lines": [
+            96,
+            102
+          ],
+          "source": "django_oscar"
+        },
+        {
+          "candidate_id": "13df73dbd2825f80",
+          "class": "OrderSyncResult",
+          "complexity": "LOW",
+          "file": "src/pretix/base/models/datasync.py",
+          "function": "to_result_dict",
+          "function_sha256": "83bc3d5ba2e5d0e531026937ed7caaa92fd3bb434e53ca7e4b91a049fab42da1",
+          "lines": [
+            140,
+            149
+          ],
+          "source": "pretix"
+        },
+        {
+          "candidate_id": "f234f0be14cf3ff3",
+          "class": "Discount",
+          "complexity": "LOW",
+          "file": "src/pretix/base/models/discount.py",
+          "function": "key",
+          "function_sha256": "3fcd6737daf5eb81ec3f6c61dd265a55fe064e68c28c5321abc0f4e53b3cce8b",
+          "lines": [
+            441,
+            442
+          ],
+          "source": "pretix"
+        },
+        {
+          "candidate_id": "87d2f0b3b15f0ea6",
+          "class": "PercentageDiscountBenefit",
+          "complexity": "MEDIUM",
+          "file": "src/oscar/apps/offer/benefits.py",
+          "function": "description",
+          "function_sha256": "45a854d0f0556c564eeb44c746da3837faec78cca180de724bdb99ac22099f65",
+          "lines": [
+            54,
+            58
+          ],
+          "source": "django_oscar"
+        },
+        {
+          "candidate_id": "331f175e4aa92eef",
+          "class": "BasketDiscount",
+          "complexity": "MEDIUM",
+          "file": "src/oscar/apps/offer/results.py",
+          "function": "is_successful",
+          "function_sha256": "b62b0344499fc7b184b68b507b58d4ed54f776c4a9a0ba8adf2ad254108bba55",
+          "lines": [
+            149,
+            153
+          ],
+          "source": "django_oscar"
+        },
+        {
+          "candidate_id": "9603b9192132171c",
+          "class": "AbstractLine",
+          "complexity": "MEDIUM",
+          "file": "src/oscar/apps/basket/abstract_models.py",
+          "function": "is_tax_known",
+          "function_sha256": "c187a72c9698b45215da3ad5988690a80cfd08fd0c05f8045feacaf82adccebb",
+          "lines": [
+            929,
+            930
+          ],
+          "source": "django_oscar"
+        },
+        {
+          "candidate_id": "fa377c649a747a7d",
+          "class": "AddToBasketForm",
+          "complexity": "MEDIUM",
+          "file": "src/oscar/apps/basket/forms.py",
+          "function": "product",
+          "function_sha256": "5e756e22c48b495d1ff8fe9f47592319ac4ae52878224c39716487cfea087f8c",
+          "lines": [
+            323,
+            329
+          ],
+          "source": "django_oscar"
+        },
+        {
+          "candidate_id": "75e61ddb4dde4f1a",
+          "class": "AbstractLinePrice",
+          "complexity": "MEDIUM",
+          "file": "src/oscar/apps/order/abstract_models.py",
+          "function": "__str__",
+          "function_sha256": "66c178fb8b85f0db06099c88c8409e3310f5533920e772992caaf4a140647362",
+          "lines": [
+            1011,
+            1016
+          ],
+          "source": "django_oscar"
+        },
+        {
+          "candidate_id": "34748d082751e0cc",
+          "class": "AbstractBasket",
+          "complexity": "HIGH",
+          "file": "src/oscar/apps/basket/abstract_models.py",
+          "function": "is_tax_known",
+          "function_sha256": "61d29a2e4d2212929dab269adcf200896a103f479a647226aa046ea5760f9001",
+          "lines": [
+            473,
+            481
+          ],
+          "source": "django_oscar"
+        },
+        {
+          "candidate_id": "26a1af8837fe7ae4",
+          "class": "OrderPosition",
+          "complexity": "LOW",
+          "file": "src/pretix/base/models/orders.py",
+          "function": "__repr__",
+          "function_sha256": "e1366c084ae7fea6c8fee980c11664194372075053be53568985527dce5564cb",
+          "lines": [
+            2830,
+            2833
+          ],
+          "source": "pretix"
+        },
+        {
+          "candidate_id": "9cc9063a46d23cde",
+          "class": "AbstractPosition",
+          "complexity": "MEDIUM",
+          "file": "src/pretix/base/models/orders.py",
+          "function": "quotas",
+          "function_sha256": "94858a131b3ca3260d6f18f28f3117162a572335da93584573c2676c8e24f099",
+          "lines": [
+            1649,
+            1652
+          ],
+          "source": "pretix"
+        }
+      ],
+      "family_count": 9,
+      "family_ids": [
+        "ADAPTER-11c907742189",
+        "ADAPTER-d314b42faa43",
+        "ADAPTER-d5f489f27ec4",
+        "ADAPTER-3d99e55f39ef",
+        "ADAPTER-5871d13594ab",
+        "ADAPTER-e7f2edbef0a6",
+        "ADAPTER-0a24c2f51a4e",
+        "ADAPTER-d5ab008f7964",
+        "ADAPTER-1c545a7da467"
+      ],
+      "route": "V1_SCALAR_EXPRESSION"
+    },
+    {
+      "candidate_count": 9,
+      "candidate_ids": [
+        "d285ecd86455b150",
+        "4d7d61b18dde0ad5",
+        "d5b65e1d48eca4dd",
+        "6fd8bd69c26e7954",
+        "6d009b7961c5d116",
+        "f5d217dec0cf902b",
+        "e293930485085dac",
+        "7bc9603bfbda7dc9",
+        "53abfcd7d20a9cd6"
+      ],
+      "candidates": [
+        {
+          "candidate_id": "d285ecd86455b150",
+          "class": "CrossSellingService",
+          "complexity": "MEDIUM",
+          "file": "src/pretix/base/services/cross_selling.py",
+          "function": "discount_info",
+          "function_sha256": "f98331733ca429658fa45692f93095b987123e59a2a9434946edb797c8a287a8",
+          "lines": [
+            141,
+            148
+          ],
+          "source": "pretix"
+        },
+        {
+          "candidate_id": "4d7d61b18dde0ad5",
+          "class": "BasketView",
+          "complexity": "MEDIUM",
+          "file": "src/oscar/apps/basket/views.py",
+          "function": "json_response",
+          "function_sha256": "fe7a7a4b14d49d5b3c15b6612882543642c8982c1d1886bdb0c2ecf24117c5fc",
+          "lines": [
+            225,
+            234
+          ],
+          "source": "django_oscar"
+        },
+        {
+          "candidate_id": "d5b65e1d48eca4dd",
+          "class": "locapass_eligibilite_etudiant_contrat",
+          "complexity": "MEDIUM",
+          "file": "openfisca_france/model/prestations/locapass.py",
+          "function": "formula",
+          "function_sha256": "5f6651d421628e53cf3f1946af49cea09f3aaa41db14311fd3da0f2f73e8e958",
+          "lines": [
+            95,
+            97
+          ],
+          "source": "openfisca_france"
+        },
+        {
+          "candidate_id": "6fd8bd69c26e7954",
+          "class": "TaxedPrice",
+          "complexity": "MEDIUM",
+          "file": "src/pretix/base/models/tax.py",
+          "function": "__mul__",
+          "function_sha256": "20981d8df07da04030071dbc857915cf90a8d68eaf7d419ba51dde72aae0bf50",
+          "lines": [
+            81,
+            93
+          ],
+          "source": "pretix"
+        },
+        {
+          "candidate_id": "6d009b7961c5d116",
+          "class": "Applicator",
+          "complexity": "HIGH",
+          "file": "src/oscar/apps/offer/applicator.py",
+          "function": "get_offers",
+          "function_sha256": "2dc814115085bd91ed9309b365cbcf4a2c43690dfe742149052cd04917d3d441",
+          "lines": [
+            45,
+            64
+          ],
+          "source": "django_oscar"
+        },
+        {
+          "candidate_id": "f5d217dec0cf902b",
+          "class": "abat_spe",
+          "complexity": "HIGH",
+          "file": "openfisca_france/model/prelevements_obligatoires/impot_revenu/ir.py",
+          "function": "formula",
+          "function_sha256": "e64f9843b8c7d32ecfbc09f03e42e0c4db79c74b4063aa6a304b7d1765ed21c6",
+          "lines": [
+            3622,
+            3679
+          ],
+          "source": "openfisca_france"
+        },
+        {
+          "candidate_id": "e293930485085dac",
+          "class": "exonere_taxe_habitation",
+          "complexity": "HIGH",
+          "file": "openfisca_france/model/prelevements_obligatoires/taxe_habitation/taxe_habitation.py",
+          "function": "formula_2017_01_01",
+          "function_sha256": "380c76df8507d93708822b52e0aebd111d688b9101cbda6ca71710347fc4859d",
+          "lines": [
+            48,
+            81
+          ],
+          "source": "openfisca_france"
+        },
+        {
+          "candidate_id": "7bc9603bfbda7dc9",
+          "class": "paje_cmg",
+          "complexity": "HIGH",
+          "file": "openfisca_france/model/prestations/prestations_familiales/paje.py",
+          "function": "formula_2017_04_01",
+          "function_sha256": "2720f5f14ba482578701430f1b1370e9a8c2c80456406369ff4e00acbea22758",
+          "lines": [
+            570,
+            679
+          ],
+          "source": "openfisca_france"
+        },
+        {
+          "candidate_id": "53abfcd7d20a9cd6",
+          "class": "nbptr",
+          "complexity": "HIGH",
+          "file": "openfisca_france/model/prelevements_obligatoires/impot_revenu/ir.py",
+          "function": "formula_2008_01_01",
+          "function_sha256": "653fd8c2ec5f05ffe7a827976c2ffc3e9d8755d74acaa61ebc692cc426844c88",
+          "lines": [
+            3744,
+            3836
+          ],
+          "source": "openfisca_france"
+        }
+      ],
+      "family_count": 9,
+      "family_ids": [
+        "ADAPTER-0b132d611c43",
+        "ADAPTER-9a7691ef2008",
+        "ADAPTER-ab674a236e2e",
+        "ADAPTER-f970c0bedd6f",
+        "ADAPTER-5638a620f698",
+        "ADAPTER-c56f6a59ac64",
+        "ADAPTER-c245081aad4c",
+        "ADAPTER-a961bd25c6f5",
+        "ADAPTER-f2b683d02882"
+      ],
+      "route": "V2_STRAIGHT_LINE"
+    },
+    {
+      "candidate_count": 13,
+      "candidate_ids": [
+        "7f523a5041034306",
+        "674ea6fd35fa6c39",
+        "8b3e90ca7b531556",
+        "4008a63ee1ef3b44",
+        "41ae4a7df4780001",
+        "8b98d0147c79c3fc",
+        "1311d905af0ebcb5",
+        "2906fe3983a1ebe4",
+        "f3ebe6cce422947e",
+        "e8850260c2763222",
+        "0f73ae8d15cf3408",
+        "801278c4d91c2185",
+        "7013ce92618a1e33"
+      ],
+      "candidates": [
+        {
+          "candidate_id": "7f523a5041034306",
+          "class": "AbstractBasket",
+          "complexity": "HIGH",
+          "file": "src/oscar/apps/basket/abstract_models.py",
+          "function": "product_quantity",
+          "function_sha256": "ae62e254218b9675043680fbf03cee2be65463ea7c2326887458abf7f757f772",
+          "lines": [
+            638,
+            649
+          ],
+          "source": "django_oscar"
+        },
+        {
+          "candidate_id": "674ea6fd35fa6c39",
+          "class": "OrderPosition",
+          "complexity": "HIGH",
+          "file": "src/pretix/base/models/orders.py",
+          "function": "__init__",
+          "function_sha256": "f3180e9973eca32f4e6a77d459e25a8759e939c13004190687ca0a2820b3c17d",
+          "lines": [
+            2629,
+            2632
+          ],
+          "source": "pretix"
+        },
+        {
+          "candidate_id": "8b3e90ca7b531556",
+          "class": "FixedRateTax",
+          "complexity": "HIGH",
+          "file": "src/oscar/apps/partner/strategy.py",
+          "function": "parent_pricing_policy",
+          "function_sha256": "2bc325044761b017027a05af4c8a5df08b0e10d8581b3432b71c6be773381ed9",
+          "lines": [
+            292,
+            305
+          ],
+          "source": "django_oscar"
+        },
+        {
+          "candidate_id": "4008a63ee1ef3b44",
+          "class": "Device",
+          "complexity": "HIGH",
+          "file": "src/pretix/base/models/devices.py",
+          "function": "has_event_permission",
+          "function_sha256": "d0282dfce474ae4d28a442a0b1e6fd555b6cb92a5d128e80c4ca5687244ec5b3",
+          "lines": [
+            236,
+            253
+          ],
+          "source": "pretix"
+        },
+        {
+          "candidate_id": "41ae4a7df4780001",
+          "class": "Order",
+          "complexity": "HIGH",
+          "file": "src/pretix/base/models/orders.py",
+          "function": "pending_sum",
+          "function_sha256": "de8370aae58f719444a509cf6258b7aa3c748a8e88627e99c3784d59faeaf0c7",
+          "lines": [
+            496,
+            507
+          ],
+          "source": "pretix"
+        },
+        {
+          "candidate_id": "8b98d0147c79c3fc",
+          "class": "OrderChangeManager",
+          "complexity": "HIGH",
+          "file": "src/pretix/base/services/orders.py",
+          "function": "completed_payment_sum",
+          "function_sha256": "ab90677d560c3d540b5de81f3246be1b1745dbf66c2c8c9829170bf6edcaad49",
+          "lines": [
+            2899,
+            2906
+          ],
+          "source": "pretix"
+        },
+        {
+          "candidate_id": "1311d905af0ebcb5",
+          "class": "Quota",
+          "complexity": "MEDIUM",
+          "file": "src/pretix/base/models/items.py",
+          "function": "rebuild_cache",
+          "function_sha256": "9b086241aacbe574b946f552eb689139f0c67a4f22cc273bb3583e601ecae443",
+          "lines": [
+            2136,
+            2145
+          ],
+          "source": "pretix"
+        },
+        {
+          "candidate_id": "2906fe3983a1ebe4",
+          "class": "AbstractStockRecord",
+          "complexity": "MEDIUM",
+          "file": "src/oscar/apps/partner/abstract_models.py",
+          "function": "net_stock_level",
+          "function_sha256": "ad97bbc6723b5a0f75b82871371d2435f4c665b5aa46af4ecbd0c1c090b294ab",
+          "lines": [
+            170,
+            182
+          ],
+          "source": "django_oscar"
+        },
+        {
+          "candidate_id": "f3ebe6cce422947e",
+          "class": "StockRequired",
+          "complexity": "MEDIUM",
+          "file": "src/oscar/apps/partner/availability.py",
+          "function": "is_purchase_permitted",
+          "function_sha256": "bf85b7dee0f8955aa0125b5172f9ce4c8ad0d69cce7d2955cd98f50c7304b946",
+          "lines": [
+            89,
+            95
+          ],
+          "source": "django_oscar"
+        },
+        {
+          "candidate_id": "e8850260c2763222",
+          "class": "MultibuyDiscountBenefit",
+          "complexity": "HIGH",
+          "file": "src/oscar/apps/offer/benefits.py",
+          "function": "apply",
+          "function_sha256": "43caf35ba88294b43ebf679eb34e8e77c76d4ed43dbd2676aaef38e9010280af",
+          "lines": [
+            346,
+            361
+          ],
+          "source": "django_oscar"
+        },
+        {
+          "candidate_id": "0f73ae8d15cf3408",
+          "class": "Order",
+          "complexity": "HIGH",
+          "file": "src/pretix/base/models/orders.py",
+          "function": "ticket_download_date",
+          "function_sha256": "77e520b000e302b92a67ca035d10b5ddb88ae67b71f1457aafb6212530d9f8c6",
+          "lines": [
+            945,
+            960
+          ],
+          "source": "pretix"
+        },
+        {
+          "candidate_id": "801278c4d91c2185",
+          "class": "TaxRule",
+          "complexity": "MEDIUM",
+          "file": "src/pretix/base/models/tax.py",
+          "function": "__str__",
+          "function_sha256": "6418e54ffc42b44e738215947f3e359854424c8f743c91be530f7c3324620179",
+          "lines": [
+            437,
+            446
+          ],
+          "source": "pretix"
+        },
+        {
+          "candidate_id": "7013ce92618a1e33",
+          "class": "AbstractBasket",
+          "complexity": "HIGH",
+          "file": "src/oscar/apps/basket/abstract_models.py",
+          "function": "is_quantity_allowed",
+          "function_sha256": "110c7f1dfcabb22c65366fc188399a1b50d325144152db621b8fbc8850bd50f0",
+          "lines": [
+            165,
+            203
+          ],
+          "source": "django_oscar"
+        }
+      ],
+      "family_count": 12,
+      "family_ids": [
+        "ADAPTER-66c5126e8147",
+        "ADAPTER-2a9b21184be7",
+        "ADAPTER-4ade2c9ff830",
+        "ADAPTER-ff59c7489eed",
+        "ADAPTER-67c2eab08d97",
+        "ADAPTER-906b40a8c9af",
+        "ADAPTER-bf5787990f81",
+        "ADAPTER-24c3054e49c7",
+        "ADAPTER-5f386a660c33",
+        "ADAPTER-abacec1ff3de",
+        "ADAPTER-4074c971327c",
+        "ADAPTER-33abb6b505c0"
+      ],
+      "route": "V3_BRANCHING"
+    },
+    {
+      "candidate_count": 0,
+      "candidate_ids": [],
+      "candidates": [],
+      "family_count": 0,
+      "family_ids": [],
+      "route": "V4_COMPLEX_MANUAL"
+    }
+  ],
+  "certification_policy": "No candidate becomes CERTIFIED_A2 until explicit adapter authoring, source-executed preservation, mutant sensitivity and symbolic-equivalence obligations all pass.",
+  "execution_order": [
+    "V1_SCALAR_EXPRESSION",
+    "V2_STRAIGHT_LINE",
+    "V3_BRANCHING"
+  ],
+  "phase": "V0.11_A2_EXECUTION_PLAN",
+  "starting_pending": 76,
+  "starting_terminalized": 14
+}

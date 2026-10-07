@@ -1,0 +1,42 @@
+{
+  "abstraction_contracts": [
+    "translated_template equals the runtime result of _(source_template)",
+    "line == str(self.line)",
+    "quantity == self.quantity",
+    "price_incl_tax == str(self.price_incl_tax)"
+  ],
+  "all_required_gates_pass": true,
+  "candidate_id": "75e61ddb4dde4f1a",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_counterexample_replay": {
+    "correct_value": "\"Line 'A' (quantity 2) price 10.00\"",
+    "mutant_value": "\"Line 'A' (quantity 3) price 10.00\"",
+    "replayed": true,
+    "witness": [
+      "Line '%(number)s' (quantity %(qty)d) price %(price)s",
+      "A",
+      2,
+      "10.00"
+    ]
+  },
+  "formal_mutant_refutation": {
+    "abstraction": "translated English-format template instance; non-negative quantity",
+    "formal_property": "exists an admissible semantic input such that correct_output != mutant_output",
+    "formally_refuted": true,
+    "model": "[quantity = 1]",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "mutant_structurally_distinct": true,
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-A2-NONSCALAR-2",
+  "semantic_capability": "STRUCTURED_SEMANTIC_VALUE",
+  "source_equivalence": {
+    "adapter_ast": "BinOp(left=Name(id='translated_template', ctx=Load()), op=Mod(), right=Dict(keys=[Constant(value='number'), Constant(value='qty'), Constant(value='price')], values=[Name(id='line', ctx=Load()), Name(id='quantity', ctx=Load()), Name(id='price_incl_tax', ctx=Load())]))",
+    "method": "canonical AST identity after explicit abstraction substitution",
+    "proved": true,
+    "source_ast": "BinOp(left=Name(id='translated_template', ctx=Load()), op=Mod(), right=Dict(keys=[Constant(value='number'), Constant(value='qty'), Constant(value='price')], values=[Name(id='line', ctx=Load()), Name(id='quantity', ctx=Load()), Name(id='price_incl_tax', ctx=Load())]))"
+  },
+  "source_slice_sha256": "c53099ac23824c6959a03d2935b0cfbf9aee5b946a7774af646a821799df5ae0",
+  "v012_outcome": "CERTIFIED_A2"
+}

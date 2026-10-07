@@ -1,0 +1,13 @@
+{
+  "attack_order_frozen": false,
+  "certification_started": false,
+  "final_candidate_status": "EQUIVALENT_SOURCE_BODY_CLUSTER_RESOLVED",
+  "new_authoritative": 1,
+  "population": 9,
+  "prior_authoritative": 8,
+  "recovery_claims": 0,
+  "remaining_non_authoritative": [],
+  "schema_version": "BIZPROOF-V0.12-B4-A1R2-SUMMARY-1",
+  "semantic_routes_frozen": false,
+  "total_authoritative": 9
+}

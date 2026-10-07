@@ -1,0 +1,41 @@
+{
+  "attempted": 1,
+  "batch": "B4_BATCH3_VECTOR_LOGIC",
+  "candidate_id": "a74d4580a9effb73",
+  "certification_started": false,
+  "correct_source_ast_rewrite": false,
+  "correct_source_policy": "Execute the exact B4-A2 frozen formula_2022 source with explicit finite vector-domain operator bindings.",
+  "dependency_contract": [
+    "periods.period('2022-06')",
+    "individu('bourse_criteres_sociaux', juin_2022)",
+    "individu('bourse_enseignement_sup', juin_2022)",
+    "individu.has_role(Famille.PARENT)",
+    "individu.famille('eligibilite_per', period)",
+    "where",
+    "not_",
+    "or_",
+    "and_"
+  ],
+  "finite_boolean_basis": {
+    "case_count": 16,
+    "exhaustive": true,
+    "variable_count": 4
+  },
+  "formal_obligation": "For scholarship_any=True, has_parent_role=True and eligibilite_per=True, authoritative result is False while the mutant result is True.",
+  "mutant": {
+    "fault": "when the scholarship condition is active, the mutant returns True even when both parent-role and eligibilite_per are true",
+    "name": "OMIT_PARENT_FAMILY_EXCLUSION",
+    "target": "inner where(and_(...), False, True) false branch"
+  },
+  "mutant_protocol_commit_required": true,
+  "observation_variables": [
+    "bourse_criteres_sociaux_positive",
+    "bourse_enseignement_sup_positive",
+    "has_parent_role",
+    "eligibilite_per"
+  ],
+  "parent_checkpoint": "a316ca17c147336db9c009f5f4002bdf5356dbe7",
+  "recovery_claims_before_execution": 0,
+  "schema_version": "BIZPROOF-V0.12-B4-CERT3-PROTOCOL-1",
+  "semantic_route": "VECTOR_BOOLEAN_WHERE_RETURN"
+}

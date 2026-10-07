@@ -1,0 +1,253 @@
+{
+  "certification_claim": false,
+  "cohort_sha256": "3144f973a166ebee41a059c538b81ffac5a5d15737982c6d95e59175325ca108",
+  "targets": [
+    {
+      "candidate_ids": [
+        "aab5348ee173d6e3"
+      ],
+      "certification_claim": false,
+      "lock_status": "MISSING",
+      "module": "decimal",
+      "occurrences": 1,
+      "package_root": "decimal",
+      "primitives": [
+        "D"
+      ],
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_status": "MISSING",
+      "source_ids": [
+        "django_oscar"
+      ],
+      "symbol": "Decimal"
+    },
+    {
+      "candidate_ids": [
+        "019d3a3df4514bac"
+      ],
+      "certification_claim": false,
+      "lock_status": "MISSING",
+      "module": "openfisca_core.model_api",
+      "occurrences": 2,
+      "package_root": "openfisca_core",
+      "primitives": [
+        "famille"
+      ],
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_status": "MISSING",
+      "source_ids": [
+        "openfisca_france"
+      ],
+      "symbol": "famille"
+    },
+    {
+      "candidate_ids": [
+        "19d233058899f735",
+        "244130d6ff9953d0",
+        "2dd784251ccc7dce",
+        "4b583322af591973",
+        "4c7af63af2f89319",
+        "4d2eb60abd9c44c8",
+        "78ca19c5e56cefa7",
+        "80788665d9905741",
+        "9ccbe1be4f59b3ce",
+        "b46358e6c871e1bf",
+        "b70f35ae381f7a3b",
+        "fd4702ed1d79ff1f"
+      ],
+      "certification_claim": false,
+      "lock_status": "MISSING",
+      "module": "openfisca_core.model_api",
+      "occurrences": 45,
+      "package_root": "openfisca_core",
+      "primitives": [
+        "foyer_fiscal"
+      ],
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_status": "MISSING",
+      "source_ids": [
+        "openfisca_france"
+      ],
+      "symbol": "foyer_fiscal"
+    },
+    {
+      "candidate_ids": [
+        "019d3a3df4514bac"
+      ],
+      "certification_claim": false,
+      "lock_status": "MISSING",
+      "module": "openfisca_core.model_api",
+      "occurrences": 1,
+      "package_root": "openfisca_core",
+      "primitives": [
+        "has_role"
+      ],
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_status": "MISSING",
+      "source_ids": [
+        "openfisca_france"
+      ],
+      "symbol": "has_role"
+    },
+    {
+      "candidate_ids": [
+        "019d3a3df4514bac",
+        "dfd34c86bcd9bfa1"
+      ],
+      "certification_claim": false,
+      "lock_status": "MISSING",
+      "module": "openfisca_core.model_api",
+      "occurrences": 13,
+      "package_root": "openfisca_core",
+      "primitives": [
+        "individu"
+      ],
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_status": "MISSING",
+      "source_ids": [
+        "openfisca_france"
+      ],
+      "symbol": "individu"
+    },
+    {
+      "candidate_ids": [
+        "244130d6ff9953d0"
+      ],
+      "certification_claim": false,
+      "lock_status": "MISSING",
+      "module": "openfisca_core.model_api",
+      "occurrences": 1,
+      "package_root": "openfisca_core",
+      "primitives": [
+        "members"
+      ],
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_status": "MISSING",
+      "source_ids": [
+        "openfisca_france"
+      ],
+      "symbol": "members"
+    },
+    {
+      "candidate_ids": [
+        "4c7af63af2f89319",
+        "eb41eb351df073ef",
+        "fd4702ed1d79ff1f"
+      ],
+      "certification_claim": false,
+      "lock_status": "MISSING",
+      "module": "openfisca_core.model_api",
+      "occurrences": 4,
+      "package_root": "openfisca_core",
+      "primitives": [
+        "min_"
+      ],
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_status": "MISSING",
+      "source_ids": [
+        "openfisca_france"
+      ],
+      "symbol": "min_"
+    },
+    {
+      "candidate_ids": [
+        "cb937575ad9957d1"
+      ],
+      "certification_claim": false,
+      "lock_status": "MISSING",
+      "module": "openfisca_core.model_api",
+      "occurrences": 1,
+      "package_root": "openfisca_core",
+      "primitives": [
+        "nb_enf"
+      ],
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_status": "MISSING",
+      "source_ids": [
+        "openfisca_france"
+      ],
+      "symbol": "nb_enf"
+    },
+    {
+      "candidate_ids": [
+        "61cf0e4af667580e",
+        "dfd34c86bcd9bfa1",
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "lock_status": "MISSING",
+      "module": "openfisca_core.model_api",
+      "occurrences": 6,
+      "package_root": "openfisca_core",
+      "primitives": [
+        "not_"
+      ],
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_status": "MISSING",
+      "source_ids": [
+        "openfisca_france"
+      ],
+      "symbol": "not_"
+    },
+    {
+      "candidate_ids": [
+        "019d3a3df4514bac",
+        "a74d4580a9effb73"
+      ],
+      "certification_claim": false,
+      "lock_status": "MISSING",
+      "module": "openfisca_core.model_api",
+      "occurrences": 2,
+      "package_root": "openfisca_core",
+      "primitives": [
+        "period"
+      ],
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_status": "MISSING",
+      "source_ids": [
+        "openfisca_france"
+      ],
+      "symbol": "period"
+    },
+    {
+      "candidate_ids": [
+        "244130d6ff9953d0"
+      ],
+      "certification_claim": false,
+      "lock_status": "MISSING",
+      "module": "openfisca_core.model_api",
+      "occurrences": 1,
+      "package_root": "openfisca_core",
+      "primitives": [
+        "sum"
+      ],
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_status": "MISSING",
+      "source_ids": [
+        "openfisca_france"
+      ],
+      "symbol": "sum"
+    },
+    {
+      "candidate_ids": [
+        "4c7af63af2f89319",
+        "a74d4580a9effb73",
+        "fd4702ed1d79ff1f"
+      ],
+      "certification_claim": false,
+      "lock_status": "MISSING",
+      "module": "openfisca_core.model_api",
+      "occurrences": 3,
+      "package_root": "openfisca_core",
+      "primitives": [
+        "where"
+      ],
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_status": "MISSING",
+      "source_ids": [
+        "openfisca_france"
+      ],
+      "symbol": "where"
+    }
+  ]
+}

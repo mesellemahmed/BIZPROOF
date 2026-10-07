@@ -1,0 +1,50 @@
+{
+  "all_required_gates_pass": true,
+  "authoritative_source": {
+    "correct_source_ast_rewritten": false,
+    "matches_frozen_plan": true,
+    "sha256": "dcc51cdc8b19bef34bcd4fa812d19b75e8e2ce09aa9d228dc3befd25fef666c6"
+  },
+  "candidate_id": "a74d4580a9effb73",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_mutant_replay": {
+    "basis_cases": 16,
+    "different": true,
+    "discriminating_cases": 3
+  },
+  "formal_mutant_refutation": {
+    "model": "[higher_positive = False,\n parent_role = True,\n family_eligibility = True,\n social_positive = True]",
+    "property": "there exists a scholarship-active case with parent_role=True and family_eligibility=True where the authoritative nested where evaluates False and OMIT_PARENT_FAMILY_EXCLUSION evaluates True",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "function_name": "formula_2022",
+  "historical_category": "NESTED_OR_HIGHER_ORDER_LOGIC",
+  "mutant": {
+    "fault": "when the scholarship condition is active, the mutant returns True even when both parent-role and eligibilite_per are true",
+    "name": "OMIT_PARENT_FAMILY_EXCLUSION",
+    "target": "inner where(and_(...), False, True) false branch"
+  },
+  "mutant_protocol_committed_before_execution": true,
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-B4-CERT3-A2-1",
+  "scope": {
+    "certified": "the exact frozen formula_2022 under the finite four-observation boolean/vector projection and explicit OpenFisca-like operator bindings",
+    "not_certified": [
+      "the complete OpenFisca execution engine",
+      "arbitrary NumPy broadcasting or dtype semantics",
+      "entity behavior outside the five explicitly observed source dependencies",
+      "arbitrary domains beyond the frozen finite boolean abstraction"
+    ]
+  },
+  "semantic_capability": "VECTOR_BOOLEAN_WHERE_RETURN",
+  "source_projection_equivalence": {
+    "boolean_variable_count": 4,
+    "branch_basis": 16,
+    "controlled_exact_source_replay": true,
+    "dependency_contract_verified": true,
+    "finite_boolean_basis_exhaustive": true,
+    "source_true_cases": 9
+  },
+  "v012_outcome": "CERTIFIED_A2"
+}

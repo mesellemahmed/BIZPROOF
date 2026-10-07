@@ -1,0 +1,40 @@
+{
+  "additional_files": [
+    "run.sh",
+    "pyproject.toml",
+    "VALIDATION.json"
+  ],
+  "benchmark_directories": [
+    "benchmarks/v0.9",
+    "benchmarks/v0.10"
+  ],
+  "certification_claim": false,
+  "files": [
+    "src/bizproof/adapter_preservation.py",
+    "src/bizproof/certification_pipeline.py",
+    "src/bizproof/external_corpus.py",
+    "src/bizproof/external_semantic_validation.py",
+    "src/bizproof/generalization_cohort.py",
+    "src/bizproof/generalization_contract_readiness.py",
+    "src/bizproof/generalization_feasibility.py",
+    "src/bizproof/generalization_protocol_closure.py",
+    "src/bizproof/generalization_semantic_evidence.py",
+    "src/bizproof/replay.py",
+    "src/bizproof/symbolic_equivalence.py",
+    "src/bizproof/z3_backend.py",
+    "tests/test_adapter_preservation.py",
+    "tests/test_business_benchmark.py",
+    "tests/test_certification_negative_paths.py",
+    "tests/test_certification_pipeline.py",
+    "tests/test_differential.py",
+    "tests/test_enum_backend.py",
+    "tests/test_external_semantic_validation.py",
+    "tests/test_fuzzing.py",
+    "tests/test_generalization_certification_audit.py",
+    "tests/test_generalization_feasibility.py",
+    "tests/test_generalization_symbolic_probe.py",
+    "tests/test_generalization_workplan.py",
+    "tests/test_symbolic_equivalence.py",
+    "tests/test_z3_backend.py"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "candidate_id": "801278c4d91c2185",
+  "certification_claim": false,
+  "interpretation": "Unsupported means unsupported by the frozen A2 scalar certification scope. It does not claim that the external function is intrinsically unverifiable by another formalism.",
+  "negative_evidence_digest": "0bf5f489f0441d83cc2b51601f94cd7ba69d3163d60330da497e16531cda2caa",
+  "prior_review": {
+    "candidate_id": "801278c4d91c2185",
+    "certification_claim": false,
+    "class": "TaxRule",
+    "function": "__str__",
+    "reason": "The function constructs a localized textual representation rather than a scalar business value.",
+    "reason_code": "TEXTUAL_REPRESENTATION",
+    "source": "pretix",
+    "status": "A2_REVIEW_REQUIRED",
+    "terminal_outcome": null
+  },
+  "reason": "The function constructs a localized textual representation rather than a scalar business value.",
+  "reason_code": "TEXTUAL_REPRESENTATION",
+  "schema_version": "BIZPROOF-V0.11-NEGATIVE-EVIDENCE-1",
+  "scope": "V0.11 A2 explicit scalar semantic adapter",
+  "source": {
+    "class": "TaxRule",
+    "file": "src/pretix/base/models/tax.py",
+    "function": "__str__",
+    "function_sha256": "6418e54ffc42b44e738215947f3e359854424c8f743c91be530f7c3324620179",
+    "lines": [
+      437,
+      446
+    ],
+    "source_file_sha256": "5f27a1d0fa236365d9809f355ceb2e3331191ca931c60ef1d0a0889001db4298",
+    "source_id": "pretix"
+  },
+  "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+}

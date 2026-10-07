@@ -1,0 +1,24 @@
+{
+  "acceptance_rule": "A candidate is source-resolved automatically only when a Tier-A or Tier-B hash identifies exactly one external function source.",
+  "candidate_count": 8,
+  "candidate_ids": [
+    "03e2adf4e4f323b1",
+    "63e7979762bf860b",
+    "7460029971aad8de",
+    "7cf281a33e5781df",
+    "91b2dc32504282fc",
+    "a09e038870c9b436",
+    "a79d9687185720aa",
+    "bcb091a940a8d0dd"
+  ],
+  "certification_started": false,
+  "hash_evidence_tiers": {
+    "TIER_A": "64-hex token already present in the candidate-specific B2 function hints",
+    "TIER_B": "64-hex token occurring within four lines of the candidate id in a historical file",
+    "TIER_C": "hash occurring only in broad historical context; diagnostic only"
+  },
+  "recovery_claims": 0,
+  "resolution_strategy": "candidate-linked SHA-256 reverse lookup before function-name matching",
+  "schema_version": "BIZPROOF-V0.12-B3-SOURCE-FREEZE-1",
+  "source_checkpoint": "3feed23cb47b9a9cdf94e5f671b413760fc72d45"
+}

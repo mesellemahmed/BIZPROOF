@@ -1,0 +1,260 @@
+{
+  "13df73dbd2825f80": {
+    "candidate_id": "13df73dbd2825f80",
+    "category": "COMPLEX_CONTAINER_SEMANTICS",
+    "class_name": "OrderSyncResult",
+    "function_name": "to_result_dict",
+    "lineno": 140,
+    "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\datasync.py",
+    "project": "pretix",
+    "semantic_shape_available": true,
+    "shape": {
+      "arguments": [
+        "self"
+      ],
+      "ast_node_count": 39,
+      "attribute_writes": [],
+      "await_count": 0,
+      "boolean_operation_count": 0,
+      "branch_count": 0,
+      "call_count": 0,
+      "calls": [],
+      "comparison_count": 0,
+      "comprehensions": {
+        "dict": 0,
+        "generator": 0,
+        "list": 0,
+        "set": 0
+      },
+      "control_score": 0,
+      "function_name": "to_result_dict",
+      "higher_order_calls": [],
+      "higher_order_score": 0,
+      "lambda_count": 0,
+      "local_assignment_count": 0,
+      "loop_count": 0,
+      "mutation_calls": [],
+      "nested_functions": [],
+      "raise_count": 0,
+      "return_count": 1,
+      "state_effect_score": 0,
+      "subscript_writes": [],
+      "try_count": 0,
+      "yield_count": 0
+    },
+    "source_status": "DIRECT_HASH_RESOLVED"
+  },
+  "1a2de6edb11465fe": {
+    "candidate_id": "1a2de6edb11465fe",
+    "category": "NESTED_OR_HIGHER_ORDER_LOGIC",
+    "semantic_shape_available": false,
+    "source_status": "UNRESOLVED"
+  },
+  "3fd2d8b8a76b4834": {
+    "candidate_id": "3fd2d8b8a76b4834",
+    "category": "NESTED_OR_HIGHER_ORDER_LOGIC",
+    "semantic_shape_available": false,
+    "source_status": "UNRESOLVED"
+  },
+  "674ea6fd35fa6c39": {
+    "candidate_id": "674ea6fd35fa6c39",
+    "category": "STATEFUL_SIDE_EFFECTING_LOGIC",
+    "semantic_shape_available": false,
+    "source_status": "UNRESOLVED"
+  },
+  "801278c4d91c2185": {
+    "candidate_id": "801278c4d91c2185",
+    "category": "OTHER_FROZEN_SCOPE_LIMITATION",
+    "semantic_shape_available": false,
+    "source_status": "NAME_PATH_REVIEW"
+  },
+  "8b3e90ca7b531556": {
+    "candidate_id": "8b3e90ca7b531556",
+    "category": "OTHER_FROZEN_SCOPE_LIMITATION",
+    "class_name": "FixedRateTax",
+    "function_name": "parent_pricing_policy",
+    "lineno": 292,
+    "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\partner\\strategy.py",
+    "project": "django_oscar",
+    "semantic_shape_available": true,
+    "shape": {
+      "arguments": [
+        "self",
+        "product",
+        "children_stock"
+      ],
+      "ast_node_count": 99,
+      "attribute_writes": [],
+      "await_count": 0,
+      "boolean_operation_count": 0,
+      "branch_count": 1,
+      "call_count": 5,
+      "calls": [
+        "get_rate",
+        "get_exponent",
+        "quantize",
+        "FixedPrice",
+        "UnavailablePrice"
+      ],
+      "comparison_count": 1,
+      "comprehensions": {
+        "dict": 0,
+        "generator": 0,
+        "list": 1,
+        "set": 0
+      },
+      "control_score": 2,
+      "function_name": "parent_pricing_policy",
+      "higher_order_calls": [],
+      "higher_order_score": 1,
+      "lambda_count": 0,
+      "local_assignment_count": 5,
+      "loop_count": 0,
+      "mutation_calls": [],
+      "nested_functions": [],
+      "raise_count": 0,
+      "return_count": 2,
+      "state_effect_score": 0,
+      "subscript_writes": [],
+      "try_count": 0,
+      "yield_count": 0
+    },
+    "source_status": "HASH_NAME_RESOLVED"
+  },
+  "a74d4580a9effb73": {
+    "candidate_id": "a74d4580a9effb73",
+    "category": "NESTED_OR_HIGHER_ORDER_LOGIC",
+    "class_name": "eligibilite_per_etudiant",
+    "function_name": "formula_2022",
+    "lineno": 47,
+    "path": "external_sources\\v0.6\\openfisca_france\\openfisca_france\\model\\prestations\\aides_exceptionnelles\\prime_exceptionnelle_rentree.py",
+    "project": "openfisca_france",
+    "semantic_shape_available": true,
+    "shape": {
+      "arguments": [
+        "individu",
+        "period"
+      ],
+      "ast_node_count": 72,
+      "attribute_writes": [],
+      "await_count": 0,
+      "boolean_operation_count": 0,
+      "branch_count": 0,
+      "call_count": 10,
+      "calls": [
+        "period",
+        "where",
+        "not_",
+        "where",
+        "or_",
+        "and_",
+        "has_role",
+        "famille",
+        "individu",
+        "individu"
+      ],
+      "comparison_count": 2,
+      "comprehensions": {
+        "dict": 0,
+        "generator": 0,
+        "list": 0,
+        "set": 0
+      },
+      "control_score": 2,
+      "function_name": "formula_2022",
+      "higher_order_calls": [],
+      "higher_order_score": 0,
+      "lambda_count": 0,
+      "local_assignment_count": 2,
+      "loop_count": 0,
+      "mutation_calls": [],
+      "nested_functions": [],
+      "raise_count": 0,
+      "return_count": 1,
+      "state_effect_score": 0,
+      "subscript_writes": [],
+      "try_count": 0,
+      "yield_count": 0
+    },
+    "source_status": "DIRECT_HASH_RESOLVED"
+  },
+  "e8850260c2763222": {
+    "candidate_id": "e8850260c2763222",
+    "category": "STATEFUL_SIDE_EFFECTING_LOGIC",
+    "semantic_shape_available": false,
+    "source_status": "UNRESOLVED"
+  },
+  "eb41eb351df073ef": {
+    "candidate_id": "eb41eb351df073ef",
+    "category": "BINDING_OR_DOMAIN_UNRESOLVED",
+    "class_name": "aide_mobilite_eligible",
+    "function_name": "formula_2021_06_09",
+    "lineno": 227,
+    "path": "external_sources\\v0.6\\openfisca_france\\openfisca_france\\model\\prestations\\aide_mobilite.py",
+    "project": "openfisca_france",
+    "semantic_shape_available": true,
+    "shape": {
+      "arguments": [
+        "individu",
+        "period",
+        "parameters"
+      ],
+      "ast_node_count": 597,
+      "attribute_writes": [],
+      "await_count": 0,
+      "boolean_operation_count": 0,
+      "branch_count": 0,
+      "call_count": 25,
+      "calls": [
+        "individu",
+        "individu",
+        "individu",
+        "astype",
+        "individu",
+        "min_",
+        "individu",
+        "individu",
+        "individu",
+        "individu",
+        "individu",
+        "individu",
+        "individu",
+        "not_",
+        "menage",
+        "individu",
+        "not_",
+        "individu",
+        "not_",
+        "individu",
+        "individu",
+        "timedelta64",
+        "individu",
+        "parameters",
+        "not_"
+      ],
+      "comparison_count": 21,
+      "comprehensions": {
+        "dict": 0,
+        "generator": 0,
+        "list": 0,
+        "set": 0
+      },
+      "control_score": 21,
+      "function_name": "formula_2021_06_09",
+      "higher_order_calls": [],
+      "higher_order_score": 0,
+      "lambda_count": 0,
+      "local_assignment_count": 42,
+      "loop_count": 0,
+      "mutation_calls": [],
+      "nested_functions": [],
+      "raise_count": 0,
+      "return_count": 1,
+      "state_effect_score": 0,
+      "subscript_writes": [],
+      "try_count": 0,
+      "yield_count": 0
+    },
+    "source_status": "DIRECT_HASH_RESOLVED"
+  }
+}

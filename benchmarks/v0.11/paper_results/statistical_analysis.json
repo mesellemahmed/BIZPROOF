@@ -1,0 +1,33 @@
+{
+  "complexity_association_exploratory": {
+    "chi_square": 14.129999999999999,
+    "cramers_v": 0.396232255123179,
+    "degrees_of_freedom": 2,
+    "p_value": 0.0008544949203617717,
+    "scope": "Descriptive/exploratory association within the 90-candidate cohort; not a weighted population-level inference.",
+    "table": "complexity x {certified, not-certified}",
+    "test": "Pearson chi-square"
+  },
+  "overall_unweighted_yield": {
+    "certified": 50,
+    "ci95_wilson": [
+      0.4527192645595967,
+      0.6538434437110336
+    ],
+    "estimate": 0.5555555555555556,
+    "total": 90
+  },
+  "schema_version": "BIZPROOF-V0.11-PAPER-STATISTICS-1",
+  "source_association_exploratory": {
+    "chi_square": 14.67,
+    "cramers_v": 0.403732584763727,
+    "degrees_of_freedom": 2,
+    "p_value": 0.0006523039002191786,
+    "scope": "Descriptive/exploratory association within the 90-candidate cohort; not a weighted population-level inference.",
+    "table": "source x {certified, not-certified}",
+    "test": "Pearson chi-square"
+  },
+  "weighted_certification_yield": 0.459041095890411,
+  "weighted_yield_ci": null,
+  "weighted_yield_ci_note": "No confidence interval is reported for the weighted estimate because a design-based variance estimator was not frozen in V0.11."
+}

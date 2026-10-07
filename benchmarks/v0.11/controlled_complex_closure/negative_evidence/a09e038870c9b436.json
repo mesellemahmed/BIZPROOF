@@ -1,0 +1,14 @@
+{
+  "candidate_id": "a09e038870c9b436",
+  "certification_claim": false,
+  "class": "OrderFee",
+  "function": "__str__",
+  "function_sha256": "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897",
+  "interpretation": "Unsupported means unsupported by the frozen V0.11 formal certification scope. It does not claim that the function is intrinsically unverifiable by another formalism.",
+  "negative_evidence_digest": "d1c12d1c956dd72b362bdb493a2405d5eb5f1be91d05b057145a9942366643e8",
+  "reason": "The locked source returns a conditionally constructed human-readable string using a statement-level branch and format operation. Existing V0.11 A1 string-related certificates cover direct bound-value returns under an uninterpreted value domain, not conditional string construction or concatenation semantics.",
+  "reason_code": "CONDITIONAL_STRING_CONSTRUCTION_OUTSIDE_FROZEN_FORMAL_SCOPE",
+  "schema_version": "BIZPROOF-V0.11-NEGATIVE-EVIDENCE-1",
+  "source": "pretix",
+  "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+}

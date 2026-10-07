@@ -1,0 +1,67 @@
+{
+  "capabilities": [
+    "NESTED_LOGIC",
+    "OPAQUE_BINDING",
+    "STATE_EFFECT",
+    "STRUCTURED_VALUE"
+  ],
+  "case_specific_routing": false,
+  "claim_scope": "generic structural semantic projection only; no business meaning is inferred for opaque bindings, calls, state, or effects",
+  "function_name": "rule",
+  "observations": [
+    {
+      "expression": "accepted",
+      "kind": "RETURN_COMPONENT",
+      "path": "return[0]",
+      "symbol": null
+    },
+    {
+      "expression": "user.code",
+      "kind": "RETURN_COMPONENT",
+      "path": "return[1]",
+      "symbol": null
+    },
+    {
+      "expression": "user.code",
+      "kind": "OPAQUE_ATTRIBUTE",
+      "path": "user.code",
+      "symbol": "beta_0"
+    },
+    {
+      "expression": "user.save",
+      "kind": "OPAQUE_ATTRIBUTE",
+      "path": "user.save",
+      "symbol": "beta_1"
+    },
+    {
+      "expression": "all((value > 0 for value in values))",
+      "kind": "NESTED_OPERATOR",
+      "path": "all",
+      "symbol": null
+    },
+    {
+      "expression": "(value > 0 for value in values)",
+      "kind": "NESTED_OPERATOR",
+      "path": "GeneratorExp",
+      "symbol": null
+    },
+    {
+      "expression": "user.accepted = True",
+      "kind": "STATE_WRITE",
+      "path": "user.accepted",
+      "symbol": null
+    },
+    {
+      "expression": "user.save()",
+      "kind": "EFFECT_CALL",
+      "path": "user.save",
+      "symbol": null
+    }
+  ],
+  "parameters": [
+    "user",
+    "values"
+  ],
+  "source_sha256": "4b8fc8d7356ddceeababbaf39cc4f27d04df465a8ad25e08545c52a26a71c13f",
+  "unsupported_nodes": []
+}

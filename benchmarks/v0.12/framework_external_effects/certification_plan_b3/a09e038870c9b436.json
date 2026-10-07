@@ -1,0 +1,26 @@
+{
+  "candidate_id": "a09e038870c9b436",
+  "certification_batch": "STATE_RETURN_BATCH",
+  "class_name": "OrderFee",
+  "function_name": "__str__",
+  "lineno": 2442,
+  "matched_provenance_hash": "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897",
+  "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+  "provenance_resolution": "STRUCTURED_DIRECT_HASH_RESOLVED",
+  "reason_codes": "CONDITIONAL_STRING_CONSTRUCTION_OUTSIDE_FROZEN_FORMAL_SCOPE",
+  "semantic_observation": "returned display string under explicit description and fee-type observations",
+  "semantic_route": "CONDITIONAL_STRING_RETURN",
+  "source": "def __str__(self):\n        if self.description:\n            return '{} - {}'.format(self.get_fee_type_display(), self.description)\n        else:\n            return self.get_fee_type_display()",
+  "source_sha256": "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897",
+  "structural_profile": {
+    "attribute_writes": [],
+    "branch_count": 1,
+    "calls": [
+      "format",
+      "get_fee_type_display",
+      "get_fee_type_display"
+    ],
+    "return_count": 2,
+    "subscript_writes": 0
+  }
+}

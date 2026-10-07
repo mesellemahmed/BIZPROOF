@@ -1,0 +1,37 @@
+{
+  "all_required_gates_pass": true,
+  "authoritative_source": {
+    "ast_rewritten": false,
+    "matches_frozen_plan": true,
+    "sha256": "04d0c6d989e859716852320a74d4cdc881f86e1c70aba60820dc4919985dad2d"
+  },
+  "candidate_id": "4b57e2d73c695a41",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "formal_mutant_refutation": {
+    "model": "[old_status = 1, open_status = 0]",
+    "property": "there exists a pre-state where assigning OPEN differs from the KEEP_OLD_STATUS mutant",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "function_name": "thaw",
+  "mutant": {
+    "difference": "correct transition assigns OPEN; mutant preserves the prior status",
+    "name": "KEEP_OLD_STATUS"
+  },
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-B2-CERT1-A2-1",
+  "scope": {
+    "certified": "the frozen source projection over explicit state, sequence, helper, identifier, and effect observations defined by the prospective B2 route",
+    "not_certified": [
+      "correctness of the underlying Django, Oscar, Pretix or database runtime",
+      "unobserved framework side effects outside the frozen projection",
+      "arbitrary external dependency implementations"
+    ]
+  },
+  "semantic_capability": "OBJECT_STATE_PLUS_EFFECT_TRACE",
+  "source_projection_equivalence": {
+    "controlled_exact_source_replay": true,
+    "structural_route_gate": true
+  },
+  "v012_outcome": "CERTIFIED_A2"
+}

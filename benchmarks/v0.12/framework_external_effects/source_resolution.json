@@ -1,0 +1,134 @@
+{
+  "03e2adf4e4f323b1": {
+    "candidate_id": "03e2adf4e4f323b1",
+    "resolved": false,
+    "selected": null,
+    "source_candidate_count": 0
+  },
+  "1311d905af0ebcb5": {
+    "candidate_id": "1311d905af0ebcb5",
+    "resolved": true,
+    "selected": {
+      "evidence_file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "function_name": "rebuild_cache",
+      "key_path": "source_slice",
+      "sha256": "9b086241aacbe574b946f552eb689139f0c67a4f22cc273bb3583e601ecae443",
+      "source": "def rebuild_cache(self, now_dt=None):\n        if settings.HAS_REDIS:\n            rc = django_redis.get_redis_connection(\"redis\")\n            p = rc.pipeline()\n            p.hdel(f'quotas:{self.event_id}:availabilitycache', str(self.pk))\n            p.hdel(f'quotas:{self.event_id}:availabilitycache:nocw', str(self.pk))\n            p.hdel(f'quotas:{self.event_id}:availabilitycache:igcl', str(self.pk))\n            p.hdel(f'quotas:{self.event_id}:availabilitycache:nocw:igcl', str(self.pk))\n            p.execute()\n            self.availability(now_dt=now_dt)"
+    },
+    "source_candidate_count": 1
+  },
+  "2309036b0c69ad48": {
+    "candidate_id": "2309036b0c69ad48",
+    "resolved": false,
+    "selected": null,
+    "source_candidate_count": 0
+  },
+  "4b57e2d73c695a41": {
+    "candidate_id": "4b57e2d73c695a41",
+    "resolved": false,
+    "selected": null,
+    "source_candidate_count": 0
+  },
+  "4d7d61b18dde0ad5": {
+    "candidate_id": "4d7d61b18dde0ad5",
+    "resolved": true,
+    "selected": {
+      "evidence_file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "function_name": "json_response",
+      "key_path": "source_slice",
+      "sha256": "fe7a7a4b14d49d5b3c15b6612882543642c8982c1d1886bdb0c2ecf24117c5fc",
+      "source": "def json_response(self, ctx, flash_messages):\n        basket_html = render_to_string(\n            \"oscar/basket/partials/basket_content.html\",\n            context=ctx,\n            request=self.request,\n        )\n\n        return JsonResponse(\n            {\"content_html\": basket_html, \"messages\": flash_messages.as_dict()}\n        )"
+    },
+    "source_candidate_count": 1
+  },
+  "63e7979762bf860b": {
+    "candidate_id": "63e7979762bf860b",
+    "resolved": false,
+    "selected": null,
+    "source_candidate_count": 0
+  },
+  "7460029971aad8de": {
+    "candidate_id": "7460029971aad8de",
+    "resolved": false,
+    "selected": null,
+    "source_candidate_count": 0
+  },
+  "7bc9603bfbda7dc9": {
+    "candidate_id": "7bc9603bfbda7dc9",
+    "resolved": true,
+    "selected": {
+      "evidence_file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "function_name": "formula_2017_04_01",
+      "key_path": "source_slice",
+      "sha256": "2720f5f14ba482578701430f1b1370e9a8c2c80456406369ff4e00acbea22758",
+      "source": "def formula_2017_04_01(famille, period, parameters):\n        '''\n        Prestation d accueil du jeune enfant - Compl\u00e9ment de libre choix du mode de garde\n\n        Les conditions\n\n        Vous devez :\n\n            avoir un enfant de moins de 6 ans n\u00e9, adopt\u00e9 ou recueilli en vue d'adoption \u00e0 partir du 1er janvier 2004\n            employer une assistante maternelle agr\u00e9\u00e9e ou une garde \u00e0 domicile.\n\n        Vous n'avez pas besoin de justifier d'une activit\u00e9 min_ si vous \u00eates :\n\n            b\u00e9n\u00e9ficiaire de l'allocation aux adultes handicap\u00e9s (Aah)\n            au ch\u00f4mage et b\u00e9n\u00e9ficiaire de l'allocation d'insertion ou de l'allocation de solidarit\u00e9 sp\u00e9cifique\n            b\u00e9n\u00e9ficiaire du Revenu de solidarit\u00e9 active (Rsa), sous certaines conditions de ressources \u00e9tudi\u00e9es par\n            votre Caf, et inscrit dans une d\u00e9marche d'insertion\u00e9tudiant (si vous vivez en couple,\n            vous devez \u00eatre tous les deux \u00e9tudiants).\n\n        Autres conditions \u00e0 remplir : Assistante maternelle agr\u00e9\u00e9e     Garde \u00e0 domicile\n        Son salaire brut ne doit pas d\u00e9passer par jour de garde et par enfant 5 fois le montant du Smic horaire brut,\n        soit au max 45,00 \u20ac.\n        Vous ne devez pas b\u00e9n\u00e9ficier de l'exon\u00e9ration des cotisations sociales dues pour la personne employ\u00e9e.\n        '''\n        # R\u00e9cup\u00e9ration des donn\u00e9es\n\n        inactif = famille('inactif', period)\n        partiel1 = famille('partiel1', period)\n        nombre_enfants = famille('af_nbenf', period)\n        base_ressources = famille('prestations_familiales_base_ressources', period.first_month)\n        emploi_direct = famille('empl_dir', period)\n        assistant_maternel = famille('ass_mat', period)\n        garde_a_domicile = famille('gar_dom', period)\n        paje_prepare = famille('paje_prepare', period)\n        paje = parameters(period).prestations_sociales.prestations_familiales.petite_enfance.paje\n        bmaf = parameters(period).prestations_sociales.prestations_familiales.bmaf.bmaf\n\n        aah_i = famille.members('aah', period)\n        aah = famille.sum(aah_i)\n\n        etudiant_i = famille.members('etudiant', period)\n        parent_etudiant = famille.any(etudiant_i, role = Famille.PARENT)\n\n        # condition de revenu minimal\n\n        cond_age_enf = (nb_enf(famille, period, 0, paje.paje_cmg.limite_age.reduite - 1) > 0)\n\n        # TODO:    cond_rpns    =\n        # TODO: RSA insertion, alloc insertion, ass\n        cond_nonact = (aah > 0) | parent_etudiant  # | (ass>0)\n\n        cond_eligibilite = cond_age_enf & (not_(inactif) | cond_nonact)\n\n        # Si vous b\u00e9n\u00e9ficiez de la PreParE taux plein\n        # (= vous ne travaillez plus ou interrompez votre activit\u00e9 professionnelle),\n        # vous ne pouvez pas b\u00e9n\u00e9ficier du Cmg.\n        paje_prepare_inactif = (paje_prepare > 0) * inactif\n        eligible = cond_eligibilite * not_(paje_prepare_inactif)\n\n        # Les plafonds de ressource\n\n        seuil_revenus_1 = (\n            (nombre_enfants == 1) * paje.plaf_cmg.premier_plafond_ne_adopte_apres_04_2014.enfant\n            + (nombre_enfants >= 2) * paje.plaf_cmg.premier_plafond_ne_adopte_apres_04_2014.deux_enfants\n            + max_(nombre_enfants - 2, 0) * paje.plaf_cmg.premier_plafond_ne_adopte_apres_04_2014.majoration_enfant_supp\n            )\n\n        seuil_revenus_2 = (\n            (nombre_enfants == 1) * paje.plaf_cmg.deuxieme_plafond_ne_adopte_apres_04_2014.enfant\n            + (nombre_enfants >= 2) * paje.plaf_cmg.deuxieme_plafond_ne_adopte_apres_04_2014.deux_enfants\n            + max_(nombre_enfants - 2, 0) * paje.plaf_cmg.deuxieme_plafond_ne_adopte_apres_04_2014.majoration_enfant_supp\n            )\n\n        # Si vous b\u00e9n\u00e9ficiez du PreParE taux partiel (= vous travaillez entre 50 et 80% de la dur\u00e9e du travail fix\u00e9e\n        # dans l'entreprise), vous cumulez int\u00e9gralement la PreParE et le Cmg.\n        # Si vous b\u00e9n\u00e9ficiez du PreParE taux partiel (= vous travaillez \u00e0 50% ou moins de la dur\u00e9e\n        # du travail fix\u00e9e dans l'entreprise), le montant des plafonds Cmg est divis\u00e9 par 2.\n\n        paje_prepare_temps_partiel = (paje_prepare > 0) * partiel1\n        seuil_revenus_1 = seuil_revenus_1 * (1 - .5 * paje_prepare_temps_partiel)\n        seuil_revenus_2 = seuil_revenus_2 * (1 - .5 * paje_prepare_temps_partiel)\n\n        # calcul du montant\n\n        montant_cmg = (\n            bmaf * (\n                1.0 * (nb_enf(famille, period, 0, paje.paje_cmg.limite_age.pleine - 1) > 0)\n                + (1 - paje.paje_cmg.taux_reduit) * (nb_enf(famille, period, paje.paje_cmg.limite_age.pleine, paje.paje_cmg.limite_age.reduite - 1) > 0)\n                ) * (\n                    emploi_direct * (\n                        (base_ressources < seuil_revenus_1) * paje.paje_cmg.complement_libre_choix_mode_garde.revenus_inferieurs_45_plaf\n                        + ((base_ressources >= seuil_revenus_1) & (base_ressources < seuil_revenus_2)) * paje.paje_cmg.complement_libre_choix_mode_garde.revenus_superieurs_45_plaf\n                        + (base_ressources >= seuil_revenus_2) * paje.paje_cmg.complement_libre_choix_mode_garde.revenus_superieurs_plaf\n                        )\n                    + assistant_maternel * (\n                        (base_ressources < seuil_revenus_1) * paje.paje_cmg.assistante_mat_asso_entreprise_microcreche.sous_premier_plafond\n                        + ((base_ressources >= seuil_revenus_1) & (base_ressources < seuil_revenus_2)) * paje.paje_cmg.assistante_mat_asso_entreprise_microcreche.sous_second_plafond\n                        + (base_ressources >= seuil_revenus_2) * paje.paje_cmg.assistante_mat_asso_entreprise_microcreche.apres_second_plafond\n                        )\n                    + garde_a_domicile * (\n                        (base_ressources < seuil_revenus_1) * paje.paje_cmg.garde_domicile.sous_premier_plafond\n                        + ((base_ressources >= seuil_revenus_1) & (base_ressources < seuil_revenus_2)) * paje.paje_cmg.garde_domicile.sous_second_plafond\n                        + (base_ressources >= seuil_revenus_2) * paje.paje_cmg.garde_domicile.apres_second_plafond)\n                    )\n            )\n\n        paje_cmg = eligible * montant_cmg\n        # TODO: connecter avec le cr\u00e9dit d'imp\u00f4t\n        # TODO v\u00e9rfiez les r\u00e8gles de cumul\n        return paje_cmg"
+    },
+    "source_candidate_count": 1
+  },
+  "7cf281a33e5781df": {
+    "candidate_id": "7cf281a33e5781df",
+    "resolved": false,
+    "selected": null,
+    "source_candidate_count": 0
+  },
+  "8048a564541f5408": {
+    "candidate_id": "8048a564541f5408",
+    "resolved": false,
+    "selected": null,
+    "source_candidate_count": 0
+  },
+  "882c5eae0d8fd4ec": {
+    "candidate_id": "882c5eae0d8fd4ec",
+    "resolved": false,
+    "selected": null,
+    "source_candidate_count": 0
+  },
+  "8a754dadf1672d0a": {
+    "candidate_id": "8a754dadf1672d0a",
+    "resolved": false,
+    "selected": null,
+    "source_candidate_count": 0
+  },
+  "91b2dc32504282fc": {
+    "candidate_id": "91b2dc32504282fc",
+    "resolved": false,
+    "selected": null,
+    "source_candidate_count": 0
+  },
+  "a09e038870c9b436": {
+    "candidate_id": "a09e038870c9b436",
+    "resolved": false,
+    "selected": null,
+    "source_candidate_count": 0
+  },
+  "a79d9687185720aa": {
+    "candidate_id": "a79d9687185720aa",
+    "resolved": false,
+    "selected": null,
+    "source_candidate_count": 0
+  },
+  "b2996c3dd81aca55": {
+    "candidate_id": "b2996c3dd81aca55",
+    "resolved": false,
+    "selected": null,
+    "source_candidate_count": 0
+  },
+  "bcb091a940a8d0dd": {
+    "candidate_id": "bcb091a940a8d0dd",
+    "resolved": false,
+    "selected": null,
+    "source_candidate_count": 0
+  },
+  "d7f578c3a5f20b8a": {
+    "candidate_id": "d7f578c3a5f20b8a",
+    "resolved": false,
+    "selected": null,
+    "source_candidate_count": 0
+  },
+  "eb12d3a44210a486": {
+    "candidate_id": "eb12d3a44210a486",
+    "resolved": false,
+    "selected": null,
+    "source_candidate_count": 0
+  }
+}

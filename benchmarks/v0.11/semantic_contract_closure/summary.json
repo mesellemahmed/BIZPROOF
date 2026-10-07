@@ -1,0 +1,22 @@
+{
+  "benchmark_version": "0.11.0",
+  "candidate_certifications_issued": 0,
+  "certification_claim": false,
+  "cumulative_semantic_contracts_validated": 5,
+  "nb_enf_contract_status": "VALIDATED_BOUNDED_EXHAUSTIVE",
+  "nb_enf_exhaustive_comparisons": 657,
+  "new_contract_ids": [
+    "SC-NB-ENF-001",
+    "SC-NP-MIN-001",
+    "SC-NP-NOT-001",
+    "SC-NP-WHERE-001"
+  ],
+  "new_semantic_contracts_validated": 4,
+  "numpy_alias_contracts_validated": 3,
+  "numpy_version": "1.26.4",
+  "numpy_wheel_sha256": "675d61ffbfa78604709862923189bad94014bef562cc35cf61d3a07bba02a7ed",
+  "passed": true,
+  "phase": "SEMANTIC_CONTRACT_CLOSURE",
+  "phase_n_semantic_contracts": 1,
+  "terminal_outcomes_assigned": 0
+}

@@ -1,0 +1,28 @@
+{
+  "authoring_mode": "DECLARATIVE_SOURCE_TO_BVC",
+  "bytes_frontend": "FR/CH/OTHER opaque equivalence classes",
+  "candidate_id": "d28505f251600d52",
+  "certification_claim": false,
+  "correct_proved": true,
+  "correct_solver_status": "unsat",
+  "function_sha256": "4c0cdd7d5ced36267b9310d42ea5857ace57478505d2a89fec9234435da1474e",
+  "mutant_counterexample": {
+    "duration": 10,
+    "eee_threshold": 5,
+    "nationality": 1,
+    "non_eee_threshold": 0,
+    "ressortissant_eee": 0
+  },
+  "mutant_disproved": true,
+  "mutant_solver_status": "sat",
+  "passed": true,
+  "proof_digest": "d9205c73a0d491918df0645df129f0f2d787d83dd26d98a2f9bd11c538804816",
+  "semantic_binding_scope": [
+    "individu('nationalite', period)",
+    "individu('ressortissant_eee', period)",
+    "individu('duree_possession_titre_sejour', period)",
+    "duree_min_titre_sejour.eee",
+    "duree_min_titre_sejour.non_eee"
+  ],
+  "symbolic_domain": "nationality partition {FR,CH,OTHER}; EEE in {0,1}; unbounded nonnegative duration and thresholds"
+}

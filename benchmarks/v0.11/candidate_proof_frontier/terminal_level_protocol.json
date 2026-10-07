@@ -1,0 +1,115 @@
+{
+  "automatic_level_assignment": false,
+  "mapping_status": "PROTOCOL_CONTEXT_FOUND_REVIEW_REQUIRED",
+  "matching_context_lines": [
+    {
+      "line": 44,
+      "text": ""
+    },
+    {
+      "line": 45,
+      "text": "Each candidate receives the stable identifier:"
+    },
+    {
+      "line": 46,
+      "text": ""
+    },
+    {
+      "line": 47,
+      "text": "`SHA256(source_id | file | enclosing_class | function | line_start | line_end | function_sha256)[:16]`"
+    },
+    {
+      "line": 48,
+      "text": ""
+    },
+    {
+      "line": 49,
+      "text": "Selection score:"
+    },
+    {
+      "line": 50,
+      "text": ""
+    },
+    {
+      "line": 51,
+      "text": "`SHA256(\"BIZPROOF-V0.11-20260926|\" + candidate_id)`"
+    },
+    {
+      "line": 52,
+      "text": ""
+    },
+    {
+      "line": 53,
+      "text": "Within each stratum, candidates are sorted lexicographically by selection score and the"
+    },
+    {
+      "line": 54,
+      "text": "first 10 are selected."
+    },
+    {
+      "line": 70,
+      "text": ""
+    },
+    {
+      "line": 71,
+      "text": "Subsequent V0.11 execution will assign exactly one terminal outcome per sampled candidate:"
+    },
+    {
+      "line": 72,
+      "text": ""
+    },
+    {
+      "line": 73,
+      "text": "- `CERTIFIED_A0`: certified without human semantic mapping or adapter rewriting."
+    },
+    {
+      "line": 74,
+      "text": "- `CERTIFIED_A1`: certified with declarative source-to-BVC bindings only."
+    },
+    {
+      "line": 75,
+      "text": "- `CERTIFIED_A2`: certified with an explicit human-authored scalar semantic adapter."
+    },
+    {
+      "line": 76,
+      "text": "- `NOT_CERTIFIED_UNKNOWN`: sound analysis returns UNKNOWN."
+    },
+    {
+      "line": 77,
+      "text": "- `NOT_CERTIFIED_UNSUPPORTED`: required source semantics exceed the supported subset."
+    },
+    {
+      "line": 78,
+      "text": "- `NOT_CERTIFIED_PROVENANCE`: provenance/evidence integrity fails."
+    },
+    {
+      "line": 87,
+      "text": "- weighted overall certification yield;"
+    },
+    {
+      "line": 88,
+      "text": "- certification yield by source;"
+    },
+    {
+      "line": 89,
+      "text": "- certification yield by LOW/MEDIUM/HIGH complexity;"
+    },
+    {
+      "line": 90,
+      "text": "- A0/A1/A2 assistance distribution;"
+    },
+    {
+      "line": 91,
+      "text": "- UNKNOWN and unsupported rates;"
+    },
+    {
+      "line": 92,
+      "text": "- provenance and execution failure rates."
+    },
+    {
+      "line": 93,
+      "text": ""
+    }
+  ],
+  "protocol": "/workspace/experiments/V0.11_PROTOCOL.md"
+}

@@ -1,0 +1,116 @@
+{
+  "assistance_level": "A1",
+  "authoring_mode": "DECLARATIVE_BINDINGS_FROZEN_BSIR",
+  "bindings": [
+    {
+      "binding_id": "77f5d7a5ccfb6fae",
+      "kind": "ATTRIBUTE",
+      "primitive": "age_max",
+      "source_expression": "parameters(period).chomage.allocations_assurance_chomage.ass.age_max"
+    },
+    {
+      "binding_id": "443df1f038ffe2c7",
+      "kind": "ATTRIBUTE",
+      "primitive": "chomeur",
+      "source_expression": "TypesActivite.chomeur"
+    },
+    {
+      "binding_id": "fe5a230513df8697",
+      "kind": "CALL",
+      "primitive": "individu",
+      "source_expression": "individu('aah', period)"
+    },
+    {
+      "binding_id": "4f45cac06e0454be",
+      "kind": "CALL",
+      "primitive": "individu",
+      "source_expression": "individu('activite', period)"
+    },
+    {
+      "binding_id": "cc47860c12e12a12",
+      "kind": "CALL",
+      "primitive": "individu",
+      "source_expression": "individu('age_en_mois', period)"
+    },
+    {
+      "binding_id": "352a21d6a1e2201c",
+      "kind": "CALL",
+      "primitive": "individu",
+      "source_expression": "individu('ass_eligibilite_cumul_individu', period)"
+    },
+    {
+      "binding_id": "39922d23ddd60f38",
+      "kind": "CALL",
+      "primitive": "individu",
+      "source_expression": "individu('ass_precondition_remplie', period)"
+    },
+    {
+      "binding_id": "4c2cdf475a55cc53",
+      "kind": "CALL",
+      "primitive": "individu",
+      "source_expression": "individu('chomage_net', period)"
+    },
+    {
+      "binding_id": "4580addbef2db285",
+      "kind": "CALL",
+      "primitive": "not_",
+      "source_expression": "not_(aah_eligible)"
+    }
+  ],
+  "candidate_id": "dfd34c86bcd9bfa1",
+  "certificate_digest": "ead14280117d334ab41b1218bb73af86ac3febae47ad7c26fe931174819884e5",
+  "certificate_id": "CERT-V011-A1-DFD34C86BCD9BFA1",
+  "claim_scope": "Certification proves equivalence between the locked source AST and the frozen BSIR under the explicit declarative bindings listed here. External framework/database values and helper semantics without a validated semantic contract remain outside the certificate.",
+  "evidence": {
+    "concrete_replays": 12,
+    "correct_solver_status": "unsat",
+    "ir_sha256": "576891d75b4b0521551bf90a223fa38773f6222e980141f0834a12a0f52233e4",
+    "mutant_solver_status": "sat",
+    "mutant_witness": {
+      "b_dfd34c_0": "0",
+      "b_dfd34c_1": "0",
+      "b_dfd34c_2": "0",
+      "b_dfd34c_3": "1",
+      "b_dfd34c_4": "1",
+      "b_dfd34c_5": "-1",
+      "b_dfd34c_6": "-1",
+      "b_dfd34c_7": "0",
+      "b_dfd34c_8": "-1"
+    },
+    "mutation": "mul-to-add",
+    "proof_digest": "951f3d4d5515e44d173713c2212b2fb079129511c01339e4c9daeb470e460d44",
+    "proof_obligations": {
+      "bsir_compile": true,
+      "concrete_replay": true,
+      "declarative_bindings": true,
+      "frozen_bsir": true,
+      "independent_source_ast_compile": true,
+      "locked_source_commit": true,
+      "mutant_detected_sat": true,
+      "mutant_witness_replayed": true,
+      "symbolic_equivalence_unsat": true,
+      "validated_semantic_abstractions": true
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 74,
+    "text": "- `CERTIFIED_A1`: certified with declarative source-to-BVC bindings only."
+  },
+  "schema_version": "BIZPROOF-V0.11-A1-CERTIFICATE-1",
+  "semantic_contracts": {
+    "not_": "SC-NP-NOT-001"
+  },
+  "source": {
+    "class": "ass_eligibilite_individu",
+    "file": "openfisca_france/model/prestations/minima_sociaux/ass.py",
+    "function": "formula_2017_01_01",
+    "function_sha256": "3cc9aed3e2c64715daf6563382f2d96eff7a6ac2cb5d9f33603ceb42d5eb2418",
+    "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+    "source_file_sha256": "b28f0bb2efbc4dd3cb1d01f587e0740552611d7c772b76a7cfdcd4c2fbba6d32",
+    "source_id": "openfisca_france"
+  },
+  "status": "CERTIFIED_A1",
+  "terminal_outcome": "CERTIFIED_A1",
+  "terminal_outcome_assigned": true
+}

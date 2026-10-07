@@ -1,0 +1,105 @@
+{
+  "assistance_level": "A1",
+  "authoring_mode": "DECLARATIVE_SOURCE_TO_BVC_BINDINGS",
+  "bindings": [
+    "self.gross",
+    "other.gross",
+    "self.net",
+    "other.net",
+    "self.tax",
+    "other.tax",
+    "self.rate",
+    "other.rate",
+    "self.name",
+    "other.name",
+    "self.code",
+    "other.code"
+  ],
+  "candidate_id": "55fe61b67000b53a",
+  "certificate_digest": "c63531d28a6b367221902ba35eaad8358418806d41b1382875b020d9d0c3862b",
+  "certificate_id": "CERT-V011-A1-55FE61B67000B53A",
+  "claim_scope": "Certification covers the locked source return expression under the explicit declarative attribute bindings listed in this certificate. No handwritten semantic adapter is introduced.",
+  "evidence": {
+    "proof_digest": "f6918c790317f5f505ea580402ff7c6a79fa649834d3a8a1f34961932d511be5",
+    "runtime": {
+      "adapter_mismatches": 0,
+      "comparisons": 7,
+      "mutant_mismatches": 1,
+      "mutation": "drop-first-declarative-equality",
+      "runtime_domain": "all-equal case plus one single-field mismatch per equality"
+    },
+    "symbolic": {
+      "correct_proved": true,
+      "correct_solver_status": "unsat",
+      "mutant_disproved": true,
+      "mutant_solver_status": "sat",
+      "mutation": "drop-first-declarative-equality",
+      "symbolic_domain": "uninterpreted attribute-value domain with equality only"
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 74,
+    "text": "- `CERTIFIED_A0`: certified without human semantic mapping or adapter rewriting. - `CERTIFIED_A1`: certified with declarative source-to-BVC bindings only. - `CERTIFIED_A2`: certified with an explicit human-authored scalar semantic adapter. - `NOT_CERTIFIED_UNKNOWN`: sound analysis returns UNKNOWN."
+  },
+  "schema_version": "BIZPROOF-V0.11-A1-CERTIFICATE-1",
+  "source": {
+    "class": "TaxedPrice",
+    "file": "src/pretix/base/models/tax.py",
+    "function": "__eq__",
+    "function_sha256": "02b78a1a01b3b3b0b9a9c523dfd599e2f164412046e1ef626655698ccec8d3d5",
+    "lines": [
+      95,
+      103
+    ],
+    "source_file_sha256": "5f27a1d0fa236365d9809f355ceb2e3331191ca931c60ef1d0a0889001db4298",
+    "source_id": "pretix"
+  },
+  "status": "CERTIFIED_A1",
+  "structural_classification": {
+    "comparison_pairs": [
+      [
+        "self.gross",
+        "other.gross"
+      ],
+      [
+        "self.net",
+        "other.net"
+      ],
+      [
+        "self.tax",
+        "other.tax"
+      ],
+      [
+        "self.rate",
+        "other.rate"
+      ],
+      [
+        "self.name",
+        "other.name"
+      ],
+      [
+        "self.code",
+        "other.code"
+      ]
+    ],
+    "expression": "self.gross == other.gross and self.net == other.net and (self.tax == other.tax) and (self.rate == other.rate) and (self.name == other.name) and (self.code == other.code)",
+    "shape": "BOUND_EQUALITY_CONJUNCTION",
+    "used_bindings": [
+      "other.code",
+      "other.gross",
+      "other.name",
+      "other.net",
+      "other.rate",
+      "other.tax",
+      "self.code",
+      "self.gross",
+      "self.name",
+      "self.net",
+      "self.rate",
+      "self.tax"
+    ]
+  },
+  "terminal_outcome": "CERTIFIED_A1",
+  "terminal_outcome_assigned": true
+}

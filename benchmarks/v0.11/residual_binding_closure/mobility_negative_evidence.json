@@ -1,0 +1,21 @@
+{
+  "candidate_id": "eb41eb351df073ef",
+  "certification_claim": false,
+  "interpretation": "NOT_CERTIFIED_UNSUPPORTED means unsupported by the frozen V0.11 formal semantics. It does not mean that the rule is intrinsically unverifiable.",
+  "negative_evidence_digest": "c2fac0bb64dcd9ed1bf362f4063e2a23d938e15cdef34c95cb4741c95edfdced",
+  "reason": "The locked rule depends on contrat_travail_debut.astype('M8[M]'). The frozen V0.11 semantic-contract set contains no validated contract for month-precision datetime casting. Treating this transformation as an independent declarative input would erase a real temporal dependency.",
+  "reason_code": "UNVALIDATED_TEMPORAL_CAST_SEMANTICS",
+  "schema_version": "BIZPROOF-V0.11-NEGATIVE-EVIDENCE-1",
+  "scope": "Frozen V0.11 formal source-to-BSIR proof stack",
+  "source": {
+    "class": "aide_mobilite_eligible",
+    "file": "openfisca_france/model/prestations/aide_mobilite.py",
+    "function": "formula_2021_06_09",
+    "function_sha256": "a3839a1fc4adaf7e5648eb1cd57b8c448f81e9c8a194f3d296e94179a5e9a232",
+    "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+    "source_file_sha256": "5c583c5cbfb41795659ac426a10877a5f58d24c38656ad0665a1cd76e7be398e",
+    "source_id": "openfisca_france"
+  },
+  "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "w4_review_reason": "unvalidated helper/domain call cannot be abstracted as A1 binding: astype"
+}

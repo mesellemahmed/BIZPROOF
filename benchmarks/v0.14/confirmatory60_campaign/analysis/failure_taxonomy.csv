@@ -1,0 +1,6 @@
+reason_code,count
+closure_lowering_unsupported,32
+unsupported_source_nodes,14
+no_formal_obligations,7
+v014_boundary_unsupported,3
+formal_obligation_failed,3

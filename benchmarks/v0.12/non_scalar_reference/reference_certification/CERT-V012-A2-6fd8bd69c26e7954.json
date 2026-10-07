@@ -1,0 +1,28 @@
+{
+  "abstraction_contracts": [
+    "gross and rate are finite Decimal values",
+    "round_decimal_fn is the explicit abstraction of frozen round_decimal",
+    "TaxedPrice is observed extensionally through gross, net, tax, rate, name and code"
+  ],
+  "all_required_gates_pass": true,
+  "candidate_id": "6fd8bd69c26e7954",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_counterexample_replay": {
+    "correct": "{\"fields\":[{\"name\":\"gross\",\"value\":{\"kind\":\"TEXT\",\"value\":\"20.00\"}},{\"name\":\"net\",\"value\":{\"kind\":\"TEXT\",\"value\":\"16.67\"}},{\"name\":\"tax\",\"value\":{\"kind\":\"TEXT\",\"value\":\"3.33\"}},{\"name\":\"rate\",\"value\":{\"kind\":\"TEXT\",\"value\":\"20\"}},{\"name\":\"name\",\"value\":{\"kind\":\"TEXT\",\"value\":\"VAT\"}},{\"name\":\"code\",\"value\":{\"kind\":\"TEXT\",\"value\":\"vat\"}}],\"kind\":\"RECORD\",\"type_name\":\"TaxedPrice\"}",
+    "mutant": "{\"fields\":[{\"name\":\"gross\",\"value\":{\"kind\":\"TEXT\",\"value\":\"20.00\"}},{\"name\":\"net\",\"value\":{\"kind\":\"TEXT\",\"value\":\"16.67\"}},{\"name\":\"tax\",\"value\":{\"kind\":\"TEXT\",\"value\":\"3.33\"}},{\"name\":\"rate\",\"value\":{\"kind\":\"TEXT\",\"value\":\"20\"}},{\"name\":\"name\",\"value\":{\"kind\":\"TEXT\",\"value\":\"vat\"}},{\"name\":\"code\",\"value\":{\"kind\":\"TEXT\",\"value\":\"VAT\"}}],\"kind\":\"RECORD\",\"type_name\":\"TaxedPrice\"}",
+    "passed": true
+  },
+  "formal_mutant_refutation": {
+    "model": "[name = \"!0!\", code = \"!1!\"]",
+    "solver_result": "SAT"
+  },
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-A5-A2-2",
+  "semantic_capability": "STRUCTURED_VALUE_OBJECT",
+  "source_equivalence": {
+    "method": "canonical executable AST identity after explicit abstraction substitution",
+    "proved": true
+  },
+  "source_slice_sha256": "5475a50a3d3d12c754f5c7aa3f00ede3e15027ff53221fe8def9884283ad2185",
+  "v012_outcome": "CERTIFIED_A2"
+}

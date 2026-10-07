@@ -1,0 +1,60 @@
+{
+  "case_selection_algorithm": {
+    "commit": "7806e5499b5008086072f699e2b102c9daa8cb09",
+    "reuse_without_semantic_retuning": true,
+    "tag": "v0.12-external-cohort-construction-freeze"
+  },
+  "cases_per_project": 10,
+  "confirmatory_role": "untouched project-level reserve holdout",
+  "created_after_v0_13_primary_result": true,
+  "created_before_v0_14_engine_changes": true,
+  "development_policy": {
+    "candidate_specific_adapters": false,
+    "reserve_case_outcomes": "must remain unobserved until V0.14 engine freeze",
+    "reserve_projects": "forbidden for V0.14 development",
+    "threshold_retuning_against_reserve": false,
+    "v0_13_external_120": "diagnostic/development corpus only; outcomes already observed"
+  },
+  "evaluation_policy": {
+    "denominator": 60,
+    "early_stopping": false,
+    "engine_changes_after_first_reserve_outcome": false,
+    "substitution": false
+  },
+  "future_target_cases": 60,
+  "reserve_project_count": 6,
+  "reserve_projects": [
+    {
+      "commit": "33a9eb7d15aedca7222354b68cde834480415913",
+      "identity": "ansible/awx"
+    },
+    {
+      "commit": "e87eef5bb40d7f674195295f39a0dc60c12b5664",
+      "identity": "django-cms/django-cms"
+    },
+    {
+      "commit": "53b04123100626cd1cd4e3dc336c9ae699d92c45",
+      "identity": "odoo/odoo"
+    },
+    {
+      "commit": "f92afbc4fa55c1cbdad2caffe11610b6732c728a",
+      "identity": "openstack/horizon"
+    },
+    {
+      "commit": "d36cd30c525a80bed63dd1d7ac4483a498c9248c",
+      "identity": "pretalx/pretalx"
+    },
+    {
+      "commit": "ae4a16dee644638019dd508b448a5315000745f7",
+      "identity": "wagtail/wagtail"
+    }
+  ],
+  "schema_version": "BIZPROOF-V0.14-RESERVE-DESIGN-1",
+  "semantic_strata": {
+    "S1_LOCAL_SCALAR_CONTROL": 2,
+    "S2_STRUCTURED_CONTAINER": 2,
+    "S3_NESTED_VECTOR_HIGHER_ORDER": 2,
+    "S4_STATE_EFFECT": 2,
+    "S5_BINDING_EXTERNAL_DOMAIN": 2
+  }
+}

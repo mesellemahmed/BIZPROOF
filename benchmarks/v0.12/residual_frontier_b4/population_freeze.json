@@ -1,0 +1,21 @@
+{
+  "certification_started": false,
+  "recovery_claims": 0,
+  "residual_candidate_ids": [
+    "13df73dbd2825f80",
+    "1a2de6edb11465fe",
+    "3fd2d8b8a76b4834",
+    "674ea6fd35fa6c39",
+    "801278c4d91c2185",
+    "8b3e90ca7b531556",
+    "a74d4580a9effb73",
+    "e8850260c2763222",
+    "eb41eb351df073ef"
+  ],
+  "residual_count": 9,
+  "schema_version": "BIZPROOF-V0.12-B4-A0-POPULATION-1",
+  "selection_rule": "All and only unrecovered candidates from the frozen V0.12 recovery ledger at the B3-CERT3 checkpoint.",
+  "source_checkpoint": "8b06d31d1d9dec99aeca7050f254c857a1a93ce5",
+  "v011_unsupported_population": 38,
+  "v012_recovered_before_b4": 29
+}

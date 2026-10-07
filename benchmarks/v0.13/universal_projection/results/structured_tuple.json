@@ -1,0 +1,27 @@
+{
+  "capabilities": [
+    "STRUCTURED_VALUE"
+  ],
+  "case_specific_routing": false,
+  "claim_scope": "generic structural semantic projection only; no business meaning is inferred for opaque bindings, calls, state, or effects",
+  "function_name": "rule",
+  "observations": [
+    {
+      "expression": "x + 1",
+      "kind": "RETURN_COMPONENT",
+      "path": "return[0]",
+      "symbol": null
+    },
+    {
+      "expression": "x > 0",
+      "kind": "RETURN_COMPONENT",
+      "path": "return[1]",
+      "symbol": null
+    }
+  ],
+  "parameters": [
+    "x"
+  ],
+  "source_sha256": "15b82032e22095f17620b2959c09274f22e361361d9140289a6d02c94d1412ed",
+  "unsupported_nodes": []
+}

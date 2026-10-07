@@ -1,0 +1,25 @@
+{
+  "authoritative_source": true,
+  "candidate_id": "7cf281a33e5781df",
+  "certification_started": false,
+  "class_name": "OrderFee",
+  "end_lineno": 2512,
+  "fingerprints": {
+    "ast_dump": "d8288659da9f9307bfa971b766437480c33118917df2481df425aaad5c67c8d7",
+    "ast_unparse": "a2487278343c4dba01f7315368d3b8760c61bdd55c070398a4b6f82383f826f3",
+    "dedent_strip": "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f",
+    "dedent_strip_newline": "8217b9c1017094639549aa1867bb7c586cdcaf6f45cf17faee47aea97416c799",
+    "lf": "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f",
+    "raw": "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f"
+  },
+  "function_name": "price",
+  "lineno": 2511,
+  "matched_hash": "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f",
+  "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+  "project": "pretix",
+  "reason_codes": "OBJECT_STATE_TRANSITION_OUTSIDE_FORMAL_SUBSET",
+  "recovery_claim": false,
+  "resolution": "TIER_A_HASH_RESOLVED",
+  "source": "def price(self, value):\n        self.value = value",
+  "support_records": []
+}

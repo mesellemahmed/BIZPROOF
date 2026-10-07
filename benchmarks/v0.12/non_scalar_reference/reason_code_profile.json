@@ -1,0 +1,115 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "0f73ae8d15cf3408",
+      "classification_basis": "explicit non-scalar/reference evidence",
+      "complexity": "HIGH",
+      "reason_code": "REFERENCE_DATE_OR_NONE",
+      "reviewed_reason": "The result is a date/reference value or None, not a scalar business quantity.",
+      "semantic_family": "OPTIONAL_REFERENCE_OR_DATE",
+      "source": "pretix"
+    },
+    {
+      "candidate_id": "26a1af8837fe7ae4",
+      "classification_basis": "reviewed scalar-projection reason",
+      "complexity": "LOW",
+      "reason_code": "TEXT_RETURN",
+      "reviewed_reason": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision.",
+      "semantic_family": "TEXT_VALUE",
+      "source": "pretix"
+    },
+    {
+      "candidate_id": "6d009b7961c5d116",
+      "classification_basis": "reviewed scalar-projection reason",
+      "complexity": "HIGH",
+      "reason_code": "LIST_OF_DOMAIN_OBJECTS_RETURN",
+      "reviewed_reason": "The reviewed source does not provide a defensible single scalar business-semantic projection under the frozen V0.11 A2 protocol.",
+      "semantic_family": "FINITE_SEQUENCE_VALUE",
+      "source": "django_oscar"
+    },
+    {
+      "candidate_id": "6fd8bd69c26e7954",
+      "classification_basis": "explicit non-scalar/reference evidence",
+      "complexity": "MEDIUM",
+      "reason_code": "DOMAIN_OBJECT_RETURN",
+      "reviewed_reason": "The reviewed source does not provide a defensible single scalar business-semantic projection under the frozen V0.11 A2 protocol.",
+      "semantic_family": "DOMAIN_OBJECT_REFERENCE",
+      "source": "pretix"
+    },
+    {
+      "candidate_id": "75e61ddb4dde4f1a",
+      "classification_basis": "reviewed scalar-projection reason",
+      "complexity": "MEDIUM",
+      "reason_code": "TEXT_RETURN",
+      "reviewed_reason": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision.",
+      "semantic_family": "TEXT_VALUE",
+      "source": "django_oscar"
+    },
+    {
+      "candidate_id": "87d2f0b3b15f0ea6",
+      "classification_basis": "reviewed scalar-projection reason",
+      "complexity": "MEDIUM",
+      "reason_code": "TEXT_RETURN",
+      "reviewed_reason": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision.",
+      "semantic_family": "TEXT_VALUE",
+      "source": "django_oscar"
+    },
+    {
+      "candidate_id": "9cc9063a46d23cde",
+      "classification_basis": "reviewed scalar-projection reason",
+      "complexity": "MEDIUM",
+      "reason_code": "QUERYSET_RETURN",
+      "reviewed_reason": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision.",
+      "semantic_family": "QUERYSET_SUMMARY",
+      "source": "pretix"
+    },
+    {
+      "candidate_id": "d285ecd86455b150",
+      "classification_basis": "reviewed scalar-projection reason",
+      "complexity": "MEDIUM",
+      "reason_code": "TUPLE_RETURN",
+      "reviewed_reason": "The reviewed source does not provide a defensible single scalar business-semantic projection under the frozen V0.11 A2 protocol.",
+      "semantic_family": "FINITE_SEQUENCE_VALUE",
+      "source": "pretix"
+    },
+    {
+      "candidate_id": "e1cf29f02fa0dadc",
+      "classification_basis": "reviewed scalar-projection reason",
+      "complexity": "LOW",
+      "reason_code": "LIST_RETURN",
+      "reviewed_reason": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision.",
+      "semantic_family": "FINITE_SEQUENCE_VALUE",
+      "source": "django_oscar"
+    },
+    {
+      "candidate_id": "fa377c649a747a7d",
+      "classification_basis": "explicit non-scalar/reference evidence",
+      "complexity": "MEDIUM",
+      "reason_code": "OBJECT_RETURN",
+      "reviewed_reason": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision.",
+      "semantic_family": "DOMAIN_OBJECT_REFERENCE",
+      "source": "django_oscar"
+    }
+  ],
+  "classification_source": "Frozen V0.11 final W19 taxonomy reason_codes.",
+  "keyword_motif_scan_used_for_classification": false,
+  "reason_code_counts": {
+    "DOMAIN_OBJECT_RETURN": 1,
+    "LIST_OF_DOMAIN_OBJECTS_RETURN": 1,
+    "LIST_RETURN": 1,
+    "OBJECT_RETURN": 1,
+    "QUERYSET_RETURN": 1,
+    "REFERENCE_DATE_OR_NONE": 1,
+    "TEXT_RETURN": 3,
+    "TUPLE_RETURN": 1
+  },
+  "schema_version": "BIZPROOF-V0.12-NON-SCALAR-REASON-PROFILE-1",
+  "semantic_family_counts": {
+    "DOMAIN_OBJECT_REFERENCE": 2,
+    "FINITE_SEQUENCE_VALUE": 3,
+    "OPTIONAL_REFERENCE_OR_DATE": 1,
+    "QUERYSET_SUMMARY": 1,
+    "TEXT_VALUE": 3
+  },
+  "target_population": 10
+}

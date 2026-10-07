@@ -1,0 +1,15 @@
+{
+  "candidate_id": "882c5eae0d8fd4ec",
+  "certification_claim": false,
+  "class": "OrderPayment",
+  "controlled_execution_status": "ESTABLISHED",
+  "execution_cases": 2,
+  "execution_probe_digest": "6e319138d235229b5155ee63d7032e2f50d9e9c954aacce9326cad11b5b9912d",
+  "function": "create_external_refund",
+  "function_sha256": "0c1d9b50bfa377b3f8004844ef99266333a9da475e368e05a278bae67a67e7d8",
+  "interpretation": "Controlled execution is established, but certification is withheld because the required mutable framework, object, service, cache, signal, request, model, or collection semantics exceed the frozen V0.11 formal subset.",
+  "negative_evidence_digest": "5f07a5322f915bd47de7430175be82d0956fb1be4589e8d5ccedaebe3e6c3050",
+  "reason_code": "REFUND_OBJECT_SIDE_EFFECTS_OUTSIDE_FORMAL_SUBSET",
+  "source": "pretix",
+  "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+}

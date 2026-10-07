@@ -1,0 +1,23 @@
+{
+  "case_specific_routing": false,
+  "development_cases": 7,
+  "external_holdout_cases_used": 0,
+  "external_outcomes_observed": 0,
+  "formal_obligations": 10,
+  "full_arbitrary_source_equivalence": false,
+  "historical_target_tables_used": false,
+  "human_authored_case_adapters_used": false,
+  "nested_logic": "FINITE_TYPED_TUPLE_LOWERING",
+  "opaque_binding": "PARAMETRICALLY_ABSTRACTED",
+  "outcomes": {
+    "CERTIFIED_A1": 2,
+    "CERTIFIED_A2": 4,
+    "UNSUPPORTED": 1
+  },
+  "positive_cases": 6,
+  "positive_certified": 6,
+  "schema_version": "BIZPROOF-V0.13-UNIVERSAL-CLOSURE-1",
+  "state_effect": "STATE_FORMAL_EFFECT_TRACE_STRUCTURAL",
+  "status": "UNIVERSAL_CERTIFICATION_CLOSURE_READY",
+  "structured_value": "FORMALLY_SCALARIZED"
+}

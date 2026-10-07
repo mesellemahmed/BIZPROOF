@@ -1,0 +1,85 @@
+{
+  "a2_total": 17,
+  "benchmark_claim": "Mutation-detection comparison on frozen source-equivalent A2 projections. The frozen V0.11 source-equivalence certificate remains the evidence for source-level correctness.",
+  "crosshair_per_condition_budgets": [
+    0.5,
+    2.0
+  ],
+  "generic_projection_domain": {
+    "decimal": [
+      "-1000.00",
+      "1000.00"
+    ],
+    "decimal_places": 2,
+    "finite_bool_sequence_max_length": 3,
+    "fixed_int_tuple_element_range": [
+      -10,
+      10
+    ],
+    "int": [
+      -100,
+      100
+    ],
+    "optional_int": [
+      null,
+      -100,
+      100
+    ]
+  },
+  "hypothesis_budgets": [
+    100,
+    1000,
+    10000
+  ],
+  "interpretation": {
+    "bizproof": "Frozen V0.11 symbolic result: correct adapter equivalent to the certified source slice and mutant disproved.",
+    "crosshair": "Assertion-based symbolic search on the same frozen projection. No reported counterexample is not credited as source-level proof.",
+    "hypothesis": "Counterexample search only. No counterexample within a budget is inconclusive."
+  },
+  "matched_signature_total": 15,
+  "nonmatched": [
+    {
+      "candidate_id": "53abfcd7d20a9cd6",
+      "reason": "No frozen standalone adapter/mutant pair with matching signature.",
+      "w13d_decision": "MUTANT_LOCATION_REVIEW"
+    },
+    {
+      "candidate_id": "972b76d53a12b8ad",
+      "reason": "No frozen standalone adapter/mutant pair with matching signature.",
+      "w13d_decision": "HARNESS_RECONSTRUCTION_REVIEW"
+    }
+  ],
+  "nonmatched_total": 2,
+  "primary_candidate_ids": [
+    "2906fe3983a1ebe4",
+    "331f175e4aa92eef",
+    "34748d082751e0cc",
+    "41ae4a7df4780001",
+    "7013ce92618a1e33",
+    "7f523a5041034306",
+    "8b98d0147c79c3fc",
+    "9603b9192132171c",
+    "aab5348ee173d6e3",
+    "d5b65e1d48eca4dd",
+    "e293930485085dac",
+    "f234f0be14cf3ff3",
+    "f3ebe6cce422947e",
+    "f5d217dec0cf902b"
+  ],
+  "primary_total": 14,
+  "schema_version": "BIZPROOF-V0.11-A2-BASELINE-FREEZE-1",
+  "secondary_candidate_ids": [
+    "4008a63ee1ef3b44"
+  ],
+  "secondary_total": 1,
+  "selection_frozen_before_baseline_execution": true,
+  "selection_rule": "Primary matched baseline includes frozen CERTIFIED_A2 candidates with a standalone correct adapter, a standalone mutant, identical function signatures, and argument types limited to scalar int/bool, optional scalar, finite tuple/sequence, or Decimal. No baseline outcome is used for selection.",
+  "source_level_claim": false,
+  "type_distribution": {
+    "CORE_DIRECT": 6,
+    "EXTEND_DECIMAL": 2,
+    "EXTEND_FINITE_SEQUENCE": 2,
+    "EXTEND_FINITE_SET_ENUM": 1,
+    "EXTEND_OPTIONAL_SCALAR": 4
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "candidate_id": "75e61ddb4dde4f1a",
+  "external_calls": [
+    "_"
+  ],
+  "free_names": [
+    "_"
+  ],
+  "function_name": "__str__",
+  "reason_code": "TEXT_RETURN",
+  "reasons": [
+    "EXTERNAL_CALLS",
+    "FREE_NAMES"
+  ],
+  "repository_matches": [
+    {
+      "class_name": "AbstractLinePrice",
+      "end_lineno": 1016,
+      "lineno": 1011,
+      "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\order\\abstract_models.py",
+      "source": "def __str__(self):\n        return _(\"Line '%(number)s' (quantity %(qty)d) price %(price)s\") % {\n            \"number\": self.line,\n            \"qty\": self.quantity,\n            \"price\": self.price_incl_tax,\n        }"
+    }
+  ],
+  "self_attributes": [
+    "line",
+    "price_incl_tax",
+    "quantity"
+  ],
+  "source": "def __str__(self):\n        return _(\"Line '%(number)s' (quantity %(qty)d) price %(price)s\") % {\n            \"number\": self.line,\n            \"qty\": self.quantity,\n            \"price\": self.price_incl_tax,\n        }",
+  "status": "REQUIRES_CONTROLLED_STUBS"
+}

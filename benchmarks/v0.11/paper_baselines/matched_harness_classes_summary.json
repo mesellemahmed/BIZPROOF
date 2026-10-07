@@ -1,0 +1,29 @@
+{
+  "categories": {
+    "DECIMAL_DOMAIN": 2,
+    "DIRECT_INT_BOOL": 6,
+    "OPTIONAL_INT": 4,
+    "SET_OR_ENUM_DOMAIN": 1,
+    "TUPLE_DOMAIN": 2
+  },
+  "direct_int_bool_ids": [
+    "331f175e4aa92eef",
+    "9603b9192132171c",
+    "aab5348ee173d6e3",
+    "e293930485085dac",
+    "f3ebe6cce422947e",
+    "f5d217dec0cf902b"
+  ],
+  "matched_a2": 15,
+  "non_direct_ids": [
+    "2906fe3983a1ebe4",
+    "34748d082751e0cc",
+    "4008a63ee1ef3b44",
+    "41ae4a7df4780001",
+    "7013ce92618a1e33",
+    "7f523a5041034306",
+    "8b98d0147c79c3fc",
+    "d5b65e1d48eca4dd",
+    "f234f0be14cf3ff3"
+  ]
+}

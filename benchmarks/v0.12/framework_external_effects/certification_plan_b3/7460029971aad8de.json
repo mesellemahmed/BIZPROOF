@@ -1,0 +1,28 @@
+{
+  "candidate_id": "7460029971aad8de",
+  "certification_batch": "SERVICE_EFFECT_BATCH",
+  "class_name": "Quota",
+  "function_name": "availability",
+  "lineno": 2147,
+  "matched_provenance_hash": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+  "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\items.py",
+  "provenance_resolution": "STRUCTURED_DIRECT_HASH_RESOLVED",
+  "reason_codes": "SERVICE_CACHE_OBJECT_SEMANTICS_OUTSIDE_FORMAL_SUBSET",
+  "semantic_observation": "returned availability tuple plus explicit cache clear/hit/write and service queue/compute observations",
+  "semantic_route": "CACHE_BACKED_SERVICE_RESULT",
+  "source": "def availability(\n            self, now_dt: datetime=None, count_waitinglist=True, _cache=None, allow_cache=False\n    ) -> Tuple[int, int]:\n        \"\"\"\n        This method is used to determine whether Items or ItemVariations belonging\n        to this quota should currently be available for sale.\n\n        :param count_waitinglist: Whether or not take waiting list reservations into account. Defaults\n                                  to ``True``.\n        :param _cache: A dictionary mapping quota IDs to availabilities. If this quota is already\n                       contained in that dictionary, this value will be used. Otherwise, the dict\n                       will be populated accordingly.\n        :param allow_cache: Allow for values to be returned from the longer-term cache, see also\n                            the documentation of this model class. Only works if ``count_waitinglist`` is\n                            set to ``True``.\n\n        :returns: a tuple where the first entry is one of the ``Quota.AVAILABILITY_`` constants\n                  and the second is the number of available tickets.\n        \"\"\"\n        from ..services.quotas import QuotaAvailability\n\n        if _cache and count_waitinglist is not _cache.get('_count_waitinglist', True):\n            _cache.clear()\n\n        if _cache is not None and self.pk in _cache:\n            return _cache[self.pk]\n        qa = QuotaAvailability(count_waitinglist=count_waitinglist, early_out=False)\n        qa.queue(self)\n        qa.compute(now_dt=now_dt, allow_cache=allow_cache)\n        res = qa.results[self]\n\n        if _cache is not None:\n            _cache[self.pk] = res\n            _cache['_count_waitinglist'] = count_waitinglist\n        return res",
+  "source_sha256": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+  "structural_profile": {
+    "attribute_writes": [],
+    "branch_count": 3,
+    "calls": [
+      "QuotaAvailability",
+      "queue",
+      "compute",
+      "clear",
+      "get"
+    ],
+    "return_count": 2,
+    "subscript_writes": 2
+  }
+}

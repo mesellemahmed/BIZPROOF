@@ -1,0 +1,24 @@
+{
+  "all_required_gates_pass": true,
+  "candidate_id": "0f73ae8d15cf3408",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_counterexample_replay": {
+    "correct": "{\"kind\":\"DATETIME\",\"value\":\"2026-10-01T00:00:00\"}",
+    "mutant": "{\"kind\":\"DATETIME\",\"value\":\"2026-10-20T00:00:00\"}",
+    "passed": true
+  },
+  "formal_mutant_refutation": {
+    "model": "[date_2 = 0, date_1 = -1]",
+    "property": "for two distinct comparable temporal values, min != max",
+    "solver_result": "SAT"
+  },
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-A5-A2-CERT2-1",
+  "semantic_capability": "OPTIONAL_TEMPORAL",
+  "source_equivalence": {
+    "method": "canonical executable AST identity after explicit dependency substitution",
+    "proved": true
+  },
+  "source_slice_sha256": "bd7471ba1f2ae52d35ca9fcaec20b7b68c2d1ea1218c9fafe8884c13544ae185",
+  "v012_outcome": "CERTIFIED_A2"
+}

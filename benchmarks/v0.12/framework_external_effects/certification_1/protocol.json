@@ -1,0 +1,30 @@
+{
+  "attempted_candidate_ids": [
+    "1311d905af0ebcb5",
+    "4d7d61b18dde0ad5"
+  ],
+  "deferred_reason": {
+    "7bc9603bfbda7dc9": "Retained in the frozen B1 population. Its compositional scalar-helper closure requires a separate explicit-input protocol because the frozen source contains a large parameterized formula with multiple aggregate and framework helper observations."
+  },
+  "parent_b1_target_count": 3,
+  "recovery_claims_before_execution": 0,
+  "required_gates": [
+    "frozen_source_slice",
+    "explicit_dependency_abstraction",
+    "canonical_ast_source_equivalence",
+    "replayable_semantic_observation",
+    "mutant_structurally_distinct",
+    "solver_backed_mutant_refutation",
+    "concrete_counterexample_replay"
+  ],
+  "retained_deferred_candidate_ids": [
+    "7bc9603bfbda7dc9"
+  ],
+  "schema_version": "BIZPROOF-V0.12-B1-CERT1-PROTOCOL-1",
+  "selection_frozen_before_execution": true,
+  "semantic_capabilities": {
+    "1311d905af0ebcb5": "EXPLICIT_EXTERNAL_EFFECT_TRACE",
+    "4d7d61b18dde0ad5": "STRUCTURED_FRAMEWORK_RESPONSE"
+  },
+  "source_checkpoint": "c52af2df8a91adca9625ef7da96fd7f9c7b36a6c"
+}

@@ -1,0 +1,162 @@
+{
+  "1a2de6edb11465fe": {
+    "authoritative_source": true,
+    "candidate_id": "1a2de6edb11465fe",
+    "category": "NESTED_OR_HIGHER_ORDER_LOGIC",
+    "certification_started": false,
+    "evidence_detail": {
+      "direct_hash_name_location_count": 1,
+      "embedded_hash_hit_count": 0,
+      "embedded_hashes": [],
+      "hash_name_location_count": 0,
+      "name_path_location_count": 0
+    },
+    "prior_status": "UNRESOLVED",
+    "recovery_claim": false,
+    "selected": {
+      "class_name": "bail_reel_solidaire_plafond_total",
+      "end_lineno": 69,
+      "fingerprints": {
+        "ast_dump": "55f490ab4d9ac5627a8a3baf3f0ffd832a026e5f29d5fe0d8a2c98b7dd5f0754",
+        "ast_unparse": "a6a7acb53934ed536be9ee000a5fa842165be09bbc2fb94dffc930e84e070b2c",
+        "dedent_strip": "27d6ae56e7604c3f313a7f4a5d86d4928004dd6ed0768fc87bf34dc449660036",
+        "dedent_strip_newline": "aaa0373ce3768951af26dc847464a6cb107da9b3f580a5d770524bcd1a3cf2c0",
+        "lf": "27d6ae56e7604c3f313a7f4a5d86d4928004dd6ed0768fc87bf34dc449660036",
+        "raw": "27d6ae56e7604c3f313a7f4a5d86d4928004dd6ed0768fc87bf34dc449660036"
+      },
+      "function_name": "formula",
+      "lineno": 45,
+      "matched_hash": "27d6ae56e7604c3f313a7f4a5d86d4928004dd6ed0768fc87bf34dc449660036",
+      "path": "external_sources\\v0.6\\openfisca_france\\openfisca_france\\model\\prestations\\bail_reel_solidaire.py",
+      "project": "openfisca_france",
+      "source": "def formula(menage, period, parameters):\n        params = parameters(period).prestations_sociales.bail_reel_solidaire\n        zones_abc_eligibles = params.parametres_generaux.zones_abc_eligibles\n        plafonds_par_zones = params.plafonds_par_zones\n        zones_menage = menage('bail_reel_solidaire_zones_menage', period)\n        nb_personnes = menage.nb_persons()\n        nb_personnes_max = params.parametres_generaux.nombre_personnes_maximum\n\n        def calcul_plafonds_zone(zone):\n            plafond_zone = plafonds_par_zones[f'zone_{zone}']\n            plafond_base = select(\n                [nb_personnes == i if i < 6 else nb_personnes >= i for i in range(1, 7)],\n                [plafond_zone[f'nb_personnes_{i}'] for i in range(1, 7)]\n                )\n            plafond_supp = where(\n                nb_personnes > nb_personnes_max,\n                (nb_personnes - nb_personnes_max) * plafond_zone.nb_personnes_supplementaires,\n                0\n                )\n            return plafond_base + plafond_supp\n\n        return select(\n            [zones_menage == zone for zone in zones_abc_eligibles],\n            [calcul_plafonds_zone(zone) for zone in zones_abc_eligibles]\n            )"
+    },
+    "status": "SAME_RECORD_DIRECT_HASH_NAME_RESOLVED",
+    "support_record_count": 4
+  },
+  "3fd2d8b8a76b4834": {
+    "authoritative_source": true,
+    "candidate_id": "3fd2d8b8a76b4834",
+    "category": "NESTED_OR_HIGHER_ORDER_LOGIC",
+    "certification_started": false,
+    "evidence_detail": {
+      "direct_hash_name_location_count": 1,
+      "embedded_hash_hit_count": 0,
+      "embedded_hashes": [],
+      "hash_name_location_count": 0,
+      "name_path_location_count": 0
+    },
+    "prior_status": "UNRESOLVED",
+    "recovery_claim": false,
+    "selected": {
+      "class_name": "rsa_enfant_a_charge",
+      "end_lineno": 371,
+      "fingerprints": {
+        "ast_dump": "bc46a96a9c85c991193cfd807258c2c752e61a722f3951744333d6af82e58ccb",
+        "ast_unparse": "d0507eba630063f37af11720dd1412a9fb6c5bc19d8babbab44512177ecaf40a",
+        "dedent_strip": "34d5615cad6fa576eb275925c470057151eb960aa06447d4a4bdd0cca87970cb",
+        "dedent_strip_newline": "179263321892babfe74467f2963a0cf313a565d2f38e68f1d38f249c95dff488",
+        "lf": "34d5615cad6fa576eb275925c470057151eb960aa06447d4a4bdd0cca87970cb",
+        "raw": "34d5615cad6fa576eb275925c470057151eb960aa06447d4a4bdd0cca87970cb"
+      },
+      "function_name": "formula_2009_06_01",
+      "lineno": 322,
+      "matched_hash": "34d5615cad6fa576eb275925c470057151eb960aa06447d4a4bdd0cca87970cb",
+      "path": "external_sources\\v0.6\\openfisca_france\\openfisca_france\\model\\prestations\\minima_sociaux\\rsa.py",
+      "project": "openfisca_france",
+      "source": "def formula_2009_06_01(individu, period, parameters):\n        P_rsa = parameters(period).prestations_sociales.solidarite_insertion.minima_sociaux.rsa\n\n        enfant = individu('est_enfant_dans_famille', period)\n        age = individu('age', period)\n        autonomie_financiere = individu('autonomie_financiere', period)\n\n        ressources = individu('rsa_revenus_determination_enfant_a_charge', period)\n\n        age_pac = P_rsa.rsa_cond.age_pac\n        majo_rsa_femmes_enceintes = P_rsa.rsa_maj.majoration_isolement_en_base_rsa.femmes_enceintes\n        majo_rsa_par_enfant_a_charge = P_rsa.rsa_maj.majoration_isolement_en_base_rsa.par_enfant_a_charge\n        montant_base_rsa = P_rsa.rsa_m.montant_de_base_du_rsa\n        taux_personne_supp = P_rsa.rsa_maj.maj_montant_max.par_enfant_supplementaire\n\n        # R\u00e8gle CAF: Si un enfant touche des ressources, et que son impact global\n        # (augmentation du montant forfaitaire - ressources prises en compte) fait baisser le montant du RSA, alors\n        # il doit \u00eatre exclu du calcul du RSA.\n        # Cette r\u00e8gle est complexe, on applique donc l'approximation suivante:\n        #       - Cas g\u00e9n\u00e9ral: enfant pris en compte si ressources <= augmentation du MF pour un enfant\n        #                      suppl\u00e9mentaire (taux marginal).\n        #       - Si la pr\u00e9sence de l'enfant ouvre droit au RSA major\u00e9, pris en compte si\n        #                      ressources <= majoration du RSA pour isolement avec un enfant.\n        def ouvre_droit_majoration():\n            famille = individu.famille\n            enceinte_fam = famille('enceinte_fam', period)\n            isole = not_(famille('en_couple', period))\n            isolement_recent = famille('rsa_isolement_recent', period)\n\n            presence_autres_enfants = famille.sum(enfant * not_(autonomie_financiere) * (age < age_pac)) > 1\n\n            return (\n                not_(enceinte_fam)\n                * isole\n                * isolement_recent\n                * not_(presence_autres_enfants)\n                )\n\n        rsa_enf_charge = (\n            enfant\n            * not_(autonomie_financiere)\n            * (age < age_pac)\n            * where(\n                ouvre_droit_majoration(),\n                ressources < (majo_rsa_femmes_enceintes - 1 + majo_rsa_par_enfant_a_charge) * montant_base_rsa,\n                ressources < taux_personne_supp * montant_base_rsa\n                )\n            )\n\n        return rsa_enf_charge"
+    },
+    "status": "SAME_RECORD_DIRECT_HASH_NAME_RESOLVED",
+    "support_record_count": 4
+  },
+  "674ea6fd35fa6c39": {
+    "authoritative_source": false,
+    "candidate_id": "674ea6fd35fa6c39",
+    "category": "STATEFUL_SIDE_EFFECTING_LOGIC",
+    "certification_started": false,
+    "evidence_detail": {
+      "direct_hash_name_location_count": 2,
+      "embedded_hash_hit_count": 2,
+      "embedded_hashes": [
+        "f3180e9973eca32f4e6a77d459e25a8759e939c13004190687ca0a2820b3c17d"
+      ],
+      "hash_name_location_count": 2,
+      "name_path_location_count": 3
+    },
+    "prior_status": "UNRESOLVED",
+    "recovery_claim": false,
+    "selected": null,
+    "status": "UNRESOLVED",
+    "support_record_count": 0
+  },
+  "801278c4d91c2185": {
+    "authoritative_source": true,
+    "candidate_id": "801278c4d91c2185",
+    "category": "OTHER_FROZEN_SCOPE_LIMITATION",
+    "certification_started": false,
+    "evidence_detail": {
+      "direct_hash_name_location_count": 1,
+      "embedded_hash_hit_count": 0,
+      "embedded_hashes": [],
+      "hash_name_location_count": 0,
+      "name_path_location_count": 0
+    },
+    "prior_status": "NAME_PATH_REVIEW",
+    "recovery_claim": false,
+    "selected": {
+      "class_name": "TaxRule",
+      "end_lineno": 446,
+      "fingerprints": {
+        "ast_dump": "83aeffd61150e22d84231d3b907d35878a1edb59aafc12fcfb433f0acf90c52f",
+        "ast_unparse": "0105843041ca13c0365738407077b2f9b00aaa537280f67d598897e6db290858",
+        "dedent_strip": "6418e54ffc42b44e738215947f3e359854424c8f743c91be530f7c3324620179",
+        "dedent_strip_newline": "d4799664a73e14dddf010629bfc6c61be519be0a5e565e1dab629970aed6c8e2",
+        "lf": "6418e54ffc42b44e738215947f3e359854424c8f743c91be530f7c3324620179",
+        "raw": "6418e54ffc42b44e738215947f3e359854424c8f743c91be530f7c3324620179"
+      },
+      "function_name": "__str__",
+      "lineno": 437,
+      "matched_hash": "6418e54ffc42b44e738215947f3e359854424c8f743c91be530f7c3324620179",
+      "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\tax.py",
+      "project": "pretix",
+      "source": "def __str__(self):\n        if self.price_includes_tax:\n            s = _('incl. {rate}% {name}').format(rate=self.rate, name=self.name)\n        else:\n            s = _('plus {rate}% {name}').format(rate=self.rate, name=self.name)\n        if self.eu_reverse_charge:\n            s += ' ({})'.format(_('reverse charge enabled'))\n        if self.internal_name:\n            return f'{self.internal_name} ({s})'\n        return str(s)"
+    },
+    "status": "SAME_RECORD_DIRECT_HASH_NAME_RESOLVED",
+    "support_record_count": 5
+  },
+  "e8850260c2763222": {
+    "authoritative_source": true,
+    "candidate_id": "e8850260c2763222",
+    "category": "STATEFUL_SIDE_EFFECTING_LOGIC",
+    "certification_started": false,
+    "evidence_detail": {
+      "direct_hash_name_location_count": 1,
+      "embedded_hash_hit_count": 0,
+      "embedded_hashes": [],
+      "hash_name_location_count": 0,
+      "name_path_location_count": 0
+    },
+    "prior_status": "UNRESOLVED",
+    "recovery_claim": false,
+    "selected": {
+      "class_name": "MultibuyDiscountBenefit",
+      "end_lineno": 361,
+      "fingerprints": {
+        "ast_dump": "e71e2c0502b46ad0537d60e5783c4cacb81d49b518a5be580bf2cedc8c851277",
+        "ast_unparse": "12278f6c01d75a322bf65ad0100ee4ad98ecb1e0f994417abc47390a68a25ef8",
+        "dedent_strip": "43caf35ba88294b43ebf679eb34e8e77c76d4ed43dbd2676aaef38e9010280af",
+        "dedent_strip_newline": "c45fe51688ed1f98f83bf7ad13ef3c82f95215197f556d575bc22dbcc94f4463",
+        "lf": "43caf35ba88294b43ebf679eb34e8e77c76d4ed43dbd2676aaef38e9010280af",
+        "raw": "43caf35ba88294b43ebf679eb34e8e77c76d4ed43dbd2676aaef38e9010280af"
+      },
+      "function_name": "apply",
+      "lineno": 346,
+      "matched_hash": "43caf35ba88294b43ebf679eb34e8e77c76d4ed43dbd2676aaef38e9010280af",
+      "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\offer\\benefits.py",
+      "project": "django_oscar",
+      "source": "def apply(self, basket, condition, offer, **kwargs):\n        line_tuples = self.get_applicable_lines(offer, basket)\n        if not line_tuples:\n            return ZERO_DISCOUNT\n\n        # Cheapest line gives free product\n        discount, line = line_tuples[0]\n        if line.quantity_with_offer_discount(offer) == 0:\n            apply_discount(line, discount, 1, offer)\n\n            affected_lines = [(line, discount, 1)]\n            condition.consume_items(offer, basket, affected_lines)\n\n            return BasketDiscount(discount)\n        else:\n            return ZERO_DISCOUNT"
+    },
+    "status": "SAME_RECORD_DIRECT_HASH_NAME_RESOLVED",
+    "support_record_count": 5
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "attempted": 2,
+  "batch": "SERVICE_EFFECT_BATCH",
+  "candidate_ids": [
+    "7460029971aad8de",
+    "63e7979762bf860b"
+  ],
+  "certification_started": false,
+  "correct_source_ast_rewrite": false,
+  "correct_source_policy": "Execute the exact frozen authoritative source. Relative imports are satisfied through a synthetic package module; zero-argument super() is satisfied through an unchanged class harness.",
+  "mutants": {
+    "63e7979762bf860b": {
+      "fault": "basket mutation and message effects occur, but the basket-addition signal is omitted",
+      "name": "OMIT_ADD_SIGNAL"
+    },
+    "7460029971aad8de": {
+      "fault": "when cache policy mismatches, the mutant keeps stale cache entries instead of clearing before the cache-hit test",
+      "name": "OMIT_CACHE_POLICY_CLEAR"
+    }
+  },
+  "mutants_frozen_before_execution": true,
+  "recovery_claims_before_execution": 0,
+  "schema_version": "BIZPROOF-V0.12-B3-CERT2-PROTOCOL-1",
+  "semantic_routes": {
+    "63e7979762bf860b": "ORDERED_BASKET_EFFECT_TRACE",
+    "7460029971aad8de": "CACHE_BACKED_SERVICE_RESULT"
+  },
+  "source_checkpoint": "cb89c32ce9d16e5cfd602980c79f6698c438d164"
+}

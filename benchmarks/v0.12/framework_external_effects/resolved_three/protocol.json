@@ -1,0 +1,28 @@
+{
+  "anti_bias_rules": [
+    "No candidate may be removed because its later proof attempt fails.",
+    "No candidate-specific semantic exception may be introduced solely to obtain recovery.",
+    "Each accepted abstraction must correspond to a reusable semantic capability."
+  ],
+  "candidate_count": 3,
+  "candidate_ids": [
+    "1311d905af0ebcb5",
+    "4d7d61b18dde0ad5",
+    "7bc9603bfbda7dc9"
+  ],
+  "candidate_reason_codes": {
+    "1311d905af0ebcb5": "SIDE_EFFECT_ONLY_REDIS_CACHE",
+    "4d7d61b18dde0ad5": "HTTP_RESPONSE_RETURN",
+    "7bc9603bfbda7dc9": "SCALAR_RETURN_LARGE_PARAMETERIZED_FORMULA | AGGREGATE_HELPER_SEMANTICS_OUTSIDE_FROZEN_SCALAR_A2_SCOPE"
+  },
+  "prospective_semantic_routes": {
+    "1311d905af0ebcb5": "EXPLICIT_EXTERNAL_EFFECT_TRACE",
+    "4d7d61b18dde0ad5": "STRUCTURED_FRAMEWORK_RESPONSE",
+    "7bc9603bfbda7dc9": "COMPOSITIONAL_SCALAR_HELPER_CLOSURE"
+  },
+  "recovery_claims": 0,
+  "schema_version": "BIZPROOF-V0.12-B1-RESOLVED3-PROTOCOL-1",
+  "selection_frozen_before_certification": true,
+  "selection_rule": "All V12-B candidates with an authoritative source slice already resolved at B0 are retained.",
+  "source_checkpoint": "92832a9dbb66c9cfe8e533caafdca11afa7ebfdb"
+}

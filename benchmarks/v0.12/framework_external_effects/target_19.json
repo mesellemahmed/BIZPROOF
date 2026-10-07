@@ -1,0 +1,206 @@
+{
+  "anti_bias_rules": [
+    "The 19-case denominator is inherited unchanged from the frozen V0.11 taxonomy.",
+    "No candidate may be removed because its source slice is difficult to resolve.",
+    "Failed recovery attempts remain in the category denominator.",
+    "Implementation families must be justified by frozen reason codes or structural AST evidence, not candidate-specific exceptions."
+  ],
+  "candidates": [
+    {
+      "candidate_id": "03e2adf4e4f323b1",
+      "classification_basis": "explicit framework/external-effect evidence",
+      "complexity": "HIGH",
+      "evidence_item_count": "34",
+      "final_category": "FRAMEWORK_OR_EXTERNAL_EFFECTS",
+      "reason_codes": "MODEL_SAVE_TRANSACTION_STATE_OUTSIDE_FORMAL_SUBSET",
+      "reviewed_reasons": "",
+      "source": "pretix"
+    },
+    {
+      "candidate_id": "1311d905af0ebcb5",
+      "classification_basis": "explicit framework/external-effect evidence",
+      "complexity": "MEDIUM",
+      "evidence_item_count": "31",
+      "final_category": "FRAMEWORK_OR_EXTERNAL_EFFECTS",
+      "reason_codes": "SIDE_EFFECT_ONLY_REDIS_CACHE",
+      "reviewed_reasons": "The function has no semantic return value and performs Redis/cache side effects.",
+      "source": "pretix"
+    },
+    {
+      "candidate_id": "2309036b0c69ad48",
+      "classification_basis": "explicit framework/external-effect evidence",
+      "complexity": "HIGH",
+      "evidence_item_count": "22",
+      "final_category": "FRAMEWORK_OR_EXTERNAL_EFFECTS",
+      "reason_codes": "FORM_STATE_MUTATION_OUTSIDE_FORMAL_SUBSET",
+      "reviewed_reasons": "Controlled execution of the locked source slice is established, but its observable semantics require state transition, collection mutation or non-scalar output semantics outside the frozen V0.11 formal certification subset.",
+      "source": "django_oscar"
+    },
+    {
+      "candidate_id": "4b57e2d73c695a41",
+      "classification_basis": "explicit framework/external-effect evidence",
+      "complexity": "MEDIUM",
+      "evidence_item_count": "18",
+      "final_category": "FRAMEWORK_OR_EXTERNAL_EFFECTS",
+      "reason_codes": "OBJECT_STATE_TRANSITION_OUTSIDE_FORMAL_SUBSET",
+      "reviewed_reasons": "Controlled execution of the locked source slice is established, but its observable semantics require state transition, collection mutation or non-scalar output semantics outside the frozen V0.11 formal certification subset.",
+      "source": "django_oscar"
+    },
+    {
+      "candidate_id": "4d7d61b18dde0ad5",
+      "classification_basis": "explicit framework/external-effect evidence",
+      "complexity": "MEDIUM",
+      "evidence_item_count": "25",
+      "final_category": "FRAMEWORK_OR_EXTERNAL_EFFECTS",
+      "reason_codes": "HTTP_RESPONSE_RETURN",
+      "reviewed_reasons": "The reviewed source does not provide a defensible single scalar business-semantic projection under the frozen V0.11 A2 protocol.",
+      "source": "django_oscar"
+    },
+    {
+      "candidate_id": "63e7979762bf860b",
+      "classification_basis": "explicit framework/external-effect evidence",
+      "complexity": "HIGH",
+      "evidence_item_count": "24",
+      "final_category": "FRAMEWORK_OR_EXTERNAL_EFFECTS",
+      "reason_codes": "FRAMEWORK_SIGNAL_BASKET_SIDE_EFFECTS_OUTSIDE_FORMAL_SUBSET",
+      "reviewed_reasons": "",
+      "source": "django_oscar"
+    },
+    {
+      "candidate_id": "7460029971aad8de",
+      "classification_basis": "explicit framework/external-effect evidence",
+      "complexity": "HIGH",
+      "evidence_item_count": "26",
+      "final_category": "FRAMEWORK_OR_EXTERNAL_EFFECTS",
+      "reason_codes": "SERVICE_CACHE_OBJECT_SEMANTICS_OUTSIDE_FORMAL_SUBSET",
+      "reviewed_reasons": "",
+      "source": "pretix"
+    },
+    {
+      "candidate_id": "7bc9603bfbda7dc9",
+      "classification_basis": "explicit framework/external-effect evidence",
+      "complexity": "HIGH",
+      "evidence_item_count": "26",
+      "final_category": "FRAMEWORK_OR_EXTERNAL_EFFECTS",
+      "reason_codes": "SCALAR_RETURN_LARGE_PARAMETERIZED_FORMULA | AGGREGATE_HELPER_SEMANTICS_OUTSIDE_FROZEN_SCALAR_A2_SCOPE",
+      "reviewed_reasons": "The source returns a scalar, but its semantic dependency surface is too large to collapse into a reviewed explicit adapter without a separate mapping step.",
+      "source": "openfisca_france"
+    },
+    {
+      "candidate_id": "7cf281a33e5781df",
+      "classification_basis": "explicit framework/external-effect evidence",
+      "complexity": "MEDIUM",
+      "evidence_item_count": "20",
+      "final_category": "FRAMEWORK_OR_EXTERNAL_EFFECTS",
+      "reason_codes": "OBJECT_STATE_TRANSITION_OUTSIDE_FORMAL_SUBSET",
+      "reviewed_reasons": "Controlled execution of the locked source slice is established, but its observable semantics require state transition, collection mutation or non-scalar output semantics outside the frozen V0.11 formal certification subset.",
+      "source": "pretix"
+    },
+    {
+      "candidate_id": "8048a564541f5408",
+      "classification_basis": "explicit framework/external-effect evidence",
+      "complexity": "MEDIUM",
+      "evidence_item_count": "16",
+      "final_category": "FRAMEWORK_OR_EXTERNAL_EFFECTS",
+      "reason_codes": "OPERATION_LIST_MUTATION_OUTSIDE_FORMAL_SUBSET",
+      "reviewed_reasons": "Controlled execution of the locked source slice is established, but its observable semantics require state transition, collection mutation or non-scalar output semantics outside the frozen V0.11 formal certification subset.",
+      "source": "pretix"
+    },
+    {
+      "candidate_id": "882c5eae0d8fd4ec",
+      "classification_basis": "explicit framework/external-effect evidence",
+      "complexity": "HIGH",
+      "evidence_item_count": "22",
+      "final_category": "FRAMEWORK_OR_EXTERNAL_EFFECTS",
+      "reason_codes": "REFUND_OBJECT_SIDE_EFFECTS_OUTSIDE_FORMAL_SUBSET",
+      "reviewed_reasons": "",
+      "source": "pretix"
+    },
+    {
+      "candidate_id": "8a754dadf1672d0a",
+      "classification_basis": "explicit framework/external-effect evidence",
+      "complexity": "HIGH",
+      "evidence_item_count": "36",
+      "final_category": "FRAMEWORK_OR_EXTERNAL_EFFECTS",
+      "reason_codes": "PLUGIN_SIGNAL_SET_SEMANTICS_OUTSIDE_FORMAL_SUBSET",
+      "reviewed_reasons": "",
+      "source": "pretix"
+    },
+    {
+      "candidate_id": "91b2dc32504282fc",
+      "classification_basis": "explicit framework/external-effect evidence",
+      "complexity": "MEDIUM",
+      "evidence_item_count": "18",
+      "final_category": "FRAMEWORK_OR_EXTERNAL_EFFECTS",
+      "reason_codes": "MULTI_STATE_MUTATION_OUTSIDE_FORMAL_SUBSET",
+      "reviewed_reasons": "Controlled execution of the locked source slice is established, but its observable semantics require state transition, collection mutation or non-scalar output semantics outside the frozen V0.11 formal certification subset.",
+      "source": "django_oscar"
+    },
+    {
+      "candidate_id": "a09e038870c9b436",
+      "classification_basis": "explicit framework/external-effect evidence",
+      "complexity": "MEDIUM",
+      "evidence_item_count": "19",
+      "final_category": "FRAMEWORK_OR_EXTERNAL_EFFECTS",
+      "reason_codes": "CONDITIONAL_STRING_CONSTRUCTION_OUTSIDE_FROZEN_FORMAL_SCOPE",
+      "reviewed_reasons": "statement-level If requires branch-state normalization | The locked source returns a conditionally constructed human-readable string using a statement-level branch and format operation. Existing V0.11 A1 string-related certificates cover direct bound-value returns under an uninterpreted value domain, not conditional string construction or concatenation semantics.",
+      "source": "pretix"
+    },
+    {
+      "candidate_id": "a79d9687185720aa",
+      "classification_basis": "explicit framework/external-effect evidence",
+      "complexity": "HIGH",
+      "evidence_item_count": "24",
+      "final_category": "FRAMEWORK_OR_EXTERNAL_EFFECTS",
+      "reason_codes": "MODEL_SAVE_STATE_TRANSITION_OUTSIDE_FORMAL_SUBSET",
+      "reviewed_reasons": "",
+      "source": "django_oscar"
+    },
+    {
+      "candidate_id": "b2996c3dd81aca55",
+      "classification_basis": "explicit framework/external-effect evidence",
+      "complexity": "MEDIUM",
+      "evidence_item_count": "26",
+      "final_category": "FRAMEWORK_OR_EXTERNAL_EFFECTS",
+      "reason_codes": "SESSION_STATE_MUTATION_OUTSIDE_FORMAL_SUBSET",
+      "reviewed_reasons": "Controlled execution of the locked source slice is established, but its observable semantics require state transition, collection mutation or non-scalar output semantics outside the frozen V0.11 formal certification subset.",
+      "source": "pretix"
+    },
+    {
+      "candidate_id": "bcb091a940a8d0dd",
+      "classification_basis": "explicit framework/external-effect evidence",
+      "complexity": "HIGH",
+      "evidence_item_count": "20",
+      "final_category": "FRAMEWORK_OR_EXTERNAL_EFFECTS",
+      "reason_codes": "FRAMEWORK_DICT_MUTATION_OUTSIDE_FORMAL_SUBSET",
+      "reviewed_reasons": "",
+      "source": "django_oscar"
+    },
+    {
+      "candidate_id": "d7f578c3a5f20b8a",
+      "classification_basis": "explicit framework/external-effect evidence",
+      "complexity": "MEDIUM",
+      "evidence_item_count": "22",
+      "final_category": "FRAMEWORK_OR_EXTERNAL_EFFECTS",
+      "reason_codes": "MULTI_OBJECT_STATE_TRANSITION_OUTSIDE_FORMAL_SUBSET",
+      "reviewed_reasons": "Controlled execution of the locked source slice is established, but its observable semantics require state transition, collection mutation or non-scalar output semantics outside the frozen V0.11 formal certification subset.",
+      "source": "pretix"
+    },
+    {
+      "candidate_id": "eb12d3a44210a486",
+      "classification_basis": "explicit framework/external-effect evidence",
+      "complexity": "HIGH",
+      "evidence_item_count": "24",
+      "final_category": "FRAMEWORK_OR_EXTERNAL_EFFECTS",
+      "reason_codes": "NONSCALAR_LIST_SEMANTICS_OUTSIDE_FORMAL_SUBSET",
+      "reviewed_reasons": "Controlled execution of the locked source slice is established, but its observable semantics require state transition, collection mutation or non-scalar output semantics outside the frozen V0.11 formal certification subset.",
+      "source": "pretix"
+    }
+  ],
+  "category": "FRAMEWORK_OR_EXTERNAL_EFFECTS",
+  "existing_v012_recovered": 10,
+  "recovery_claims_for_v12b": 0,
+  "schema_version": "BIZPROOF-V0.12-B0-TARGET-1",
+  "source_checkpoint": "f3d1639a4681f98ef68b4d747f34230af357a86e",
+  "target_count": 19
+}

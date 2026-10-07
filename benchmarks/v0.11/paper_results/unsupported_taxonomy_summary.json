@@ -1,0 +1,9 @@
+{
+  "counts": {
+    "COMPLEX_CONTAINER_OR_STRUCTURE": 1,
+    "STATEFUL_OR_OBJECT_CONTEXT": 36,
+    "UNSUPPORTED_LANGUAGE_SEMANTICS": 1
+  },
+  "taxonomy_status": "PRELIMINARY_KEYWORD_DERIVED_REQUIRES_MANUAL_REVIEW",
+  "unsupported_total": 38
+}

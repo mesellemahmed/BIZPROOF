@@ -1,0 +1,270 @@
+{
+  "authoritative_source": true,
+  "candidate_id": "7460029971aad8de",
+  "certification_started": false,
+  "class_name": "Quota",
+  "end_lineno": 2181,
+  "fingerprints": {
+    "ast_dump": "d0a46e44a4766c7aa740e7bdd90a6d08bf8252576603c9f636af3933ed97c63e",
+    "ast_unparse": "9ca74e9263b75df7f2800fe7819cc5517cc68b411f63e7e478e389404feb4ba7",
+    "dedent_strip": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+    "dedent_strip_newline": "fcafa39b6554dab7c020bee07a67cff107c3f60e5dc9a9e8c061ddb0b18b8ac4",
+    "lf": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+    "raw": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed"
+  },
+  "function_name": "availability",
+  "lineno": 2147,
+  "matched_hash": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+  "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\items.py",
+  "project": "pretix",
+  "reason_codes": "SERVICE_CACHE_OBJECT_SEMANTICS_OUTSIDE_FORMAL_SUBSET",
+  "recovery_claim": false,
+  "resolution": "STRUCTURED_DIRECT_HASH_RESOLVED",
+  "source": "def availability(\n            self, now_dt: datetime=None, count_waitinglist=True, _cache=None, allow_cache=False\n    ) -> Tuple[int, int]:\n        \"\"\"\n        This method is used to determine whether Items or ItemVariations belonging\n        to this quota should currently be available for sale.\n\n        :param count_waitinglist: Whether or not take waiting list reservations into account. Defaults\n                                  to ``True``.\n        :param _cache: A dictionary mapping quota IDs to availabilities. If this quota is already\n                       contained in that dictionary, this value will be used. Otherwise, the dict\n                       will be populated accordingly.\n        :param allow_cache: Allow for values to be returned from the longer-term cache, see also\n                            the documentation of this model class. Only works if ``count_waitinglist`` is\n                            set to ``True``.\n\n        :returns: a tuple where the first entry is one of the ``Quota.AVAILABILITY_`` constants\n                  and the second is the number of available tickets.\n        \"\"\"\n        from ..services.quotas import QuotaAvailability\n\n        if _cache and count_waitinglist is not _cache.get('_count_waitinglist', True):\n            _cache.clear()\n\n        if _cache is not None and self.pk in _cache:\n            return _cache[self.pk]\n        qa = QuotaAvailability(count_waitinglist=count_waitinglist, early_out=False)\n        qa.queue(self)\n        qa.compute(now_dt=now_dt, allow_cache=allow_cache)\n        res = qa.results[self]\n\n        if _cache is not None:\n            _cache[self.pk] = res\n            _cache['_count_waitinglist'] = count_waitinglist\n        return res",
+  "support_records": [
+    {
+      "direct_hashes": [
+        "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+        "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\execution_probe.jsonl",
+      "function_names": [
+        "availability"
+      ],
+      "hashes": [
+        "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+        "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+      ],
+      "object_path": "$line[5]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+        },
+        {
+          "key_path": "$.function",
+          "value": "availability"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+        "0830e3da863ca977bff711952c17e4c8e7e1e216174f5bc8431bc88181c03c5a",
+        "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_outcomes.jsonl",
+      "function_names": [
+        "availability"
+      ],
+      "hashes": [
+        "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+        "0830e3da863ca977bff711952c17e4c8e7e1e216174f5bc8431bc88181c03c5a",
+        "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+      ],
+      "object_path": "$line[3]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+        },
+        {
+          "key_path": "$.function",
+          "value": "availability"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "0830e3da863ca977bff711952c17e4c8e7e1e216174f5bc8431bc88181c03c5a"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+        "1a7e544e923ae44df55816c50325220efa9d9d52f78d98b0b82c905e31f10453",
+        "9f31603d7994b3861b7d319eac411392a1748d04c2b9322469565fd2dc69bc7d"
+      ],
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "function_names": [
+        "availability"
+      ],
+      "hashes": [
+        "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+        "1a7e544e923ae44df55816c50325220efa9d9d52f78d98b0b82c905e31f10453",
+        "9f31603d7994b3861b7d319eac411392a1748d04c2b9322469565fd2dc69bc7d"
+      ],
+      "object_path": "$line[66]",
+      "path_hints": [
+        "doc/api/guides/custom_checkout.rst",
+        "doc/api/resources/carts.rst",
+        "doc/api/resources/exhibitors.rst",
+        "doc/api/resources/exporters.rst",
+        "doc/api/resources/item_bundles.rst",
+        "doc/api/resources/items.rst",
+        "doc/api/resources/offlinesales.rst",
+        "doc/api/resources/orders.rst",
+        "src/pretix/base/models/items.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate.business_keyword_sources.class[0]",
+          "value": "quota"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.docstring[0]",
+          "value": "account"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.docstring[1]",
+          "value": "availability"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.docstring[2]",
+          "value": "quota"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.function[0]",
+          "value": "availability"
+        },
+        {
+          "key_path": "$.candidate.evidence_link_modes.doc:EXACT_FUNCTION_TEXT",
+          "value": "6"
+        },
+        {
+          "key_path": "$.candidate.file",
+          "value": "src/pretix/base/models/items.py"
+        },
+        {
+          "key_path": "$.candidate.function",
+          "value": "availability"
+        },
+        {
+          "key_path": "$.candidate.function_sha256",
+          "value": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed"
+        },
+        {
+          "key_path": "$.candidate.source_file_sha256",
+          "value": "9f31603d7994b3861b7d319eac411392a1748d04c2b9322469565fd2dc69bc7d"
+        },
+        {
+          "key_path": "$.candidate.source_id",
+          "value": "pretix"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[0]",
+          "value": "doc/api/guides/custom_checkout.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[1]",
+          "value": "doc/api/resources/carts.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[2]",
+          "value": "doc/api/resources/exhibitors.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[3]",
+          "value": "doc/api/resources/exporters.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[4]",
+          "value": "doc/api/resources/item_bundles.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[5]",
+          "value": "doc/api/resources/items.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[6]",
+          "value": "doc/api/resources/offlinesales.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[7]",
+          "value": "doc/api/resources/orders.rst"
+        },
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        },
+        {
+          "key_path": "$.selection_hash",
+          "value": "1a7e544e923ae44df55816c50325220efa9d9d52f78d98b0b82c905e31f10453"
+        },
+        {
+          "key_path": "$.stratum.source_id",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+        "0830e3da863ca977bff711952c17e4c8e7e1e216174f5bc8431bc88181c03c5a",
+        "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_evidence\\7460029971aad8de.json",
+      "function_names": [
+        "availability"
+      ],
+      "hashes": [
+        "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+        "0830e3da863ca977bff711952c17e4c8e7e1e216174f5bc8431bc88181c03c5a",
+        "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+      ],
+      "object_path": "$",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "7460029971aad8de"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+        },
+        {
+          "key_path": "$.function",
+          "value": "availability"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "0830e3da863ca977bff711952c17e4c8e7e1e216174f5bc8431bc88181c03c5a"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "candidate_id": "26a1af8837fe7ae4",
+  "external_calls": [],
+  "free_names": [],
+  "function_name": "__repr__",
+  "reason_code": "TEXT_RETURN",
+  "reasons": [],
+  "repository_matches": [
+    {
+      "class_name": "OrderPosition",
+      "end_lineno": 2833,
+      "lineno": 2830,
+      "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+      "source": "def __repr__(self):\n        return '<OrderPosition: item %d, variation %d for order %s>' % (\n            self.item.id, self.variation.id if self.variation else 0, self.order_id\n        )"
+    }
+  ],
+  "self_attributes": [
+    "item",
+    "order_id",
+    "variation"
+  ],
+  "source": "def __repr__(self):\n        return '<OrderPosition: item %d, variation %d for order %s>' % (\n            self.item.id, self.variation.id if self.variation else 0, self.order_id\n        )",
+  "status": "DIRECT_CONTROLLED_REPLAY"
+}

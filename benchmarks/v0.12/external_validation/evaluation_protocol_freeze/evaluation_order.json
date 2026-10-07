@@ -1,0 +1,1208 @@
+{
+  "case_count": 120,
+  "cases": [
+    {
+      "case_id": "ext-eb09502f74674840",
+      "evaluation_index": 1,
+      "project": "ckan/ckan",
+      "project_commit": "cb8172446c463316efdf12a3e5aa0e0d386adf32",
+      "qualified_name": "DatastoreExampleSqliteBackend.execute",
+      "relative_path": "ckanext/example_idatastorebackend/example_sqlite.py",
+      "source_sha256": "e57108e5407532913b1efad80fc21ddf841741f7f41265f8c06a63bfc5580285",
+      "stratum": "S5_BINDING_EXTERNAL_DOMAIN"
+    },
+    {
+      "case_id": "ext-014d3a21a52e3d7a",
+      "evaluation_index": 2,
+      "project": "ckan/ckan",
+      "project_commit": "cb8172446c463316efdf12a3e5aa0e0d386adf32",
+      "qualified_name": "ExpireApiTokenPlugin.declare_config_options",
+      "relative_path": "ckanext/expire_api_token/plugin.py",
+      "source_sha256": "6e3dca10d7143b25637a85843a07d6330e4cd3b528172a85bc7e9033abd42621",
+      "stratum": "S1_LOCAL_SCALAR_CONTROL"
+    },
+    {
+      "case_id": "ext-1702a6a1e6e1d32f",
+      "evaluation_index": 3,
+      "project": "ckan/ckan",
+      "project_commit": "cb8172446c463316efdf12a3e5aa0e0d386adf32",
+      "qualified_name": "_execute",
+      "relative_path": "ckan/lib/dictization/model_dictize.py",
+      "source_sha256": "6de4b4390a3baa1ac3ca7a818b63b9a0123a01cd564bd2188a9f90853d7994f7",
+      "stratum": "S5_BINDING_EXTERNAL_DOMAIN"
+    },
+    {
+      "case_id": "ext-a61272fece92e976",
+      "evaluation_index": 4,
+      "project": "ckan/ckan",
+      "project_commit": "cb8172446c463316efdf12a3e5aa0e0d386adf32",
+      "qualified_name": "update_merge_list",
+      "relative_path": "ckan/lib/navl/dictization_functions.py",
+      "source_sha256": "8282066ac5a3832b033f3974c29a8639d49e411ab414efdf6aae7d55f8eac3d4",
+      "stratum": "S4_STATE_EFFECT"
+    },
+    {
+      "case_id": "ext-acff673d7cc6a299",
+      "evaluation_index": 5,
+      "project": "ckan/ckan",
+      "project_commit": "cb8172446c463316efdf12a3e5aa0e0d386adf32",
+      "qualified_name": "_normalize_type",
+      "relative_path": "ckan/lib/search/__init__.py",
+      "source_sha256": "ceac9fde13eac26af1129c1d598e4278b7a056a0f8dc00d701a72ac3011b7da8",
+      "stratum": "S1_LOCAL_SCALAR_CONTROL"
+    },
+    {
+      "case_id": "ext-4e957e9451cbe4c1",
+      "evaluation_index": 6,
+      "project": "ckan/ckan",
+      "project_commit": "cb8172446c463316efdf12a3e5aa0e0d386adf32",
+      "qualified_name": "json_validator",
+      "relative_path": "ckanext/datastore/logic/schema.py",
+      "source_sha256": "65c4ea033062da576c3b6c956ef1402623824d35b0bce4611190e73b65ef509b",
+      "stratum": "S2_STRUCTURED_CONTAINER"
+    },
+    {
+      "case_id": "ext-31225480bd58da3f",
+      "evaluation_index": 7,
+      "project": "ckan/ckan",
+      "project_commit": "cb8172446c463316efdf12a3e5aa0e0d386adf32",
+      "qualified_name": "send_reset_link",
+      "relative_path": "ckan/lib/mailer.py",
+      "source_sha256": "b5807929cbddc147c1409659b3393da89630664d4385497dbc08b6de393b5bd5",
+      "stratum": "S2_STRUCTURED_CONTAINER"
+    },
+    {
+      "case_id": "ext-5f39ea8c120c833f",
+      "evaluation_index": 8,
+      "project": "ckan/ckan",
+      "project_commit": "cb8172446c463316efdf12a3e5aa0e0d386adf32",
+      "qualified_name": "_mail_recipient",
+      "relative_path": "ckan/lib/mailer.py",
+      "source_sha256": "286d676d398945e02ef6c83799e768f450cc50e119ac24272b0683395d5f73fd",
+      "stratum": "S4_STATE_EFFECT"
+    },
+    {
+      "case_id": "ext-3e9c698b7857da9b",
+      "evaluation_index": 9,
+      "project": "ckan/ckan",
+      "project_commit": "cb8172446c463316efdf12a3e5aa0e0d386adf32",
+      "qualified_name": "add_url_param",
+      "relative_path": "ckan/lib/helpers.py",
+      "source_sha256": "0b2060f48ee88e7a8b4f831204af2236dccd6f16030b330afb40d8c5614377b0",
+      "stratum": "S3_NESTED_VECTOR_HIGHER_ORDER"
+    },
+    {
+      "case_id": "ext-e219fca78875afcb",
+      "evaluation_index": 10,
+      "project": "ckan/ckan",
+      "project_commit": "cb8172446c463316efdf12a3e5aa0e0d386adf32",
+      "qualified_name": "PackageSearchQuery.get_all_entity_ids",
+      "relative_path": "ckan/lib/search/query.py",
+      "source_sha256": "305656e1255d391b2034d5a5fcd22c7a03ba69f1166117ad779dd9b5521dc7b0",
+      "stratum": "S3_NESTED_VECTOR_HIGHER_ORDER"
+    },
+    {
+      "case_id": "ext-6dd8f9e1a9e8f3d2",
+      "evaluation_index": 11,
+      "project": "home-assistant/core",
+      "project_commit": "a57de59dade26cbe074a449938ac1853f2085c9a",
+      "qualified_name": "VizioDevice.async_media_previous_track",
+      "relative_path": "homeassistant/components/vizio/media_player.py",
+      "source_sha256": "1a31bd5ce3e247f8a32e5c16de12bd0e21910142e5ffc7eda51320357a01f566",
+      "stratum": "S1_LOCAL_SCALAR_CONTROL"
+    },
+    {
+      "case_id": "ext-03dd4cd888d68fba",
+      "evaluation_index": 12,
+      "project": "home-assistant/core",
+      "project_commit": "a57de59dade26cbe074a449938ac1853f2085c9a",
+      "qualified_name": "_async_get_trigger_platform",
+      "relative_path": "homeassistant/helpers/trigger/__init__.py",
+      "source_sha256": "d4e98f0909d0876302a109ef30ff0f458dbb75bec84eaf74020138a58ae583e7",
+      "stratum": "S2_STRUCTURED_CONTAINER"
+    },
+    {
+      "case_id": "ext-0a51568c74e1739b",
+      "evaluation_index": 13,
+      "project": "home-assistant/core",
+      "project_commit": "a57de59dade26cbe074a449938ac1853f2085c9a",
+      "qualified_name": "LyricClimate.hvac_action",
+      "relative_path": "homeassistant/components/lyric/climate.py",
+      "source_sha256": "d640b05540538662e82eefd0cf64c9e84ea5ff2c7f64df6e11aef86753c53c93",
+      "stratum": "S1_LOCAL_SCALAR_CONTROL"
+    },
+    {
+      "case_id": "ext-eda2e533a006d76d",
+      "evaluation_index": 14,
+      "project": "home-assistant/core",
+      "project_commit": "a57de59dade26cbe074a449938ac1853f2085c9a",
+      "qualified_name": "apply_states_filters",
+      "relative_path": "homeassistant/components/logbook/queries/common.py",
+      "source_sha256": "7d2631cdf36c751f6738c8897e261a1aa6d980eff983fc1e4575bdf73f624b51",
+      "stratum": "S5_BINDING_EXTERNAL_DOMAIN"
+    },
+    {
+      "case_id": "ext-0367c01f3fc90ca1",
+      "evaluation_index": 15,
+      "project": "home-assistant/core",
+      "project_commit": "a57de59dade26cbe074a449938ac1853f2085c9a",
+      "qualified_name": "async_setup_entry",
+      "relative_path": "homeassistant/components/telegram_bot/event.py",
+      "source_sha256": "9aefa8426d2641076050a00f758b471c1e623b916a8c779da43f3026de2ba03d",
+      "stratum": "S2_STRUCTURED_CONTAINER"
+    },
+    {
+      "case_id": "ext-6780b8e1d94424f4",
+      "evaluation_index": 16,
+      "project": "home-assistant/core",
+      "project_commit": "a57de59dade26cbe074a449938ac1853f2085c9a",
+      "qualified_name": "migrate_2_1_to_2_2",
+      "relative_path": "homeassistant/components/knx/storage/migration.py",
+      "source_sha256": "8a895574d8c0a7f4b3f4c13844af55b0cf622768d9878775fc23eef17f8bd6e8",
+      "stratum": "S4_STATE_EFFECT"
+    },
+    {
+      "case_id": "ext-d4478cebd673ec44",
+      "evaluation_index": 17,
+      "project": "home-assistant/core",
+      "project_commit": "a57de59dade26cbe074a449938ac1853f2085c9a",
+      "qualified_name": "LiteLLMDataUpdateCoordinator.async_set_updated_data",
+      "relative_path": "homeassistant/components/litellm/coordinator.py",
+      "source_sha256": "e0b02d239a503fb991a27008a375045c397395e7894c86be0e330346b6c3c2d1",
+      "stratum": "S4_STATE_EFFECT"
+    },
+    {
+      "case_id": "ext-3bfb3d3a0c80f10f",
+      "evaluation_index": 18,
+      "project": "home-assistant/core",
+      "project_commit": "a57de59dade26cbe074a449938ac1853f2085c9a",
+      "qualified_name": "async_reconcile_missing_address_issue",
+      "relative_path": "homeassistant/components/mitsubishi_comfort/helpers.py",
+      "source_sha256": "a7c8d11552f708100e2d5066f3bb8b6efeb83ec1b691c1c36bed161f392041b9",
+      "stratum": "S3_NESTED_VECTOR_HIGHER_ORDER"
+    },
+    {
+      "case_id": "ext-f8649416f3f5b6d0",
+      "evaluation_index": 19,
+      "project": "home-assistant/core",
+      "project_commit": "a57de59dade26cbe074a449938ac1853f2085c9a",
+      "qualified_name": "WithingsActivityDataUpdateCoordinator._internal_update_data",
+      "relative_path": "homeassistant/components/withings/coordinator.py",
+      "source_sha256": "be98fdace2ebf1e0f569dd44b31bb7317f67bdb0e6c9806fb4307ac9434aa027",
+      "stratum": "S5_BINDING_EXTERNAL_DOMAIN"
+    },
+    {
+      "case_id": "ext-0a5a3e2c2022bcac",
+      "evaluation_index": 20,
+      "project": "home-assistant/core",
+      "project_commit": "a57de59dade26cbe074a449938ac1853f2085c9a",
+      "qualified_name": "async_setup_entry",
+      "relative_path": "homeassistant/components/notion/binary_sensor.py",
+      "source_sha256": "f3131922f9227a69ee6f8abdee41ad35b810d115caf9690c83bd77b0f1b1a578",
+      "stratum": "S3_NESTED_VECTOR_HIGHER_ORDER"
+    },
+    {
+      "case_id": "ext-16b7d8c51c6eabbf",
+      "evaluation_index": 21,
+      "project": "saleor/saleor",
+      "project_commit": "8385ca60ecefa3a068aed3d1a28188e096cdc543",
+      "qualified_name": "ObjectWithMetadata.resolve_private_metafield",
+      "relative_path": "saleor/graphql/meta/types.py",
+      "source_sha256": "e977e29a99b942ebd58a48d1c71791ab774f6da11beafa256907076d6c200cca",
+      "stratum": "S2_STRUCTURED_CONTAINER"
+    },
+    {
+      "case_id": "ext-e32e341aa20dc169",
+      "evaluation_index": 22,
+      "project": "saleor/saleor",
+      "project_commit": "8385ca60ecefa3a068aed3d1a28188e096cdc543",
+      "qualified_name": "UpdatePrivateMetadata.perform_mutation",
+      "relative_path": "saleor/graphql/meta/mutations/update_private_metadata.py",
+      "source_sha256": "cf1e12d67a52e5399bd85197028ea9e1758b4ee88f9fee7ac3dc27befc3e7b9e",
+      "stratum": "S4_STATE_EFFECT"
+    },
+    {
+      "case_id": "ext-c8c20aec4a7cf43c",
+      "evaluation_index": 23,
+      "project": "saleor/saleor",
+      "project_commit": "8385ca60ecefa3a068aed3d1a28188e096cdc543",
+      "qualified_name": "resolve_permission_group",
+      "relative_path": "saleor/graphql/account/resolvers.py",
+      "source_sha256": "31f48b8e3ba2dbd6302d7a28518fad93b9c45c3928705304c1f83a3bbe94c5d8",
+      "stratum": "S5_BINDING_EXTERNAL_DOMAIN"
+    },
+    {
+      "case_id": "ext-2843c664228f6fc5",
+      "evaluation_index": 24,
+      "project": "saleor/saleor",
+      "project_commit": "8385ca60ecefa3a068aed3d1a28188e096cdc543",
+      "qualified_name": "_generate_shipping_method_payload",
+      "relative_path": "saleor/webhook/payloads.py",
+      "source_sha256": "a94672f350c345655846ee75def0fc30ba6641423c5b128eb8f4c7a1ca949029",
+      "stratum": "S3_NESTED_VECTOR_HIGHER_ORDER"
+    },
+    {
+      "case_id": "ext-aa128068ad550867",
+      "evaluation_index": 25,
+      "project": "saleor/saleor",
+      "project_commit": "8385ca60ecefa3a068aed3d1a28188e096cdc543",
+      "qualified_name": "ShippingQueries.resolve_shipping_zone",
+      "relative_path": "saleor/graphql/shipping/schema.py",
+      "source_sha256": "7cca62e385cb261ff91777c33929003c401a8e1cf093dc68d0a5cf484508f471",
+      "stratum": "S5_BINDING_EXTERNAL_DOMAIN"
+    },
+    {
+      "case_id": "ext-501ae2c6ce48fd95",
+      "evaluation_index": 26,
+      "project": "saleor/saleor",
+      "project_commit": "8385ca60ecefa3a068aed3d1a28188e096cdc543",
+      "qualified_name": "generate_tax_codes_dict",
+      "relative_path": "saleor/plugins/avatax/__init__.py",
+      "source_sha256": "add22b3e8d5e72d89dd970bd640319517e16c47d01c44a86b836061a98875b42",
+      "stratum": "S4_STATE_EFFECT"
+    },
+    {
+      "case_id": "ext-45d5665f754d1779",
+      "evaluation_index": 27,
+      "project": "saleor/saleor",
+      "project_commit": "8385ca60ecefa3a068aed3d1a28188e096cdc543",
+      "qualified_name": "TaxExemptionManage.validate_input",
+      "relative_path": "saleor/graphql/tax/mutations/tax_exemption_manage.py",
+      "source_sha256": "17734f4ed0531e5d5e0cd0609aed015d4c07094288768fa9b091983691cc065f",
+      "stratum": "S2_STRUCTURED_CONTAINER"
+    },
+    {
+      "case_id": "ext-e635831e80f592d8",
+      "evaluation_index": 28,
+      "project": "saleor/saleor",
+      "project_commit": "8385ca60ecefa3a068aed3d1a28188e096cdc543",
+      "qualified_name": "CheckoutLinesProblemsByCheckoutIdLoader.get_variants_stocks",
+      "relative_path": "saleor/graphql/checkout/dataloaders/problems.py",
+      "source_sha256": "09e6e109b1e770dbb11d7e366f5160d60acae958e810e94eac75ddbb93baaff1",
+      "stratum": "S3_NESTED_VECTOR_HIGHER_ORDER"
+    },
+    {
+      "case_id": "ext-036868a3b0436c70",
+      "evaluation_index": 29,
+      "project": "saleor/saleor",
+      "project_commit": "8385ca60ecefa3a068aed3d1a28188e096cdc543",
+      "qualified_name": "get_cache_key_failed_ip",
+      "relative_path": "saleor/account/throttling.py",
+      "source_sha256": "54a93ff85e460b06cb2e6b049a859ed43f5d001362fb194d93a2dbb95a803217",
+      "stratum": "S1_LOCAL_SCALAR_CONTROL"
+    },
+    {
+      "case_id": "ext-33de6555f8f2ac0d",
+      "evaluation_index": 30,
+      "project": "saleor/saleor",
+      "project_commit": "8385ca60ecefa3a068aed3d1a28188e096cdc543",
+      "qualified_name": "WebhookPlugin.transaction_cancelation_requested",
+      "relative_path": "saleor/plugins/webhook/plugin.py",
+      "source_sha256": "1d67723e58fce5186ca7af8a028a44425f28ef42aa15f0cdd82ad3bdac13f959",
+      "stratum": "S1_LOCAL_SCALAR_CONTROL"
+    },
+    {
+      "case_id": "ext-bf5ec31f66d71417",
+      "evaluation_index": 31,
+      "project": "element-hq/synapse",
+      "project_commit": "4f5524043c40985eb39900d7c459ace4bf804ee9",
+      "qualified_name": "ReplicationUserJoinedLeftRoomRestServlet.__init__",
+      "relative_path": "synapse/replication/http/membership.py",
+      "source_sha256": "39b52e3582115e30d2d33ded8a4acbbabdd6a26f6468d947c565cdcf7d9957a8",
+      "stratum": "S4_STATE_EFFECT"
+    },
+    {
+      "case_id": "ext-8d053f2ddc0041c7",
+      "evaluation_index": 32,
+      "project": "element-hq/synapse",
+      "project_commit": "4f5524043c40985eb39900d7c459ace4bf804ee9",
+      "qualified_name": "make_graph",
+      "relative_path": "contrib/graph/graph2.py",
+      "source_sha256": "74c234de93b1e3450eea39fe772f6ecb11c0f5f0870ceb96cf09d40790bd1b5e",
+      "stratum": "S5_BINDING_EXTERNAL_DOMAIN"
+    },
+    {
+      "case_id": "ext-fc808790b4b6061e",
+      "evaluation_index": 33,
+      "project": "element-hq/synapse",
+      "project_commit": "4f5524043c40985eb39900d7c459ace4bf804ee9",
+      "qualified_name": "StateStorageController.get_current_hosts_in_room_ordered",
+      "relative_path": "synapse/storage/controllers/state.py",
+      "source_sha256": "6cc8560c0f0bd5d600e529f568943455b2ec88b9cc39e06e8f9e6561036bb7c0",
+      "stratum": "S2_STRUCTURED_CONTAINER"
+    },
+    {
+      "case_id": "ext-7a6d92062f9b26c7",
+      "evaluation_index": 34,
+      "project": "element-hq/synapse",
+      "project_commit": "4f5524043c40985eb39900d7c459ace4bf804ee9",
+      "qualified_name": "_resolve_with_state",
+      "relative_path": "synapse/state/v1.py",
+      "source_sha256": "edcde8ea53fa9404eca5252234131bea11d55936856fb918bd1b49f8a4cee765",
+      "stratum": "S4_STATE_EFFECT"
+    },
+    {
+      "case_id": "ext-c7fefac6e4c14cb2",
+      "evaluation_index": 35,
+      "project": "element-hq/synapse",
+      "project_commit": "4f5524043c40985eb39900d7c459ace4bf804ee9",
+      "qualified_name": "HomeServer.get_module_api",
+      "relative_path": "synapse/server.py",
+      "source_sha256": "25c4238da20bc6f54e3dbf084302ab95cdf8bb4810d8eb73ba8ff4fd4b7ef3dc",
+      "stratum": "S1_LOCAL_SCALAR_CONTROL"
+    },
+    {
+      "case_id": "ext-918fe1035ed71e76",
+      "evaluation_index": 36,
+      "project": "element-hq/synapse",
+      "project_commit": "4f5524043c40985eb39900d7c459ace4bf804ee9",
+      "qualified_name": "UnrecognizedRequestResource.getChild",
+      "relative_path": "synapse/http/server.py",
+      "source_sha256": "3d1d7d180aa949a4983b4c3378dd67054579ff5214aae2a6d60c2dbdfa29a10d",
+      "stratum": "S5_BINDING_EXTERNAL_DOMAIN"
+    },
+    {
+      "case_id": "ext-68ede8866be47201",
+      "evaluation_index": 37,
+      "project": "element-hq/synapse",
+      "project_commit": "4f5524043c40985eb39900d7c459ace4bf804ee9",
+      "qualified_name": "RegistrationStore.user_set_consent_server_notice_sent",
+      "relative_path": "synapse/storage/databases/main/registration.py",
+      "source_sha256": "ed73126469251195776b7e5e21b21ad5cc079583cdf8e97dc6265b8d97a603f8",
+      "stratum": "S3_NESTED_VECTOR_HIGHER_ORDER"
+    },
+    {
+      "case_id": "ext-abc21c9f05e53c5a",
+      "evaluation_index": 38,
+      "project": "element-hq/synapse",
+      "project_commit": "4f5524043c40985eb39900d7c459ace4bf804ee9",
+      "qualified_name": "StreamToken.copy_and_replace",
+      "relative_path": "synapse/types/__init__.py",
+      "source_sha256": "0a01f308e2048f5d14d6d304f20497107ed40deba9d42bc4909432789c9e95c9",
+      "stratum": "S2_STRUCTURED_CONTAINER"
+    },
+    {
+      "case_id": "ext-f516c2c624fe9276",
+      "evaluation_index": 39,
+      "project": "element-hq/synapse",
+      "project_commit": "4f5524043c40985eb39900d7c459ace4bf804ee9",
+      "qualified_name": "register_servlets",
+      "relative_path": "synapse/replication/http/account_data.py",
+      "source_sha256": "fe864916e12e77e0c9d4363831fc2e7acba11015651209fd06e662defe44febb",
+      "stratum": "S1_LOCAL_SCALAR_CONTROL"
+    },
+    {
+      "case_id": "ext-21679e4c77b8061c",
+      "evaluation_index": 40,
+      "project": "element-hq/synapse",
+      "project_commit": "4f5524043c40985eb39900d7c459ace4bf804ee9",
+      "qualified_name": "SearchWorkerStore.store_search_entries_txn",
+      "relative_path": "synapse/storage/databases/main/search.py",
+      "source_sha256": "7b2fdd3eebcb85586f21f5d7fd6430c96498c9184a8aad75d5679f22c9edc658",
+      "stratum": "S3_NESTED_VECTOR_HIGHER_ORDER"
+    },
+    {
+      "case_id": "ext-8835eb93189bf009",
+      "evaluation_index": 41,
+      "project": "netbox-community/netbox",
+      "project_commit": "5a9a9d2a25318ff68fdd567959a2d4f1f7080b21",
+      "qualified_name": "BaseModel.clean",
+      "relative_path": "netbox/netbox/models/__init__.py",
+      "source_sha256": "78362614328c78fafec485441568131ec008dc4d580d9e4afbab606650225c14",
+      "stratum": "S5_BINDING_EXTERNAL_DOMAIN"
+    },
+    {
+      "case_id": "ext-41b74770488ad0fc",
+      "evaluation_index": 42,
+      "project": "netbox-community/netbox",
+      "project_commit": "5a9a9d2a25318ff68fdd567959a2d4f1f7080b21",
+      "qualified_name": "NumericRangeArrayField.__init__",
+      "relative_path": "netbox/utilities/forms/fields/array.py",
+      "source_sha256": "794eac18cd71a25a45f929c8a92156fb08c89f3fee0f237093ae17e37d3590a1",
+      "stratum": "S1_LOCAL_SCALAR_CONTROL"
+    },
+    {
+      "case_id": "ext-8baf1801a3b0b31c",
+      "evaluation_index": 43,
+      "project": "netbox-community/netbox",
+      "project_commit": "5a9a9d2a25318ff68fdd567959a2d4f1f7080b21",
+      "qualified_name": "PortMapping.clean",
+      "relative_path": "netbox/dcim/models/device_components.py",
+      "source_sha256": "18574986dc02a4777a101b0b9f1aa40a83ef4a9b497630e04cecbb70288b85e2",
+      "stratum": "S2_STRUCTURED_CONTAINER"
+    },
+    {
+      "case_id": "ext-01093436c07b1f9d",
+      "evaluation_index": 44,
+      "project": "netbox-community/netbox",
+      "project_commit": "5a9a9d2a25318ff68fdd567959a2d4f1f7080b21",
+      "qualified_name": "Job.get_status_color",
+      "relative_path": "netbox/core/models/jobs.py",
+      "source_sha256": "9349b29f99a458c2452d770aa6ebb02279ece9ea284caa6c0e23db0a83004c77",
+      "stratum": "S1_LOCAL_SCALAR_CONTROL"
+    },
+    {
+      "case_id": "ext-9d00dff79003fd37",
+      "evaluation_index": 45,
+      "project": "netbox-community/netbox",
+      "project_commit": "5a9a9d2a25318ff68fdd567959a2d4f1f7080b21",
+      "qualified_name": "ProviderNetworkView.get_extra_context",
+      "relative_path": "netbox/circuits/views.py",
+      "source_sha256": "00d793e19958bfbe9bc637bb63cf3f33666fa4584f760b9e541461188dc8a4c5",
+      "stratum": "S5_BINDING_EXTERNAL_DOMAIN"
+    },
+    {
+      "case_id": "ext-47a001a7c854d4b4",
+      "evaluation_index": 46,
+      "project": "netbox-community/netbox",
+      "project_commit": "5a9a9d2a25318ff68fdd567959a2d4f1f7080b21",
+      "qualified_name": "NetBoxAutoSchema.get_override_parameters",
+      "relative_path": "netbox/core/api/schema.py",
+      "source_sha256": "b8c45603b679bbae63fc5337c580a229a51010c57e072a393ff6e29f85e9e28e",
+      "stratum": "S2_STRUCTURED_CONTAINER"
+    },
+    {
+      "case_id": "ext-01cfff1b3cf007f5",
+      "evaluation_index": 47,
+      "project": "netbox-community/netbox",
+      "project_commit": "5a9a9d2a25318ff68fdd567959a2d4f1f7080b21",
+      "qualified_name": "ObjectAttributesPanelMeta.__new__",
+      "relative_path": "netbox/netbox/ui/panels.py",
+      "source_sha256": "13304044f00a9aa880cc2e7bf3e738e21309371050eaab34f14a781c8ceb5a47",
+      "stratum": "S4_STATE_EFFECT"
+    },
+    {
+      "case_id": "ext-6aece6836df80605",
+      "evaluation_index": 48,
+      "project": "netbox-community/netbox",
+      "project_commit": "5a9a9d2a25318ff68fdd567959a2d4f1f7080b21",
+      "qualified_name": "parse",
+      "relative_path": "scripts/verify_dependencies.py",
+      "source_sha256": "06784864f5ec207c646719fbe9d2d7f03a0bc3569d96675176a15e526697fa05",
+      "stratum": "S4_STATE_EFFECT"
+    },
+    {
+      "case_id": "ext-b5e289e52b9ebae3",
+      "evaluation_index": 49,
+      "project": "netbox-community/netbox",
+      "project_commit": "5a9a9d2a25318ff68fdd567959a2d4f1f7080b21",
+      "qualified_name": "ConfigContextQuerySet.get_for_object",
+      "relative_path": "netbox/extras/querysets.py",
+      "source_sha256": "64ee84d58a590c45693af39b003c2b13a0faf0505fe5190959a7c5cc79465a79",
+      "stratum": "S3_NESTED_VECTOR_HIGHER_ORDER"
+    },
+    {
+      "case_id": "ext-1194d4329bbf4c4d",
+      "evaluation_index": 50,
+      "project": "netbox-community/netbox",
+      "project_commit": "5a9a9d2a25318ff68fdd567959a2d4f1f7080b21",
+      "qualified_name": "expand_ipnetwork_pattern",
+      "relative_path": "netbox/utilities/forms/utils.py",
+      "source_sha256": "26aa46622092e50830a252dd7af3d0724f7bf4eaa61ff5fdfa4b23f81fd83061",
+      "stratum": "S3_NESTED_VECTOR_HIGHER_ORDER"
+    },
+    {
+      "case_id": "ext-018734d6aaf8d3bd",
+      "evaluation_index": 51,
+      "project": "healthchecks/healthchecks",
+      "project_commit": "3addc677dbcb8ce1d36c1e4b801d034d40e2843d",
+      "qualified_name": "cors",
+      "relative_path": "hc/api/decorators.py",
+      "source_sha256": "45370cd5f25e7d69b77a410458f590a7060c7cb95bad76dd96fa95ecc6d4600e",
+      "stratum": "S4_STATE_EFFECT"
+    },
+    {
+      "case_id": "ext-9f287f2f21b7fded",
+      "evaluation_index": 52,
+      "project": "healthchecks/healthchecks",
+      "project_commit": "3addc677dbcb8ce1d36c1e4b801d034d40e2843d",
+      "qualified_name": "Email.bytes_to_sanitized_message",
+      "relative_path": "hc/integrations/email/transport.py",
+      "source_sha256": "65e6050f6b81a1a4aadd21037e0cfb13f7e905a3568b18278971160319eee14a",
+      "stratum": "S4_STATE_EFFECT"
+    },
+    {
+      "case_id": "ext-bcf37ab52cb89ae7",
+      "evaluation_index": 53,
+      "project": "healthchecks/healthchecks",
+      "project_commit": "3addc677dbcb8ce1d36c1e4b801d034d40e2843d",
+      "qualified_name": "sign_bounce_id",
+      "relative_path": "hc/lib/signing.py",
+      "source_sha256": "eb75986ad348deb23e7d6f366e541e1682cfcb82beef40821d236c00ee4c63ac",
+      "stratum": "S1_LOCAL_SCALAR_CONTROL"
+    },
+    {
+      "case_id": "ext-64a24018d0cb869f",
+      "evaluation_index": 54,
+      "project": "healthchecks/healthchecks",
+      "project_commit": "3addc677dbcb8ce1d36c1e4b801d034d40e2843d",
+      "qualified_name": "PdConf.load",
+      "relative_path": "hc/api/models.py",
+      "source_sha256": "d346b28e68bcbe3b4709f1f8f66b9fbac524a7f3ea4d301ba8005c44e6f92230",
+      "stratum": "S2_STRUCTURED_CONTAINER"
+    },
+    {
+      "case_id": "ext-624bcc8b5d792ca2",
+      "evaluation_index": 55,
+      "project": "healthchecks/healthchecks",
+      "project_commit": "3addc677dbcb8ce1d36c1e4b801d034d40e2843d",
+      "qualified_name": "hc_duration",
+      "relative_path": "hc/front/templatetags/hc_extras.py",
+      "source_sha256": "eb88c387c6ebf167e0dc7ca2ea643a5949f8f09dd019c4463b48a1ad0cf5c3f7",
+      "stratum": "S1_LOCAL_SCALAR_CONTROL"
+    },
+    {
+      "case_id": "ext-63167dde01381c4e",
+      "evaluation_index": 56,
+      "project": "healthchecks/healthchecks",
+      "project_commit": "3addc677dbcb8ce1d36c1e4b801d034d40e2843d",
+      "qualified_name": "_refresh_last_active_date",
+      "relative_path": "hc/front/views.py",
+      "source_sha256": "598559a587c2d853d03c073f7240548965f646e99ccc7821e8d6f07af9fd3f14",
+      "stratum": "S5_BINDING_EXTERNAL_DOMAIN"
+    },
+    {
+      "case_id": "ext-68c64987d939a054",
+      "evaluation_index": 57,
+      "project": "healthchecks/healthchecks",
+      "project_commit": "3addc677dbcb8ce1d36c1e4b801d034d40e2843d",
+      "qualified_name": "Flip.to_dict",
+      "relative_path": "hc/api/models.py",
+      "source_sha256": "1ac42c38f417dac2159133e54ab1775ce8b1cdfc680c284c358e8b1098fd4b73",
+      "stratum": "S2_STRUCTURED_CONTAINER"
+    },
+    {
+      "case_id": "ext-494d6c805f9ed322",
+      "evaluation_index": 58,
+      "project": "healthchecks/healthchecks",
+      "project_commit": "3addc677dbcb8ce1d36c1e4b801d034d40e2843d",
+      "qualified_name": "sms_limit",
+      "relative_path": "hc/lib/emails.py",
+      "source_sha256": "16a3e8a9477d9118aaac6ab2a6474b2be65c418caed679e4dd40335bbb9e79e7",
+      "stratum": "S5_BINDING_EXTERNAL_DOMAIN"
+    },
+    {
+      "case_id": "ext-6c97c35f171cae09",
+      "evaluation_index": 59,
+      "project": "healthchecks/healthchecks",
+      "project_commit": "3addc677dbcb8ce1d36c1e4b801d034d40e2843d",
+      "qualified_name": "Project.have_channel_issues",
+      "relative_path": "hc/accounts/models.py",
+      "source_sha256": "981f0ef503164aaf719bc21bbb07376e757701d074f2c8192c73ebcbb8d3b381",
+      "stratum": "S3_NESTED_VECTOR_HIGHER_ORDER"
+    },
+    {
+      "case_id": "ext-e7fb7147bec9d716",
+      "evaluation_index": 60,
+      "project": "healthchecks/healthchecks",
+      "project_commit": "3addc677dbcb8ce1d36c1e4b801d034d40e2843d",
+      "qualified_name": "Check.tags_list",
+      "relative_path": "hc/api/models.py",
+      "source_sha256": "478e25e135fefb2c46e53ceab677f00cd94e5c46162b02aa94e421648a064e7a",
+      "stratum": "S3_NESTED_VECTOR_HIGHER_ORDER"
+    },
+    {
+      "case_id": "ext-b26ea9b040f53ed7",
+      "evaluation_index": 61,
+      "project": "paperless-ngx/paperless-ngx",
+      "project_commit": "f1ae9c00ac02df7b5c8c4b6d3e8c7db08555fb17",
+      "qualified_name": "get_field_registry",
+      "relative_path": "src/documents/search/_registry.py",
+      "source_sha256": "d233d03cb6906705d9714f95eddc3c97fc83aa035b7749a10cdc1d5ac3e89b7a",
+      "stratum": "S4_STATE_EFFECT"
+    },
+    {
+      "case_id": "ext-916a3a910bacbc7b",
+      "evaluation_index": 62,
+      "project": "paperless-ngx/paperless-ngx",
+      "project_commit": "f1ae9c00ac02df7b5c8c4b6d3e8c7db08555fb17",
+      "qualified_name": "StandardPagination.get_paginated_response",
+      "relative_path": "src/paperless/views.py",
+      "source_sha256": "b42270565fc0564c6fc1ff5106032fbc3459a25c60ecfe340ba1ebcdf493a1cd",
+      "stratum": "S4_STATE_EFFECT"
+    },
+    {
+      "case_id": "ext-c78979ebca06fcd4",
+      "evaluation_index": 63,
+      "project": "paperless-ngx/paperless-ngx",
+      "project_commit": "f1ae9c00ac02df7b5c8c4b6d3e8c7db08555fb17",
+      "qualified_name": "SavedViewAdmin.get_queryset",
+      "relative_path": "src/documents/admin.py",
+      "source_sha256": "1259aa69365b2cbd87e635b0a6a5bec99ae11ce2b139b502cca9632f767797d5",
+      "stratum": "S5_BINDING_EXTERNAL_DOMAIN"
+    },
+    {
+      "case_id": "ext-92d8902b4c399838",
+      "evaluation_index": 64,
+      "project": "paperless-ngx/paperless-ngx",
+      "project_commit": "f1ae9c00ac02df7b5c8c4b6d3e8c7db08555fb17",
+      "qualified_name": "ProfileSerializer.get_is_mfa_enabled",
+      "relative_path": "src/paperless/serialisers.py",
+      "source_sha256": "da51d18339f293b4835cbb043e00a6b073c11e23ae7752c3befd41e89bdb7c0f",
+      "stratum": "S1_LOCAL_SCALAR_CONTROL"
+    },
+    {
+      "case_id": "ext-3d86dab6a517de5d",
+      "evaluation_index": 65,
+      "project": "paperless-ngx/paperless-ngx",
+      "project_commit": "f1ae9c00ac02df7b5c8c4b6d3e8c7db08555fb17",
+      "qualified_name": "parse_ai_response",
+      "relative_path": "src/paperless_ai/ai_classifier.py",
+      "source_sha256": "e6130d1e9d02425118ee8e8e36e7a9b3881970e5490edfb3dbdad10ed9161f7f",
+      "stratum": "S3_NESTED_VECTOR_HIGHER_ORDER"
+    },
+    {
+      "case_id": "ext-64c5059b2d791bac",
+      "evaluation_index": 66,
+      "project": "paperless-ngx/paperless-ngx",
+      "project_commit": "f1ae9c00ac02df7b5c8c4b6d3e8c7db08555fb17",
+      "qualified_name": "SearchAutoCompleteView.get",
+      "relative_path": "src/documents/views.py",
+      "source_sha256": "d86cedfa1a6cceac8e619c79aac405c181af59d99d4ad27a9da7dcbbb9b84a2e",
+      "stratum": "S5_BINDING_EXTERNAL_DOMAIN"
+    },
+    {
+      "case_id": "ext-9685d08540911234",
+      "evaluation_index": 67,
+      "project": "paperless-ngx/paperless-ngx",
+      "project_commit": "f1ae9c00ac02df7b5c8c4b6d3e8c7db08555fb17",
+      "qualified_name": "add_or_update_document_in_llm_index",
+      "relative_path": "src/documents/signals/handlers.py",
+      "source_sha256": "450d39ff94ac462a338073aa4329715e40a8482ae51916eff649c3f1642defd4",
+      "stratum": "S2_STRUCTURED_CONTAINER"
+    },
+    {
+      "case_id": "ext-98553b2a66fe97c1",
+      "evaluation_index": 68,
+      "project": "paperless-ngx/paperless-ngx",
+      "project_commit": "f1ae9c00ac02df7b5c8c4b6d3e8c7db08555fb17",
+      "qualified_name": "ReadWriteSerializerMethodField.to_internal_value",
+      "relative_path": "src/documents/serialisers.py",
+      "source_sha256": "6150a38446deed4c681b1b0e0c9d7a3e0c5821b555f0d9f5ca79453ce0482b32",
+      "stratum": "S2_STRUCTURED_CONTAINER"
+    },
+    {
+      "case_id": "ext-7e5ebf60e7b0c608",
+      "evaluation_index": 69,
+      "project": "paperless-ngx/paperless-ngx",
+      "project_commit": "f1ae9c00ac02df7b5c8c4b6d3e8c7db08555fb17",
+      "qualified_name": "build_permission_filter",
+      "relative_path": "src/documents/search/_backend.py",
+      "source_sha256": "20b4170617bddf0db3dafa4df050009c7539778b687242f83d627de8791d8263",
+      "stratum": "S3_NESTED_VECTOR_HIGHER_ORDER"
+    },
+    {
+      "case_id": "ext-179760a10c20275a",
+      "evaluation_index": 70,
+      "project": "paperless-ngx/paperless-ngx",
+      "project_commit": "f1ae9c00ac02df7b5c8c4b6d3e8c7db08555fb17",
+      "qualified_name": "DocumentClassifier.predict_correspondent",
+      "relative_path": "src/documents/classifier.py",
+      "source_sha256": "34028b539e09a446559a117dad41e41722a731fdedebd2a41756618e402a3373",
+      "stratum": "S1_LOCAL_SCALAR_CONTROL"
+    },
+    {
+      "case_id": "ext-e1b2efbd4894bb74",
+      "evaluation_index": 71,
+      "project": "frappe/erpnext",
+      "project_commit": "83904a65a1ccaf7bfcacbeb5fb8ab78bce48cb19",
+      "qualified_name": "Company.validate_outstanding_sdbnb_transactions",
+      "relative_path": "erpnext/setup/doctype/company/company.py",
+      "source_sha256": "e5ee74c8a4ef3597de0b6c32f03eb25c62eb99878287d8f20e4a2c693db2b9f6",
+      "stratum": "S5_BINDING_EXTERNAL_DOMAIN"
+    },
+    {
+      "case_id": "ext-98da2a762eadcb4d",
+      "evaluation_index": 72,
+      "project": "frappe/erpnext",
+      "project_commit": "83904a65a1ccaf7bfcacbeb5fb8ab78bce48cb19",
+      "qualified_name": "_reference_exchange_rate",
+      "relative_path": "erpnext/accounts/doctype/journal_entry/mapper.py",
+      "source_sha256": "c32362d371e5114e120af26c097b7d7275a5e532b0c9c8fc112f40577839351e",
+      "stratum": "S1_LOCAL_SCALAR_CONTROL"
+    },
+    {
+      "case_id": "ext-7dfe6469c7a8cd27",
+      "evaluation_index": 73,
+      "project": "frappe/erpnext",
+      "project_commit": "83904a65a1ccaf7bfcacbeb5fb8ab78bce48cb19",
+      "qualified_name": "_material_request_mapping",
+      "relative_path": "erpnext/manufacturing/doctype/work_order/mapper.py",
+      "source_sha256": "4d2b5768cbdef13ea87b0f9cc06ccc9868c4b5248f6370bc85c1450222896e0d",
+      "stratum": "S3_NESTED_VECTOR_HIGHER_ORDER"
+    },
+    {
+      "case_id": "ext-f65b0ffcca0ffa63",
+      "evaluation_index": 74,
+      "project": "frappe/erpnext",
+      "project_commit": "83904a65a1ccaf7bfcacbeb5fb8ab78bce48cb19",
+      "qualified_name": "TaxWithholdingDetailsReport.get_purchase_invoice_fields",
+      "relative_path": "erpnext/accounts/report/tax_withholding_details/tax_withholding_details.py",
+      "source_sha256": "93239a7c3015bebd9e403e10415358a62249e0175b521ac826feddd0d43c3c18",
+      "stratum": "S2_STRUCTURED_CONTAINER"
+    },
+    {
+      "case_id": "ext-8e92d83773ce3a42",
+      "evaluation_index": 75,
+      "project": "frappe/erpnext",
+      "project_commit": "83904a65a1ccaf7bfcacbeb5fb8ab78bce48cb19",
+      "qualified_name": "SubcontractingReceipt.update_status",
+      "relative_path": "erpnext/subcontracting/doctype/subcontracting_receipt/subcontracting_receipt.py",
+      "source_sha256": "27da525c3b36fa0a6c84eadf165dd37637897bccf1ceb8a41c9202962d299f59",
+      "stratum": "S1_LOCAL_SCALAR_CONTROL"
+    },
+    {
+      "case_id": "ext-bd7d5aae57d3a3f5",
+      "evaluation_index": 76,
+      "project": "frappe/erpnext",
+      "project_commit": "83904a65a1ccaf7bfcacbeb5fb8ab78bce48cb19",
+      "qualified_name": "execute",
+      "relative_path": "erpnext/support/report/support_hour_distribution/support_hour_distribution.py",
+      "source_sha256": "80e01283e4851aba59e4427f803690957589b2acaa09ccc1eb969e4d8adda528",
+      "stratum": "S4_STATE_EFFECT"
+    },
+    {
+      "case_id": "ext-763c6d4cbc268e93",
+      "evaluation_index": 77,
+      "project": "frappe/erpnext",
+      "project_commit": "83904a65a1ccaf7bfcacbeb5fb8ab78bce48cb19",
+      "qualified_name": "execute",
+      "relative_path": "erpnext/accounts/report/dimension_wise_accounts_balance_report/dimension_wise_accounts_balance_report.py",
+      "source_sha256": "14885a7761f553083d3fba5ceeffa13516fe890829d4e3a7b945266d1542b4f8",
+      "stratum": "S2_STRUCTURED_CONTAINER"
+    },
+    {
+      "case_id": "ext-e84823ac3756adac",
+      "evaluation_index": 78,
+      "project": "frappe/erpnext",
+      "project_commit": "83904a65a1ccaf7bfcacbeb5fb8ab78bce48cb19",
+      "qualified_name": "allocate_open_payment_requests_to_references",
+      "relative_path": "erpnext/accounts/doctype/payment_entry/payment_entry.py",
+      "source_sha256": "eafe590aa709005a60921c399a2bcf262110d4a7fb728720eee62e1bc227ccdf",
+      "stratum": "S4_STATE_EFFECT"
+    },
+    {
+      "case_id": "ext-6429b354ed92f5dd",
+      "evaluation_index": 79,
+      "project": "frappe/erpnext",
+      "project_commit": "83904a65a1ccaf7bfcacbeb5fb8ab78bce48cb19",
+      "qualified_name": "get_issued_items_cost",
+      "relative_path": "erpnext/projects/report/project_wise_stock_tracking/project_wise_stock_tracking.py",
+      "source_sha256": "d92b81446840b4d7afa91a422d72cf372089a6f2c74b48f74c61396286f0e10b",
+      "stratum": "S5_BINDING_EXTERNAL_DOMAIN"
+    },
+    {
+      "case_id": "ext-8189c6e4e8bf78fa",
+      "evaluation_index": 80,
+      "project": "frappe/erpnext",
+      "project_commit": "83904a65a1ccaf7bfcacbeb5fb8ab78bce48cb19",
+      "qualified_name": "validate_advance_entries",
+      "relative_path": "erpnext/accounts/services/advances.py",
+      "source_sha256": "72286a9df2672b79cb1b76f48bb95d9330a8a09d66045fe29c9ebf383e902394",
+      "stratum": "S3_NESTED_VECTOR_HIGHER_ORDER"
+    },
+    {
+      "case_id": "ext-0a97ad5bfc5d0d6e",
+      "evaluation_index": 81,
+      "project": "apache/airflow",
+      "project_commit": "7800fc44c07a2fc2457a4aee41cf12db9579538c",
+      "qualified_name": "HiveServer2Hook.get_conn",
+      "relative_path": "providers/apache/hive/src/airflow/providers/apache/hive/hooks/hive.py",
+      "source_sha256": "cfd1613d0d75013ce94e1bb2505159b710c0b8102b8084a513142637e09dbf7b",
+      "stratum": "S1_LOCAL_SCALAR_CONTROL"
+    },
+    {
+      "case_id": "ext-d910f9e3693c25be",
+      "evaluation_index": 82,
+      "project": "apache/airflow",
+      "project_commit": "7800fc44c07a2fc2457a4aee41cf12db9579538c",
+      "qualified_name": "render_rst",
+      "relative_path": "scripts/ci/prek/extract_permissions.py",
+      "source_sha256": "925b45ceba50be52042b02e4e622cceead57c11ffb20dedf98cfd008856ce54f",
+      "stratum": "S3_NESTED_VECTOR_HIGHER_ORDER"
+    },
+    {
+      "case_id": "ext-832103b02e75aa54",
+      "evaluation_index": 83,
+      "project": "apache/airflow",
+      "project_commit": "7800fc44c07a2fc2457a4aee41cf12db9579538c",
+      "qualified_name": "CloudDataFusionStartPipelineOperator.execute_complete",
+      "relative_path": "providers/google/src/airflow/providers/google/cloud/operators/datafusion.py",
+      "source_sha256": "c4a39da9aa031c7a7fa07a2892a6e8bb39a84010f4a14f7ba1b591f8edafaea5",
+      "stratum": "S5_BINDING_EXTERNAL_DOMAIN"
+    },
+    {
+      "case_id": "ext-82015413c1dcb25f",
+      "evaluation_index": 84,
+      "project": "apache/airflow",
+      "project_commit": "7800fc44c07a2fc2457a4aee41cf12db9579538c",
+      "qualified_name": "find_import_violations",
+      "relative_path": "scripts/ci/prek/common_prek_utils.py",
+      "source_sha256": "642d32007807c43b3d2b25e8f0d16fa8d5a5fff43d43a2b70097bc393137a35b",
+      "stratum": "S4_STATE_EFFECT"
+    },
+    {
+      "case_id": "ext-483d3a719002c429",
+      "evaluation_index": 85,
+      "project": "apache/airflow",
+      "project_commit": "7800fc44c07a2fc2457a4aee41cf12db9579538c",
+      "qualified_name": "_build_sequence",
+      "relative_path": "contributing-docs/images/diagram_task_sdk_execution_sequence.py",
+      "source_sha256": "f2d8385edef6ef6429341437b94c32e5c3706de23549a818eb89e7838efaf309",
+      "stratum": "S3_NESTED_VECTOR_HIGHER_ORDER"
+    },
+    {
+      "case_id": "ext-a715058402dd35fa",
+      "evaluation_index": 86,
+      "project": "apache/airflow",
+      "project_commit": "7800fc44c07a2fc2457a4aee41cf12db9579538c",
+      "qualified_name": "LazyXComSelectSequence._process_row",
+      "relative_path": "airflow-core/src/airflow/models/xcom.py",
+      "source_sha256": "aa6b37b9b326400cccbdbcd308b068220936aa9a3fbe97cb55924e353a648bc0",
+      "stratum": "S1_LOCAL_SCALAR_CONTROL"
+    },
+    {
+      "case_id": "ext-19b1104107fd6572",
+      "evaluation_index": 87,
+      "project": "apache/airflow",
+      "project_commit": "7800fc44c07a2fc2457a4aee41cf12db9579538c",
+      "qualified_name": "perform_heartbeat",
+      "relative_path": "airflow-core/src/airflow/jobs/job.py",
+      "source_sha256": "58a764ee6fd1dd97f83c11adb7e498ffa58f6249dc2fffe83abe74324f92b39e",
+      "stratum": "S2_STRUCTURED_CONTAINER"
+    },
+    {
+      "case_id": "ext-7b54e98a70a85129",
+      "evaluation_index": 88,
+      "project": "apache/airflow",
+      "project_commit": "7800fc44c07a2fc2457a4aee41cf12db9579538c",
+      "qualified_name": "BedrockIngestDataOperator.__init__",
+      "relative_path": "providers/amazon/src/airflow/providers/amazon/aws/operators/bedrock.py",
+      "source_sha256": "55dd68c17607a07938844cd000d791deaeaf0bfd11e72edd6c869fa946be953e",
+      "stratum": "S4_STATE_EFFECT"
+    },
+    {
+      "case_id": "ext-4036b73527e114a5",
+      "evaluation_index": 89,
+      "project": "apache/airflow",
+      "project_commit": "7800fc44c07a2fc2457a4aee41cf12db9579538c",
+      "qualified_name": "_create_policy_store",
+      "relative_path": "providers/amazon/src/airflow/providers/amazon/aws/auth_manager/cli/avp_commands.py",
+      "source_sha256": "c6340735f7f688f054ff3bcd53579a66d2f9b661f13b9fe5639dcbc63e2ad769",
+      "stratum": "S5_BINDING_EXTERNAL_DOMAIN"
+    },
+    {
+      "case_id": "ext-02855b7eec47798c",
+      "evaluation_index": 90,
+      "project": "apache/airflow",
+      "project_commit": "7800fc44c07a2fc2457a4aee41cf12db9579538c",
+      "qualified_name": "DatabricksRunNowOperator.is_job_active",
+      "relative_path": "providers/databricks/src/airflow/providers/databricks/operators/databricks.py",
+      "source_sha256": "d372c314423803f1e3c66fd488a9e7806a49c3c0cef5723c269c764cd0465346",
+      "stratum": "S2_STRUCTURED_CONTAINER"
+    },
+    {
+      "case_id": "ext-48962bf7dc5f2e50",
+      "evaluation_index": 91,
+      "project": "nautobot/nautobot",
+      "project_commit": "86658f87b35d655a47545234522ddf9e67d0cd8f",
+      "qualified_name": "random_instance",
+      "relative_path": "nautobot/core/factory.py",
+      "source_sha256": "db5625d320ac4c61538e203fc2227e300d17e4f3725e58bd0a7a2cac5ee48c07",
+      "stratum": "S3_NESTED_VECTOR_HIGHER_ORDER"
+    },
+    {
+      "case_id": "ext-8ea4a744cdab1213",
+      "evaluation_index": 92,
+      "project": "nautobot/nautobot",
+      "project_commit": "86658f87b35d655a47545234522ddf9e67d0cd8f",
+      "qualified_name": "NautobotAutoSchema.get_writable_class",
+      "relative_path": "nautobot/core/api/schema.py",
+      "source_sha256": "ddc934bc773fe86d19cf57af0347cfadb2aa278cbabd51248b682ebbdf205adc",
+      "stratum": "S4_STATE_EFFECT"
+    },
+    {
+      "case_id": "ext-cb4cdf1c09b2356d",
+      "evaluation_index": 93,
+      "project": "nautobot/nautobot",
+      "project_commit": "86658f87b35d655a47545234522ddf9e67d0cd8f",
+      "qualified_name": "ConnectionFilterSetMixin.filter_device",
+      "relative_path": "nautobot/dcim/filters.py",
+      "source_sha256": "a3eb47136dfb0e4774a0cf2e11792a0ac836294a3e2147592c56798b58b2231d",
+      "stratum": "S3_NESTED_VECTOR_HIGHER_ORDER"
+    },
+    {
+      "case_id": "ext-fee7daa058a6175e",
+      "evaluation_index": 94,
+      "project": "nautobot/nautobot",
+      "project_commit": "86658f87b35d655a47545234522ddf9e67d0cd8f",
+      "qualified_name": "generate_list_search_parameters",
+      "relative_path": "nautobot/core/graphql/generators.py",
+      "source_sha256": "b3b9d6f2d5baf9343b30b120a51a43d522e96aa4a594b3278754bc89b53284ea",
+      "stratum": "S4_STATE_EFFECT"
+    },
+    {
+      "case_id": "ext-ddd3dffdec341205",
+      "evaluation_index": 95,
+      "project": "nautobot/nautobot",
+      "project_commit": "86658f87b35d655a47545234522ddf9e67d0cd8f",
+      "qualified_name": "createsuperuser",
+      "relative_path": "tasks.py",
+      "source_sha256": "6d193be2cd40b35d31a4e05d4731bd479b6ea1c41f3e33837a481cd48641a6b3",
+      "stratum": "S5_BINDING_EXTERNAL_DOMAIN"
+    },
+    {
+      "case_id": "ext-85becfcab52946a4",
+      "evaluation_index": 96,
+      "project": "nautobot/nautobot",
+      "project_commit": "86658f87b35d655a47545234522ddf9e67d0cd8f",
+      "qualified_name": "_mysql_varbin_to_network",
+      "relative_path": "nautobot/ipam/lookups.py",
+      "source_sha256": "3d02c3b7b76766e2a6e1a2ca61191671ec1cc38bfa4ceae46467475781a9ade8",
+      "stratum": "S1_LOCAL_SCALAR_CONTROL"
+    },
+    {
+      "case_id": "ext-6a58a0a4f3bdda3d",
+      "evaluation_index": 97,
+      "project": "nautobot/nautobot",
+      "project_commit": "86658f87b35d655a47545234522ddf9e67d0cd8f",
+      "qualified_name": "StreamReader.join",
+      "relative_path": "nautobot/extras/jobs_console_log.py",
+      "source_sha256": "ad48cdae4fb4dd4686f62afce07fc507870ebac5e25e6c77eabb762089ad506a",
+      "stratum": "S1_LOCAL_SCALAR_CONTROL"
+    },
+    {
+      "case_id": "ext-a9f517f4d49c4af5",
+      "evaluation_index": 98,
+      "project": "nautobot/nautobot",
+      "project_commit": "86658f87b35d655a47545234522ddf9e67d0cd8f",
+      "qualified_name": "DynamicGroupUIViewSet.AncestorDescendantObjectsTablePanel.should_render",
+      "relative_path": "nautobot/extras/views.py",
+      "source_sha256": "fbf1753fa584f2605377ce7ff0ad21f69d3ce447b5a1580c8dbf6af6fd4a8eee",
+      "stratum": "S5_BINDING_EXTERNAL_DOMAIN"
+    },
+    {
+      "case_id": "ext-a59a97d2c1b9d260",
+      "evaluation_index": 99,
+      "project": "nautobot/nautobot",
+      "project_commit": "86658f87b35d655a47545234522ddf9e67d0cd8f",
+      "qualified_name": "SensitiveFieldsQuerySetMixin.values_list",
+      "relative_path": "nautobot/core/models/querysets.py",
+      "source_sha256": "717c38beeb4dae98c4664aa419a59d708875084da48548899d13e5a2f881c5d6",
+      "stratum": "S2_STRUCTURED_CONTAINER"
+    },
+    {
+      "case_id": "ext-0f3ac8e15df447a0",
+      "evaluation_index": 100,
+      "project": "nautobot/nautobot",
+      "project_commit": "86658f87b35d655a47545234522ddf9e67d0cd8f",
+      "qualified_name": "IPAddressToInterface.clean",
+      "relative_path": "nautobot/ipam/models.py",
+      "source_sha256": "3024eefbda1aae3d8a7a06666d167b51c08a856d24b033cbefae8b0ffe90af50",
+      "stratum": "S2_STRUCTURED_CONTAINER"
+    },
+    {
+      "case_id": "ext-69b934390eaf6a4e",
+      "evaluation_index": 101,
+      "project": "apache/superset",
+      "project_commit": "f6155b9e9ea438986914366807cb7ef8cffa9d60",
+      "qualified_name": "_build_replacement_form_data",
+      "relative_path": "superset/mcp_service/chart/tool/update_chart.py",
+      "source_sha256": "51230addf08b22d33abc80d6ec54a3b5c4f161143c68a83bfce06dcbbccce7e0",
+      "stratum": "S4_STATE_EFFECT"
+    },
+    {
+      "case_id": "ext-9b71cce03aa6f5a6",
+      "evaluation_index": 102,
+      "project": "apache/superset",
+      "project_commit": "f6155b9e9ea438986914366807cb7ef8cffa9d60",
+      "qualified_name": "ImportDatabasesCommand.run",
+      "relative_path": "superset/commands/database/importers/dispatcher.py",
+      "source_sha256": "b885233273bde0a614d9536ec2baac8f30ab1af90513744b3bc3ed46d2a3ea28",
+      "stratum": "S2_STRUCTURED_CONTAINER"
+    },
+    {
+      "case_id": "ext-32f94c90098764b5",
+      "evaluation_index": 103,
+      "project": "apache/superset",
+      "project_commit": "f6155b9e9ea438986914366807cb7ef8cffa9d60",
+      "qualified_name": "is_export_storage_configured",
+      "relative_path": "superset/dashboards/excel_export/storage.py",
+      "source_sha256": "38cefd162c53f01f9e0c0dd04d1fca8bddb168372bda6920bf9b6db1a7397e25",
+      "stratum": "S2_STRUCTURED_CONTAINER"
+    },
+    {
+      "case_id": "ext-6dd78469994a1782",
+      "evaluation_index": 104,
+      "project": "apache/superset",
+      "project_commit": "f6155b9e9ea438986914366807cb7ef8cffa9d60",
+      "qualified_name": "build_extension_data",
+      "relative_path": "superset/extensions/utils.py",
+      "source_sha256": "19059797c4ccfba8a1fea08bde86c089c9f714c1b43e150ac2bd249980812939",
+      "stratum": "S4_STATE_EFFECT"
+    },
+    {
+      "case_id": "ext-2de95ef738ab1316",
+      "evaluation_index": 105,
+      "project": "apache/superset",
+      "project_commit": "f6155b9e9ea438986914366807cb7ef8cffa9d60",
+      "qualified_name": "build_guest_token_audit_payload",
+      "relative_path": "superset/security/guest_token.py",
+      "source_sha256": "1ebf3ccaf587862e436e30b7289d7b5438228debd34faeccbec44bf6c7f779e6",
+      "stratum": "S3_NESTED_VECTOR_HIGHER_ORDER"
+    },
+    {
+      "case_id": "ext-dc24bf2b88a0f685",
+      "evaluation_index": 106,
+      "project": "apache/superset",
+      "project_commit": "f6155b9e9ea438986914366807cb7ef8cffa9d60",
+      "qualified_name": "_find_affected_charts",
+      "relative_path": "superset/mcp_service/dataset/tool/delete_dataset_metric.py",
+      "source_sha256": "603ce6540d71b440949b0f2f15c80fb1527dd14eb2ccf4cf8c97dafb65ab7c83",
+      "stratum": "S5_BINDING_EXTERNAL_DOMAIN"
+    },
+    {
+      "case_id": "ext-d0a609315f230f67",
+      "evaluation_index": 107,
+      "project": "apache/superset",
+      "project_commit": "f6155b9e9ea438986914366807cb7ef8cffa9d60",
+      "qualified_name": "cancel_github_workflows",
+      "relative_path": "scripts/cancel_github_workflows.py",
+      "source_sha256": "357bba0fc08f99e4f12f50af97c82049028ad7de8587ec7305f8db8c9bdfa957",
+      "stratum": "S5_BINDING_EXTERNAL_DOMAIN"
+    },
+    {
+      "case_id": "ext-fda175c93d1fab08",
+      "evaluation_index": 108,
+      "project": "apache/superset",
+      "project_commit": "f6155b9e9ea438986914366807cb7ef8cffa9d60",
+      "qualified_name": "VegaLitePreviewStrategy._pie_chart_spec",
+      "relative_path": "superset/mcp_service/chart/tool/get_chart_preview.py",
+      "source_sha256": "b543567fcca15f02a9ae2467e4a11d48902f6eaf1978c2a6c5fec546dc815fbc",
+      "stratum": "S3_NESTED_VECTOR_HIGHER_ORDER"
+    },
+    {
+      "case_id": "ext-0763ae85a1be8d53",
+      "evaluation_index": 109,
+      "project": "apache/superset",
+      "project_commit": "f6155b9e9ea438986914366807cb7ef8cffa9d60",
+      "qualified_name": "ReportExecutionContext.capture_was_rejected",
+      "relative_path": "superset/utils/report_execution.py",
+      "source_sha256": "6f8fd4ac78874b4f00724be289dc17e8cc0391eb4a110f067532e240d19ab460",
+      "stratum": "S1_LOCAL_SCALAR_CONTROL"
+    },
+    {
+      "case_id": "ext-80e1dec4817b378a",
+      "evaluation_index": 110,
+      "project": "apache/superset",
+      "project_commit": "f6155b9e9ea438986914366807cb7ef8cffa9d60",
+      "qualified_name": "PrestoEngineSpec.get_tracking_url",
+      "relative_path": "superset/db_engine_specs/presto.py",
+      "source_sha256": "63e860d58538b5a5892b4820080641887cd270f2fee91eaa363e0d14e91946f3",
+      "stratum": "S1_LOCAL_SCALAR_CONTROL"
+    },
+    {
+      "case_id": "ext-d49ffe358709e6f7",
+      "evaluation_index": 111,
+      "project": "openstack/keystone",
+      "project_commit": "77db3e62a449b7cadda589fa24407124766bdba8",
+      "qualified_name": "register_opts",
+      "relative_path": "keystone/conf/endpoint_filter.py",
+      "source_sha256": "b5adcff726ced0dc68cfe4054238cfafafa5cbd6f977ead163ff2f4889505043",
+      "stratum": "S1_LOCAL_SCALAR_CONTROL"
+    },
+    {
+      "case_id": "ext-deb0675d0e3df9b8",
+      "evaluation_index": 112,
+      "project": "openstack/keystone",
+      "project_commit": "77db3e62a449b7cadda589fa24407124766bdba8",
+      "qualified_name": "Mapping.delete_id_mapping",
+      "relative_path": "keystone/identity/mapping_backends/sql.py",
+      "source_sha256": "13331335f87f1fc28462712b8a14e48e7a6416289c25260bd8c3b2d0bd14ce97",
+      "stratum": "S5_BINDING_EXTERNAL_DOMAIN"
+    },
+    {
+      "case_id": "ext-367bd92c1fb38d32",
+      "evaluation_index": 113,
+      "project": "openstack/keystone",
+      "project_commit": "77db3e62a449b7cadda589fa24407124766bdba8",
+      "qualified_name": "OAuth1AccessTokenCRUDResource.delete",
+      "relative_path": "keystone/api/users.py",
+      "source_sha256": "77a2a7b8893e49953561891be9153cb0ee672ae11f24d821feb453cb7f8e0838",
+      "stratum": "S2_STRUCTURED_CONTAINER"
+    },
+    {
+      "case_id": "ext-0d0a7df059133a71",
+      "evaluation_index": 114,
+      "project": "openstack/keystone",
+      "project_commit": "77db3e62a449b7cadda589fa24407124766bdba8",
+      "qualified_name": "SystemGroupsRolestResource.delete",
+      "relative_path": "keystone/api/system.py",
+      "source_sha256": "845ca00c6517c4e817b489149bdd103b152cb90fa082e955fc2e3f267db73fc0",
+      "stratum": "S2_STRUCTURED_CONTAINER"
+    },
+    {
+      "case_id": "ext-5d300c1fb040998d",
+      "evaluation_index": 115,
+      "project": "openstack/keystone",
+      "project_commit": "77db3e62a449b7cadda589fa24407124766bdba8",
+      "qualified_name": "Manager.get_v3_catalog",
+      "relative_path": "keystone/catalog/core.py",
+      "source_sha256": "d099785e6bcdc91f991517e862769e321daa9bca3023cea206f964c7c2c14906",
+      "stratum": "S1_LOCAL_SCALAR_CONTROL"
+    },
+    {
+      "case_id": "ext-bb6984f152377398",
+      "evaluation_index": 116,
+      "project": "openstack/keystone",
+      "project_commit": "77db3e62a449b7cadda589fa24407124766bdba8",
+      "qualified_name": "_normalize_trust_expires_at",
+      "relative_path": "keystone/api/trusts.py",
+      "source_sha256": "3bb35852a72808640814883f0559b234cb603e69151a26c33d8072d2c4dcf21a",
+      "stratum": "S4_STATE_EFFECT"
+    },
+    {
+      "case_id": "ext-c923531f789a7c1a",
+      "evaluation_index": 117,
+      "project": "openstack/keystone",
+      "project_commit": "77db3e62a449b7cadda589fa24407124766bdba8",
+      "qualified_name": "OAuthValidator.get_request_token_secret",
+      "relative_path": "keystone/oauth1/validator.py",
+      "source_sha256": "aa6411bf42fd60b61e6be31542620b3ab9207fbfe710a094377b04900b5e4e30",
+      "stratum": "S5_BINDING_EXTERNAL_DOMAIN"
+    },
+    {
+      "case_id": "ext-0798d7e99664dca8",
+      "evaluation_index": 118,
+      "project": "openstack/keystone",
+      "project_commit": "77db3e62a449b7cadda589fa24407124766bdba8",
+      "qualified_name": "Manager.create_consumer",
+      "relative_path": "keystone/oauth1/core.py",
+      "source_sha256": "59f7229754f527e94b11ca985194eee71d5bfd936f253b9bfb4de89aa9a5933b",
+      "stratum": "S4_STATE_EFFECT"
+    },
+    {
+      "case_id": "ext-919dc7cce3a6837f",
+      "evaluation_index": 119,
+      "project": "openstack/keystone",
+      "project_commit": "77db3e62a449b7cadda589fa24407124766bdba8",
+      "qualified_name": "Identity._transform_group_member_ids",
+      "relative_path": "keystone/identity/backends/ldap/core.py",
+      "source_sha256": "5d4cea23c7d783c0b9b30aea15394a0343f6cc7c3eef05aa10cb81f4da91489e",
+      "stratum": "S3_NESTED_VECTOR_HIGHER_ORDER"
+    },
+    {
+      "case_id": "ext-addcc7ad6a811ba9",
+      "evaluation_index": 120,
+      "project": "openstack/keystone",
+      "project_commit": "77db3e62a449b7cadda589fa24407124766bdba8",
+      "qualified_name": "Oauth2CredentialsScopedPayload.assemble",
+      "relative_path": "keystone/token/token_formatters.py",
+      "source_sha256": "cda03a99441a7e6fd8d3604454231ad6295ca9229a71ad89ba2f3fd86e16ff8c",
+      "stratum": "S3_NESTED_VECTOR_HIGHER_ORDER"
+    }
+  ],
+  "execution_policy": "strict ascending evaluation_index",
+  "order_sha256": "f75c9cb3b9d540f389dec2a1d256e52d96f809a062563cecd6463b789ec2a2f3",
+  "schema_version": "BIZPROOF-V0.12-EXTERNAL-EVALUATION-ORDER-1"
+}

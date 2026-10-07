@@ -1,0 +1,19 @@
+{
+  "a2_candidate_ids": [
+    "1a2de6edb11465fe",
+    "3fd2d8b8a76b4834"
+  ],
+  "a2_followup": 2,
+  "ledger_modified": false,
+  "negative_candidate_ids": [
+    "03e2adf4e4f323b1",
+    "63e7979762bf860b",
+    "7460029971aad8de",
+    "882c5eae0d8fd4ec",
+    "8a754dadf1672d0a",
+    "a79d9687185720aa",
+    "bcb091a940a8d0dd"
+  ],
+  "negative_outcomes": 7,
+  "passed": true
+}

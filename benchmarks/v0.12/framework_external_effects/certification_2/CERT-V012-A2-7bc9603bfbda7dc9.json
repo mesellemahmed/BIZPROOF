@@ -1,0 +1,91 @@
+{
+  "all_required_gates_pass": true,
+  "candidate_id": "7bc9603bfbda7dc9",
+  "claim": "formal equivalence evidence for the accepted compositional projection and formal mutant refutation within supported semantics",
+  "concrete_counterexample_replay": {
+    "correct": "50.0",
+    "mutant": "51.0",
+    "passed": true
+  },
+  "correct_source": {
+    "ast_rewritten": false,
+    "execution": "EXACT_FROZEN_SOURCE",
+    "matches_frozen_pack": true,
+    "sha256": "2720f5f14ba482578701430f1b1370e9a8c2c80456406369ff4e00acbea22758"
+  },
+  "formal_mutant_refutation": {
+    "model": "[montant_cmg = 2, eligible = 1]",
+    "property": "there exists an admissible final composition state where multiplication and the frozen addition mutant differ",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "helper_environment": {
+    "child_count_intervals": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    "family_member_observations": [
+      "aah",
+      "etudiant"
+    ],
+    "family_scalar_observations": [
+      "af_nbenf",
+      "ass_mat",
+      "empl_dir",
+      "gar_dom",
+      "inactif",
+      "paje_prepare",
+      "partiel1",
+      "prestations_familiales_base_ressources"
+    ],
+    "parameter_paths": [
+      "prestations_sociales.prestations_familiales.bmaf.bmaf",
+      "prestations_sociales.prestations_familiales.petite_enfance.paje.paje_cmg.assistante_mat_asso_entreprise_microcreche.apres_second_plafond",
+      "prestations_sociales.prestations_familiales.petite_enfance.paje.paje_cmg.assistante_mat_asso_entreprise_microcreche.sous_premier_plafond",
+      "prestations_sociales.prestations_familiales.petite_enfance.paje.paje_cmg.assistante_mat_asso_entreprise_microcreche.sous_second_plafond",
+      "prestations_sociales.prestations_familiales.petite_enfance.paje.paje_cmg.complement_libre_choix_mode_garde.revenus_inferieurs_45_plaf",
+      "prestations_sociales.prestations_familiales.petite_enfance.paje.paje_cmg.complement_libre_choix_mode_garde.revenus_superieurs_45_plaf",
+      "prestations_sociales.prestations_familiales.petite_enfance.paje.paje_cmg.complement_libre_choix_mode_garde.revenus_superieurs_plaf",
+      "prestations_sociales.prestations_familiales.petite_enfance.paje.paje_cmg.garde_domicile.apres_second_plafond",
+      "prestations_sociales.prestations_familiales.petite_enfance.paje.paje_cmg.garde_domicile.sous_premier_plafond",
+      "prestations_sociales.prestations_familiales.petite_enfance.paje.paje_cmg.garde_domicile.sous_second_plafond",
+      "prestations_sociales.prestations_familiales.petite_enfance.paje.paje_cmg.limite_age.pleine",
+      "prestations_sociales.prestations_familiales.petite_enfance.paje.paje_cmg.limite_age.reduite",
+      "prestations_sociales.prestations_familiales.petite_enfance.paje.paje_cmg.taux_reduit",
+      "prestations_sociales.prestations_familiales.petite_enfance.paje.plaf_cmg.deuxieme_plafond_ne_adopte_apres_04_2014.deux_enfants",
+      "prestations_sociales.prestations_familiales.petite_enfance.paje.plaf_cmg.deuxieme_plafond_ne_adopte_apres_04_2014.enfant",
+      "prestations_sociales.prestations_familiales.petite_enfance.paje.plaf_cmg.deuxieme_plafond_ne_adopte_apres_04_2014.majoration_enfant_supp",
+      "prestations_sociales.prestations_familiales.petite_enfance.paje.plaf_cmg.premier_plafond_ne_adopte_apres_04_2014.deux_enfants",
+      "prestations_sociales.prestations_familiales.petite_enfance.paje.plaf_cmg.premier_plafond_ne_adopte_apres_04_2014.enfant",
+      "prestations_sociales.prestations_familiales.petite_enfance.paje.plaf_cmg.premier_plafond_ne_adopte_apres_04_2014.majoration_enfant_supp"
+    ]
+  },
+  "mutant": {
+    "correct_operator": "Mult",
+    "mutant_operator": "Add",
+    "name": "FINAL_COMPOSITION_MULT_TO_ADD",
+    "target": "paje_cmg"
+  },
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-B1-CERT2-A2-2",
+  "scope": {
+    "certified": "exact execution of the frozen business formula under explicit controlled observations for its framework/helper dependencies",
+    "not_certified": [
+      "correctness of OpenFisca runtime implementations",
+      "correctness of external parameter datasets",
+      "universal correctness over all possible helper observations"
+    ]
+  },
+  "semantic_capability": "COMPOSITIONAL_SCALAR_HELPER_CLOSURE",
+  "v012_outcome": "CERTIFIED_A2"
+}

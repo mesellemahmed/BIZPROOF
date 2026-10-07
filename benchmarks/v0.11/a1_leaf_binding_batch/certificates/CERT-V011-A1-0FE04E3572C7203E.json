@@ -1,0 +1,57 @@
+{
+  "assistance_level": "A1",
+  "authoring_mode": "DECLARATIVE_SOURCE_TO_BVC_BINDINGS",
+  "bindings": [
+    "line.unit_effective_price"
+  ],
+  "candidate_id": "0fe04e3572c7203e",
+  "certificate_digest": "e234d2ad0fd16b66edb1c37fba76a14db9e53868bff29b28a4fe08cea7fa80a7",
+  "certificate_id": "CERT-V011-A1-0FE04E3572C7203E",
+  "claim_scope": "Certification covers the locked source return expression under the explicit declarative attribute bindings listed in this certificate. No handwritten semantic adapter is introduced.",
+  "evidence": {
+    "proof_digest": "019557c06f46003e8b615ee509baa3c3384955e2f006a763fbe76ef71d265b78",
+    "runtime": {
+      "adapter_mismatches": 0,
+      "comparisons": 4,
+      "mutant_mismatches": 4,
+      "mutation": "replace-bound-value-with-independent-value",
+      "runtime_domain": "four arbitrary scalar binding tokens"
+    },
+    "symbolic": {
+      "correct_proved": true,
+      "correct_solver_status": "unsat",
+      "mutant_disproved": true,
+      "mutant_solver_status": "sat",
+      "mutation": "independent-binding-symbol",
+      "symbolic_domain": "uninterpreted value domain; proof is type-independent"
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 74,
+    "text": "- `CERTIFIED_A0`: certified without human semantic mapping or adapter rewriting. - `CERTIFIED_A1`: certified with declarative source-to-BVC bindings only. - `CERTIFIED_A2`: certified with an explicit human-authored scalar semantic adapter. - `NOT_CERTIFIED_UNKNOWN`: sound analysis returns UNKNOWN."
+  },
+  "schema_version": "BIZPROOF-V0.11-A1-CERTIFICATE-1",
+  "source": {
+    "class": null,
+    "file": "src/oscar/apps/offer/utils.py",
+    "function": "unit_price",
+    "function_sha256": "e3ff928f6b93cb86167aa453b3def806ad5455d0a233feaf7370235e52f85912",
+    "lines": [
+      20,
+      26
+    ],
+    "source_file_sha256": "9df506b65b77b2860219b6e701178149d22ce956db595c1eac67ab64e158633f",
+    "source_id": "django_oscar"
+  },
+  "status": "CERTIFIED_A1",
+  "structural_classification": {
+    "expression": "line.unit_effective_price",
+    "shape": "DIRECT_ATTRIBUTE_RETURN",
+    "used_bindings": [
+      "line.unit_effective_price"
+    ]
+  },
+  "terminal_outcome": "CERTIFIED_A1",
+  "terminal_outcome_assigned": true
+}

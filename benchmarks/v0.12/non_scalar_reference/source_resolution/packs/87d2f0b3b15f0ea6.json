@@ -1,0 +1,24 @@
+{
+  "candidate_id": "87d2f0b3b15f0ea6",
+  "external_calls": [
+    "range_anchor"
+  ],
+  "free_names": [
+    "range_anchor"
+  ],
+  "function_name": "description",
+  "reason_code": "TEXT_RETURN",
+  "reasons": [
+    "EXTERNAL_CALLS",
+    "FREE_NAMES",
+    "NON_UNIQUE_REPOSITORY_MATCH"
+  ],
+  "repository_matches": [],
+  "self_attributes": [
+    "_description",
+    "range",
+    "value"
+  ],
+  "source": "def description(self):\n        return self._description % {\n            \"value\": self.value,\n            \"range\": range_anchor(self.range),\n        }",
+  "status": "REQUIRES_CONTROLLED_STUBS"
+}

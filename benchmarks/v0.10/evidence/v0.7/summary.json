@@ -1,0 +1,33 @@
+{
+  "adaptation_scope_counts": {
+    "POST_AGGREGATION_THRESHOLD": 2,
+    "RETURN_EXPRESSION": 1,
+    "RETURN_EXPRESSION_WITH_REPRESENTATION": 1
+  },
+  "benchmark_version": "0.7.0",
+  "claim_scope": "BIZPROOF verifies explicit scalar semantic adapters derived from locked external business-rule implementations and independently traceable tests/specifications. It does not claim end-to-end proof of the original frameworks.",
+  "correct_adapter_verdicts": {
+    "PROVED": 4
+  },
+  "correct_adapters_proved": 4,
+  "external_system_count": 2,
+  "external_systems": [
+    "django_oscar",
+    "openfisca_france"
+  ],
+  "interpretation": {
+    "mutants": "secondary sensitivity check only; injected mutants are not external defects",
+    "not_claimed": "no end-to-end proof of the original external framework function or its object/database aggregation machinery",
+    "proved": "formal proof of the tracked scalar adapter against the tracked contract over its declared input domain"
+  },
+  "invalid_mutant_replays": 0,
+  "mutant_verdicts": {
+    "DISPROVED": 4
+  },
+  "mutants_disproved": 4,
+  "passed": true,
+  "provenance_failures": [],
+  "rules_checked": 4,
+  "rules_configured": 4,
+  "runtime_seconds": 1.6087528159987414
+}

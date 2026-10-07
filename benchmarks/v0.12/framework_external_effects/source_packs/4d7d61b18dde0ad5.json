@@ -1,0 +1,8 @@
+{
+  "candidate_id": "4d7d61b18dde0ad5",
+  "evidence_file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+  "function_name": "json_response",
+  "key_path": "source_slice",
+  "sha256": "fe7a7a4b14d49d5b3c15b6612882543642c8982c1d1886bdb0c2ecf24117c5fc",
+  "source": "def json_response(self, ctx, flash_messages):\n        basket_html = render_to_string(\n            \"oscar/basket/partials/basket_content.html\",\n            context=ctx,\n            request=self.request,\n        )\n\n        return JsonResponse(\n            {\"content_html\": basket_html, \"messages\": flash_messages.as_dict()}\n        )"
+}

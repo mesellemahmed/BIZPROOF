@@ -1,0 +1,69 @@
+===== bizproof.generalization_semantic_evidence =====
+usage: generalization_semantic_evidence.py [-h]
+                                           [--contract-summary CONTRACT_SUMMARY]
+                                           [--contract-skeletons CONTRACT_SKELETONS]
+                                           [--binding-registry BINDING_REGISTRY]
+                                           [--lock LOCK]
+                                           [--external-root EXTERNAL_ROOT]
+                                           [--output-dir OUTPUT_DIR]
+
+options:
+  -h, --help            show this help message and exit
+  --contract-summary CONTRACT_SUMMARY
+  --contract-skeletons CONTRACT_SKELETONS
+  --binding-registry BINDING_REGISTRY
+  --lock LOCK
+  --external-root EXTERNAL_ROOT
+  --output-dir OUTPUT_DIR
+
+===== bizproof.generalization_feasibility =====
+usage: generalization_feasibility.py [-h] [--cohort COHORT]
+                                     [--cohort-summary COHORT_SUMMARY]
+                                     [--lock LOCK]
+                                     [--external-root EXTERNAL_ROOT]
+                                     [--output-dir OUTPUT_DIR]
+
+options:
+  -h, --help            show this help message and exit
+  --cohort COHORT
+  --cohort-summary COHORT_SUMMARY
+  --lock LOCK
+  --external-root EXTERNAL_ROOT
+  --output-dir OUTPUT_DIR
+
+===== bizproof.generalization_a1_leaf_binding =====
+usage: generalization_a1_leaf_binding.py [-h] [--repo-root REPO_ROOT]
+                                         [--output-dir OUTPUT_DIR]
+
+options:
+  -h, --help            show this help message and exit
+  --repo-root REPO_ROOT
+  --output-dir OUTPUT_DIR
+
+===== bizproof.generalization_a1_remaining_binding_proof =====
+usage: generalization_a1_remaining_binding_proof.py [-h]
+                                                    [--repo-root REPO_ROOT]
+                                                    [--output-dir OUTPUT_DIR]
+
+options:
+  -h, --help            show this help message and exit
+  --repo-root REPO_ROOT
+  --output-dir OUTPUT_DIR
+
+===== bizproof.generalization_a2_v2_proof =====
+usage: generalization_a2_v2_proof.py [-h] [--repo-root REPO_ROOT]
+                                     [--output-dir OUTPUT_DIR]
+
+options:
+  -h, --help            show this help message and exit
+  --repo-root REPO_ROOT
+  --output-dir OUTPUT_DIR
+
+===== bizproof.generalization_a2_v3_proof =====
+usage: generalization_a2_v3_proof.py [-h] [--repo-root REPO_ROOT]
+                                     [--output-dir OUTPUT_DIR]
+
+options:
+  -h, --help            show this help message and exit
+  --repo-root REPO_ROOT
+  --output-dir OUTPUT_DIR

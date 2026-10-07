@@ -1,0 +1,4 @@
+complexity,total,certified_a1,certified_a2,certified_total,unsupported,semantic_ambiguity,certification_yield
+HIGH,30,3,9,12,18,0,0.4
+LOW,30,23,2,25,3,2,0.8333333333333334
+MEDIUM,30,7,6,13,17,0,0.43333333333333335

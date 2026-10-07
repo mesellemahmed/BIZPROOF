@@ -1,0 +1,31 @@
+{
+  "bizproof_external_execution_started": false,
+  "case_count": 60,
+  "cases_per_project": 10,
+  "cohort_sha256": "51a75baa51982ae87cc06d8e124baca2faad72d1f7b5be2585c53cb12e2a1245",
+  "construction_algorithm": "prospectively frozen before source materialization",
+  "eligible_project_count": 6,
+  "evaluation_order_frozen": true,
+  "external_outcomes_observed": false,
+  "historical_source_overlap": 0,
+  "project_distribution": {
+    "ansible/awx": 10,
+    "django-cms/django-cms": 10,
+    "odoo/odoo": 10,
+    "openstack/horizon": 10,
+    "pretalx/pretalx": 10,
+    "wagtail/wagtail": 10
+  },
+  "python_runtime": "3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)]",
+  "schema_version": "BIZPROOF-V0.14-CONFIRMATORY60-COHORT-1",
+  "selected_project_count": 6,
+  "source_universe_project_count": 6,
+  "stratum_distribution": {
+    "S1_LOCAL_SCALAR_CONTROL": 12,
+    "S2_STRUCTURED_CONTAINER": 12,
+    "S3_NESTED_VECTOR_HIGHER_ORDER": 12,
+    "S4_STATE_EFFECT": 12,
+    "S5_BINDING_EXTERNAL_DOMAIN": 12
+  },
+  "unique_selected_source_bodies": 60
+}

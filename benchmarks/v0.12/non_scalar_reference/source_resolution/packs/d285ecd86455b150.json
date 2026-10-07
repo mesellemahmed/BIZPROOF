@@ -1,0 +1,20 @@
+{
+  "candidate_id": "d285ecd86455b150",
+  "external_calls": [
+    "next"
+  ],
+  "free_names": [
+    "next"
+  ],
+  "function_name": "discount_info",
+  "reason_code": "TUPLE_RETURN",
+  "reasons": [
+    "EXTERNAL_CALLS",
+    "FREE_NAMES",
+    "NON_UNIQUE_REPOSITORY_MATCH"
+  ],
+  "repository_matches": [],
+  "self_attributes": [],
+  "source": "def discount_info(subevent_id, item, infos_for_item):\n            infos_for_item = list(infos_for_item)\n            return (\n                subevent_id,\n                item,\n                sum(max_count for (subevent_id, item, discount_rule, max_count, i) in infos_for_item),\n                next(discount_rule for (subevent_id, item, discount_rule, max_count, i) in infos_for_item),\n            )",
+  "status": "REQUIRES_CONTROLLED_STUBS"
+}

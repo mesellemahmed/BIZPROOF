@@ -1,0 +1,88 @@
+{
+  "artifacts": [
+    {
+      "bytes": 2098,
+      "path": "benchmarks\\v0.11\\paper_results\\baseline_consolidated.json",
+      "sha256": "86814a464eeaca6cab076393f07edfe470e137be118bbd86954e3460b3f600ec"
+    },
+    {
+      "bytes": 625,
+      "path": "benchmarks\\v0.11\\paper_results\\baseline_consolidated.csv",
+      "sha256": "93364e51c618a4e9fe936a1efe2ede94c557b06f29fb00c62afa0b0d6fd7fa27"
+    },
+    {
+      "bytes": 250,
+      "path": "benchmarks\\v0.11\\paper_results\\results_by_source.csv",
+      "sha256": "af80e4e6138b14ee298ea513916b99db9653c7116b37d5343aab6e285f829d4a"
+    },
+    {
+      "bytes": 218,
+      "path": "benchmarks\\v0.11\\paper_results\\results_by_complexity.csv",
+      "sha256": "3e6d470b61637ec3356e7f330911f9d8e465fbe54512edcb831f88afea5d167c"
+    },
+    {
+      "bytes": 1310,
+      "path": "benchmarks\\v0.11\\paper_results\\statistical_analysis.json",
+      "sha256": "a4677572605c78b23bc62c2d156d024d8cc7746feb34db99da5b8d8b08634947"
+    },
+    {
+      "bytes": 614,
+      "path": "benchmarks\\v0.11\\paper_results\\certification_yield_ci95.csv",
+      "sha256": "60d5a055a80ddecfe56abb40c589d146fe67408c2e214d6785b2de81ee7dec73"
+    },
+    {
+      "bytes": 10445,
+      "path": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+      "sha256": "6b350afb7b7a342f73d77158b0bacc5709340e90ac05cf7fac207e4676cea1ad"
+    },
+    {
+      "bytes": 3103,
+      "path": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final_summary.json",
+      "sha256": "21e3d52c66025be88da440f4c26c0dc9fc3790d23f49b612a88d08929d04754f"
+    },
+    {
+      "bytes": 908,
+      "path": "benchmarks\\v0.11\\paper_results\\paper_ready_snapshot.json",
+      "sha256": "71a9766ebf22733191dc02728a69451f8eab41b9b0267f4cb974a0fbff705c9d"
+    },
+    {
+      "bytes": 4167,
+      "path": "benchmarks\\v0.11\\paper_results\\results_section_draft.md",
+      "sha256": "0e85b110268bf4760b3dd0ee39f0f786f669dc08d2f6f4c7f9714cc6deccd883"
+    },
+    {
+      "bytes": 3877,
+      "path": "benchmarks\\v0.11\\paper_results\\threats_to_validity.md",
+      "sha256": "2ecb84b026cb40e2ce1dbe6a7ce6de855956ac60379025da1e666e8341f2276f"
+    },
+    {
+      "bytes": 759,
+      "path": "benchmarks\\v0.11\\paper_results\\rq4_final.md",
+      "sha256": "f0662647c011177bbb0d16d1958d11239cc70f362534c92fbde37f30174e58be"
+    },
+    {
+      "bytes": 11597,
+      "path": "benchmarks\\v0.11\\paper_results\\experimental_section_final.md",
+      "sha256": "d1d4d308852369f48d9bb473bf44455b0923b18f78e7bca6f5c836dccf94bd4a"
+    },
+    {
+      "bytes": 1117,
+      "path": "benchmarks\\v0.11\\paper_results\\key_empirical_findings.md",
+      "sha256": "a1ac3e386496bc5c7d524a953b224b8bac6b8c756815c70593fc3a3a80df81ca"
+    }
+  ],
+  "baseline_protocol_commit": "64d7774f665a69cf0f0433cabf7e102c9d161e7a",
+  "cohort": 90,
+  "consolidated_results_commit": "51afe88842d825f1b5c4e716e826a2ca706c9094",
+  "extended_results_commit": "f8424825f9377267aa4f0c4363153e88577711ea",
+  "final_taxonomy_commit": "3a417460868d179fa760d3ed95ee5a584c2092f4",
+  "frozen_source_commit": "50289a1e2302d4f7463dccf07d84adc726e1571b",
+  "frozen_source_tag": "v0.11",
+  "matched_baseline_cases": 14,
+  "paper_branch": "analysis/v0.11-paper-results",
+  "runner_fix_commit": "cfb45aa91cbb8ed32a268759ac042ca4802ecf9f",
+  "schema_version": "BIZPROOF-V0.11-PAPER-RESULTS-MANIFEST-1",
+  "statistics_and_threats_commit": "6bc884c8428aa9908efe48b05adeeab4fcda1416",
+  "strict_results_commit": "77891dfa41699f5bd5ef548fe913e445f3a5e015",
+  "unsupported_taxonomy_cases": 38
+}

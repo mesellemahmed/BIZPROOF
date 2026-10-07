@@ -1,0 +1,2481 @@
+[
+  {
+    "adapter_function": "adapt_adapter_11c907742189",
+    "authoring_routes": [
+      "V1_SCALAR_EXPRESSION"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "e1cf29f02fa0dadc"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "LOW"
+    ],
+    "family_id": "ADAPTER-11c907742189",
+    "profiles": [
+      {
+        "adapter_shape": "SIMPLE_RETURN_EXPRESSION",
+        "attributes": [],
+        "authoring_route": "V1_SCALAR_EXPRESSION",
+        "branch_count": 0,
+        "call_count": 0,
+        "calls": [],
+        "candidate_id": "e1cf29f02fa0dadc",
+        "class": "Applicator",
+        "complexity": "LOW",
+        "evidence": "TEST_AND_DOC",
+        "function": "get_user_offers",
+        "loop_count": 0,
+        "node_counts": {
+          "Constant": 1,
+          "Expr": 1,
+          "FunctionDef": 1,
+          "List": 1,
+          "Load": 1,
+          "Return": 1,
+          "arg": 2,
+          "arguments": 1
+        },
+        "returns": [
+          "[]"
+        ],
+        "source": "django_oscar",
+        "top_level_statements": [
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "django_oscar"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_d314b42faa43",
+    "authoring_routes": [
+      "V1_SCALAR_EXPRESSION"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "13df73dbd2825f80"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "LOW"
+    ],
+    "family_id": "ADAPTER-d314b42faa43",
+    "profiles": [
+      {
+        "adapter_shape": "SIMPLE_RETURN_EXPRESSION",
+        "attributes": [
+          "self.external_id_field",
+          "self.external_link_display_name",
+          "self.external_link_href",
+          "self.external_object_type",
+          "self.id_value",
+          "self.order_position_id",
+          "self.sync_info"
+        ],
+        "authoring_route": "V1_SCALAR_EXPRESSION",
+        "branch_count": 0,
+        "call_count": 0,
+        "calls": [],
+        "candidate_id": "13df73dbd2825f80",
+        "class": "OrderSyncResult",
+        "complexity": "LOW",
+        "evidence": "NONE",
+        "function": "to_result_dict",
+        "loop_count": 0,
+        "node_counts": {
+          "Attribute": 7,
+          "Constant": 6,
+          "Dict": 1,
+          "FunctionDef": 1,
+          "Load": 14,
+          "Name": 7,
+          "Return": 1,
+          "arg": 1,
+          "arguments": 1
+        },
+        "returns": [
+          "{'position': self.order_position_id, 'object_type': self.external_object_type, 'external_id_field': self.external_id_field, 'id_value': self.id_value, 'external_link_href': self.external_link_href, 'external_link_display_name': self.external_link_display_name, **self.sync_info}"
+        ],
+        "source": "pretix",
+        "top_level_statements": [
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "pretix"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_d5f489f27ec4",
+    "authoring_routes": [
+      "V1_SCALAR_EXPRESSION"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "f234f0be14cf3ff3"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "LOW"
+    ],
+    "family_id": "ADAPTER-d5f489f27ec4",
+    "profiles": [
+      {
+        "adapter_shape": "SIMPLE_RETURN_EXPRESSION",
+        "attributes": [
+          "positions[idx].subevent_id"
+        ],
+        "authoring_route": "V1_SCALAR_EXPRESSION",
+        "branch_count": 0,
+        "call_count": 0,
+        "calls": [],
+        "candidate_id": "f234f0be14cf3ff3",
+        "class": "Discount",
+        "complexity": "LOW",
+        "evidence": "DOC_ONLY",
+        "function": "key",
+        "loop_count": 0,
+        "node_counts": {
+          "Attribute": 1,
+          "BoolOp": 1,
+          "Constant": 1,
+          "FunctionDef": 1,
+          "Load": 4,
+          "Name": 2,
+          "Or": 1,
+          "Return": 1,
+          "Subscript": 1,
+          "arg": 1,
+          "arguments": 1
+        },
+        "returns": [
+          "positions[idx].subevent_id or 0"
+        ],
+        "source": "pretix",
+        "top_level_statements": [
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "pretix"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_3d99e55f39ef",
+    "authoring_routes": [
+      "V1_SCALAR_EXPRESSION"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "87d2f0b3b15f0ea6"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "MEDIUM"
+    ],
+    "family_id": "ADAPTER-3d99e55f39ef",
+    "profiles": [
+      {
+        "adapter_shape": "SIMPLE_RETURN_EXPRESSION",
+        "attributes": [
+          "self._description",
+          "self.range",
+          "self.value"
+        ],
+        "authoring_route": "V1_SCALAR_EXPRESSION",
+        "branch_count": 0,
+        "call_count": 1,
+        "calls": [
+          "range_anchor"
+        ],
+        "candidate_id": "87d2f0b3b15f0ea6",
+        "class": "PercentageDiscountBenefit",
+        "complexity": "MEDIUM",
+        "evidence": "TEST_AND_DOC",
+        "function": "description",
+        "loop_count": 0,
+        "node_counts": {
+          "Attribute": 3,
+          "BinOp": 1,
+          "Call": 1,
+          "Constant": 2,
+          "Dict": 1,
+          "FunctionDef": 1,
+          "Load": 8,
+          "Mod": 1,
+          "Name": 5,
+          "Return": 1,
+          "arg": 1,
+          "arguments": 1
+        },
+        "returns": [
+          "self._description % {'value': self.value, 'range': range_anchor(self.range)}"
+        ],
+        "source": "django_oscar",
+        "top_level_statements": [
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "django_oscar"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_5871d13594ab",
+    "authoring_routes": [
+      "V1_SCALAR_EXPRESSION"
+    ],
+    "candidate_count": 3,
+    "candidate_ids": [
+      "331f175e4aa92eef",
+      "9603b9192132171c",
+      "fa377c649a747a7d"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "MEDIUM"
+    ],
+    "family_id": "ADAPTER-5871d13594ab",
+    "profiles": [
+      {
+        "adapter_shape": "SIMPLE_RETURN_EXPRESSION",
+        "attributes": [
+          "self.discount"
+        ],
+        "authoring_route": "V1_SCALAR_EXPRESSION",
+        "branch_count": 0,
+        "call_count": 0,
+        "calls": [],
+        "candidate_id": "331f175e4aa92eef",
+        "class": "BasketDiscount",
+        "complexity": "MEDIUM",
+        "evidence": "TEST_AND_DOC",
+        "function": "is_successful",
+        "loop_count": 0,
+        "node_counts": {
+          "Attribute": 1,
+          "Compare": 1,
+          "Constant": 2,
+          "Expr": 1,
+          "FunctionDef": 1,
+          "Gt": 1,
+          "Load": 3,
+          "Name": 2,
+          "Return": 1,
+          "arg": 1,
+          "arguments": 1
+        },
+        "returns": [
+          "self.discount > 0"
+        ],
+        "source": "django_oscar",
+        "top_level_statements": [
+          "Return"
+        ]
+      },
+      {
+        "adapter_shape": "SIMPLE_RETURN_EXPRESSION",
+        "attributes": [
+          "self.purchase_info",
+          "self.purchase_info.price",
+          "self.purchase_info.price.is_tax_known"
+        ],
+        "authoring_route": "V1_SCALAR_EXPRESSION",
+        "branch_count": 0,
+        "call_count": 0,
+        "calls": [],
+        "candidate_id": "9603b9192132171c",
+        "class": "AbstractLine",
+        "complexity": "MEDIUM",
+        "evidence": "TEST_AND_DOC",
+        "function": "is_tax_known",
+        "loop_count": 0,
+        "node_counts": {
+          "Attribute": 3,
+          "FunctionDef": 1,
+          "Load": 5,
+          "Name": 2,
+          "Return": 1,
+          "arg": 1,
+          "arguments": 1
+        },
+        "returns": [
+          "self.purchase_info.price.is_tax_known"
+        ],
+        "source": "django_oscar",
+        "top_level_statements": [
+          "Return"
+        ]
+      },
+      {
+        "adapter_shape": "SIMPLE_RETURN_EXPRESSION",
+        "attributes": [
+          "self.parent_product"
+        ],
+        "authoring_route": "V1_SCALAR_EXPRESSION",
+        "branch_count": 0,
+        "call_count": 1,
+        "calls": [
+          "getattr"
+        ],
+        "candidate_id": "fa377c649a747a7d",
+        "class": "AddToBasketForm",
+        "complexity": "MEDIUM",
+        "evidence": "TEST_AND_DOC",
+        "function": "product",
+        "loop_count": 0,
+        "node_counts": {
+          "Attribute": 1,
+          "Call": 1,
+          "Constant": 2,
+          "Expr": 1,
+          "FunctionDef": 1,
+          "Load": 5,
+          "Name": 4,
+          "Return": 1,
+          "arg": 1,
+          "arguments": 1
+        },
+        "returns": [
+          "getattr(self, 'child_product', self.parent_product)"
+        ],
+        "source": "django_oscar",
+        "top_level_statements": [
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "django_oscar"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_e7f2edbef0a6",
+    "authoring_routes": [
+      "V1_SCALAR_EXPRESSION"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "75e61ddb4dde4f1a"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "MEDIUM"
+    ],
+    "family_id": "ADAPTER-e7f2edbef0a6",
+    "profiles": [
+      {
+        "adapter_shape": "SIMPLE_RETURN_EXPRESSION",
+        "attributes": [
+          "self.line",
+          "self.price_incl_tax",
+          "self.quantity"
+        ],
+        "authoring_route": "V1_SCALAR_EXPRESSION",
+        "branch_count": 0,
+        "call_count": 1,
+        "calls": [
+          "_"
+        ],
+        "candidate_id": "75e61ddb4dde4f1a",
+        "class": "AbstractLinePrice",
+        "complexity": "MEDIUM",
+        "evidence": "NONE",
+        "function": "__str__",
+        "loop_count": 0,
+        "node_counts": {
+          "Attribute": 3,
+          "BinOp": 1,
+          "Call": 1,
+          "Constant": 4,
+          "Dict": 1,
+          "FunctionDef": 1,
+          "Load": 7,
+          "Mod": 1,
+          "Name": 4,
+          "Return": 1,
+          "arg": 1,
+          "arguments": 1
+        },
+        "returns": [
+          "_(\"Line '%(number)s' (quantity %(qty)d) price %(price)s\") % {'number': self.line, 'qty': self.quantity, 'price': self.price_incl_tax}"
+        ],
+        "source": "django_oscar",
+        "top_level_statements": [
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "django_oscar"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_0a24c2f51a4e",
+    "authoring_routes": [
+      "V1_SCALAR_EXPRESSION"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "34748d082751e0cc"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "HIGH"
+    ],
+    "family_id": "ADAPTER-0a24c2f51a4e",
+    "profiles": [
+      {
+        "adapter_shape": "SIMPLE_RETURN_EXPRESSION",
+        "attributes": [
+          "line.is_tax_known",
+          "self.all_lines",
+          "self.is_empty"
+        ],
+        "authoring_route": "V1_SCALAR_EXPRESSION",
+        "branch_count": 0,
+        "call_count": 2,
+        "calls": [
+          "all",
+          "self.all_lines"
+        ],
+        "candidate_id": "34748d082751e0cc",
+        "class": "AbstractBasket",
+        "complexity": "HIGH",
+        "evidence": "TEST_AND_DOC",
+        "function": "is_tax_known",
+        "loop_count": 0,
+        "node_counts": {
+          "And": 1,
+          "Attribute": 3,
+          "BoolOp": 1,
+          "Call": 2,
+          "Constant": 1,
+          "Expr": 1,
+          "FunctionDef": 1,
+          "ListComp": 1,
+          "Load": 8,
+          "Name": 6,
+          "Not": 1,
+          "Return": 1,
+          "Store": 1,
+          "UnaryOp": 1,
+          "arg": 1,
+          "arguments": 1,
+          "comprehension": 1
+        },
+        "returns": [
+          "not self.is_empty and all([line.is_tax_known for line in self.all_lines()])"
+        ],
+        "source": "django_oscar",
+        "top_level_statements": [
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "django_oscar"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_d5ab008f7964",
+    "authoring_routes": [
+      "V1_SCALAR_EXPRESSION"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "26a1af8837fe7ae4"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "LOW"
+    ],
+    "family_id": "ADAPTER-d5ab008f7964",
+    "profiles": [
+      {
+        "adapter_shape": "SIMPLE_RETURN_EXPRESSION",
+        "attributes": [
+          "self.item",
+          "self.item.id",
+          "self.order_id",
+          "self.variation",
+          "self.variation.id"
+        ],
+        "authoring_route": "V1_SCALAR_EXPRESSION",
+        "branch_count": 1,
+        "call_count": 0,
+        "calls": [],
+        "candidate_id": "26a1af8837fe7ae4",
+        "class": "OrderPosition",
+        "complexity": "LOW",
+        "evidence": "DOC_ONLY",
+        "function": "__repr__",
+        "loop_count": 0,
+        "node_counts": {
+          "Attribute": 6,
+          "BinOp": 1,
+          "Constant": 2,
+          "FunctionDef": 1,
+          "IfExp": 1,
+          "Load": 11,
+          "Mod": 1,
+          "Name": 4,
+          "Return": 1,
+          "Tuple": 1,
+          "arg": 1,
+          "arguments": 1
+        },
+        "returns": [
+          "'<OrderPosition: item %d, variation %d for order %s>' % (self.item.id, self.variation.id if self.variation else 0, self.order_id)"
+        ],
+        "source": "pretix",
+        "top_level_statements": [
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "pretix"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_1c545a7da467",
+    "authoring_routes": [
+      "V1_SCALAR_EXPRESSION"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "9cc9063a46d23cde"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "MEDIUM"
+    ],
+    "family_id": "ADAPTER-1c545a7da467",
+    "profiles": [
+      {
+        "adapter_shape": "SIMPLE_RETURN_EXPRESSION",
+        "attributes": [
+          "self.item",
+          "self.item.quotas",
+          "self.item.quotas.filter",
+          "self.subevent",
+          "self.variation",
+          "self.variation.quotas",
+          "self.variation.quotas.filter"
+        ],
+        "authoring_route": "V1_SCALAR_EXPRESSION",
+        "branch_count": 1,
+        "call_count": 2,
+        "calls": [
+          "self.item.quotas.filter",
+          "self.variation.quotas.filter"
+        ],
+        "candidate_id": "9cc9063a46d23cde",
+        "class": "AbstractPosition",
+        "complexity": "MEDIUM",
+        "evidence": "DOC_ONLY",
+        "function": "quotas",
+        "loop_count": 0,
+        "node_counts": {
+          "Attribute": 9,
+          "Call": 2,
+          "Compare": 1,
+          "Constant": 1,
+          "FunctionDef": 1,
+          "IfExp": 1,
+          "Is": 1,
+          "Load": 15,
+          "Name": 6,
+          "Return": 1,
+          "arg": 1,
+          "arguments": 1,
+          "keyword": 2
+        },
+        "returns": [
+          "self.item.quotas.filter(subevent=self.subevent) if self.variation is None else self.variation.quotas.filter(subevent=self.subevent)"
+        ],
+        "source": "pretix",
+        "top_level_statements": [
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "pretix"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_0b132d611c43",
+    "authoring_routes": [
+      "V2_STRAIGHT_LINE"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "d285ecd86455b150"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "MEDIUM"
+    ],
+    "family_id": "ADAPTER-0b132d611c43",
+    "profiles": [
+      {
+        "adapter_shape": "STRAIGHT_LINE_ASSIGN_RETURN",
+        "attributes": [],
+        "authoring_route": "V2_STRAIGHT_LINE",
+        "branch_count": 0,
+        "call_count": 3,
+        "calls": [
+          "list",
+          "next",
+          "sum"
+        ],
+        "candidate_id": "d285ecd86455b150",
+        "class": "CrossSellingService",
+        "complexity": "MEDIUM",
+        "evidence": "NONE",
+        "function": "discount_info",
+        "loop_count": 0,
+        "node_counts": {
+          "Assign": 1,
+          "Call": 3,
+          "FunctionDef": 1,
+          "GeneratorExp": 2,
+          "Load": 11,
+          "Name": 21,
+          "Return": 1,
+          "Store": 13,
+          "Tuple": 3,
+          "arg": 3,
+          "arguments": 1,
+          "comprehension": 2
+        },
+        "returns": [
+          "(subevent_id, item, sum((max_count for subevent_id, item, discount_rule, max_count, i in infos_for_item)), next((discount_rule for subevent_id, item, discount_rule, max_count, i in infos_for_item)))"
+        ],
+        "source": "pretix",
+        "top_level_statements": [
+          "Assign",
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "pretix"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_9a7691ef2008",
+    "authoring_routes": [
+      "V2_STRAIGHT_LINE"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "4d7d61b18dde0ad5"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "MEDIUM"
+    ],
+    "family_id": "ADAPTER-9a7691ef2008",
+    "profiles": [
+      {
+        "adapter_shape": "STRAIGHT_LINE_ASSIGN_RETURN",
+        "attributes": [
+          "flash_messages.as_dict",
+          "self.request"
+        ],
+        "authoring_route": "V2_STRAIGHT_LINE",
+        "branch_count": 0,
+        "call_count": 3,
+        "calls": [
+          "JsonResponse",
+          "flash_messages.as_dict",
+          "render_to_string"
+        ],
+        "candidate_id": "4d7d61b18dde0ad5",
+        "class": "BasketView",
+        "complexity": "MEDIUM",
+        "evidence": "TEST_AND_DOC",
+        "function": "json_response",
+        "loop_count": 0,
+        "node_counts": {
+          "Assign": 1,
+          "Attribute": 2,
+          "Call": 3,
+          "Constant": 3,
+          "Dict": 1,
+          "FunctionDef": 1,
+          "Load": 8,
+          "Name": 7,
+          "Return": 1,
+          "Store": 1,
+          "arg": 3,
+          "arguments": 1,
+          "keyword": 2
+        },
+        "returns": [
+          "JsonResponse({'content_html': basket_html, 'messages': flash_messages.as_dict()})"
+        ],
+        "source": "django_oscar",
+        "top_level_statements": [
+          "Assign",
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "django_oscar"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_ab674a236e2e",
+    "authoring_routes": [
+      "V2_STRAIGHT_LINE"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "d5b65e1d48eca4dd"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "MEDIUM"
+    ],
+    "family_id": "ADAPTER-ab674a236e2e",
+    "profiles": [
+      {
+        "adapter_shape": "STRAIGHT_LINE_ASSIGN_RETURN",
+        "attributes": [
+          "period.offset"
+        ],
+        "authoring_route": "V2_STRAIGHT_LINE",
+        "branch_count": 0,
+        "call_count": 4,
+        "calls": [
+          "individu",
+          "period.offset",
+          "range",
+          "sum"
+        ],
+        "candidate_id": "d5b65e1d48eca4dd",
+        "class": "locapass_eligibilite_etudiant_contrat",
+        "complexity": "MEDIUM",
+        "evidence": "TEST_ONLY",
+        "function": "formula",
+        "loop_count": 0,
+        "node_counts": {
+          "Assign": 1,
+          "Attribute": 1,
+          "Call": 4,
+          "Compare": 2,
+          "Constant": 4,
+          "FunctionDef": 1,
+          "Gt": 1,
+          "GtE": 1,
+          "ListComp": 1,
+          "Load": 7,
+          "Name": 8,
+          "Return": 1,
+          "Store": 2,
+          "USub": 1,
+          "UnaryOp": 1,
+          "arg": 2,
+          "arguments": 1,
+          "comprehension": 1
+        },
+        "returns": [
+          "nb_mois_travailles >= 3"
+        ],
+        "source": "openfisca_france",
+        "top_level_statements": [
+          "Assign",
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "openfisca_france"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_f970c0bedd6f",
+    "authoring_routes": [
+      "V2_STRAIGHT_LINE"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "6fd8bd69c26e7954"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "MEDIUM"
+    ],
+    "family_id": "ADAPTER-f970c0bedd6f",
+    "profiles": [
+      {
+        "adapter_shape": "STRAIGHT_LINE_ASSIGN_RETURN",
+        "attributes": [
+          "round_decimal(newgross - newgross * (1 - 100 / (100 + self.rate))).quantize",
+          "self.code",
+          "self.gross",
+          "self.gross.as_tuple",
+          "self.gross.as_tuple().exponent",
+          "self.name",
+          "self.rate"
+        ],
+        "authoring_route": "V2_STRAIGHT_LINE",
+        "branch_count": 0,
+        "call_count": 5,
+        "calls": [
+          "Decimal",
+          "TaxedPrice",
+          "round_decimal",
+          "round_decimal(newgross - newgross * (1 - 100 / (100 + self.rate))).quantize",
+          "self.gross.as_tuple"
+        ],
+        "candidate_id": "6fd8bd69c26e7954",
+        "class": "TaxedPrice",
+        "complexity": "MEDIUM",
+        "evidence": "NONE",
+        "function": "__mul__",
+        "loop_count": 0,
+        "node_counts": {
+          "Add": 1,
+          "Assign": 2,
+          "Attribute": 9,
+          "BinOp": 8,
+          "Call": 5,
+          "Constant": 4,
+          "Div": 1,
+          "FunctionDef": 1,
+          "Load": 25,
+          "Mult": 2,
+          "Name": 18,
+          "Pow": 1,
+          "Return": 1,
+          "Store": 2,
+          "Sub": 3,
+          "arg": 2,
+          "arguments": 1,
+          "keyword": 6
+        },
+        "returns": [
+          "TaxedPrice(gross=newgross, net=newnet, tax=newgross - newnet, rate=self.rate, name=self.name, code=self.code)"
+        ],
+        "source": "pretix",
+        "top_level_statements": [
+          "Assign",
+          "Assign",
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "pretix"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_5638a620f698",
+    "authoring_routes": [
+      "V2_STRAIGHT_LINE"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "6d009b7961c5d116"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "HIGH"
+    ],
+    "family_id": "ADAPTER-5638a620f698",
+    "profiles": [
+      {
+        "adapter_shape": "STRAIGHT_LINE_ASSIGN_RETURN",
+        "attributes": [
+          "o.priority",
+          "self.get_basket_offers",
+          "self.get_session_offers",
+          "self.get_site_offers",
+          "self.get_user_offers"
+        ],
+        "authoring_route": "V2_STRAIGHT_LINE",
+        "branch_count": 0,
+        "call_count": 7,
+        "calls": [
+          "chain",
+          "list",
+          "self.get_basket_offers",
+          "self.get_session_offers",
+          "self.get_site_offers",
+          "self.get_user_offers",
+          "sorted"
+        ],
+        "candidate_id": "6d009b7961c5d116",
+        "class": "Applicator",
+        "complexity": "HIGH",
+        "evidence": "TEST_AND_DOC",
+        "function": "get_offers",
+        "loop_count": 0,
+        "node_counts": {
+          "Assign": 4,
+          "Attribute": 5,
+          "Call": 7,
+          "Constant": 4,
+          "Expr": 1,
+          "FunctionDef": 1,
+          "Lambda": 1,
+          "Load": 21,
+          "Name": 20,
+          "Return": 1,
+          "Store": 4,
+          "arg": 5,
+          "arguments": 2,
+          "keyword": 2
+        },
+        "returns": [
+          "list(sorted(chain(session_offers, basket_offers, user_offers, site_offers), key=lambda o: o.priority, reverse=True))"
+        ],
+        "source": "django_oscar",
+        "top_level_statements": [
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "django_oscar"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_c56f6a59ac64",
+    "authoring_routes": [
+      "V2_STRAIGHT_LINE"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "f5d217dec0cf902b"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "HIGH"
+    ],
+    "family_id": "ADAPTER-c56f6a59ac64",
+    "profiles": [
+      {
+        "adapter_shape": "STRAIGHT_LINE_ASSIGN_RETURN",
+        "attributes": [
+          "abattement_age_ou_invalidite.calc",
+          "abattements.contribuable_age_invalide",
+          "abattements.enfant_marie",
+          "foyer_fiscal.conjoint",
+          "foyer_fiscal.declarant_principal",
+          "parameters(period).impot_revenu",
+          "parameters(period).impot_revenu.calcul_revenus_imposables",
+          "parameters(period).impot_revenu.calcul_revenus_imposables.abat_rni",
+          "period.first_month"
+        ],
+        "authoring_route": "V2_STRAIGHT_LINE",
+        "branch_count": 0,
+        "call_count": 9,
+        "calls": [
+          "abattement_age_ou_invalidite.calc",
+          "foyer_fiscal",
+          "foyer_fiscal.conjoint",
+          "foyer_fiscal.declarant_principal",
+          "min_",
+          "parameters"
+        ],
+        "candidate_id": "f5d217dec0cf902b",
+        "class": "abat_spe",
+        "complexity": "HIGH",
+        "evidence": "NONE",
+        "function": "formula",
+        "loop_count": 0,
+        "node_counts": {
+          "Add": 2,
+          "Assign": 12,
+          "Attribute": 10,
+          "BinOp": 8,
+          "BitAnd": 2,
+          "BitOr": 2,
+          "Call": 9,
+          "Compare": 4,
+          "Constant": 11,
+          "Expr": 1,
+          "FunctionDef": 1,
+          "Gt": 2,
+          "GtE": 2,
+          "Load": 41,
+          "Mult": 2,
+          "Name": 43,
+          "Return": 1,
+          "Store": 12,
+          "arg": 3,
+          "arguments": 1
+        },
+        "returns": [
+          "min_(revenu_net_global, as_inv + as_enf)"
+        ],
+        "source": "openfisca_france",
+        "top_level_statements": [
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "openfisca_france"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_c245081aad4c",
+    "authoring_routes": [
+      "V2_STRAIGHT_LINE"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "e293930485085dac"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "HIGH"
+    ],
+    "family_id": "ADAPTER-c245081aad4c",
+    "profiles": [
+      {
+        "adapter_shape": "STRAIGHT_LINE_ASSIGN_RETURN",
+        "attributes": [
+          "Famille.DEMANDEUR",
+          "FoyerFiscal.DECLARANT_PRINCIPAL",
+          "TypesStatutMarital.veuf",
+          "menage.all",
+          "menage.conjoint",
+          "menage.members",
+          "menage.members.famille",
+          "menage.members.foyer_fiscal",
+          "menage.personne_de_reference",
+          "menage.sum",
+          "parameters(period).taxe_habitation",
+          "period.first_month",
+          "period.last_year",
+          "taxe_habitation.exon_age_min"
+        ],
+        "authoring_route": "V2_STRAIGHT_LINE",
+        "branch_count": 0,
+        "call_count": 14,
+        "calls": [
+          "menage.all",
+          "menage.conjoint",
+          "menage.members",
+          "menage.members.famille",
+          "menage.members.foyer_fiscal",
+          "menage.personne_de_reference",
+          "menage.sum",
+          "parameters"
+        ],
+        "candidate_id": "e293930485085dac",
+        "class": "exonere_taxe_habitation",
+        "complexity": "HIGH",
+        "evidence": "TEST_ONLY",
+        "function": "formula_2017_01_01",
+        "loop_count": 0,
+        "node_counts": {
+          "Add": 5,
+          "Assign": 18,
+          "Attribute": 24,
+          "BinOp": 7,
+          "Call": 14,
+          "Compare": 7,
+          "Constant": 13,
+          "Eq": 2,
+          "Expr": 1,
+          "FunctionDef": 1,
+          "Gt": 3,
+          "GtE": 2,
+          "List": 3,
+          "Load": 75,
+          "Mult": 2,
+          "Name": 66,
+          "Return": 1,
+          "Store": 18,
+          "arg": 3,
+          "arguments": 1,
+          "keyword": 5
+        },
+        "returns": [
+          "exon"
+        ],
+        "source": "openfisca_france",
+        "top_level_statements": [
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "openfisca_france"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_a961bd25c6f5",
+    "authoring_routes": [
+      "V2_STRAIGHT_LINE"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "7bc9603bfbda7dc9"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "HIGH"
+    ],
+    "family_id": "ADAPTER-a961bd25c6f5",
+    "profiles": [
+      {
+        "adapter_shape": "STRAIGHT_LINE_ASSIGN_RETURN",
+        "attributes": [
+          "Famille.PARENT",
+          "famille.any",
+          "famille.members",
+          "famille.sum",
+          "paje.paje_cmg",
+          "paje.paje_cmg.assistante_mat_asso_entreprise_microcreche",
+          "paje.paje_cmg.assistante_mat_asso_entreprise_microcreche.apres_second_plafond",
+          "paje.paje_cmg.assistante_mat_asso_entreprise_microcreche.sous_premier_plafond",
+          "paje.paje_cmg.assistante_mat_asso_entreprise_microcreche.sous_second_plafond",
+          "paje.paje_cmg.complement_libre_choix_mode_garde",
+          "paje.paje_cmg.complement_libre_choix_mode_garde.revenus_inferieurs_45_plaf",
+          "paje.paje_cmg.complement_libre_choix_mode_garde.revenus_superieurs_45_plaf",
+          "paje.paje_cmg.complement_libre_choix_mode_garde.revenus_superieurs_plaf",
+          "paje.paje_cmg.garde_domicile",
+          "paje.paje_cmg.garde_domicile.apres_second_plafond",
+          "paje.paje_cmg.garde_domicile.sous_premier_plafond",
+          "paje.paje_cmg.garde_domicile.sous_second_plafond",
+          "paje.paje_cmg.limite_age",
+          "paje.paje_cmg.limite_age.pleine",
+          "paje.paje_cmg.limite_age.reduite",
+          "paje.paje_cmg.taux_reduit",
+          "paje.plaf_cmg",
+          "paje.plaf_cmg.deuxieme_plafond_ne_adopte_apres_04_2014",
+          "paje.plaf_cmg.deuxieme_plafond_ne_adopte_apres_04_2014.deux_enfants",
+          "paje.plaf_cmg.deuxieme_plafond_ne_adopte_apres_04_2014.enfant",
+          "paje.plaf_cmg.deuxieme_plafond_ne_adopte_apres_04_2014.majoration_enfant_supp",
+          "paje.plaf_cmg.premier_plafond_ne_adopte_apres_04_2014",
+          "paje.plaf_cmg.premier_plafond_ne_adopte_apres_04_2014.deux_enfants",
+          "paje.plaf_cmg.premier_plafond_ne_adopte_apres_04_2014.enfant",
+          "paje.plaf_cmg.premier_plafond_ne_adopte_apres_04_2014.majoration_enfant_supp",
+          "parameters(period).prestations_sociales",
+          "parameters(period).prestations_sociales.prestations_familiales",
+          "parameters(period).prestations_sociales.prestations_familiales.bmaf",
+          "parameters(period).prestations_sociales.prestations_familiales.bmaf.bmaf",
+          "parameters(period).prestations_sociales.prestations_familiales.petite_enfance",
+          "parameters(period).prestations_sociales.prestations_familiales.petite_enfance.paje",
+          "period.first_month"
+        ],
+        "authoring_route": "V2_STRAIGHT_LINE",
+        "branch_count": 0,
+        "call_count": 21,
+        "calls": [
+          "famille",
+          "famille.any",
+          "famille.members",
+          "famille.sum",
+          "max_",
+          "nb_enf",
+          "not_",
+          "parameters"
+        ],
+        "candidate_id": "7bc9603bfbda7dc9",
+        "class": "paje_cmg",
+        "complexity": "HIGH",
+        "evidence": "TEST_ONLY",
+        "function": "formula_2017_04_01",
+        "loop_count": 0,
+        "node_counts": {
+          "Add": 13,
+          "Assign": 26,
+          "Attribute": 73,
+          "BinOp": 57,
+          "BitAnd": 4,
+          "BitOr": 2,
+          "Call": 21,
+          "Compare": 22,
+          "Constant": 36,
+          "Eq": 2,
+          "Expr": 1,
+          "FunctionDef": 1,
+          "Gt": 6,
+          "GtE": 8,
+          "Load": 187,
+          "Lt": 6,
+          "Mult": 30,
+          "Name": 140,
+          "Return": 1,
+          "Store": 26,
+          "Sub": 8,
+          "arg": 3,
+          "arguments": 1,
+          "keyword": 1
+        },
+        "returns": [
+          "paje_cmg"
+        ],
+        "source": "openfisca_france",
+        "top_level_statements": [
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "openfisca_france"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_f2b683d02882",
+    "authoring_routes": [
+      "V2_STRAIGHT_LINE"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "53abfcd7d20a9cd6"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "HIGH"
+    ],
+    "family_id": "ADAPTER-f2b683d02882",
+    "profiles": [
+      {
+        "adapter_shape": "STRAIGHT_LINE_ASSIGN_RETURN",
+        "attributes": [
+          "parameters(period).impot_revenu",
+          "parameters(period).impot_revenu.calcul_impot_revenu",
+          "parameters(period).impot_revenu.calcul_impot_revenu.plaf_qf",
+          "parameters(period).impot_revenu.calcul_impot_revenu.plaf_qf.quotient_familial",
+          "quotient_familial.cas_general",
+          "quotient_familial.cas_general.conj",
+          "quotient_familial.cas_general.enf1",
+          "quotient_familial.cas_general.enf2",
+          "quotient_familial.cas_general.enf3_et_sup",
+          "quotient_familial.cas_general.veuf",
+          "quotient_familial.couple_ou_pers_a_charge",
+          "quotient_familial.couple_ou_pers_a_charge.inv1",
+          "quotient_familial.couple_ou_pers_a_charge.inv2",
+          "quotient_familial.couple_ou_pers_a_charge.isol",
+          "quotient_familial.couple_ou_pers_a_charge.not41",
+          "quotient_familial.couple_ou_pers_a_charge.not42",
+          "quotient_familial.couple_ou_pers_a_charge.not6",
+          "quotient_familial.sans_pers_a_charge",
+          "quotient_familial.sans_pers_a_charge.not31a",
+          "quotient_familial.sans_pers_a_charge.not31b",
+          "quotient_familial.sans_pers_a_charge.not32"
+        ],
+        "authoring_route": "V2_STRAIGHT_LINE",
+        "branch_count": 0,
+        "call_count": 38,
+        "calls": [
+          "foyer_fiscal",
+          "max_",
+          "min_",
+          "not_",
+          "parameters"
+        ],
+        "candidate_id": "53abfcd7d20a9cd6",
+        "class": "nbptr",
+        "complexity": "HIGH",
+        "evidence": "TEST_ONLY",
+        "function": "formula_2008_01_01",
+        "loop_count": 0,
+        "node_counts": {
+          "Add": 32,
+          "Assign": 42,
+          "Attribute": 46,
+          "BinOp": 98,
+          "BitAnd": 13,
+          "BitOr": 7,
+          "Call": 38,
+          "Compare": 8,
+          "Constant": 57,
+          "Div": 1,
+          "Eq": 5,
+          "Expr": 1,
+          "FunctionDef": 1,
+          "Gt": 1,
+          "GtE": 2,
+          "Load": 210,
+          "Mult": 40,
+          "Name": 206,
+          "Return": 1,
+          "Store": 42,
+          "Sub": 5,
+          "arg": 3,
+          "arguments": 1
+        },
+        "returns": [
+          "(maries_ou_pacses | jeune_veuf) * nb_parts_famille + (veuf & not_(jeune_veuf)) * nb_parts_veuf + celibataire_ou_divorce * nb_parts_celib"
+        ],
+        "source": "openfisca_france",
+        "top_level_statements": [
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "openfisca_france"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_66c5126e8147",
+    "authoring_routes": [
+      "V3_BRANCHING"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "7f523a5041034306"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "HIGH"
+    ],
+    "family_id": "ADAPTER-66c5126e8147",
+    "profiles": [
+      {
+        "adapter_shape": "BRANCHING",
+        "attributes": [
+          "matching_lines.aggregate",
+          "self.id",
+          "self.lines",
+          "self.lines.filter"
+        ],
+        "authoring_route": "V3_BRANCHING",
+        "branch_count": 1,
+        "call_count": 3,
+        "calls": [
+          "Sum",
+          "matching_lines.aggregate",
+          "self.lines.filter"
+        ],
+        "candidate_id": "7f523a5041034306",
+        "class": "AbstractBasket",
+        "complexity": "HIGH",
+        "evidence": "TEST_ONLY",
+        "function": "product_quantity",
+        "loop_count": 0,
+        "node_counts": {
+          "Assign": 2,
+          "Attribute": 4,
+          "BoolOp": 1,
+          "Call": 3,
+          "Compare": 1,
+          "Constant": 6,
+          "Expr": 1,
+          "FunctionDef": 1,
+          "If": 1,
+          "Is": 1,
+          "Load": 11,
+          "Name": 8,
+          "Or": 1,
+          "Return": 2,
+          "Store": 2,
+          "Subscript": 1,
+          "arg": 2,
+          "arguments": 1,
+          "keyword": 1
+        },
+        "returns": [
+          "quantity or 0",
+          "0"
+        ],
+        "source": "django_oscar",
+        "top_level_statements": [
+          "If",
+          "Assign",
+          "Assign",
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "django_oscar"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_2a9b21184be7",
+    "authoring_routes": [
+      "V3_BRANCHING"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "674ea6fd35fa6c39"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "HIGH"
+    ],
+    "family_id": "ADAPTER-2a9b21184be7",
+    "profiles": [
+      {
+        "adapter_shape": "BRANCHING",
+        "attributes": [
+          "self._transaction_key_reset",
+          "self.get_deferred_fields",
+          "super().__init__"
+        ],
+        "authoring_route": "V3_BRANCHING",
+        "branch_count": 1,
+        "call_count": 4,
+        "calls": [
+          "self._transaction_key_reset",
+          "self.get_deferred_fields",
+          "super",
+          "super().__init__"
+        ],
+        "candidate_id": "674ea6fd35fa6c39",
+        "class": "OrderPosition",
+        "complexity": "HIGH",
+        "evidence": "DOC_ONLY",
+        "function": "__init__",
+        "loop_count": 0,
+        "node_counts": {
+          "Attribute": 3,
+          "Call": 4,
+          "Expr": 2,
+          "FunctionDef": 1,
+          "If": 1,
+          "Load": 9,
+          "Name": 5,
+          "Not": 1,
+          "Starred": 1,
+          "UnaryOp": 1,
+          "arg": 3,
+          "arguments": 1,
+          "keyword": 1
+        },
+        "returns": [],
+        "source": "pretix",
+        "top_level_statements": [
+          "Expr",
+          "If"
+        ]
+      }
+    ],
+    "sources": [
+      "pretix"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_4ade2c9ff830",
+    "authoring_routes": [
+      "V3_BRANCHING"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "8b3e90ca7b531556"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "HIGH"
+    ],
+    "family_id": "ADAPTER-4ade2c9ff830",
+    "profiles": [
+      {
+        "adapter_shape": "BRANCHING",
+        "attributes": [
+          "(stockrecord.price * rate).quantize",
+          "self.get_exponent",
+          "self.get_rate",
+          "stockrecord.price",
+          "stockrecord.price_currency"
+        ],
+        "authoring_route": "V3_BRANCHING",
+        "branch_count": 1,
+        "call_count": 5,
+        "calls": [
+          "(stockrecord.price * rate).quantize",
+          "FixedPrice",
+          "UnavailablePrice",
+          "self.get_exponent",
+          "self.get_rate"
+        ],
+        "candidate_id": "8b3e90ca7b531556",
+        "class": "FixedRateTax",
+        "complexity": "HIGH",
+        "evidence": "TEST_AND_DOC",
+        "function": "parent_pricing_policy",
+        "loop_count": 0,
+        "node_counts": {
+          "Assign": 5,
+          "Attribute": 6,
+          "BinOp": 1,
+          "Call": 5,
+          "Compare": 1,
+          "Constant": 4,
+          "FunctionDef": 1,
+          "If": 1,
+          "IsNot": 1,
+          "ListComp": 1,
+          "Load": 27,
+          "Mult": 1,
+          "Name": 24,
+          "Not": 1,
+          "Return": 2,
+          "Store": 6,
+          "Subscript": 3,
+          "UnaryOp": 1,
+          "arg": 3,
+          "arguments": 1,
+          "comprehension": 1,
+          "keyword": 3
+        },
+        "returns": [
+          "FixedPrice(currency=stockrecord.price_currency, excl_tax=stockrecord.price, tax=tax)",
+          "UnavailablePrice()"
+        ],
+        "source": "django_oscar",
+        "top_level_statements": [
+          "Assign",
+          "If",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Assign",
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "django_oscar"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_ff59c7489eed",
+    "authoring_routes": [
+      "V3_BRANCHING"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "4008a63ee1ef3b44"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "HIGH"
+    ],
+    "family_id": "ADAPTER-ff59c7489eed",
+    "profiles": [
+      {
+        "adapter_shape": "BRANCHING",
+        "attributes": [
+          "self._event_permission_set",
+          "self.all_events",
+          "self.limit_events",
+          "self.limit_events.all",
+          "self.organizer"
+        ],
+        "authoring_route": "V3_BRANCHING",
+        "branch_count": 1,
+        "call_count": 5,
+        "calls": [
+          "any",
+          "isinstance",
+          "self._event_permission_set",
+          "self.limit_events.all"
+        ],
+        "candidate_id": "4008a63ee1ef3b44",
+        "class": "Device",
+        "complexity": "HIGH",
+        "evidence": "DOC_ONLY",
+        "function": "has_event_permission",
+        "loop_count": 0,
+        "node_counts": {
+          "And": 3,
+          "Assign": 1,
+          "Attribute": 6,
+          "BoolOp": 5,
+          "Call": 5,
+          "Compare": 4,
+          "Constant": 4,
+          "Eq": 1,
+          "Expr": 1,
+          "FunctionDef": 1,
+          "GeneratorExp": 1,
+          "If": 1,
+          "In": 3,
+          "Load": 26,
+          "Name": 21,
+          "Not": 1,
+          "Or": 2,
+          "Return": 2,
+          "Store": 2,
+          "Tuple": 1,
+          "UnaryOp": 1,
+          "arg": 6,
+          "arguments": 1,
+          "comprehension": 1
+        },
+        "returns": [
+          "has_event_access and (not perm_name or perm_name in self._event_permission_set())",
+          "has_event_access and any((p in self._event_permission_set() for p in perm_name))"
+        ],
+        "source": "pretix",
+        "top_level_statements": [
+          "Assign",
+          "If",
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "pretix"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_67c2eab08d97",
+    "authoring_routes": [
+      "V2_STRAIGHT_LINE",
+      "V3_BRANCHING"
+    ],
+    "candidate_count": 2,
+    "candidate_ids": [
+      "41ae4a7df4780001",
+      "8b98d0147c79c3fc"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "HIGH"
+    ],
+    "family_id": "ADAPTER-67c2eab08d97",
+    "profiles": [
+      {
+        "adapter_shape": "BRANCHING",
+        "attributes": [
+          "Order.STATUS_CANCELED",
+          "OrderPayment.PAYMENT_STATE_CONFIRMED",
+          "OrderPayment.PAYMENT_STATE_REFUNDED",
+          "OrderRefund.REFUND_STATE_CREATED",
+          "OrderRefund.REFUND_STATE_DONE",
+          "OrderRefund.REFUND_STATE_TRANSIT",
+          "self.payments",
+          "self.payments.filter",
+          "self.payments.filter(state__in=(OrderPayment.PAYMENT_STATE_CONFIRMED, OrderPayment.PAYMENT_STATE_REFUNDED)).aggregate",
+          "self.refunds",
+          "self.refunds.filter",
+          "self.refunds.filter(state__in=(OrderRefund.REFUND_STATE_DONE, OrderRefund.REFUND_STATE_TRANSIT, OrderRefund.REFUND_STATE_CREATED)).aggregate",
+          "self.status",
+          "self.total"
+        ],
+        "authoring_route": "V3_BRANCHING",
+        "branch_count": 1,
+        "call_count": 10,
+        "calls": [
+          "Decimal",
+          "Sum",
+          "scopes_disabled",
+          "self.payments.filter",
+          "self.payments.filter(state__in=(OrderPayment.PAYMENT_STATE_CONFIRMED, OrderPayment.PAYMENT_STATE_REFUNDED)).aggregate",
+          "self.refunds.filter",
+          "self.refunds.filter(state__in=(OrderRefund.REFUND_STATE_DONE, OrderRefund.REFUND_STATE_TRANSIT, OrderRefund.REFUND_STATE_CREATED)).aggregate"
+        ],
+        "candidate_id": "41ae4a7df4780001",
+        "class": "Order",
+        "complexity": "HIGH",
+        "evidence": "DOC_ONLY",
+        "function": "pending_sum",
+        "loop_count": 0,
+        "node_counts": {
+          "Add": 1,
+          "Assign": 4,
+          "Attribute": 14,
+          "BinOp": 2,
+          "BoolOp": 2,
+          "Call": 10,
+          "Compare": 1,
+          "Constant": 7,
+          "Eq": 1,
+          "FunctionDef": 1,
+          "If": 1,
+          "Load": 38,
+          "Name": 24,
+          "Or": 2,
+          "Return": 1,
+          "Store": 4,
+          "Sub": 1,
+          "Subscript": 2,
+          "Tuple": 2,
+          "arg": 1,
+          "arguments": 1,
+          "keyword": 4
+        },
+        "returns": [
+          "total - payment_sum + refund_sum"
+        ],
+        "source": "pretix",
+        "top_level_statements": [
+          "Assign",
+          "If",
+          "Assign",
+          "Assign",
+          "Return"
+        ]
+      },
+      {
+        "adapter_shape": "STRAIGHT_LINE_ASSIGN_RETURN",
+        "attributes": [
+          "OrderPayment.PAYMENT_STATE_CONFIRMED",
+          "OrderPayment.PAYMENT_STATE_REFUNDED",
+          "OrderRefund.REFUND_STATE_DONE",
+          "OrderRefund.REFUND_STATE_TRANSIT",
+          "self.order",
+          "self.order.payments",
+          "self.order.payments.filter",
+          "self.order.payments.filter(state__in=(OrderPayment.PAYMENT_STATE_CONFIRMED, OrderPayment.PAYMENT_STATE_REFUNDED)).aggregate",
+          "self.order.refunds",
+          "self.order.refunds.filter",
+          "self.order.refunds.filter(state__in=(OrderRefund.REFUND_STATE_DONE, OrderRefund.REFUND_STATE_TRANSIT, OrderRefund.REFUND_STATE_DONE)).aggregate"
+        ],
+        "authoring_route": "V2_STRAIGHT_LINE",
+        "branch_count": 0,
+        "call_count": 8,
+        "calls": [
+          "Decimal",
+          "Sum",
+          "self.order.payments.filter",
+          "self.order.payments.filter(state__in=(OrderPayment.PAYMENT_STATE_CONFIRMED, OrderPayment.PAYMENT_STATE_REFUNDED)).aggregate",
+          "self.order.refunds.filter",
+          "self.order.refunds.filter(state__in=(OrderRefund.REFUND_STATE_DONE, OrderRefund.REFUND_STATE_TRANSIT, OrderRefund.REFUND_STATE_DONE)).aggregate"
+        ],
+        "candidate_id": "8b98d0147c79c3fc",
+        "class": "OrderChangeManager",
+        "complexity": "HIGH",
+        "evidence": "NONE",
+        "function": "completed_payment_sum",
+        "loop_count": 0,
+        "node_counts": {
+          "Assign": 2,
+          "Attribute": 13,
+          "BinOp": 1,
+          "BoolOp": 2,
+          "Call": 8,
+          "Constant": 6,
+          "FunctionDef": 1,
+          "Load": 31,
+          "Name": 16,
+          "Or": 2,
+          "Return": 1,
+          "Store": 2,
+          "Sub": 1,
+          "Subscript": 2,
+          "Tuple": 2,
+          "arg": 1,
+          "arguments": 1,
+          "keyword": 4
+        },
+        "returns": [
+          "payment_sum - refund_sum"
+        ],
+        "source": "pretix",
+        "top_level_statements": [
+          "Assign",
+          "Assign",
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "pretix"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_906b40a8c9af",
+    "authoring_routes": [
+      "V3_BRANCHING"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "1311d905af0ebcb5"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "MEDIUM"
+    ],
+    "family_id": "ADAPTER-906b40a8c9af",
+    "profiles": [
+      {
+        "adapter_shape": "BRANCHING",
+        "attributes": [
+          "django_redis.get_redis_connection",
+          "p.execute",
+          "p.hdel",
+          "rc.pipeline",
+          "self.availability",
+          "self.event_id",
+          "self.pk",
+          "settings.HAS_REDIS"
+        ],
+        "authoring_route": "V3_BRANCHING",
+        "branch_count": 1,
+        "call_count": 12,
+        "calls": [
+          "django_redis.get_redis_connection",
+          "p.execute",
+          "p.hdel",
+          "rc.pipeline",
+          "self.availability",
+          "str"
+        ],
+        "candidate_id": "1311d905af0ebcb5",
+        "class": "Quota",
+        "complexity": "MEDIUM",
+        "evidence": "DOC_ONLY",
+        "function": "rebuild_cache",
+        "loop_count": 0,
+        "node_counts": {
+          "Assign": 2,
+          "Attribute": 17,
+          "Call": 12,
+          "Constant": 10,
+          "Expr": 6,
+          "FormattedValue": 4,
+          "FunctionDef": 1,
+          "If": 1,
+          "JoinedStr": 4,
+          "Load": 39,
+          "Name": 24,
+          "Store": 2,
+          "arg": 2,
+          "arguments": 1,
+          "keyword": 1
+        },
+        "returns": [],
+        "source": "pretix",
+        "top_level_statements": [
+          "If"
+        ]
+      }
+    ],
+    "sources": [
+      "pretix"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_bf5787990f81",
+    "authoring_routes": [
+      "V3_BRANCHING"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "2906fe3983a1ebe4"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "MEDIUM"
+    ],
+    "family_id": "ADAPTER-bf5787990f81",
+    "profiles": [
+      {
+        "adapter_shape": "BRANCHING",
+        "attributes": [
+          "self.num_allocated",
+          "self.num_in_stock"
+        ],
+        "authoring_route": "V3_BRANCHING",
+        "branch_count": 2,
+        "call_count": 0,
+        "calls": [],
+        "candidate_id": "2906fe3983a1ebe4",
+        "class": "AbstractStockRecord",
+        "complexity": "MEDIUM",
+        "evidence": "TEST_AND_DOC",
+        "function": "net_stock_level",
+        "loop_count": 0,
+        "node_counts": {
+          "Attribute": 5,
+          "BinOp": 1,
+          "Compare": 2,
+          "Constant": 4,
+          "Expr": 1,
+          "FunctionDef": 1,
+          "If": 2,
+          "Is": 2,
+          "Load": 11,
+          "Name": 6,
+          "Return": 3,
+          "Sub": 1,
+          "arg": 1,
+          "arguments": 1
+        },
+        "returns": [
+          "self.num_in_stock - self.num_allocated",
+          "0",
+          "self.num_in_stock"
+        ],
+        "source": "django_oscar",
+        "top_level_statements": [
+          "If",
+          "If",
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "django_oscar"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_24c3054e49c7",
+    "authoring_routes": [
+      "V3_BRANCHING"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "f3ebe6cce422947e"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "MEDIUM"
+    ],
+    "family_id": "ADAPTER-24c3054e49c7",
+    "profiles": [
+      {
+        "adapter_shape": "BRANCHING",
+        "attributes": [
+          "self.num_available"
+        ],
+        "authoring_route": "V3_BRANCHING",
+        "branch_count": 2,
+        "call_count": 2,
+        "calls": [
+          "_"
+        ],
+        "candidate_id": "f3ebe6cce422947e",
+        "class": "StockRequired",
+        "complexity": "MEDIUM",
+        "evidence": "TEST_AND_DOC",
+        "function": "is_purchase_permitted",
+        "loop_count": 0,
+        "node_counts": {
+          "Assign": 1,
+          "Attribute": 3,
+          "BinOp": 1,
+          "Call": 2,
+          "Compare": 2,
+          "Constant": 8,
+          "Dict": 1,
+          "FunctionDef": 1,
+          "Gt": 1,
+          "If": 2,
+          "Load": 13,
+          "LtE": 1,
+          "Mod": 1,
+          "Name": 8,
+          "Return": 3,
+          "Store": 1,
+          "Tuple": 3,
+          "arg": 2,
+          "arguments": 1
+        },
+        "returns": [
+          "(True, '')",
+          "(False, _('no stock available'))",
+          "(False, msg)"
+        ],
+        "source": "django_oscar",
+        "top_level_statements": [
+          "If",
+          "If",
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "django_oscar"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_5f386a660c33",
+    "authoring_routes": [
+      "V3_BRANCHING"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "e8850260c2763222"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "HIGH"
+    ],
+    "family_id": "ADAPTER-5f386a660c33",
+    "profiles": [
+      {
+        "adapter_shape": "BRANCHING",
+        "attributes": [
+          "condition.consume_items",
+          "line.quantity_with_offer_discount",
+          "self.get_applicable_lines"
+        ],
+        "authoring_route": "V3_BRANCHING",
+        "branch_count": 2,
+        "call_count": 5,
+        "calls": [
+          "BasketDiscount",
+          "apply_discount",
+          "condition.consume_items",
+          "line.quantity_with_offer_discount",
+          "self.get_applicable_lines"
+        ],
+        "candidate_id": "e8850260c2763222",
+        "class": "MultibuyDiscountBenefit",
+        "complexity": "HIGH",
+        "evidence": "TEST_AND_DOC",
+        "function": "apply",
+        "loop_count": 0,
+        "node_counts": {
+          "Assign": 3,
+          "Attribute": 3,
+          "Call": 5,
+          "Compare": 1,
+          "Constant": 4,
+          "Eq": 1,
+          "Expr": 2,
+          "FunctionDef": 1,
+          "If": 2,
+          "List": 1,
+          "Load": 27,
+          "Name": 25,
+          "Not": 1,
+          "Return": 3,
+          "Store": 5,
+          "Subscript": 1,
+          "Tuple": 2,
+          "UnaryOp": 1,
+          "arg": 5,
+          "arguments": 1
+        },
+        "returns": [
+          "ZERO_DISCOUNT",
+          "BasketDiscount(discount)",
+          "ZERO_DISCOUNT"
+        ],
+        "source": "django_oscar",
+        "top_level_statements": [
+          "Assign",
+          "If",
+          "Assign",
+          "If"
+        ]
+      }
+    ],
+    "sources": [
+      "django_oscar"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_abacec1ff3de",
+    "authoring_routes": [
+      "V3_BRANCHING"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "0f73ae8d15cf3408"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "HIGH"
+    ],
+    "family_id": "ADAPTER-abacec1ff3de",
+    "profiles": [
+      {
+        "adapter_shape": "BRANCHING",
+        "attributes": [
+          "dl_date.datetime",
+          "self.event",
+          "self.event.has_subevents",
+          "self.event.settings",
+          "self.event.settings.get",
+          "self.event.subevents",
+          "self.event.subevents.filter",
+          "self.positions",
+          "self.positions.values_list"
+        ],
+        "authoring_route": "V3_BRANCHING",
+        "branch_count": 3,
+        "call_count": 6,
+        "calls": [
+          "dl_date.datetime",
+          "min",
+          "self.event.settings.get",
+          "self.event.subevents.filter",
+          "self.positions.values_list"
+        ],
+        "candidate_id": "0f73ae8d15cf3408",
+        "class": "Order",
+        "complexity": "HIGH",
+        "evidence": "DOC_ONLY",
+        "function": "ticket_download_date",
+        "loop_count": 0,
+        "node_counts": {
+          "Assign": 4,
+          "Attribute": 13,
+          "Call": 6,
+          "Constant": 5,
+          "Expr": 1,
+          "FunctionDef": 1,
+          "If": 2,
+          "IfExp": 1,
+          "ListComp": 1,
+          "Load": 28,
+          "Name": 20,
+          "Return": 1,
+          "Store": 5,
+          "arg": 1,
+          "arguments": 1,
+          "comprehension": 1,
+          "keyword": 3
+        },
+        "returns": [
+          "dl_date"
+        ],
+        "source": "pretix",
+        "top_level_statements": [
+          "Assign",
+          "If",
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "pretix"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_4074c971327c",
+    "authoring_routes": [
+      "V3_BRANCHING"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "801278c4d91c2185"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "MEDIUM"
+    ],
+    "family_id": "ADAPTER-4074c971327c",
+    "profiles": [
+      {
+        "adapter_shape": "BRANCHING",
+        "attributes": [
+          "' ({})'.format",
+          "_('incl. {rate}% {name}').format",
+          "_('plus {rate}% {name}').format",
+          "self.eu_reverse_charge",
+          "self.internal_name",
+          "self.name",
+          "self.price_includes_tax",
+          "self.rate"
+        ],
+        "authoring_route": "V3_BRANCHING",
+        "branch_count": 3,
+        "call_count": 7,
+        "calls": [
+          "' ({})'.format",
+          "_",
+          "_('incl. {rate}% {name}').format",
+          "_('plus {rate}% {name}').format",
+          "str"
+        ],
+        "candidate_id": "801278c4d91c2185",
+        "class": "TaxRule",
+        "complexity": "MEDIUM",
+        "evidence": "DOC_ONLY",
+        "function": "__str__",
+        "loop_count": 0,
+        "node_counts": {
+          "Add": 1,
+          "Assign": 2,
+          "Attribute": 11,
+          "AugAssign": 1,
+          "Call": 7,
+          "Constant": 6,
+          "FormattedValue": 2,
+          "FunctionDef": 1,
+          "If": 3,
+          "JoinedStr": 1,
+          "Load": 25,
+          "Name": 17,
+          "Return": 2,
+          "Store": 3,
+          "arg": 1,
+          "arguments": 1,
+          "keyword": 4
+        },
+        "returns": [
+          "str(s)",
+          "f'{self.internal_name} ({s})'"
+        ],
+        "source": "pretix",
+        "top_level_statements": [
+          "If",
+          "If",
+          "If",
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "pretix"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  },
+  {
+    "adapter_function": "adapt_adapter_33abb6b505c0",
+    "authoring_routes": [
+      "V3_BRANCHING"
+    ],
+    "candidate_count": 1,
+    "candidate_ids": [
+      "7013ce92618a1e33"
+    ],
+    "certification_claim": false,
+    "complexities": [
+      "HIGH"
+    ],
+    "family_id": "ADAPTER-33abb6b505c0",
+    "profiles": [
+      {
+        "adapter_shape": "BRANCHING",
+        "attributes": [
+          "line.purchase_info",
+          "line.purchase_info.availability",
+          "line.purchase_info.availability.is_purchase_permitted",
+          "line.purchase_info.availability.num_available",
+          "self.basket_quantity",
+          "self.max_allowed_quantity"
+        ],
+        "authoring_route": "V3_BRANCHING",
+        "branch_count": 4,
+        "call_count": 6,
+        "calls": [
+          "_",
+          "line.purchase_info.availability.is_purchase_permitted",
+          "self.basket_quantity",
+          "self.max_allowed_quantity"
+        ],
+        "candidate_id": "7013ce92618a1e33",
+        "class": "AbstractBasket",
+        "complexity": "HIGH",
+        "evidence": "TEST_ONLY",
+        "function": "is_quantity_allowed",
+        "loop_count": 0,
+        "node_counts": {
+          "Add": 1,
+          "And": 1,
+          "Assign": 4,
+          "Attribute": 11,
+          "BinOp": 3,
+          "BoolOp": 1,
+          "Call": 6,
+          "Compare": 3,
+          "Constant": 11,
+          "Dict": 2,
+          "Expr": 1,
+          "FunctionDef": 1,
+          "Gt": 1,
+          "If": 4,
+          "IsNot": 2,
+          "Load": 36,
+          "Mod": 2,
+          "Name": 28,
+          "Not": 2,
+          "Return": 4,
+          "Store": 10,
+          "Tuple": 7,
+          "UnaryOp": 2,
+          "arg": 3,
+          "arguments": 1
+        },
+        "returns": [
+          "(True, None)",
+          "(False, _('Due to technical limitations we are not able to ship more than %(threshold)d items in one order.') % {'threshold': basket_threshold})",
+          "(line_purchase_permitted, reason)",
+          "(line_purchase_permitted, _('Available stock is only %(max)d, which has been exceeded because multiple lines contain the same product.') % {'max': line.purchase_info.availability.num_available})"
+        ],
+        "source": "django_oscar",
+        "top_level_statements": [
+          "Assign",
+          "If",
+          "If",
+          "Return"
+        ]
+      }
+    ],
+    "sources": [
+      "django_oscar"
+    ],
+    "status": "ADAPTER_NOT_YET_AUTHORED",
+    "terminal_outcome": null
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "arbitrary_python_claim": false,
+  "claim_scope": "independent development-time hardening of the frozen generic certification pipeline; development oracles are not part of engine routing",
+  "deterministic_cases": 6,
+  "development_oracles_case_specific": true,
+  "development_oracles_used_by_engine": false,
+  "engine_case_specific_routing": false,
+  "external_holdout_cases_used": 0,
+  "external_outcomes_observed": 0,
+  "independent_mutants_detected": 6,
+  "independent_runtime_oracles": 6,
+  "metamorphic_preserved": 6,
+  "negative_controls": 3,
+  "negative_controls_rejected": 3,
+  "outcome_profile": {
+    "mixed.py": "CERTIFIED_A1",
+    "nested_logic.py": "CERTIFIED_A2",
+    "opaque_binding.py": "CERTIFIED_A2",
+    "state_effect.py": "CERTIFIED_A1",
+    "structured_dict.py": "CERTIFIED_A2",
+    "structured_tuple.py": "CERTIFIED_A2"
+  },
+  "positive_cases": 6,
+  "schema_version": "BIZPROOF-V0.13-HARDENING-1"
+}

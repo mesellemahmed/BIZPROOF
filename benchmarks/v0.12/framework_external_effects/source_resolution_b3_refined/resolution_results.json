@@ -1,0 +1,1578 @@
+{
+  "03e2adf4e4f323b1": {
+    "authoritative_source": true,
+    "candidate_id": "03e2adf4e4f323b1",
+    "certification_started": false,
+    "global_name_hints": [
+      "save"
+    ],
+    "project": "pretix",
+    "reason_codes": "MODEL_SAVE_TRANSACTION_STATE_OUTSIDE_FORMAL_SUBSET",
+    "recovery_claim": false,
+    "selected": {
+      "class_name": "Order",
+      "end_lineno": 623,
+      "fingerprints": {
+        "ast_dump": "ee921d9fe33f848c94d5a693bc02eac02935a1f14474d8aff798e87f61802cf8",
+        "ast_unparse": "4541b4340d38f7746cefb4598a1717a16f42d4929a9fe433374dad9ddda22b22",
+        "dedent_strip": "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+        "dedent_strip_newline": "c45e21b4b1aba84ed76540197f5f1699f12210348871240bbeb2b7c95708c297",
+        "lf": "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+        "raw": "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437"
+      },
+      "function_name": "save",
+      "lineno": 584,
+      "matched_hash": "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+      "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+      "project": "pretix",
+      "source": "def save(self, **kwargs):\n        if 'update_fields' in kwargs:\n            kwargs['update_fields'] = {'last_modified'}.union(kwargs['update_fields'])\n        if not self.code:\n            self.assign_code()\n            if 'update_fields' in kwargs:\n                kwargs['update_fields'] = {'code'}.union(kwargs['update_fields'])\n        if not self.datetime:\n            self.datetime = now()\n            if 'update_fields' in kwargs:\n                kwargs['update_fields'] = {'datetime'}.union(kwargs['update_fields'])\n        if not self.expires:\n            self.set_expires()\n            if 'update_fields' in kwargs:\n                kwargs['update_fields'] = {'expires'}.union(kwargs['update_fields'])\n        if not self.organizer_id:\n            self.organizer_id = self.event.organizer_id\n            if 'update_fields' in kwargs:\n                kwargs['update_fields'] = {'organizer'}.union(kwargs['update_fields'])\n\n        is_new = not self.pk\n        update_fields = kwargs.get('update_fields', [])\n        if 'require_approval' not in self.get_deferred_fields() and 'status' not in self.get_deferred_fields():\n            status_paid_or_pending = self.status in (Order.STATUS_PENDING, Order.STATUS_PAID) and not self.require_approval\n            if status_paid_or_pending != self.__initial_status_paid_or_pending:\n                _transactions_mark_order_dirty(self.pk, using=kwargs.get('using', None))\n        elif (\n            not kwargs.get('force_save_with_deferred_fields', None) and\n            (not update_fields or ('require_approval' not in update_fields and 'status' not in update_fields))\n        ):\n            _fail(\"It is unsafe to call save() on an Order with deferred fields since we can't check if you missed \"\n                  \"creating a transaction. Call save(force_save_with_deferred_fields=True) if you really want to do \"\n                  \"this.\")\n\n        r = super().save(**kwargs)\n\n        if is_new:\n            _transactions_mark_order_dirty(self.pk, using=kwargs.get('using', None))\n\n        return r"
+    },
+    "status": "STRUCTURED_DIRECT_HASH_RESOLVED",
+    "structured_conjunction_location_count": 0,
+    "structured_record_count": 28,
+    "support_records": [
+      {
+        "direct_hashes": [
+          "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+          "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+        ],
+        "file": "benchmarks\\v0.11\\controlled_complex_closure\\execution_probe.jsonl",
+        "function_names": [
+          "save"
+        ],
+        "hashes": [
+          "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+          "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+        ],
+        "object_path": "$line[1]",
+        "path_hints": [],
+        "relevant_fields": [
+          {
+            "key_path": "$.candidate_id",
+            "value": "03e2adf4e4f323b1"
+          },
+          {
+            "key_path": "$.execution_probe_digest",
+            "value": "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+          },
+          {
+            "key_path": "$.function",
+            "value": "save"
+          },
+          {
+            "key_path": "$.function_sha256",
+            "value": "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437"
+          },
+          {
+            "key_path": "$.source",
+            "value": "pretix"
+          }
+        ]
+      },
+      {
+        "direct_hashes": [
+          "484ab3244449b78903da0eafb20acb58980e82551ea0d4083696ad13d747e0ae",
+          "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+          "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+        ],
+        "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_outcomes.jsonl",
+        "function_names": [
+          "save"
+        ],
+        "hashes": [
+          "484ab3244449b78903da0eafb20acb58980e82551ea0d4083696ad13d747e0ae",
+          "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+          "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+        ],
+        "object_path": "$line[1]",
+        "path_hints": [],
+        "relevant_fields": [
+          {
+            "key_path": "$.candidate_id",
+            "value": "03e2adf4e4f323b1"
+          },
+          {
+            "key_path": "$.execution_probe_digest",
+            "value": "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+          },
+          {
+            "key_path": "$.function",
+            "value": "save"
+          },
+          {
+            "key_path": "$.function_sha256",
+            "value": "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437"
+          },
+          {
+            "key_path": "$.negative_evidence_digest",
+            "value": "484ab3244449b78903da0eafb20acb58980e82551ea0d4083696ad13d747e0ae"
+          },
+          {
+            "key_path": "$.source",
+            "value": "pretix"
+          }
+        ]
+      },
+      {
+        "direct_hashes": [
+          "0a42c3b2e4a0c81f669faf8a21907dff1bb1ccc802d5b9cf7c5a35faa0fd191f",
+          "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef",
+          "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437"
+        ],
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "function_names": [
+          "save"
+        ],
+        "hashes": [
+          "0a42c3b2e4a0c81f669faf8a21907dff1bb1ccc802d5b9cf7c5a35faa0fd191f",
+          "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef",
+          "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437"
+        ],
+        "object_path": "$line[63]",
+        "path_hints": [
+          "doc/api/fundamentals.rst",
+          "doc/api/guides/custom_checkout.rst",
+          "doc/api/guides/order_lifecycle.rst",
+          "doc/api/oauth.rst",
+          "doc/api/resources/auto_checkin_rules.rst",
+          "doc/api/resources/banktransfer.rst",
+          "doc/api/resources/carts.rst",
+          "doc/api/resources/certificates.rst",
+          "src/pretix/base/models/orders.py"
+        ],
+        "relevant_fields": [
+          {
+            "key_path": "$.candidate.business_keyword_sources.class[0]",
+            "value": "order"
+          },
+          {
+            "key_path": "$.candidate.business_keyword_sources.path[0]",
+            "value": "order"
+          },
+          {
+            "key_path": "$.candidate.file",
+            "value": "src/pretix/base/models/orders.py"
+          },
+          {
+            "key_path": "$.candidate.function",
+            "value": "save"
+          },
+          {
+            "key_path": "$.candidate.function_sha256",
+            "value": "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437"
+          },
+          {
+            "key_path": "$.candidate.source_file_sha256",
+            "value": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef"
+          },
+          {
+            "key_path": "$.candidate.source_id",
+            "value": "pretix"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[0]",
+            "value": "doc/api/fundamentals.rst"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[1]",
+            "value": "doc/api/guides/custom_checkout.rst"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[2]",
+            "value": "doc/api/guides/order_lifecycle.rst"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[3]",
+            "value": "doc/api/oauth.rst"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[4]",
+            "value": "doc/api/resources/auto_checkin_rules.rst"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[5]",
+            "value": "doc/api/resources/banktransfer.rst"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[6]",
+            "value": "doc/api/resources/carts.rst"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[7]",
+            "value": "doc/api/resources/certificates.rst"
+          },
+          {
+            "key_path": "$.candidate_id",
+            "value": "03e2adf4e4f323b1"
+          },
+          {
+            "key_path": "$.selection_hash",
+            "value": "0a42c3b2e4a0c81f669faf8a21907dff1bb1ccc802d5b9cf7c5a35faa0fd191f"
+          },
+          {
+            "key_path": "$.stratum.source_id",
+            "value": "pretix"
+          }
+        ]
+      },
+      {
+        "direct_hashes": [
+          "484ab3244449b78903da0eafb20acb58980e82551ea0d4083696ad13d747e0ae",
+          "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+          "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+        ],
+        "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_evidence\\03e2adf4e4f323b1.json",
+        "function_names": [
+          "save"
+        ],
+        "hashes": [
+          "484ab3244449b78903da0eafb20acb58980e82551ea0d4083696ad13d747e0ae",
+          "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+          "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+        ],
+        "object_path": "$",
+        "path_hints": [],
+        "relevant_fields": [
+          {
+            "key_path": "$.candidate_id",
+            "value": "03e2adf4e4f323b1"
+          },
+          {
+            "key_path": "$.execution_probe_digest",
+            "value": "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+          },
+          {
+            "key_path": "$.function",
+            "value": "save"
+          },
+          {
+            "key_path": "$.function_sha256",
+            "value": "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437"
+          },
+          {
+            "key_path": "$.negative_evidence_digest",
+            "value": "484ab3244449b78903da0eafb20acb58980e82551ea0d4083696ad13d747e0ae"
+          },
+          {
+            "key_path": "$.source",
+            "value": "pretix"
+          }
+        ]
+      }
+    ],
+    "tier_a_hashes": [],
+    "tier_a_hit_count": 0
+  },
+  "63e7979762bf860b": {
+    "authoritative_source": true,
+    "candidate_id": "63e7979762bf860b",
+    "certification_started": false,
+    "global_name_hints": [
+      "form_valid"
+    ],
+    "project": "django_oscar",
+    "reason_codes": "FRAMEWORK_SIGNAL_BASKET_SIDE_EFFECTS_OUTSIDE_FORMAL_SUBSET",
+    "recovery_claim": false,
+    "selected": {
+      "class_name": "BasketAddView",
+      "end_lineno": 382,
+      "fingerprints": {
+        "ast_dump": "97e40d83a9a8bff8e12fe174e3d34d474f8d154d5c4b80947ebbaf8ce7fc84a3",
+        "ast_unparse": "f300023b96e04741bb3569591f970cccf136898c3f7550d6374564af80878a89",
+        "dedent_strip": "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34",
+        "dedent_strip_newline": "43bbec5180b4bd904c349ba69ff2a510e91781a14dee5844b9c25667889f5242",
+        "lf": "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34",
+        "raw": "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34"
+      },
+      "function_name": "form_valid",
+      "lineno": 359,
+      "matched_hash": "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34",
+      "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\basket\\views.py",
+      "project": "django_oscar",
+      "source": "def form_valid(self, form):\n        offers_before = self.request.basket.applied_offers()\n\n        # pylint: disable=W0201\n        self.line, self.line_created = self.request.basket.add_product(\n            form.product, form.cleaned_data[\"quantity\"], form.cleaned_options()\n        )\n\n        messages.success(\n            self.request, self.get_success_message(form), extra_tags=\"safe noicon\"\n        )\n\n        # Check for additional offer messages\n        BasketMessageGenerator().apply_messages(self.request, offers_before)\n\n        # Send signal for basket addition\n        self.add_signal.send(\n            sender=self,\n            product=form.product,\n            user=self.request.user,\n            request=self.request,\n        )\n\n        return super().form_valid(form)"
+    },
+    "status": "TIER_A_HASH_RESOLVED",
+    "structured_conjunction_location_count": 0,
+    "structured_record_count": 28,
+    "support_records": [],
+    "tier_a_hashes": [
+      "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34"
+    ],
+    "tier_a_hit_count": 1
+  },
+  "7460029971aad8de": {
+    "authoritative_source": true,
+    "candidate_id": "7460029971aad8de",
+    "certification_started": false,
+    "global_name_hints": [
+      "availability"
+    ],
+    "project": "pretix",
+    "reason_codes": "SERVICE_CACHE_OBJECT_SEMANTICS_OUTSIDE_FORMAL_SUBSET",
+    "recovery_claim": false,
+    "selected": {
+      "class_name": "Quota",
+      "end_lineno": 2181,
+      "fingerprints": {
+        "ast_dump": "d0a46e44a4766c7aa740e7bdd90a6d08bf8252576603c9f636af3933ed97c63e",
+        "ast_unparse": "9ca74e9263b75df7f2800fe7819cc5517cc68b411f63e7e478e389404feb4ba7",
+        "dedent_strip": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+        "dedent_strip_newline": "fcafa39b6554dab7c020bee07a67cff107c3f60e5dc9a9e8c061ddb0b18b8ac4",
+        "lf": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+        "raw": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed"
+      },
+      "function_name": "availability",
+      "lineno": 2147,
+      "matched_hash": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+      "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\items.py",
+      "project": "pretix",
+      "source": "def availability(\n            self, now_dt: datetime=None, count_waitinglist=True, _cache=None, allow_cache=False\n    ) -> Tuple[int, int]:\n        \"\"\"\n        This method is used to determine whether Items or ItemVariations belonging\n        to this quota should currently be available for sale.\n\n        :param count_waitinglist: Whether or not take waiting list reservations into account. Defaults\n                                  to ``True``.\n        :param _cache: A dictionary mapping quota IDs to availabilities. If this quota is already\n                       contained in that dictionary, this value will be used. Otherwise, the dict\n                       will be populated accordingly.\n        :param allow_cache: Allow for values to be returned from the longer-term cache, see also\n                            the documentation of this model class. Only works if ``count_waitinglist`` is\n                            set to ``True``.\n\n        :returns: a tuple where the first entry is one of the ``Quota.AVAILABILITY_`` constants\n                  and the second is the number of available tickets.\n        \"\"\"\n        from ..services.quotas import QuotaAvailability\n\n        if _cache and count_waitinglist is not _cache.get('_count_waitinglist', True):\n            _cache.clear()\n\n        if _cache is not None and self.pk in _cache:\n            return _cache[self.pk]\n        qa = QuotaAvailability(count_waitinglist=count_waitinglist, early_out=False)\n        qa.queue(self)\n        qa.compute(now_dt=now_dt, allow_cache=allow_cache)\n        res = qa.results[self]\n\n        if _cache is not None:\n            _cache[self.pk] = res\n            _cache['_count_waitinglist'] = count_waitinglist\n        return res"
+    },
+    "status": "STRUCTURED_DIRECT_HASH_RESOLVED",
+    "structured_conjunction_location_count": 0,
+    "structured_record_count": 28,
+    "support_records": [
+      {
+        "direct_hashes": [
+          "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+          "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+        ],
+        "file": "benchmarks\\v0.11\\controlled_complex_closure\\execution_probe.jsonl",
+        "function_names": [
+          "availability"
+        ],
+        "hashes": [
+          "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+          "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+        ],
+        "object_path": "$line[5]",
+        "path_hints": [],
+        "relevant_fields": [
+          {
+            "key_path": "$.candidate_id",
+            "value": "7460029971aad8de"
+          },
+          {
+            "key_path": "$.execution_probe_digest",
+            "value": "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+          },
+          {
+            "key_path": "$.function",
+            "value": "availability"
+          },
+          {
+            "key_path": "$.function_sha256",
+            "value": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed"
+          },
+          {
+            "key_path": "$.source",
+            "value": "pretix"
+          }
+        ]
+      },
+      {
+        "direct_hashes": [
+          "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+          "0830e3da863ca977bff711952c17e4c8e7e1e216174f5bc8431bc88181c03c5a",
+          "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+        ],
+        "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_outcomes.jsonl",
+        "function_names": [
+          "availability"
+        ],
+        "hashes": [
+          "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+          "0830e3da863ca977bff711952c17e4c8e7e1e216174f5bc8431bc88181c03c5a",
+          "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+        ],
+        "object_path": "$line[3]",
+        "path_hints": [],
+        "relevant_fields": [
+          {
+            "key_path": "$.candidate_id",
+            "value": "7460029971aad8de"
+          },
+          {
+            "key_path": "$.execution_probe_digest",
+            "value": "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+          },
+          {
+            "key_path": "$.function",
+            "value": "availability"
+          },
+          {
+            "key_path": "$.function_sha256",
+            "value": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed"
+          },
+          {
+            "key_path": "$.negative_evidence_digest",
+            "value": "0830e3da863ca977bff711952c17e4c8e7e1e216174f5bc8431bc88181c03c5a"
+          },
+          {
+            "key_path": "$.source",
+            "value": "pretix"
+          }
+        ]
+      },
+      {
+        "direct_hashes": [
+          "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+          "1a7e544e923ae44df55816c50325220efa9d9d52f78d98b0b82c905e31f10453",
+          "9f31603d7994b3861b7d319eac411392a1748d04c2b9322469565fd2dc69bc7d"
+        ],
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "function_names": [
+          "availability"
+        ],
+        "hashes": [
+          "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+          "1a7e544e923ae44df55816c50325220efa9d9d52f78d98b0b82c905e31f10453",
+          "9f31603d7994b3861b7d319eac411392a1748d04c2b9322469565fd2dc69bc7d"
+        ],
+        "object_path": "$line[66]",
+        "path_hints": [
+          "doc/api/guides/custom_checkout.rst",
+          "doc/api/resources/carts.rst",
+          "doc/api/resources/exhibitors.rst",
+          "doc/api/resources/exporters.rst",
+          "doc/api/resources/item_bundles.rst",
+          "doc/api/resources/items.rst",
+          "doc/api/resources/offlinesales.rst",
+          "doc/api/resources/orders.rst",
+          "src/pretix/base/models/items.py"
+        ],
+        "relevant_fields": [
+          {
+            "key_path": "$.candidate.business_keyword_sources.class[0]",
+            "value": "quota"
+          },
+          {
+            "key_path": "$.candidate.business_keyword_sources.docstring[0]",
+            "value": "account"
+          },
+          {
+            "key_path": "$.candidate.business_keyword_sources.docstring[1]",
+            "value": "availability"
+          },
+          {
+            "key_path": "$.candidate.business_keyword_sources.docstring[2]",
+            "value": "quota"
+          },
+          {
+            "key_path": "$.candidate.business_keyword_sources.function[0]",
+            "value": "availability"
+          },
+          {
+            "key_path": "$.candidate.evidence_link_modes.doc:EXACT_FUNCTION_TEXT",
+            "value": "6"
+          },
+          {
+            "key_path": "$.candidate.file",
+            "value": "src/pretix/base/models/items.py"
+          },
+          {
+            "key_path": "$.candidate.function",
+            "value": "availability"
+          },
+          {
+            "key_path": "$.candidate.function_sha256",
+            "value": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed"
+          },
+          {
+            "key_path": "$.candidate.source_file_sha256",
+            "value": "9f31603d7994b3861b7d319eac411392a1748d04c2b9322469565fd2dc69bc7d"
+          },
+          {
+            "key_path": "$.candidate.source_id",
+            "value": "pretix"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[0]",
+            "value": "doc/api/guides/custom_checkout.rst"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[1]",
+            "value": "doc/api/resources/carts.rst"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[2]",
+            "value": "doc/api/resources/exhibitors.rst"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[3]",
+            "value": "doc/api/resources/exporters.rst"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[4]",
+            "value": "doc/api/resources/item_bundles.rst"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[5]",
+            "value": "doc/api/resources/items.rst"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[6]",
+            "value": "doc/api/resources/offlinesales.rst"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[7]",
+            "value": "doc/api/resources/orders.rst"
+          },
+          {
+            "key_path": "$.candidate_id",
+            "value": "7460029971aad8de"
+          },
+          {
+            "key_path": "$.selection_hash",
+            "value": "1a7e544e923ae44df55816c50325220efa9d9d52f78d98b0b82c905e31f10453"
+          },
+          {
+            "key_path": "$.stratum.source_id",
+            "value": "pretix"
+          }
+        ]
+      },
+      {
+        "direct_hashes": [
+          "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+          "0830e3da863ca977bff711952c17e4c8e7e1e216174f5bc8431bc88181c03c5a",
+          "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+        ],
+        "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_evidence\\7460029971aad8de.json",
+        "function_names": [
+          "availability"
+        ],
+        "hashes": [
+          "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+          "0830e3da863ca977bff711952c17e4c8e7e1e216174f5bc8431bc88181c03c5a",
+          "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+        ],
+        "object_path": "$",
+        "path_hints": [],
+        "relevant_fields": [
+          {
+            "key_path": "$.candidate_id",
+            "value": "7460029971aad8de"
+          },
+          {
+            "key_path": "$.execution_probe_digest",
+            "value": "5f4582c97fc44e5a5f59c673f1e223b986026fd0c0aa8ac6b477d2cc1fc106e5"
+          },
+          {
+            "key_path": "$.function",
+            "value": "availability"
+          },
+          {
+            "key_path": "$.function_sha256",
+            "value": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed"
+          },
+          {
+            "key_path": "$.negative_evidence_digest",
+            "value": "0830e3da863ca977bff711952c17e4c8e7e1e216174f5bc8431bc88181c03c5a"
+          },
+          {
+            "key_path": "$.source",
+            "value": "pretix"
+          }
+        ]
+      }
+    ],
+    "tier_a_hashes": [],
+    "tier_a_hit_count": 0
+  },
+  "7cf281a33e5781df": {
+    "authoritative_source": true,
+    "candidate_id": "7cf281a33e5781df",
+    "certification_started": false,
+    "global_name_hints": [
+      "price"
+    ],
+    "project": "pretix",
+    "reason_codes": "OBJECT_STATE_TRANSITION_OUTSIDE_FORMAL_SUBSET",
+    "recovery_claim": false,
+    "selected": {
+      "class_name": "OrderFee",
+      "end_lineno": 2512,
+      "fingerprints": {
+        "ast_dump": "d8288659da9f9307bfa971b766437480c33118917df2481df425aaad5c67c8d7",
+        "ast_unparse": "a2487278343c4dba01f7315368d3b8760c61bdd55c070398a4b6f82383f826f3",
+        "dedent_strip": "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f",
+        "dedent_strip_newline": "8217b9c1017094639549aa1867bb7c586cdcaf6f45cf17faee47aea97416c799",
+        "lf": "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f",
+        "raw": "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f"
+      },
+      "function_name": "price",
+      "lineno": 2511,
+      "matched_hash": "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f",
+      "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+      "project": "pretix",
+      "source": "def price(self, value):\n        self.value = value"
+    },
+    "status": "TIER_A_HASH_RESOLVED",
+    "structured_conjunction_location_count": 0,
+    "structured_record_count": 29,
+    "support_records": [],
+    "tier_a_hashes": [
+      "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f"
+    ],
+    "tier_a_hit_count": 1
+  },
+  "91b2dc32504282fc": {
+    "authoritative_source": true,
+    "candidate_id": "91b2dc32504282fc",
+    "certification_started": false,
+    "global_name_hints": [
+      "discount"
+    ],
+    "project": "django_oscar",
+    "reason_codes": "MULTI_STATE_MUTATION_OUTSIDE_FORMAL_SUBSET",
+    "recovery_claim": false,
+    "selected": {
+      "class_name": "LineDiscountRegistry",
+      "end_lineno": 221,
+      "fingerprints": {
+        "ast_dump": "20ccbedea033cf4698bc0dab52b59c80106a8d43565a5f1bb8a1b875a59a9db4",
+        "ast_unparse": "8c615f29a84d19818817d7c11d2c955b6db82f0f7783ce2f65700caf77071b67",
+        "dedent_strip": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+        "dedent_strip_newline": "62156758869d8447e85f09f7ded2384d355530941af471edd5af57dedf2b8f61",
+        "lf": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+        "raw": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475"
+      },
+      "function_name": "discount",
+      "lineno": 215,
+      "matched_hash": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+      "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\basket\\utils.py",
+      "project": "django_oscar",
+      "source": "def discount(self, amount, quantity, incl_tax=True, offer=None):\n        self._discounts.append(DiscountApplication(amount, quantity, incl_tax, offer))\n        self.consume(quantity, offer=offer)\n        if incl_tax:\n            self._discount_incl_tax = None\n        else:\n            self._discount_excl_tax = None"
+    },
+    "status": "STRUCTURED_DIRECT_HASH_RESOLVED",
+    "structured_conjunction_location_count": 0,
+    "structured_record_count": 29,
+    "support_records": [
+      {
+        "direct_hashes": [
+          "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+          "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+        ],
+        "file": "benchmarks\\v0.11\\controlled_state_closure\\execution_evidence.jsonl",
+        "function_names": [
+          "discount"
+        ],
+        "hashes": [
+          "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+          "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+        ],
+        "object_path": "$line[5]",
+        "path_hints": [],
+        "relevant_fields": [
+          {
+            "key_path": "$.candidate_id",
+            "value": "91b2dc32504282fc"
+          },
+          {
+            "key_path": "$.execution_evidence_digest",
+            "value": "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+          },
+          {
+            "key_path": "$.function",
+            "value": "discount"
+          },
+          {
+            "key_path": "$.function_sha256",
+            "value": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475"
+          },
+          {
+            "key_path": "$.source",
+            "value": "django_oscar"
+          }
+        ]
+      },
+      {
+        "direct_hashes": [
+          "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+          "5fec4457e1d6a0a9b67a9c1a6b4002097905014884df147f6e8839dd27c39b64",
+          "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+        ],
+        "file": "benchmarks\\v0.11\\controlled_state_closure\\negative_outcomes.jsonl",
+        "function_names": [
+          "discount"
+        ],
+        "hashes": [
+          "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+          "5fec4457e1d6a0a9b67a9c1a6b4002097905014884df147f6e8839dd27c39b64",
+          "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+        ],
+        "object_path": "$line[5]",
+        "path_hints": [
+          "src/oscar/apps/basket/utils.py"
+        ],
+        "relevant_fields": [
+          {
+            "key_path": "$.candidate_id",
+            "value": "91b2dc32504282fc"
+          },
+          {
+            "key_path": "$.execution_evidence_digest",
+            "value": "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+          },
+          {
+            "key_path": "$.negative_evidence_digest",
+            "value": "5fec4457e1d6a0a9b67a9c1a6b4002097905014884df147f6e8839dd27c39b64"
+          },
+          {
+            "key_path": "$.source.class",
+            "value": "LineDiscountRegistry"
+          },
+          {
+            "key_path": "$.source.file",
+            "value": "src/oscar/apps/basket/utils.py"
+          },
+          {
+            "key_path": "$.source.function",
+            "value": "discount"
+          },
+          {
+            "key_path": "$.source.function_sha256",
+            "value": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475"
+          },
+          {
+            "key_path": "$.source.source_id",
+            "value": "django_oscar"
+          }
+        ]
+      },
+      {
+        "direct_hashes": [
+          "003d9efbfee890158dc4e6557c6d90da07eb3462c9e4771b0b82df73755e8d3a",
+          "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+          "4ee54178efed633f82c4ecea7f251f6806407fdd13b58041b0d48490ccc65ff2"
+        ],
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "function_names": [
+          "discount"
+        ],
+        "hashes": [
+          "003d9efbfee890158dc4e6557c6d90da07eb3462c9e4771b0b82df73755e8d3a",
+          "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+          "4ee54178efed633f82c4ecea7f251f6806407fdd13b58041b0d48490ccc65ff2"
+        ],
+        "object_path": "$line[21]",
+        "path_hints": [
+          "docs/source/howto/how_to_create_a_custom_benefit.rst",
+          "docs/source/ref/apps/offer.rst",
+          "docs/source/ref/settings.rst",
+          "docs/source/ref/templatetags.rst",
+          "docs/source/releases/v0.2.x.rst",
+          "docs/source/releases/v0.3.x.rst",
+          "docs/source/releases/v0.5.rst",
+          "docs/source/releases/v1.6.rst",
+          "src/oscar/apps/basket/utils.py",
+          "tests/functional/checkout/__init__.py",
+          "tests/integration/offer/test_absolute_benefit.py",
+          "tests/integration/offer/test_combination.py",
+          "tests/integration/offer/test_fixed_price_benefit.py",
+          "tests/integration/offer/test_fixed_unit_benefit.py",
+          "tests/integration/offer/test_multibuy_benefit.py",
+          "tests/integration/offer/test_percentage_benefit.py",
+          "tests/integration/offer/test_post_order_action.py"
+        ],
+        "relevant_fields": [
+          {
+            "key_path": "$.candidate.business_keyword_sources.class[0]",
+            "value": "discount"
+          },
+          {
+            "key_path": "$.candidate.business_keyword_sources.function[0]",
+            "value": "discount"
+          },
+          {
+            "key_path": "$.candidate.business_keyword_sources.path[0]",
+            "value": "basket"
+          },
+          {
+            "key_path": "$.candidate.evidence_link_modes.doc:EXACT_FUNCTION_TEXT",
+            "value": "8"
+          },
+          {
+            "key_path": "$.candidate.evidence_link_modes.test:EXACT_FUNCTION_SYMBOL",
+            "value": "15"
+          },
+          {
+            "key_path": "$.candidate.file",
+            "value": "src/oscar/apps/basket/utils.py"
+          },
+          {
+            "key_path": "$.candidate.function",
+            "value": "discount"
+          },
+          {
+            "key_path": "$.candidate.function_sha256",
+            "value": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475"
+          },
+          {
+            "key_path": "$.candidate.source_file_sha256",
+            "value": "4ee54178efed633f82c4ecea7f251f6806407fdd13b58041b0d48490ccc65ff2"
+          },
+          {
+            "key_path": "$.candidate.source_id",
+            "value": "django_oscar"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[0]",
+            "value": "docs/source/howto/how_to_create_a_custom_benefit.rst"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[1]",
+            "value": "docs/source/ref/apps/offer.rst"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[2]",
+            "value": "docs/source/ref/settings.rst"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[3]",
+            "value": "docs/source/ref/templatetags.rst"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[4]",
+            "value": "docs/source/releases/v0.2.x.rst"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[5]",
+            "value": "docs/source/releases/v0.3.x.rst"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[6]",
+            "value": "docs/source/releases/v0.5.rst"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[7]",
+            "value": "docs/source/releases/v1.6.rst"
+          },
+          {
+            "key_path": "$.candidate.supporting_test_files[0]",
+            "value": "tests/functional/checkout/__init__.py"
+          },
+          {
+            "key_path": "$.candidate.supporting_test_files[1]",
+            "value": "tests/integration/offer/test_absolute_benefit.py"
+          },
+          {
+            "key_path": "$.candidate.supporting_test_files[2]",
+            "value": "tests/integration/offer/test_combination.py"
+          },
+          {
+            "key_path": "$.candidate.supporting_test_files[3]",
+            "value": "tests/integration/offer/test_fixed_price_benefit.py"
+          },
+          {
+            "key_path": "$.candidate.supporting_test_files[4]",
+            "value": "tests/integration/offer/test_fixed_unit_benefit.py"
+          },
+          {
+            "key_path": "$.candidate.supporting_test_files[5]",
+            "value": "tests/integration/offer/test_multibuy_benefit.py"
+          },
+          {
+            "key_path": "$.candidate.supporting_test_files[6]",
+            "value": "tests/integration/offer/test_percentage_benefit.py"
+          },
+          {
+            "key_path": "$.candidate.supporting_test_files[7]",
+            "value": "tests/integration/offer/test_post_order_action.py"
+          },
+          {
+            "key_path": "$.candidate_id",
+            "value": "91b2dc32504282fc"
+          },
+          {
+            "key_path": "$.selection_hash",
+            "value": "003d9efbfee890158dc4e6557c6d90da07eb3462c9e4771b0b82df73755e8d3a"
+          },
+          {
+            "key_path": "$.stratum.source_id",
+            "value": "django_oscar"
+          }
+        ]
+      },
+      {
+        "direct_hashes": [
+          "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+          "5fec4457e1d6a0a9b67a9c1a6b4002097905014884df147f6e8839dd27c39b64",
+          "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+        ],
+        "file": "benchmarks\\v0.11\\controlled_state_closure\\negative_evidence\\91b2dc32504282fc.json",
+        "function_names": [
+          "discount"
+        ],
+        "hashes": [
+          "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+          "5fec4457e1d6a0a9b67a9c1a6b4002097905014884df147f6e8839dd27c39b64",
+          "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+        ],
+        "object_path": "$",
+        "path_hints": [
+          "src/oscar/apps/basket/utils.py"
+        ],
+        "relevant_fields": [
+          {
+            "key_path": "$.candidate_id",
+            "value": "91b2dc32504282fc"
+          },
+          {
+            "key_path": "$.execution_evidence_digest",
+            "value": "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+          },
+          {
+            "key_path": "$.negative_evidence_digest",
+            "value": "5fec4457e1d6a0a9b67a9c1a6b4002097905014884df147f6e8839dd27c39b64"
+          },
+          {
+            "key_path": "$.source.class",
+            "value": "LineDiscountRegistry"
+          },
+          {
+            "key_path": "$.source.file",
+            "value": "src/oscar/apps/basket/utils.py"
+          },
+          {
+            "key_path": "$.source.function",
+            "value": "discount"
+          },
+          {
+            "key_path": "$.source.function_sha256",
+            "value": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475"
+          },
+          {
+            "key_path": "$.source.source_id",
+            "value": "django_oscar"
+          }
+        ]
+      }
+    ],
+    "tier_a_hashes": [],
+    "tier_a_hit_count": 0
+  },
+  "a09e038870c9b436": {
+    "authoritative_source": true,
+    "candidate_id": "a09e038870c9b436",
+    "certification_started": false,
+    "global_name_hints": [
+      "__str__",
+      "self"
+    ],
+    "project": "pretix",
+    "reason_codes": "CONDITIONAL_STRING_CONSTRUCTION_OUTSIDE_FROZEN_FORMAL_SCOPE",
+    "recovery_claim": false,
+    "selected": {
+      "class_name": "OrderFee",
+      "end_lineno": 2446,
+      "fingerprints": {
+        "ast_dump": "c407533af2834706dd2ab00755279a1bbe3a2c7c44f9b2a4e81d94e97a7b9f63",
+        "ast_unparse": "d264b03132b96dae693ba626b0554c953ee649b72e85e75df50453cf3d9786aa",
+        "dedent_strip": "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897",
+        "dedent_strip_newline": "a615d2838cebd9069f2884676d6f685dc5266b95985ab6860b7027eda37237ba",
+        "lf": "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897",
+        "raw": "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897"
+      },
+      "function_name": "__str__",
+      "lineno": 2442,
+      "matched_hash": "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897",
+      "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+      "project": "pretix",
+      "source": "def __str__(self):\n        if self.description:\n            return '{} - {}'.format(self.get_fee_type_display(), self.description)\n        else:\n            return self.get_fee_type_display()"
+    },
+    "status": "STRUCTURED_DIRECT_HASH_RESOLVED",
+    "structured_conjunction_location_count": 0,
+    "structured_record_count": 27,
+    "support_records": [
+      {
+        "direct_hashes": [
+          "08d793e984e66bc559b14ed55f295b4693531ac07aec4104a69214647b87e94c",
+          "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef",
+          "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897"
+        ],
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "function_names": [
+          "__str__"
+        ],
+        "hashes": [
+          "08d793e984e66bc559b14ed55f295b4693531ac07aec4104a69214647b87e94c",
+          "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef",
+          "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897"
+        ],
+        "object_path": "$line[85]",
+        "path_hints": [
+          "doc/development/implementation/models.rst",
+          "src/pretix/base/models/orders.py"
+        ],
+        "relevant_fields": [
+          {
+            "key_path": "$.candidate.business_keyword_sources.class[0]",
+            "value": "fee"
+          },
+          {
+            "key_path": "$.candidate.business_keyword_sources.class[1]",
+            "value": "order"
+          },
+          {
+            "key_path": "$.candidate.business_keyword_sources.path[0]",
+            "value": "order"
+          },
+          {
+            "key_path": "$.candidate.file",
+            "value": "src/pretix/base/models/orders.py"
+          },
+          {
+            "key_path": "$.candidate.function",
+            "value": "__str__"
+          },
+          {
+            "key_path": "$.candidate.function_sha256",
+            "value": "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897"
+          },
+          {
+            "key_path": "$.candidate.source_file_sha256",
+            "value": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef"
+          },
+          {
+            "key_path": "$.candidate.source_id",
+            "value": "pretix"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[0]",
+            "value": "doc/development/implementation/models.rst"
+          },
+          {
+            "key_path": "$.candidate_id",
+            "value": "a09e038870c9b436"
+          },
+          {
+            "key_path": "$.selection_hash",
+            "value": "08d793e984e66bc559b14ed55f295b4693531ac07aec4104a69214647b87e94c"
+          },
+          {
+            "key_path": "$.stratum.source_id",
+            "value": "pretix"
+          }
+        ]
+      },
+      {
+        "direct_hashes": [
+          "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897",
+          "d1c12d1c956dd72b362bdb493a2405d5eb5f1be91d05b057145a9942366643e8"
+        ],
+        "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_evidence\\a09e038870c9b436.json",
+        "function_names": [
+          "__str__"
+        ],
+        "hashes": [
+          "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897",
+          "d1c12d1c956dd72b362bdb493a2405d5eb5f1be91d05b057145a9942366643e8"
+        ],
+        "object_path": "$",
+        "path_hints": [],
+        "relevant_fields": [
+          {
+            "key_path": "$.candidate_id",
+            "value": "a09e038870c9b436"
+          },
+          {
+            "key_path": "$.function",
+            "value": "__str__"
+          },
+          {
+            "key_path": "$.function_sha256",
+            "value": "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897"
+          },
+          {
+            "key_path": "$.negative_evidence_digest",
+            "value": "d1c12d1c956dd72b362bdb493a2405d5eb5f1be91d05b057145a9942366643e8"
+          },
+          {
+            "key_path": "$.source",
+            "value": "pretix"
+          }
+        ]
+      }
+    ],
+    "tier_a_hashes": [],
+    "tier_a_hit_count": 0
+  },
+  "a79d9687185720aa": {
+    "authoritative_source": true,
+    "candidate_id": "a79d9687185720aa",
+    "certification_started": false,
+    "global_name_hints": [
+      "save"
+    ],
+    "project": "django_oscar",
+    "reason_codes": "MODEL_SAVE_STATE_TRANSITION_OUTSIDE_FORMAL_SUBSET",
+    "recovery_claim": false,
+    "selected": {
+      "class_name": "AbstractConditionalOffer",
+      "end_lineno": 296,
+      "fingerprints": {
+        "ast_dump": "370e0b97030e8a42020d62fc6330a13a74718dd49610e50f856389b45e6e23db",
+        "ast_unparse": "46359036053aff05576b1b5a49179668497bee5db46357ed2625bed138de4d9e",
+        "dedent_strip": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+        "dedent_strip_newline": "89102f0e9c8b49835d3d5858167364626713927e8be4c7d5bc088f58e2a4324c",
+        "lf": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+        "raw": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d"
+      },
+      "function_name": "save",
+      "lineno": 288,
+      "matched_hash": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+      "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\offer\\abstract_models.py",
+      "project": "django_oscar",
+      "source": "def save(self, *args, **kwargs):\n        # Check to see if consumption thresholds have been broken\n        if not self.is_suspended:\n            if self.get_max_applications() == 0:\n                self.status = self.CONSUMED\n            else:\n                self.status = self.OPEN\n\n        return super().save(*args, **kwargs)"
+    },
+    "status": "STRUCTURED_DIRECT_HASH_RESOLVED",
+    "structured_conjunction_location_count": 0,
+    "structured_record_count": 28,
+    "support_records": [
+      {
+        "direct_hashes": [
+          "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+          "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+        ],
+        "file": "benchmarks\\v0.11\\controlled_complex_closure\\execution_probe.jsonl",
+        "function_names": [
+          "save"
+        ],
+        "hashes": [
+          "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+          "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+        ],
+        "object_path": "$line[8]",
+        "path_hints": [],
+        "relevant_fields": [
+          {
+            "key_path": "$.candidate_id",
+            "value": "a79d9687185720aa"
+          },
+          {
+            "key_path": "$.execution_probe_digest",
+            "value": "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+          },
+          {
+            "key_path": "$.function",
+            "value": "save"
+          },
+          {
+            "key_path": "$.function_sha256",
+            "value": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d"
+          },
+          {
+            "key_path": "$.source",
+            "value": "django_oscar"
+          }
+        ]
+      },
+      {
+        "direct_hashes": [
+          "6460cf23dcc3a28e4833ad99699e28758af164e872ef6fd0f00f1ae7df5c6b8e",
+          "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+          "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+        ],
+        "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_outcomes.jsonl",
+        "function_names": [
+          "save"
+        ],
+        "hashes": [
+          "6460cf23dcc3a28e4833ad99699e28758af164e872ef6fd0f00f1ae7df5c6b8e",
+          "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+          "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+        ],
+        "object_path": "$line[6]",
+        "path_hints": [],
+        "relevant_fields": [
+          {
+            "key_path": "$.candidate_id",
+            "value": "a79d9687185720aa"
+          },
+          {
+            "key_path": "$.execution_probe_digest",
+            "value": "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+          },
+          {
+            "key_path": "$.function",
+            "value": "save"
+          },
+          {
+            "key_path": "$.function_sha256",
+            "value": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d"
+          },
+          {
+            "key_path": "$.negative_evidence_digest",
+            "value": "6460cf23dcc3a28e4833ad99699e28758af164e872ef6fd0f00f1ae7df5c6b8e"
+          },
+          {
+            "key_path": "$.source",
+            "value": "django_oscar"
+          }
+        ]
+      },
+      {
+        "direct_hashes": [
+          "3090b1402638ffd018f006b4216a77d5942fad768f12f25a55eebc0344c8a7a9",
+          "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+          "d1508fbc726b868c4c849cd88e7669f3bc1ca31a2e7f2ccb26ec3a119f29b78e"
+        ],
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "function_names": [
+          "save"
+        ],
+        "hashes": [
+          "3090b1402638ffd018f006b4216a77d5942fad768f12f25a55eebc0344c8a7a9",
+          "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+          "d1508fbc726b868c4c849cd88e7669f3bc1ca31a2e7f2ccb26ec3a119f29b78e"
+        ],
+        "object_path": "$line[7]",
+        "path_hints": [
+          "src/oscar/apps/offer/abstract_models.py"
+        ],
+        "relevant_fields": [
+          {
+            "key_path": "$.candidate.business_keyword_sources.class[0]",
+            "value": "condition"
+          },
+          {
+            "key_path": "$.candidate.business_keyword_sources.class[1]",
+            "value": "offer"
+          },
+          {
+            "key_path": "$.candidate.business_keyword_sources.path[0]",
+            "value": "offer"
+          },
+          {
+            "key_path": "$.candidate.file",
+            "value": "src/oscar/apps/offer/abstract_models.py"
+          },
+          {
+            "key_path": "$.candidate.function",
+            "value": "save"
+          },
+          {
+            "key_path": "$.candidate.function_sha256",
+            "value": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d"
+          },
+          {
+            "key_path": "$.candidate.source_file_sha256",
+            "value": "d1508fbc726b868c4c849cd88e7669f3bc1ca31a2e7f2ccb26ec3a119f29b78e"
+          },
+          {
+            "key_path": "$.candidate.source_id",
+            "value": "django_oscar"
+          },
+          {
+            "key_path": "$.candidate_id",
+            "value": "a79d9687185720aa"
+          },
+          {
+            "key_path": "$.selection_hash",
+            "value": "3090b1402638ffd018f006b4216a77d5942fad768f12f25a55eebc0344c8a7a9"
+          },
+          {
+            "key_path": "$.stratum.source_id",
+            "value": "django_oscar"
+          }
+        ]
+      },
+      {
+        "direct_hashes": [
+          "6460cf23dcc3a28e4833ad99699e28758af164e872ef6fd0f00f1ae7df5c6b8e",
+          "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+          "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+        ],
+        "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_evidence\\a79d9687185720aa.json",
+        "function_names": [
+          "save"
+        ],
+        "hashes": [
+          "6460cf23dcc3a28e4833ad99699e28758af164e872ef6fd0f00f1ae7df5c6b8e",
+          "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+          "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+        ],
+        "object_path": "$",
+        "path_hints": [],
+        "relevant_fields": [
+          {
+            "key_path": "$.candidate_id",
+            "value": "a79d9687185720aa"
+          },
+          {
+            "key_path": "$.execution_probe_digest",
+            "value": "e21fd04a2305b41f251a4b1b9fd9a354e30971cdeb57f3b9b625cf8195c76104"
+          },
+          {
+            "key_path": "$.function",
+            "value": "save"
+          },
+          {
+            "key_path": "$.function_sha256",
+            "value": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d"
+          },
+          {
+            "key_path": "$.negative_evidence_digest",
+            "value": "6460cf23dcc3a28e4833ad99699e28758af164e872ef6fd0f00f1ae7df5c6b8e"
+          },
+          {
+            "key_path": "$.source",
+            "value": "django_oscar"
+          }
+        ]
+      }
+    ],
+    "tier_a_hashes": [],
+    "tier_a_hit_count": 0
+  },
+  "bcb091a940a8d0dd": {
+    "authoritative_source": true,
+    "candidate_id": "bcb091a940a8d0dd",
+    "certification_started": false,
+    "global_name_hints": [
+      "get_formset_kwargs"
+    ],
+    "project": "django_oscar",
+    "reason_codes": "FRAMEWORK_DICT_MUTATION_OUTSIDE_FORMAL_SUBSET",
+    "recovery_claim": false,
+    "selected": {
+      "class_name": "BasketView",
+      "end_lineno": 45,
+      "fingerprints": {
+        "ast_dump": "144c2ecd547173c35cedd21e36fdab845a2d5339f71b7176fd874b745f7ac84c",
+        "ast_unparse": "7474258665d55dff505ab9bf34be3313d5ac25d759d8fb3f53aa6d2ef1b644b6",
+        "dedent_strip": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+        "dedent_strip_newline": "971d928c2e3da3967e34ca8f12bb33e1c6ee032544f01547aaed1925bea92cf3",
+        "lf": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+        "raw": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72"
+      },
+      "function_name": "get_formset_kwargs",
+      "lineno": 42,
+      "matched_hash": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+      "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\basket\\views.py",
+      "project": "django_oscar",
+      "source": "def get_formset_kwargs(self):\n        kwargs = super().get_formset_kwargs()\n        kwargs[\"strategy\"] = self.request.strategy\n        return kwargs"
+    },
+    "status": "STRUCTURED_DIRECT_HASH_RESOLVED",
+    "structured_conjunction_location_count": 0,
+    "structured_record_count": 28,
+    "support_records": [
+      {
+        "direct_hashes": [
+          "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89",
+          "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72"
+        ],
+        "file": "benchmarks\\v0.11\\controlled_complex_closure\\execution_probe.jsonl",
+        "function_names": [
+          "get_formset_kwargs"
+        ],
+        "hashes": [
+          "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89",
+          "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72"
+        ],
+        "object_path": "$line[9]",
+        "path_hints": [],
+        "relevant_fields": [
+          {
+            "key_path": "$.candidate_id",
+            "value": "bcb091a940a8d0dd"
+          },
+          {
+            "key_path": "$.execution_probe_digest",
+            "value": "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89"
+          },
+          {
+            "key_path": "$.function",
+            "value": "get_formset_kwargs"
+          },
+          {
+            "key_path": "$.function_sha256",
+            "value": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72"
+          },
+          {
+            "key_path": "$.source",
+            "value": "django_oscar"
+          }
+        ]
+      },
+      {
+        "direct_hashes": [
+          "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89",
+          "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+          "bec79c3c035f95d04c822c14f18d4839b03fb1d92c5ff92af29d650b9740d2b6"
+        ],
+        "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_outcomes.jsonl",
+        "function_names": [
+          "get_formset_kwargs"
+        ],
+        "hashes": [
+          "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89",
+          "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+          "bec79c3c035f95d04c822c14f18d4839b03fb1d92c5ff92af29d650b9740d2b6"
+        ],
+        "object_path": "$line[7]",
+        "path_hints": [],
+        "relevant_fields": [
+          {
+            "key_path": "$.candidate_id",
+            "value": "bcb091a940a8d0dd"
+          },
+          {
+            "key_path": "$.execution_probe_digest",
+            "value": "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89"
+          },
+          {
+            "key_path": "$.function",
+            "value": "get_formset_kwargs"
+          },
+          {
+            "key_path": "$.function_sha256",
+            "value": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72"
+          },
+          {
+            "key_path": "$.negative_evidence_digest",
+            "value": "bec79c3c035f95d04c822c14f18d4839b03fb1d92c5ff92af29d650b9740d2b6"
+          },
+          {
+            "key_path": "$.source",
+            "value": "django_oscar"
+          }
+        ]
+      },
+      {
+        "direct_hashes": [
+          "131a79559dd1374fd21a988b1d1f177352fbf4ac0c246edbb015de4710bb48b3",
+          "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+          "d978ce9eb54de7473cc5f6ba2882acf4a4bca4573eb75af56b32ca0e26866413"
+        ],
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "function_names": [
+          "get_formset_kwargs"
+        ],
+        "hashes": [
+          "131a79559dd1374fd21a988b1d1f177352fbf4ac0c246edbb015de4710bb48b3",
+          "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+          "d978ce9eb54de7473cc5f6ba2882acf4a4bca4573eb75af56b32ca0e26866413"
+        ],
+        "object_path": "$line[4]",
+        "path_hints": [
+          "docs/source/releases/v0.7.2.rst",
+          "docs/source/releases/v1.6.rst",
+          "src/oscar/apps/basket/views.py",
+          "tests/integration/basket/test_views.py",
+          "tests/integration/offer/test_upsell_messages.py"
+        ],
+        "relevant_fields": [
+          {
+            "key_path": "$.candidate.business_keyword_sources.class[0]",
+            "value": "basket"
+          },
+          {
+            "key_path": "$.candidate.business_keyword_sources.path[0]",
+            "value": "basket"
+          },
+          {
+            "key_path": "$.candidate.evidence_link_modes.test:EXACT_CLASS_SYMBOL",
+            "value": "2"
+          },
+          {
+            "key_path": "$.candidate.file",
+            "value": "src/oscar/apps/basket/views.py"
+          },
+          {
+            "key_path": "$.candidate.function",
+            "value": "get_formset_kwargs"
+          },
+          {
+            "key_path": "$.candidate.function_sha256",
+            "value": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72"
+          },
+          {
+            "key_path": "$.candidate.source_file_sha256",
+            "value": "d978ce9eb54de7473cc5f6ba2882acf4a4bca4573eb75af56b32ca0e26866413"
+          },
+          {
+            "key_path": "$.candidate.source_id",
+            "value": "django_oscar"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[0]",
+            "value": "docs/source/releases/v0.7.2.rst"
+          },
+          {
+            "key_path": "$.candidate.supporting_doc_files[1]",
+            "value": "docs/source/releases/v1.6.rst"
+          },
+          {
+            "key_path": "$.candidate.supporting_test_files[0]",
+            "value": "tests/integration/basket/test_views.py"
+          },
+          {
+            "key_path": "$.candidate.supporting_test_files[1]",
+            "value": "tests/integration/offer/test_upsell_messages.py"
+          },
+          {
+            "key_path": "$.candidate_id",
+            "value": "bcb091a940a8d0dd"
+          },
+          {
+            "key_path": "$.selection_hash",
+            "value": "131a79559dd1374fd21a988b1d1f177352fbf4ac0c246edbb015de4710bb48b3"
+          },
+          {
+            "key_path": "$.stratum.source_id",
+            "value": "django_oscar"
+          }
+        ]
+      },
+      {
+        "direct_hashes": [
+          "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89",
+          "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+          "bec79c3c035f95d04c822c14f18d4839b03fb1d92c5ff92af29d650b9740d2b6"
+        ],
+        "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_evidence\\bcb091a940a8d0dd.json",
+        "function_names": [
+          "get_formset_kwargs"
+        ],
+        "hashes": [
+          "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89",
+          "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+          "bec79c3c035f95d04c822c14f18d4839b03fb1d92c5ff92af29d650b9740d2b6"
+        ],
+        "object_path": "$",
+        "path_hints": [],
+        "relevant_fields": [
+          {
+            "key_path": "$.candidate_id",
+            "value": "bcb091a940a8d0dd"
+          },
+          {
+            "key_path": "$.execution_probe_digest",
+            "value": "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89"
+          },
+          {
+            "key_path": "$.function",
+            "value": "get_formset_kwargs"
+          },
+          {
+            "key_path": "$.function_sha256",
+            "value": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72"
+          },
+          {
+            "key_path": "$.negative_evidence_digest",
+            "value": "bec79c3c035f95d04c822c14f18d4839b03fb1d92c5ff92af29d650b9740d2b6"
+          },
+          {
+            "key_path": "$.source",
+            "value": "django_oscar"
+          }
+        ]
+      }
+    ],
+    "tier_a_hashes": [],
+    "tier_a_hit_count": 0
+  }
+}

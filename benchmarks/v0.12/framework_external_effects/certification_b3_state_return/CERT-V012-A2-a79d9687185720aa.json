@@ -1,0 +1,39 @@
+{
+  "all_required_gates_pass": true,
+  "authoritative_source": {
+    "class_harness_only": true,
+    "correct_source_ast_rewritten": false,
+    "matches_frozen_plan": true,
+    "sha256": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d"
+  },
+  "candidate_id": "a79d9687185720aa",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_mutant_replay": true,
+  "formal_mutant_refutation": {
+    "model": "[consumed_status = 1, open_status = 0]",
+    "property": "for a non-suspended offer with zero remaining applications, CONSUMED differs from the frozen CONSUMED_TO_OPEN mutant",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "function_name": "save",
+  "mutant": {
+    "fault": "a non-suspended offer with zero remaining applications is marked OPEN instead of CONSUMED",
+    "name": "CONSUMED_TO_OPEN"
+  },
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-B3-CERT1-A2-1",
+  "scope": {
+    "certified": "the prospectively frozen semantic projection of the exact authoritative business source",
+    "not_certified": [
+      "correctness of Django/Oscar/Pretix framework implementations",
+      "unobserved persistence or middleware behavior",
+      "arbitrary external dependencies outside the frozen observation boundary"
+    ]
+  },
+  "semantic_capability": "CONDITIONAL_STATUS_PLUS_PERSISTENCE",
+  "source_projection_equivalence": {
+    "branch_basis": 3,
+    "controlled_exact_source_replay": true
+  },
+  "v012_outcome": "CERTIFIED_A2"
+}

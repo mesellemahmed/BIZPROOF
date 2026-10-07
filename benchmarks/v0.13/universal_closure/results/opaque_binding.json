@@ -1,0 +1,104 @@
+{
+  "a2_obligation_count": 1,
+  "a_level": "A2",
+  "bindings": [
+    {
+      "expression": "user.is_staff",
+      "parameter": "obs_user_is_staff",
+      "type_name": "bool"
+    }
+  ],
+  "capabilities": [
+    "OPAQUE_BINDING",
+    "SCALAR_VALUE"
+  ],
+  "case_specific_routing": false,
+  "certified": true,
+  "claim_scope": "formal equivalence evidence for scalarized observational projections under explicit parameter/binding abstraction; external effect occurrence is structurally recorded but external effect semantics are not inferred",
+  "effect_semantics_formally_proved": null,
+  "effects": [],
+  "evidence_id": "v013-closure::opaque_binding",
+  "external_holdout_used": false,
+  "formal_obligation_count": 1,
+  "formal_obligations": [
+    {
+      "obligation_id": "return",
+      "result": {
+        "a_level": "A2",
+        "capability": "PURE_SCALAR",
+        "case_id": "v013-closure::opaque_binding::return",
+        "certified": true,
+        "claim_scope": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+        "dedented": false,
+        "formal": {
+          "backend": "z3",
+          "contract_id": "v013-closure::opaque_binding::return::projection",
+          "counterexample": null,
+          "metadata": {
+            "path_count": 1,
+            "runtime_seconds": 0.0022821720340289176,
+            "timeout_ms": 10000,
+            "z3_version": "5.1.0"
+          },
+          "observed_result": null,
+          "postcondition_satisfied": null,
+          "reason": null,
+          "reason_code": null,
+          "replay_validated": null,
+          "verdict": "PROVED"
+        },
+        "full_arbitrary_source_equivalence": false,
+        "function_name": "rule",
+        "inputs": [
+          {
+            "name": "enabled",
+            "type": "bool"
+          },
+          {
+            "name": "obs_user_is_staff",
+            "type": "bool"
+          }
+        ],
+        "mutant": {
+          "backend": "z3",
+          "contract_id": "v013-closure::opaque_binding::return::mutant",
+          "counterexample": {
+            "enabled": false,
+            "obs_user_is_staff": true
+          },
+          "metadata": {
+            "path_count": 1,
+            "path_index": 0,
+            "runtime_seconds": 0.0029619709821417928,
+            "timeout_ms": 10000,
+            "z3_version": "5.1.0"
+          },
+          "observed_result": false,
+          "postcondition_satisfied": false,
+          "reason": null,
+          "reason_code": null,
+          "replay_validated": true,
+          "verdict": "DISPROVED"
+        },
+        "mutant_operator": "AND_TO_OR",
+        "mutant_projection": "obs_user_is_staff or enabled",
+        "mutant_refuted": true,
+        "projection": "obs_user_is_staff and enabled",
+        "reason": "accepted by generic scalar normalization frontend",
+        "reason_code": "supported",
+        "resolution": "SUPPORTED",
+        "schema_version": "BIZPROOF-V0.13-UNIVERSAL-CERTIFIER-1",
+        "scientific_outcome": "CERTIFIED_A2",
+        "source_file": "/tmp/bizproof-v013-universal-closure-c1hmg_vs/obligation_0.py",
+        "source_sha256": "a90caedd1920b6e7d76b62f97fefd79fb40118eb8c7b429bfa653f1e839c1238"
+      },
+      "source_sha256": "a90caedd1920b6e7d76b62f97fefd79fb40118eb8c7b429bfa653f1e839c1238"
+    }
+  ],
+  "full_arbitrary_source_equivalence": false,
+  "historical_target_tables_used": false,
+  "human_authored_case_adapters_used": false,
+  "scientific_outcome": "CERTIFIED_A2",
+  "source_sha256": "fe602caa33cdc48cbf58a499b1357c6116d515fd32f090f3954ff0008b76cfad",
+  "state_bindings": []
+}

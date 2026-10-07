@@ -1,0 +1,95 @@
+{
+  "adapter": {
+    "function": "adapt_discount_subevent_key",
+    "function_sha256": "4d54a4dddac4cd45f6c7fc48a8eb8cbddd9238267e06929dbc3e8f3ab5d537c0",
+    "mutant_function": "mutant_discount_subevent_key",
+    "mutant_function_sha256": "78132c8fcef1e71116abb2b66654d7251293ca6fd56256da3c0596514a44b253",
+    "semantic_adapter": "DISCOUNT_SUBEVENT_KEY"
+  },
+  "assistance_level": "A2",
+  "authoring_mode": "EXPLICIT_MANUAL_SCALAR_SEMANTIC_ADAPTER",
+  "candidate_id": "f234f0be14cf3ff3",
+  "certificate_digest": "daee92f664a23bf26a23455ae88c341d095de2940f39189d232b04ddec357890",
+  "certificate_id": "CERT-V011-A2-F234F0BE14CF3FF3",
+  "claim_scope": "Certification is restricted to the explicit scalar semantic slice and declared validation domain represented by this certificate; it does not certify the complete external framework.",
+  "evidence": {
+    "proof_digest": "4fa81fc64569fdaaa9dbb5831044af677d8b93f8c62253d0b35942ad409bf8ae",
+    "runtime": {
+      "adapter_mismatches": 0,
+      "comparisons": 7,
+      "examples": [
+        {
+          "adapter": 0,
+          "external": 0,
+          "mutant": 1,
+          "subevent_id": null
+        },
+        {
+          "adapter": -3,
+          "external": -3,
+          "mutant": -3,
+          "subevent_id": -3
+        },
+        {
+          "adapter": -1,
+          "external": -1,
+          "mutant": -1,
+          "subevent_id": -1
+        },
+        {
+          "adapter": 0,
+          "external": 0,
+          "mutant": 1,
+          "subevent_id": 0
+        },
+        {
+          "adapter": 1,
+          "external": 1,
+          "mutant": 1,
+          "subevent_id": 1
+        },
+        {
+          "adapter": 2,
+          "external": 2,
+          "mutant": 2,
+          "subevent_id": 2
+        },
+        {
+          "adapter": 9,
+          "external": 9,
+          "mutant": 9,
+          "subevent_id": 9
+        }
+      ],
+      "mutant_mismatches": 2
+    },
+    "symbolic": {
+      "correct_proved": true,
+      "correct_solver_status": "unsat",
+      "domain": "INTEGER_SUBEVENT_ID",
+      "mutant_disproved": true,
+      "mutant_solver_status": "sat"
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 75,
+    "text": "- `CERTIFIED_A2`: certified with an explicit human-authored scalar semantic adapter."
+  },
+  "schema_version": "BIZPROOF-V0.11-A2-CERTIFICATE-1",
+  "source": {
+    "class": "Discount",
+    "file": "src/pretix/base/models/discount.py",
+    "function": "key",
+    "function_sha256": "3fcd6737daf5eb81ec3f6c61dd265a55fe064e68c28c5321abc0f4e53b3cce8b",
+    "lines": [
+      441,
+      442
+    ],
+    "source_file_sha256": "a3ff3bf9ad13c289300fc7b8615011a674f497f1078d9d285696ee8012156260",
+    "source_id": "pretix"
+  },
+  "status": "CERTIFIED_A2",
+  "terminal_outcome": "CERTIFIED_A2",
+  "terminal_outcome_assigned": true
+}

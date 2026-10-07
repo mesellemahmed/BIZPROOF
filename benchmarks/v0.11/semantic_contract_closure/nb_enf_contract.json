@@ -1,0 +1,51 @@
+{
+  "aggregation_role": "Famille.ENFANT",
+  "candidate_certification": false,
+  "certification_claim": false,
+  "contract_id": "SC-NB-ENF-001",
+  "definition_sha256": "06ed0e2b7c40a1a4ab5f4fc67b1c9df05abd0a1d36bf2c67eb62292157f2a343",
+  "exhaustive_comparisons": 657,
+  "member_queries": [
+    "age",
+    "autonomie_financiere"
+  ],
+  "numpy_version": "1.26.4",
+  "period_assertion_checks": 2,
+  "period_precondition": {
+    "size": 1,
+    "unit": "month"
+  },
+  "primitive": "nb_enf",
+  "semantic_contract_status": "VALIDATED_BOUNDED_EXHAUSTIVE",
+  "semantic_definition": "For a monthly period of size 1, return the number of Famille.ENFANT members whose age is within [age_min, age_max] and whose autonomie_financiere is logically false.",
+  "source_file": "openfisca_france/model/prestations/prestations_familiales/base_ressource.py",
+  "source_line": 207,
+  "source_sha256": "7de3b24f732795d65220d756a1c695242f6db18b88d9aa64b53caa9be3f1144f",
+  "validation_domain": {
+    "age_max": [
+      0,
+      1,
+      2
+    ],
+    "age_min": [
+      -1,
+      0,
+      1
+    ],
+    "age_values": [
+      -1,
+      0,
+      1,
+      2
+    ],
+    "autonomie_financiere": [
+      false,
+      true
+    ],
+    "child_count": [
+      0,
+      1,
+      2
+    ]
+  }
+}

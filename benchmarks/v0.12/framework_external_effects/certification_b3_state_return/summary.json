@@ -1,0 +1,14 @@
+{
+  "attempted": 5,
+  "batch": "STATE_RETURN_BATCH",
+  "candidate_results": {
+    "7cf281a33e5781df": "CERTIFIED_A2",
+    "91b2dc32504282fc": "CERTIFIED_A2",
+    "a09e038870c9b436": "CERTIFIED_A2",
+    "a79d9687185720aa": "CERTIFIED_A2",
+    "bcb091a940a8d0dd": "CERTIFIED_A2"
+  },
+  "certified_a2": 5,
+  "failed": 0,
+  "schema_version": "BIZPROOF-V0.12-B3-CERT1-SUMMARY-1"
+}

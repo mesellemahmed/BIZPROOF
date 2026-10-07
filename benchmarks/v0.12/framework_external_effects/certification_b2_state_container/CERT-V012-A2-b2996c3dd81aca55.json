@@ -1,0 +1,37 @@
+{
+  "all_required_gates_pass": true,
+  "authoritative_source": {
+    "ast_rewritten": false,
+    "matches_frozen_plan": true,
+    "sha256": "17b1c4649a6abb9206960628c4668dfec2b0607265f0e2752991f33d66720b04"
+  },
+  "candidate_id": "b2996c3dd81aca55",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "formal_mutant_refutation": {
+    "model": "[pre_postpone = True]",
+    "property": "there exists an admissible session with payments_postpone=True where the required reset to False differs from the frozen mutant",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "function_name": "add_payment_to_cart_session",
+  "mutant": {
+    "difference": "correct transition resets payments_postpone to False; mutant keeps the prior True observation",
+    "name": "KEEP_PAYMENTS_POSTPONE_TRUE"
+  },
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-B2-CERT1-A2-1",
+  "scope": {
+    "certified": "the frozen source projection over explicit state, sequence, helper, identifier, and effect observations defined by the prospective B2 route",
+    "not_certified": [
+      "correctness of the underlying Django, Oscar, Pretix or database runtime",
+      "unobserved framework side effects outside the frozen projection",
+      "arbitrary external dependency implementations"
+    ]
+  },
+  "semantic_capability": "SESSION_MAPPING_SEQUENCE_MUTATION",
+  "source_projection_equivalence": {
+    "controlled_exact_source_replay": true,
+    "structural_route_gate": true
+  },
+  "v012_outcome": "CERTIFIED_A2"
+}

@@ -1,0 +1,37 @@
+{
+  "all_required_gates_pass": true,
+  "authoritative_source": {
+    "ast_rewritten": false,
+    "matches_frozen_plan": true,
+    "sha256": "eddb810f17547f52e721d8014ab13075b4e1d1e919384c096157e1e7d299d94a"
+  },
+  "candidate_id": "2309036b0c69ad48",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "formal_mutant_refutation": {
+    "model": "[map_pre = K(String, 2), map_value = 3]",
+    "property": "there exists a pre-state where the required mapping write changes the selected key and the omit-write mutant does not",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "function_name": "_add_option_field",
+  "mutant": {
+    "difference": "correct transition stores the produced field at option.code; mutant leaves the mapping unchanged",
+    "name": "OMIT_MAPPING_WRITE"
+  },
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-B2-CERT1-A2-1",
+  "scope": {
+    "certified": "the frozen source projection over explicit state, sequence, helper, identifier, and effect observations defined by the prospective B2 route",
+    "not_certified": [
+      "correctness of the underlying Django, Oscar, Pretix or database runtime",
+      "unobserved framework side effects outside the frozen projection",
+      "arbitrary external dependency implementations"
+    ]
+  },
+  "semantic_capability": "MAPPING_STATE_WRITE",
+  "source_projection_equivalence": {
+    "controlled_exact_source_replay": true,
+    "structural_route_gate": true
+  },
+  "v012_outcome": "CERTIFIED_A2"
+}

@@ -1,0 +1,103 @@
+[
+  {
+    "file": "tests/test_adapter_preservation.py",
+    "matched_tokens": [
+      "preserv"
+    ],
+    "sha256": "d306fe2f3498314cff286229a8e7c97055d41a2fc077ce325bc359573c2d15bd"
+  },
+  {
+    "file": "tests/test_business_benchmark.py",
+    "matched_tokens": [
+      "equival"
+    ],
+    "sha256": "b28c88340f14082fa0ff9f9ec8679dc1f7e58e74ff6b281d08a38ab820533274"
+  },
+  {
+    "file": "tests/test_certification_pipeline.py",
+    "matched_tokens": [
+      "_reviewer_report",
+      "certif",
+      "equival"
+    ],
+    "sha256": "d5c62cde3bc8d2e28cc332800e6ea2465001b32042c05dfc0b61f3981bd47d8c"
+  },
+  {
+    "file": "tests/test_differential.py",
+    "matched_tokens": [
+      "replay"
+    ],
+    "sha256": "11adb1758f18c3a7cfd7165f154cf4d931039e9b7926aebba68aa71a99326f1e"
+  },
+  {
+    "file": "tests/test_enum_backend.py",
+    "matched_tokens": [
+      "counterexample",
+      "replay"
+    ],
+    "sha256": "8d99406c9e19243d2d07e8d35dbf14417d56b7a747c370b4653aff7c7717a15a"
+  },
+  {
+    "file": "tests/test_external_semantic_validation.py",
+    "matched_tokens": [
+      "counterexample",
+      "replay"
+    ],
+    "sha256": "5ef44482b0ec7f3bca5d388404e4e6e7408866a7bc589e5d044c14c12607993e"
+  },
+  {
+    "file": "tests/test_fuzzing.py",
+    "matched_tokens": [
+      "replay"
+    ],
+    "sha256": "1ddbdd9553747f52c86ab3b04947c65d96f3677fad6547466632e076bf9c6903"
+  },
+  {
+    "file": "tests/test_generalization_certification_audit.py",
+    "matched_tokens": [
+      "_reviewer_report",
+      "_sha256_file",
+      "certif"
+    ],
+    "sha256": "b93928ebb915c57ea3384d71288e7be48d7de389eab37c75a43f289254b21982"
+  },
+  {
+    "file": "tests/test_generalization_feasibility.py",
+    "matched_tokens": [
+      "symbolic"
+    ],
+    "sha256": "160bb48ff189c5e52f02a8545d118dfa26c19b431011bc47c4887e938b76fcad"
+  },
+  {
+    "file": "tests/test_generalization_symbolic_probe.py",
+    "matched_tokens": [
+      "symbolic"
+    ],
+    "sha256": "a0410eada5e3bec944b8da30c4cc3b499e87e5dd74a4be55bfb6a140f23f48e8"
+  },
+  {
+    "file": "tests/test_generalization_workplan.py",
+    "matched_tokens": [
+      "preserv",
+      "symbolic"
+    ],
+    "sha256": "daa2c83fcc082cc6db189f012b0fece10cf3a1d20104cece8e3d1c6f2045267e"
+  },
+  {
+    "file": "tests/test_symbolic_equivalence.py",
+    "matched_tokens": [
+      "counterexample",
+      "equival",
+      "symbolic"
+    ],
+    "sha256": "d232ddf172ef48d285717d2f5c1c1faa1d477bc55b862dc320e38f45135a996e"
+  },
+  {
+    "file": "tests/test_z3_backend.py",
+    "matched_tokens": [
+      "counterexample",
+      "replay"
+    ],
+    "sha256": "5d0b0f69e9da1fd7fd69f35a99be7816d0407e2bee912e8c5990c7522ef822a9"
+  }
+]

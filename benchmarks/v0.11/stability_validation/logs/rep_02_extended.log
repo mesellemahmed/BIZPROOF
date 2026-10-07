@@ -1,0 +1,16 @@
+Matched A2 baseline
+Primary candidates: 8
+
+BIZPROOF frozen:
+  mutants disproved: 8 / 8
+
+Hypothesis:
+  budget=100 detected=8/8 unknown=0
+  budget=1000 detected=8/8 unknown=0
+  budget=10000 detected=8/8 unknown=0
+
+CrossHair:
+  budget=0.5 detected=2/8 unknown=0
+  budget=2.0 detected=3/8 unknown=0
+
+MATCHED BASELINE EXECUTION: PASS

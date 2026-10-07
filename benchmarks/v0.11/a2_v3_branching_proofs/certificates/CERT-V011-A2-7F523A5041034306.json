@@ -1,0 +1,53 @@
+{
+  "adapter": {
+    "function": "adapt_product_quantity",
+    "function_sha256": "edebf4ddd0928e555df18c2e45b1a3bd0ca0d31c472409a0b98c25399a80f2f2",
+    "mutant_function": "mutant_product_quantity",
+    "mutant_function_sha256": "1b2b37087fde99d6d6957b54e6f3bec4a9d167dd75f9a4b679791dade1f00b28",
+    "semantic_adapter": "PRODUCT_QUANTITY"
+  },
+  "assistance_level": "A2",
+  "authoring_mode": "EXPLICIT_MANUAL_SCALAR_SEMANTIC_ADAPTER",
+  "candidate_id": "7f523a5041034306",
+  "certificate_digest": "c0f91d60675248d5e58c27165ab810f93e2b263bf5dd2625b2c495fe3e498a8f",
+  "certificate_id": "CERT-V011-A2-7F523A5041034306",
+  "claim_scope": "Certification applies only to the explicit scalar semantic projection and declared source-to-adapter bindings. It does not certify database, ORM, localization or framework behavior outside that projection.",
+  "evidence": {
+    "proof_digest": "d5d34ff41854e31fada7b4d8d01e29290ffa893267dcbfd7577956ce15e0db5b",
+    "runtime": {
+      "adapter_mismatches": 0,
+      "comparisons": 10,
+      "mutant_mismatches": 3,
+      "validation_domain": "basket id present/absent and aggregate quantity in {None,0,1,2,7}"
+    },
+    "symbolic": {
+      "correct_proved": true,
+      "correct_solver_status": "unsat",
+      "mutant_disproved": true,
+      "mutant_solver_status": "sat",
+      "symbolic_domain": "optional integer aggregate quantity and basket-id presence"
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 75,
+    "text": "- `CERTIFIED_A2`: certified with an explicit human-authored scalar semantic adapter."
+  },
+  "schema_version": "BIZPROOF-V0.11-A2-CERTIFICATE-1",
+  "semantic_binding_scope": "basket persistence is represented by id presence and quantity is the aggregate quantity__sum output; None and zero follow the source's `quantity or 0` semantics.",
+  "source": {
+    "class": "AbstractBasket",
+    "file": "src/oscar/apps/basket/abstract_models.py",
+    "function": "product_quantity",
+    "function_sha256": "ae62e254218b9675043680fbf03cee2be65463ea7c2326887458abf7f757f772",
+    "lines": [
+      638,
+      649
+    ],
+    "source_file_sha256": "6940175125ba092d75cf89bbb36a2a1c7a7534896dbc8e682abf4c1d4a18b76f",
+    "source_id": "django_oscar"
+  },
+  "status": "CERTIFIED_A2",
+  "terminal_outcome": "CERTIFIED_A2",
+  "terminal_outcome_assigned": true
+}

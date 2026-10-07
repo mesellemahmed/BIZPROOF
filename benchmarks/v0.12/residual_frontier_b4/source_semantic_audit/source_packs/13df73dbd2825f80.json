@@ -1,0 +1,47 @@
+{
+  "all_hash_count": 408,
+  "authoritative_source": true,
+  "candidate_id": "13df73dbd2825f80",
+  "category": "COMPLEX_CONTAINER_SEMANTICS",
+  "certification_started": false,
+  "direct_hash_count": 5,
+  "direct_hit_count": 1,
+  "hash_name_location_count": 0,
+  "historical_record_count": 488,
+  "local_hit_count": 100,
+  "name_hints": [
+    "True",
+    "to_result_dict"
+  ],
+  "path_hint_count": 32,
+  "recovery_claim": false,
+  "selected": {
+    "class_name": "OrderSyncResult",
+    "end_lineno": 149,
+    "fingerprints": {
+      "ast_dump": "5afd6a5569e62a89903d8473f5b7172c694566dd3ad6d26d4565567e961f437e",
+      "ast_unparse": "4d499f484f753f868d6d7573c67e7ba80bc4193b8758f420cba200c040eddf16",
+      "dedent_strip": "83bc3d5ba2e5d0e531026937ed7caaa92fd3bb434e53ca7e4b91a049fab42da1",
+      "dedent_strip_newline": "f514e97c1473a108c3d41b728889ca14eaf910da993e4bbfa0ad1315c3218f52",
+      "lf": "83bc3d5ba2e5d0e531026937ed7caaa92fd3bb434e53ca7e4b91a049fab42da1",
+      "raw": "83bc3d5ba2e5d0e531026937ed7caaa92fd3bb434e53ca7e4b91a049fab42da1"
+    },
+    "function_name": "to_result_dict",
+    "lineno": 140,
+    "matched_hash": "83bc3d5ba2e5d0e531026937ed7caaa92fd3bb434e53ca7e4b91a049fab42da1",
+    "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\datasync.py",
+    "project": "pretix",
+    "source": "def to_result_dict(self):\n        return {\n            \"position\": self.order_position_id,\n            \"object_type\": self.external_object_type,\n            \"external_id_field\": self.external_id_field,\n            \"id_value\": self.id_value,\n            \"external_link_href\": self.external_link_href,\n            \"external_link_display_name\": self.external_link_display_name,\n            **self.sync_info,\n        }"
+  },
+  "source": "def to_result_dict(self):\n        return {\n            \"position\": self.order_position_id,\n            \"object_type\": self.external_object_type,\n            \"external_id_field\": self.external_id_field,\n            \"id_value\": self.id_value,\n            \"external_link_href\": self.external_link_href,\n            \"external_link_display_name\": self.external_link_display_name,\n            **self.sync_info,\n        }",
+  "source_fingerprints": {
+    "ast_dump": "5afd6a5569e62a89903d8473f5b7172c694566dd3ad6d26d4565567e961f437e",
+    "ast_unparse": "4d499f484f753f868d6d7573c67e7ba80bc4193b8758f420cba200c040eddf16",
+    "dedent_strip": "83bc3d5ba2e5d0e531026937ed7caaa92fd3bb434e53ca7e4b91a049fab42da1",
+    "dedent_strip_newline": "f514e97c1473a108c3d41b728889ca14eaf910da993e4bbfa0ad1315c3218f52",
+    "lf": "83bc3d5ba2e5d0e531026937ed7caaa92fd3bb434e53ca7e4b91a049fab42da1",
+    "raw": "83bc3d5ba2e5d0e531026937ed7caaa92fd3bb434e53ca7e4b91a049fab42da1"
+  },
+  "status": "DIRECT_HASH_RESOLVED",
+  "support_records": []
+}

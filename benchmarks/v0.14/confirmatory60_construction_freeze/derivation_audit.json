@@ -1,0 +1,132 @@
+{
+  "all_non_main_helpers_ast_identical": true,
+  "bizproof_engine_used": false,
+  "candidate_extraction_implementation_changed": false,
+  "changed_top_level_functions": [
+    "main"
+  ],
+  "derived_sha256": "6ab3fa163db5c504825cde658cd9d2a07eb541943b150cc4638abf07f80b3ee6",
+  "external_outcomes_observed": 0,
+  "function_ranking_implementation_changed": false,
+  "patches": [
+    {
+      "count": 1,
+      "label": "source project count",
+      "pattern": "(if len\\(\\s*projects\\s*\\)\\s*!=\\s*)18(:)",
+      "replacement": "\\g<1>6\\g<2>"
+    },
+    {
+      "count": 1,
+      "label": "source project error",
+      "pattern": "expected 18 frozen projects",
+      "replacement": "expected 6 frozen reserve projects"
+    },
+    {
+      "count": 1,
+      "label": "eligible project minimum",
+      "pattern": "(if len\\(\\s*eligible_projects\\s*\\)\\s*<\\s*)12(:)",
+      "replacement": "\\g<1>6\\g<2>"
+    },
+    {
+      "count": 1,
+      "label": "eligible project error",
+      "pattern": "fewer than 12 projects satisfy the ",
+      "replacement": "fewer than 6 frozen reserve projects satisfy the "
+    },
+    {
+      "count": 1,
+      "label": "fixed reserve selection count",
+      "pattern": "eligible_projects\\[:12\\]",
+      "replacement": "eligible_projects[:6]"
+    },
+    {
+      "count": 1,
+      "label": "selected case count",
+      "pattern": "(if len\\(\\s*selected_cases\\s*\\)\\s*!=\\s*)120(:)",
+      "replacement": "\\g<1>60\\g<2>"
+    },
+    {
+      "count": 1,
+      "label": "selected hash count",
+      "pattern": "(if len\\(\\s*selected_hashes_global\\s*\\)\\s*!=\\s*)120(:)",
+      "replacement": "\\g<1>60\\g<2>"
+    },
+    {
+      "count": 1,
+      "label": "cohort count error",
+      "pattern": "external cohort is not exactly 120 cases",
+      "replacement": "confirmatory cohort is not exactly 60 cases"
+    },
+    {
+      "count": 1,
+      "label": "project distribution count",
+      "pattern": "(if len\\(\\s*project_distribution\\s*\\)\\s*!=\\s*)12(:)",
+      "replacement": "\\g<1>6\\g<2>"
+    },
+    {
+      "count": 1,
+      "label": "project distribution error",
+      "pattern": "cohort does not contain 12 projects",
+      "replacement": "cohort does not contain 6 fixed reserve projects"
+    },
+    {
+      "count": 1,
+      "label": "manifest source project count",
+      "pattern": "(\"source_universe_project_count\"\\s*:\\s*)18([,\\n])",
+      "replacement": "\\g<1>6\\g<2>"
+    },
+    {
+      "count": 1,
+      "label": "manifest selected project count",
+      "pattern": "(\"selected_project_count\"\\s*:\\s*)12([,\\n])",
+      "replacement": "\\g<1>6\\g<2>"
+    },
+    {
+      "count": 1,
+      "label": "manifest case count",
+      "pattern": "(\"case_count\"\\s*:\\s*)120([,\\n])",
+      "replacement": "\\g<1>60\\g<2>"
+    },
+    {
+      "count": 1,
+      "label": "manifest unique body count",
+      "pattern": "(\"unique_selected_source_bodies\"\\s*:\\s*)120([,\\n])",
+      "replacement": "\\g<1>60\\g<2>"
+    },
+    {
+      "count": 1,
+      "label": "selected-project print",
+      "pattern": "selected projects        = 12 / 12",
+      "replacement": "selected projects        = 6 / 6"
+    },
+    {
+      "count": 1,
+      "label": "selected-case print",
+      "pattern": "selected cases           = 120 / 120",
+      "replacement": "selected cases           = 60 / 60"
+    },
+    {
+      "count": 1,
+      "label": "unique-body print",
+      "pattern": "unique source bodies     = 120 / 120",
+      "replacement": "unique source bodies     = 60 / 60"
+    },
+    {
+      "count": 1,
+      "label": "case schema",
+      "pattern": "BIZPROOF-V012-EXTERNAL-CASE-1",
+      "replacement": "BIZPROOF-V014-CONFIRMATORY-CASE-1"
+    },
+    {
+      "count": 1,
+      "label": "cohort schema",
+      "pattern": "BIZPROOF-V0\\.12-EXTERNAL-COHORT-1",
+      "replacement": "BIZPROOF-V0.14-CONFIRMATORY60-COHORT-1"
+    }
+  ],
+  "reference_sha256": "dbdba3a7b36876f599c00f8a719b863c3850ef4e3316360d46783fc9fb5dec51",
+  "schema_version": "BIZPROOF-V0.14-CONFIRMATORY60-DERIVATION-AUDIT-1",
+  "shape_classification_implementation_changed": false,
+  "source_normalization_implementation_changed": false,
+  "top_level_functions": 24
+}

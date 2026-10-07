@@ -1,0 +1,64 @@
+{
+  "descriptive_failure_detection": {
+    "hypothetical_failure_rate": 0.05,
+    "probability_at_least_one_failure_in_120": 0.9978775736213018,
+    "warning": "descriptive calculation assumes independent case-level failures and is not treated as a formal statistical power guarantee"
+  },
+  "multiple_testing_policy": "primary inference is cohort-level; project/stratum analyses are secondary descriptive analyses",
+  "n": 120,
+  "primary_interval": "Wilson 95%",
+  "report": [
+    "micro certification yield",
+    "macro project certification yield",
+    "A2 yield",
+    "ambiguity rate",
+    "unsupported rate",
+    "yield by frozen source-shape stratum",
+    "project-level minimum/median/maximum"
+  ],
+  "schema_version": "BIZPROOF-V0.12-EXTERNAL-STATS-1",
+  "wilson_examples": {
+    "102": {
+      "n": 120,
+      "successes": 102,
+      "wilson95_high": 0.9029618770741527,
+      "wilson95_low": 0.775324706432755,
+      "yield": 0.85
+    },
+    "108": {
+      "n": 120,
+      "successes": 108,
+      "wilson95_high": 0.9418664079739892,
+      "wilson95_low": 0.833318258891048,
+      "yield": 0.9
+    },
+    "114": {
+      "n": 120,
+      "successes": 114,
+      "wilson95_high": 0.9768856355855343,
+      "wilson95_low": 0.8951971146376326,
+      "yield": 0.95
+    },
+    "120": {
+      "n": 120,
+      "successes": 120,
+      "wilson95_high": 1.0,
+      "wilson95_low": 0.9689808335812966,
+      "yield": 1.0
+    },
+    "90": {
+      "n": 120,
+      "successes": 90,
+      "wilson95_high": 0.8189017834319043,
+      "wilson95_low": 0.665588633358744,
+      "yield": 0.75
+    },
+    "96": {
+      "n": 120,
+      "successes": 96,
+      "wilson95_high": 0.8617552352115975,
+      "wilson95_low": 0.7196332649371805,
+      "yield": 0.8
+    }
+  }
+}

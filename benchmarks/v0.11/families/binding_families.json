@@ -1,0 +1,1205 @@
+{
+  "families": [
+    {
+      "candidate_count": 13,
+      "candidate_ids": [
+        "19d233058899f735",
+        "244130d6ff9953d0",
+        "2dd784251ccc7dce",
+        "4b583322af591973",
+        "4c7af63af2f89319",
+        "4d2eb60abd9c44c8",
+        "61cf0e4af667580e",
+        "78ca19c5e56cefa7",
+        "80788665d9905741",
+        "9ccbe1be4f59b3ce",
+        "b46358e6c871e1bf",
+        "b70f35ae381f7a3b",
+        "fd4702ed1d79ff1f"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "foyer_fiscal('bouclier_imp_gen', period)",
+        "foyer_fiscal('cd_acc75a', period)",
+        "foyer_fiscal('cd_deddiv', period)",
+        "foyer_fiscal('cd_doment', period)",
+        "foyer_fiscal('cd_eparet', period)",
+        "foyer_fiscal('cd_sofipe', period)",
+        "foyer_fiscal('csg_patrimoine_deductible_ir', period)",
+        "foyer_fiscal('epargne_codeveloppement_deduc', period)",
+        "foyer_fiscal('f3vf', period)",
+        "foyer_fiscal('f3vi', period)"
+      ],
+      "family_id": "BIND-a776b5d05f0c",
+      "kind": "CALL",
+      "occurrences": 44,
+      "pattern_class": "EXTERNAL_CALL",
+      "primitive": "foyer_fiscal",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 8,
+      "candidate_ids": [
+        "019d3a3df4514bac",
+        "051c7ef379178030",
+        "1458ed128652b359",
+        "61cf0e4af667580e",
+        "d28505f251600d52",
+        "dfd34c86bcd9bfa1",
+        "eb41eb351df073ef",
+        "eff10167a5398559"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "individu('aah', oct_2021)",
+        "individu('aah', period)",
+        "individu('activite', period)",
+        "individu('age', period)",
+        "individu('age_en_mois', period)",
+        "individu('aide_mobilite_categories_demandeur_emploi_eligibles', period)",
+        "individu('aide_mobilite_date_demande', period)",
+        "individu('aide_mobilite_duree_trajet', period)",
+        "individu('aide_mobilite_ressources_eligibles', period)",
+        "individu('alternant', period)"
+      ],
+      "family_id": "BIND-d90efa5e5826",
+      "kind": "CALL",
+      "occurrences": 39,
+      "pattern_class": "EXTERNAL_CALL",
+      "primitive": "individu",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 4,
+      "candidate_ids": [
+        "1b63ce825a129c0a",
+        "55fe61b67000b53a",
+        "5ea2122f340b1558",
+        "d033593e9fc6fbc6"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "other.name",
+        "self.name"
+      ],
+      "family_id": "BIND-01b03f2677a0",
+      "kind": "ATTRIBUTE",
+      "occurrences": 5,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "name",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "django_oscar",
+        "pretix"
+      ]
+    },
+    {
+      "candidate_count": 3,
+      "candidate_ids": [
+        "61cf0e4af667580e",
+        "dfd34c86bcd9bfa1",
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "not_((activite_en_recherche_emploi == TypesActiviteEnRechercheEmploi.entretien_embauche) + (activite_en_recherche_emploi == TypesActiviteEnRechercheEmploi.indeterminee))",
+        "not_(aah_eligible)",
+        "not_(individu('enfant_a_charge', period.this_year))",
+        "not_(individu('lieu_emploi_ou_formation', period) == TypesLieuEmploiFormation.non_renseigne)",
+        "not_(lieu_de_residence == TypesLieuResidence.non_renseigne)",
+        "not_(reside_en_metropole)"
+      ],
+      "family_id": "BIND-380dd6b01205",
+      "kind": "CALL",
+      "occurrences": 6,
+      "pattern_class": "EXTERNAL_CALL",
+      "primitive": "not_",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 3,
+      "candidate_ids": [
+        "4c7af63af2f89319",
+        "eb41eb351df073ef",
+        "fd4702ed1d79ff1f"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "min_(contrat_de_travail_debut_en_mois + 1 + (contrat_travail_debut - contrat_de_travail_debut_en_mois), contrat_de_travail_debut_en_mois + 2 - timedelta64(1, 'D'))",
+        "min_(plaf - base_ci, f7df + f7dd)",
+        "min_(plaf, f7db)"
+      ],
+      "family_id": "BIND-c675ab5793fd",
+      "kind": "CALL",
+      "occurrences": 4,
+      "pattern_class": "EXTERNAL_CALL",
+      "primitive": "min_",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 3,
+      "candidate_ids": [
+        "4c7af63af2f89319",
+        "a74d4580a9effb73",
+        "fd4702ed1d79ff1f"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "where(invalide, P.plafond_invalides, where(annee1, min_(P.plafond_maximum_1ere_annee, P.plafond_1ere_annee + P.increment_plafond * (nb_pac_majoration_plafond + f7dl)), min_(P.plafond_maximum, P.plafond + P.increment_plafond * (nb_pac_majoration_plafond + f7dl))))",
+        "where(not_(or_(individu('bourse_criteres_sociaux', juin_2022) > 0, individu('bourse_enseignement_sup', juin_2022) > 0)), False, where(and_(individu.has_role(Famille.PARENT), individu.famille('eligibilite_per', period)), False, True))"
+      ],
+      "family_id": "BIND-8d96935a6333",
+      "kind": "CALL",
+      "occurrences": 3,
+      "pattern_class": "EXTERNAL_CALL",
+      "primitive": "where",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "0f2fcfc48ffea4af",
+        "55fe61b67000b53a"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "other.code",
+        "self.code"
+      ],
+      "family_id": "BIND-2de7cd7d0493",
+      "kind": "ATTRIBUTE",
+      "occurrences": 3,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "code",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "pretix"
+      ]
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "4ab5aeba4c85b4c0",
+        "55fe61b67000b53a"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "other.rate",
+        "self.rate"
+      ],
+      "family_id": "BIND-631952563677",
+      "kind": "ATTRIBUTE",
+      "occurrences": 3,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "rate",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "django_oscar",
+        "pretix"
+      ]
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "dfd34c86bcd9bfa1",
+        "eff10167a5398559"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "parameters(period).chomage.allocations_assurance_chomage.ass.age_max",
+        "parameters(period).prestations_sociales.aides_logement.action_logement.locapass.age_max"
+      ],
+      "family_id": "BIND-285cca05d222",
+      "kind": "ATTRIBUTE",
+      "occurrences": 2,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "age_max",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "dfd34c86bcd9bfa1",
+        "eff10167a5398559"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "TypesActivite.chomeur"
+      ],
+      "family_id": "BIND-a969ec656227",
+      "kind": "ATTRIBUTE",
+      "occurrences": 2,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "chomeur",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "4c7af63af2f89319",
+        "fd4702ed1d79ff1f"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "parameters(period).impot_revenu.calcul_reductions_impots.emploi_salarie_domicile",
+        "parameters(period).impot_revenu.credits_impots.emploi_salarie_domicile"
+      ],
+      "family_id": "BIND-c483b8725776",
+      "kind": "ATTRIBUTE",
+      "occurrences": 2,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "emploi_salarie_domicile",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "62aa728fdef86058",
+        "d821bbc9b1df03ae"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "self.full_id"
+      ],
+      "family_id": "BIND-a673ab72ee1d",
+      "kind": "ATTRIBUTE",
+      "occurrences": 2,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "full_id",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "pretix"
+      ]
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "4c7af63af2f89319",
+        "fd4702ed1d79ff1f"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "P.taux"
+      ],
+      "family_id": "BIND-377cc5bad538",
+      "kind": "ATTRIBUTE",
+      "occurrences": 2,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "taux",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "1458ed128652b359",
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "individu.menage('residence', period)",
+        "individu.menage('statut_occupation_logement', period)"
+      ],
+      "family_id": "BIND-5d8ee3740df2",
+      "kind": "CALL",
+      "occurrences": 2,
+      "pattern_class": "EXTERNAL_CALL",
+      "primitive": "menage",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "019d3a3df4514bac",
+        "a74d4580a9effb73"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "periods.period('2021-10')",
+        "periods.period('2022-06')"
+      ],
+      "family_id": "BIND-aafff73f34c8",
+      "kind": "CALL",
+      "occurrences": 2,
+      "pattern_class": "EXTERNAL_CALL",
+      "primitive": "period",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "ContexteActivitePoleEmploi.formation",
+        "TypesContrat.formation"
+      ],
+      "family_id": "BIND-02c6f45740c1",
+      "kind": "ATTRIBUTE",
+      "occurrences": 2,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "formation",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "55fe61b67000b53a"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "other.gross",
+        "self.gross"
+      ],
+      "family_id": "BIND-a32b01b69d86",
+      "kind": "ATTRIBUTE",
+      "occurrences": 2,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "gross",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "pretix"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "TypesLieuResidence.metropole",
+        "parametres_amob.distance_minimum.metropole"
+      ],
+      "family_id": "BIND-f68a13ff29ca",
+      "kind": "ATTRIBUTE",
+      "occurrences": 2,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "metropole",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "55fe61b67000b53a"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "other.net",
+        "self.net"
+      ],
+      "family_id": "BIND-b5a8bd5f1d63",
+      "kind": "ATTRIBUTE",
+      "occurrences": 2,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "net",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "pretix"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "972b76d53a12b8ad"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "P_micro.microentreprise.regime_micro_bic.marchandises.plafond",
+        "P_micro.microentreprise.regime_micro_bic.services.plafond"
+      ],
+      "family_id": "BIND-be9478398949",
+      "kind": "ATTRIBUTE",
+      "occurrences": 2,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "plafond",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "55fe61b67000b53a"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "other.tax",
+        "self.tax"
+      ],
+      "family_id": "BIND-ecfe1a23a282",
+      "kind": "ATTRIBUTE",
+      "occurrences": 2,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "tax",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "pretix"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "019d3a3df4514bac"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "individu.famille('paje_prepare', oct_2021)",
+        "individu.famille('rsa', oct_2021)"
+      ],
+      "family_id": "BIND-7b5a231b8f62",
+      "kind": "CALL",
+      "occurrences": 2,
+      "pattern_class": "EXTERNAL_CALL",
+      "primitive": "famille",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "db6bd6fe0c9b8cd4"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "self._totaldiff_guesstimate"
+      ],
+      "family_id": "BIND-9d85c1b9883b",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "_totaldiff_guesstimate",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "pretix"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "972b76d53a12b8ad"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "TypesTnsTypeActivite.achat_revente"
+      ],
+      "family_id": "BIND-c2a5e6befb51",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "achat_revente",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "cb937575ad9957d1"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "parameters(period).prestations_sociales.prestations_familiales.prestations_generales.af.af_cm.age1"
+      ],
+      "family_id": "BIND-7133fb061e58",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "age1",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "1458ed128652b359"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "parameters(period).prestations_sociales.education.mobilite.mobili_jeune.age_maximum"
+      ],
+      "family_id": "BIND-6ba2a7bd65f1",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "age_maximum",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "parameters(period).prestations_sociales.transport.aide_mobilite"
+      ],
+      "family_id": "BIND-31501428df43",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "aide_mobilite",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "DispositifsDeFormation.autre"
+      ],
+      "family_id": "BIND-dbee52f8c98c",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "autre",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "972b76d53a12b8ad"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "TypesTnsTypeActivite.bic"
+      ],
+      "family_id": "BIND-106547caf617",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "bic",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "972b76d53a12b8ad"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "TypesTnsTypeActivite.bnc"
+      ],
+      "family_id": "BIND-2098a9f57d18",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "bnc",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "TypesContrat.cdd"
+      ],
+      "family_id": "BIND-84d92b9b15ba",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "cdd",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "TypesContrat.cdi"
+      ],
+      "family_id": "BIND-a8912fa5902c",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "cdi",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "TypesContrat.ctt"
+      ],
+      "family_id": "BIND-8675f44fd35a",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "ctt",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "parametres_amob.delai_max"
+      ],
+      "family_id": "BIND-6f3dfb75365a",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "delai_max",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "parametres_amob.duree_de_contrat_minimum"
+      ],
+      "family_id": "BIND-f1336c341472",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "duree_de_contrat_minimum",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "parametres_amob.duree_de_formation_minimum"
+      ],
+      "family_id": "BIND-dd746832d28c",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "duree_de_formation_minimum",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "parametres_amob.duree_trajet_minimum"
+      ],
+      "family_id": "BIND-b1349dd20570",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "duree_trajet_minimum",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "051c7ef379178030"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "TypesScolarite.enseignement_superieur"
+      ],
+      "family_id": "BIND-3f3f2c1bac27",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "enseignement_superieur",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "TypesActiviteEnRechercheEmploi.entretien_embauche"
+      ],
+      "family_id": "BIND-71c162a307c4",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "entretien_embauche",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eff10167a5398559"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "TypesActivite.etudiant"
+      ],
+      "family_id": "BIND-52ebb4d4ffe9",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "etudiant",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "parametres_amob.distance_minimum.hors_metropole"
+      ],
+      "family_id": "BIND-aa0799f967bd",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "hors_metropole",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "28b1b63cc241f487"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "self.internal_name"
+      ],
+      "family_id": "BIND-c25bb0f4d4c6",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "internal_name",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "pretix"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "460c0ee11314458e"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "user.is_staff"
+      ],
+      "family_id": "BIND-e965f79ec076",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "is_staff",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "django_oscar"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "1458ed128652b359"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "TypesStatutOccupationLogement.locataire_foyer"
+      ],
+      "family_id": "BIND-ee169f82a486",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "locataire_foyer",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "1458ed128652b359"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "TypesStatutOccupationLogement.locataire_hlm"
+      ],
+      "family_id": "BIND-fd356cfdba22",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "locataire_hlm",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "1458ed128652b359"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "TypesStatutOccupationLogement.locataire_meuble"
+      ],
+      "family_id": "BIND-7037f212fa6c",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "locataire_meuble",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "1458ed128652b359"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "TypesStatutOccupationLogement.locataire_vide"
+      ],
+      "family_id": "BIND-73bfce7bf5c3",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "locataire_vide",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "972b76d53a12b8ad"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "type_activite.possible_values"
+      ],
+      "family_id": "BIND-a7a51b4f9831",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "possible_values",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "ContexteActivitePoleEmploi.recherche_emploi"
+      ],
+      "family_id": "BIND-ebaad4002003",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "recherche_emploi",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "ContexteActivitePoleEmploi.reprise_emploi"
+      ],
+      "family_id": "BIND-6264e07cda63",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "reprise_emploi",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "0fe04e3572c7203e"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "line.unit_effective_price"
+      ],
+      "family_id": "BIND-99eef8014f17",
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "pattern_class": "OBJECT_ATTRIBUTE",
+      "primitive": "unit_effective_price",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "django_oscar"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "aab5348ee173d6e3"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "D('0.00')"
+      ],
+      "family_id": "BIND-b69dafa9fced",
+      "kind": "CALL",
+      "occurrences": 1,
+      "pattern_class": "EXTERNAL_CALL",
+      "primitive": "D",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "django_oscar"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "contrat_travail_debut.astype('M8[M]')"
+      ],
+      "family_id": "BIND-763e8ae48c0b",
+      "kind": "CALL",
+      "occurrences": 1,
+      "pattern_class": "EXTERNAL_CALL",
+      "primitive": "astype",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "019d3a3df4514bac"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "individu.has_role(Famille.PARENT)"
+      ],
+      "family_id": "BIND-938fbce9d2cd",
+      "kind": "CALL",
+      "occurrences": 1,
+      "pattern_class": "EXTERNAL_CALL",
+      "primitive": "has_role",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "244130d6ff9953d0"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "foyer_fiscal.members('maj_cga', period)"
+      ],
+      "family_id": "BIND-2ad8bd474771",
+      "kind": "CALL",
+      "occurrences": 1,
+      "pattern_class": "EXTERNAL_CALL",
+      "primitive": "members",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "cb937575ad9957d1"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "nb_enf(famille, period, age_min_enfant, age_max_enfant - 1)"
+      ],
+      "family_id": "BIND-da814643ad2e",
+      "kind": "CALL",
+      "occurrences": 1,
+      "pattern_class": "EXTERNAL_CALL",
+      "primitive": "nb_enf",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "244130d6ff9953d0"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "foyer_fiscal.sum(maj_cga_i)"
+      ],
+      "family_id": "BIND-3885de890961",
+      "kind": "CALL",
+      "occurrences": 1,
+      "pattern_class": "EXTERNAL_CALL",
+      "primitive": "sum",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "635fe113a02cf90b"
+      ],
+      "certification_claim": false,
+      "examples": [
+        "ZERO_DISCOUNT"
+      ],
+      "family_id": "BIND-2d0aa388370c",
+      "kind": "GLOBAL_NAME",
+      "occurrences": 1,
+      "pattern_class": "GLOBAL_SYMBOL",
+      "primitive": "ZERO_DISCOUNT",
+      "resolution_status": "UNRESOLVED",
+      "source_ids": [
+        "django_oscar"
+      ]
+    }
+  ],
+  "summary": {
+    "adapter_family_count": 30,
+    "benchmark_version": "0.11.0",
+    "binding_family_count": 58,
+    "certification_claim": false,
+    "cohort_sha256": "3144f973a166ebee41a059c538b81ffac5a5d15737982c6d95e59175325ca108",
+    "execution_family_count": 5,
+    "passed": true,
+    "phase": "GENERALIZATION_FAMILY_CENSUS",
+    "route_counts": {
+      "BINDING_DEFINITION": 36,
+      "CONTROLLED_EXECUTION_REVIEW": 17,
+      "EXPLICIT_ADAPTER": 33,
+      "SEMANTIC_SCOPE_REVIEW": 2,
+      "STRUCTURAL_REVIEW": 2
+    },
+    "semantic_scope_family_count": 2,
+    "structural_review_family_count": 2,
+    "total_candidates": 90
+  }
+}

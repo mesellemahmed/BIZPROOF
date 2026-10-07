@@ -1,0 +1,17 @@
+{
+  "attempted": 2,
+  "basis": {
+    "1a2de6edb11465fe": 28,
+    "3fd2d8b8a76b4834": 384,
+    "total": 412
+  },
+  "batch": "B4_BATCH4_NESTED_VECTOR_LOGIC",
+  "candidate_results": {
+    "1a2de6edb11465fe": "CERTIFIED_A2",
+    "3fd2d8b8a76b4834": "CERTIFIED_A2"
+  },
+  "certified_a2": 2,
+  "failed": 0,
+  "prospective_mutant_protocol": true,
+  "schema_version": "BIZPROOF-V0.12-B4-CERT4-SUMMARY-1"
+}

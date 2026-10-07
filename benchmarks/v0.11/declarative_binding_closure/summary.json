@@ -1,0 +1,37 @@
+{
+  "a1_proof_ready_candidate_ids": [
+    "19d233058899f735",
+    "244130d6ff9953d0",
+    "2dd784251ccc7dce",
+    "4b583322af591973",
+    "4d2eb60abd9c44c8",
+    "61cf0e4af667580e",
+    "78ca19c5e56cefa7",
+    "80788665d9905741",
+    "9ccbe1be4f59b3ce",
+    "b46358e6c871e1bf",
+    "b70f35ae381f7a3b"
+  ],
+  "a1_proof_ready_candidates": 11,
+  "benchmark_version": "0.11.0",
+  "certification_claim": false,
+  "cohort_size": 90,
+  "declarative_bindings_created": 35,
+  "passed": true,
+  "phase": "STRUCTURAL_DECLARATIVE_BINDING_CLOSURE",
+  "status_counts": {
+    "A1_PROOF_READY": 11
+  },
+  "structural_candidates_binding_closed": 11,
+  "structural_candidates_targeted": 11,
+  "structural_occurrences_bound": 35,
+  "symbolic_probe_counts": {
+    "SYMBOLIC_FRONTEND_READY": 11
+  },
+  "terminal_outcomes_assigned_before": 1,
+  "terminal_outcomes_assigned_this_phase": 0,
+  "terminal_outcomes_pending": 89,
+  "workplan_route_counts": {
+    "BINDING_DEFINITION": 11
+  }
+}

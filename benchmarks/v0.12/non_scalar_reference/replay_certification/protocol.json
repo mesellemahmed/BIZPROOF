@@ -1,0 +1,33 @@
+{
+  "attempt_population": [
+    "26a1af8837fe7ae4",
+    "75e61ddb4dde4f1a",
+    "87d2f0b3b15f0ea6",
+    "e1cf29f02fa0dadc"
+  ],
+  "certification_execution_started_before_revision": false,
+  "certification_level": "CERTIFIED_A2",
+  "claim_scope": "Formal equivalence evidence for the accepted V0.12 projection and formal mutant refutation within the explicitly declared abstraction contract.",
+  "deferred_from_original_pure5": {
+    "d285ecd86455b150": "Tuple contains domain-object values (item and discount_rule); requires explicit reference identity contracts."
+  },
+  "mutant_refutation_requirement": {
+    "formal": "Z3 must establish SAT for a constraint system containing correct_output != mutant_output within the declared semantic abstraction.",
+    "replay": "A concrete witness satisfying the same abstraction must reproduce different runtime outputs."
+  },
+  "protocol_revision": "PRE_EXECUTION_FORMAL_MUTANT_GATE_1",
+  "protocol_revision_reason": "The initial draft required only concrete mutant refutation. Before executing any certification result, the gate was strengthened to require solver-backed existential mutant refutation plus concrete replay of a valid witness.",
+  "required_gates": [
+    "frozen_source_slice_preserved",
+    "explicit_abstraction_contract",
+    "canonical_source_adapter_equivalence",
+    "semantic_value_supported",
+    "mutant_structurally_distinct",
+    "mutant_formally_refuted",
+    "formal_counterexample_concretely_replayed",
+    "replayable_certificate"
+  ],
+  "schema_version": "BIZPROOF-V0.12-A4-CERT-PROTOCOL-1",
+  "selection_frozen_before_execution": true,
+  "source_checkpoint": "85cdcf96484ae657690900aae3c31672d5885547"
+}

@@ -1,0 +1,41 @@
+{
+  "article_results_changed": false,
+  "candidates": [
+    {
+      "article_claim_inclusion": false,
+      "candidate_id": "4008a63ee1ef3b44",
+      "certification": "CERTIFIED_A2",
+      "final_status": "INTENTIONALLY_OUT_OF_PRIMARY_PROTOCOL",
+      "pair_validation": "PASS",
+      "reason": "Valid frozen pair, but its frozenset[str]/PermissionName encoding was outside the frozen 14-case execution protocol.",
+      "technical_class": "EXTEND_FINITE_SET_ENUM"
+    },
+    {
+      "article_claim_inclusion": false,
+      "candidate_id": "53abfcd7d20a9cd6",
+      "certification": "CERTIFIED_A2",
+      "final_status": "INTENTIONALLY_OUT_OF_PRIMARY_PROTOCOL",
+      "pair_validation": "PASS",
+      "reason": "adapt_nbptr/mutant_nbptr was recovered after the original selection freeze; its dict[str, Any] interface is also outside the generic frozen input encoding.",
+      "technical_class": "RECOVERED_POST_FREEZE_COMPLEX_MAPPING"
+    },
+    {
+      "article_claim_inclusion": false,
+      "candidate_id": "972b76d53a12b8ad",
+      "certification": "CERTIFIED_A2",
+      "final_status": "INTENTIONALLY_OUT_OF_PRIMARY_PROTOCOL",
+      "pair_validation": "PASS",
+      "reason": "The matching RSA/TNS pair was recovered after the original selection freeze; anti-bias rules forbid retrospective promotion.",
+      "technical_class": "RECOVERED_POST_FREEZE_PAIR"
+    }
+  ],
+  "certified_a2_total": 17,
+  "closure_interpretation": "All 17 CERTIFIED_A2 candidates are now fully accounted for. Fourteen remain the frozen matched benchmark. The remaining three have valid adapter/mutant pairs but are intentionally outside the primary comparison for protocol and provenance reasons. There is no unresolved A2 benchmark-membership case.",
+  "outside_primary_cases": 3,
+  "paper_benchmark_cases": 14,
+  "post_hoc_promotions": 0,
+  "schema_version": "BIZPROOF-V0.11-OUT-OF-PRIMARY-A2-CLOSURE-2",
+  "selection_changed_using_baseline_results": false,
+  "status": "PASS",
+  "unresolved_a2_membership_cases": 0
+}

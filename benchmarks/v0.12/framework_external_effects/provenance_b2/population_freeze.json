@@ -1,0 +1,24 @@
+{
+  "candidate_count": 8,
+  "candidate_ids": [
+    "2309036b0c69ad48",
+    "4b57e2d73c695a41",
+    "8048a564541f5408",
+    "882c5eae0d8fd4ec",
+    "8a754dadf1672d0a",
+    "b2996c3dd81aca55",
+    "d7f578c3a5f20b8a",
+    "eb12d3a44210a486"
+  ],
+  "certification_started": false,
+  "recovery_claims": 0,
+  "rules": [
+    "Unique function name alone is insufficient for authoritative provenance.",
+    "Historical SHA correlation is considered strong provenance evidence.",
+    "Candidate-linked function plus path/class corroboration is recorded separately.",
+    "Semantic/reason-code compatibility is diagnostic and cannot by itself establish provenance."
+  ],
+  "schema_version": "BIZPROOF-V0.12-B2-PROV8-FREEZE-1",
+  "selection_rule": "All B2 UNIQUE_NAME_CANDIDATE cases are retained before provenance review.",
+  "source_checkpoint": "bdd9d3cdadeda406f96df925fbf4bfeb36c6bfd0"
+}

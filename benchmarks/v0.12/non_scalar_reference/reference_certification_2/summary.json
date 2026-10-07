@@ -1,0 +1,9 @@
+{
+  "attempted": 2,
+  "candidate_results": {
+    "0f73ae8d15cf3408": "CERTIFIED_A2",
+    "6d009b7961c5d116": "CERTIFIED_A2"
+  },
+  "certified_a2": 2,
+  "schema_version": "BIZPROOF-V0.12-A5-CERT2-SUMMARY-1"
+}

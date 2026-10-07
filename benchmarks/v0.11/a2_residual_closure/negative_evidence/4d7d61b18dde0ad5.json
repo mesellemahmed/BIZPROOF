@@ -1,0 +1,33 @@
+{
+  "candidate_id": "4d7d61b18dde0ad5",
+  "certification_claim": false,
+  "interpretation": "Unsupported means unsupported by the frozen A2 scalar certification scope. It does not claim that the external function is intrinsically unverifiable by another formalism.",
+  "negative_evidence_digest": "bef7bbbb75797e111633a3edd40afbf4cc667ee7f86e4e98163b218ca1cc9284",
+  "prior_review": {
+    "candidate_id": "4d7d61b18dde0ad5",
+    "certification_claim": false,
+    "class": "BasketView",
+    "function": "json_response",
+    "reason_code": "HTTP_RESPONSE_RETURN",
+    "review_kind": "NON_SCALAR_RETURN",
+    "source": "django_oscar",
+    "terminal_outcome": null
+  },
+  "reason": "The reviewed source does not provide a defensible single scalar business-semantic projection under the frozen V0.11 A2 protocol.",
+  "reason_code": "HTTP_RESPONSE_RETURN",
+  "schema_version": "BIZPROOF-V0.11-NEGATIVE-EVIDENCE-1",
+  "scope": "V0.11 A2 explicit scalar semantic adapter",
+  "source": {
+    "class": "BasketView",
+    "file": "src/oscar/apps/basket/views.py",
+    "function": "json_response",
+    "function_sha256": "fe7a7a4b14d49d5b3c15b6612882543642c8982c1d1886bdb0c2ecf24117c5fc",
+    "lines": [
+      225,
+      234
+    ],
+    "source_file_sha256": "d978ce9eb54de7473cc5f6ba2882acf4a4bca4573eb75af56b32ca0e26866413",
+    "source_id": "django_oscar"
+  },
+  "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+}

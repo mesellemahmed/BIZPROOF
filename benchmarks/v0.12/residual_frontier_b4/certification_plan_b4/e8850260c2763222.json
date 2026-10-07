@@ -1,0 +1,20 @@
+{
+  "candidate_id": "e8850260c2763222",
+  "certification_batch": "B4_BATCH2_STATE_EFFECT",
+  "function_name": "apply",
+  "historical_category": "STATEFUL_SIDE_EFFECTING_LOGIC",
+  "normalized_source_sha256": "43caf35ba88294b43ebf679eb34e8e77c76d4ed43dbd2676aaef38e9010280af",
+  "physical_location_count": 1,
+  "representative_class": "MultibuyDiscountBenefit",
+  "representative_lineno": 346,
+  "representative_path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\offer\\benefits.py",
+  "representative_project": "django_oscar",
+  "semantic_family": "STATE_EFFECT",
+  "semantic_observation": "return value plus ordered effect trace over applicable-line lookup, cheapest-line selection, quantity gate, apply_discount and condition.consume_items",
+  "semantic_route": "CONDITIONAL_DISCOUNT_CONSUME_EFFECT",
+  "source": "def apply(self, basket, condition, offer, **kwargs):\n        line_tuples = self.get_applicable_lines(offer, basket)\n        if not line_tuples:\n            return ZERO_DISCOUNT\n\n        # Cheapest line gives free product\n        discount, line = line_tuples[0]\n        if line.quantity_with_offer_discount(offer) == 0:\n            apply_discount(line, discount, 1, offer)\n\n            affected_lines = [(line, discount, 1)]\n            condition.consume_items(offer, basket, affected_lines)\n\n            return BasketDiscount(discount)\n        else:\n            return ZERO_DISCOUNT",
+  "source_ast_sha256": "e71e2c0502b46ad0537d60e5783c4cacb81d49b518a5be580bf2cedc8c851277",
+  "source_resolution": "SAME_RECORD_DIRECT_HASH_NAME_RESOLVED",
+  "source_sha256": "43caf35ba88294b43ebf679eb34e8e77c76d4ed43dbd2676aaef38e9010280af",
+  "unique_physical_location_claim": true
+}

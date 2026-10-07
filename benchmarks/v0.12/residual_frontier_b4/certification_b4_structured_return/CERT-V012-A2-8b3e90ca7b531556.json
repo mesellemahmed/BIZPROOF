@@ -1,0 +1,40 @@
+{
+  "all_required_gates_pass": true,
+  "authoritative_source": {
+    "correct_source_ast_rewritten": false,
+    "matches_frozen_plan": true,
+    "sha256": "2bc325044761b017027a05af4c8a5df08b0e10d8581b3432b71c6be773381ed9"
+  },
+  "candidate_id": "8b3e90ca7b531556",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_mutant_replay": true,
+  "formal_mutant_refutation": {
+    "model": "[first_filtered_record = 1, last_filtered_record = 0]",
+    "property": "there exists a filtered sequence with distinct first and last records where authoritative first-record selection differs from USE_LAST_FILTERED_STOCKRECORD",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "function_name": "parent_pricing_policy",
+  "historical_category": "OTHER_FROZEN_SCOPE_LIMITATION",
+  "mutant": {
+    "fault": "after filtering null stockrecords, the mutant uses the last available stockrecord instead of the first one selected by the source",
+    "name": "USE_LAST_FILTERED_STOCKRECORD"
+  },
+  "mutant_protocol_committed_before_execution": true,
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-B4-CERT1-A2-1",
+  "scope": {
+    "certified": "the prospectively frozen structured-return projection of the exact authoritative source",
+    "not_certified": [
+      "correctness of surrounding framework implementations",
+      "unobserved external objects or services outside the frozen dependency contract",
+      "arbitrary behavior beyond the explicit accepted semantic projection"
+    ]
+  },
+  "semantic_capability": "FILTERED_SEQUENCE_PRICING_RETURN",
+  "source_projection_equivalence": {
+    "branch_basis": 3,
+    "controlled_exact_source_replay": true
+  },
+  "v012_outcome": "CERTIFIED_A2"
+}

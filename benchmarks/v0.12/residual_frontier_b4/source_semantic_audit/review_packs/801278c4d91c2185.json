@@ -1,0 +1,37 @@
+{
+  "all_hash_count": 408,
+  "authoritative_source": false,
+  "candidate_id": "801278c4d91c2185",
+  "category": "OTHER_FROZEN_SCOPE_LIMITATION",
+  "certification_started": false,
+  "direct_hash_count": 45,
+  "direct_hit_count": 9,
+  "hash_name_location_count": 19,
+  "historical_record_count": 548,
+  "local_hit_count": 100,
+  "name_hints": [
+    "True",
+    "__str__"
+  ],
+  "path_hint_count": 29,
+  "recovery_claim": false,
+  "selected": {
+    "class_name": "TaxRule",
+    "end_lineno": 446,
+    "fingerprints": {
+      "ast_dump": "83aeffd61150e22d84231d3b907d35878a1edb59aafc12fcfb433f0acf90c52f",
+      "ast_unparse": "0105843041ca13c0365738407077b2f9b00aaa537280f67d598897e6db290858",
+      "dedent_strip": "6418e54ffc42b44e738215947f3e359854424c8f743c91be530f7c3324620179",
+      "dedent_strip_newline": "d4799664a73e14dddf010629bfc6c61be519be0a5e565e1dab629970aed6c8e2",
+      "lf": "6418e54ffc42b44e738215947f3e359854424c8f743c91be530f7c3324620179",
+      "raw": "6418e54ffc42b44e738215947f3e359854424c8f743c91be530f7c3324620179"
+    },
+    "function_name": "__str__",
+    "lineno": 437,
+    "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\tax.py",
+    "project": "pretix",
+    "source": "def __str__(self):\n        if self.price_includes_tax:\n            s = _('incl. {rate}% {name}').format(rate=self.rate, name=self.name)\n        else:\n            s = _('plus {rate}% {name}').format(rate=self.rate, name=self.name)\n        if self.eu_reverse_charge:\n            s += ' ({})'.format(_('reverse charge enabled'))\n        if self.internal_name:\n            return f'{self.internal_name} ({s})'\n        return str(s)"
+  },
+  "status": "NAME_PATH_REVIEW",
+  "support_records": []
+}

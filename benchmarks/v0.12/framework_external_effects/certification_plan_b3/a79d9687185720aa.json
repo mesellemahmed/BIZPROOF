@@ -1,0 +1,29 @@
+{
+  "candidate_id": "a79d9687185720aa",
+  "certification_batch": "STATE_RETURN_BATCH",
+  "class_name": "AbstractConditionalOffer",
+  "function_name": "save",
+  "lineno": 288,
+  "matched_provenance_hash": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+  "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\offer\\abstract_models.py",
+  "provenance_resolution": "STRUCTURED_DIRECT_HASH_RESOLVED",
+  "reason_codes": "MODEL_SAVE_STATE_TRANSITION_OUTSIDE_FORMAL_SUBSET",
+  "semantic_observation": "status post-state selected from suspended / application-threshold observations plus persistence delegation",
+  "semantic_route": "CONDITIONAL_STATUS_PLUS_PERSISTENCE",
+  "source": "def save(self, *args, **kwargs):\n        # Check to see if consumption thresholds have been broken\n        if not self.is_suspended:\n            if self.get_max_applications() == 0:\n                self.status = self.CONSUMED\n            else:\n                self.status = self.OPEN\n\n        return super().save(*args, **kwargs)",
+  "source_sha256": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+  "structural_profile": {
+    "attribute_writes": [
+      "status",
+      "status"
+    ],
+    "branch_count": 2,
+    "calls": [
+      "save",
+      "get_max_applications",
+      "super"
+    ],
+    "return_count": 1,
+    "subscript_writes": 0
+  }
+}

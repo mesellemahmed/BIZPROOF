@@ -1,0 +1,21 @@
+{
+  "cohort_modified": false,
+  "external_cases_executed": 0,
+  "external_scientific_outcomes_observed": 0,
+  "file_sha256": {
+    "backend_assessment.json": "69c23e82e2715abf75d1790402891040ea2d9db7486d4e3f1e7f333036bff51b",
+    "backend_help.txt": "1b64454c440c0f3d1c9d3c5435fff62a97a22b05b78ed8403a28d4dab429a602",
+    "backend_inventory.json": "e0c10220c499d54c5dba7a7b7aac30e3f686a40a00e1dc5dd522e4ef0bfc2f7b",
+    "runner.py": "9c017da5d8301ca0d9bcb63d10242d2c4522dbf8ed4fa49994c96393be0da444",
+    "validation_scope.json": "294c06cf3b0e403a8f93e492a604d46a7c8776670c9c41f07bc1b32ce407373e"
+  },
+  "generic_source_level_certifier_available": false,
+  "generic_source_level_certifier_candidates": [],
+  "parent_protocol": {
+    "commit": "fbdecb3bd92bfde3e80e75b96148478640151606",
+    "tag": "v0.12-external-evaluation-protocol-freeze"
+  },
+  "runner_role": "orchestration and preflight only; no new semantic capability",
+  "schema_version": "BIZPROOF-V0.12-EXTERNAL-RUNNER-FREEZE-1",
+  "semantic_implementation_modified": false
+}

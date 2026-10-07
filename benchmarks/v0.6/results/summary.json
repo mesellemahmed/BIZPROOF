@@ -1,0 +1,116 @@
+{
+  "adaptable_or_direct_rate": 0.7340425531914894,
+  "adaptation_complexity_counts": {
+    "HIGH": 181,
+    "LOW": 116,
+    "MEDIUM": 600
+  },
+  "adaptation_required": 897,
+  "benchmark_version": "0.6.2",
+  "business_candidates": 1222,
+  "candidates_with_any_evidence": 859,
+  "candidates_with_doc_evidence": 640,
+  "candidates_with_test_evidence": 511,
+  "classification_counts": {
+    "ADAPTATION_REQUIRED": 897,
+    "UNSUPPORTED": 325
+  },
+  "code_files_examined": 243,
+  "direct_candidate_rate": 0.0,
+  "direct_candidates": 0,
+  "functions_examined": 3269,
+  "interpretation": {
+    "ADAPTATION_REQUIRED": "business-relevant external function that requires an explicit interface or scalar adaptation before formal verification",
+    "DIRECT_CANDIDATE": "structurally close to the current BIZPROOF supported subset; still requires an independently sourced business contract",
+    "UNSUPPORTED": "contains control-flow or language constructs intentionally outside the current verifier semantics"
+  },
+  "relevance_counts": {
+    "CONTEXTUAL": 207,
+    "STRONG": 1015
+  },
+  "sources": [
+    {
+      "adaptation_complexity_counts": {
+        "HIGH": 39,
+        "LOW": 42,
+        "MEDIUM": 165
+      },
+      "business_candidates": 251,
+      "candidates_with_any_evidence": 151,
+      "candidates_with_doc_evidence": 0,
+      "candidates_with_test_evidence": 151,
+      "classification_counts": {
+        "ADAPTATION_REQUIRED": 246,
+        "UNSUPPORTED": 5
+      },
+      "code_files_examined": 133,
+      "domain": "tax_and_social_benefits",
+      "functions_examined": 1625,
+      "license": "AGPL-3.0-or-later",
+      "name": "OpenFisca-France",
+      "relevance_counts": {
+        "CONTEXTUAL": 51,
+        "STRONG": 200
+      },
+      "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+      "source_id": "openfisca_france",
+      "syntax_errors": 0
+    },
+    {
+      "adaptation_complexity_counts": {
+        "HIGH": 61,
+        "LOW": 52,
+        "MEDIUM": 282
+      },
+      "business_candidates": 539,
+      "candidates_with_any_evidence": 434,
+      "candidates_with_doc_evidence": 366,
+      "candidates_with_test_evidence": 360,
+      "classification_counts": {
+        "ADAPTATION_REQUIRED": 395,
+        "UNSUPPORTED": 144
+      },
+      "code_files_examined": 52,
+      "domain": "ecommerce",
+      "functions_examined": 556,
+      "license": "BSD-3-Clause",
+      "name": "Django-Oscar",
+      "relevance_counts": {
+        "CONTEXTUAL": 72,
+        "STRONG": 467
+      },
+      "resolved_commit": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+      "source_id": "django_oscar",
+      "syntax_errors": 0
+    },
+    {
+      "adaptation_complexity_counts": {
+        "HIGH": 81,
+        "LOW": 22,
+        "MEDIUM": 153
+      },
+      "business_candidates": 432,
+      "candidates_with_any_evidence": 274,
+      "candidates_with_doc_evidence": 274,
+      "candidates_with_test_evidence": 0,
+      "classification_counts": {
+        "ADAPTATION_REQUIRED": 256,
+        "UNSUPPORTED": 176
+      },
+      "code_files_examined": 58,
+      "domain": "ticketing_and_payments",
+      "functions_examined": 1088,
+      "license": "AGPL-3.0-with-additional-terms",
+      "name": "pretix",
+      "relevance_counts": {
+        "CONTEXTUAL": 84,
+        "STRONG": 348
+      },
+      "resolved_commit": "2af8d29ca99510612fdb005d4ec7d39d83aed6ba",
+      "source_id": "pretix",
+      "syntax_errors": 0
+    }
+  ],
+  "sources_checked": 3,
+  "unsupported": 325
+}

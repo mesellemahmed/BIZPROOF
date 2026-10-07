@@ -1,0 +1,86 @@
+{
+  "assessed_candidates": 90,
+  "benchmark_version": "0.11.0",
+  "by_complexity": {
+    "HIGH": {
+      "F1_DECLARATIVE_BINDING": 4,
+      "F2_EXPLICIT_ADAPTER": 15,
+      "F3_SEMANTIC_EXECUTION_REVIEW": 11
+    },
+    "LOW": {
+      "F0_DIRECT_SYMBOLIC": 3,
+      "F1_DECLARATIVE_BINDING": 23,
+      "F2_EXPLICIT_ADAPTER": 4
+    },
+    "MEDIUM": {
+      "F1_DECLARATIVE_BINDING": 10,
+      "F2_EXPLICIT_ADAPTER": 14,
+      "F3_SEMANTIC_EXECUTION_REVIEW": 6
+    }
+  },
+  "by_source": {
+    "django_oscar": {
+      "F0_DIRECT_SYMBOLIC": 3,
+      "F1_DECLARATIVE_BINDING": 6,
+      "F2_EXPLICIT_ADAPTER": 15,
+      "F3_SEMANTIC_EXECUTION_REVIEW": 6
+    },
+    "openfisca_france": {
+      "F1_DECLARATIVE_BINDING": 23,
+      "F2_EXPLICIT_ADAPTER": 5,
+      "F3_SEMANTIC_EXECUTION_REVIEW": 2
+    },
+    "pretix": {
+      "F1_DECLARATIVE_BINDING": 8,
+      "F2_EXPLICIT_ADAPTER": 13,
+      "F3_SEMANTIC_EXECUTION_REVIEW": 9
+    }
+  },
+  "certification_claim": false,
+  "cohort_sha256": "3144f973a166ebee41a059c538b81ffac5a5d15737982c6d95e59175325ca108",
+  "extraction_failures": 0,
+  "feasibility_counts": {
+    "F0_DIRECT_SYMBOLIC": 3,
+    "F1_DECLARATIVE_BINDING": 37,
+    "F2_EXPLICIT_ADAPTER": 33,
+    "F3_SEMANTIC_EXECUTION_REVIEW": 17
+  },
+  "passed": true,
+  "phase": "STATIC_GENERALIZATION_FEASIBILITY",
+  "source_mismatches": 0,
+  "weighted_estimates": {
+    "F0_DIRECT_SYMBOLIC": {
+      "approx_ci95_high": 0.024032665183926393,
+      "approx_ci95_low": 0.0022687046790873036,
+      "approx_standard_error": 0.00555203074103038,
+      "ci_interpretation": "Approximate design-based interval under the preregistered hash-as-uniform stratified sampling assumption.",
+      "estimated_population_count": 9.6,
+      "estimated_rate": 0.013150684931506848
+    },
+    "F1_DECLARATIVE_BINDING": {
+      "approx_ci95_high": 0.32428485221787134,
+      "approx_ci95_low": 0.22557816148075885,
+      "approx_standard_error": 0.025180278249263395,
+      "ci_interpretation": "Approximate design-based interval under the preregistered hash-as-uniform stratified sampling assumption.",
+      "estimated_population_count": 200.70000000000002,
+      "estimated_rate": 0.2749315068493151
+    },
+    "F2_EXPLICIT_ADAPTER": {
+      "approx_ci95_high": 0.6077321383043972,
+      "approx_ci95_low": 0.3796651219695755,
+      "approx_standard_error": 0.058180361309903485,
+      "ci_interpretation": "Approximate design-based interval under the preregistered hash-as-uniform stratified sampling assumption.",
+      "estimated_population_count": 360.40000000000003,
+      "estimated_rate": 0.49369863013698634
+    },
+    "F3_SEMANTIC_EXECUTION_REVIEW": {
+      "approx_ci95_high": 0.3262851048600045,
+      "approx_ci95_low": 0.11015325130437911,
+      "approx_standard_error": 0.055135676927455454,
+      "ci_interpretation": "Approximate design-based interval under the preregistered hash-as-uniform stratified sampling assumption.",
+      "estimated_population_count": 159.3,
+      "estimated_rate": 0.2182191780821918
+    }
+  },
+  "weighted_rate_sum": 1.0
+}

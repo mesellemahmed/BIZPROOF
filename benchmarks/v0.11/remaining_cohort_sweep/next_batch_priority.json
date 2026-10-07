@@ -1,0 +1,159 @@
+{
+  "largest_batch": {
+    "candidate_count": 33,
+    "candidate_ids": [
+      "0f73ae8d15cf3408",
+      "1311d905af0ebcb5",
+      "13df73dbd2825f80",
+      "26a1af8837fe7ae4",
+      "2906fe3983a1ebe4",
+      "331f175e4aa92eef",
+      "34748d082751e0cc",
+      "4008a63ee1ef3b44",
+      "41ae4a7df4780001",
+      "4d7d61b18dde0ad5",
+      "53abfcd7d20a9cd6",
+      "674ea6fd35fa6c39",
+      "6d009b7961c5d116",
+      "6fd8bd69c26e7954",
+      "7013ce92618a1e33",
+      "75e61ddb4dde4f1a",
+      "7bc9603bfbda7dc9",
+      "7f523a5041034306",
+      "801278c4d91c2185",
+      "87d2f0b3b15f0ea6",
+      "8b3e90ca7b531556",
+      "8b98d0147c79c3fc",
+      "9603b9192132171c",
+      "9cc9063a46d23cde",
+      "d285ecd86455b150",
+      "d5b65e1d48eca4dd",
+      "e1cf29f02fa0dadc",
+      "e293930485085dac",
+      "e8850260c2763222",
+      "f234f0be14cf3ff3",
+      "f3ebe6cce422947e",
+      "f5d217dec0cf902b",
+      "fa377c649a747a7d"
+    ],
+    "frontier_counts": {
+      "NO_CONTRACT_OCCURRENCES": 33
+    },
+    "route": "EXPLICIT_ADAPTER"
+  },
+  "pending_candidates": 76,
+  "priority_order": [
+    {
+      "candidate_count": 33,
+      "candidate_ids": [
+        "0f73ae8d15cf3408",
+        "1311d905af0ebcb5",
+        "13df73dbd2825f80",
+        "26a1af8837fe7ae4",
+        "2906fe3983a1ebe4",
+        "331f175e4aa92eef",
+        "34748d082751e0cc",
+        "4008a63ee1ef3b44",
+        "41ae4a7df4780001",
+        "4d7d61b18dde0ad5",
+        "53abfcd7d20a9cd6",
+        "674ea6fd35fa6c39",
+        "6d009b7961c5d116",
+        "6fd8bd69c26e7954",
+        "7013ce92618a1e33",
+        "75e61ddb4dde4f1a",
+        "7bc9603bfbda7dc9",
+        "7f523a5041034306",
+        "801278c4d91c2185",
+        "87d2f0b3b15f0ea6",
+        "8b3e90ca7b531556",
+        "8b98d0147c79c3fc",
+        "9603b9192132171c",
+        "9cc9063a46d23cde",
+        "d285ecd86455b150",
+        "d5b65e1d48eca4dd",
+        "e1cf29f02fa0dadc",
+        "e293930485085dac",
+        "e8850260c2763222",
+        "f234f0be14cf3ff3",
+        "f3ebe6cce422947e",
+        "f5d217dec0cf902b",
+        "fa377c649a747a7d"
+      ],
+      "frontier_counts": {
+        "NO_CONTRACT_OCCURRENCES": 33
+      },
+      "route": "EXPLICIT_ADAPTER"
+    },
+    {
+      "candidate_count": 24,
+      "candidate_ids": [
+        "019d3a3df4514bac",
+        "051c7ef379178030",
+        "0f2fcfc48ffea4af",
+        "0fe04e3572c7203e",
+        "1458ed128652b359",
+        "1b63ce825a129c0a",
+        "28b1b63cc241f487",
+        "460c0ee11314458e",
+        "4ab5aeba4c85b4c0",
+        "4c7af63af2f89319",
+        "55fe61b67000b53a",
+        "5ea2122f340b1558",
+        "62aa728fdef86058",
+        "635fe113a02cf90b",
+        "972b76d53a12b8ad",
+        "a74d4580a9effb73",
+        "cb937575ad9957d1",
+        "d033593e9fc6fbc6",
+        "d821bbc9b1df03ae",
+        "db6bd6fe0c9b8cd4",
+        "dfd34c86bcd9bfa1",
+        "eb41eb351df073ef",
+        "eff10167a5398559",
+        "fd4702ed1d79ff1f"
+      ],
+      "frontier_counts": {
+        "UNRESOLVED_PRIMITIVES_REMAIN": 24
+      },
+      "route": "BINDING_DEFINITION"
+    },
+    {
+      "candidate_count": 17,
+      "candidate_ids": [
+        "03e2adf4e4f323b1",
+        "1a2de6edb11465fe",
+        "2309036b0c69ad48",
+        "3fd2d8b8a76b4834",
+        "4b57e2d73c695a41",
+        "63e7979762bf860b",
+        "7460029971aad8de",
+        "7cf281a33e5781df",
+        "8048a564541f5408",
+        "882c5eae0d8fd4ec",
+        "8a754dadf1672d0a",
+        "91b2dc32504282fc",
+        "a79d9687185720aa",
+        "b2996c3dd81aca55",
+        "bcb091a940a8d0dd",
+        "d7f578c3a5f20b8a",
+        "eb12d3a44210a486"
+      ],
+      "frontier_counts": {
+        "NO_CONTRACT_OCCURRENCES": 17
+      },
+      "route": "CONTROLLED_EXECUTION_REVIEW"
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "a09e038870c9b436",
+        "d28505f251600d52"
+      ],
+      "frontier_counts": {
+        "NO_CONTRACT_OCCURRENCES": 2
+      },
+      "route": "STRUCTURAL_REVIEW"
+    }
+  ]
+}

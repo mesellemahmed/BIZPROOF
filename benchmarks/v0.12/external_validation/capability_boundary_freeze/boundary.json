@@ -1,0 +1,32 @@
+{
+  "boundary": {
+    "candidate_entrypoints": [],
+    "external_execution_blocked": true,
+    "generic_source_level_certifier_identified": false,
+    "identification_basis": "frozen E2B backend inventory",
+    "reason": "No pre-existing generic source-level certification entry point was identified by the frozen E2B inventory. Creating one after E2A would add a new V0.12 capability."
+  },
+  "external_holdout": {
+    "cases": 120,
+    "cases_executed": 0,
+    "certification_yield": null,
+    "cohort_sha256": "8278187b459ce67d400230b7acce84943968e2ba502e7e9371c53987251f9033",
+    "projects": 12,
+    "scientific_outcomes_observed": 0
+  },
+  "historical_result": {
+    "certified": 88,
+    "cohort": 90,
+    "unsupported_recovered": 38,
+    "unsupported_total": 38
+  },
+  "interpretation": {
+    "external_generalization_claim_allowed": false,
+    "external_performance_measured": false,
+    "historical_result_remains_valid": true,
+    "important": "This is not a 0/120 result. The 120-case holdout remains unexecuted."
+  },
+  "next_version": "V0.13_GENERIC_SOURCE_LEVEL_CERTIFICATION_ENGINE",
+  "schema_version": "BIZPROOF-V0.12-CAPABILITY-BOUNDARY-1",
+  "status": "CLOSED_AT_GENERIC_ENGINE_BOUNDARY"
+}

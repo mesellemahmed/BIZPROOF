@@ -1,0 +1,37 @@
+{
+  "candidate_domain_contracts": {
+    "0f73ae8d15cf3408": [
+      "settings.get returns None or a truthy relative-date object",
+      "relative-date datetime(target) returns date or datetime",
+      "when subevents exist, all produced dates belong to one mutually comparable temporal domain",
+      "an empty selected subevent set produces None"
+    ],
+    "6d009b7961c5d116": [
+      "every OfferProjection has a stable typed Offer identity",
+      "priority is an integer observable used only for ordering",
+      "Python stable-sort semantics preserve source order for equal priorities",
+      "session, basket, user and site source orders are preserved before sorting"
+    ]
+  },
+  "candidate_ids": [
+    "0f73ae8d15cf3408",
+    "6d009b7961c5d116"
+  ],
+  "recovery_claims_before_execution": 0,
+  "required_gates": [
+    "frozen_source_slice",
+    "explicit_abstraction_contract",
+    "canonical_ast_source_equivalence",
+    "supported_semantic_output",
+    "mutant_structurally_distinct",
+    "solver_backed_mutant_refutation",
+    "concrete_counterexample_replay"
+  ],
+  "schema_version": "BIZPROOF-V0.12-A5-CERT2-PROTOCOL-1",
+  "selection_frozen_before_execution": true,
+  "semantic_classes": {
+    "0f73ae8d15cf3408": "OPTIONAL_TEMPORAL",
+    "6d009b7961c5d116": "ORDERED_SEQUENCE_OF_TYPED_REFERENCES"
+  },
+  "source_checkpoint": "f1c87d50d9241c1389dd7409e1bd73cc62624343"
+}

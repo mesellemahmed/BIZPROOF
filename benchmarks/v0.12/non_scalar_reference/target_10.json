@@ -1,0 +1,20 @@
+{
+  "candidate_id_field": "candidate_id",
+  "candidate_ids": [
+    "0f73ae8d15cf3408",
+    "26a1af8837fe7ae4",
+    "6d009b7961c5d116",
+    "6fd8bd69c26e7954",
+    "75e61ddb4dde4f1a",
+    "87d2f0b3b15f0ea6",
+    "9cc9063a46d23cde",
+    "d285ecd86455b150",
+    "e1cf29f02fa0dadc",
+    "fa377c649a747a7d"
+  ],
+  "category": "NON_SCALAR_OR_REFERENCE_SEMANTICS",
+  "category_field": "final_category",
+  "schema_version": "BIZPROOF-V0.12-NON-SCALAR-TARGET-1",
+  "source_taxonomy": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+  "target_count": 10
+}

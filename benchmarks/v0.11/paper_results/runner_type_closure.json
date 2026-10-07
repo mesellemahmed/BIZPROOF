@@ -1,0 +1,27 @@
+{
+  "article_results_changed": false,
+  "baseline_results_recomputed": false,
+  "changes": [
+    {
+      "change": "Explicit bool conversion for the difference predicate.",
+      "location": "_safe_difference",
+      "semantic_effect_on_frozen_supported_domains": "none"
+    },
+    {
+      "change": "Rename loop variable from budget to crosshair_budget.",
+      "location": "CrossHair budget loop",
+      "semantic_effect": "none"
+    }
+  ],
+  "next_required_check": "Independent repeated executions are performed separately in W22; they do not replace or alter the frozen article results.",
+  "reason": "Static typing repair performed after paper-result execution. The patch makes the boolean predicate explicit and gives the CrossHair float budget its own loop variable. No frozen result artifact was modified.",
+  "runner_sha256_after_fix": "29fae474889b415360702243df42a96bc111a04cbffb7c265b5d061ba1bb602c",
+  "schema_version": "BIZPROOF-V0.11-RUNNER-TYPE-CLOSURE-1",
+  "verification": {
+    "differential_enum_z3": "PASS",
+    "format": "PASS",
+    "mypy": "PASS",
+    "pytest": "PASS",
+    "ruff": "PASS"
+  }
+}

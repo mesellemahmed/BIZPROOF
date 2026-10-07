@@ -1,0 +1,4 @@
+source,total,certified_a1,certified_a2,certified_total,unsupported,semantic_ambiguity,certification_yield
+django_oscar,30,6,8,14,14,2,0.4666666666666667
+openfisca_france,30,20,5,25,5,0,0.8333333333333334
+pretix,30,7,4,11,19,0,0.36666666666666664

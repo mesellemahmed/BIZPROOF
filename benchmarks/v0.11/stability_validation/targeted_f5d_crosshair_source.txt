@@ -1,0 +1,13 @@
+from decimal import Decimal
+from bizproof.generalization_a2_v2_proof import adapt_special_allowance, mutant_special_allowance
+
+def check_mutant(age_declarant: int, declarant_invalid: bool, age_spouse: int, spouse_invalid: bool, global_income: int, married_children: int, age_invalidity_allowance: int, married_child_allowance: int) -> None:
+    assert -100 <= age_declarant <= 100
+    assert -100 <= age_spouse <= 100
+    assert -100 <= global_income <= 100
+    assert -100 <= married_children <= 100
+    assert -100 <= age_invalidity_allowance <= 100
+    assert -100 <= married_child_allowance <= 100
+    observed = adapt_special_allowance(age_declarant, declarant_invalid, age_spouse, spouse_invalid, global_income, married_children, age_invalidity_allowance, married_child_allowance)
+    altered = mutant_special_allowance(age_declarant, declarant_invalid, age_spouse, spouse_invalid, global_income, married_children, age_invalidity_allowance, married_child_allowance)
+    assert observed == altered

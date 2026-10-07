@@ -1,0 +1,36 @@
+{
+  "attempted": 3,
+  "batch": "B4_BATCH1_STRUCTURED_RETURN",
+  "candidate_ids": [
+    "13df73dbd2825f80",
+    "801278c4d91c2185",
+    "8b3e90ca7b531556"
+  ],
+  "certification_started": false,
+  "correct_source_ast_rewrite": false,
+  "correct_source_policy": "Execute the exact source body frozen in certification_plan_b4. No AST rewrite is permitted for the correct source.",
+  "mutant_protocol_commit_required": true,
+  "mutants": {
+    "13df73dbd2825f80": {
+      "fault": "the returned result mapping contains only the six explicit fixed fields and omits the trailing **sync_info expansion",
+      "name": "OMIT_SYNC_INFO_EXPANSION"
+    },
+    "801278c4d91c2185": {
+      "fault": "the internal_name branch is disabled, so the localized tax string is returned without the internal-name wrapper",
+      "name": "IGNORE_INTERNAL_NAME_WRAPPER"
+    },
+    "8b3e90ca7b531556": {
+      "fault": "after filtering null stockrecords, the mutant uses the last available stockrecord instead of the first one selected by the source",
+      "name": "USE_LAST_FILTERED_STOCKRECORD"
+    }
+  },
+  "mutants_frozen_before_execution": true,
+  "plan_checkpoint": "40a12fe0be049558bc8c69df1db0da5a9280f859",
+  "recovery_claims_before_execution": 0,
+  "schema_version": "BIZPROOF-V0.12-B4-CERT1-PROTOCOL-1",
+  "semantic_routes": {
+    "13df73dbd2825f80": "EXTENSION_MAPPING_RETURN",
+    "801278c4d91c2185": "CONDITIONAL_LOCALIZED_STRING_RETURN",
+    "8b3e90ca7b531556": "FILTERED_SEQUENCE_PRICING_RETURN"
+  }
+}

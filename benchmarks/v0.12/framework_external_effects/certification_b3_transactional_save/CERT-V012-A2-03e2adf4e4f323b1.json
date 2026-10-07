@@ -1,0 +1,77 @@
+{
+  "all_required_gates_pass": true,
+  "authoritative_source": {
+    "class_harness_only": true,
+    "correct_source_ast_rewritten": false,
+    "matches_frozen_plan": true,
+    "sha256": "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437"
+  },
+  "candidate_id": "03e2adf4e4f323b1",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_mutant_replay": {
+    "correct_pre_dirty_count": 1,
+    "different": true,
+    "mutant_pre_dirty_count": 0
+  },
+  "formal_mutant_refutation": {
+    "model": "[initial_status_paid_or_pending = False,\n status_paid_or_pending = True,\n deferred_safe = True,\n is_new = False]",
+    "property": "there exists an existing safely visible order whose paid/pending transactional state changed; the authoritative source emits one pre-save dirty mark while the frozen mutant emits none",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "function_name": "save",
+  "mutant": {
+    "fault": "an existing order changing paid/pending transactional status reaches persistence without the required pre-save transaction dirty mark",
+    "name": "OMIT_PRE_SAVE_TRANSACTION_DIRTY_MARK",
+    "target": "first _transactions_mark_order_dirty(self.pk, ...) call"
+  },
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-B3-CERT3-A2-1",
+  "scope": {
+    "certified": "the frozen transaction-aware Order.save projection covering normalization, update_fields expansion, deferred-field safety, dirty-mark behavior and delegated persistence",
+    "not_certified": [
+      "database transaction engine correctness",
+      "Django ORM implementation correctness",
+      "concurrent transaction scheduling",
+      "hidden database or middleware behavior outside the accepted projection"
+    ]
+  },
+  "semantic_capability": "TRANSACTION_AWARE_MODEL_SAVE",
+  "source_projection_equivalence": {
+    "branch_basis_count": 6,
+    "branch_results": [
+      {
+        "name": "existing_normalization_plus_pre_dirty",
+        "replay": true,
+        "unsafe": false
+      },
+      {
+        "name": "existing_no_status_transition",
+        "replay": true,
+        "unsafe": false
+      },
+      {
+        "name": "new_object_post_save_dirty",
+        "replay": true,
+        "unsafe": false
+      },
+      {
+        "name": "unsafe_deferred_fields_rejected",
+        "replay": true,
+        "unsafe": true
+      },
+      {
+        "name": "deferred_field_explicitly_updated",
+        "replay": true,
+        "unsafe": false
+      },
+      {
+        "name": "forced_deferred_save",
+        "replay": true,
+        "unsafe": false
+      }
+    ],
+    "controlled_exact_source_replay": true
+  },
+  "v012_outcome": "CERTIFIED_A2"
+}

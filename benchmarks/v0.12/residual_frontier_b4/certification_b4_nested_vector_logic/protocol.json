@@ -1,0 +1,81 @@
+{
+  "attempted": 2,
+  "batch": "B4_BATCH4_NESTED_VECTOR_LOGIC",
+  "candidate_ids": [
+    "1a2de6edb11465fe",
+    "3fd2d8b8a76b4834"
+  ],
+  "certification_started": false,
+  "correct_source_ast_rewrite": false,
+  "correct_source_policy": "Execute both exact B4-A2 frozen source bodies under explicit finite OpenFisca-like dependency contracts; never rewrite the correct source.",
+  "finite_basis": {
+    "1a2de6edb11465fe": {
+      "case_count": 28,
+      "eligible_parameter_zones": [
+        "A",
+        "B",
+        "C"
+      ],
+      "household_sizes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "observed_household_zones": [
+        "A",
+        "B",
+        "C",
+        "UNMATCHED"
+      ],
+      "purpose": "cover each fixed household-size ceiling, the >=6 selection, supplementary-person increment, each eligible zone and the outer-select no-match case"
+    },
+    "3fd2d8b8a76b4834": {
+      "boolean_case_count": 128,
+      "boolean_dimensions": [
+        "enfant",
+        "autonomie_financiere",
+        "age_lt_age_pac",
+        "enceinte_fam",
+        "en_couple",
+        "isolement_recent",
+        "presence_autres_enfants"
+      ],
+      "case_count": 384,
+      "purpose": "exhaust the seven frozen logical gates and all three relevant resource-threshold regions",
+      "resource_partition_count": 3,
+      "resource_partitions": [
+        "below_general_threshold",
+        "between_general_and_majoration_threshold",
+        "above_both_thresholds"
+      ]
+    }
+  },
+  "formal_obligations": {
+    "1a2de6edb11465fe": "there exists a matched zone with nb_personnes > nb_personnes_max and positive supplement where source ceiling exceeds mutant",
+    "3fd2d8b8a76b4834": "there exists an otherwise eligible child with majoration active and resources between the general and majoration thresholds where source returns charge=1 and mutant returns 0"
+  },
+  "mutant_protocol_commit_required": true,
+  "mutants": {
+    "1a2de6edb11465fe": {
+      "fault": "households larger than the configured maximum receive the base ceiling only, without the per-additional-person increment",
+      "name": "OMIT_SUPPLEMENTARY_PERSON_INCREMENT",
+      "target": "true branch of where(nb_personnes > nb_personnes_max, ...)"
+    },
+    "3fd2d8b8a76b4834": {
+      "fault": "the mutant always uses the general resource threshold even when the nested majoration helper is true",
+      "name": "IGNORE_MAJORATION_RESOURCE_THRESHOLD",
+      "target": "majoration branch of the final where(ouvre_droit_majoration(), major_threshold, general_threshold)"
+    }
+  },
+  "parent_checkpoint": "f3581d23c7572ec5b9f171691ceb9d56a78dfc01",
+  "recovery_claims_before_execution": 0,
+  "schema_version": "BIZPROOF-V0.12-B4-CERT4-PROTOCOL-1",
+  "semantic_routes": {
+    "1a2de6edb11465fe": "NESTED_PARAMETERIZED_SELECT_RETURN",
+    "3fd2d8b8a76b4834": "NESTED_FAMILY_VECTOR_CONDITION_RETURN"
+  }
+}

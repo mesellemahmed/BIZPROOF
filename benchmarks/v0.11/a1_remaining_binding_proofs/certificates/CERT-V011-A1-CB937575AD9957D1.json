@@ -1,0 +1,67 @@
+{
+  "assistance_level": "A1",
+  "authoring_mode": "DECLARATIVE_BINDINGS_FROZEN_BSIR",
+  "bindings": [
+    {
+      "binding_id": "41ff8a9a906a665c",
+      "kind": "ATTRIBUTE",
+      "primitive": "age1",
+      "source_expression": "parameters(period).prestations_sociales.prestations_familiales.prestations_generales.af.af_cm.age1"
+    },
+    {
+      "binding_id": "e3156a031c8ff046",
+      "kind": "CALL",
+      "primitive": "nb_enf",
+      "source_expression": "nb_enf(famille, period, age_min_enfant, age_max_enfant - 1)"
+    }
+  ],
+  "candidate_id": "cb937575ad9957d1",
+  "certificate_digest": "80769e41d30a2650912814c8910a83b208c2d32c2ebea0ab5fd4ab1d87d89e75",
+  "certificate_id": "CERT-V011-A1-CB937575AD9957D1",
+  "claim_scope": "Certification proves equivalence between the locked source AST and the frozen BSIR under the explicit declarative bindings listed here. External framework/database values and helper semantics without a validated semantic contract remain outside the certificate.",
+  "evidence": {
+    "concrete_replays": 6,
+    "correct_solver_status": "unsat",
+    "ir_sha256": "3da0c6579da6041104382330e0da1ff12d372e3ae72bfb993ff9fdd29104ebc5",
+    "mutant_solver_status": "sat",
+    "mutant_witness": {
+      "b_cb9375_0": "0",
+      "b_cb9375_1": "0"
+    },
+    "mutation": "binding-plus-one",
+    "proof_digest": "f6530c968c4fdaecd596b6d2182d61974dd38c539a8f839471a5e14165ee79ee",
+    "proof_obligations": {
+      "bsir_compile": true,
+      "concrete_replay": true,
+      "declarative_bindings": true,
+      "frozen_bsir": true,
+      "independent_source_ast_compile": true,
+      "locked_source_commit": true,
+      "mutant_detected_sat": true,
+      "mutant_witness_replayed": true,
+      "symbolic_equivalence_unsat": true,
+      "validated_semantic_abstractions": true
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 74,
+    "text": "- `CERTIFIED_A1`: certified with declarative source-to-BVC bindings only."
+  },
+  "schema_version": "BIZPROOF-V0.11-A1-CERTIFICATE-1",
+  "semantic_contracts": {
+    "nb_enf": "SC-NB-ENF-001"
+  },
+  "source": {
+    "class": "al_nb_personnes_a_charge",
+    "file": "openfisca_france/model/prestations/aides_logement.py",
+    "function": "al_nb_enfants",
+    "function_sha256": "ba646e0f2ca3a1944a9831887d1459ee61ea6b8c2f747df79d8d7837c018add4",
+    "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+    "source_file_sha256": "c72dc257562d7aab40d25ba8c7825d85ee43a866f862a636ad7d17806c71160e",
+    "source_id": "openfisca_france"
+  },
+  "status": "CERTIFIED_A1",
+  "terminal_outcome": "CERTIFIED_A1",
+  "terminal_outcome_assigned": true
+}

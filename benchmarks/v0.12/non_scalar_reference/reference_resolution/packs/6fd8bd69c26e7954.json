@@ -1,0 +1,11 @@
+{
+  "candidate_id": "6fd8bd69c26e7954",
+  "evidence_file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+  "function_name": "__mul__",
+  "key_path": "source_slice",
+  "reason_code": "DOMAIN_OBJECT_RETURN",
+  "selection_rule": "smallest parseable evidence item containing exactly one complete function",
+  "sha256": "20981d8df07da04030071dbc857915cf90a8d68eaf7d419ba51dde72aae0bf50",
+  "source": "def __mul__(self, other):\n        newgross = self.gross * other\n        newnet = round_decimal(newgross - (newgross * (1 - 100 / (100 + self.rate)))).quantize(\n            Decimal('10') ** self.gross.as_tuple().exponent\n        )\n        return TaxedPrice(\n            gross=newgross,\n            net=newnet,\n            tax=newgross - newnet,\n            rate=self.rate,\n            name=self.name,\n            code=self.code,\n        )",
+  "source_length": 437
+}

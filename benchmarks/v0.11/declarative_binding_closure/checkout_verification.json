@@ -1,0 +1,17 @@
+{
+  "all_passed": true,
+  "generated_by": "HOST_GIT_PREFLIGHT",
+  "manifest_digest": "4a2406da9ee68368192114f3324d79397ecc68f3b184c3e0c12e689ae36ad797",
+  "records": [
+    {
+      "actual_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+      "expected_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+      "passed": true,
+      "source_id": "openfisca_france"
+    }
+  ],
+  "source_ids": [
+    "openfisca_france"
+  ],
+  "structural_candidate_count": 11
+}

@@ -1,0 +1,25 @@
+{
+  "candidate_certification": false,
+  "certification_claim": false,
+  "default_source_assignment": "ZERO_DISCOUNT = BasketDiscount(D(\"0.00\"))",
+  "default_source_file": "src/oscar/apps/offer/results.py",
+  "default_source_file_sha256": "e422b1a68d6ec8cfc1264acf7e202f9cfd0b52e141ec7497aef8284002c99975",
+  "default_source_status": "RESOLVED",
+  "get_class_calls": [
+    "get_classes"
+  ],
+  "get_class_import": {
+    "imported_name": "get_class",
+    "line": 19,
+    "module": "oscar.core.loading",
+    "source": "from oscar.core.loading import cached_import_string, get_class, get_classes, get_model"
+  },
+  "get_class_source": "def get_class(module_label, classname, module_prefix=\"oscar.apps\"):\n    \"\"\"\n    Dynamically import a single class from the given module.\n\n    This is a simple wrapper around `get_classes` for the case of loading a\n    single class.\n\n    Args:\n        module_label (str): Module label comprising the app label and the\n            module name, separated by a dot.  For example, 'catalogue.forms'.\n        classname (str): Name of the class to be imported.\n\n    Returns:\n        The requested class object or `None` if it can't be found\n    \"\"\"\n    return get_classes(module_label, [classname], module_prefix)[0]",
+  "get_class_source_sha256": "a4813863f29f62b5c027f0d880001e392bfc3385a3898d92117d2eb5255a35d0",
+  "loader_status": "LOCKED_GET_CLASS_RESOLVED",
+  "primitive": "ZERO_DISCOUNT",
+  "resolved_commit": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+  "semantic_contract_status": "UNRESOLVED_DYNAMIC_LOADING_CONTEXT",
+  "source_id": "django_oscar",
+  "trace_status": "DEFAULT_SOURCE_AND_LOADER_RESOLVED_RUNTIME_CONFIGURATION_UNRESOLVED"
+}

@@ -1,0 +1,95 @@
+{
+  "anti_bias_rules": [
+    "Candidate membership is frozen before baseline execution.",
+    "No candidate may be removed because a baseline fails, times out or errors.",
+    "The same correct implementation, frozen mutant and input domain must be supplied to all methods.",
+    "Absence of a counterexample is never reported as proof for search-based baselines.",
+    "Runtime comparisons are reported separately from guarantee strength."
+  ],
+  "budgets": {
+    "CrossHair_primary_per_condition_seconds": 2.0,
+    "CrossHair_process_timeout_seconds": 6.0,
+    "CrossHair_sensitivity_per_condition_seconds": [
+      0.5,
+      2.0
+    ],
+    "Hypothesis_primary_examples": 1000,
+    "Hypothesis_sensitivity_examples": [
+      100,
+      1000,
+      10000
+    ]
+  },
+  "cases_per_candidate": [
+    "correct",
+    "frozen_mutant"
+  ],
+  "excluded": [
+    {
+      "candidate_id": "53abfcd7d20a9cd6",
+      "reason": "No standalone frozen mutant function located."
+    },
+    {
+      "candidate_id": "972b76d53a12b8ad",
+      "reason": "No standalone frozen adapter and mutant pair located."
+    }
+  ],
+  "frozen_before_execution": true,
+  "interpretation": {
+    "BIZPROOF_PROVED": "formal proof within the frozen supported semantic slice",
+    "CrossHair_NO_COUNTEREXAMPLE": "inconclusive; no counterexample reported under configured budget",
+    "Hypothesis_NO_COUNTEREXAMPLE": "inconclusive; no counterexample found under configured budget"
+  },
+  "methods": [
+    "BIZPROOF",
+    "Hypothesis",
+    "CrossHair"
+  ],
+  "population": {
+    "certified_a2": 17,
+    "certified_total": 50,
+    "excluded": 2,
+    "extended_typed": 9,
+    "matched_a2": 15,
+    "strict_core": 6
+  },
+  "primary_metrics": [
+    "mutant_detection_rate",
+    "correct_false_alarm_rate",
+    "correct_case_proof_rate",
+    "correct_case_inconclusive_rate",
+    "unknown_or_error_rate",
+    "runtime_seconds"
+  ],
+  "primary_tier": {
+    "candidate_ids": [
+      "331f175e4aa92eef",
+      "9603b9192132171c",
+      "aab5348ee173d6e3",
+      "e293930485085dac",
+      "f3ebe6cce422947e",
+      "f5d217dec0cf902b"
+    ],
+    "claim_scope": "Tool-capability comparison only; not an estimate of population-level generalization across repositories.",
+    "eligibility_rule": "Frozen V0.11 CERTIFIED_A2; standalone adapter and mutant; same function signature; all adapter inputs are int/bool scalars, or the function has zero inputs.",
+    "name": "STRICT_CORE"
+  },
+  "protocol_version": "BIZPROOF-V0.11-MATCHED-BASELINE-1",
+  "secondary_tier": {
+    "candidate_ids": [
+      "2906fe3983a1ebe4",
+      "34748d082751e0cc",
+      "4008a63ee1ef3b44",
+      "41ae4a7df4780001",
+      "7013ce92618a1e33",
+      "7f523a5041034306",
+      "8b98d0147c79c3fc",
+      "d5b65e1d48eca4dd",
+      "f234f0be14cf3ff3"
+    ],
+    "execution": "DEFERRED_UNTIL_ENCODING_PROTOCOL_FROZEN",
+    "name": "EXTENDED_TYPED",
+    "reason_secondary": "Requires additional harness support for Optional, Decimal, tuple, frozenset or domain-specific types."
+  },
+  "source_checkpoint": "v0.11"
+}

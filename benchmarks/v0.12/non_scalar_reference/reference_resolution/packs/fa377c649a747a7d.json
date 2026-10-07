@@ -1,0 +1,11 @@
+{
+  "candidate_id": "fa377c649a747a7d",
+  "evidence_file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+  "function_name": "product",
+  "key_path": "source_slice",
+  "reason_code": "OBJECT_RETURN",
+  "selection_rule": "smallest parseable evidence item containing exactly one complete function",
+  "sha256": "5e756e22c48b495d1ff8fe9f47592319ac4ae52878224c39716487cfea087f8c",
+  "source": "def product(self):\n        \"\"\"\n        The actual product being added to the basket\n        \"\"\"\n        # Note, the child product attribute is saved in the clean_child_id\n        # method\n        return getattr(self, \"child_product\", self.parent_product)",
+  "source_length": 254
+}

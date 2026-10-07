@@ -1,0 +1,57 @@
+{
+  "assistance_level": "A1",
+  "authoring_mode": "DECLARATIVE_SOURCE_TO_BVC_BINDINGS",
+  "bindings": [
+    "user.is_staff"
+  ],
+  "candidate_id": "460c0ee11314458e",
+  "certificate_digest": "910b702d47ee46c588af40fdf98d48008612ed831d12d9d38921d2d15f228a6a",
+  "certificate_id": "CERT-V011-A1-460C0EE11314458E",
+  "claim_scope": "Certification covers the locked source return expression under the explicit declarative attribute bindings listed in this certificate. No handwritten semantic adapter is introduced.",
+  "evidence": {
+    "proof_digest": "b66193cfbb4315c0fa12efb159bbe030ff38ab180b9449b6c4fd9f14fedef00f",
+    "runtime": {
+      "adapter_mismatches": 0,
+      "comparisons": 4,
+      "mutant_mismatches": 4,
+      "mutation": "replace-bound-value-with-independent-value",
+      "runtime_domain": "four arbitrary scalar binding tokens"
+    },
+    "symbolic": {
+      "correct_proved": true,
+      "correct_solver_status": "unsat",
+      "mutant_disproved": true,
+      "mutant_solver_status": "sat",
+      "mutation": "independent-binding-symbol",
+      "symbolic_domain": "uninterpreted value domain; proof is type-independent"
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 74,
+    "text": "- `CERTIFIED_A0`: certified without human semantic mapping or adapter rewriting. - `CERTIFIED_A1`: certified with declarative source-to-BVC bindings only. - `CERTIFIED_A2`: certified with an explicit human-authored scalar semantic adapter. - `NOT_CERTIFIED_UNKNOWN`: sound analysis returns UNKNOWN."
+  },
+  "schema_version": "BIZPROOF-V0.11-A1-CERTIFICATE-1",
+  "source": {
+    "class": "OrderReportGenerator",
+    "file": "src/oscar/apps/order/reports.py",
+    "function": "is_available_to",
+    "function_sha256": "b40d2b2877edc3db5a4b2960bce40bf30fa644d633ebe5ba2a286ae05bb18072",
+    "lines": [
+      57,
+      58
+    ],
+    "source_file_sha256": "5051032d335a95e2c42b2d5e6c8b282c65067490ba04cc265537bfa3d4e29a78",
+    "source_id": "django_oscar"
+  },
+  "status": "CERTIFIED_A1",
+  "structural_classification": {
+    "expression": "user.is_staff",
+    "shape": "DIRECT_ATTRIBUTE_RETURN",
+    "used_bindings": [
+      "user.is_staff"
+    ]
+  },
+  "terminal_outcome": "CERTIFIED_A1",
+  "terminal_outcome_assigned": true
+}

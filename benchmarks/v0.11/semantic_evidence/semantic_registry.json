@@ -1,0 +1,1294 @@
+{
+  "benchmark_version": "0.11.0",
+  "certification_claim": false,
+  "cohort_sha256": "3144f973a166ebee41a059c538b81ffac5a5d15737982c6d95e59175325ca108",
+  "entries": [
+    {
+      "candidate_count": 13,
+      "certification_claim": false,
+      "context_type_variation": true,
+      "contextual_types": [
+        "ANY",
+        "NUMERIC",
+        "ORDERABLE"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "NO_SOURCE_EVIDENCE": 1,
+        "SOURCE_EVIDENCE_IDENTIFIED": 43
+      },
+      "family_class": "OPENFISCA_ENTITY_LOOKUP",
+      "kind": "CALL",
+      "next_action": "DEFINE_AND_VALIDATE_SEMANTIC_CONTRACT",
+      "occurrence_count": 44,
+      "primitive": "foyer_fiscal",
+      "registry_id": "BR-9a048588cef7",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": true,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 7,
+      "certification_claim": false,
+      "context_type_variation": true,
+      "contextual_types": [
+        "ANY",
+        "NUMERIC",
+        "ORDERABLE"
+      ],
+      "evidence_coverage": "COMPLETE",
+      "evidence_status_counts": {
+        "SOURCE_EVIDENCE_IDENTIFIED": 38
+      },
+      "family_class": "OPENFISCA_ENTITY_LOOKUP",
+      "kind": "CALL",
+      "next_action": "DEFINE_AND_VALIDATE_SEMANTIC_CONTRACT",
+      "occurrence_count": 38,
+      "primitive": "individu",
+      "registry_id": "BR-6c651fb5205a",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": true,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 3,
+      "certification_claim": false,
+      "context_type_variation": true,
+      "contextual_types": [
+        "ANY",
+        "NUMERIC",
+        "ORDERABLE"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "SOURCE_EVIDENCE_IDENTIFIED": 1,
+        "SOURCE_EVIDENCE_PARTIAL": 3
+      },
+      "family_class": "SEMANTIC_LIBRARY_PRIMITIVE",
+      "kind": "CALL",
+      "next_action": "DEFINE_AND_VALIDATE_SEMANTIC_CONTRACT",
+      "occurrence_count": 4,
+      "primitive": "min_",
+      "registry_id": "BR-8a35e02922cb",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": true,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 3,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "NUMERIC"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "SOURCE_EVIDENCE_IDENTIFIED": 5,
+        "SOURCE_EVIDENCE_PARTIAL": 1
+      },
+      "family_class": "SEMANTIC_LIBRARY_PRIMITIVE",
+      "kind": "CALL",
+      "next_action": "DEFINE_AND_VALIDATE_SEMANTIC_CONTRACT",
+      "occurrence_count": 6,
+      "primitive": "not_",
+      "registry_id": "BR-70ddb43e1b3f",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": true,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 3,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "SOURCE_EVIDENCE_PARTIAL": 3
+      },
+      "family_class": "SEMANTIC_LIBRARY_PRIMITIVE",
+      "kind": "CALL",
+      "next_action": "DEFINE_AND_VALIDATE_SEMANTIC_CONTRACT",
+      "occurrence_count": 3,
+      "primitive": "where",
+      "registry_id": "BR-7fc7f7fa3795",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": true,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 2,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "NO_SOURCE_EVIDENCE": 2
+      },
+      "family_class": "OPENFISCA_ENTITY_LOOKUP",
+      "kind": "CALL",
+      "next_action": "DEFINE_AND_VALIDATE_SEMANTIC_CONTRACT",
+      "occurrence_count": 2,
+      "primitive": "menage",
+      "registry_id": "BR-3f5c07308214",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": true,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 2,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "COMPLETE",
+      "evidence_status_counts": {
+        "SOURCE_EVIDENCE_IDENTIFIED": 2
+      },
+      "family_class": "EXTERNAL_CALL",
+      "kind": "CALL",
+      "next_action": "DEFINE_AND_VALIDATE_SEMANTIC_CONTRACT",
+      "occurrence_count": 2,
+      "primitive": "period",
+      "registry_id": "BR-8be61c3f6f69",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": true,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "NUMERIC"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "SOURCE_EVIDENCE_PARTIAL": 2
+      },
+      "family_class": "OPENFISCA_ENTITY_LOOKUP",
+      "kind": "CALL",
+      "next_action": "DEFINE_AND_VALIDATE_SEMANTIC_CONTRACT",
+      "occurrence_count": 2,
+      "primitive": "famille",
+      "registry_id": "BR-2a38dbaeec41",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": true,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "COMPLETE",
+      "evidence_status_counts": {
+        "SOURCE_EVIDENCE_IDENTIFIED": 1
+      },
+      "family_class": "EXTERNAL_CALL",
+      "kind": "CALL",
+      "next_action": "DEFINE_AND_VALIDATE_SEMANTIC_CONTRACT",
+      "occurrence_count": 1,
+      "primitive": "D",
+      "registry_id": "BR-5fb03032990e",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": true,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "COMPLETE",
+      "evidence_status_counts": {
+        "SOURCE_EVIDENCE_IDENTIFIED": 1
+      },
+      "family_class": "GLOBAL_CONSTANT",
+      "kind": "GLOBAL_NAME",
+      "next_action": "DEFINE_AND_VALIDATE_SEMANTIC_CONTRACT",
+      "occurrence_count": 1,
+      "primitive": "ZERO_DISCOUNT",
+      "registry_id": "BR-56764950efb5",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": true,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "NO_SOURCE_EVIDENCE": 1
+      },
+      "family_class": "EXTERNAL_CALL",
+      "kind": "CALL",
+      "next_action": "DEFINE_AND_VALIDATE_SEMANTIC_CONTRACT",
+      "occurrence_count": 1,
+      "primitive": "astype",
+      "registry_id": "BR-3cb6b02997b3",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": true,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "NUMERIC"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "SOURCE_EVIDENCE_PARTIAL": 1
+      },
+      "family_class": "EXTERNAL_CALL",
+      "kind": "CALL",
+      "next_action": "DEFINE_AND_VALIDATE_SEMANTIC_CONTRACT",
+      "occurrence_count": 1,
+      "primitive": "has_role",
+      "registry_id": "BR-fab22a366f60",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": true,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "SOURCE_EVIDENCE_PARTIAL": 1
+      },
+      "family_class": "EXTERNAL_CALL",
+      "kind": "CALL",
+      "next_action": "DEFINE_AND_VALIDATE_SEMANTIC_CONTRACT",
+      "occurrence_count": 1,
+      "primitive": "members",
+      "registry_id": "BR-98211b71dec4",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": true,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "COMPLETE",
+      "evidence_status_counts": {
+        "SOURCE_EVIDENCE_IDENTIFIED": 1
+      },
+      "family_class": "EXTERNAL_CALL",
+      "kind": "CALL",
+      "next_action": "DEFINE_AND_VALIDATE_SEMANTIC_CONTRACT",
+      "occurrence_count": 1,
+      "primitive": "nb_enf",
+      "registry_id": "BR-bf37d3b32d85",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": true,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "NUMERIC"
+      ],
+      "evidence_coverage": "COMPLETE",
+      "evidence_status_counts": {
+        "SOURCE_EVIDENCE_IDENTIFIED": 1
+      },
+      "family_class": "EXTERNAL_CALL",
+      "kind": "CALL",
+      "next_action": "DEFINE_AND_VALIDATE_SEMANTIC_CONTRACT",
+      "occurrence_count": 1,
+      "primitive": "sum",
+      "registry_id": "BR-4bcfe78de1d4",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": true,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": true,
+      "contextual_types": [
+        "ANY",
+        "ORDERABLE"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 2
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 2,
+      "primitive": "metropole",
+      "registry_id": "BR-f933ef3ba7dd",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 4,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 5
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 5,
+      "primitive": "name",
+      "registry_id": "BR-1fff61ca13cc",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 2,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 3
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 3,
+      "primitive": "code",
+      "registry_id": "BR-486873ad5a9e",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 2,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 3
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 3,
+      "primitive": "rate",
+      "registry_id": "BR-d5f6cb20e0eb",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 2,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ORDERABLE"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 2
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 2,
+      "primitive": "age_max",
+      "registry_id": "BR-a1c70f8733f1",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 2,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 2
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 2,
+      "primitive": "chomeur",
+      "registry_id": "BR-634b854b3979",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 2,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 2
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 2,
+      "primitive": "emploi_salarie_domicile",
+      "registry_id": "BR-b1a835661469",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 2,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 2
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 2,
+      "primitive": "full_id",
+      "registry_id": "BR-5b7b49c45d6b",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 2,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "NUMERIC"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 2
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 2,
+      "primitive": "taux",
+      "registry_id": "BR-b8e84b84e451",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 2
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 2,
+      "primitive": "formation",
+      "registry_id": "BR-0539a77018ca",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 2
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 2,
+      "primitive": "gross",
+      "registry_id": "BR-9fe2c5d982da",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 2
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 2,
+      "primitive": "net",
+      "registry_id": "BR-e858d3c667ce",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ORDERABLE"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 2
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 2,
+      "primitive": "plafond",
+      "registry_id": "BR-4a06adf0d462",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 2
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 2,
+      "primitive": "tax",
+      "registry_id": "BR-9a22981609ab",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "_totaldiff_guesstimate",
+      "registry_id": "BR-f8a5c22ba754",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "achat_revente",
+      "registry_id": "BR-4dcc4bbaf476",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "age1",
+      "registry_id": "BR-8974fbfab24e",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ORDERABLE"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "age_maximum",
+      "registry_id": "BR-da78997c5131",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "aide_mobilite",
+      "registry_id": "BR-fb61132d2694",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "autre",
+      "registry_id": "BR-1f30bbe22acc",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "bic",
+      "registry_id": "BR-1223cfa3956f",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "bnc",
+      "registry_id": "BR-f3ad52d295a9",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "cdd",
+      "registry_id": "BR-811d969eee96",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "cdi",
+      "registry_id": "BR-0d6e8391b16a",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "ctt",
+      "registry_id": "BR-e3589c06ab71",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "NUMERIC"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "delai_max",
+      "registry_id": "BR-893571710d0d",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ORDERABLE"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "duree_de_contrat_minimum",
+      "registry_id": "BR-49dbab563ff4",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ORDERABLE"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "duree_de_formation_minimum",
+      "registry_id": "BR-91386a1ee517",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ORDERABLE"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "duree_trajet_minimum",
+      "registry_id": "BR-c6ca93a13f34",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "enseignement_superieur",
+      "registry_id": "BR-1f723ab34af1",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "entretien_embauche",
+      "registry_id": "BR-c42f1cc0c148",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "etudiant",
+      "registry_id": "BR-26876021b97a",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ORDERABLE"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "hors_metropole",
+      "registry_id": "BR-cfaeea2a823f",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "internal_name",
+      "registry_id": "BR-f619aa65f143",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "is_staff",
+      "registry_id": "BR-e1501cff8b01",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "locataire_foyer",
+      "registry_id": "BR-3f5014a72935",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "locataire_hlm",
+      "registry_id": "BR-fe4680fe8031",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "locataire_meuble",
+      "registry_id": "BR-d26469a3c197",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "locataire_vide",
+      "registry_id": "BR-f7e29b020df1",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "possible_values",
+      "registry_id": "BR-02ab24b145a9",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "recherche_emploi",
+      "registry_id": "BR-dff5203a0838",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "reprise_emploi",
+      "registry_id": "BR-aa74430564e4",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    },
+    {
+      "candidate_count": 1,
+      "certification_claim": false,
+      "context_type_variation": false,
+      "contextual_types": [
+        "ANY"
+      ],
+      "evidence_coverage": "PARTIAL",
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 1
+      },
+      "family_class": "OBJECT_ATTRIBUTE",
+      "kind": "ATTRIBUTE",
+      "next_action": "DEFINE_DOMAIN_AND_BINDING",
+      "occurrence_count": 1,
+      "primitive": "unit_effective_price",
+      "registry_id": "BR-ecd5262c8b3e",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_required": false,
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED"
+    }
+  ],
+  "phase": "SEMANTIC_REGISTRY_UNRESOLVED"
+}

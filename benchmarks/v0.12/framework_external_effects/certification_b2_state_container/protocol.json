@@ -1,0 +1,65 @@
+{
+  "attempted": 6,
+  "batch": "STATE_CONTAINER_BATCH",
+  "candidate_ids": [
+    "2309036b0c69ad48",
+    "4b57e2d73c695a41",
+    "8048a564541f5408",
+    "b2996c3dd81aca55",
+    "d7f578c3a5f20b8a",
+    "eb12d3a44210a486"
+  ],
+  "certification_started": false,
+  "correct_source_policy": "Execute the exact authoritative frozen source without AST rewriting under controlled explicit dependency observations.",
+  "mutants": {
+    "2309036b0c69ad48": {
+      "difference": "correct transition stores the produced field at option.code; mutant leaves the mapping unchanged",
+      "name": "OMIT_MAPPING_WRITE"
+    },
+    "4b57e2d73c695a41": {
+      "difference": "correct transition assigns OPEN; mutant preserves the prior status",
+      "name": "KEEP_OLD_STATUS"
+    },
+    "8048a564541f5408": {
+      "difference": "correct transition appends one operation; mutant preserves the prior sequence",
+      "name": "OMIT_OPERATION_APPEND"
+    },
+    "b2996c3dd81aca55": {
+      "difference": "correct transition resets payments_postpone to False; mutant keeps the prior True observation",
+      "name": "KEEP_PAYMENTS_POSTPONE_TRUE"
+    },
+    "d7f578c3a5f20b8a": {
+      "difference": "correct transition adds taxed_gross - fee_value to totaldiff; mutant preserves the old totaldiff",
+      "name": "OMIT_TOTALDIFF_UPDATE"
+    },
+    "eb12d3a44210a486": {
+      "difference": "correct sequence contains variation text when variation_id and variation text are truthy; mutant omits it",
+      "name": "OMIT_VARIATION_TEXT"
+    }
+  },
+  "mutants_frozen_before_execution": true,
+  "parent_plan": "benchmarks/v0.12/framework_external_effects/certification_plan_b2/protocol.json",
+  "projection_policy": "Compare source-observable post-state, return sequence, and ordered effect/operation trace against the prospectively frozen semantic route.",
+  "recovery_claims_before_execution": 0,
+  "required_gates": [
+    "authoritative_source_sha",
+    "structural_source_route_gate",
+    "exact_source_execution",
+    "semantic_projection_replay",
+    "frozen_mutant",
+    "z3_mutant_refutation",
+    "concrete_counterexample_replay",
+    "global_regression"
+  ],
+  "schema_version": "BIZPROOF-V0.12-B2-CERT1-PROTOCOL-1",
+  "selection_frozen_before_execution": true,
+  "semantic_routes": {
+    "2309036b0c69ad48": "MAPPING_STATE_WRITE",
+    "4b57e2d73c695a41": "OBJECT_STATE_PLUS_EFFECT_TRACE",
+    "8048a564541f5408": "OPERATION_SEQUENCE_APPEND",
+    "b2996c3dd81aca55": "SESSION_MAPPING_SEQUENCE_MUTATION",
+    "d7f578c3a5f20b8a": "MULTI_STATE_PLUS_OPERATION_APPEND",
+    "eb12d3a44210a486": "CONDITIONAL_SEQUENCE_RETURN"
+  },
+  "source_checkpoint": "ae92a8face734943db65f71128d1fd635b264771"
+}

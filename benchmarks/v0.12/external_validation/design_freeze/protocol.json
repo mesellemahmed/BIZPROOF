@@ -1,0 +1,141 @@
+{
+  "cohort_design": {
+    "candidate_reuse": false,
+    "development_project_reuse": false,
+    "development_source_reuse": false,
+    "functions_per_project": 10,
+    "outcome_blind_selection": true,
+    "project_count": 12,
+    "project_holdout": true,
+    "selection_unit": "source function or method",
+    "target_size": 120
+  },
+  "current_state": {
+    "external_certification_started": false,
+    "external_functions_selected": false,
+    "external_outcomes_observed": false,
+    "external_projects_selected": false,
+    "external_source_pool_frozen": false
+  },
+  "evaluation_protocol": {
+    "candidate_specific_exception_after_outcome": false,
+    "early_stopping": false,
+    "evaluate_all_selected_cases": true,
+    "new_semantic_capability_during_v012_external_evaluation": false,
+    "post_selection_candidate_removal": false,
+    "post_selection_candidate_substitution": false,
+    "rule_if_new_capability_is_needed": "record the V0.12 external case as not certified; the capability may be developed only in a later version such as V0.13",
+    "semantic_threshold_retuning": false
+  },
+  "external_project_eligibility": {
+    "excluded": [
+      "any project represented in V0.11/V0.12 development evidence",
+      "any exact source body SHA-256 appearing in historical evidence",
+      "generated code",
+      "tests, examples and benchmark-only helper code",
+      "empty/pass-only functions",
+      "functions selected after examining BIZPROOF certification outcomes"
+    ],
+    "required": [
+      "project identity absent from the complete historical development provenance set",
+      "project source snapshot frozen before any candidate certification outcome is observed",
+      "at least 10 eligible non-trivial Python functions or methods",
+      "source file and function body hashable deterministically"
+    ]
+  },
+  "external_validation_role": "prospective untouched project-level external generalization cohort",
+  "function_selection": {
+    "deficit_rule": "if a project contains fewer than two eligible functions in a stratum, select all available in that stratum and fill the remaining project slots from the project's still-unselected eligible functions by the same deterministic hash ranking",
+    "functions_per_project": 10,
+    "method": "pre-certification_static_shape_stratification",
+    "outcome_based_substitution": false,
+    "shape_strata": [
+      {
+        "description": "local scalar/control semantics without nested functions, explicit state writes or domain/vector operators",
+        "id": "S1_LOCAL_SCALAR_CONTROL"
+      },
+      {
+        "description": "mapping, sequence, comprehension, container projection or structured return",
+        "id": "S2_STRUCTURED_CONTAINER"
+      },
+      {
+        "description": "nested functions, comprehensions, higher-order transformations or vector/domain operators",
+        "id": "S3_NESTED_VECTOR_HIGHER_ORDER"
+      },
+      {
+        "description": "observable state mutation, attribute/item write, persistence-style call or ordered effect semantics",
+        "id": "S4_STATE_EFFECT"
+      },
+      {
+        "description": "parameter/entity binding, external framework dependency, enums, dates or multi-object domain semantics",
+        "id": "S5_BINDING_EXTERNAL_DOMAIN"
+      }
+    ],
+    "stratum_assignment": "computed only from source/AST/dependency shape before BIZPROOF certification",
+    "target_per_shape_stratum": 2,
+    "within_project_seed": "BIZPROOF-V012-EXTERNAL-FUNCTION-SELECTION-1",
+    "within_stratum_selection": "ascending SHA256(seed || project identity || relative source path || function qualified name || source SHA256)"
+  },
+  "historical_freeze": {
+    "commit": "e605edcf086a2f3af9713ffcc52f6fb49e17bd71",
+    "historical_ambiguity": 2,
+    "historical_certified": 88,
+    "historical_cohort_size": 90,
+    "historical_unsupported_recovered": 38,
+    "historical_unsupported_total": 38,
+    "tag": "v0.12-historical-frontier-final"
+  },
+  "phase": "V0.12-E0",
+  "primary_endpoints": [
+    {
+      "denominator": "all 120 prospectively selected external cases",
+      "name": "external_certification_yield",
+      "numerator": "CERTIFIED_A1 + CERTIFIED_A2"
+    },
+    {
+      "denominator": "all 120 prospectively selected external cases",
+      "name": "external_A2_yield",
+      "numerator": "CERTIFIED_A2"
+    }
+  ],
+  "project_selection": {
+    "manual_cherry_picking": false,
+    "manual_reordering": false,
+    "method": "deterministic_hash_ranking",
+    "ranking_expression": "SHA256(seed || canonical_project_identity || frozen_source_snapshot_identity)",
+    "rule": "rank all eligible unseen projects ascending by deterministic hash and select the first 12",
+    "seed": "BIZPROOF-V012-EXTERNAL-PROJECT-SELECTION-1"
+  },
+  "sample_size_rationale": {
+    "cases_per_project": 10,
+    "failure_detection_example": "if the true independent case-level failure rate were 5%, 120 observations give approximately 99.8% probability of observing at least one failure; this is descriptive, not a power claim under arbitrary dependence",
+    "interpretation": "large enough for project-level holdout analysis while retaining tractable exact-source replay and formal mutant validation",
+    "n": 120,
+    "project_count": 12
+  },
+  "schema_version": "BIZPROOF-V0.12-EXTERNAL-DESIGN-1",
+  "secondary_endpoints": [
+    "external ambiguity rate",
+    "external unsupported rate",
+    "certification yield by unseen project",
+    "certification yield by frozen source-shape stratum",
+    "mutant refutation success rate where A2 is attempted",
+    "exact-source replay success rate",
+    "failure taxonomy distribution"
+  ],
+  "statistical_reporting": {
+    "confidence_interval": "Wilson 95% interval",
+    "no_weighted_comparison_to_external_tools_without_matched_protocol": true,
+    "point_estimates": true,
+    "report_macro_average_across_projects": true,
+    "report_micro_average_across_cases": true,
+    "report_project_level_distribution": true
+  },
+  "version_integrity": {
+    "external_failures_must_not_be_repaired_inside_v012": true,
+    "historical_38_of_38_recovery_must_not_change": true,
+    "historical_88_of_90_must_not_change": true,
+    "historical_result_must_not_change": true,
+    "v012_implementation_frozen_before_external_outcomes": true
+  }
+}

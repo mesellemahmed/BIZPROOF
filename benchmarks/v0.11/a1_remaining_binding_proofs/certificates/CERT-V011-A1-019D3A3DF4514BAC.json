@@ -1,0 +1,128 @@
+{
+  "assistance_level": "A1",
+  "authoring_mode": "DECLARATIVE_BINDINGS_FROZEN_BSIR",
+  "bindings": [
+    {
+      "binding_id": "cb148af0432ed5ab",
+      "kind": "CALL",
+      "primitive": "famille",
+      "source_expression": "individu.famille('paje_prepare', oct_2021)"
+    },
+    {
+      "binding_id": "f0afe74490f4081f",
+      "kind": "CALL",
+      "primitive": "famille",
+      "source_expression": "individu.famille('rsa', oct_2021)"
+    },
+    {
+      "binding_id": "6170e44814e9e3cd",
+      "kind": "CALL",
+      "primitive": "has_role",
+      "source_expression": "individu.has_role(Famille.PARENT)"
+    },
+    {
+      "binding_id": "6408a81fa86bb210",
+      "kind": "CALL",
+      "primitive": "individu",
+      "source_expression": "individu('aah', oct_2021)"
+    },
+    {
+      "binding_id": "69782843611481d5",
+      "kind": "CALL",
+      "primitive": "individu",
+      "source_expression": "individu('asi', oct_2021)"
+    },
+    {
+      "binding_id": "23c4263a47d026b5",
+      "kind": "CALL",
+      "primitive": "individu",
+      "source_expression": "individu('eligibilite_indemnite_inflation_non_salarie', period)"
+    },
+    {
+      "binding_id": "3f351b9f166cb58a",
+      "kind": "CALL",
+      "primitive": "individu",
+      "source_expression": "individu('eligibilite_indemnite_inflation_public', period)"
+    },
+    {
+      "binding_id": "f934f11814520805",
+      "kind": "CALL",
+      "primitive": "individu",
+      "source_expression": "individu('eligibilite_indemnite_inflation_retraite', period)"
+    },
+    {
+      "binding_id": "a21f52880c77ba12",
+      "kind": "CALL",
+      "primitive": "individu",
+      "source_expression": "individu('eligibilite_indemnite_inflation_salarie_prive', period)"
+    },
+    {
+      "binding_id": "47690298a5a9f591",
+      "kind": "CALL",
+      "primitive": "individu",
+      "source_expression": "individu('pensions_invalidite', oct_2021)"
+    },
+    {
+      "binding_id": "7c4028ffe7d3054e",
+      "kind": "CALL",
+      "primitive": "period",
+      "source_expression": "periods.period('2021-10')"
+    }
+  ],
+  "candidate_id": "019d3a3df4514bac",
+  "certificate_digest": "cd4a82190b0c9bf83110dd6ae9ca38a9a2f0364a3e96a919a79888537707b45d",
+  "certificate_id": "CERT-V011-A1-019D3A3DF4514BAC",
+  "claim_scope": "Certification proves equivalence between the locked source AST and the frozen BSIR under the explicit declarative bindings listed here. External framework/database values and helper semantics without a validated semantic contract remain outside the certificate.",
+  "evidence": {
+    "concrete_replays": 12,
+    "correct_solver_status": "unsat",
+    "ir_sha256": "0cbf07ae26dd2b559c0a700e8bd03f16980f8e87d80dfeb5f984a42654527169",
+    "mutant_solver_status": "sat",
+    "mutant_witness": {
+      "b_019d3a_0": "0",
+      "b_019d3a_1": "0",
+      "b_019d3a_10": "0",
+      "b_019d3a_2": "0",
+      "b_019d3a_3": "1",
+      "b_019d3a_4": "0",
+      "b_019d3a_5": "1",
+      "b_019d3a_6": "0",
+      "b_019d3a_7": "0",
+      "b_019d3a_8": "0",
+      "b_019d3a_9": "0"
+    },
+    "mutation": "mul-to-add",
+    "proof_digest": "6461f6c537b74b36f29495c6d2dbc9b23974f6d9766bf5d033ba813b26d92cd8",
+    "proof_obligations": {
+      "bsir_compile": true,
+      "concrete_replay": true,
+      "declarative_bindings": true,
+      "frozen_bsir": true,
+      "independent_source_ast_compile": true,
+      "locked_source_commit": true,
+      "mutant_detected_sat": true,
+      "mutant_witness_replayed": true,
+      "symbolic_equivalence_unsat": true,
+      "validated_semantic_abstractions": true
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 74,
+    "text": "- `CERTIFIED_A1`: certified with declarative source-to-BVC bindings only."
+  },
+  "schema_version": "BIZPROOF-V0.11-A1-CERTIFICATE-1",
+  "semantic_contracts": {},
+  "source": {
+    "class": "eligibilite_indemnite_inflation_prest_soc",
+    "file": "openfisca_france/model/prestations/aides_exceptionnelles/indemnite_inflation.py",
+    "function": "formula",
+    "function_sha256": "dc02872d9a0a0ad345c40a4d833e39745f769dcbe0f7e16ef41c3e23793ba1ca",
+    "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+    "source_file_sha256": "c52bb6dfb3d1fb7e978146afe534a4b5f043f0ae4c17b85c3fdfe006d171b37a",
+    "source_id": "openfisca_france"
+  },
+  "status": "CERTIFIED_A1",
+  "terminal_outcome": "CERTIFIED_A1",
+  "terminal_outcome_assigned": true
+}

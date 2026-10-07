@@ -1,0 +1,11 @@
+{
+  "attempted": 2,
+  "batch": "RICH_FRAMEWORK_BATCH",
+  "candidate_results": {
+    "882c5eae0d8fd4ec": "CERTIFIED_A2",
+    "8a754dadf1672d0a": "CERTIFIED_A2"
+  },
+  "certified_a2": 2,
+  "failed": 0,
+  "schema_version": "BIZPROOF-V0.12-B2-CERT2-SUMMARY-1"
+}

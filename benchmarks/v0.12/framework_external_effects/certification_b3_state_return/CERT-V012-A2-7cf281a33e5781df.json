@@ -1,0 +1,39 @@
+{
+  "all_required_gates_pass": true,
+  "authoritative_source": {
+    "class_harness_only": true,
+    "correct_source_ast_rewritten": false,
+    "matches_frozen_plan": true,
+    "sha256": "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f"
+  },
+  "candidate_id": "7cf281a33e5781df",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_mutant_replay": true,
+  "formal_mutant_refutation": {
+    "model": "[price_new = 1, price_old = 0]",
+    "property": "there exists an admissible old/new value pair where assignment of the new value differs from the KEEP_OLD_ATTRIBUTE_VALUE mutant",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "function_name": "price",
+  "mutant": {
+    "fault": "the source receives a new price value but the mutant preserves self.value",
+    "name": "KEEP_OLD_ATTRIBUTE_VALUE"
+  },
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-B3-CERT1-A2-1",
+  "scope": {
+    "certified": "the prospectively frozen semantic projection of the exact authoritative business source",
+    "not_certified": [
+      "correctness of Django/Oscar/Pretix framework implementations",
+      "unobserved persistence or middleware behavior",
+      "arbitrary external dependencies outside the frozen observation boundary"
+    ]
+  },
+  "semantic_capability": "ATTRIBUTE_STATE_WRITE",
+  "source_projection_equivalence": {
+    "branch_basis": 1,
+    "controlled_exact_source_replay": true
+  },
+  "v012_outcome": "CERTIFIED_A2"
+}

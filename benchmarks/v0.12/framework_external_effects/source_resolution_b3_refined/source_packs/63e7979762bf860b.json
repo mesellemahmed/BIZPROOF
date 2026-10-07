@@ -1,0 +1,25 @@
+{
+  "authoritative_source": true,
+  "candidate_id": "63e7979762bf860b",
+  "certification_started": false,
+  "class_name": "BasketAddView",
+  "end_lineno": 382,
+  "fingerprints": {
+    "ast_dump": "97e40d83a9a8bff8e12fe174e3d34d474f8d154d5c4b80947ebbaf8ce7fc84a3",
+    "ast_unparse": "f300023b96e04741bb3569591f970cccf136898c3f7550d6374564af80878a89",
+    "dedent_strip": "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34",
+    "dedent_strip_newline": "43bbec5180b4bd904c349ba69ff2a510e91781a14dee5844b9c25667889f5242",
+    "lf": "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34",
+    "raw": "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34"
+  },
+  "function_name": "form_valid",
+  "lineno": 359,
+  "matched_hash": "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34",
+  "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\basket\\views.py",
+  "project": "django_oscar",
+  "reason_codes": "FRAMEWORK_SIGNAL_BASKET_SIDE_EFFECTS_OUTSIDE_FORMAL_SUBSET",
+  "recovery_claim": false,
+  "resolution": "TIER_A_HASH_RESOLVED",
+  "source": "def form_valid(self, form):\n        offers_before = self.request.basket.applied_offers()\n\n        # pylint: disable=W0201\n        self.line, self.line_created = self.request.basket.add_product(\n            form.product, form.cleaned_data[\"quantity\"], form.cleaned_options()\n        )\n\n        messages.success(\n            self.request, self.get_success_message(form), extra_tags=\"safe noicon\"\n        )\n\n        # Check for additional offer messages\n        BasketMessageGenerator().apply_messages(self.request, offers_before)\n\n        # Send signal for basket addition\n        self.add_signal.send(\n            sender=self,\n            product=form.product,\n            user=self.request.user,\n            request=self.request,\n        )\n\n        return super().form_valid(form)",
+  "support_records": []
+}

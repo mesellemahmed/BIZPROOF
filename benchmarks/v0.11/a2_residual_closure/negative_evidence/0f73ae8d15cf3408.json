@@ -1,0 +1,34 @@
+{
+  "candidate_id": "0f73ae8d15cf3408",
+  "certification_claim": false,
+  "interpretation": "Unsupported means unsupported by the frozen A2 scalar certification scope. It does not claim that the external function is intrinsically unverifiable by another formalism.",
+  "negative_evidence_digest": "3713a65922f38d562f112089e3ad92a6542899501a53db50cd80b6bc63caa394",
+  "prior_review": {
+    "candidate_id": "0f73ae8d15cf3408",
+    "certification_claim": false,
+    "class": "Order",
+    "function": "ticket_download_date",
+    "reason": "The result is a date/reference value or None, not a scalar business quantity.",
+    "reason_code": "REFERENCE_DATE_OR_NONE",
+    "source": "pretix",
+    "status": "A2_REVIEW_REQUIRED",
+    "terminal_outcome": null
+  },
+  "reason": "The result is a date/reference value or None, not a scalar business quantity.",
+  "reason_code": "REFERENCE_DATE_OR_NONE",
+  "schema_version": "BIZPROOF-V0.11-NEGATIVE-EVIDENCE-1",
+  "scope": "V0.11 A2 explicit scalar semantic adapter",
+  "source": {
+    "class": "Order",
+    "file": "src/pretix/base/models/orders.py",
+    "function": "ticket_download_date",
+    "function_sha256": "77e520b000e302b92a67ca035d10b5ddb88ae67b71f1457aafb6212530d9f8c6",
+    "lines": [
+      945,
+      960
+    ],
+    "source_file_sha256": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef",
+    "source_id": "pretix"
+  },
+  "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+}

@@ -1,0 +1,19 @@
+{
+  "candidate_id": "2309036b0c69ad48",
+  "certification_claim": false,
+  "controlled_execution_status": "ESTABLISHED",
+  "execution_evidence_digest": "afe0de0f646f90d14963fc13f32d6d95703ed0c993fe209d44b420299d1f0c9b",
+  "interpretation": "This is not an execution failure. The candidate executes successfully under controlled deterministic stubs; formal certification is withheld because the required semantics exceed the frozen supported subset.",
+  "negative_evidence_digest": "8a75a37943f7daeba4460d954aecf42aa744b067a0504d7509a2ba0bf61431e5",
+  "reason": "Controlled execution of the locked source slice is established, but its observable semantics require state transition, collection mutation or non-scalar output semantics outside the frozen V0.11 formal certification subset.",
+  "reason_code": "FORM_STATE_MUTATION_OUTSIDE_FORMAL_SUBSET",
+  "schema_version": "BIZPROOF-V0.11-NEGATIVE-EVIDENCE-1",
+  "source": {
+    "class": "AddToBasketForm",
+    "file": "src/oscar/apps/basket/forms.py",
+    "function": "_add_option_field",
+    "function_sha256": "eddb810f17547f52e721d8014ab13075b4e1d1e919384c096157e1e7d299d94a",
+    "source_id": "django_oscar"
+  },
+  "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+}

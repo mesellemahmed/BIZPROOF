@@ -1,0 +1,40 @@
+{
+  "attack_order_frozen": false,
+  "automatic_source_acceptance": [
+    "DIRECT_HASH_RESOLVED",
+    "LOCAL_HASH_RESOLVED",
+    "HASH_NAME_RESOLVED"
+  ],
+  "candidate_count": 9,
+  "candidate_ids": [
+    "13df73dbd2825f80",
+    "1a2de6edb11465fe",
+    "3fd2d8b8a76b4834",
+    "674ea6fd35fa6c39",
+    "801278c4d91c2185",
+    "8b3e90ca7b531556",
+    "a74d4580a9effb73",
+    "e8850260c2763222",
+    "eb41eb351df073ef"
+  ],
+  "certification_started": false,
+  "purpose": "Recover candidate-local source provenance and measure semantic/structural shape before any B4 certification route is selected.",
+  "recovery_claims": 0,
+  "schema_version": "BIZPROOF-V0.12-B4-A1-AUDIT-1",
+  "semantic_routes_frozen": false,
+  "source_checkpoint": "ea5780fc9d94c9d5aa1f92ca7c82e331ed818418",
+  "source_resolution_precedence": [
+    "DIRECT_HASH_RESOLVED",
+    "LOCAL_HASH_RESOLVED",
+    "HASH_NAME_RESOLVED",
+    "NAME_PATH_REVIEW",
+    "UNRESOLVED"
+  ],
+  "taxonomy_counts": {
+    "BINDING_OR_DOMAIN_UNRESOLVED": 1,
+    "COMPLEX_CONTAINER_SEMANTICS": 1,
+    "NESTED_OR_HIGHER_ORDER_LOGIC": 3,
+    "OTHER_FROZEN_SCOPE_LIMITATION": 2,
+    "STATEFUL_SIDE_EFFECTING_LOGIC": 2
+  }
+}

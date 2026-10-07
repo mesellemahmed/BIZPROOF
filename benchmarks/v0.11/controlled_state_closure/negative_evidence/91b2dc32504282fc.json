@@ -1,0 +1,19 @@
+{
+  "candidate_id": "91b2dc32504282fc",
+  "certification_claim": false,
+  "controlled_execution_status": "ESTABLISHED",
+  "execution_evidence_digest": "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1",
+  "interpretation": "This is not an execution failure. The candidate executes successfully under controlled deterministic stubs; formal certification is withheld because the required semantics exceed the frozen supported subset.",
+  "negative_evidence_digest": "5fec4457e1d6a0a9b67a9c1a6b4002097905014884df147f6e8839dd27c39b64",
+  "reason": "Controlled execution of the locked source slice is established, but its observable semantics require state transition, collection mutation or non-scalar output semantics outside the frozen V0.11 formal certification subset.",
+  "reason_code": "MULTI_STATE_MUTATION_OUTSIDE_FORMAL_SUBSET",
+  "schema_version": "BIZPROOF-V0.11-NEGATIVE-EVIDENCE-1",
+  "source": {
+    "class": "LineDiscountRegistry",
+    "file": "src/oscar/apps/basket/utils.py",
+    "function": "discount",
+    "function_sha256": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+    "source_id": "django_oscar"
+  },
+  "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+}

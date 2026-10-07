@@ -1,0 +1,28 @@
+{
+  "abstraction_contracts": [
+    "item_id is the stable identity of the frozen item domain object",
+    "discount_rule_id is the stable identity of the frozen discount-rule object",
+    "tuple position and arity are observable"
+  ],
+  "all_required_gates_pass": true,
+  "candidate_id": "d285ecd86455b150",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_counterexample_replay": {
+    "correct": "{\"items\":[{\"kind\":\"INT\",\"value\":5},{\"identity\":100,\"kind\":\"REFERENCE\",\"type_name\":\"Item\"},{\"kind\":\"INT\",\"value\":5},{\"identity\":900,\"kind\":\"REFERENCE\",\"type_name\":\"DiscountRule\"}],\"kind\":\"TUPLE\"}",
+    "mutant": "{\"items\":[{\"kind\":\"INT\",\"value\":5},{\"identity\":100,\"kind\":\"REFERENCE\",\"type_name\":\"Item\"},{\"kind\":\"INT\",\"value\":6},{\"identity\":900,\"kind\":\"REFERENCE\",\"type_name\":\"DiscountRule\"}],\"kind\":\"TUPLE\"}",
+    "passed": true
+  },
+  "formal_mutant_refutation": {
+    "model": "[total_max_count = 0]",
+    "solver_result": "SAT"
+  },
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-A5-A2-2",
+  "semantic_capability": "MIXED_TUPLE_WITH_TYPED_REFERENCES",
+  "source_equivalence": {
+    "method": "canonical executable AST identity after explicit abstraction substitution",
+    "proved": true
+  },
+  "source_slice_sha256": "888384509cd03e6203916fe5e8e415524fc8b9b24268c92426dce8cc1d884f99",
+  "v012_outcome": "CERTIFIED_A2"
+}

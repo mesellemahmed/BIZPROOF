@@ -1,0 +1,388 @@
+[
+  {
+    "direct_parameter_subscripts": [],
+    "end_line": 25,
+    "file": "src/bizproof/adapter_preservation.py",
+    "line": 24,
+    "name": "_sha256_file",
+    "parameters": [
+      "path"
+    ],
+    "source": "def _sha256_file(path: Path) -> str:\n    return _sha256_bytes(path.read_bytes())"
+  },
+  {
+    "direct_parameter_subscripts": [],
+    "end_line": 514,
+    "file": "src/bizproof/adapter_preservation.py",
+    "line": 375,
+    "name": "run_preservation",
+    "parameters": [
+      "catalog_path",
+      "external_root",
+      "lock_path",
+      "output_dir",
+      "repo_root"
+    ],
+    "source": "def run_preservation(\n    *, catalog_path: Path, lock_path: Path, external_root: Path, repo_root: Path, output_dir: Path\n) -> JsonDict:\n    catalog = _load_json(catalog_path)\n    lock = _load_json(lock_path)\n    locked = {str(x[\"id\"]): x for x in lock[\"sources\"] if isinstance(x, dict)}\n    rules = catalog[\"rules\"]\n    seed = int(catalog[\"seed\"])\n    details = []\n    failures = []\n    total = 0\n    started = time.perf_counter()\n\n    for raw in rules:\n        rule = dict(raw)\n        rid = str(rule[\"id\"])\n        sid = str(rule[\"source_id\"])\n        repo = external_root / sid\n        try:\n            expected = str(rule[\"resolved_commit\"])\n            if not (expected == str(locked[sid][\"resolved_commit\"]) == _checkout_commit(repo)):\n                raise ValueError(\"locked/catalog/checkout commit mismatch\")\n\n            external_path = repo / str(rule[\"external_source\"])\n            adapter_path = repo_root / str(rule[\"adapter\"])\n            ns = {}\n            harness = str(rule[\"harness\"])\n            if harness == \"OPENFISCA_BOOLEAN_LOOKUP\":\n                ns[\"not_\"] = lambda value: not value\n            elif harness == \"OPENFISCA_CLAMPED_SUBTRACTION\":\n                ns[\"max_\"] = max\n\n            extracted = _extract_method(\n                external_path,\n                class_name=str(rule[\"external_class\"]),\n                method_name=str(rule[\"external_method\"]),\n                namespace=ns,\n            )\n            module = _load_module(adapter_path)\n            adapter = getattr(module, str(rule[\"adapter_function\"]))\n            mutant = getattr(module, str(rule[\"mutant_function\"]))\n            domain = dict(rule[\"validation_domain\"])\n\n            if harness == \"OPENFISCA_BOOLEAN_LOOKUP\":\n                result = _run_apprenticeship(extracted.function, adapter, mutant)\n            elif harness == \"OPENFISCA_CLAMPED_SUBTRACTION\":\n                result = _run_housing(\n                    extracted.function,\n                    adapter,\n                    mutant,\n                    seed=seed,\n                    maximum=int(domain[\"max\"]),\n                    random_cases=int(domain[\"random_cases\"]),\n                )\n            elif harness == \"OSCAR_POST_AGGREGATION_PARTIAL\":\n                result = _run_oscar_partial(\n                    extracted.function,\n                    adapter,\n                    mutant,\n                    num_min=int(domain[\"num_matches_min\"]),\n                    num_max=int(domain[\"num_matches_max\"]),\n                    required_min=int(domain[\"required_count_min\"]),\n                    required_max=int(domain[\"required_count_max\"]),\n                )\n            elif harness == \"OSCAR_CONTROLLED_BASKET_THRESHOLD\":\n                result = _run_oscar_satisfied(\n                    extracted.function,\n                    adapter,\n                    mutant,\n                    num_min=int(domain[\"num_matches_min\"]),\n                    num_max=int(domain[\"num_matches_max\"]),\n                    required_min=int(domain[\"required_count_min\"]),\n                    required_max=int(domain[\"required_count_max\"]),\n                )\n            else:\n                raise ValueError(f\"unknown harness: {harness}\")\n\n            total += int(result[\"comparisons\"])\n            passed = result[\"correct_mismatches\"] == 0 and result[\"mutant_mismatches\"] > 0\n            details.append(\n                {\n                    \"rule_id\": rid,\n                    \"source_id\": sid,\n                    \"resolved_commit\": expected,\n                    \"external_source\": str(rule[\"external_source\"]),\n                    \"external_class\": str(rule[\"external_class\"]),\n                    \"external_method\": str(rule[\"external_method\"]),\n                    \"external_source_sha256\": extracted.source_sha256,\n                    \"external_method_sha256\": extracted.method_sha256,\n                    \"external_method_lines\": {\n                        \"start\": extracted.line_start,\n                        \"end\": extracted.line_end,\n                    },\n                    \"adapter\": str(rule[\"adapter\"]),\n                    \"adapter_sha256\": _sha256_file(adapter_path),\n                    \"adapter_function\": str(rule[\"adapter_function\"]),\n                    \"mutant_function\": str(rule[\"mutant_function\"]),\n                    \"harness\": harness,\n                    \"validation_domain\": domain,\n                    **result,\n                    \"passed\": passed,\n                }\n            )\n        except (KeyError, OSError, TypeError, ValueError, AttributeError) as exc:\n            failures.append({\"rule_id\": rid, \"error\": f\"{type(exc).__name__}: {exc}\"})\n\n    correct_mismatches = sum(int(x[\"correct_mismatches\"]) for x in details)\n    mutant_mismatches = sum(int(x[\"mutant_mismatches\"]) for x in details)\n    rules_passed = sum(1 for x in details if x[\"passed\"])\n    passed = (\n        not failures\n        and len(details) == len(rules)\n        and rules_passed == len(rules)\n        and correct_mismatches == 0\n        and mutant_mismatches > 0\n    )\n\n    summary = {\n        \"benchmark_version\": \"0.8.0\",\n        \"claim_scope\": catalog[\"claim_scope\"],\n        \"seed\": seed,\n        \"rules_configured\": len(rules),\n        \"rules_checked\": len(details),\n        \"rules_passed\": rules_passed,\n        \"total_comparisons\": total,\n        \"correct_adapter_mismatches\": correct_mismatches,\n        \"mutant_mismatches\": mutant_mismatches,\n        \"failures\": failures,\n        \"runtime_seconds\": time.perf_counter() - started,\n        \"passed\": passed,\n    }\n\n    output_dir.mkdir(parents=True, exist_ok=True)\n    (output_dir / \"summary.json\").write_text(\n        json.dumps(summary, indent=2, sort_keys=True) + \"\\n\", encoding=\"utf-8\"\n    )\n    (output_dir / \"details.json\").write_text(\n        json.dumps(details, indent=2, sort_keys=True) + \"\\n\", encoding=\"utf-8\"\n    )\n    return summary"
+  },
+  {
+    "direct_parameter_subscripts": [],
+    "end_line": 23,
+    "file": "src/bizproof/certification_pipeline.py",
+    "line": 22,
+    "name": "_sha256_file",
+    "parameters": [
+      "path"
+    ],
+    "source": "def _sha256_file(path: Path) -> str:\n    return hashlib.sha256(path.read_bytes()).hexdigest()"
+  },
+  {
+    "direct_parameter_subscripts": [
+      {
+        "expression": "summary['claim_scope']",
+        "line": 75,
+        "parameter": "summary"
+      },
+      {
+        "expression": "summary['certificates_configured']",
+        "line": 79,
+        "parameter": "summary"
+      },
+      {
+        "expression": "summary['certificates_issued']",
+        "line": 80,
+        "parameter": "summary"
+      },
+      {
+        "expression": "summary['certificates_failed']",
+        "line": 81,
+        "parameter": "summary"
+      },
+      {
+        "expression": "summary['external_system_count']",
+        "line": 82,
+        "parameter": "summary"
+      },
+      {
+        "expression": "summary['v08_total_comparisons']",
+        "line": 83,
+        "parameter": "summary"
+      },
+      {
+        "expression": "summary['v08_correct_mismatches']",
+        "line": 84,
+        "parameter": "summary"
+      },
+      {
+        "expression": "summary['v09_equivalences_proved']",
+        "line": 85,
+        "parameter": "summary"
+      },
+      {
+        "expression": "summary['passed']",
+        "line": 86,
+        "parameter": "summary"
+      }
+    ],
+    "end_line": 123,
+    "file": "src/bizproof/certification_pipeline.py",
+    "line": 69,
+    "name": "_reviewer_report",
+    "parameters": [
+      "certificates",
+      "summary"
+    ],
+    "source": "def _reviewer_report(summary: JsonDict, certificates: list[JsonDict]) -> str:\n    lines = [\n        \"# BIZPROOF V0.10 Reviewer Certification Report\",\n        \"\",\n        \"## Scope\",\n        \"\",\n        str(summary[\"claim_scope\"]),\n        \"\",\n        \"## Global result\",\n        \"\",\n        f\"- Certificates configured: {summary['certificates_configured']}\",\n        f\"- Certificates issued: {summary['certificates_issued']}\",\n        f\"- Certificates failed: {summary['certificates_failed']}\",\n        f\"- External systems: {summary['external_system_count']}\",\n        f\"- V0.8 concrete comparisons represented: {summary['v08_total_comparisons']}\",\n        f\"- V0.8 correct-adapter mismatches represented: {summary['v08_correct_mismatches']}\",\n        f\"- V0.9 symbolic equivalences represented: {summary['v09_equivalences_proved']}\",\n        f\"- Pipeline result: {'PASS' if summary['passed'] else 'FAIL'}\",\n        \"\",\n        \"## Certificates\",\n        \"\",\n    ]\n\n    for item in certificates:\n        lines.extend(\n            [\n                f\"### {item['certificate_id']}\",\n                \"\",\n                f\"- Status: **{item['status']}**\",\n                f\"- Certification scope: `{item['certification_scope']}`\",\n                f\"- External system: `{item['provenance']['source_id']}`\",\n                f\"- Commit: `{item['provenance']['resolved_commit']}`\",\n                f\"- Source: `{item['provenance']['external_source']}`\",\n                f\"- Adapter: `{item['artifacts']['adapter_path']}`\",\n                f\"- Contract: `{item['artifacts']['contract_path']}`\",\n                f\"- V0.7: `{item['evidence']['v0.7']['correct_verdict']}`\",\n                (\n                    f\"- V0.8: {item['evidence']['v0.8']['comparisons']} comparisons, \"\n                    f\"{item['evidence']['v0.8']['correct_mismatches']} correct mismatches\"\n                ),\n                (\n                    f\"- V0.9: `{item['evidence']['v0.9']['correct_verdict']}` \"\n                    f\"(`{item['evidence']['v0.9']['solver_status']}`)\"\n                ),\n                f\"- Certified symbolic slice: `{item['evidence']['v0.9']['external_slice']}`\",\n                f\"- Certificate digest: `{item['certificate_digest']}`\",\n                \"\",\n            ]\n        )\n\n        if item[\"failed_checks\"]:\n            lines.append(\"- Failed checks: \" + \", \".join(item[\"failed_checks\"]))\n            lines.append(\"\")\n\n    return \"\\n\".join(lines) + \"\\n\""
+  },
+  {
+    "direct_parameter_subscripts": [],
+    "end_line": 519,
+    "file": "src/bizproof/certification_pipeline.py",
+    "line": 126,
+    "name": "run_certification",
+    "parameters": [
+      "certificates_dir",
+      "external_root",
+      "lock_path",
+      "registry_path",
+      "repo_root",
+      "results_dir"
+    ],
+    "source": "def run_certification(\n    *,\n    registry_path: Path,\n    lock_path: Path,\n    repo_root: Path,\n    external_root: Path,\n    certificates_dir: Path,\n    results_dir: Path,\n) -> JsonDict:\n    started = time.perf_counter()\n\n    registry = _load_json(registry_path)\n    lock = _load_json(lock_path)\n\n    v07_summary = _load_json(repo_root / \"benchmarks/v0.10/evidence/v0.7/summary.json\")\n    v08_summary = _load_json(repo_root / \"benchmarks/v0.10/evidence/v0.8/summary.json\")\n    v09_summary = _load_json(repo_root / \"benchmarks/v0.10/evidence/v0.9/summary.json\")\n\n    v07 = _detail_map(repo_root / \"benchmarks/v0.10/evidence/v0.7/details.json\")\n    v08 = _detail_map(repo_root / \"benchmarks/v0.10/evidence/v0.8/details.json\")\n    v09 = _detail_map(repo_root / \"benchmarks/v0.10/evidence/v0.9/details.json\")\n\n    raw_sources = lock.get(\"sources\")\n    if not isinstance(raw_sources, list):\n        raise ValueError(\"LOCK sources must be a list\")\n\n    locked = {\n        str(item[\"id\"]): str(item[\"resolved_commit\"])\n        for item in raw_sources\n        if isinstance(item, dict) and \"id\" in item and \"resolved_commit\" in item\n    }\n\n    raw_rules = registry.get(\"rules\")\n    if not isinstance(raw_rules, list):\n        raise ValueError(\"registry rules must be a list\")\n\n    certificates_dir.mkdir(parents=True, exist_ok=True)\n    results_dir.mkdir(parents=True, exist_ok=True)\n\n    certificates: list[JsonDict] = []\n    index_items: list[JsonDict] = []\n\n    for raw in raw_rules:\n        if not isinstance(raw, dict):\n            raise ValueError(\"registry rule must be an object\")\n\n        cert_id = str(raw[\"certificate_id\"])\n        source_id = str(raw[\"source_id\"])\n        expected_commit = str(raw[\"resolved_commit\"])\n\n        checks: list[JsonDict] = []\n\n        checkout_commit = _checkout_commit(external_root / source_id)\n        _require(\n            source_id in locked,\n            checks,\n            \"lock-source-present\",\n            source_id,\n        )\n        _require(\n            locked.get(source_id) == expected_commit,\n            checks,\n            \"registry-lock-commit\",\n            expected_commit,\n        )\n        _require(\n            checkout_commit == expected_commit,\n            checks,\n            \"checkout-lock-commit\",\n            checkout_commit,\n        )\n\n        external_path = external_root / source_id / str(raw[\"external_source\"])\n        adapter_path = repo_root / str(raw[\"adapter\"])\n        contract_path = repo_root / str(raw[\"contract\"])\n\n        _require(\n            external_path.is_file(),\n            checks,\n            \"external-source-present\",\n            str(raw[\"external_source\"]),\n        )\n        _require(\n            adapter_path.is_file(),\n            checks,\n            \"adapter-present\",\n            str(raw[\"adapter\"]),\n        )\n        _require(\n            contract_path.is_file(),\n            checks,\n            \"contract-present\",\n            str(raw[\"contract\"]),\n        )\n\n        v07_id = str(raw[\"v07_rule_id\"])\n        v08_id = str(raw[\"v08_rule_id\"])\n        v09_id = str(raw[\"v09_rule_id\"])\n\n        _require(v07_id in v07, checks, \"v0.7-evidence-present\", v07_id)\n        _require(v08_id in v08, checks, \"v0.8-evidence-present\", v08_id)\n        _require(v09_id in v09, checks, \"v0.9-evidence-present\", v09_id)\n\n        if v07_id not in v07 or v08_id not in v08 or v09_id not in v09:\n            missing_failed_checks = _first_failed(checks)\n            certificate_core: JsonDict = {\n                \"certificate_version\": \"0.10.0\",\n                \"certificate_id\": cert_id,\n                \"status\": \"FAILED\",\n                \"claim_scope\": registry[\"claim_scope\"],\n                \"failed_checks\": missing_failed_checks,\n                \"checks\": checks,\n            }\n            digest = _digest(certificate_core)\n            envelope = {\n                **certificate_core,\n                \"certificate_digest\": digest,\n            }\n            certificates.append(envelope)\n            index_items.append(\n                {\n                    \"certificate_id\": cert_id,\n                    \"status\": \"FAILED\",\n                    \"certificate_digest\": digest,\n                }\n            )\n            continue\n\n        d07 = v07[v07_id]\n        d08 = v08[v08_id]\n        d09 = v09[v09_id]\n\n        _require(\n            bool(v07_summary.get(\"passed\")),\n            checks,\n            \"v0.7-summary-pass\",\n            \"summary passed\",\n        )\n        _require(\n            bool(v08_summary.get(\"passed\")),\n            checks,\n            \"v0.8-summary-pass\",\n            \"summary passed\",\n        )\n        _require(\n            bool(v09_summary.get(\"passed\")),\n            checks,\n            \"v0.9-summary-pass\",\n            \"summary passed\",\n        )\n\n        _require(\n            str(d07[\"correct\"][\"verdict\"]) == \"PROVED\",\n            checks,\n            \"v0.7-correct-proved\",\n            str(d07[\"correct\"][\"verdict\"]),\n        )\n        _require(\n            str(d07[\"mutant\"][\"verdict\"]) == \"DISPROVED\",\n            checks,\n            \"v0.7-mutant-disproved\",\n            str(d07[\"mutant\"][\"verdict\"]),\n        )\n        _require(\n            bool(d07[\"mutant\"][\"replay_validated\"]),\n            checks,\n            \"v0.7-mutant-replay\",\n            str(d07[\"mutant\"][\"replay_validated\"]),\n        )\n\n        _require(\n            int(d08[\"correct_mismatches\"]) == 0,\n            checks,\n            \"v0.8-zero-correct-mismatch\",\n            str(d08[\"correct_mismatches\"]),\n        )\n        _require(\n            int(d08[\"mutant_mismatches\"]) > 0,\n            checks,\n            \"v0.8-mutant-sensitive\",\n            str(d08[\"mutant_mismatches\"]),\n        )\n        _require(\n            bool(d08[\"passed\"]),\n            checks,\n            \"v0.8-rule-pass\",\n            str(d08[\"passed\"]),\n        )\n\n        _require(\n            str(d09[\"correct\"][\"verdict\"]) == \"PROVED\",\n            checks,\n            \"v0.9-correct-proved\",\n            str(d09[\"correct\"][\"verdict\"]),\n        )\n        _require(\n            str(d09[\"correct\"][\"solver_status\"]) == \"unsat\",\n            checks,\n            \"v0.9-correct-unsat\",\n            str(d09[\"correct\"][\"solver_status\"]),\n        )\n        _require(\n            str(d09[\"mutant\"][\"verdict\"]) == \"DISPROVED\",\n            checks,\n            \"v0.9-mutant-disproved\",\n            str(d09[\"mutant\"][\"verdict\"]),\n        )\n        _require(\n            str(d09[\"mutant\"][\"solver_status\"]) == \"sat\",\n            checks,\n            \"v0.9-mutant-sat\",\n            str(d09[\"mutant\"][\"solver_status\"]),\n        )\n        _require(\n            d09[\"mutant\"][\"counterexample\"] is not None,\n            checks,\n            \"v0.9-mutant-witness\",\n            str(d09[\"mutant\"][\"counterexample\"]),\n        )\n\n        external_sha = _sha256_file(external_path)\n        adapter_sha = _sha256_file(adapter_path)\n        contract_sha = _sha256_file(contract_path)\n\n        _require(\n            str(d08[\"resolved_commit\"]) == expected_commit,\n            checks,\n            \"v0.8-commit-consistency\",\n            str(d08[\"resolved_commit\"]),\n        )\n        _require(\n            str(d09[\"resolved_commit\"]) == expected_commit,\n            checks,\n            \"v0.9-commit-consistency\",\n            str(d09[\"resolved_commit\"]),\n        )\n        _require(\n            str(d08[\"external_source_sha256\"]) == external_sha,\n            checks,\n            \"v0.8-source-hash\",\n            external_sha,\n        )\n        _require(\n            str(d09[\"external_source_sha256\"]) == external_sha,\n            checks,\n            \"v0.9-source-hash\",\n            external_sha,\n        )\n        _require(\n            str(d08[\"adapter_sha256\"]) == adapter_sha,\n            checks,\n            \"v0.8-adapter-hash\",\n            adapter_sha,\n        )\n        _require(\n            str(d09[\"adapter_file_sha256\"]) == adapter_sha,\n            checks,\n            \"v0.9-adapter-hash\",\n            adapter_sha,\n        )\n\n        status = \"CERTIFIED\" if all(bool(item[\"passed\"]) for item in checks) else \"FAILED\"\n\n        certificate_core = {\n            \"certificate_version\": \"0.10.0\",\n            \"certificate_id\": cert_id,\n            \"status\": status,\n            \"claim_scope\": registry[\"claim_scope\"],\n            \"certification_scope\": str(raw[\"certification_scope\"]),\n            \"provenance\": {\n                \"source_id\": source_id,\n                \"resolved_commit\": expected_commit,\n                \"external_source\": str(raw[\"external_source\"]),\n                \"external_source_sha256\": external_sha,\n                \"external_class\": str(raw[\"external_class\"]),\n                \"external_method\": str(raw[\"external_method\"]),\n            },\n            \"artifacts\": {\n                \"adapter_path\": str(raw[\"adapter\"]),\n                \"adapter_function\": str(raw[\"adapter_function\"]),\n                \"adapter_sha256\": adapter_sha,\n                \"contract_path\": str(raw[\"contract\"]),\n                \"contract_sha256\": contract_sha,\n            },\n            \"evidence\": {\n                \"v0.7\": {\n                    \"rule_id\": v07_id,\n                    \"correct_verdict\": str(d07[\"correct\"][\"verdict\"]),\n                    \"mutant_verdict\": str(d07[\"mutant\"][\"verdict\"]),\n                    \"mutant_replay_validated\": bool(d07[\"mutant\"][\"replay_validated\"]),\n                    \"evidence_sha256\": _digest(d07),\n                },\n                \"v0.8\": {\n                    \"rule_id\": v08_id,\n                    \"comparisons\": int(d08[\"comparisons\"]),\n                    \"correct_mismatches\": int(d08[\"correct_mismatches\"]),\n                    \"mutant_mismatches\": int(d08[\"mutant_mismatches\"]),\n                    \"evidence_sha256\": _digest(d08),\n                },\n                \"v0.9\": {\n                    \"rule_id\": v09_id,\n                    \"external_mode\": str(d09[\"external_mode\"]),\n                    \"external_slice\": str(d09[\"external_slice\"]),\n                    \"correct_verdict\": str(d09[\"correct\"][\"verdict\"]),\n                    \"solver_status\": str(d09[\"correct\"][\"solver_status\"]),\n                    \"mutant_verdict\": str(d09[\"mutant\"][\"verdict\"]),\n                    \"mutant_solver_status\": str(d09[\"mutant\"][\"solver_status\"]),\n                    \"mutant_counterexample\": d09[\"mutant\"][\"counterexample\"],\n                    \"external_slice_sha256\": str(d09[\"external_slice_sha256\"]),\n                    \"evidence_sha256\": _digest(d09),\n                },\n            },\n            \"checks\": checks,\n            \"failed_checks\": _first_failed(checks),\n        }\n\n        digest = _digest(certificate_core)\n        envelope = {\n            **certificate_core,\n            \"certificate_digest\": digest,\n        }\n\n        certificate_path = certificates_dir / f\"{cert_id}.json\"\n        certificate_path.write_text(\n            json.dumps(envelope, indent=2, sort_keys=True) + \"\\n\",\n            encoding=\"utf-8\",\n        )\n\n        certificates.append(envelope)\n        index_items.append(\n            {\n                \"certificate_id\": cert_id,\n                \"status\": status,\n                \"certificate_digest\": digest,\n                \"path\": str(\n                    certificate_path.relative_to(repo_root)\n                    if certificate_path.is_relative_to(repo_root)\n                    else certificate_path\n                ),\n            }\n        )\n\n    issued = sum(1 for item in certificates if item[\"status\"] == \"CERTIFIED\")\n    failed_count = len(certificates) - issued\n\n    summary: JsonDict = {\n        \"benchmark_version\": \"0.10.0\",\n        \"claim_scope\": registry[\"claim_scope\"],\n        \"certificates_configured\": len(raw_rules),\n        \"certificates_issued\": issued,\n        \"certificates_failed\": failed_count,\n        \"external_system_count\": len(\n            {str(item[\"source_id\"]) for item in raw_rules if isinstance(item, dict)}\n        ),\n        \"v08_total_comparisons\": sum(\n            int(item[\"evidence\"][\"v0.8\"][\"comparisons\"])\n            for item in certificates\n            if item[\"status\"] == \"CERTIFIED\"\n        ),\n        \"v08_correct_mismatches\": sum(\n            int(item[\"evidence\"][\"v0.8\"][\"correct_mismatches\"])\n            for item in certificates\n            if item[\"status\"] == \"CERTIFIED\"\n        ),\n        \"v09_equivalences_proved\": sum(\n            1\n            for item in certificates\n            if item[\"status\"] == \"CERTIFIED\"\n            and item[\"evidence\"][\"v0.9\"][\"correct_verdict\"] == \"PROVED\"\n        ),\n        \"runtime_seconds\": time.perf_counter() - started,\n        \"passed\": issued == len(raw_rules) and failed_count == 0,\n    }\n\n    index = {\n        \"benchmark_version\": \"0.10.0\",\n        \"certificates\": index_items,\n        \"index_digest\": _digest({\"certificates\": index_items}),\n    }\n\n    (results_dir / \"summary.json\").write_text(\n        json.dumps(summary, indent=2, sort_keys=True) + \"\\n\",\n        encoding=\"utf-8\",\n    )\n    (results_dir / \"index.json\").write_text(\n        json.dumps(index, indent=2, sort_keys=True) + \"\\n\",\n        encoding=\"utf-8\",\n    )\n    (results_dir / \"REVIEWER_REPORT.md\").write_text(\n        _reviewer_report(summary, certificates),\n        encoding=\"utf-8\",\n    )\n\n    return summary"
+  },
+  {
+    "direct_parameter_subscripts": [],
+    "end_line": 220,
+    "file": "src/bizproof/external_corpus.py",
+    "line": 186,
+    "name": "_iter_evidence_files",
+    "parameters": [
+      "evidence_kind",
+      "repo",
+      "roots"
+    ],
+    "source": "def _iter_evidence_files(\n    repo: Path,\n    roots: Iterable[str],\n    *,\n    evidence_kind: str,\n) -> list[Path]:\n    result: list[Path] = []\n\n    for configured_root in roots:\n        candidate = repo / configured_root\n        if not candidate.exists():\n            continue\n\n        if candidate.is_file():\n            candidates = [candidate]\n        else:\n            candidates = sorted(candidate.rglob(\"*\"))\n\n        for path in candidates:\n            if not path.is_file():\n                continue\n            if path.suffix.lower() not in EVIDENCE_EXTENSIONS:\n                continue\n            if any(part in {\".git\", \"__pycache__\", \"migrations\"} for part in path.parts):\n                continue\n\n            if evidence_kind == \"test\" and not _looks_like_test_file(path):\n                continue\n\n            result.append(path)\n\n            if len(result) >= 5000:\n                return result\n\n    return result"
+  },
+  {
+    "direct_parameter_subscripts": [],
+    "end_line": 126,
+    "file": "src/bizproof/external_semantic_validation.py",
+    "line": 114,
+    "name": "_evidence_to_json",
+    "parameters": [
+      "evidence"
+    ],
+    "source": "def _evidence_to_json(evidence: Evidence) -> JsonDict:\n    return {\n        \"verdict\": evidence.verdict.value,\n        \"contract_id\": evidence.contract_id,\n        \"backend\": evidence.backend,\n        \"counterexample\": evidence.counterexample,\n        \"observed_result\": evidence.observed_result,\n        \"postcondition_satisfied\": evidence.postcondition_satisfied,\n        \"replay_validated\": evidence.replay_validated,\n        \"reason_code\": evidence.reason_code,\n        \"reason\": evidence.reason,\n        \"metadata\": evidence.metadata,\n    }"
+  },
+  {
+    "direct_parameter_subscripts": [
+      {
+        "expression": "record['supporting_test_files']",
+        "line": 92,
+        "parameter": "record"
+      },
+      {
+        "expression": "record['supporting_doc_files']",
+        "line": 93,
+        "parameter": "record"
+      }
+    ],
+    "end_line": 101,
+    "file": "src/bizproof/generalization_cohort.py",
+    "line": 91,
+    "name": "_evidence_bucket",
+    "parameters": [
+      "record"
+    ],
+    "source": "def _evidence_bucket(record: JsonDict) -> str:\n    has_test = bool(record[\"supporting_test_files\"])\n    has_doc = bool(record[\"supporting_doc_files\"])\n\n    if has_test and has_doc:\n        return \"TEST_AND_DOC\"\n    if has_test:\n        return \"TEST_ONLY\"\n    if has_doc:\n        return \"DOC_ONLY\"\n    return \"NONE\""
+  },
+  {
+    "direct_parameter_subscripts": [],
+    "end_line": 304,
+    "file": "src/bizproof/generalization_contract_readiness.py",
+    "line": 276,
+    "name": "_local_contract_evidence",
+    "parameters": [
+      "traces"
+    ],
+    "source": "def _local_contract_evidence(\n    traces: list[JsonDict],\n) -> list[JsonDict]:\n\n    records: list[JsonDict] = []\n\n    for trace_item in traces:\n        for step in _terminal_steps(trace_item):\n            if str(step.get(\"step_kind\")) not in LOCAL_TERMINALS:\n                continue\n\n            records.append(\n                {\n                    \"candidate_id\": str(trace_item[\"candidate_id\"]),\n                    \"source_id\": str(trace_item[\"source_id\"]),\n                    \"primitive\": str(trace_item[\"primitive\"]),\n                    \"terminal_kind\": str(step[\"step_kind\"]),\n                    \"file\": step.get(\"file\"),\n                    \"file_sha256\": (step.get(\"file_sha256\") or step.get(\"source_file_sha256\")),\n                    \"line\": step.get(\"line\"),\n                    \"source\": step.get(\"source\"),\n                    \"semantic_type\": \"UNRESOLVED\",\n                    \"semantic_contract_status\": \"MISSING\",\n                    \"resolution_status\": \"UNRESOLVED\",\n                    \"certification_claim\": False,\n                }\n            )\n\n    return records"
+  },
+  {
+    "direct_parameter_subscripts": [
+      {
+        "expression": "summary['weighted_estimates']",
+        "line": 516,
+        "parameter": "summary"
+      },
+      {
+        "expression": "summary['cohort_sha256']",
+        "line": 496,
+        "parameter": "summary"
+      },
+      {
+        "expression": "summary['assessed_candidates']",
+        "line": 497,
+        "parameter": "summary"
+      },
+      {
+        "expression": "summary['source_mismatches']",
+        "line": 498,
+        "parameter": "summary"
+      },
+      {
+        "expression": "summary['extraction_failures']",
+        "line": 499,
+        "parameter": "summary"
+      },
+      {
+        "expression": "summary['feasibility_counts']",
+        "line": 506,
+        "parameter": "summary"
+      }
+    ],
+    "end_line": 542,
+    "file": "src/bizproof/generalization_feasibility.py",
+    "line": 481,
+    "name": "_reviewer_report",
+    "parameters": [
+      "summary"
+    ],
+    "source": "def _reviewer_report(summary: JsonDict) -> str:\n    lines = [\n        \"# BIZPROOF V0.11 Static Generalization Feasibility Census\",\n        \"\",\n        \"## Scope\",\n        \"\",\n        (\n            \"This phase is a static feasibility assessment over the preregistered \"\n            \"90-candidate cohort. Feasibility tiers are routing decisions for the \"\n            \"next validation stage; they are NOT proof verdicts and are NOT \"\n            \"certification outcomes.\"\n        ),\n        \"\",\n        \"## Cohort integrity\",\n        \"\",\n        f\"- Cohort SHA-256: `{summary['cohort_sha256']}`\",\n        f\"- Candidates assessed: {summary['assessed_candidates']}\",\n        f\"- Source mismatches: {summary['source_mismatches']}\",\n        f\"- Extraction failures: {summary['extraction_failures']}\",\n        \"\",\n        \"## Unweighted cohort counts\",\n        \"\",\n    ]\n\n    for tier in FEASIBILITY_TIERS:\n        lines.append(f\"- `{tier}`: {summary['feasibility_counts'].get(tier, 0)}\")\n\n    lines.extend(\n        [\n            \"\",\n            \"## Weighted eligible-population estimates\",\n            \"\",\n        ]\n    )\n\n    weighted = summary[\"weighted_estimates\"]\n\n    for tier in FEASIBILITY_TIERS:\n        item = weighted[tier]\n        lines.append(\n            \"- \"\n            f\"`{tier}`: estimated rate {item['estimated_rate']:.4f}, \"\n            f\"approx. 95% CI \"\n            f\"[{item['approx_ci95_low']:.4f}, \"\n            f\"{item['approx_ci95_high']:.4f}]\"\n        )\n\n    lines.extend(\n        [\n            \"\",\n            \"## Interpretation boundary\",\n            \"\",\n            (\n                \"`F0`\u2013`F3` describe the amount of semantic machinery expected \"\n                \"before attempting V0.7/V0.8/V0.9 obligations. They must not be \"\n                \"reported as CERTIFIED, PROVED, or DISPROVED.\"\n            ),\n            \"\",\n        ]\n    )\n\n    return \"\\n\".join(lines)"
+  },
+  {
+    "direct_parameter_subscripts": [],
+    "end_line": 343,
+    "file": "src/bizproof/generalization_protocol_closure.py",
+    "line": 270,
+    "name": "_manifest_evidence",
+    "parameters": [
+      "package_root",
+      "source_root"
+    ],
+    "source": "def _manifest_evidence(\n    source_root: Path,\n    package_root: str,\n) -> list[JsonDict]:\n\n    variants = {\n        package_root.lower(),\n        package_root.lower().replace(\n            \"_\",\n            \"-\",\n        ),\n        package_root.lower().replace(\n            \"-\",\n            \"_\",\n        ),\n    }\n\n    manifest_names = {\n        \"pyproject.toml\",\n        \"setup.py\",\n        \"setup.cfg\",\n        \"requirements.txt\",\n        \"requirements-dev.txt\",\n        \"requirements_dev.txt\",\n        \"Pipfile\",\n        \"Pipfile.lock\",\n        \"poetry.lock\",\n        \"uv.lock\",\n    }\n\n    evidence: list[JsonDict] = []\n\n    for path in source_root.rglob(\"*\"):\n        if not path.is_file():\n            continue\n\n        if not (\n            path.name in manifest_names\n            or (path.name.startswith(\"requirements\") and path.suffix == \".txt\")\n        ):\n            continue\n\n        text = path.read_text(\n            encoding=\"utf-8\",\n            errors=\"replace\",\n        )\n\n        for (\n            line_number,\n            line,\n        ) in enumerate(\n            text.splitlines(),\n            start=1,\n        ):\n            lowered = line.lower()\n\n            if not any(variant in lowered for variant in variants):\n                continue\n\n            stripped = line.strip()\n\n            evidence.append(\n                {\n                    \"file\": str(path.relative_to(source_root)).replace(\n                        \"\\\\\",\n                        \"/\",\n                    ),\n                    \"line\": line_number,\n                    \"text\": stripped,\n                    \"exact_pin_detected\": (\"==\" in stripped),\n                }\n            )\n\n    return evidence"
+  },
+  {
+    "direct_parameter_subscripts": [],
+    "end_line": 179,
+    "file": "src/bizproof/generalization_semantic_evidence.py",
+    "line": 120,
+    "name": "_module_import_evidence",
+    "parameters": [
+      "primitive",
+      "tree"
+    ],
+    "source": "def _module_import_evidence(\n    tree: ast.Module,\n    primitive: str,\n) -> list[JsonDict]:\n\n    evidence: list[JsonDict] = []\n\n    for node in tree.body:\n        if isinstance(\n            node,\n            ast.ImportFrom,\n        ):\n            module_name = node.module or \"\"\n\n            for alias in node.names:\n                if alias.name == \"*\":\n                    evidence.append(\n                        {\n                            \"evidence_kind\": \"WILDCARD_IMPORT\",\n                            \"module\": module_name,\n                            \"line\": int(node.lineno),\n                            \"source\": ast.unparse(node),\n                        }\n                    )\n\n                    continue\n\n                local_name = alias.asname or alias.name\n\n                if local_name == primitive:\n                    evidence.append(\n                        {\n                            \"evidence_kind\": \"EXPLICIT_IMPORT\",\n                            \"module\": module_name,\n                            \"imported_name\": alias.name,\n                            \"local_name\": local_name,\n                            \"line\": int(node.lineno),\n                            \"source\": ast.unparse(node),\n                        }\n                    )\n\n        elif isinstance(\n            node,\n            ast.Import,\n        ):\n            for alias in node.names:\n                local_name = alias.asname or alias.name.split(\".\")[0]\n\n                if local_name == primitive:\n                    evidence.append(\n                        {\n                            \"evidence_kind\": \"MODULE_IMPORT\",\n                            \"module\": alias.name,\n                            \"local_name\": local_name,\n                            \"line\": int(node.lineno),\n                            \"source\": ast.unparse(node),\n                        }\n                    )\n\n    return evidence"
+  },
+  {
+    "direct_parameter_subscripts": [],
+    "end_line": 249,
+    "file": "src/bizproof/generalization_semantic_evidence.py",
+    "line": 182,
+    "name": "_module_definition_evidence",
+    "parameters": [
+      "primitive",
+      "tree"
+    ],
+    "source": "def _module_definition_evidence(\n    tree: ast.Module,\n    primitive: str,\n) -> list[JsonDict]:\n\n    evidence: list[JsonDict] = []\n\n    for node in tree.body:\n        if isinstance(\n            node,\n            (\n                ast.FunctionDef,\n                ast.AsyncFunctionDef,\n                ast.ClassDef,\n            ),\n        ):\n            if node.name == primitive:\n                evidence.append(\n                    {\n                        \"evidence_kind\": \"MODULE_DEFINITION\",\n                        \"definition_type\": type(node).__name__,\n                        \"line\": int(node.lineno),\n                        \"source\": ast.unparse(node).splitlines()[0],\n                    }\n                )\n\n        elif isinstance(\n            node,\n            ast.Assign,\n        ):\n            names = [\n                target.id\n                for target in node.targets\n                if isinstance(\n                    target,\n                    ast.Name,\n                )\n            ]\n\n            if primitive in names:\n                evidence.append(\n                    {\n                        \"evidence_kind\": \"MODULE_ASSIGNMENT\",\n                        \"line\": int(node.lineno),\n                        \"source\": ast.unparse(node),\n                    }\n                )\n\n        elif isinstance(\n            node,\n            ast.AnnAssign,\n        ):\n            if (\n                isinstance(\n                    node.target,\n                    ast.Name,\n                )\n                and node.target.id == primitive\n            ):\n                evidence.append(\n                    {\n                        \"evidence_kind\": \"MODULE_ASSIGNMENT\",\n                        \"line\": int(node.lineno),\n                        \"source\": ast.unparse(node),\n                    }\n                )\n\n    return evidence"
+  },
+  {
+    "direct_parameter_subscripts": [
+      {
+        "expression": "obligation['primitive']",
+        "line": 355,
+        "parameter": "obligation"
+      },
+      {
+        "expression": "obligation['kind']",
+        "line": 357,
+        "parameter": "obligation"
+      },
+      {
+        "expression": "obligation['source_expression']",
+        "line": 359,
+        "parameter": "obligation"
+      },
+      {
+        "expression": "obligation['type_requirements']",
+        "line": 472,
+        "parameter": "obligation"
+      },
+      {
+        "expression": "skeleton['function_parameters']",
+        "line": 361,
+        "parameter": "skeleton"
+      },
+      {
+        "expression": "obligation['binding_id']",
+        "line": 466,
+        "parameter": "obligation"
+      },
+      {
+        "expression": "obligation['family_class']",
+        "line": 469,
+        "parameter": "obligation"
+      },
+      {
+        "expression": "obligation['inferred_type']",
+        "line": 471,
+        "parameter": "obligation"
+      },
+      {
+        "expression": "obligation['family_class']",
+        "line": 474,
+        "parameter": "obligation"
+      }
+    ],
+    "end_line": 480,
+    "file": "src/bizproof/generalization_semantic_evidence.py",
+    "line": 348,
+    "name": "_occurrence_evidence",
+    "parameters": [
+      "obligation",
+      "skeleton",
+      "source_tree"
+    ],
+    "source": "def _occurrence_evidence(\n    *,\n    obligation: JsonDict,\n    skeleton: JsonDict,\n    source_tree: ast.Module,\n) -> JsonDict:\n\n    primitive = str(obligation[\"primitive\"])\n\n    kind = str(obligation[\"kind\"])\n\n    expression = str(obligation[\"source_expression\"])\n\n    parameters = {str(value) for value in skeleton[\"function_parameters\"]}\n\n    evidence: list[JsonDict] = []\n\n    if kind == \"CALL\":\n        callable_name, call_form = _callable_root(expression)\n\n        if callable_name is not None and callable_name in parameters:\n            evidence.append(\n                {\n                    \"evidence_kind\": \"FUNCTION_PARAMETER_CALLABLE\",\n                    \"parameter\": callable_name,\n                    \"call_form\": call_form,\n                }\n            )\n\n        evidence.extend(\n            _module_definition_evidence(\n                source_tree,\n                primitive,\n            )\n        )\n\n        evidence.extend(\n            _module_import_evidence(\n                source_tree,\n                primitive,\n            )\n        )\n\n        if primitive in dir(builtins):\n            evidence.append(\n                {\n                    \"evidence_kind\": \"PYTHON_BUILTIN\",\n                    \"primitive\": primitive,\n                }\n            )\n\n    elif kind == \"GLOBAL_NAME\":\n        if primitive in parameters:\n            evidence.append(\n                {\n                    \"evidence_kind\": \"FUNCTION_PARAMETER_VALUE\",\n                    \"parameter\": primitive,\n                }\n            )\n\n        evidence.extend(\n            _module_definition_evidence(\n                source_tree,\n                primitive,\n            )\n        )\n\n        evidence.extend(\n            _module_import_evidence(\n                source_tree,\n                primitive,\n            )\n        )\n\n    elif kind == \"ATTRIBUTE\":\n        root = _attribute_root(expression)\n\n        if root is not None and root in parameters:\n            evidence.append(\n                {\n                    \"evidence_kind\": \"PARAMETER_ATTRIBUTE_ACCESS\",\n                    \"parameter\": root,\n                    \"attribute\": primitive,\n                }\n            )\n\n        elif root is not None:\n            evidence.append(\n                {\n                    \"evidence_kind\": \"ATTRIBUTE_ROOT_CONTEXT\",\n                    \"root\": root,\n                    \"attribute\": primitive,\n                }\n            )\n\n    strong_kinds = {\n        \"FUNCTION_PARAMETER_CALLABLE\",\n        \"FUNCTION_PARAMETER_VALUE\",\n        \"EXPLICIT_IMPORT\",\n        \"MODULE_IMPORT\",\n        \"MODULE_DEFINITION\",\n        \"MODULE_ASSIGNMENT\",\n        \"PYTHON_BUILTIN\",\n    }\n\n    if any(str(item[\"evidence_kind\"]) in strong_kinds for item in evidence):\n        status = \"SOURCE_EVIDENCE_IDENTIFIED\"\n\n    elif any(str(item[\"evidence_kind\"]) == \"WILDCARD_IMPORT\" for item in evidence):\n        status = \"SOURCE_EVIDENCE_PARTIAL\"\n\n    elif evidence:\n        status = \"CONTEXT_EVIDENCE_ONLY\"\n\n    else:\n        status = \"NO_SOURCE_EVIDENCE\"\n\n    return {\n        \"binding_id\": str(obligation[\"binding_id\"]),\n        \"kind\": kind,\n        \"primitive\": primitive,\n        \"family_class\": str(obligation[\"family_class\"]),\n        \"source_expression\": expression,\n        \"context_inferred_type\": str(obligation[\"inferred_type\"]),\n        \"context_type_requirements\": obligation[\"type_requirements\"],\n        \"semantic_contract_required\": (\n            str(obligation[\"family_class\"]) in SEMANTIC_CONTRACT_CLASSES\n        ),\n        \"semantic_type\": \"UNRESOLVED\",\n        \"semantic_definition_status\": \"UNRESOLVED\",\n        \"evidence_status\": status,\n        \"evidence\": evidence,\n    }"
+  },
+  {
+    "direct_parameter_subscripts": [],
+    "end_line": 786,
+    "file": "src/bizproof/generalization_semantic_evidence.py",
+    "line": 483,
+    "name": "build_semantic_evidence",
+    "parameters": [
+      "binding_registry_path",
+      "contract_skeletons_path",
+      "contract_summary_path",
+      "external_root",
+      "lock_path",
+      "output_dir"
+    ],
+    "source": "def build_semantic_evidence(\n    *,\n    contract_summary_path: Path,\n    contract_skeletons_path: Path,\n    binding_registry_path: Path,\n    lock_path: Path,\n    external_root: Path,\n    output_dir: Path,\n) -> JsonDict:\n\n    contract_summary = _load_json(contract_summary_path)\n\n    if str(contract_summary[\"cohort_sha256\"]) != EXPECTED_COHORT_SHA256:\n        raise ValueError(\"contract cohort digest mismatch\")\n\n    skeletons = _load_jsonl(contract_skeletons_path)\n\n    if len(skeletons) != EXPECTED_CANDIDATES:\n        raise ValueError(f\"expected {EXPECTED_CANDIDATES} contract skeletons, got {len(skeletons)}\")\n\n    registry = _load_json(binding_registry_path)\n\n    registry_entries = registry[\"entries\"]\n\n    verified_commits = _verify_locked_commits(\n        lock_path=lock_path,\n        external_root=external_root,\n    )\n\n    source_cache: dict[\n        tuple[\n            str,\n            str,\n        ],\n        tuple[\n            ast.Module,\n            str,\n        ],\n    ] = {}\n\n    occurrences: list[JsonDict] = []\n\n    for skeleton in skeletons:\n        source_id = str(skeleton[\"source_id\"])\n\n        relative_file = str(skeleton[\"file\"])\n\n        cache_key = (\n            source_id,\n            relative_file,\n        )\n\n        if cache_key not in source_cache:\n            source_path = external_root / source_id / relative_file\n\n            if not source_path.is_file():\n                raise ValueError(f\"source file missing: {source_path}\")\n\n            raw = source_path.read_bytes()\n\n            source_text = raw.decode(\"utf-8\")\n\n            source_cache[cache_key] = (\n                ast.parse(\n                    source_text,\n                    filename=str(source_path),\n                ),\n                _sha256_bytes(raw),\n            )\n\n        (\n            source_tree,\n            source_sha,\n        ) = source_cache[cache_key]\n\n        for obligation in skeleton[\"binding_obligations\"]:\n            evidence = _occurrence_evidence(\n                obligation=obligation,\n                skeleton=skeleton,\n                source_tree=source_tree,\n            )\n\n            evidence.update(\n                {\n                    \"candidate_id\": str(skeleton[\"candidate_id\"]),\n                    \"source_id\": source_id,\n                    \"resolved_commit\": verified_commits[source_id],\n                    \"file\": relative_file,\n                    \"source_file_sha256\": source_sha,\n                    \"function\": str(skeleton[\"function\"]),\n                    \"enclosing_class\": skeleton[\"enclosing_class\"],\n                    \"certification_claim\": False,\n                }\n            )\n\n            occurrences.append(evidence)\n\n    by_registry_key: dict[\n        tuple[\n            str,\n            str,\n            str,\n        ],\n        list[JsonDict],\n    ] = defaultdict(list)\n\n    for occurrence in occurrences:\n        registry_key = (\n            str(occurrence[\"family_class\"]),\n            str(occurrence[\"kind\"]),\n            str(occurrence[\"primitive\"]),\n        )\n\n        by_registry_key[registry_key].append(occurrence)\n\n    semantic_entries: list[JsonDict] = []\n\n    for registry_entry in registry_entries:\n        registry_key = (\n            str(registry_entry[\"family_class\"]),\n            str(registry_entry[\"kind\"]),\n            str(registry_entry[\"primitive\"]),\n        )\n\n        related = by_registry_key.get(\n            registry_key,\n            [],\n        )\n\n        statuses = Counter(str(item[\"evidence_status\"]) for item in related)\n\n        contextual_types = sorted({str(item[\"context_inferred_type\"]) for item in related})\n\n        identified = statuses.get(\n            \"SOURCE_EVIDENCE_IDENTIFIED\",\n            0,\n        )\n\n        if related and identified == len(related):\n            evidence_coverage = \"COMPLETE\"\n\n        elif related:\n            evidence_coverage = \"PARTIAL\"\n\n        else:\n            evidence_coverage = \"NONE\"\n\n        requires_contract = str(registry_entry[\"family_class\"]) in SEMANTIC_CONTRACT_CLASSES\n\n        if requires_contract:\n            next_action = \"DEFINE_AND_VALIDATE_SEMANTIC_CONTRACT\"\n\n        elif evidence_coverage == \"NONE\":\n            next_action = \"SOURCE_REVIEW\"\n\n        else:\n            next_action = \"DEFINE_DOMAIN_AND_BINDING\"\n\n        semantic_entries.append(\n            {\n                \"registry_id\": str(registry_entry[\"registry_id\"]),\n                \"family_class\": str(registry_entry[\"family_class\"]),\n                \"kind\": str(registry_entry[\"kind\"]),\n                \"primitive\": str(registry_entry[\"primitive\"]),\n                \"candidate_count\": int(registry_entry[\"candidate_count\"]),\n                \"occurrence_count\": len(related),\n                \"contextual_types\": contextual_types,\n                \"context_type_variation\": (len(contextual_types) > 1),\n                \"semantic_type\": \"UNRESOLVED\",\n                \"semantic_contract_required\": requires_contract,\n                \"semantic_contract_status\": \"MISSING\",\n                \"evidence_coverage\": evidence_coverage,\n                \"evidence_status_counts\": dict(sorted(statuses.items())),\n                \"next_action\": next_action,\n                \"resolution_status\": \"UNRESOLVED\",\n                \"certification_claim\": False,\n            }\n        )\n\n    semantic_entries.sort(\n        key=lambda item: (\n            0 if item[\"semantic_contract_required\"] else 1,\n            0 if item[\"context_type_variation\"] else 1,\n            -int(item[\"candidate_count\"]),\n            -int(item[\"occurrence_count\"]),\n            str(item[\"primitive\"]),\n        )\n    )\n\n    evidence_status_counts = Counter(str(item[\"evidence_status\"]) for item in occurrences)\n\n    semantic_contract_counts = Counter(\n        str(item[\"family_class\"]) for item in semantic_entries if item[\"semantic_contract_required\"]\n    )\n\n    summary: JsonDict = {\n        \"benchmark_version\": \"0.11.0\",\n        \"phase\": \"SEMANTIC_SOURCE_EVIDENCE\",\n        \"cohort_sha256\": EXPECTED_COHORT_SHA256,\n        \"contract_candidates\": len(skeletons),\n        \"registry_entries\": len(semantic_entries),\n        \"binding_occurrences\": len(occurrences),\n        \"evidence_status_counts\": dict(sorted(evidence_status_counts.items())),\n        \"semantic_contract_class_counts\": dict(sorted(semantic_contract_counts.items())),\n        \"context_type_variation_entries\": sum(\n            1 for item in semantic_entries if item[\"context_type_variation\"]\n        ),\n        \"semantic_types_resolved\": 0,\n        \"all_semantic_types_unresolved\": all(\n            item[\"semantic_type\"] == \"UNRESOLVED\" for item in semantic_entries\n        ),\n        \"certification_claim\": False,\n        \"passed\": (\n            len(skeletons) == EXPECTED_CANDIDATES and len(semantic_entries) == len(registry_entries)\n        ),\n    }\n\n    output_dir.mkdir(\n        parents=True,\n        exist_ok=True,\n    )\n\n    (output_dir / \"occurrence_evidence.jsonl\").write_text(\n        \"\".join(\n            json.dumps(\n                item,\n                sort_keys=True,\n            )\n            + \"\\n\"\n            for item in occurrences\n        ),\n        encoding=\"utf-8\",\n    )\n\n    (output_dir / \"semantic_registry.json\").write_text(\n        json.dumps(\n            {\n                \"benchmark_version\": \"0.11.0\",\n                \"phase\": \"SEMANTIC_REGISTRY_UNRESOLVED\",\n                \"cohort_sha256\": EXPECTED_COHORT_SHA256,\n                \"entries\": semantic_entries,\n                \"certification_claim\": False,\n            },\n            indent=2,\n            sort_keys=True,\n        )\n        + \"\\n\",\n        encoding=\"utf-8\",\n    )\n\n    (output_dir / \"summary.json\").write_text(\n        json.dumps(\n            summary,\n            indent=2,\n            sort_keys=True,\n        )\n        + \"\\n\",\n        encoding=\"utf-8\",\n    )\n\n    report = [\n        \"# BIZPROOF V0.11 Semantic Source Evidence\",\n        \"\",\n        (\"This phase separates contextual type observations from source-backed semantic evidence.\"),\n        \"\",\n        (\"No semantic type or binding meaning is inferred solely from usage context.\"),\n        \"\",\n        (f\"- Contract candidates: {len(skeletons)}\"),\n        (f\"- Registry entries: {len(semantic_entries)}\"),\n        (f\"- Binding occurrences: {len(occurrences)}\"),\n        \"- Semantic types resolved: 0\",\n        \"\",\n        \"## Evidence statuses\",\n        \"\",\n    ]\n\n    for (\n        status_name,\n        value,\n    ) in sorted(evidence_status_counts.items()):\n        report.append(f\"- `{status_name}`: {value}\")\n\n    report.extend(\n        [\n            \"\",\n            \"## Scientific boundary\",\n            \"\",\n            (\"`context_inferred_type` is only a structural usage constraint.\"),\n            \"\",\n            (\n                \"`semantic_type` remains UNRESOLVED until an \"\n                \"explicit source-backed semantic contract is \"\n                \"defined and validated.\"\n            ),\n            \"\",\n        ]\n    )\n\n    (output_dir / \"REVIEWER_REPORT.md\").write_text(\n        \"\\n\".join(report),\n        encoding=\"utf-8\",\n    )\n\n    return summary"
+  },
+  {
+    "direct_parameter_subscripts": [],
+    "end_line": 73,
+    "file": "src/bizproof/replay.py",
+    "line": 20,
+    "name": "replay_counterexample",
+    "parameters": [
+      "contract",
+      "inputs"
+    ],
+    "source": "def replay_counterexample(\n    contract: BusinessContract,\n    inputs: dict[str, Any],\n) -> ReplayResult:\n    try:\n        if not evaluate_boolean_expression(contract.precondition, inputs):\n            return ReplayResult(\n                valid=False,\n                reason_code=\"replay_precondition_false\",\n                reason=\"symbolic counterexample does not satisfy the concrete precondition\",\n            )\n\n        target = load_function(contract.target.source, contract.target.function)\n        observed_result = target(**inputs)\n\n        post_values = dict(inputs)\n        post_values[\"result\"] = observed_result\n        postcondition_satisfied = evaluate_boolean_expression(\n            contract.postcondition,\n            post_values,\n        )\n\n        if postcondition_satisfied:\n            return ReplayResult(\n                valid=False,\n                observed_result=observed_result,\n                postcondition_satisfied=True,\n                reason_code=\"replay_postcondition_true\",\n                reason=\"symbolic counterexample does not violate the concrete postcondition\",\n            )\n\n        return ReplayResult(\n            valid=True,\n            observed_result=observed_result,\n            postcondition_satisfied=False,\n        )\n    except TargetLoadError as exc:\n        return ReplayResult(\n            valid=False,\n            reason_code=\"replay_target_load_error\",\n            reason=str(exc),\n        )\n    except ExpressionError as exc:\n        return ReplayResult(\n            valid=False,\n            reason_code=\"replay_expression_error\",\n            reason=str(exc),\n        )\n    except Exception as exc:\n        return ReplayResult(\n            valid=False,\n            reason_code=\"replay_target_execution_error\",\n            reason=f\"target raised {type(exc).__name__}: {exc}\",\n        )"
+  },
+  {
+    "direct_parameter_subscripts": [],
+    "end_line": 25,
+    "file": "src/bizproof/symbolic_equivalence.py",
+    "line": 24,
+    "name": "_sha256_file",
+    "parameters": [
+      "path"
+    ],
+    "source": "def _sha256_file(path: Path) -> str:\n    return _sha256_bytes(path.read_bytes())"
+  },
+  {
+    "direct_parameter_subscripts": [],
+    "end_line": 516,
+    "file": "src/bizproof/symbolic_equivalence.py",
+    "line": 472,
+    "name": "_prove_equivalence",
+    "parameters": [
+      "candidate",
+      "constraints",
+      "external",
+      "inputs",
+      "symbols"
+    ],
+    "source": "def _prove_equivalence(\n    external: Z3Expr,\n    candidate: Z3Expr,\n    constraints: list[Z3Expr],\n    inputs: JsonDict,\n    symbols: dict[str, Z3Expr],\n) -> JsonDict:\n    solver = z3.Solver()\n\n    if constraints:\n        solver.add(*constraints)\n\n    solver.add(external != candidate)\n\n    started = time.perf_counter()\n    status = solver.check()\n    elapsed = time.perf_counter() - started\n\n    if status == z3.unsat:\n        return {\n            \"verdict\": \"PROVED\",\n            \"solver_status\": \"unsat\",\n            \"counterexample\": None,\n            \"runtime_seconds\": elapsed,\n        }\n\n    if status == z3.sat:\n        return {\n            \"verdict\": \"DISPROVED\",\n            \"solver_status\": \"sat\",\n            \"counterexample\": _model_to_json(\n                solver.model(),\n                inputs,\n                symbols,\n            ),\n            \"runtime_seconds\": elapsed,\n        }\n\n    return {\n        \"verdict\": \"UNKNOWN\",\n        \"solver_status\": \"unknown\",\n        \"counterexample\": None,\n        \"runtime_seconds\": elapsed,\n        \"reason\": solver.reason_unknown(),\n    }"
+  },
+  {
+    "direct_parameter_subscripts": [],
+    "end_line": 693,
+    "file": "src/bizproof/symbolic_equivalence.py",
+    "line": 519,
+    "name": "run_symbolic_equivalence",
+    "parameters": [
+      "catalog_path",
+      "external_root",
+      "lock_path",
+      "output_dir",
+      "repo_root"
+    ],
+    "source": "def run_symbolic_equivalence(\n    *,\n    catalog_path: Path,\n    lock_path: Path,\n    external_root: Path,\n    repo_root: Path,\n    output_dir: Path,\n) -> JsonDict:\n    catalog = _load_json(catalog_path)\n    lock = _load_json(lock_path)\n\n    raw_sources = lock.get(\"sources\")\n    if not isinstance(raw_sources, list):\n        raise ValueError(\"lock sources must be a list\")\n\n    locked = {\n        str(item[\"id\"]): item for item in raw_sources if isinstance(item, dict) and \"id\" in item\n    }\n\n    raw_rules = catalog.get(\"rules\")\n    if not isinstance(raw_rules, list):\n        raise ValueError(\"catalog rules must be a list\")\n\n    details: list[JsonDict] = []\n    failures: list[JsonDict] = []\n    started = time.perf_counter()\n\n    for raw_rule in raw_rules:\n        if not isinstance(raw_rule, dict):\n            raise ValueError(\"rule must be an object\")\n\n        rule = raw_rule\n        rule_id = str(rule[\"id\"])\n\n        try:\n            source_id = str(rule[\"source_id\"])\n            expected_commit = str(rule[\"resolved_commit\"])\n\n            if source_id not in locked:\n                raise ValueError(f\"source not present in lock: {source_id}\")\n\n            locked_commit = str(locked[source_id][\"resolved_commit\"])\n            checkout_commit = _checkout_commit(external_root / source_id)\n\n            if not (expected_commit == locked_commit == checkout_commit):\n                raise ValueError(\"catalog/lock/checkout commit mismatch\")\n\n            raw_inputs = rule.get(\"inputs\")\n            if not isinstance(raw_inputs, dict):\n                raise ValueError(\"inputs must be an object\")\n\n            inputs: JsonDict = raw_inputs\n            symbols, constraints = _make_symbols(inputs)\n\n            external_path = external_root / source_id / str(rule[\"external_source\"])\n            adapter_path = repo_root / str(rule[\"adapter\"])\n\n            external_expr, external_metadata = _external_expression(\n                rule,\n                external_path,\n                symbols,\n            )\n\n            adapter_expr, adapter_metadata = _adapter_expression(\n                adapter_path,\n                str(rule[\"adapter_function\"]),\n                symbols,\n            )\n\n            mutant_expr, mutant_metadata = _adapter_expression(\n                adapter_path,\n                str(rule[\"mutant_function\"]),\n                symbols,\n            )\n\n            correct = _prove_equivalence(\n                external_expr,\n                adapter_expr,\n                constraints,\n                inputs,\n                symbols,\n            )\n            mutant = _prove_equivalence(\n                external_expr,\n                mutant_expr,\n                constraints,\n                inputs,\n                symbols,\n            )\n\n            expected_correct = str(rule[\"expected_correct\"])\n            expected_mutant = str(rule[\"expected_mutant\"])\n\n            details.append(\n                {\n                    \"rule_id\": rule_id,\n                    \"source_id\": source_id,\n                    \"resolved_commit\": expected_commit,\n                    \"external_source\": str(rule[\"external_source\"]),\n                    \"external_class\": str(rule[\"external_class\"]),\n                    \"external_method\": str(rule[\"external_method\"]),\n                    \"domain\": inputs,\n                    \"external_symbolic_expression\": str(z3.simplify(external_expr)),\n                    \"adapter_symbolic_expression\": str(z3.simplify(adapter_expr)),\n                    \"mutant_symbolic_expression\": str(z3.simplify(mutant_expr)),\n                    **external_metadata,\n                    **adapter_metadata,\n                    \"mutant_function_sha256\": mutant_metadata[\"adapter_function_sha256\"],\n                    \"correct\": correct,\n                    \"mutant\": mutant,\n                    \"expected_correct\": expected_correct,\n                    \"expected_mutant\": expected_mutant,\n                    \"passed\": (\n                        correct[\"verdict\"] == expected_correct\n                        and mutant[\"verdict\"] == expected_mutant\n                        and mutant[\"counterexample\"] is not None\n                    ),\n                }\n            )\n\n        except (\n            KeyError,\n            OSError,\n            TypeError,\n            ValueError,\n            z3.Z3Exception,\n        ) as exc:\n            failures.append(\n                {\n                    \"rule_id\": rule_id,\n                    \"error\": f\"{type(exc).__name__}: {exc}\",\n                }\n            )\n\n    rules_passed = sum(1 for item in details if item[\"passed\"])\n    correct_proved = sum(1 for item in details if item[\"correct\"][\"verdict\"] == \"PROVED\")\n    mutants_disproved = sum(1 for item in details if item[\"mutant\"][\"verdict\"] == \"DISPROVED\")\n    unknown_results = sum(\n        1 for item in details for key in (\"correct\", \"mutant\") if item[key][\"verdict\"] == \"UNKNOWN\"\n    )\n\n    passed = (\n        not failures\n        and len(details) == len(raw_rules)\n        and rules_passed == len(raw_rules)\n        and correct_proved == len(raw_rules)\n        and mutants_disproved == len(raw_rules)\n        and unknown_results == 0\n    )\n\n    summary: JsonDict = {\n        \"benchmark_version\": \"0.9.0\",\n        \"claim_scope\": catalog[\"claim_scope\"],\n        \"rules_configured\": len(raw_rules),\n        \"rules_checked\": len(details),\n        \"rules_passed\": rules_passed,\n        \"correct_equivalences_proved\": correct_proved,\n        \"mutants_disproved\": mutants_disproved,\n        \"unknown_results\": unknown_results,\n        \"failures\": failures,\n        \"runtime_seconds\": time.perf_counter() - started,\n        \"passed\": passed,\n    }\n\n    output_dir.mkdir(parents=True, exist_ok=True)\n    (output_dir / \"summary.json\").write_text(\n        json.dumps(summary, indent=2, sort_keys=True) + \"\\n\",\n        encoding=\"utf-8\",\n    )\n    (output_dir / \"details.json\").write_text(\n        json.dumps(details, indent=2, sort_keys=True) + \"\\n\",\n        encoding=\"utf-8\",\n    )\n\n    return summary"
+  },
+  {
+    "direct_parameter_subscripts": [],
+    "end_line": 290,
+    "file": "src/bizproof/z3_backend.py",
+    "line": 107,
+    "name": "verify_with_z3",
+    "parameters": [
+      "contract",
+      "timeout_ms"
+    ],
+    "source": "def verify_with_z3(\n    contract: BusinessContract,\n    *,\n    timeout_ms: int = 10_000,\n) -> Evidence:\n    started = time.perf_counter()\n    symbols = {spec.name: _symbol(spec) for spec in contract.inputs}\n\n    try:\n        compiler = Z3ExpressionCompiler(symbols)\n        precondition = compiler.compile_boolean_text(contract.precondition)\n        domain_constraints = _domain_constraints(contract, symbols)\n\n        pre_result, pre_reason = _check_precondition_satisfiable(\n            domain_constraints,\n            precondition,\n            timeout_ms,\n        )\n        if pre_result == z3.unsat:\n            return _unknown(\n                contract,\n                started,\n                reason_code=\"unsatisfiable_precondition\",\n                reason=\"precondition admits no values in the declared input domain\",\n                timeout_ms=timeout_ms,\n            )\n        if pre_result == z3.unknown:\n            return _unknown(\n                contract,\n                started,\n                reason_code=\"precondition_solver_unknown\",\n                reason=f\"solver returned unknown: {pre_reason}\",\n                timeout_ms=timeout_ms,\n            )\n\n        analyzer = PythonSymbolicAnalyzer(contract.target.source, contract.target.function)\n        paths = analyzer.extract_paths(symbols)\n\n        coverage_result, coverage_model, coverage_reason = _check_path_coverage(\n            domain_constraints,\n            precondition,\n            paths,\n            timeout_ms,\n        )\n        if coverage_result == z3.sat:\n            witness = (\n                {\n                    spec.name: _model_value(coverage_model, symbols[spec.name])\n                    for spec in contract.inputs\n                }\n                if coverage_model is not None\n                else None\n            )\n            return _unknown(\n                contract,\n                started,\n                reason_code=\"incomplete_symbolic_path_coverage\",\n                reason=\"symbolic paths do not cover the entire admissible business domain\",\n                timeout_ms=timeout_ms,\n                extra_metadata={\"coverage_witness\": witness},\n            )\n        if coverage_result == z3.unknown:\n            return _unknown(\n                contract,\n                started,\n                reason_code=\"path_coverage_solver_unknown\",\n                reason=f\"solver returned unknown while checking path coverage: {coverage_reason}\",\n                timeout_ms=timeout_ms,\n            )\n\n        for index, path in enumerate(paths):\n            post_symbols = dict(symbols)\n            post_symbols[\"result\"] = path.result\n            postcondition = Z3ExpressionCompiler(post_symbols).compile_boolean_text(\n                contract.postcondition\n            )\n\n            solver = z3.Solver()\n            solver.set(timeout=timeout_ms)\n            solver.add(*domain_constraints)\n            solver.add(precondition)\n            solver.add(path.condition)\n            solver.add(z3.Not(postcondition))\n\n            result = solver.check()\n\n            if result == z3.sat:\n                model = solver.model()\n                counterexample = {\n                    spec.name: _model_value(model, symbols[spec.name]) for spec in contract.inputs\n                }\n                symbolic_observed = _model_value(model, path.result)\n                replay = replay_counterexample(contract, counterexample)\n\n                if not replay.valid:\n                    return _unknown(\n                        contract,\n                        started,\n                        reason_code=replay.reason_code or \"counterexample_replay_failed\",\n                        reason=replay.reason or \"counterexample replay failed\",\n                        timeout_ms=timeout_ms,\n                        extra_metadata={\n                            \"path_index\": index,\n                            \"path_count\": len(paths),\n                            \"candidate_counterexample\": counterexample,\n                            \"symbolic_observed_result\": symbolic_observed,\n                            \"concrete_observed_result\": replay.observed_result,\n                        },\n                    )\n\n                if replay.observed_result != symbolic_observed:\n                    return _unknown(\n                        contract,\n                        started,\n                        reason_code=\"symbolic_concrete_result_mismatch\",\n                        reason=\"symbolic and concrete execution produced different results\",\n                        timeout_ms=timeout_ms,\n                        extra_metadata={\n                            \"path_index\": index,\n                            \"path_count\": len(paths),\n                            \"candidate_counterexample\": counterexample,\n                            \"symbolic_observed_result\": symbolic_observed,\n                            \"concrete_observed_result\": replay.observed_result,\n                        },\n                    )\n\n                return Evidence(\n                    verdict=Verdict.DISPROVED,\n                    contract_id=contract.contract_id,\n                    backend=\"z3\",\n                    counterexample=counterexample,\n                    observed_result=replay.observed_result,\n                    postcondition_satisfied=False,\n                    replay_validated=True,\n                    metadata={\n                        \"path_index\": index,\n                        \"path_count\": len(paths),\n                        \"runtime_seconds\": time.perf_counter() - started,\n                        \"timeout_ms\": timeout_ms,\n                        \"z3_version\": z3.get_version_string(),\n                    },\n                )\n\n            if result == z3.unknown:\n                return _unknown(\n                    contract,\n                    started,\n                    reason_code=\"verification_solver_unknown\",\n                    reason=f\"solver returned unknown: {solver.reason_unknown()}\",\n                    timeout_ms=timeout_ms,\n                    extra_metadata={\n                        \"path_index\": index,\n                        \"path_count\": len(paths),\n                    },\n                )\n\n    except (ExpressionError, UnsupportedProgram, ValueError, z3.Z3Exception) as exc:\n        return _unknown(\n            contract,\n            started,\n            reason_code=\"unsupported_or_invalid_semantics\",\n            reason=str(exc),\n            timeout_ms=timeout_ms,\n        )\n    except (OSError, SyntaxError) as exc:\n        return _unknown(\n            contract,\n            started,\n            reason_code=\"target_source_error\",\n            reason=str(exc),\n            timeout_ms=timeout_ms,\n        )\n\n    return Evidence(\n        verdict=Verdict.PROVED,\n        contract_id=contract.contract_id,\n        backend=\"z3\",\n        metadata={\n            \"path_count\": len(paths),\n            \"runtime_seconds\": time.perf_counter() - started,\n            \"timeout_ms\": timeout_ms,\n            \"z3_version\": z3.get_version_string(),\n        },\n    )"
+  }
+]

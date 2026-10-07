@@ -1,0 +1,190 @@
+{
+  "projects": [
+    {
+      "audit_counts": {
+        "below_min_ast_nodes": 262,
+        "decode_failures": 0,
+        "excluded_files": 751,
+        "generated_files": 0,
+        "historical_body_overlap": 0,
+        "parse_failures": 0,
+        "trivial_functions": 30,
+        "within_project_duplicate_bodies": 75
+      },
+      "canonical_project_identity": "pretalx/pretalx",
+      "domain_family": "EVENT_MANAGEMENT",
+      "eligible": true,
+      "eligible_inventory_sha256": "779e2a05ba6b15d5c15ec7a008c991ddb47023350559d8036aec088b7ed26baf",
+      "eligible_unique_functions": 3042,
+      "frozen_git_commit": "d36cd30c525a80bed63dd1d7ac4483a498c9248c",
+      "functions_seen": 3409,
+      "project_rank": "d3b591b0d8f62ec5c50b082be8da154402d979dbe5f52ce2b5048ab305e7d1d9",
+      "python_file_count": 1212,
+      "repository_url": "https://github.com/pretalx/pretalx.git",
+      "selected": true,
+      "snapshot_sha256": "0c9c190a9450d48a68eb0cd4406b6001cd9aec054a49bf7000e1d4e8baf280cb",
+      "stratum_counts": {
+        "S1_LOCAL_SCALAR_CONTROL": 933,
+        "S2_STRUCTURED_CONTAINER": 365,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 383,
+        "S4_STATE_EFFECT": 756,
+        "S5_BINDING_EXTERNAL_DOMAIN": 605
+      }
+    },
+    {
+      "audit_counts": {
+        "below_min_ast_nodes": 434,
+        "decode_failures": 0,
+        "excluded_files": 647,
+        "generated_files": 0,
+        "historical_body_overlap": 0,
+        "parse_failures": 0,
+        "trivial_functions": 31,
+        "within_project_duplicate_bodies": 163
+      },
+      "canonical_project_identity": "wagtail/wagtail",
+      "domain_family": "CONTENT_MANAGEMENT",
+      "eligible": true,
+      "eligible_inventory_sha256": "3ff487d9dc5a582928a4fd7deff7144fec8a0360a6331e2c2cba72b9330170c4",
+      "eligible_unique_functions": 4754,
+      "frozen_git_commit": "ae4a16dee644638019dd508b448a5315000745f7",
+      "functions_seen": 5382,
+      "project_rank": "d51f7847e8e20acbdb07ca3956bfa13d12b882cde70afae30aa2744669db7046",
+      "python_file_count": 1324,
+      "repository_url": "https://github.com/wagtail/wagtail.git",
+      "selected": true,
+      "snapshot_sha256": "f3a5a543617684850c432b4b37705b13340db5ca278f9353fc8491f12ae8fa02",
+      "stratum_counts": {
+        "S1_LOCAL_SCALAR_CONTROL": 1259,
+        "S2_STRUCTURED_CONTAINER": 934,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 346,
+        "S4_STATE_EFFECT": 1169,
+        "S5_BINDING_EXTERNAL_DOMAIN": 1046
+      }
+    },
+    {
+      "audit_counts": {
+        "below_min_ast_nodes": 139,
+        "decode_failures": 0,
+        "excluded_files": 97,
+        "generated_files": 0,
+        "historical_body_overlap": 0,
+        "parse_failures": 0,
+        "trivial_functions": 13,
+        "within_project_duplicate_bodies": 19
+      },
+      "canonical_project_identity": "django-cms/django-cms",
+      "domain_family": "CONTENT_MANAGEMENT",
+      "eligible": true,
+      "eligible_inventory_sha256": "f9f884e5d848752ede2ff23959df4494e20fe03b9a07b9dd9c5e952e6417d371",
+      "eligible_unique_functions": 1715,
+      "frozen_git_commit": "e87eef5bb40d7f674195295f39a0dc60c12b5664",
+      "functions_seen": 1886,
+      "project_rank": "e570b88de36ac5aa14ebbddb31682c285c4403b316260da303dab757ef65e188",
+      "python_file_count": 442,
+      "repository_url": "https://github.com/django-cms/django-cms.git",
+      "selected": true,
+      "snapshot_sha256": "66d0d4ff20818a65726282a7507fd47c13936345bc3a6d0fb137463836b1c735",
+      "stratum_counts": {
+        "S1_LOCAL_SCALAR_CONTROL": 454,
+        "S2_STRUCTURED_CONTAINER": 232,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 151,
+        "S4_STATE_EFFECT": 386,
+        "S5_BINDING_EXTERNAL_DOMAIN": 492
+      }
+    },
+    {
+      "audit_counts": {
+        "below_min_ast_nodes": 368,
+        "decode_failures": 0,
+        "excluded_files": 269,
+        "generated_files": 0,
+        "historical_body_overlap": 0,
+        "parse_failures": 0,
+        "trivial_functions": 8,
+        "within_project_duplicate_bodies": 167
+      },
+      "canonical_project_identity": "openstack/horizon",
+      "domain_family": "CLOUD_MANAGEMENT",
+      "eligible": true,
+      "eligible_inventory_sha256": "95af7d1c79b5aaeaee25c6e874b01d89899f3dc6f30cb42df027141b0847ed44",
+      "eligible_unique_functions": 4205,
+      "frozen_git_commit": "f92afbc4fa55c1cbdad2caffe11610b6732c728a",
+      "functions_seen": 4748,
+      "project_rank": "e6202fba262c3fc669e10c9446250fb2fc7d0820ef4ea64091faf5379a93d064",
+      "python_file_count": 1055,
+      "repository_url": "https://github.com/openstack/horizon.git",
+      "selected": true,
+      "snapshot_sha256": "b54dd96fe77d92ba024a88aeaa939e5176bb20204d8308aaeac947755e04cabb",
+      "stratum_counts": {
+        "S1_LOCAL_SCALAR_CONTROL": 547,
+        "S2_STRUCTURED_CONTAINER": 608,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 181,
+        "S4_STATE_EFFECT": 1434,
+        "S5_BINDING_EXTERNAL_DOMAIN": 1435
+      }
+    },
+    {
+      "audit_counts": {
+        "below_min_ast_nodes": 1289,
+        "decode_failures": 0,
+        "excluded_files": 2817,
+        "generated_files": 11,
+        "historical_body_overlap": 0,
+        "parse_failures": 0,
+        "trivial_functions": 168,
+        "within_project_duplicate_bodies": 233
+      },
+      "canonical_project_identity": "odoo/odoo",
+      "domain_family": "ERP_CRM_COMMERCE",
+      "eligible": true,
+      "eligible_inventory_sha256": "7cdc385bdbd5316f8e7319d52aea688df550d5a8360f8faea372fc1149fbde22",
+      "eligible_unique_functions": 29605,
+      "frozen_git_commit": "53b04123100626cd1cd4e3dc336c9ae699d92c45",
+      "functions_seen": 31295,
+      "project_rank": "ef8e11ae69d2ecd7a5c7c774eca3131296aea78b590be0e21a5a3fd979b9b2d4",
+      "python_file_count": 9411,
+      "repository_url": "https://github.com/odoo/odoo.git",
+      "selected": true,
+      "snapshot_sha256": "cdd2e4c3cc6a320fe6af70d80456ee9052f022e06d818b9f984f03ad235816ae",
+      "stratum_counts": {
+        "S1_LOCAL_SCALAR_CONTROL": 4701,
+        "S2_STRUCTURED_CONTAINER": 6892,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 2695,
+        "S4_STATE_EFFECT": 13670,
+        "S5_BINDING_EXTERNAL_DOMAIN": 1647
+      }
+    },
+    {
+      "audit_counts": {
+        "below_min_ast_nodes": 287,
+        "decode_failures": 0,
+        "excluded_files": 614,
+        "generated_files": 0,
+        "historical_body_overlap": 0,
+        "parse_failures": 0,
+        "trivial_functions": 21,
+        "within_project_duplicate_bodies": 86
+      },
+      "canonical_project_identity": "ansible/awx",
+      "domain_family": "AUTOMATION",
+      "eligible": true,
+      "eligible_inventory_sha256": "d3cda5c49342f0a1847bc37e5648417d5232df66b463ca5f89e98a3e19b26523",
+      "eligible_unique_functions": 3307,
+      "frozen_git_commit": "33a9eb7d15aedca7222354b68cde834480415913",
+      "functions_seen": 3701,
+      "project_rank": "fdfbd6ea209b2df9c7c409183116d317c46adf87cbef9c69074d8a594c1e8b32",
+      "python_file_count": 1069,
+      "repository_url": "https://github.com/ansible/awx.git",
+      "selected": true,
+      "snapshot_sha256": "6edf8d80a5f4ecc4924378917db9cd6f3a5ed89ba5b29000cb2dafa7eeaed042",
+      "stratum_counts": {
+        "S1_LOCAL_SCALAR_CONTROL": 857,
+        "S2_STRUCTURED_CONTAINER": 476,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 211,
+        "S4_STATE_EFFECT": 1095,
+        "S5_BINDING_EXTERNAL_DOMAIN": 668
+      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "all_required_gates_pass": true,
+  "authoritative_source": {
+    "correct_source_ast_rewritten": false,
+    "matches_frozen_plan": true,
+    "sha256": "a3839a1fc4adaf7e5648eb1cd57b8c448f81e9c8a194f3d296e94179a5e9a232"
+  },
+  "candidate_id": "eb41eb351df073ef",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_mutant_replay": {
+    "different": true,
+    "discriminator": "travel_time_only_pass"
+  },
+  "formal_mutant_refutation": {
+    "model": "[nonmetro_distance_eligible = False,\n travel_time_eligible = True,\n base_business_gates = True,\n metro_distance_eligible = False,\n residence_known = True]",
+    "property": "there exists an otherwise eligible case with known residence, both distance paths false and travel-time path true where the authoritative rule is eligible and OMIT_TRAVEL_TIME_ELIGIBILITY is not",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "function_name": "formula_2021_06_09",
+  "historical_category": "BINDING_OR_DOMAIN_UNRESOLVED",
+  "mutant": {
+    "fault": "the travel-time-only eligibility path is disabled while the metropolitan and non-metropolitan distance paths remain intact",
+    "name": "OMIT_TRAVEL_TIME_ELIGIBILITY",
+    "target": "comparison temps_de_trajet > temps_de_trajet_min inside the composite distance/time eligibility rule"
+  },
+  "mutant_protocol_committed_before_execution": true,
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-B4-CERT5-A2-1",
+  "scope": {
+    "certified": "the exact frozen formula_2021_06_09 under the prospectively frozen 30-case scalar date/enum/parameter/entity binding projection",
+    "not_certified": [
+      "the complete OpenFisca runtime",
+      "arbitrary NumPy vector broadcasting or dtype semantics",
+      "all possible calendar/date values",
+      "all parameter-tree values",
+      "all possible enum combinations",
+      "behavior outside the explicit finite decision basis"
+    ]
+  },
+  "semantic_capability": "LARGE_BOUND_DOMAIN_VECTOR_RETURN",
+  "source_projection_equivalence": {
+    "binding_dimensions": [
+      "parameter tree",
+      "date arithmetic",
+      "context enums",
+      "activity enums",
+      "contract enums",
+      "place/residence enums",
+      "training-device enum",
+      "individual observations",
+      "household residence observation"
+    ],
+    "controlled_exact_source_replay": true,
+    "dependency_contract_verified": true,
+    "finite_basis_exhaustive": false,
+    "finite_decision_basis": 30,
+    "negative_cases": 17,
+    "positive_cases": 13
+  },
+  "v012_outcome": "CERTIFIED_A2"
+}

@@ -1,0 +1,81 @@
+{
+  "families": [
+    {
+      "candidate_count": 7,
+      "candidate_ids": [
+        "03e2adf4e4f323b1",
+        "4b57e2d73c695a41",
+        "63e7979762bf860b",
+        "91b2dc32504282fc",
+        "a79d9687185720aa",
+        "b2996c3dd81aca55",
+        "d7f578c3a5f20b8a"
+      ],
+      "certification_claim": false,
+      "family_id": "EXEC-bcf4934dbd8f",
+      "signature": "MutatingCall+StateMutation"
+    },
+    {
+      "candidate_count": 4,
+      "candidate_ids": [
+        "8048a564541f5408",
+        "882c5eae0d8fd4ec",
+        "8a754dadf1672d0a",
+        "eb12d3a44210a486"
+      ],
+      "certification_claim": false,
+      "family_id": "EXEC-16667c128fe7",
+      "signature": "MutatingCall"
+    },
+    {
+      "candidate_count": 3,
+      "candidate_ids": [
+        "2309036b0c69ad48",
+        "7cf281a33e5781df",
+        "bcb091a940a8d0dd"
+      ],
+      "certification_claim": false,
+      "family_id": "EXEC-1afcc009ce47",
+      "signature": "StateMutation"
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "1a2de6edb11465fe",
+        "3fd2d8b8a76b4834"
+      ],
+      "certification_claim": false,
+      "family_id": "EXEC-2698ed93befe",
+      "signature": "NestedDefinition"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "7460029971aad8de"
+      ],
+      "certification_claim": false,
+      "family_id": "EXEC-e512daf4e5cc",
+      "signature": "ImportFrom+MutatingCall+StateMutation"
+    }
+  ],
+  "summary": {
+    "adapter_family_count": 30,
+    "benchmark_version": "0.11.0",
+    "binding_family_count": 58,
+    "certification_claim": false,
+    "cohort_sha256": "3144f973a166ebee41a059c538b81ffac5a5d15737982c6d95e59175325ca108",
+    "execution_family_count": 5,
+    "passed": true,
+    "phase": "GENERALIZATION_FAMILY_CENSUS",
+    "route_counts": {
+      "BINDING_DEFINITION": 36,
+      "CONTROLLED_EXECUTION_REVIEW": 17,
+      "EXPLICIT_ADAPTER": 33,
+      "SEMANTIC_SCOPE_REVIEW": 2,
+      "STRUCTURAL_REVIEW": 2
+    },
+    "semantic_scope_family_count": 2,
+    "structural_review_family_count": 2,
+    "total_candidates": 90
+  }
+}

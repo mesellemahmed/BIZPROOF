@@ -1,0 +1,254 @@
+{
+  "authoritative_source": true,
+  "candidate_id": "03e2adf4e4f323b1",
+  "certification_started": false,
+  "class_name": "Order",
+  "end_lineno": 623,
+  "fingerprints": {
+    "ast_dump": "ee921d9fe33f848c94d5a693bc02eac02935a1f14474d8aff798e87f61802cf8",
+    "ast_unparse": "4541b4340d38f7746cefb4598a1717a16f42d4929a9fe433374dad9ddda22b22",
+    "dedent_strip": "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+    "dedent_strip_newline": "c45e21b4b1aba84ed76540197f5f1699f12210348871240bbeb2b7c95708c297",
+    "lf": "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+    "raw": "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437"
+  },
+  "function_name": "save",
+  "lineno": 584,
+  "matched_hash": "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+  "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+  "project": "pretix",
+  "reason_codes": "MODEL_SAVE_TRANSACTION_STATE_OUTSIDE_FORMAL_SUBSET",
+  "recovery_claim": false,
+  "resolution": "STRUCTURED_DIRECT_HASH_RESOLVED",
+  "source": "def save(self, **kwargs):\n        if 'update_fields' in kwargs:\n            kwargs['update_fields'] = {'last_modified'}.union(kwargs['update_fields'])\n        if not self.code:\n            self.assign_code()\n            if 'update_fields' in kwargs:\n                kwargs['update_fields'] = {'code'}.union(kwargs['update_fields'])\n        if not self.datetime:\n            self.datetime = now()\n            if 'update_fields' in kwargs:\n                kwargs['update_fields'] = {'datetime'}.union(kwargs['update_fields'])\n        if not self.expires:\n            self.set_expires()\n            if 'update_fields' in kwargs:\n                kwargs['update_fields'] = {'expires'}.union(kwargs['update_fields'])\n        if not self.organizer_id:\n            self.organizer_id = self.event.organizer_id\n            if 'update_fields' in kwargs:\n                kwargs['update_fields'] = {'organizer'}.union(kwargs['update_fields'])\n\n        is_new = not self.pk\n        update_fields = kwargs.get('update_fields', [])\n        if 'require_approval' not in self.get_deferred_fields() and 'status' not in self.get_deferred_fields():\n            status_paid_or_pending = self.status in (Order.STATUS_PENDING, Order.STATUS_PAID) and not self.require_approval\n            if status_paid_or_pending != self.__initial_status_paid_or_pending:\n                _transactions_mark_order_dirty(self.pk, using=kwargs.get('using', None))\n        elif (\n            not kwargs.get('force_save_with_deferred_fields', None) and\n            (not update_fields or ('require_approval' not in update_fields and 'status' not in update_fields))\n        ):\n            _fail(\"It is unsafe to call save() on an Order with deferred fields since we can't check if you missed \"\n                  \"creating a transaction. Call save(force_save_with_deferred_fields=True) if you really want to do \"\n                  \"this.\")\n\n        r = super().save(**kwargs)\n\n        if is_new:\n            _transactions_mark_order_dirty(self.pk, using=kwargs.get('using', None))\n\n        return r",
+  "support_records": [
+    {
+      "direct_hashes": [
+        "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+        "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\execution_probe.jsonl",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [
+        "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+        "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+      ],
+      "object_path": "$line[1]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+        },
+        {
+          "key_path": "$.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "484ab3244449b78903da0eafb20acb58980e82551ea0d4083696ad13d747e0ae",
+        "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+        "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_outcomes.jsonl",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [
+        "484ab3244449b78903da0eafb20acb58980e82551ea0d4083696ad13d747e0ae",
+        "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+        "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+      ],
+      "object_path": "$line[1]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+        },
+        {
+          "key_path": "$.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "484ab3244449b78903da0eafb20acb58980e82551ea0d4083696ad13d747e0ae"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "0a42c3b2e4a0c81f669faf8a21907dff1bb1ccc802d5b9cf7c5a35faa0fd191f",
+        "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef",
+        "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437"
+      ],
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [
+        "0a42c3b2e4a0c81f669faf8a21907dff1bb1ccc802d5b9cf7c5a35faa0fd191f",
+        "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef",
+        "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437"
+      ],
+      "object_path": "$line[63]",
+      "path_hints": [
+        "doc/api/fundamentals.rst",
+        "doc/api/guides/custom_checkout.rst",
+        "doc/api/guides/order_lifecycle.rst",
+        "doc/api/oauth.rst",
+        "doc/api/resources/auto_checkin_rules.rst",
+        "doc/api/resources/banktransfer.rst",
+        "doc/api/resources/carts.rst",
+        "doc/api/resources/certificates.rst",
+        "src/pretix/base/models/orders.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate.business_keyword_sources.class[0]",
+          "value": "order"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.path[0]",
+          "value": "order"
+        },
+        {
+          "key_path": "$.candidate.file",
+          "value": "src/pretix/base/models/orders.py"
+        },
+        {
+          "key_path": "$.candidate.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.candidate.function_sha256",
+          "value": "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437"
+        },
+        {
+          "key_path": "$.candidate.source_file_sha256",
+          "value": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef"
+        },
+        {
+          "key_path": "$.candidate.source_id",
+          "value": "pretix"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[0]",
+          "value": "doc/api/fundamentals.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[1]",
+          "value": "doc/api/guides/custom_checkout.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[2]",
+          "value": "doc/api/guides/order_lifecycle.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[3]",
+          "value": "doc/api/oauth.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[4]",
+          "value": "doc/api/resources/auto_checkin_rules.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[5]",
+          "value": "doc/api/resources/banktransfer.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[6]",
+          "value": "doc/api/resources/carts.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[7]",
+          "value": "doc/api/resources/certificates.rst"
+        },
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        },
+        {
+          "key_path": "$.selection_hash",
+          "value": "0a42c3b2e4a0c81f669faf8a21907dff1bb1ccc802d5b9cf7c5a35faa0fd191f"
+        },
+        {
+          "key_path": "$.stratum.source_id",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "484ab3244449b78903da0eafb20acb58980e82551ea0d4083696ad13d747e0ae",
+        "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+        "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_evidence\\03e2adf4e4f323b1.json",
+      "function_names": [
+        "save"
+      ],
+      "hashes": [
+        "484ab3244449b78903da0eafb20acb58980e82551ea0d4083696ad13d747e0ae",
+        "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+        "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+      ],
+      "object_path": "$",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "03e2adf4e4f323b1"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "6690ab5288a65beaaa2b358d2259bbdcc7f7f0cd731625138f1bb4dc0f4b3dac"
+        },
+        {
+          "key_path": "$.function",
+          "value": "save"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "484ab3244449b78903da0eafb20acb58980e82551ea0d4083696ad13d747e0ae"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    }
+  ]
+}

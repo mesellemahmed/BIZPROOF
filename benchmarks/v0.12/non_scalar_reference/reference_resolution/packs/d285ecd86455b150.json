@@ -1,0 +1,11 @@
+{
+  "candidate_id": "d285ecd86455b150",
+  "evidence_file": "benchmarks\\v0.12\\non_scalar_reference\\source_resolution\\packs\\d285ecd86455b150.json",
+  "function_name": "discount_info",
+  "key_path": "A4_SOURCE_PACK_REUSE",
+  "reason_code": "TUPLE_RETURN_WITH_DOMAIN_REFERENCES",
+  "selection_rule": "smallest parseable evidence item containing exactly one complete function",
+  "sha256": "f98331733ca429658fa45692f93095b987123e59a2a9434946edb797c8a287a8",
+  "source": "def discount_info(subevent_id, item, infos_for_item):\n            infos_for_item = list(infos_for_item)\n            return (\n                subevent_id,\n                item,\n                sum(max_count for (subevent_id, item, discount_rule, max_count, i) in infos_for_item),\n                next(discount_rule for (subevent_id, item, discount_rule, max_count, i) in infos_for_item),\n            )",
+  "source_length": 400
+}

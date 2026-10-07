@@ -1,0 +1,202 @@
+{
+  "artifacts": {
+    "adapter_function": "count_condition_partially_satisfied",
+    "adapter_path": "benchmarks/v0.7/adapters/oscar_count_partial.py",
+    "adapter_sha256": "1f15c19276e129add2cf9eb54ab73eab1214a46b8b309abd6210ad6d5c45ccb0",
+    "contract_path": "contracts/external/v0.7/oscar_count_partial_correct.yaml",
+    "contract_sha256": "fe0b29cc7cbb4712f6bc99f3bb5bdeaec755421e1e56105e2a76087f793cf56f"
+  },
+  "certificate_digest": "edc205b70dcf2a4cbaedd3e8cda583df4d50e8aab82b35dd2f1ba150fa791dac",
+  "certificate_id": "CERT-OSCAR-PARTIAL-001",
+  "certificate_version": "0.10.0",
+  "certification_scope": "POST_AGGREGATION_THRESHOLD",
+  "checks": [
+    {
+      "detail": "django_oscar",
+      "name": "lock-source-present",
+      "passed": true
+    },
+    {
+      "detail": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+      "name": "registry-lock-commit",
+      "passed": true
+    },
+    {
+      "detail": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+      "name": "checkout-lock-commit",
+      "passed": true
+    },
+    {
+      "detail": "src/oscar/apps/offer/conditions.py",
+      "name": "external-source-present",
+      "passed": true
+    },
+    {
+      "detail": "benchmarks/v0.7/adapters/oscar_count_partial.py",
+      "name": "adapter-present",
+      "passed": true
+    },
+    {
+      "detail": "contracts/external/v0.7/oscar_count_partial_correct.yaml",
+      "name": "contract-present",
+      "passed": true
+    },
+    {
+      "detail": "EXT-OSCAR-COUNT-PARTIAL-001",
+      "name": "v0.7-evidence-present",
+      "passed": true
+    },
+    {
+      "detail": "PRES-OSCAR-PARTIAL-001",
+      "name": "v0.8-evidence-present",
+      "passed": true
+    },
+    {
+      "detail": "SYM-OSCAR-PARTIAL-001",
+      "name": "v0.9-evidence-present",
+      "passed": true
+    },
+    {
+      "detail": "summary passed",
+      "name": "v0.7-summary-pass",
+      "passed": true
+    },
+    {
+      "detail": "summary passed",
+      "name": "v0.8-summary-pass",
+      "passed": true
+    },
+    {
+      "detail": "summary passed",
+      "name": "v0.9-summary-pass",
+      "passed": true
+    },
+    {
+      "detail": "PROVED",
+      "name": "v0.7-correct-proved",
+      "passed": true
+    },
+    {
+      "detail": "DISPROVED",
+      "name": "v0.7-mutant-disproved",
+      "passed": true
+    },
+    {
+      "detail": "True",
+      "name": "v0.7-mutant-replay",
+      "passed": true
+    },
+    {
+      "detail": "0",
+      "name": "v0.8-zero-correct-mismatch",
+      "passed": true
+    },
+    {
+      "detail": "64",
+      "name": "v0.8-mutant-sensitive",
+      "passed": true
+    },
+    {
+      "detail": "True",
+      "name": "v0.8-rule-pass",
+      "passed": true
+    },
+    {
+      "detail": "PROVED",
+      "name": "v0.9-correct-proved",
+      "passed": true
+    },
+    {
+      "detail": "unsat",
+      "name": "v0.9-correct-unsat",
+      "passed": true
+    },
+    {
+      "detail": "DISPROVED",
+      "name": "v0.9-mutant-disproved",
+      "passed": true
+    },
+    {
+      "detail": "sat",
+      "name": "v0.9-mutant-sat",
+      "passed": true
+    },
+    {
+      "detail": "{'num_matches': 1, 'required_count': 1}",
+      "name": "v0.9-mutant-witness",
+      "passed": true
+    },
+    {
+      "detail": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+      "name": "v0.8-commit-consistency",
+      "passed": true
+    },
+    {
+      "detail": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+      "name": "v0.9-commit-consistency",
+      "passed": true
+    },
+    {
+      "detail": "c0d503080546b2e85e4a028df8322496ecdfde4924355afb1cc9ebedb123925b",
+      "name": "v0.8-source-hash",
+      "passed": true
+    },
+    {
+      "detail": "c0d503080546b2e85e4a028df8322496ecdfde4924355afb1cc9ebedb123925b",
+      "name": "v0.9-source-hash",
+      "passed": true
+    },
+    {
+      "detail": "1f15c19276e129add2cf9eb54ab73eab1214a46b8b309abd6210ad6d5c45ccb0",
+      "name": "v0.8-adapter-hash",
+      "passed": true
+    },
+    {
+      "detail": "1f15c19276e129add2cf9eb54ab73eab1214a46b8b309abd6210ad6d5c45ccb0",
+      "name": "v0.9-adapter-hash",
+      "passed": true
+    }
+  ],
+  "claim_scope": "V0.10 certifies selected business-semantic slices only when their locked provenance, V0.7 contract verification evidence, V0.8 source-executed preservation evidence, and V0.9 symbolic equivalence evidence are mutually consistent. CERTIFIED does not mean that the complete external framework has been verified.",
+  "evidence": {
+    "v0.7": {
+      "correct_verdict": "PROVED",
+      "evidence_sha256": "274d4e1d8f00349e1a784c9870ca3a0b369290904e1aeccc4cd3689f7e46514c",
+      "mutant_replay_validated": true,
+      "mutant_verdict": "DISPROVED",
+      "rule_id": "EXT-OSCAR-COUNT-PARTIAL-001"
+    },
+    "v0.8": {
+      "comparisons": 8256,
+      "correct_mismatches": 0,
+      "evidence_sha256": "3d326bb918972b2eb6a8c27685c237c8fd407cd0d972f21008cf2075bec4b591",
+      "mutant_mismatches": 64,
+      "rule_id": "PRES-OSCAR-PARTIAL-001"
+    },
+    "v0.9": {
+      "correct_verdict": "PROVED",
+      "evidence_sha256": "496137b6120f2acefefe11f9d55508a799e0b1ca9761a547bd8701825465acac",
+      "external_mode": "FULL_FUNCTION",
+      "external_slice": "def is_partially_satisfied(self, offer, basket):\n    num_matches = self._get_num_matches(basket, offer)\n    return 0 < num_matches < self.value",
+      "external_slice_sha256": "59b1062942d37a23679133a7582434517de068df3fd8c4b8ad153b4d91c10450",
+      "mutant_counterexample": {
+        "num_matches": 1,
+        "required_count": 1
+      },
+      "mutant_solver_status": "sat",
+      "mutant_verdict": "DISPROVED",
+      "rule_id": "SYM-OSCAR-PARTIAL-001",
+      "solver_status": "unsat"
+    }
+  },
+  "failed_checks": [],
+  "provenance": {
+    "external_class": "CountCondition",
+    "external_method": "is_partially_satisfied",
+    "external_source": "src/oscar/apps/offer/conditions.py",
+    "external_source_sha256": "c0d503080546b2e85e4a028df8322496ecdfde4924355afb1cc9ebedb123925b",
+    "resolved_commit": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+    "source_id": "django_oscar"
+  },
+  "status": "CERTIFIED"
+}

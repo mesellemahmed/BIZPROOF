@@ -1,0 +1,17 @@
+{
+  "analysis_executed": false,
+  "case_map_sha256": "e4a836cade875da20e736cde6e300c8d5f82c4b342f3f60f7d6895f194120f3f",
+  "engine_modifications": 0,
+  "evaluation_order_sha256": "ca74897a6d997db81e32fab369f806a6956365c3a9d07ab59aae681d063bc423",
+  "execution_metadata_sha256": "94e2a9b573b4e30a48592a9359b110769baa0aa108c7c4aa9f8ef6c8a825fd48",
+  "expected_record_count": 60,
+  "future_raw_tag": "v0.14-confirmatory60-raw",
+  "outcome_summary_generated": false,
+  "protocol_tag": "v0.14-confirmatory60-protocol-freeze",
+  "raw_sha256": "c346b9d42a13fc918149a039169fd5bc36326a2109be474bd720f1251761bbf2",
+  "record_count": 60,
+  "run_state_sha256": "223d29c4bc3d6ddf5ae8f3725dabc6924562afd98f8db2a70375a1f8897abfc8",
+  "schema_version": "BIZPROOF-V0.14-CONFIRMATORY60-RAW-COMPLETENESS-1",
+  "source_substitutions": 0,
+  "status": "RAW_FROZEN"
+}

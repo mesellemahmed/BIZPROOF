@@ -1,0 +1,19 @@
+{
+  "candidate_id": "b2996c3dd81aca55",
+  "certification_claim": false,
+  "controlled_execution_status": "ESTABLISHED",
+  "execution_evidence_digest": "d81d1294f8f1b871485f74095e49f534e1abefa03577611c2983722cef9a0da7",
+  "interpretation": "This is not an execution failure. The candidate executes successfully under controlled deterministic stubs; formal certification is withheld because the required semantics exceed the frozen supported subset.",
+  "negative_evidence_digest": "924151af193efbb57d7cb0e3ab39904a1ae0c2dc2e1ed630c9c3f28e94da90bc",
+  "reason": "Controlled execution of the locked source slice is established, but its observable semantics require state transition, collection mutation or non-scalar output semantics outside the frozen V0.11 formal certification subset.",
+  "reason_code": "SESSION_STATE_MUTATION_OUTSIDE_FORMAL_SUBSET",
+  "schema_version": "BIZPROOF-V0.11-NEGATIVE-EVIDENCE-1",
+  "source": {
+    "class": null,
+    "file": "src/pretix/base/services/cart.py",
+    "function": "add_payment_to_cart_session",
+    "function_sha256": "17b1c4649a6abb9206960628c4668dfec2b0607265f0e2752991f33d66720b04",
+    "source_id": "pretix"
+  },
+  "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+}

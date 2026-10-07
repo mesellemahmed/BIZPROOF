@@ -1,0 +1,66 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "0f73ae8d15cf3408",
+      "reason_code": "REFERENCE_DATE_OR_NONE",
+      "semantic_family": "OPTIONAL_REFERENCE_OR_DATE"
+    },
+    {
+      "candidate_id": "26a1af8837fe7ae4",
+      "reason_code": "TEXT_RETURN",
+      "semantic_family": "TEXT_VALUE"
+    },
+    {
+      "candidate_id": "6d009b7961c5d116",
+      "reason_code": "LIST_OF_DOMAIN_OBJECTS_RETURN",
+      "semantic_family": "FINITE_SEQUENCE_VALUE"
+    },
+    {
+      "candidate_id": "6fd8bd69c26e7954",
+      "reason_code": "DOMAIN_OBJECT_RETURN",
+      "semantic_family": "DOMAIN_OBJECT_REFERENCE"
+    },
+    {
+      "candidate_id": "75e61ddb4dde4f1a",
+      "reason_code": "TEXT_RETURN",
+      "semantic_family": "TEXT_VALUE"
+    },
+    {
+      "candidate_id": "87d2f0b3b15f0ea6",
+      "reason_code": "TEXT_RETURN",
+      "semantic_family": "TEXT_VALUE"
+    },
+    {
+      "candidate_id": "9cc9063a46d23cde",
+      "reason_code": "QUERYSET_RETURN",
+      "semantic_family": "QUERYSET_SUMMARY"
+    },
+    {
+      "candidate_id": "d285ecd86455b150",
+      "reason_code": "TUPLE_RETURN",
+      "semantic_family": "FINITE_SEQUENCE_VALUE"
+    },
+    {
+      "candidate_id": "e1cf29f02fa0dadc",
+      "reason_code": "LIST_RETURN",
+      "semantic_family": "FINITE_SEQUENCE_VALUE"
+    },
+    {
+      "candidate_id": "fa377c649a747a7d",
+      "reason_code": "OBJECT_RETURN",
+      "semantic_family": "DOMAIN_OBJECT_REFERENCE"
+    }
+  ],
+  "classification_basis": "Frozen V0.11 W19 final reason_codes",
+  "keyword_scan_scientific_status": "DISCARDED_FOR_CLASSIFICATION",
+  "schema_version": "BIZPROOF-V0.12-NON-SCALAR-STRUCTURAL-CLASSIFICATION-2",
+  "semantic_family_counts": {
+    "DOMAIN_OBJECT_REFERENCE": 2,
+    "FINITE_SEQUENCE_VALUE": 3,
+    "OPTIONAL_REFERENCE_OR_DATE": 1,
+    "QUERYSET_SUMMARY": 1,
+    "TEXT_VALUE": 3
+  },
+  "supersedes": "The initial keyword-based motif scan. That diagnostic scan was over-broad because aggregate evidence artifacts contain multiple candidate records and therefore propagated unrelated keywords across candidates.",
+  "target_count": 10
+}

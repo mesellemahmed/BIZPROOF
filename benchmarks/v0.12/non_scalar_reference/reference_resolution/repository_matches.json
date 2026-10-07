@@ -1,0 +1,23 @@
+{
+  "0f73ae8d15cf3408": [],
+  "6d009b7961c5d116": [
+    {
+      "class_name": "Applicator",
+      "end_lineno": 64,
+      "function_name": "get_offers",
+      "lineno": 45,
+      "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\offer\\applicator.py"
+    }
+  ],
+  "6fd8bd69c26e7954": [
+    {
+      "class_name": "TaxedPrice",
+      "end_lineno": 93,
+      "function_name": "__mul__",
+      "lineno": 81,
+      "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\tax.py"
+    }
+  ],
+  "d285ecd86455b150": [],
+  "fa377c649a747a7d": []
+}

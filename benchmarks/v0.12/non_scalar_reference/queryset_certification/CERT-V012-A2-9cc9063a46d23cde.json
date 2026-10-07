@@ -1,0 +1,43 @@
+{
+  "all_required_gates_pass": true,
+  "candidate_id": "9cc9063a46d23cde",
+  "claim": "formal equivalence evidence for the accepted declarative query projection and formal mutant refutation within supported semantics",
+  "concrete_counterexample_replay": {
+    "variation_none_false": {
+      "correct": "{\"kind\":\"QUERY_PLAN\",\"predicates\":[{\"field\":\"subevent\",\"value\":{\"identity\":30,\"type_name\":\"Subevent\"}}],\"source\":{\"identity\":20,\"type_name\":\"QuotaRelation\"}}",
+      "mutant": "{\"kind\":\"QUERY_PLAN\",\"predicates\":[{\"field\":\"subevent\",\"value\":{\"identity\":30,\"type_name\":\"Subevent\"}}],\"source\":{\"identity\":10,\"type_name\":\"QuotaRelation\"}}",
+      "passed": true
+    },
+    "variation_none_true": {
+      "correct": "{\"kind\":\"QUERY_PLAN\",\"predicates\":[{\"field\":\"subevent\",\"value\":{\"identity\":30,\"type_name\":\"Subevent\"}}],\"source\":{\"identity\":10,\"type_name\":\"QuotaRelation\"}}",
+      "mutant": "{\"kind\":\"QUERY_PLAN\",\"predicates\":[{\"field\":\"subevent\",\"value\":{\"identity\":30,\"type_name\":\"Subevent\"}}],\"source\":{\"identity\":20,\"type_name\":\"QuotaRelation\"}}",
+      "passed": true
+    }
+  },
+  "formal_mutant_refutation": {
+    "formal_property": "exists an admissible query-plan state where inversion of the item/variation source branch changes the declarative query source",
+    "model": "[item_quotas_source = 0, variation_quotas_source = 1]",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "prior_reason_code": "QUERYSET_RETURN",
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-A6-A2-QUERYPLAN-1",
+  "scope": {
+    "certified": "lazy declarative selection of quota relation plus subevent equality filter",
+    "not_certified": [
+      "SQL generation",
+      "database execution",
+      "database contents",
+      "QuerySet materialization",
+      "Django ORM implementation internals"
+    ]
+  },
+  "semantic_capability": "DECLARATIVE_QUERY_PLAN",
+  "source_equivalence": {
+    "method": "canonical executable AST identity after explicit framework-dependency substitution",
+    "proved": true
+  },
+  "source_slice_sha256": "94858a131b3ca3260d6f18f28f3117162a572335da93584573c2676c8e24f099",
+  "v012_outcome": "CERTIFIED_A2"
+}

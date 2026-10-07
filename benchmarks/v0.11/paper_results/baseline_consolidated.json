@@ -1,0 +1,70 @@
+{
+  "extended_typed_supported": 8,
+  "finite_set_enum_deferred": 1,
+  "interpretation": {
+    "bizproof": "Frozen formal proof of correct projection equivalence plus formal mutant disproof.",
+    "crosshair": "Budgeted symbolic-search baseline.",
+    "hypothesis": "Counterexample-search baseline.",
+    "runtime": "Descriptive only; methods provide different guarantees."
+  },
+  "matched_candidates": 14,
+  "recovered_post_freeze": 2,
+  "rows": [
+    {
+      "budget": "frozen-proof",
+      "cases": 14,
+      "detected": 14,
+      "detection_rate": 1.0,
+      "guarantee": "formal source-equivalence plus mutant disproof",
+      "method": "BIZPROOF",
+      "runtime_seconds": null
+    },
+    {
+      "budget": "100",
+      "cases": 14,
+      "detected": 14,
+      "detection_rate": 1.0,
+      "guarantee": "counterexample search; absence is inconclusive",
+      "method": "Hypothesis",
+      "runtime_seconds": 1.9760870000000001
+    },
+    {
+      "budget": "1000",
+      "cases": 14,
+      "detected": 14,
+      "detection_rate": 1.0,
+      "guarantee": "counterexample search; absence is inconclusive",
+      "method": "Hypothesis",
+      "runtime_seconds": 0.7985169999999999
+    },
+    {
+      "budget": "10000",
+      "cases": 14,
+      "detected": 14,
+      "detection_rate": 1.0,
+      "guarantee": "counterexample search; absence is inconclusive",
+      "method": "Hypothesis",
+      "runtime_seconds": 0.8130999999999999
+    },
+    {
+      "budget": "0.5",
+      "cases": 14,
+      "detected": 5,
+      "detection_rate": 0.35714285714285715,
+      "guarantee": "symbolic assertion search; absence is inconclusive",
+      "method": "CrossHair",
+      "runtime_seconds": 15.552223000000001
+    },
+    {
+      "budget": "2.0",
+      "cases": 14,
+      "detected": 7,
+      "detection_rate": 0.5,
+      "guarantee": "symbolic assertion search; absence is inconclusive",
+      "method": "CrossHair",
+      "runtime_seconds": 17.13859
+    }
+  ],
+  "schema_version": "BIZPROOF-V0.11-PAPER-BASELINE-1",
+  "strict_core": 6
+}

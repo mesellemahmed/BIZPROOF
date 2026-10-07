@@ -1,0 +1,35 @@
+{
+  "a2_total": 17,
+  "baseline_executed_before_reconciliation": false,
+  "latest_manifest_matched_ready": 17,
+  "primary_strict_core": [
+    "331f175e4aa92eef",
+    "9603b9192132171c",
+    "aab5348ee173d6e3",
+    "e293930485085dac",
+    "f3ebe6cce422947e",
+    "f5d217dec0cf902b"
+  ],
+  "primary_total": 6,
+  "recovered_after_original_freeze": [
+    "53abfcd7d20a9cd6",
+    "972b76d53a12b8ad"
+  ],
+  "recovered_total": 2,
+  "schema_version": "BIZPROOF-V0.11-BASELINE-RECONCILIATION-1",
+  "scientific_rationale": "The original protocol already froze STRICT_CORE as the primary comparison tier. Two additional harness pairs were recovered before any baseline execution, but they are not promoted into the primary tier, preventing post-selection expansion of the primary benchmark.",
+  "secondary_extended_typed": [
+    "2906fe3983a1ebe4",
+    "34748d082751e0cc",
+    "4008a63ee1ef3b44",
+    "41ae4a7df4780001",
+    "7013ce92618a1e33",
+    "7f523a5041034306",
+    "8b98d0147c79c3fc",
+    "d5b65e1d48eca4dd",
+    "f234f0be14cf3ff3"
+  ],
+  "secondary_total": 9,
+  "selection_changed_using_baseline_results": false,
+  "source_checkpoint": "v0.11"
+}

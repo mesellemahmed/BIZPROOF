@@ -1,0 +1,34 @@
+{
+  "certification_claim": false,
+  "cohort_sha256": "3144f973a166ebee41a059c538b81ffac5a5d15737982c6d95e59175325ca108",
+  "records": [
+    {
+      "candidate_id": "635fe113a02cf90b",
+      "certification_claim": false,
+      "file": "src/oscar/apps/offer/abstract_models.py",
+      "file_sha256": "d1508fbc726b868c4c849cd88e7669f3bc1ca31a2e7f2ccb26ec3a119f29b78e",
+      "line": 29,
+      "primitive": "ZERO_DISCOUNT",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED",
+      "source": "ZERO_DISCOUNT = get_class('offer.results', 'ZERO_DISCOUNT')",
+      "source_id": "django_oscar",
+      "terminal_kind": "LOCAL_ASSIGNMENT"
+    },
+    {
+      "candidate_id": "cb937575ad9957d1",
+      "certification_claim": false,
+      "file": "openfisca_france/model/prestations/prestations_familiales/base_ressource.py",
+      "file_sha256": "7de3b24f732795d65220d756a1c695242f6db18b88d9aa64b53caa9be3f1144f",
+      "line": 207,
+      "primitive": "nb_enf",
+      "resolution_status": "UNRESOLVED",
+      "semantic_contract_status": "MISSING",
+      "semantic_type": "UNRESOLVED",
+      "source": "def nb_enf(famille, period, age_min, age_max):",
+      "source_id": "openfisca_france",
+      "terminal_kind": "LOCAL_DEFINITION"
+    }
+  ]
+}

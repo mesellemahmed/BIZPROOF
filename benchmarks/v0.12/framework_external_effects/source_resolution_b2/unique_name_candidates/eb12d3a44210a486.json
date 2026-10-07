@@ -1,0 +1,15 @@
+{
+  "ast_digest": "343142a066f872ddde50bb5ee55201ec9cb113969110e4d7f427f472de52f671",
+  "candidate_id": "eb12d3a44210a486",
+  "class_name": "OrderPosition",
+  "end_lineno": 2684,
+  "function_hint": "checkin_texts",
+  "function_name": "checkin_texts",
+  "lineno": 2676,
+  "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+  "project": "pretix",
+  "recovery_claim": false,
+  "requires_manual_or_provenance_confirmation": true,
+  "resolution": "UNIQUE_NAME_CANDIDATE",
+  "source": "def checkin_texts(self):\n        texts = []\n        if self.order.checkin_text:\n            texts.append(self.order.checkin_text)\n        if self.variation_id and self.variation.checkin_text:\n            texts.append(self.variation.checkin_text)\n        if self.item.checkin_text:\n            texts.append(self.item.checkin_text)\n        return texts"
+}

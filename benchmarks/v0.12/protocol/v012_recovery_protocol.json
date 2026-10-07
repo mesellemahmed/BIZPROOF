@@ -1,0 +1,81 @@
+{
+  "schema_version": "BIZPROOF-V0.12-RECOVERY-PROTOCOL-1",
+  "source_version": "V0.11",
+  "source_tag": "v0.11-paper-evidence-final",
+  "source_commit": "89213df19502d295f0ad293b4bb9e1ffbcf7dd04",
+
+  "protocol_frozen_before_v012_implementation": true,
+  "v011_results_are_immutable": true,
+
+  "primary_population": 38,
+  "secondary_semantic_ambiguity_population": 2,
+
+  "primary_objective": "Recover V0.11 unsupported business-rule candidates through reusable semantic-capability extensions.",
+
+  "frozen_v011_taxonomy": {
+    "FRAMEWORK_OR_EXTERNAL_EFFECTS": 19,
+    "NON_SCALAR_OR_REFERENCE_SEMANTICS": 10,
+    "NESTED_OR_HIGHER_ORDER_LOGIC": 3,
+    "STATEFUL_SIDE_EFFECTING_LOGIC": 2,
+    "OTHER_FROZEN_SCOPE_LIMITATION": 2,
+    "BINDING_OR_DOMAIN_UNRESOLVED": 1,
+    "COMPLEX_CONTAINER_SEMANTICS": 1
+  },
+
+  "implementation_priority": [
+    {
+      "rank": 1,
+      "category": "NON_SCALAR_OR_REFERENCE_SEMANTICS",
+      "count": 10,
+      "phase": "V12-A"
+    },
+    {
+      "rank": 2,
+      "category": "FRAMEWORK_OR_EXTERNAL_EFFECTS",
+      "count": 19,
+      "phase": "V12-B"
+    },
+    {
+      "rank": 3,
+      "category": "NESTED_OR_HIGHER_ORDER_LOGIC",
+      "count": 3,
+      "phase": "V12-C"
+    },
+    {
+      "rank": 4,
+      "category": "STATEFUL_SIDE_EFFECTING_LOGIC",
+      "count": 2,
+      "phase": "V12-C"
+    },
+    {
+      "rank": 5,
+      "category": "RESIDUAL",
+      "count": 4,
+      "phase": "V12-C"
+    }
+  ],
+
+  "primary_metric": "unsupported_to_certified_recovery_rate",
+
+  "primary_metric_definition": "Number of the frozen 38 V0.11 unsupported candidates that become CERTIFIED_A1 or CERTIFIED_A2 under V0.12 divided by 38.",
+
+  "category_metric": "category_specific_recovery_rate",
+
+  "regression_rule": "Every V0.11 certified candidate must remain certified or receive an explicit regression diagnosis.",
+
+  "anti_bias_rules": [
+    "The frozen V0.11 cohort cannot change.",
+    "V0.11 terminal outcomes cannot be rewritten.",
+    "No candidate may be removed after observing V0.12 results.",
+    "Recovery must result from a reusable semantic capability rather than a candidate-specific exception.",
+    "Every recovered candidate requires replayable evidence.",
+    "A failed recovery remains visible in the V0.12 ledger.",
+    "New external validation remains separate from the frozen V0.11 recovery cohort."
+  ],
+
+  "scientific_targets": {
+    "minimum_material_recovery": 10,
+    "strong_recovery": 15,
+    "stretch_recovery": 20
+  }
+}

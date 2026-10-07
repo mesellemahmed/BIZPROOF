@@ -1,0 +1,44 @@
+{
+  "authoritative_source": true,
+  "candidate_id": "3fd2d8b8a76b4834",
+  "category": "NESTED_OR_HIGHER_ORDER_LOGIC",
+  "certification_started": false,
+  "evidence_detail": {
+    "direct_hash_name_location_count": 1,
+    "embedded_hash_hit_count": 0,
+    "embedded_hashes": [],
+    "hash_name_location_count": 0,
+    "name_path_location_count": 0
+  },
+  "prior_status": "UNRESOLVED",
+  "recovery_claim": false,
+  "selected": {
+    "class_name": "rsa_enfant_a_charge",
+    "end_lineno": 371,
+    "fingerprints": {
+      "ast_dump": "bc46a96a9c85c991193cfd807258c2c752e61a722f3951744333d6af82e58ccb",
+      "ast_unparse": "d0507eba630063f37af11720dd1412a9fb6c5bc19d8babbab44512177ecaf40a",
+      "dedent_strip": "34d5615cad6fa576eb275925c470057151eb960aa06447d4a4bdd0cca87970cb",
+      "dedent_strip_newline": "179263321892babfe74467f2963a0cf313a565d2f38e68f1d38f249c95dff488",
+      "lf": "34d5615cad6fa576eb275925c470057151eb960aa06447d4a4bdd0cca87970cb",
+      "raw": "34d5615cad6fa576eb275925c470057151eb960aa06447d4a4bdd0cca87970cb"
+    },
+    "function_name": "formula_2009_06_01",
+    "lineno": 322,
+    "matched_hash": "34d5615cad6fa576eb275925c470057151eb960aa06447d4a4bdd0cca87970cb",
+    "path": "external_sources\\v0.6\\openfisca_france\\openfisca_france\\model\\prestations\\minima_sociaux\\rsa.py",
+    "project": "openfisca_france",
+    "source": "def formula_2009_06_01(individu, period, parameters):\n        P_rsa = parameters(period).prestations_sociales.solidarite_insertion.minima_sociaux.rsa\n\n        enfant = individu('est_enfant_dans_famille', period)\n        age = individu('age', period)\n        autonomie_financiere = individu('autonomie_financiere', period)\n\n        ressources = individu('rsa_revenus_determination_enfant_a_charge', period)\n\n        age_pac = P_rsa.rsa_cond.age_pac\n        majo_rsa_femmes_enceintes = P_rsa.rsa_maj.majoration_isolement_en_base_rsa.femmes_enceintes\n        majo_rsa_par_enfant_a_charge = P_rsa.rsa_maj.majoration_isolement_en_base_rsa.par_enfant_a_charge\n        montant_base_rsa = P_rsa.rsa_m.montant_de_base_du_rsa\n        taux_personne_supp = P_rsa.rsa_maj.maj_montant_max.par_enfant_supplementaire\n\n        # R\u00e8gle CAF: Si un enfant touche des ressources, et que son impact global\n        # (augmentation du montant forfaitaire - ressources prises en compte) fait baisser le montant du RSA, alors\n        # il doit \u00eatre exclu du calcul du RSA.\n        # Cette r\u00e8gle est complexe, on applique donc l'approximation suivante:\n        #       - Cas g\u00e9n\u00e9ral: enfant pris en compte si ressources <= augmentation du MF pour un enfant\n        #                      suppl\u00e9mentaire (taux marginal).\n        #       - Si la pr\u00e9sence de l'enfant ouvre droit au RSA major\u00e9, pris en compte si\n        #                      ressources <= majoration du RSA pour isolement avec un enfant.\n        def ouvre_droit_majoration():\n            famille = individu.famille\n            enceinte_fam = famille('enceinte_fam', period)\n            isole = not_(famille('en_couple', period))\n            isolement_recent = famille('rsa_isolement_recent', period)\n\n            presence_autres_enfants = famille.sum(enfant * not_(autonomie_financiere) * (age < age_pac)) > 1\n\n            return (\n                not_(enceinte_fam)\n                * isole\n                * isolement_recent\n                * not_(presence_autres_enfants)\n                )\n\n        rsa_enf_charge = (\n            enfant\n            * not_(autonomie_financiere)\n            * (age < age_pac)\n            * where(\n                ouvre_droit_majoration(),\n                ressources < (majo_rsa_femmes_enceintes - 1 + majo_rsa_par_enfant_a_charge) * montant_base_rsa,\n                ressources < taux_personne_supp * montant_base_rsa\n                )\n            )\n\n        return rsa_enf_charge"
+  },
+  "source": "def formula_2009_06_01(individu, period, parameters):\n        P_rsa = parameters(period).prestations_sociales.solidarite_insertion.minima_sociaux.rsa\n\n        enfant = individu('est_enfant_dans_famille', period)\n        age = individu('age', period)\n        autonomie_financiere = individu('autonomie_financiere', period)\n\n        ressources = individu('rsa_revenus_determination_enfant_a_charge', period)\n\n        age_pac = P_rsa.rsa_cond.age_pac\n        majo_rsa_femmes_enceintes = P_rsa.rsa_maj.majoration_isolement_en_base_rsa.femmes_enceintes\n        majo_rsa_par_enfant_a_charge = P_rsa.rsa_maj.majoration_isolement_en_base_rsa.par_enfant_a_charge\n        montant_base_rsa = P_rsa.rsa_m.montant_de_base_du_rsa\n        taux_personne_supp = P_rsa.rsa_maj.maj_montant_max.par_enfant_supplementaire\n\n        # R\u00e8gle CAF: Si un enfant touche des ressources, et que son impact global\n        # (augmentation du montant forfaitaire - ressources prises en compte) fait baisser le montant du RSA, alors\n        # il doit \u00eatre exclu du calcul du RSA.\n        # Cette r\u00e8gle est complexe, on applique donc l'approximation suivante:\n        #       - Cas g\u00e9n\u00e9ral: enfant pris en compte si ressources <= augmentation du MF pour un enfant\n        #                      suppl\u00e9mentaire (taux marginal).\n        #       - Si la pr\u00e9sence de l'enfant ouvre droit au RSA major\u00e9, pris en compte si\n        #                      ressources <= majoration du RSA pour isolement avec un enfant.\n        def ouvre_droit_majoration():\n            famille = individu.famille\n            enceinte_fam = famille('enceinte_fam', period)\n            isole = not_(famille('en_couple', period))\n            isolement_recent = famille('rsa_isolement_recent', period)\n\n            presence_autres_enfants = famille.sum(enfant * not_(autonomie_financiere) * (age < age_pac)) > 1\n\n            return (\n                not_(enceinte_fam)\n                * isole\n                * isolement_recent\n                * not_(presence_autres_enfants)\n                )\n\n        rsa_enf_charge = (\n            enfant\n            * not_(autonomie_financiere)\n            * (age < age_pac)\n            * where(\n                ouvre_droit_majoration(),\n                ressources < (majo_rsa_femmes_enceintes - 1 + majo_rsa_par_enfant_a_charge) * montant_base_rsa,\n                ressources < taux_personne_supp * montant_base_rsa\n                )\n            )\n\n        return rsa_enf_charge",
+  "source_fingerprints": {
+    "ast_dump": "bc46a96a9c85c991193cfd807258c2c752e61a722f3951744333d6af82e58ccb",
+    "ast_unparse": "d0507eba630063f37af11720dd1412a9fb6c5bc19d8babbab44512177ecaf40a",
+    "dedent_strip": "34d5615cad6fa576eb275925c470057151eb960aa06447d4a4bdd0cca87970cb",
+    "dedent_strip_newline": "179263321892babfe74467f2963a0cf313a565d2f38e68f1d38f249c95dff488",
+    "lf": "34d5615cad6fa576eb275925c470057151eb960aa06447d4a4bdd0cca87970cb",
+    "raw": "34d5615cad6fa576eb275925c470057151eb960aa06447d4a4bdd0cca87970cb"
+  },
+  "status": "SAME_RECORD_DIRECT_HASH_NAME_RESOLVED",
+  "support_record_count": 4
+}

@@ -1,0 +1,20 @@
+{
+  "candidate_id": "e1cf29f02fa0dadc",
+  "external_calls": [],
+  "free_names": [],
+  "function_name": "get_user_offers",
+  "reason_code": "LIST_RETURN",
+  "reasons": [],
+  "repository_matches": [
+    {
+      "class_name": "Applicator",
+      "end_lineno": 102,
+      "lineno": 96,
+      "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\offer\\applicator.py",
+      "source": "def get_user_offers(self, user):\n        \"\"\"\n        Returns offers linked to this particular user.\n\n        Eg: student users might get 25% off\n        \"\"\"\n        return []"
+    }
+  ],
+  "self_attributes": [],
+  "source": "def get_user_offers(self, user):\n        \"\"\"\n        Returns offers linked to this particular user.\n\n        Eg: student users might get 25% off\n        \"\"\"\n        return []",
+  "status": "DIRECT_CONTROLLED_REPLAY"
+}

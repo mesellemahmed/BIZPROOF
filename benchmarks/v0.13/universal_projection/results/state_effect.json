@@ -1,0 +1,48 @@
+{
+  "capabilities": [
+    "OPAQUE_BINDING",
+    "SCALAR_VALUE",
+    "STATE_EFFECT"
+  ],
+  "case_specific_routing": false,
+  "claim_scope": "generic structural semantic projection only; no business meaning is inferred for opaque bindings, calls, state, or effects",
+  "function_name": "rule",
+  "observations": [
+    {
+      "expression": "account.balance",
+      "kind": "RETURN_COMPONENT",
+      "path": "return",
+      "symbol": null
+    },
+    {
+      "expression": "account.balance",
+      "kind": "OPAQUE_ATTRIBUTE",
+      "path": "account.balance",
+      "symbol": "beta_0"
+    },
+    {
+      "expression": "account.save",
+      "kind": "OPAQUE_ATTRIBUTE",
+      "path": "account.save",
+      "symbol": "beta_1"
+    },
+    {
+      "expression": "account.balance = account.balance + amount",
+      "kind": "STATE_WRITE",
+      "path": "account.balance",
+      "symbol": null
+    },
+    {
+      "expression": "account.save()",
+      "kind": "EFFECT_CALL",
+      "path": "account.save",
+      "symbol": null
+    }
+  ],
+  "parameters": [
+    "account",
+    "amount"
+  ],
+  "source_sha256": "a6c5be4606d46431d86dea3f29fa9a0077819f1d87bdb2e52addba2950681a65",
+  "unsupported_nodes": []
+}

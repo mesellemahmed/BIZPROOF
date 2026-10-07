@@ -1,0 +1,186 @@
+{
+  "03e2adf4e4f323b1": {
+    "candidate_id": "03e2adf4e4f323b1",
+    "resolved": false
+  },
+  "1311d905af0ebcb5": {
+    "arguments": [
+      "self",
+      "now_dt"
+    ],
+    "attribute_writes": [],
+    "await_count": 0,
+    "branch_count": 1,
+    "calls": [
+      "django_redis.get_redis_connection",
+      "p.execute",
+      "p.hdel",
+      "p.hdel",
+      "p.hdel",
+      "p.hdel",
+      "rc.pipeline",
+      "self.availability",
+      "str",
+      "str",
+      "str",
+      "str"
+    ],
+    "candidate_id": "1311d905af0ebcb5",
+    "delete_count": 0,
+    "function_name": "rebuild_cache",
+    "loop_count": 0,
+    "raise_count": 0,
+    "resolved": true,
+    "return_none_count": 0,
+    "return_value_count": 0,
+    "structural_primitives": [
+      "CALL_DEPENDENCY",
+      "NO_VALUE_RETURN",
+      "BRANCHING"
+    ],
+    "subscript_write_count": 0,
+    "try_count": 0,
+    "with_count": 0,
+    "yield_count": 0
+  },
+  "2309036b0c69ad48": {
+    "candidate_id": "2309036b0c69ad48",
+    "resolved": false
+  },
+  "4b57e2d73c695a41": {
+    "candidate_id": "4b57e2d73c695a41",
+    "resolved": false
+  },
+  "4d7d61b18dde0ad5": {
+    "arguments": [
+      "self",
+      "ctx",
+      "flash_messages"
+    ],
+    "attribute_writes": [],
+    "await_count": 0,
+    "branch_count": 0,
+    "calls": [
+      "JsonResponse",
+      "flash_messages.as_dict",
+      "render_to_string"
+    ],
+    "candidate_id": "4d7d61b18dde0ad5",
+    "delete_count": 0,
+    "function_name": "json_response",
+    "loop_count": 0,
+    "raise_count": 0,
+    "resolved": true,
+    "return_none_count": 0,
+    "return_value_count": 1,
+    "structural_primitives": [
+      "CALL_DEPENDENCY",
+      "VALUE_RETURN"
+    ],
+    "subscript_write_count": 0,
+    "try_count": 0,
+    "with_count": 0,
+    "yield_count": 0
+  },
+  "63e7979762bf860b": {
+    "candidate_id": "63e7979762bf860b",
+    "resolved": false
+  },
+  "7460029971aad8de": {
+    "candidate_id": "7460029971aad8de",
+    "resolved": false
+  },
+  "7bc9603bfbda7dc9": {
+    "arguments": [
+      "famille",
+      "period",
+      "parameters"
+    ],
+    "attribute_writes": [],
+    "await_count": 0,
+    "branch_count": 0,
+    "calls": [
+      "famille",
+      "famille",
+      "famille",
+      "famille",
+      "famille",
+      "famille",
+      "famille",
+      "famille",
+      "famille.any",
+      "famille.members",
+      "famille.members",
+      "famille.sum",
+      "max_",
+      "max_",
+      "nb_enf",
+      "nb_enf",
+      "nb_enf",
+      "not_",
+      "not_",
+      "parameters",
+      "parameters"
+    ],
+    "candidate_id": "7bc9603bfbda7dc9",
+    "delete_count": 0,
+    "function_name": "formula_2017_04_01",
+    "loop_count": 0,
+    "raise_count": 0,
+    "resolved": true,
+    "return_none_count": 0,
+    "return_value_count": 1,
+    "structural_primitives": [
+      "CALL_DEPENDENCY",
+      "VALUE_RETURN"
+    ],
+    "subscript_write_count": 0,
+    "try_count": 0,
+    "with_count": 0,
+    "yield_count": 0
+  },
+  "7cf281a33e5781df": {
+    "candidate_id": "7cf281a33e5781df",
+    "resolved": false
+  },
+  "8048a564541f5408": {
+    "candidate_id": "8048a564541f5408",
+    "resolved": false
+  },
+  "882c5eae0d8fd4ec": {
+    "candidate_id": "882c5eae0d8fd4ec",
+    "resolved": false
+  },
+  "8a754dadf1672d0a": {
+    "candidate_id": "8a754dadf1672d0a",
+    "resolved": false
+  },
+  "91b2dc32504282fc": {
+    "candidate_id": "91b2dc32504282fc",
+    "resolved": false
+  },
+  "a09e038870c9b436": {
+    "candidate_id": "a09e038870c9b436",
+    "resolved": false
+  },
+  "a79d9687185720aa": {
+    "candidate_id": "a79d9687185720aa",
+    "resolved": false
+  },
+  "b2996c3dd81aca55": {
+    "candidate_id": "b2996c3dd81aca55",
+    "resolved": false
+  },
+  "bcb091a940a8d0dd": {
+    "candidate_id": "bcb091a940a8d0dd",
+    "resolved": false
+  },
+  "d7f578c3a5f20b8a": {
+    "candidate_id": "d7f578c3a5f20b8a",
+    "resolved": false
+  },
+  "eb12d3a44210a486": {
+    "candidate_id": "eb12d3a44210a486",
+    "resolved": false
+  }
+}

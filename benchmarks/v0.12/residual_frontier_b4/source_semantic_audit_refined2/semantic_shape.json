@@ -1,0 +1,30 @@
+{
+  "ast_node_count": 33,
+  "attribute_writes": [],
+  "boolean_operation_count": 0,
+  "branch_count": 1,
+  "calls": [
+    "__init__",
+    "get_deferred_fields",
+    "_transaction_key_reset",
+    "super"
+  ],
+  "candidate_id": "674ea6fd35fa6c39",
+  "class_name": "OrderFee",
+  "comparison_count": 0,
+  "comprehension_count": 0,
+  "container_mutation_calls": [],
+  "control_score": 1,
+  "function_name": "__init__",
+  "location_count": 2,
+  "loop_count": 0,
+  "nested_functions": [],
+  "raise_count": 0,
+  "representative_path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+  "resolution_status": "EQUIVALENT_SOURCE_BODY_CLUSTER_RESOLVED",
+  "return_count": 0,
+  "semantic_shape_available": true,
+  "state_effect_calls": [],
+  "state_effect_score": 0,
+  "subscript_writes": []
+}

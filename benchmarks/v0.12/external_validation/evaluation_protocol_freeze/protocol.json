@@ -1,0 +1,178 @@
+{
+  "A2_constraints": {
+    "NO_COUNTEREXAMPLE_means_PROVED": false,
+    "accepted_projection_scope_must_be_reported": true,
+    "existing_v012_gates_only": true,
+    "formal_mutant_refutation_required": true,
+    "full_arbitrary_source_equivalence_claim": false,
+    "mutant_may_not_be_changed_after_observing_failure": true,
+    "prospective_mutant_required_if_A2_attempted": true
+  },
+  "claim_boundary": {
+    "allowed": "prospective external validation evidence on 120 functions from 12 unseen projects under the frozen V0.12 protocol",
+    "not_allowed": [
+      "universal business-software semantic coverage",
+      "universal formal equivalence",
+      "post-hoc repaired V0.12 external yield",
+      "dropping difficult cases from the denominator",
+      "reclassifying infrastructure failures as successes",
+      "claiming NO_COUNTEREXAMPLE as proof"
+    ]
+  },
+  "configuration_lock": {
+    "allowed_cli_overrides": [
+      "input case path",
+      "output evidence path",
+      "deterministic case identifier"
+    ],
+    "external_case_specific_configuration": false,
+    "external_project_specific_configuration": false,
+    "semantic_cli_overrides": false,
+    "semantic_configuration": "existing V0.12 implementation defaults at v0.12-external-cohort-freeze"
+  },
+  "current_state": {
+    "cases_attempted": 0,
+    "evaluation_runner_frozen": false,
+    "external_execution_started": false,
+    "external_results_frozen": false,
+    "scientific_outcomes_observed": 0
+  },
+  "evaluation_order": {
+    "case_count": 120,
+    "early_stopping": false,
+    "order_sha256": "f75c9cb3b9d540f389dec2a1d256e52d96f809a062563cecd6463b789ec2a2f3",
+    "policy": "strict ascending evaluation_index",
+    "project_failure_may_stop_campaign": false,
+    "semantic_failure_may_stop_campaign": false
+  },
+  "execution": {
+    "case_removal": false,
+    "case_substitution": false,
+    "checkpoint_every_cases": 10,
+    "evaluate_all_120": true,
+    "mode": "sequential",
+    "order_change": false,
+    "parallelism": 1,
+    "project_substitution": false
+  },
+  "implementation_lock": {
+    "allowed_changes_before_execution": [
+      "evaluation orchestration that does not alter BIZPROOF semantic behavior",
+      "result serialization and deterministic checkpointing",
+      "infrastructure-only compatibility fixes that cannot change a scientific verdict"
+    ],
+    "candidate_specific_exception": false,
+    "new_capability_destination": "V0.13 or later",
+    "new_external_specific_mutant_rule": false,
+    "new_external_specific_projection_rule": false,
+    "new_semantic_adapter": false,
+    "semantic_threshold_retuning": false,
+    "src_modification_after_first_external_outcome": false,
+    "tests_modification_to_change_external_outcome": false,
+    "v012_semantic_implementation": "frozen at external cohort tag"
+  },
+  "infrastructure_outcome": {
+    "allowed_retry_changes": [
+      "process restart",
+      "container restart",
+      "filesystem/output repair",
+      "non-semantic runtime environment repair"
+    ],
+    "forbidden_retry_changes": [
+      "source-code semantic modification",
+      "new adapter",
+      "new projection",
+      "threshold change",
+      "mutant change motivated by observed result",
+      "case substitution"
+    ],
+    "if_unresolved_after_retries": "retain the case in the 120-case denominator, report infrastructure-unresolved separately, and do not classify it as certified",
+    "label": "INFRASTRUCTURE_RETRY_REQUIRED",
+    "maximum_retries_after_initial_attempt": 2,
+    "retry_requirements": [
+      "same case",
+      "same frozen source body",
+      "same V0.12 semantic implementation",
+      "same semantic configuration",
+      "same evaluation position"
+    ],
+    "scientific_verdict": false
+  },
+  "parent_cohort": {
+    "case_count": 120,
+    "cohort_sha256": "8278187b459ce67d400230b7acce84943968e2ba502e7e9371c53987251f9033",
+    "commit": "c47deb54ebd452816c2118fd9f04c16ae5c1d87b",
+    "project_count": 12,
+    "tag": "v0.12-external-cohort-freeze"
+  },
+  "phase": "V0.12-E2A",
+  "primary_endpoints": {
+    "A2_yield": {
+      "denominator": 120,
+      "numerator": "CERTIFIED_A2"
+    },
+    "certification_yield": {
+      "denominator": 120,
+      "numerator": "CERTIFIED_A1 + CERTIFIED_A2"
+    }
+  },
+  "reporting": {
+    "all_120_cases_reported": true,
+    "cohort_level_interval": "Wilson 95%",
+    "infrastructure_failures_reported": true,
+    "macro_project_average": true,
+    "micro_average": true,
+    "negative_results_reported": true,
+    "per_project_results": true,
+    "per_stratum_results": true,
+    "runtime_descriptive_only": true
+  },
+  "result_record_required_fields": [
+    "evaluation_index",
+    "case_id",
+    "project",
+    "source_sha256",
+    "stratum",
+    "attempt_number",
+    "scientific_outcome",
+    "certified",
+    "a_level",
+    "replay_status",
+    "formal_status",
+    "failure_taxonomy",
+    "infrastructure_status",
+    "started_at",
+    "finished_at",
+    "evidence_paths"
+  ],
+  "schema_version": "BIZPROOF-V0.12-EXTERNAL-EVALUATION-PROTOCOL-1",
+  "scientific_outcomes": {
+    "AMBIGUOUS": {
+      "counts_as_certified": false,
+      "meaning": "V0.12 cannot resolve a unique admissible semantic interpretation under its frozen rules"
+    },
+    "CERTIFIED_A1": {
+      "counts_as_certified": true,
+      "meaning": "case satisfies the already-frozen V0.12 A1 certification requirements"
+    },
+    "CERTIFIED_A2": {
+      "counts_as_certified": true,
+      "meaning": "case satisfies the already-frozen V0.12 A2 requirements, including required replay/equivalence evidence and formal mutant refutation within the accepted semantics"
+    },
+    "UNSUPPORTED": {
+      "counts_as_certified": false,
+      "meaning": "case requires semantics not supported by the frozen V0.12 capability set"
+    }
+  },
+  "secondary_endpoints": [
+    "AMBIGUOUS rate over 120",
+    "UNSUPPORTED rate over 120",
+    "infrastructure-unresolved rate over 120",
+    "certification yield per project",
+    "macro-average project certification yield",
+    "certification yield per frozen stratum",
+    "A2 mutant-refutation success among A2 attempts",
+    "exact-source replay success where required",
+    "failure taxonomy"
+  ]
+}

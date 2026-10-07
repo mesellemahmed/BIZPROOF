@@ -1,0 +1,15 @@
+{
+  "candidate_id": "bcb091a940a8d0dd",
+  "certification_claim": false,
+  "class": "BasketView",
+  "controlled_execution_status": "ESTABLISHED",
+  "execution_cases": 1,
+  "execution_probe_digest": "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89",
+  "function": "get_formset_kwargs",
+  "function_sha256": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+  "interpretation": "Controlled execution is established, but certification is withheld because the required mutable framework, object, service, cache, signal, request, model, or collection semantics exceed the frozen V0.11 formal subset.",
+  "negative_evidence_digest": "bec79c3c035f95d04c822c14f18d4839b03fb1d92c5ff92af29d650b9740d2b6",
+  "reason_code": "FRAMEWORK_DICT_MUTATION_OUTSIDE_FORMAL_SUBSET",
+  "source": "django_oscar",
+  "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+}

@@ -1,0 +1,30 @@
+{
+  "binding_contract": {
+    "import_source": "from decimal import Decimal as D",
+    "local_name": "D",
+    "module": "decimal",
+    "symbol": "Decimal"
+  },
+  "candidate_certification": false,
+  "candidate_id": "aab5348ee173d6e3",
+  "certification_claim": false,
+  "constructor_argument": "0.00",
+  "contract_id": "SC-D-DECIMAL-001",
+  "file": "src/oscar/apps/offer/abstract_models.py",
+  "function": "shipping_discount",
+  "primitive": "D",
+  "runtime_validation": {
+    "digits": [
+      0
+    ],
+    "exponent": -2,
+    "numeric_zero": true,
+    "sign": 0,
+    "string_representation": "0.00"
+  },
+  "scope": "observed invocation D('0.00')",
+  "semantic_contract_status": "VALIDATED",
+  "semantic_type": "decimal.Decimal",
+  "source_expression": "D('0.00')",
+  "source_id": "django_oscar"
+}

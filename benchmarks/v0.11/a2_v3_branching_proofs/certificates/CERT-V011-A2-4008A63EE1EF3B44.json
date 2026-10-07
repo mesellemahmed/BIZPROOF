@@ -1,0 +1,53 @@
+{
+  "adapter": {
+    "function": "adapt_event_permission",
+    "function_sha256": "8283aeadf68f87628ea7d9508bffca5d0d2496164ae7873eeac8dab6a01153c3",
+    "mutant_function": "mutant_event_permission",
+    "mutant_function_sha256": "014d5fd4bec27e06e6744d85c46b9febd18c3bbdcb71db07ccd5c40a00ee5dc8",
+    "semantic_adapter": "EVENT_PERMISSION"
+  },
+  "assistance_level": "A2",
+  "authoring_mode": "EXPLICIT_MANUAL_SCALAR_SEMANTIC_ADAPTER",
+  "candidate_id": "4008a63ee1ef3b44",
+  "certificate_digest": "fd2f3cd418cc89de120747162c47a4190b2a8750330a7bd8327b6c8d5737452c",
+  "certificate_id": "CERT-V011-A2-4008A63EE1EF3B44",
+  "claim_scope": "Certification applies only to the explicit scalar semantic projection and declared source-to-adapter bindings. It does not certify database, ORM, localization or framework behavior outside that projection.",
+  "evidence": {
+    "proof_digest": "b4e9ebb0eea1ab1d2a995fb2ceb12e6f3f8254a82c531c652532e1ed9eae8cfe",
+    "runtime": {
+      "adapter_mismatches": 0,
+      "comparisons": 256,
+      "mutant_mismatches": 20,
+      "validation_domain": "all-events, organizer equality, event membership, four permission sets and scalar/list/tuple permission names"
+    },
+    "symbolic": {
+      "correct_proved": true,
+      "correct_solver_status": "unsat",
+      "mutant_disproved": true,
+      "mutant_solver_status": "sat",
+      "symbolic_domain": "boolean abstraction of event access and one/two permission membership predicates"
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 75,
+    "text": "- `CERTIFIED_A2`: certified with an explicit human-authored scalar semantic adapter."
+  },
+  "schema_version": "BIZPROOF-V0.11-A2-CERTIFICATE-1",
+  "semantic_binding_scope": "all-events access, organizer equality, event membership, permission-set membership and permission-name shape are explicit bindings of the locked source predicates.",
+  "source": {
+    "class": "Device",
+    "file": "src/pretix/base/models/devices.py",
+    "function": "has_event_permission",
+    "function_sha256": "d0282dfce474ae4d28a442a0b1e6fd555b6cb92a5d128e80c4ca5687244ec5b3",
+    "lines": [
+      236,
+      253
+    ],
+    "source_file_sha256": "f7db49ebd610feb1f27d5c49db07353d4abdf3a3937bfe9c6b4e89c5a0b786b3",
+    "source_id": "pretix"
+  },
+  "status": "CERTIFIED_A2",
+  "terminal_outcome": "CERTIFIED_A2",
+  "terminal_outcome_assigned": true
+}

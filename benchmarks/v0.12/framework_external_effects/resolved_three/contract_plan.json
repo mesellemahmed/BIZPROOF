@@ -1,0 +1,41 @@
+{
+  "candidate_count": 3,
+  "certification_started": false,
+  "contracts": {
+    "1311d905af0ebcb5": {
+      "generic_contracts": [
+        "Redis/cache operations are represented as ordered declarative effect records.",
+        "No Redis server execution is part of the certified semantics.",
+        "Conditional control flow determines which effect records occur.",
+        "Effect ordering is observable."
+      ],
+      "proposed_observation": "(return=None, ordered external effect trace)",
+      "semantic_capability": "EXPLICIT_EXTERNAL_EFFECT_TRACE"
+    },
+    "4d7d61b18dde0ad5": {
+      "generic_contracts": [
+        "Framework response construction is observed extensionally through constructor inputs.",
+        "Template rendering and flash-message extraction are explicit dependency results.",
+        "No HTTP server transport behaviour is claimed."
+      ],
+      "proposed_observation": "structured response record instead of opaque JsonResponse object identity",
+      "semantic_capability": "STRUCTURED_FRAMEWORK_RESPONSE"
+    },
+    "7bc9603bfbda7dc9": {
+      "generic_contracts": [
+        "Framework helper calls are replaced by explicit semantic inputs.",
+        "The business formula itself remains source-equivalent after dependency substitution.",
+        "Aggregate/member helper results are represented by their explicit scalar/boolean observations."
+      ],
+      "proposed_observation": "scalar return over explicit helper/parameter observations",
+      "semantic_capability": "COMPOSITIONAL_SCALAR_HELPER_CLOSURE"
+    }
+  },
+  "recovery_claims": 0,
+  "schema_version": "BIZPROOF-V0.12-B1-CONTRACT-PLAN-1",
+  "source_profiles_present": [
+    "1311d905af0ebcb5",
+    "4d7d61b18dde0ad5",
+    "7bc9603bfbda7dc9"
+  ]
+}

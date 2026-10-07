@@ -1,0 +1,599 @@
+{
+  "baseline_executed": false,
+  "candidate_count": 6,
+  "candidates": [
+    {
+      "adapter": {
+        "args": [
+          {
+            "annotation": "int",
+            "name": "discount"
+          }
+        ],
+        "file_sha256": "65e29348c95f9d285dcbebf98cfa66bef0507888b5a8901ca0f90dbc3a75fb58",
+        "name": "adapt_basket_discount_success",
+        "path": "src\\bizproof\\generalization_a2_v1_proof.py",
+        "return_annotation": "bool",
+        "source": "def adapt_basket_discount_success(\n    discount: int,\n) -> bool:\n\n    return discount > 0",
+        "source_sha256": "18316854099975c5ba73f47edc62a24267b1458f9a3225a4f271ca702544b6d4"
+      },
+      "baseline_executed": false,
+      "candidate_id": "331f175e4aa92eef",
+      "domain_evidence": [
+        {
+          "artifact": "a2_v1_scalar_proofs\\certificates\\CERT-V011-A2-331F175E4AA92EEF.json",
+          "key_path": "evidence.runtime.comparisons",
+          "value": "7"
+        },
+        {
+          "artifact": "a2_v1_scalar_proofs\\certificates\\CERT-V011-A2-331F175E4AA92EEF.json",
+          "key_path": "evidence.symbolic.domain",
+          "value": "\"REAL_DISCOUNT\""
+        },
+        {
+          "artifact": "a2_v1_scalar_proofs\\proofs.jsonl",
+          "key_path": "runtime.comparisons",
+          "value": "7"
+        },
+        {
+          "artifact": "a2_v1_scalar_proofs\\proofs.jsonl",
+          "key_path": "symbolic.domain",
+          "value": "\"REAL_DISCOUNT\""
+        },
+        {
+          "artifact": "feasibility\\assessment.jsonl",
+          "key_path": "stratum.sample_size",
+          "value": "10"
+        },
+        {
+          "artifact": "results\\cohort.jsonl",
+          "key_path": "stratum.sample_size",
+          "value": "10"
+        }
+      ],
+      "domain_evidence_count": 6,
+      "mutant": {
+        "args": [
+          {
+            "annotation": "int",
+            "name": "discount"
+          }
+        ],
+        "file_sha256": "65e29348c95f9d285dcbebf98cfa66bef0507888b5a8901ca0f90dbc3a75fb58",
+        "name": "mutant_basket_discount_success",
+        "path": "src\\bizproof\\generalization_a2_v1_proof.py",
+        "return_annotation": "bool",
+        "source": "def mutant_basket_discount_success(\n    discount: int,\n) -> bool:\n\n    return discount >= 0",
+        "source_sha256": "9efb01543feb5255d94f31bac7987f2927823b09a254e8334f89dd479f0d6260"
+      },
+      "signature_verified": true,
+      "strict_scalar_signature": true
+    },
+    {
+      "adapter": {
+        "args": [
+          {
+            "annotation": "bool",
+            "name": "is_tax_known"
+          }
+        ],
+        "file_sha256": "65e29348c95f9d285dcbebf98cfa66bef0507888b5a8901ca0f90dbc3a75fb58",
+        "name": "adapt_line_tax_known",
+        "path": "src\\bizproof\\generalization_a2_v1_proof.py",
+        "return_annotation": "bool",
+        "source": "def adapt_line_tax_known(\n    is_tax_known: bool,\n) -> bool:\n\n    return is_tax_known",
+        "source_sha256": "5316721bcbeaada92208e93571af2e26f89263ea1e8db810576d305a81e5c1a6"
+      },
+      "baseline_executed": false,
+      "candidate_id": "9603b9192132171c",
+      "domain_evidence": [
+        {
+          "artifact": "a2_v1_scalar_proofs\\certificates\\CERT-V011-A2-9603B9192132171C.json",
+          "key_path": "evidence.runtime.comparisons",
+          "value": "2"
+        },
+        {
+          "artifact": "a2_v1_scalar_proofs\\certificates\\CERT-V011-A2-9603B9192132171C.json",
+          "key_path": "evidence.symbolic.domain",
+          "value": "\"BOOLEAN_TAX_STATE\""
+        },
+        {
+          "artifact": "a2_v1_scalar_proofs\\proofs.jsonl",
+          "key_path": "runtime.comparisons",
+          "value": "2"
+        },
+        {
+          "artifact": "a2_v1_scalar_proofs\\proofs.jsonl",
+          "key_path": "symbolic.domain",
+          "value": "\"BOOLEAN_TAX_STATE\""
+        },
+        {
+          "artifact": "feasibility\\assessment.jsonl",
+          "key_path": "stratum.sample_size",
+          "value": "10"
+        },
+        {
+          "artifact": "results\\cohort.jsonl",
+          "key_path": "stratum.sample_size",
+          "value": "10"
+        }
+      ],
+      "domain_evidence_count": 6,
+      "mutant": {
+        "args": [
+          {
+            "annotation": "bool",
+            "name": "is_tax_known"
+          }
+        ],
+        "file_sha256": "65e29348c95f9d285dcbebf98cfa66bef0507888b5a8901ca0f90dbc3a75fb58",
+        "name": "mutant_line_tax_known",
+        "path": "src\\bizproof\\generalization_a2_v1_proof.py",
+        "return_annotation": "bool",
+        "source": "def mutant_line_tax_known(\n    is_tax_known: bool,\n) -> bool:\n\n    return not is_tax_known",
+        "source_sha256": "fb563339ca579fa56aae3439e3e7c44f1cf3de3b68a4b122b24a7858446f0a8f"
+      },
+      "signature_verified": true,
+      "strict_scalar_signature": true
+    },
+    {
+      "adapter": {
+        "args": [],
+        "file_sha256": "f766e700bca6d0829ef2fc8bd08aefc61ee7ab9a482702573198038e526096d9",
+        "name": "_adapter_shipping_discount",
+        "path": "src\\bizproof\\generalization_candidate_proof.py",
+        "return_annotation": "Decimal",
+        "source": "def _adapter_shipping_discount() -> Decimal:\n\n    return Decimal(\"0.00\")",
+        "source_sha256": "29ce22eb207b219f1643eabcfba4bc47f0ae190052d365c1018357886a193984"
+      },
+      "baseline_executed": false,
+      "candidate_id": "aab5348ee173d6e3",
+      "domain_evidence": [
+        {
+          "artifact": "candidate_proof_frontier\\shipping_discount_proof.json",
+          "key_path": "frozen_candidate_metadata.stratum.sample_size",
+          "value": "10"
+        },
+        {
+          "artifact": "candidate_proof_frontier\\shipping_discount_proof.json",
+          "key_path": "mutant_sensitivity.runtime_cases",
+          "value": "18"
+        },
+        {
+          "artifact": "candidate_proof_frontier\\shipping_discount_proof.json",
+          "key_path": "source_executed_preservation.comparisons",
+          "value": "18"
+        },
+        {
+          "artifact": "candidate_proof_frontier\\shipping_discount_proof.json",
+          "key_path": "stratum.sample_size",
+          "value": "10"
+        },
+        {
+          "artifact": "contracts\\contract_skeletons.jsonl",
+          "key_path": "binding_obligations.0.call_descriptor.arguments.0.value",
+          "value": "\"0.00\""
+        },
+        {
+          "artifact": "contracts\\contract_skeletons.jsonl",
+          "key_path": "domain_status",
+          "value": "\"UNRESOLVED\""
+        },
+        {
+          "artifact": "contracts\\contract_skeletons.jsonl",
+          "key_path": "input_references",
+          "value": "[]"
+        },
+        {
+          "artifact": "feasibility\\assessment.jsonl",
+          "key_path": "stratum.sample_size",
+          "value": "10"
+        },
+        {
+          "artifact": "results\\cohort.jsonl",
+          "key_path": "stratum.sample_size",
+          "value": "10"
+        },
+        {
+          "artifact": "symbolic_probe\\probe.jsonl",
+          "key_path": "input_reference_count",
+          "value": "0"
+        },
+        {
+          "artifact": "symbolic_probe\\probe.jsonl",
+          "key_path": "input_references",
+          "value": "[]"
+        },
+        {
+          "artifact": "terminal_certification\\CERT-V011-OSCAR-SHIPPING-001.json",
+          "key_path": "checks.runtime-comparisons",
+          "value": "true"
+        },
+        {
+          "artifact": "terminal_certification\\CERT-V011-OSCAR-SHIPPING-001.json",
+          "key_path": "cohort.sample_size",
+          "value": "90"
+        },
+        {
+          "artifact": "terminal_certification\\CERT-V011-OSCAR-SHIPPING-001.json",
+          "key_path": "evidence.source_executed_preservation.comparisons",
+          "value": "18"
+        }
+      ],
+      "domain_evidence_count": 14,
+      "mutant": {
+        "args": [],
+        "file_sha256": "f766e700bca6d0829ef2fc8bd08aefc61ee7ab9a482702573198038e526096d9",
+        "name": "_mutant_shipping_discount",
+        "path": "src\\bizproof\\generalization_candidate_proof.py",
+        "return_annotation": "Decimal",
+        "source": "def _mutant_shipping_discount() -> Decimal:\n\n    return Decimal(\"0.01\")",
+        "source_sha256": "b16e12643287c11a649a88dd3fd5509f466ee008be3c694b102394dd6ad2309a"
+      },
+      "signature_verified": true,
+      "strict_scalar_signature": true
+    },
+    {
+      "adapter": {
+        "args": [
+          {
+            "annotation": "int",
+            "name": "age_reference"
+          },
+          {
+            "annotation": "int",
+            "name": "age_spouse"
+          },
+          {
+            "annotation": "bool",
+            "name": "reference_is_widowed"
+          },
+          {
+            "annotation": "int",
+            "name": "aah"
+          },
+          {
+            "annotation": "int",
+            "name": "asi"
+          },
+          {
+            "annotation": "int",
+            "name": "aspa"
+          },
+          {
+            "annotation": "int",
+            "name": "isf_ifi"
+          },
+          {
+            "annotation": "bool",
+            "name": "rfr_condition"
+          },
+          {
+            "annotation": "int",
+            "name": "exemption_age"
+          }
+        ],
+        "file_sha256": "22d23e5b5535201becf6dfe3262123d3f0565aab51d2ba608dd6866e8680db4c",
+        "name": "adapt_housing_tax_exemption",
+        "path": "src\\bizproof\\generalization_a2_v2_proof.py",
+        "return_annotation": "int",
+        "source": "def adapt_housing_tax_exemption(\n    age_reference: int,\n    age_spouse: int,\n    reference_is_widowed: bool,\n    aah: int,\n    asi: int,\n    aspa: int,\n    isf_ifi: int,\n    rfr_condition: bool,\n    exemption_age: int,\n) -> int:\n\n    unconditional = int(asi > 0) + int(aspa > 0)\n\n    conditional = (\n        int(age_reference >= exemption_age)\n        + int(age_spouse >= exemption_age)\n        + int(reference_is_widowed)\n    ) * int(isf_ifi == 0) + int(aah > 0)\n\n    return unconditional + conditional * int(rfr_condition)",
+        "source_sha256": "944ddb5b439da51d1d56571fab7d3b7523f6038dfd501ea4663f157ee4799096"
+      },
+      "baseline_executed": false,
+      "candidate_id": "e293930485085dac",
+      "domain_evidence": [
+        {
+          "artifact": "a2_v2_straight_proofs\\certificates\\CERT-V011-A2-E293930485085DAC.json",
+          "key_path": "evidence.runtime.comparisons",
+          "value": "576"
+        },
+        {
+          "artifact": "a2_v2_straight_proofs\\certificates\\CERT-V011-A2-E293930485085DAC.json",
+          "key_path": "evidence.runtime.validation_domain",
+          "value": "\"bounded ages and boolean/0-1 benefit-tax-condition grid\""
+        },
+        {
+          "artifact": "a2_v2_straight_proofs\\certificates\\CERT-V011-A2-E293930485085DAC.json",
+          "key_path": "evidence.symbolic.symbolic_domain",
+          "value": "\"nonnegative ages/benefit/tax scalars with boolean widow/RFR\""
+        },
+        {
+          "artifact": "a2_v2_straight_proofs\\proofs.jsonl",
+          "key_path": "runtime.comparisons",
+          "value": "576"
+        },
+        {
+          "artifact": "a2_v2_straight_proofs\\proofs.jsonl",
+          "key_path": "runtime.validation_domain",
+          "value": "\"bounded ages and boolean/0-1 benefit-tax-condition grid\""
+        },
+        {
+          "artifact": "a2_v2_straight_proofs\\proofs.jsonl",
+          "key_path": "symbolic.symbolic_domain",
+          "value": "\"nonnegative ages/benefit/tax scalars with boolean widow/RFR\""
+        },
+        {
+          "artifact": "feasibility\\assessment.jsonl",
+          "key_path": "stratum.sample_size",
+          "value": "10"
+        },
+        {
+          "artifact": "results\\cohort.jsonl",
+          "key_path": "stratum.sample_size",
+          "value": "10"
+        }
+      ],
+      "domain_evidence_count": 8,
+      "mutant": {
+        "args": [
+          {
+            "annotation": "int",
+            "name": "age_reference"
+          },
+          {
+            "annotation": "int",
+            "name": "age_spouse"
+          },
+          {
+            "annotation": "bool",
+            "name": "reference_is_widowed"
+          },
+          {
+            "annotation": "int",
+            "name": "aah"
+          },
+          {
+            "annotation": "int",
+            "name": "asi"
+          },
+          {
+            "annotation": "int",
+            "name": "aspa"
+          },
+          {
+            "annotation": "int",
+            "name": "isf_ifi"
+          },
+          {
+            "annotation": "bool",
+            "name": "rfr_condition"
+          },
+          {
+            "annotation": "int",
+            "name": "exemption_age"
+          }
+        ],
+        "file_sha256": "22d23e5b5535201becf6dfe3262123d3f0565aab51d2ba608dd6866e8680db4c",
+        "name": "mutant_housing_tax_exemption",
+        "path": "src\\bizproof\\generalization_a2_v2_proof.py",
+        "return_annotation": "int",
+        "source": "def mutant_housing_tax_exemption(\n    age_reference: int,\n    age_spouse: int,\n    reference_is_widowed: bool,\n    aah: int,\n    asi: int,\n    aspa: int,\n    isf_ifi: int,\n    rfr_condition: bool,\n    exemption_age: int,\n) -> int:\n\n    del rfr_condition\n\n    unconditional = int(asi > 0) + int(aspa > 0)\n\n    conditional = (\n        int(age_reference >= exemption_age)\n        + int(age_spouse >= exemption_age)\n        + int(reference_is_widowed)\n    ) * int(isf_ifi == 0) + int(aah > 0)\n\n    return unconditional + conditional",
+        "source_sha256": "e7c39b7fc0f5b7df315dad899cb5953926ebdd9b21089832b4ea6421825ee5a9"
+      },
+      "signature_verified": true,
+      "strict_scalar_signature": true
+    },
+    {
+      "adapter": {
+        "args": [
+          {
+            "annotation": "int",
+            "name": "num_available"
+          },
+          {
+            "annotation": "int",
+            "name": "quantity"
+          }
+        ],
+        "file_sha256": "5d7adc99c1bec9403b55665b8a0d1d1b642de93a6e9f4ab86759cb7a6cdf0744",
+        "name": "adapt_stock_purchase_permission",
+        "path": "src\\bizproof\\generalization_a2_residual_closure.py",
+        "return_annotation": "bool",
+        "source": "def adapt_stock_purchase_permission(\n    num_available: int,\n    quantity: int,\n) -> bool:\n\n    if num_available <= 0:\n        return False\n\n    if quantity > num_available:\n        return False\n\n    return True",
+        "source_sha256": "0c11c3677a21de13ca38e349cb20dcc7283e6ae2003aa218334d2649e8f60a40"
+      },
+      "baseline_executed": false,
+      "candidate_id": "f3ebe6cce422947e",
+      "domain_evidence": [
+        {
+          "artifact": "a2_residual_closure\\certificates\\CERT-V011-A2-F3EBE6CCE422947E.json",
+          "key_path": "evidence.runtime.comparisons",
+          "value": "25"
+        },
+        {
+          "artifact": "a2_residual_closure\\certificates\\CERT-V011-A2-F3EBE6CCE422947E.json",
+          "key_path": "evidence.runtime.validation_domain",
+          "value": "\"num_available in {-1,0,1,2,5}; quantity in {0,1,2,5,6}\""
+        },
+        {
+          "artifact": "a2_residual_closure\\certificates\\CERT-V011-A2-F3EBE6CCE422947E.json",
+          "key_path": "evidence.symbolic.symbolic_domain",
+          "value": "\"unrestricted integer availability and requested quantity\""
+        },
+        {
+          "artifact": "a2_residual_closure\\proofs.jsonl",
+          "key_path": "runtime.comparisons",
+          "value": "25"
+        },
+        {
+          "artifact": "a2_residual_closure\\proofs.jsonl",
+          "key_path": "runtime.validation_domain",
+          "value": "\"num_available in {-1,0,1,2,5}; quantity in {0,1,2,5,6}\""
+        },
+        {
+          "artifact": "a2_residual_closure\\proofs.jsonl",
+          "key_path": "symbolic.symbolic_domain",
+          "value": "\"unrestricted integer availability and requested quantity\""
+        },
+        {
+          "artifact": "feasibility\\assessment.jsonl",
+          "key_path": "stratum.sample_size",
+          "value": "10"
+        },
+        {
+          "artifact": "results\\cohort.jsonl",
+          "key_path": "stratum.sample_size",
+          "value": "10"
+        }
+      ],
+      "domain_evidence_count": 8,
+      "mutant": {
+        "args": [
+          {
+            "annotation": "int",
+            "name": "num_available"
+          },
+          {
+            "annotation": "int",
+            "name": "quantity"
+          }
+        ],
+        "file_sha256": "5d7adc99c1bec9403b55665b8a0d1d1b642de93a6e9f4ab86759cb7a6cdf0744",
+        "name": "mutant_stock_purchase_permission",
+        "path": "src\\bizproof\\generalization_a2_residual_closure.py",
+        "return_annotation": "bool",
+        "source": "def mutant_stock_purchase_permission(\n    num_available: int,\n    quantity: int,\n) -> bool:\n\n    if num_available <= 0:\n        return False\n\n    if quantity >= num_available:\n        return False\n\n    return True",
+        "source_sha256": "e4daaf98023645d45c69f44692fd7751e4dfdd5cfba8bc4953a29b9aac1bb88b"
+      },
+      "signature_verified": true,
+      "strict_scalar_signature": true
+    },
+    {
+      "adapter": {
+        "args": [
+          {
+            "annotation": "int",
+            "name": "age_declarant"
+          },
+          {
+            "annotation": "bool",
+            "name": "declarant_invalid"
+          },
+          {
+            "annotation": "int",
+            "name": "age_spouse"
+          },
+          {
+            "annotation": "bool",
+            "name": "spouse_invalid"
+          },
+          {
+            "annotation": "int",
+            "name": "global_income"
+          },
+          {
+            "annotation": "int",
+            "name": "married_children"
+          },
+          {
+            "annotation": "int",
+            "name": "age_invalidity_allowance"
+          },
+          {
+            "annotation": "int",
+            "name": "married_child_allowance"
+          }
+        ],
+        "file_sha256": "22d23e5b5535201becf6dfe3262123d3f0565aab51d2ba608dd6866e8680db4c",
+        "name": "adapt_special_allowance",
+        "path": "src\\bizproof\\generalization_a2_v2_proof.py",
+        "return_annotation": "int",
+        "source": "def adapt_special_allowance(\n    age_declarant: int,\n    declarant_invalid: bool,\n    age_spouse: int,\n    spouse_invalid: bool,\n    global_income: int,\n    married_children: int,\n    age_invalidity_allowance: int,\n    married_child_allowance: int,\n) -> int:\n\n    eligible_people = int((age_declarant >= 65 or declarant_invalid) and age_declarant > 0) + int(\n        (age_spouse >= 65 or spouse_invalid) and age_spouse > 0\n    )\n\n    invalidity_amount = eligible_people * age_invalidity_allowance\n\n    children_amount = married_children * married_child_allowance\n\n    return min(\n        global_income,\n        invalidity_amount + children_amount,\n    )",
+        "source_sha256": "98342f329ce0b8fb5d77ec5cc1735fa02be22192fbe860f77fac4cc3cd7b577e"
+      },
+      "baseline_executed": false,
+      "candidate_id": "f5d217dec0cf902b",
+      "domain_evidence": [
+        {
+          "artifact": "a2_v2_straight_proofs\\certificates\\CERT-V011-A2-F5D217DEC0CF902B.json",
+          "key_path": "evidence.runtime.comparisons",
+          "value": "1536"
+        },
+        {
+          "artifact": "a2_v2_straight_proofs\\certificates\\CERT-V011-A2-F5D217DEC0CF902B.json",
+          "key_path": "evidence.runtime.validation_domain",
+          "value": "\"bounded scalar age, invalidity, income, child and allowance grid\""
+        },
+        {
+          "artifact": "a2_v2_straight_proofs\\certificates\\CERT-V011-A2-F5D217DEC0CF902B.json",
+          "key_path": "evidence.symbolic.symbolic_domain",
+          "value": "\"nonnegative scalar ages, income and allowance values\""
+        },
+        {
+          "artifact": "a2_v2_straight_proofs\\proofs.jsonl",
+          "key_path": "runtime.comparisons",
+          "value": "1536"
+        },
+        {
+          "artifact": "a2_v2_straight_proofs\\proofs.jsonl",
+          "key_path": "runtime.validation_domain",
+          "value": "\"bounded scalar age, invalidity, income, child and allowance grid\""
+        },
+        {
+          "artifact": "a2_v2_straight_proofs\\proofs.jsonl",
+          "key_path": "symbolic.symbolic_domain",
+          "value": "\"nonnegative scalar ages, income and allowance values\""
+        },
+        {
+          "artifact": "feasibility\\assessment.jsonl",
+          "key_path": "stratum.sample_size",
+          "value": "10"
+        },
+        {
+          "artifact": "results\\cohort.jsonl",
+          "key_path": "stratum.sample_size",
+          "value": "10"
+        }
+      ],
+      "domain_evidence_count": 8,
+      "mutant": {
+        "args": [
+          {
+            "annotation": "int",
+            "name": "age_declarant"
+          },
+          {
+            "annotation": "bool",
+            "name": "declarant_invalid"
+          },
+          {
+            "annotation": "int",
+            "name": "age_spouse"
+          },
+          {
+            "annotation": "bool",
+            "name": "spouse_invalid"
+          },
+          {
+            "annotation": "int",
+            "name": "global_income"
+          },
+          {
+            "annotation": "int",
+            "name": "married_children"
+          },
+          {
+            "annotation": "int",
+            "name": "age_invalidity_allowance"
+          },
+          {
+            "annotation": "int",
+            "name": "married_child_allowance"
+          }
+        ],
+        "file_sha256": "22d23e5b5535201becf6dfe3262123d3f0565aab51d2ba608dd6866e8680db4c",
+        "name": "mutant_special_allowance",
+        "path": "src\\bizproof\\generalization_a2_v2_proof.py",
+        "return_annotation": "int",
+        "source": "def mutant_special_allowance(\n    age_declarant: int,\n    declarant_invalid: bool,\n    age_spouse: int,\n    spouse_invalid: bool,\n    global_income: int,\n    married_children: int,\n    age_invalidity_allowance: int,\n    married_child_allowance: int,\n) -> int:\n\n    correct = adapt_special_allowance(\n        age_declarant,\n        declarant_invalid,\n        age_spouse,\n        spouse_invalid,\n        global_income,\n        married_children,\n        age_invalidity_allowance,\n        married_child_allowance,\n    )\n\n    raw = (\n        int((age_declarant >= 65 or declarant_invalid) and age_declarant > 0)\n        + int((age_spouse >= 65 or spouse_invalid) and age_spouse > 0)\n    ) * age_invalidity_allowance\n\n    raw += married_children * married_child_allowance\n\n    return max(\n        correct,\n        raw,\n        global_income,\n    )",
+        "source_sha256": "a8496711b01e42ce80c41f81dd706f32fddee69c40364dcf91265a68dc734845"
+      },
+      "signature_verified": true,
+      "strict_scalar_signature": true
+    }
+  ],
+  "protocol_file": "benchmarks\\v0.11\\paper_baselines\\matched_baseline_protocol.json",
+  "protocol_version": "BIZPROOF-V0.11-MATCHED-BASELINE-1",
+  "source_checkpoint": "v0.11"
+}

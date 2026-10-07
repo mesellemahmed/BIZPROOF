@@ -1,0 +1,39 @@
+{
+  "all_required_gates_pass": true,
+  "authoritative_source": {
+    "class_harness_only": true,
+    "correct_source_ast_rewritten": false,
+    "matches_frozen_plan": true,
+    "sha256": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475"
+  },
+  "candidate_id": "91b2dc32504282fc",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_mutant_replay": true,
+  "formal_mutant_refutation": {
+    "model": "[discount_count = 0]",
+    "property": "for an admissible discount-sequence length, append increases the sequence by one while the OMIT_DISCOUNT_APPEND mutant does not",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "function_name": "discount",
+  "mutant": {
+    "fault": "the discount application is consumed and caches are invalidated, but the ordered discount record is not appended",
+    "name": "OMIT_DISCOUNT_APPEND"
+  },
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-B3-CERT1-A2-1",
+  "scope": {
+    "certified": "the prospectively frozen semantic projection of the exact authoritative business source",
+    "not_certified": [
+      "correctness of Django/Oscar/Pretix framework implementations",
+      "unobserved persistence or middleware behavior",
+      "arbitrary external dependencies outside the frozen observation boundary"
+    ]
+  },
+  "semantic_capability": "DISCOUNT_SEQUENCE_AND_CACHE_INVALIDATION",
+  "source_projection_equivalence": {
+    "branch_basis": 2,
+    "controlled_exact_source_replay": true
+  },
+  "v012_outcome": "CERTIFIED_A2"
+}

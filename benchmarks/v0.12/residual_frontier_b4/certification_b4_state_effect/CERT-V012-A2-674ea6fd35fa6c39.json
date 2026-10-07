@@ -1,0 +1,42 @@
+{
+  "all_required_gates_pass": true,
+  "authoritative_source": {
+    "correct_source_ast_rewritten": false,
+    "matches_frozen_plan": true,
+    "physical_location_count": 2,
+    "sha256": "f3180e9973eca32f4e6a77d459e25a8759e939c13004190687ca0a2820b3c17d",
+    "unique_physical_location_claim": false
+  },
+  "candidate_id": "674ea6fd35fa6c39",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_mutant_replay": true,
+  "formal_mutant_refutation": {
+    "model": "[deferred_fields_empty = True]",
+    "property": "there exists a constructor state with no deferred fields where the authoritative source emits one transaction-key reset while OMIT_TRANSACTION_KEY_RESET emits none",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "function_name": "__init__",
+  "historical_category": "STATEFUL_SIDE_EFFECTING_LOGIC",
+  "mutant": {
+    "fault": "the constructor delegates to super but never performs _transaction_key_reset when no fields are deferred",
+    "name": "OMIT_TRANSACTION_KEY_RESET"
+  },
+  "mutant_protocol_committed_before_execution": true,
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-B4-CERT2-A2-1",
+  "scope": {
+    "certified": "the prospectively frozen state/effect projection of the exact authoritative source body",
+    "not_certified": [
+      "correctness of surrounding Pretix/Oscar framework implementations",
+      "hidden persistence or transactional behavior outside the accepted trace",
+      "arbitrary side effects not present in the frozen observation contract"
+    ]
+  },
+  "semantic_capability": "DEFERRED_FIELD_GATED_RESET_EFFECT",
+  "source_projection_equivalence": {
+    "branch_basis": 2,
+    "controlled_exact_source_replay": true
+  },
+  "v012_outcome": "CERTIFIED_A2"
+}

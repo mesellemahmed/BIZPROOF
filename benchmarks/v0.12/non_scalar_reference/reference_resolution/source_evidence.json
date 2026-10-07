@@ -1,0 +1,3692 @@
+{
+  "0f73ae8d15cf3408": {
+    "candidate_id": "0f73ae8d15cf3408",
+    "evidence_files": [
+      "benchmarks\\v0.11\\a1_batch_proofs\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a1_leaf_binding_batch\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a1_remaining_binding_proofs\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a2_adapter_authoring\\candidate_profiles.jsonl",
+      "benchmarks\\v0.11\\a2_adapter_authoring\\family_profiles.json",
+      "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+      "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "benchmarks\\v0.11\\a2_residual_closure\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\0f73ae8d15cf3408.json",
+      "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+      "benchmarks\\v0.11\\a2_v1_scalar_proofs\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a2_v2_straight_proofs\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a2_v3_branching_proofs\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a2_v3_branching_proofs\\review.jsonl",
+      "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+      "benchmarks\\v0.11\\controlled_complex_closure\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\controlled_state_closure\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+      "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+      "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "benchmarks\\v0.11\\paper_results\\unsupported_manual_review.csv",
+      "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+      "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_preliminary.csv",
+      "benchmarks\\v0.11\\remaining_cohort_sweep\\a2_worklist.jsonl",
+      "benchmarks\\v0.11\\remaining_cohort_sweep\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\remaining_cohort_sweep\\remaining_candidates.jsonl",
+      "benchmarks\\v0.11\\residual_binding_closure\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "benchmarks\\v0.11\\terminal_certification\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\workplan\\queue.jsonl"
+    ],
+    "reason_code": "REFERENCE_DATE_OR_NONE",
+    "relevant_fields": [
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\candidate_profiles.jsonl",
+        "key_path": "function",
+        "value": "ticket_download_date"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\candidate_profiles.jsonl",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\family_profiles.json",
+        "key_path": "function",
+        "value": "ticket_download_date"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\family_profiles.json",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+        "key_path": "file",
+        "value": "src/pretix/base/models/orders.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+        "key_path": "function",
+        "value": "ticket_download_date"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+        "key_path": "function_sha256",
+        "value": "77e520b000e302b92a67ca035d10b5ddb88ae67b71f1457aafb6212530d9f8c6"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "file",
+        "value": "src/pretix/base/models/orders.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "function",
+        "value": "ticket_download_date"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "function_sha256",
+        "value": "77e520b000e302b92a67ca035d10b5ddb88ae67b71f1457aafb6212530d9f8c6"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.adapter_shape",
+        "value": "BRANCHING"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.attributes[0]",
+        "value": "dl_date.datetime"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.attributes[1]",
+        "value": "self.event"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.attributes[2]",
+        "value": "self.event.has_subevents"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.attributes[3]",
+        "value": "self.event.settings"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.attributes[4]",
+        "value": "self.event.settings.get"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.attributes[5]",
+        "value": "self.event.subevents"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.attributes[6]",
+        "value": "self.event.subevents.filter"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.attributes[7]",
+        "value": "self.positions"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.attributes[8]",
+        "value": "self.positions.values_list"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.authoring_route",
+        "value": "V3_BRANCHING"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.calls[0]",
+        "value": "dl_date.datetime"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.calls[1]",
+        "value": "min"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.calls[2]",
+        "value": "self.event.settings.get"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.calls[3]",
+        "value": "self.event.subevents.filter"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.calls[4]",
+        "value": "self.positions.values_list"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.returns[0]",
+        "value": "dl_date"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.top_level_statements[0]",
+        "value": "Assign"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.top_level_statements[1]",
+        "value": "If"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.top_level_statements[2]",
+        "value": "Return"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "source_file_sha256",
+        "value": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "source_slice",
+        "value": "def ticket_download_date(self):\n        \"\"\"\n        Returns the first date the tickets for this order can be downloaded or ``None`` if there is no\n        restriction.\n        \"\"\"\n        dl_date = self.event.settings.get('ticket_download_date', as_type=RelativeDateWrapper)\n        if dl_date:\n            if self.event.has_subevents:\n                dates = [\n                    dl_date.datetime(se)\n                    for se in self.event.subevents.filter(id__in=self.positions.values_list('subevent', flat=True))\n                ]\n                dl_date = min(dates) if dates else None\n            else:\n                dl_date = dl_date.datetime(self.event)\n        return dl_date"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "prior_review.function",
+        "value": "ticket_download_date"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "prior_review.reason",
+        "value": "The result is a date/reference value or None, not a scalar business quantity."
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "prior_review.reason_code",
+        "value": "REFERENCE_DATE_OR_NONE"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "prior_review.source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "reason",
+        "value": "The result is a date/reference value or None, not a scalar business quantity."
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "reason_code",
+        "value": "REFERENCE_DATE_OR_NONE"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.class",
+        "value": "Order"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.file",
+        "value": "src/pretix/base/models/orders.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.function",
+        "value": "ticket_download_date"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.function_sha256",
+        "value": "77e520b000e302b92a67ca035d10b5ddb88ae67b71f1457aafb6212530d9f8c6"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.source_file_sha256",
+        "value": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.source_id",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "function",
+        "value": "ticket_download_date"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "reason",
+        "value": "The result is a date/reference value or None, not a scalar business quantity."
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "reason_code",
+        "value": "REFERENCE_DATE_OR_NONE"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_v3_branching_proofs\\review.jsonl",
+        "key_path": "function",
+        "value": "ticket_download_date"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_v3_branching_proofs\\review.jsonl",
+        "key_path": "reason",
+        "value": "The result is a date/reference value or None, not a scalar business quantity."
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_v3_branching_proofs\\review.jsonl",
+        "key_path": "reason_code",
+        "value": "REFERENCE_DATE_OR_NONE"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_v3_branching_proofs\\review.jsonl",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+        "key_path": "file",
+        "value": "src/pretix/base/models/orders.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+        "key_path": "function",
+        "value": "ticket_download_date"
+      },
+      {
+        "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "provenance.file",
+        "value": "src/pretix/base/models/orders.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "provenance.function",
+        "value": "ticket_download_date"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "provenance.source_file_sha256",
+        "value": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "provenance.source_id",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "stratum.source_id",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "v0.6_classification.classification_reasons[0]",
+        "value": "Attribute"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "v0.6_classification.classification_reasons[1]",
+        "value": "Call"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "v0.6_classification.classification_reasons[2]",
+        "value": "ListComp"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "v0.6_classification.classification_reasons[3]",
+        "value": "bound_method"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "v0.6_classification.classification_reasons[4]",
+        "value": "decorated_function"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "v0.6_classification.classification_reasons[5]",
+        "value": "local_assignment"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+        "key_path": "file",
+        "value": "src/pretix/base/models/orders.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+        "key_path": "function",
+        "value": "ticket_download_date"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+        "key_path": "source_id",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[0].key_path",
+        "value": "adapter_shape"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[1].key_path",
+        "value": "adapter_shape"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[2].key_path",
+        "value": "profile.adapter_shape"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[3].key_path",
+        "value": "prior_review.reason"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[4].key_path",
+        "value": "prior_review.reason_code"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[5].key_path",
+        "value": "prior_review.status"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[6].key_path",
+        "value": "reason"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[7].key_path",
+        "value": "reason_code"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[8].key_path",
+        "value": "status"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[9].key_path",
+        "value": "reason"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[10].key_path",
+        "value": "reason_code"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[11].key_path",
+        "value": "status"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[12].key_path",
+        "value": "frontier_status"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[13].key_path",
+        "value": "feasibility.adapter_blockers.0"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[14].key_path",
+        "value": "feasibility.adapter_blockers.1"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[15].key_path",
+        "value": "feasibility.adapter_blockers.2"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[16].key_path",
+        "value": "v0.6_classification.classification_reasons.0"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[17].key_path",
+        "value": "v0.6_classification.classification_reasons.1"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[18].key_path",
+        "value": "v0.6_classification.classification_reasons.2"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[19].key_path",
+        "value": "v0.6_classification.classification_reasons.3"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[20].key_path",
+        "value": "v0.6_classification.classification_reasons.4"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[21].key_path",
+        "value": "v0.6_classification.classification_reasons.5"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[22].key_path",
+        "value": "adapter_blockers.0"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[23].key_path",
+        "value": "adapter_blockers.1"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[24].key_path",
+        "value": "adapter_blockers.2"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[25].key_path",
+        "value": "frontier_status"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[26].key_path",
+        "value": "frontier_status"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[27].key_path",
+        "value": "candidate.classification_reasons.0"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[28].key_path",
+        "value": "candidate.classification_reasons.1"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[29].key_path",
+        "value": "candidate.classification_reasons.2"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[30].key_path",
+        "value": "candidate.classification_reasons.3"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[31].key_path",
+        "value": "candidate.classification_reasons.4"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[32].key_path",
+        "value": "candidate.classification_reasons.5"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[33].key_path",
+        "value": "prior_review.reason"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[34].key_path",
+        "value": "prior_review.reason_code"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[35].key_path",
+        "value": "prior_review.status"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[36].key_path",
+        "value": "reason"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[37].key_path",
+        "value": "reason_code"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[38].key_path",
+        "value": "status"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_manual_review.csv",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+        "key_path": "reason_codes",
+        "value": "REFERENCE_DATE_OR_NONE"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+        "key_path": "reviewed_reasons",
+        "value": "The result is a date/reference value or None, not a scalar business quantity."
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_preliminary.csv",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\a2_worklist.jsonl",
+        "key_path": "function",
+        "value": "ticket_download_date"
+      },
+      {
+        "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\a2_worklist.jsonl",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\remaining_candidates.jsonl",
+        "key_path": "function",
+        "value": "ticket_download_date"
+      },
+      {
+        "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\remaining_candidates.jsonl",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.business_keyword_sources.class[0]",
+        "value": "order"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.business_keyword_sources.docstring[0]",
+        "value": "order"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.business_keyword_sources.path[0]",
+        "value": "order"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.classification_reasons[0]",
+        "value": "Attribute"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.classification_reasons[1]",
+        "value": "Call"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.classification_reasons[2]",
+        "value": "ListComp"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.classification_reasons[3]",
+        "value": "bound_method"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.classification_reasons[4]",
+        "value": "decorated_function"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.classification_reasons[5]",
+        "value": "local_assignment"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.file",
+        "value": "src/pretix/base/models/orders.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.function",
+        "value": "ticket_download_date"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.function_sha256",
+        "value": "77e520b000e302b92a67ca035d10b5ddb88ae67b71f1457aafb6212530d9f8c6"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.source_file_sha256",
+        "value": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.source_id",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_doc_files[0]",
+        "value": "doc/api/fundamentals.rst"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_doc_files[1]",
+        "value": "doc/api/guides/custom_checkout.rst"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_doc_files[2]",
+        "value": "doc/api/guides/order_lifecycle.rst"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_doc_files[3]",
+        "value": "doc/api/oauth.rst"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_doc_files[4]",
+        "value": "doc/api/resources/auto_checkin_rules.rst"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_doc_files[5]",
+        "value": "doc/api/resources/banktransfer.rst"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_doc_files[6]",
+        "value": "doc/api/resources/carts.rst"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_doc_files[7]",
+        "value": "doc/api/resources/certificates.rst"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "stratum.source_id",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+        "key_path": "file",
+        "value": "src/pretix/base/models/orders.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+        "key_path": "function",
+        "value": "ticket_download_date"
+      },
+      {
+        "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+        "key_path": "source_id",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\0f73ae8d15cf3408.json",
+        "key_path": "prior_review.function",
+        "value": "ticket_download_date"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\0f73ae8d15cf3408.json",
+        "key_path": "prior_review.reason",
+        "value": "The result is a date/reference value or None, not a scalar business quantity."
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\0f73ae8d15cf3408.json",
+        "key_path": "prior_review.reason_code",
+        "value": "REFERENCE_DATE_OR_NONE"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\0f73ae8d15cf3408.json",
+        "key_path": "prior_review.source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\0f73ae8d15cf3408.json",
+        "key_path": "reason",
+        "value": "The result is a date/reference value or None, not a scalar business quantity."
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\0f73ae8d15cf3408.json",
+        "key_path": "reason_code",
+        "value": "REFERENCE_DATE_OR_NONE"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\0f73ae8d15cf3408.json",
+        "key_path": "source.class",
+        "value": "Order"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\0f73ae8d15cf3408.json",
+        "key_path": "source.file",
+        "value": "src/pretix/base/models/orders.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\0f73ae8d15cf3408.json",
+        "key_path": "source.function",
+        "value": "ticket_download_date"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\0f73ae8d15cf3408.json",
+        "key_path": "source.function_sha256",
+        "value": "77e520b000e302b92a67ca035d10b5ddb88ae67b71f1457aafb6212530d9f8c6"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\0f73ae8d15cf3408.json",
+        "key_path": "source.source_file_sha256",
+        "value": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\0f73ae8d15cf3408.json",
+        "key_path": "source.source_id",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\0f73ae8d15cf3408.json",
+        "key_path": "function",
+        "value": "ticket_download_date"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\0f73ae8d15cf3408.json",
+        "key_path": "reason",
+        "value": "The result is a date/reference value or None, not a scalar business quantity."
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\0f73ae8d15cf3408.json",
+        "key_path": "reason_code",
+        "value": "REFERENCE_DATE_OR_NONE"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\0f73ae8d15cf3408.json",
+        "key_path": "source",
+        "value": "pretix"
+      }
+    ],
+    "source_candidate_count": 1,
+    "source_candidates": [
+      {
+        "definitions": [
+          "ticket_download_date"
+        ],
+        "evidence_file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "source_slice",
+        "source": "def ticket_download_date(self):\n        \"\"\"\n        Returns the first date the tickets for this order can be downloaded or ``None`` if there is no\n        restriction.\n        \"\"\"\n        dl_date = self.event.settings.get('ticket_download_date', as_type=RelativeDateWrapper)\n        if dl_date:\n            if self.event.has_subevents:\n                dates = [\n                    dl_date.datetime(se)\n                    for se in self.event.subevents.filter(id__in=self.positions.values_list('subevent', flat=True))\n                ]\n                dl_date = min(dates) if dates else None\n            else:\n                dl_date = dl_date.datetime(self.event)\n        return dl_date"
+      }
+    ]
+  },
+  "6d009b7961c5d116": {
+    "candidate_id": "6d009b7961c5d116",
+    "evidence_files": [
+      "benchmarks\\v0.11\\a1_batch_proofs\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a1_leaf_binding_batch\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a1_remaining_binding_proofs\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a2_adapter_authoring\\candidate_profiles.jsonl",
+      "benchmarks\\v0.11\\a2_adapter_authoring\\family_profiles.json",
+      "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+      "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "benchmarks\\v0.11\\a2_residual_closure\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6d009b7961c5d116.json",
+      "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+      "benchmarks\\v0.11\\a2_v1_scalar_proofs\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a2_v2_straight_proofs\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a2_v2_straight_proofs\\review.jsonl",
+      "benchmarks\\v0.11\\a2_v3_branching_proofs\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+      "benchmarks\\v0.11\\controlled_complex_closure\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\controlled_state_closure\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+      "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+      "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "benchmarks\\v0.11\\paper_results\\unsupported_manual_review.csv",
+      "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+      "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_preliminary.csv",
+      "benchmarks\\v0.11\\remaining_cohort_sweep\\a2_worklist.jsonl",
+      "benchmarks\\v0.11\\remaining_cohort_sweep\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\remaining_cohort_sweep\\remaining_candidates.jsonl",
+      "benchmarks\\v0.11\\residual_binding_closure\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "benchmarks\\v0.11\\terminal_certification\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\workplan\\queue.jsonl"
+    ],
+    "reason_code": "LIST_OF_DOMAIN_OBJECTS_RETURN",
+    "relevant_fields": [
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\candidate_profiles.jsonl",
+        "key_path": "function",
+        "value": "get_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\candidate_profiles.jsonl",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\family_profiles.json",
+        "key_path": "function",
+        "value": "get_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\family_profiles.json",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+        "key_path": "file",
+        "value": "src/oscar/apps/offer/applicator.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+        "key_path": "function",
+        "value": "get_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+        "key_path": "function_sha256",
+        "value": "2dc814115085bd91ed9309b365cbcf4a2c43690dfe742149052cd04917d3d441"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "file",
+        "value": "src/oscar/apps/offer/applicator.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "function",
+        "value": "get_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "function_sha256",
+        "value": "2dc814115085bd91ed9309b365cbcf4a2c43690dfe742149052cd04917d3d441"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.adapter_shape",
+        "value": "STRAIGHT_LINE_ASSIGN_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.attributes[0]",
+        "value": "o.priority"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.attributes[1]",
+        "value": "self.get_basket_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.attributes[2]",
+        "value": "self.get_session_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.attributes[3]",
+        "value": "self.get_site_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.attributes[4]",
+        "value": "self.get_user_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.authoring_route",
+        "value": "V2_STRAIGHT_LINE"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.calls[0]",
+        "value": "chain"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.calls[1]",
+        "value": "list"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.calls[2]",
+        "value": "self.get_basket_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.calls[3]",
+        "value": "self.get_session_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.calls[4]",
+        "value": "self.get_site_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.calls[5]",
+        "value": "self.get_user_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.calls[6]",
+        "value": "sorted"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.returns[0]",
+        "value": "list(sorted(chain(session_offers, basket_offers, user_offers, site_offers), key=lambda o: o.priority, reverse=True))"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.top_level_statements[0]",
+        "value": "Assign"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.top_level_statements[1]",
+        "value": "Assign"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.top_level_statements[2]",
+        "value": "Assign"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.top_level_statements[3]",
+        "value": "Assign"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.top_level_statements[4]",
+        "value": "Return"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "source_file_sha256",
+        "value": "82912db74e9b1763905b99c16cf4f723a553acbc70fe88a8fecfa4a47a2d456a"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "source_slice",
+        "value": "def get_offers(self, basket, user=None, request=None):\n        \"\"\"\n        Return all offers to apply to the basket.\n\n        This method should be subclassed and extended to provide more\n        sophisticated behaviour.  For instance, you could load extra offers\n        based on the session or the user type.\n        \"\"\"\n        site_offers = self.get_site_offers()\n        basket_offers = self.get_basket_offers(basket, user)\n        user_offers = self.get_user_offers(user)\n        session_offers = self.get_session_offers(request)\n\n        return list(\n            sorted(\n                chain(session_offers, basket_offers, user_offers, site_offers),\n                key=lambda o: o.priority,\n                reverse=True,\n            )\n        )"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "prior_review.function",
+        "value": "get_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "prior_review.reason_code",
+        "value": "LIST_OF_DOMAIN_OBJECTS_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "prior_review.source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "reason",
+        "value": "The reviewed source does not provide a defensible single scalar business-semantic projection under the frozen V0.11 A2 protocol."
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "reason_code",
+        "value": "LIST_OF_DOMAIN_OBJECTS_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.class",
+        "value": "Applicator"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.file",
+        "value": "src/oscar/apps/offer/applicator.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.function",
+        "value": "get_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.function_sha256",
+        "value": "2dc814115085bd91ed9309b365cbcf4a2c43690dfe742149052cd04917d3d441"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.source_file_sha256",
+        "value": "82912db74e9b1763905b99c16cf4f723a553acbc70fe88a8fecfa4a47a2d456a"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.source_id",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "function",
+        "value": "get_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "reason_code",
+        "value": "LIST_OF_DOMAIN_OBJECTS_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_v2_straight_proofs\\review.jsonl",
+        "key_path": "function",
+        "value": "get_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_v2_straight_proofs\\review.jsonl",
+        "key_path": "reason_code",
+        "value": "LIST_OF_DOMAIN_OBJECTS_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_v2_straight_proofs\\review.jsonl",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+        "key_path": "file",
+        "value": "src/oscar/apps/offer/applicator.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+        "key_path": "function",
+        "value": "get_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "provenance.file",
+        "value": "src/oscar/apps/offer/applicator.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "provenance.function",
+        "value": "get_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "provenance.source_file_sha256",
+        "value": "82912db74e9b1763905b99c16cf4f723a553acbc70fe88a8fecfa4a47a2d456a"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "provenance.source_id",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "stratum.source_id",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "v0.6_classification.classification_reasons[0]",
+        "value": "Attribute"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "v0.6_classification.classification_reasons[1]",
+        "value": "Call"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "v0.6_classification.classification_reasons[2]",
+        "value": "Lambda"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "v0.6_classification.classification_reasons[3]",
+        "value": "bound_method"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "v0.6_classification.classification_reasons[4]",
+        "value": "local_assignment"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+        "key_path": "file",
+        "value": "src/oscar/apps/offer/applicator.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+        "key_path": "function",
+        "value": "get_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+        "key_path": "source_id",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[0].key_path",
+        "value": "adapter_shape"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[1].key_path",
+        "value": "adapter_shape"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[2].key_path",
+        "value": "profile.adapter_shape"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[3].key_path",
+        "value": "prior_review.reason_code"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[4].key_path",
+        "value": "reason"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[5].key_path",
+        "value": "reason_code"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[6].key_path",
+        "value": "reason_code"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[7].key_path",
+        "value": "frontier_status"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[8].key_path",
+        "value": "feasibility.adapter_blockers.0"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[9].key_path",
+        "value": "feasibility.adapter_blockers.1"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[10].key_path",
+        "value": "v0.6_classification.classification_reasons.0"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[11].key_path",
+        "value": "v0.6_classification.classification_reasons.1"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[12].key_path",
+        "value": "v0.6_classification.classification_reasons.2"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[13].key_path",
+        "value": "v0.6_classification.classification_reasons.3"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[14].key_path",
+        "value": "v0.6_classification.classification_reasons.4"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[15].key_path",
+        "value": "adapter_blockers.0"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[16].key_path",
+        "value": "adapter_blockers.1"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[17].key_path",
+        "value": "frontier_status"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[18].key_path",
+        "value": "frontier_status"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[19].key_path",
+        "value": "candidate.classification_reasons.0"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[20].key_path",
+        "value": "candidate.classification_reasons.1"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[21].key_path",
+        "value": "candidate.classification_reasons.2"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[22].key_path",
+        "value": "candidate.classification_reasons.3"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[23].key_path",
+        "value": "candidate.classification_reasons.4"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[24].key_path",
+        "value": "prior_review.reason_code"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[25].key_path",
+        "value": "reason"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[26].key_path",
+        "value": "reason_code"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_manual_review.csv",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+        "key_path": "reason_codes",
+        "value": "LIST_OF_DOMAIN_OBJECTS_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+        "key_path": "reviewed_reasons",
+        "value": "The reviewed source does not provide a defensible single scalar business-semantic projection under the frozen V0.11 A2 protocol."
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_preliminary.csv",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\a2_worklist.jsonl",
+        "key_path": "function",
+        "value": "get_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\a2_worklist.jsonl",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\remaining_candidates.jsonl",
+        "key_path": "function",
+        "value": "get_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\remaining_candidates.jsonl",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.business_keyword_sources.docstring[0]",
+        "value": "basket"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.business_keyword_sources.docstring[1]",
+        "value": "offer"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.business_keyword_sources.function[0]",
+        "value": "offer"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.business_keyword_sources.path[0]",
+        "value": "offer"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.classification_reasons[0]",
+        "value": "Attribute"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.classification_reasons[1]",
+        "value": "Call"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.classification_reasons[2]",
+        "value": "Lambda"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.classification_reasons[3]",
+        "value": "bound_method"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.classification_reasons[4]",
+        "value": "local_assignment"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.file",
+        "value": "src/oscar/apps/offer/applicator.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.function",
+        "value": "get_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.function_sha256",
+        "value": "2dc814115085bd91ed9309b365cbcf4a2c43690dfe742149052cd04917d3d441"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.source_file_sha256",
+        "value": "82912db74e9b1763905b99c16cf4f723a553acbc70fe88a8fecfa4a47a2d456a"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.source_id",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_doc_files[0]",
+        "value": "docs/source/howto/how_to_configure_surcharges.rst"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_doc_files[1]",
+        "value": "docs/source/releases/v1.1.rst"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_doc_files[2]",
+        "value": "docs/source/releases/v1.5.rst"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_test_files[0]",
+        "value": "tests/integration/basket/test_forms.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_test_files[1]",
+        "value": "tests/integration/basket/test_utils.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_test_files[2]",
+        "value": "tests/integration/checkout/test_calculator.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_test_files[3]",
+        "value": "tests/integration/checkout/test_mixins.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_test_files[4]",
+        "value": "tests/integration/checkout/test_surcharges.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_test_files[5]",
+        "value": "tests/integration/offer/test_absolute_benefit.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_test_files[6]",
+        "value": "tests/integration/offer/test_applicator.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_test_files[7]",
+        "value": "tests/integration/offer/test_condition.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "stratum.source_id",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+        "key_path": "file",
+        "value": "src/oscar/apps/offer/applicator.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+        "key_path": "function",
+        "value": "get_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+        "key_path": "source_id",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6d009b7961c5d116.json",
+        "key_path": "prior_review.function",
+        "value": "get_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6d009b7961c5d116.json",
+        "key_path": "prior_review.reason_code",
+        "value": "LIST_OF_DOMAIN_OBJECTS_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6d009b7961c5d116.json",
+        "key_path": "prior_review.source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6d009b7961c5d116.json",
+        "key_path": "reason",
+        "value": "The reviewed source does not provide a defensible single scalar business-semantic projection under the frozen V0.11 A2 protocol."
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6d009b7961c5d116.json",
+        "key_path": "reason_code",
+        "value": "LIST_OF_DOMAIN_OBJECTS_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6d009b7961c5d116.json",
+        "key_path": "source.class",
+        "value": "Applicator"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6d009b7961c5d116.json",
+        "key_path": "source.file",
+        "value": "src/oscar/apps/offer/applicator.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6d009b7961c5d116.json",
+        "key_path": "source.function",
+        "value": "get_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6d009b7961c5d116.json",
+        "key_path": "source.function_sha256",
+        "value": "2dc814115085bd91ed9309b365cbcf4a2c43690dfe742149052cd04917d3d441"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6d009b7961c5d116.json",
+        "key_path": "source.source_file_sha256",
+        "value": "82912db74e9b1763905b99c16cf4f723a553acbc70fe88a8fecfa4a47a2d456a"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6d009b7961c5d116.json",
+        "key_path": "source.source_id",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6d009b7961c5d116.json",
+        "key_path": "function",
+        "value": "get_offers"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6d009b7961c5d116.json",
+        "key_path": "reason_code",
+        "value": "LIST_OF_DOMAIN_OBJECTS_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6d009b7961c5d116.json",
+        "key_path": "source",
+        "value": "django_oscar"
+      }
+    ],
+    "source_candidate_count": 1,
+    "source_candidates": [
+      {
+        "definitions": [
+          "get_offers"
+        ],
+        "evidence_file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "source_slice",
+        "source": "def get_offers(self, basket, user=None, request=None):\n        \"\"\"\n        Return all offers to apply to the basket.\n\n        This method should be subclassed and extended to provide more\n        sophisticated behaviour.  For instance, you could load extra offers\n        based on the session or the user type.\n        \"\"\"\n        site_offers = self.get_site_offers()\n        basket_offers = self.get_basket_offers(basket, user)\n        user_offers = self.get_user_offers(user)\n        session_offers = self.get_session_offers(request)\n\n        return list(\n            sorted(\n                chain(session_offers, basket_offers, user_offers, site_offers),\n                key=lambda o: o.priority,\n                reverse=True,\n            )\n        )"
+      }
+    ]
+  },
+  "6fd8bd69c26e7954": {
+    "candidate_id": "6fd8bd69c26e7954",
+    "evidence_files": [
+      "benchmarks\\v0.11\\a1_batch_proofs\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a1_leaf_binding_batch\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a1_remaining_binding_proofs\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a2_adapter_authoring\\candidate_profiles.jsonl",
+      "benchmarks\\v0.11\\a2_adapter_authoring\\family_profiles.json",
+      "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+      "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "benchmarks\\v0.11\\a2_residual_closure\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6fd8bd69c26e7954.json",
+      "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+      "benchmarks\\v0.11\\a2_v1_scalar_proofs\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a2_v2_straight_proofs\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a2_v2_straight_proofs\\review.jsonl",
+      "benchmarks\\v0.11\\a2_v3_branching_proofs\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+      "benchmarks\\v0.11\\controlled_complex_closure\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\controlled_state_closure\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+      "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+      "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "benchmarks\\v0.11\\paper_results\\unsupported_manual_review.csv",
+      "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+      "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_preliminary.csv",
+      "benchmarks\\v0.11\\remaining_cohort_sweep\\a2_worklist.jsonl",
+      "benchmarks\\v0.11\\remaining_cohort_sweep\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\remaining_cohort_sweep\\remaining_candidates.jsonl",
+      "benchmarks\\v0.11\\residual_binding_closure\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "benchmarks\\v0.11\\terminal_certification\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\workplan\\queue.jsonl"
+    ],
+    "reason_code": "DOMAIN_OBJECT_RETURN",
+    "relevant_fields": [
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\candidate_profiles.jsonl",
+        "key_path": "function",
+        "value": "__mul__"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\candidate_profiles.jsonl",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\family_profiles.json",
+        "key_path": "function",
+        "value": "__mul__"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\family_profiles.json",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+        "key_path": "file",
+        "value": "src/pretix/base/models/tax.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+        "key_path": "function",
+        "value": "__mul__"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+        "key_path": "function_sha256",
+        "value": "20981d8df07da04030071dbc857915cf90a8d68eaf7d419ba51dde72aae0bf50"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "file",
+        "value": "src/pretix/base/models/tax.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "function",
+        "value": "__mul__"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "function_sha256",
+        "value": "20981d8df07da04030071dbc857915cf90a8d68eaf7d419ba51dde72aae0bf50"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.adapter_shape",
+        "value": "STRAIGHT_LINE_ASSIGN_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.attributes[0]",
+        "value": "round_decimal(newgross - newgross * (1 - 100 / (100 + self.rate))).quantize"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.attributes[1]",
+        "value": "self.code"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.attributes[2]",
+        "value": "self.gross"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.attributes[3]",
+        "value": "self.gross.as_tuple"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.attributes[4]",
+        "value": "self.gross.as_tuple().exponent"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.attributes[5]",
+        "value": "self.name"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.attributes[6]",
+        "value": "self.rate"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.authoring_route",
+        "value": "V2_STRAIGHT_LINE"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.calls[0]",
+        "value": "Decimal"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.calls[1]",
+        "value": "TaxedPrice"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.calls[2]",
+        "value": "round_decimal"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.calls[3]",
+        "value": "round_decimal(newgross - newgross * (1 - 100 / (100 + self.rate))).quantize"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.calls[4]",
+        "value": "self.gross.as_tuple"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.returns[0]",
+        "value": "TaxedPrice(gross=newgross, net=newnet, tax=newgross - newnet, rate=self.rate, name=self.name, code=self.code)"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.top_level_statements[0]",
+        "value": "Assign"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.top_level_statements[1]",
+        "value": "Assign"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.top_level_statements[2]",
+        "value": "Return"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "source_file_sha256",
+        "value": "5f27a1d0fa236365d9809f355ceb2e3331191ca931c60ef1d0a0889001db4298"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "source_slice",
+        "value": "def __mul__(self, other):\n        newgross = self.gross * other\n        newnet = round_decimal(newgross - (newgross * (1 - 100 / (100 + self.rate)))).quantize(\n            Decimal('10') ** self.gross.as_tuple().exponent\n        )\n        return TaxedPrice(\n            gross=newgross,\n            net=newnet,\n            tax=newgross - newnet,\n            rate=self.rate,\n            name=self.name,\n            code=self.code,\n        )"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "prior_review.function",
+        "value": "__mul__"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "prior_review.reason_code",
+        "value": "DOMAIN_OBJECT_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "prior_review.source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "reason",
+        "value": "The reviewed source does not provide a defensible single scalar business-semantic projection under the frozen V0.11 A2 protocol."
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "reason_code",
+        "value": "DOMAIN_OBJECT_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.class",
+        "value": "TaxedPrice"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.file",
+        "value": "src/pretix/base/models/tax.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.function",
+        "value": "__mul__"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.function_sha256",
+        "value": "20981d8df07da04030071dbc857915cf90a8d68eaf7d419ba51dde72aae0bf50"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.source_file_sha256",
+        "value": "5f27a1d0fa236365d9809f355ceb2e3331191ca931c60ef1d0a0889001db4298"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.source_id",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "function",
+        "value": "__mul__"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "reason_code",
+        "value": "DOMAIN_OBJECT_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_v2_straight_proofs\\review.jsonl",
+        "key_path": "function",
+        "value": "__mul__"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_v2_straight_proofs\\review.jsonl",
+        "key_path": "reason_code",
+        "value": "DOMAIN_OBJECT_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_v2_straight_proofs\\review.jsonl",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+        "key_path": "file",
+        "value": "src/pretix/base/models/tax.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+        "key_path": "function",
+        "value": "__mul__"
+      },
+      {
+        "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "provenance.file",
+        "value": "src/pretix/base/models/tax.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "provenance.function",
+        "value": "__mul__"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "provenance.source_file_sha256",
+        "value": "5f27a1d0fa236365d9809f355ceb2e3331191ca931c60ef1d0a0889001db4298"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "provenance.source_id",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "stratum.source_id",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "v0.6_classification.classification_reasons[0]",
+        "value": "Attribute"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "v0.6_classification.classification_reasons[1]",
+        "value": "Call"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "v0.6_classification.classification_reasons[2]",
+        "value": "bound_method"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "v0.6_classification.classification_reasons[3]",
+        "value": "local_assignment"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+        "key_path": "file",
+        "value": "src/pretix/base/models/tax.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+        "key_path": "function",
+        "value": "__mul__"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+        "key_path": "source_id",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[0].key_path",
+        "value": "adapter_shape"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[1].key_path",
+        "value": "adapter_shape"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[2].key_path",
+        "value": "profile.adapter_shape"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[3].key_path",
+        "value": "prior_review.reason_code"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[4].key_path",
+        "value": "reason"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[5].key_path",
+        "value": "reason_code"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[6].key_path",
+        "value": "reason_code"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[7].key_path",
+        "value": "frontier_status"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[8].key_path",
+        "value": "feasibility.adapter_blockers.0"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[9].key_path",
+        "value": "feasibility.adapter_blockers.1"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[10].key_path",
+        "value": "feasibility.adapter_blockers.2"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[11].key_path",
+        "value": "v0.6_classification.classification_reasons.0"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[12].key_path",
+        "value": "v0.6_classification.classification_reasons.1"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[13].key_path",
+        "value": "v0.6_classification.classification_reasons.2"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[14].key_path",
+        "value": "v0.6_classification.classification_reasons.3"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[15].key_path",
+        "value": "adapter_blockers.0"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[16].key_path",
+        "value": "adapter_blockers.1"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[17].key_path",
+        "value": "adapter_blockers.2"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[18].key_path",
+        "value": "frontier_status"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[19].key_path",
+        "value": "frontier_status"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[20].key_path",
+        "value": "candidate.classification_reasons.0"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[21].key_path",
+        "value": "candidate.classification_reasons.1"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[22].key_path",
+        "value": "candidate.classification_reasons.2"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[23].key_path",
+        "value": "candidate.classification_reasons.3"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[24].key_path",
+        "value": "prior_review.reason_code"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[25].key_path",
+        "value": "reason"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[26].key_path",
+        "value": "reason_code"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_manual_review.csv",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+        "key_path": "reason_codes",
+        "value": "DOMAIN_OBJECT_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+        "key_path": "reviewed_reasons",
+        "value": "The reviewed source does not provide a defensible single scalar business-semantic projection under the frozen V0.11 A2 protocol."
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_preliminary.csv",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\a2_worklist.jsonl",
+        "key_path": "function",
+        "value": "__mul__"
+      },
+      {
+        "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\a2_worklist.jsonl",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\remaining_candidates.jsonl",
+        "key_path": "function",
+        "value": "__mul__"
+      },
+      {
+        "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\remaining_candidates.jsonl",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.business_keyword_sources.class[0]",
+        "value": "price"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.business_keyword_sources.class[1]",
+        "value": "tax"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.business_keyword_sources.path[0]",
+        "value": "tax"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.classification_reasons[0]",
+        "value": "Attribute"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.classification_reasons[1]",
+        "value": "Call"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.classification_reasons[2]",
+        "value": "bound_method"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.classification_reasons[3]",
+        "value": "local_assignment"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.file",
+        "value": "src/pretix/base/models/tax.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.function",
+        "value": "__mul__"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.function_sha256",
+        "value": "20981d8df07da04030071dbc857915cf90a8d68eaf7d419ba51dde72aae0bf50"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.source_file_sha256",
+        "value": "5f27a1d0fa236365d9809f355ceb2e3331191ca931c60ef1d0a0889001db4298"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.source_id",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "stratum.source_id",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+        "key_path": "file",
+        "value": "src/pretix/base/models/tax.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+        "key_path": "function",
+        "value": "__mul__"
+      },
+      {
+        "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+        "key_path": "source_id",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6fd8bd69c26e7954.json",
+        "key_path": "prior_review.function",
+        "value": "__mul__"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6fd8bd69c26e7954.json",
+        "key_path": "prior_review.reason_code",
+        "value": "DOMAIN_OBJECT_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6fd8bd69c26e7954.json",
+        "key_path": "prior_review.source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6fd8bd69c26e7954.json",
+        "key_path": "reason",
+        "value": "The reviewed source does not provide a defensible single scalar business-semantic projection under the frozen V0.11 A2 protocol."
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6fd8bd69c26e7954.json",
+        "key_path": "reason_code",
+        "value": "DOMAIN_OBJECT_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6fd8bd69c26e7954.json",
+        "key_path": "source.class",
+        "value": "TaxedPrice"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6fd8bd69c26e7954.json",
+        "key_path": "source.file",
+        "value": "src/pretix/base/models/tax.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6fd8bd69c26e7954.json",
+        "key_path": "source.function",
+        "value": "__mul__"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6fd8bd69c26e7954.json",
+        "key_path": "source.function_sha256",
+        "value": "20981d8df07da04030071dbc857915cf90a8d68eaf7d419ba51dde72aae0bf50"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6fd8bd69c26e7954.json",
+        "key_path": "source.source_file_sha256",
+        "value": "5f27a1d0fa236365d9809f355ceb2e3331191ca931c60ef1d0a0889001db4298"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6fd8bd69c26e7954.json",
+        "key_path": "source.source_id",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6fd8bd69c26e7954.json",
+        "key_path": "function",
+        "value": "__mul__"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6fd8bd69c26e7954.json",
+        "key_path": "reason_code",
+        "value": "DOMAIN_OBJECT_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\6fd8bd69c26e7954.json",
+        "key_path": "source",
+        "value": "pretix"
+      }
+    ],
+    "source_candidate_count": 1,
+    "source_candidates": [
+      {
+        "definitions": [
+          "__mul__"
+        ],
+        "evidence_file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "source_slice",
+        "source": "def __mul__(self, other):\n        newgross = self.gross * other\n        newnet = round_decimal(newgross - (newgross * (1 - 100 / (100 + self.rate)))).quantize(\n            Decimal('10') ** self.gross.as_tuple().exponent\n        )\n        return TaxedPrice(\n            gross=newgross,\n            net=newnet,\n            tax=newgross - newnet,\n            rate=self.rate,\n            name=self.name,\n            code=self.code,\n        )"
+      }
+    ]
+  },
+  "d285ecd86455b150": {
+    "candidate_id": "d285ecd86455b150",
+    "evidence_files": [
+      "benchmarks\\v0.11\\a1_batch_proofs\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a1_leaf_binding_batch\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a1_remaining_binding_proofs\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a2_adapter_authoring\\candidate_profiles.jsonl",
+      "benchmarks\\v0.11\\a2_adapter_authoring\\family_profiles.json",
+      "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+      "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "benchmarks\\v0.11\\a2_residual_closure\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\d285ecd86455b150.json",
+      "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+      "benchmarks\\v0.11\\a2_v1_scalar_proofs\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a2_v2_straight_proofs\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a2_v2_straight_proofs\\review.jsonl",
+      "benchmarks\\v0.11\\a2_v3_branching_proofs\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+      "benchmarks\\v0.11\\controlled_complex_closure\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\controlled_state_closure\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+      "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+      "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "benchmarks\\v0.11\\paper_results\\unsupported_manual_review.csv",
+      "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+      "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_preliminary.csv",
+      "benchmarks\\v0.11\\remaining_cohort_sweep\\a2_worklist.jsonl",
+      "benchmarks\\v0.11\\remaining_cohort_sweep\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\remaining_cohort_sweep\\remaining_candidates.jsonl",
+      "benchmarks\\v0.11\\residual_binding_closure\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "benchmarks\\v0.11\\terminal_certification\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\workplan\\queue.jsonl"
+    ],
+    "reason_code": "TUPLE_RETURN_WITH_DOMAIN_REFERENCES",
+    "relevant_fields": [
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\candidate_profiles.jsonl",
+        "key_path": "function",
+        "value": "discount_info"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\candidate_profiles.jsonl",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\family_profiles.json",
+        "key_path": "function",
+        "value": "discount_info"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\family_profiles.json",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+        "key_path": "file",
+        "value": "src/pretix/base/services/cross_selling.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+        "key_path": "function",
+        "value": "discount_info"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+        "key_path": "function_sha256",
+        "value": "f98331733ca429658fa45692f93095b987123e59a2a9434946edb797c8a287a8"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "file",
+        "value": "src/pretix/base/services/cross_selling.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "function",
+        "value": "discount_info"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "function_sha256",
+        "value": "f98331733ca429658fa45692f93095b987123e59a2a9434946edb797c8a287a8"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.adapter_shape",
+        "value": "STRAIGHT_LINE_ASSIGN_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.authoring_route",
+        "value": "V2_STRAIGHT_LINE"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.calls[0]",
+        "value": "list"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.calls[1]",
+        "value": "next"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.calls[2]",
+        "value": "sum"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.returns[0]",
+        "value": "(subevent_id, item, sum((max_count for subevent_id, item, discount_rule, max_count, i in infos_for_item)), next((discount_rule for subevent_id, item, discount_rule, max_count, i in infos_for_item)))"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.top_level_statements[0]",
+        "value": "Assign"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.top_level_statements[1]",
+        "value": "Return"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "source_file_sha256",
+        "value": "bfdca0d7018095654ec420b2a82e9da56fc946c953e4798bfae80fa3a7b110f2"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "source_slice",
+        "value": "def discount_info(subevent_id, item, infos_for_item):\n            infos_for_item = list(infos_for_item)\n            return (\n                subevent_id,\n                item,\n                sum(max_count for (subevent_id, item, discount_rule, max_count, i) in infos_for_item),\n                next(discount_rule for (subevent_id, item, discount_rule, max_count, i) in infos_for_item),\n            )"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "prior_review.function",
+        "value": "discount_info"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "prior_review.reason_code",
+        "value": "TUPLE_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "prior_review.source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "reason",
+        "value": "The reviewed source does not provide a defensible single scalar business-semantic projection under the frozen V0.11 A2 protocol."
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "reason_code",
+        "value": "TUPLE_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.class",
+        "value": "CrossSellingService"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.file",
+        "value": "src/pretix/base/services/cross_selling.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.function",
+        "value": "discount_info"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.function_sha256",
+        "value": "f98331733ca429658fa45692f93095b987123e59a2a9434946edb797c8a287a8"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.source_file_sha256",
+        "value": "bfdca0d7018095654ec420b2a82e9da56fc946c953e4798bfae80fa3a7b110f2"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.source_id",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "function",
+        "value": "discount_info"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "reason_code",
+        "value": "TUPLE_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_v2_straight_proofs\\review.jsonl",
+        "key_path": "function",
+        "value": "discount_info"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_v2_straight_proofs\\review.jsonl",
+        "key_path": "reason_code",
+        "value": "TUPLE_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_v2_straight_proofs\\review.jsonl",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+        "key_path": "file",
+        "value": "src/pretix/base/services/cross_selling.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+        "key_path": "function",
+        "value": "discount_info"
+      },
+      {
+        "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "provenance.file",
+        "value": "src/pretix/base/services/cross_selling.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "provenance.function",
+        "value": "discount_info"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "provenance.source_file_sha256",
+        "value": "bfdca0d7018095654ec420b2a82e9da56fc946c953e4798bfae80fa3a7b110f2"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "provenance.source_id",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "stratum.source_id",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "v0.6_classification.classification_reasons[0]",
+        "value": "Call"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "v0.6_classification.classification_reasons[1]",
+        "value": "GeneratorExp"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "v0.6_classification.classification_reasons[2]",
+        "value": "local_assignment"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+        "key_path": "file",
+        "value": "src/pretix/base/services/cross_selling.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+        "key_path": "function",
+        "value": "discount_info"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+        "key_path": "source_id",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[0].key_path",
+        "value": "adapter_shape"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[1].key_path",
+        "value": "adapter_shape"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[2].key_path",
+        "value": "profile.adapter_shape"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[3].key_path",
+        "value": "prior_review.reason_code"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[4].key_path",
+        "value": "reason"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[5].key_path",
+        "value": "reason_code"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[6].key_path",
+        "value": "reason_code"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[7].key_path",
+        "value": "frontier_status"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[8].key_path",
+        "value": "feasibility.adapter_blockers.0"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[9].key_path",
+        "value": "feasibility.adapter_blockers.1"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[10].key_path",
+        "value": "v0.6_classification.classification_reasons.0"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[11].key_path",
+        "value": "v0.6_classification.classification_reasons.1"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[12].key_path",
+        "value": "v0.6_classification.classification_reasons.2"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[13].key_path",
+        "value": "adapter_blockers.0"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[14].key_path",
+        "value": "adapter_blockers.1"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[15].key_path",
+        "value": "frontier_status"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[16].key_path",
+        "value": "frontier_status"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[17].key_path",
+        "value": "candidate.classification_reasons.0"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[18].key_path",
+        "value": "candidate.classification_reasons.1"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[19].key_path",
+        "value": "candidate.classification_reasons.2"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[20].key_path",
+        "value": "prior_review.reason_code"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[21].key_path",
+        "value": "reason"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[22].key_path",
+        "value": "reason_code"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_manual_review.csv",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+        "key_path": "reason_codes",
+        "value": "TUPLE_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+        "key_path": "reviewed_reasons",
+        "value": "The reviewed source does not provide a defensible single scalar business-semantic projection under the frozen V0.11 A2 protocol."
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_preliminary.csv",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\a2_worklist.jsonl",
+        "key_path": "function",
+        "value": "discount_info"
+      },
+      {
+        "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\a2_worklist.jsonl",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\remaining_candidates.jsonl",
+        "key_path": "function",
+        "value": "discount_info"
+      },
+      {
+        "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\remaining_candidates.jsonl",
+        "key_path": "source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.business_keyword_sources.function[0]",
+        "value": "discount"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.classification_reasons[0]",
+        "value": "Call"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.classification_reasons[1]",
+        "value": "GeneratorExp"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.classification_reasons[2]",
+        "value": "local_assignment"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.file",
+        "value": "src/pretix/base/services/cross_selling.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.function",
+        "value": "discount_info"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.function_sha256",
+        "value": "f98331733ca429658fa45692f93095b987123e59a2a9434946edb797c8a287a8"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.source_file_sha256",
+        "value": "bfdca0d7018095654ec420b2a82e9da56fc946c953e4798bfae80fa3a7b110f2"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.source_id",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "stratum.source_id",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+        "key_path": "file",
+        "value": "src/pretix/base/services/cross_selling.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+        "key_path": "function",
+        "value": "discount_info"
+      },
+      {
+        "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+        "key_path": "source_id",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\d285ecd86455b150.json",
+        "key_path": "prior_review.function",
+        "value": "discount_info"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\d285ecd86455b150.json",
+        "key_path": "prior_review.reason_code",
+        "value": "TUPLE_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\d285ecd86455b150.json",
+        "key_path": "prior_review.source",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\d285ecd86455b150.json",
+        "key_path": "reason",
+        "value": "The reviewed source does not provide a defensible single scalar business-semantic projection under the frozen V0.11 A2 protocol."
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\d285ecd86455b150.json",
+        "key_path": "reason_code",
+        "value": "TUPLE_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\d285ecd86455b150.json",
+        "key_path": "source.class",
+        "value": "CrossSellingService"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\d285ecd86455b150.json",
+        "key_path": "source.file",
+        "value": "src/pretix/base/services/cross_selling.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\d285ecd86455b150.json",
+        "key_path": "source.function",
+        "value": "discount_info"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\d285ecd86455b150.json",
+        "key_path": "source.function_sha256",
+        "value": "f98331733ca429658fa45692f93095b987123e59a2a9434946edb797c8a287a8"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\d285ecd86455b150.json",
+        "key_path": "source.source_file_sha256",
+        "value": "bfdca0d7018095654ec420b2a82e9da56fc946c953e4798bfae80fa3a7b110f2"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\d285ecd86455b150.json",
+        "key_path": "source.source_id",
+        "value": "pretix"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\d285ecd86455b150.json",
+        "key_path": "function",
+        "value": "discount_info"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\d285ecd86455b150.json",
+        "key_path": "reason_code",
+        "value": "TUPLE_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\d285ecd86455b150.json",
+        "key_path": "source",
+        "value": "pretix"
+      }
+    ],
+    "source_candidate_count": 1,
+    "source_candidates": [
+      {
+        "definitions": [
+          "discount_info"
+        ],
+        "evidence_file": "benchmarks\\v0.12\\non_scalar_reference\\source_resolution\\packs\\d285ecd86455b150.json",
+        "key_path": "A4_SOURCE_PACK_REUSE",
+        "source": "def discount_info(subevent_id, item, infos_for_item):\n            infos_for_item = list(infos_for_item)\n            return (\n                subevent_id,\n                item,\n                sum(max_count for (subevent_id, item, discount_rule, max_count, i) in infos_for_item),\n                next(discount_rule for (subevent_id, item, discount_rule, max_count, i) in infos_for_item),\n            )"
+      }
+    ]
+  },
+  "fa377c649a747a7d": {
+    "candidate_id": "fa377c649a747a7d",
+    "evidence_files": [
+      "benchmarks\\v0.11\\a1_batch_proofs\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a1_leaf_binding_batch\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a1_remaining_binding_proofs\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a2_adapter_authoring\\candidate_profiles.jsonl",
+      "benchmarks\\v0.11\\a2_adapter_authoring\\family_profiles.json",
+      "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+      "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "benchmarks\\v0.11\\a2_residual_closure\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\fa377c649a747a7d.json",
+      "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+      "benchmarks\\v0.11\\a2_v1_scalar_proofs\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a2_v1_scalar_proofs\\non_scalar_review.jsonl",
+      "benchmarks\\v0.11\\a2_v2_straight_proofs\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\a2_v3_branching_proofs\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+      "benchmarks\\v0.11\\controlled_complex_closure\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\controlled_state_closure\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+      "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+      "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "benchmarks\\v0.11\\paper_results\\unsupported_manual_review.csv",
+      "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+      "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_preliminary.csv",
+      "benchmarks\\v0.11\\remaining_cohort_sweep\\a2_worklist.jsonl",
+      "benchmarks\\v0.11\\remaining_cohort_sweep\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\remaining_cohort_sweep\\remaining_candidates.jsonl",
+      "benchmarks\\v0.11\\residual_binding_closure\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "benchmarks\\v0.11\\terminal_certification\\candidate_terminal_state.jsonl",
+      "benchmarks\\v0.11\\workplan\\queue.jsonl"
+    ],
+    "reason_code": "OBJECT_RETURN",
+    "relevant_fields": [
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\candidate_profiles.jsonl",
+        "key_path": "function",
+        "value": "product"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\candidate_profiles.jsonl",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\family_profiles.json",
+        "key_path": "function",
+        "value": "product"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\family_profiles.json",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+        "key_path": "file",
+        "value": "src/oscar/apps/basket/forms.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+        "key_path": "function",
+        "value": "product"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+        "key_path": "function_sha256",
+        "value": "5e756e22c48b495d1ff8fe9f47592319ac4ae52878224c39716487cfea087f8c"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "file",
+        "value": "src/oscar/apps/basket/forms.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "function",
+        "value": "product"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "function_sha256",
+        "value": "5e756e22c48b495d1ff8fe9f47592319ac4ae52878224c39716487cfea087f8c"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.adapter_shape",
+        "value": "SIMPLE_RETURN_EXPRESSION"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.attributes[0]",
+        "value": "self.parent_product"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.authoring_route",
+        "value": "V1_SCALAR_EXPRESSION"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.calls[0]",
+        "value": "getattr"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.returns[0]",
+        "value": "getattr(self, 'child_product', self.parent_product)"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "profile.top_level_statements[0]",
+        "value": "Return"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "source_file_sha256",
+        "value": "a9b0b9c65a8eea91614b82cfb1a2d5ffdb9339b91d34ab3433df9ceee79466a4"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "source_slice",
+        "value": "def product(self):\n        \"\"\"\n        The actual product being added to the basket\n        \"\"\"\n        # Note, the child product attribute is saved in the clean_child_id\n        # method\n        return getattr(self, \"child_product\", self.parent_product)"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "prior_review.function",
+        "value": "product"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "prior_review.reason",
+        "value": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision."
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "prior_review.source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "reason",
+        "value": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision."
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "reason_code",
+        "value": "OBJECT_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.class",
+        "value": "AddToBasketForm"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.file",
+        "value": "src/oscar/apps/basket/forms.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.function",
+        "value": "product"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.function_sha256",
+        "value": "5e756e22c48b495d1ff8fe9f47592319ac4ae52878224c39716487cfea087f8c"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.source_file_sha256",
+        "value": "a9b0b9c65a8eea91614b82cfb1a2d5ffdb9339b91d34ab3433df9ceee79466a4"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source.source_id",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "function",
+        "value": "product"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "reason",
+        "value": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision."
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_v1_scalar_proofs\\non_scalar_review.jsonl",
+        "key_path": "function",
+        "value": "product"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_v1_scalar_proofs\\non_scalar_review.jsonl",
+        "key_path": "reason",
+        "value": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision."
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_v1_scalar_proofs\\non_scalar_review.jsonl",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+        "key_path": "file",
+        "value": "src/oscar/apps/basket/forms.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+        "key_path": "function",
+        "value": "product"
+      },
+      {
+        "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "provenance.file",
+        "value": "src/oscar/apps/basket/forms.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "provenance.function",
+        "value": "product"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "provenance.source_file_sha256",
+        "value": "a9b0b9c65a8eea91614b82cfb1a2d5ffdb9339b91d34ab3433df9ceee79466a4"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "provenance.source_id",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "stratum.source_id",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "v0.6_classification.classification_reasons[0]",
+        "value": "Attribute"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "v0.6_classification.classification_reasons[1]",
+        "value": "Call"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "v0.6_classification.classification_reasons[2]",
+        "value": "bound_method"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+        "key_path": "v0.6_classification.classification_reasons[3]",
+        "value": "decorated_function"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+        "key_path": "file",
+        "value": "src/oscar/apps/basket/forms.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+        "key_path": "function",
+        "value": "product"
+      },
+      {
+        "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+        "key_path": "source_id",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[0].key_path",
+        "value": "adapter_shape"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[1].key_path",
+        "value": "adapter_shape"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[2].key_path",
+        "value": "profile.adapter_shape"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[3].key_path",
+        "value": "prior_review.reason"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[4].key_path",
+        "value": "prior_review.status"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[5].key_path",
+        "value": "reason"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[6].key_path",
+        "value": "reason_code"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[7].key_path",
+        "value": "status"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[8].key_path",
+        "value": "reason"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[9].key_path",
+        "value": "status"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[10].key_path",
+        "value": "frontier_status"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[11].key_path",
+        "value": "feasibility.adapter_blockers.0"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[12].key_path",
+        "value": "v0.6_classification.classification_reasons.0"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[13].key_path",
+        "value": "v0.6_classification.classification_reasons.1"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[14].key_path",
+        "value": "v0.6_classification.classification_reasons.2"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[15].key_path",
+        "value": "v0.6_classification.classification_reasons.3"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[16].key_path",
+        "value": "adapter_blockers.0"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[17].key_path",
+        "value": "frontier_status"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[18].key_path",
+        "value": "frontier_status"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[19].key_path",
+        "value": "candidate.classification_reasons.0"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[20].key_path",
+        "value": "candidate.classification_reasons.1"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[21].key_path",
+        "value": "candidate.classification_reasons.2"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[22].key_path",
+        "value": "candidate.classification_reasons.3"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[23].key_path",
+        "value": "prior_review.reason"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[24].key_path",
+        "value": "prior_review.status"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[25].key_path",
+        "value": "reason"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[26].key_path",
+        "value": "reason_code"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "evidence[27].key_path",
+        "value": "status"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_manual_review.csv",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+        "key_path": "reason_codes",
+        "value": "OBJECT_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+        "key_path": "reviewed_reasons",
+        "value": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision."
+      },
+      {
+        "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_preliminary.csv",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\a2_worklist.jsonl",
+        "key_path": "function",
+        "value": "product"
+      },
+      {
+        "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\a2_worklist.jsonl",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\remaining_candidates.jsonl",
+        "key_path": "function",
+        "value": "product"
+      },
+      {
+        "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\remaining_candidates.jsonl",
+        "key_path": "source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.business_keyword_sources.class[0]",
+        "value": "basket"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.business_keyword_sources.docstring[0]",
+        "value": "basket"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.business_keyword_sources.path[0]",
+        "value": "basket"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.classification_reasons[0]",
+        "value": "Attribute"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.classification_reasons[1]",
+        "value": "Call"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.classification_reasons[2]",
+        "value": "bound_method"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.classification_reasons[3]",
+        "value": "decorated_function"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.file",
+        "value": "src/oscar/apps/basket/forms.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.function",
+        "value": "product"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.function_sha256",
+        "value": "5e756e22c48b495d1ff8fe9f47592319ac4ae52878224c39716487cfea087f8c"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.source_file_sha256",
+        "value": "a9b0b9c65a8eea91614b82cfb1a2d5ffdb9339b91d34ab3433df9ceee79466a4"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.source_id",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_doc_files[0]",
+        "value": "docs/source/howto/how_to_configure_stock_messaging.rst"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_doc_files[1]",
+        "value": "docs/source/howto/how_to_create_a_custom_benefit.rst"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_doc_files[2]",
+        "value": "docs/source/howto/how_to_create_a_custom_condition.rst"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_doc_files[3]",
+        "value": "docs/source/howto/how_to_create_a_custom_range.rst"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_doc_files[4]",
+        "value": "docs/source/howto/how_to_customise_models.rst"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_doc_files[5]",
+        "value": "docs/source/howto/how_to_customise_templates.rst"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_doc_files[6]",
+        "value": "docs/source/howto/how_to_setup_solr.rst"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_doc_files[7]",
+        "value": "docs/source/howto/importing_a_catalogue.rst"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_test_files[0]",
+        "value": "tests/functional/basket/test_manipulation.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_test_files[1]",
+        "value": "tests/functional/catalogue/test_catalogue.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_test_files[2]",
+        "value": "tests/functional/catalogue/test_review.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_test_files[3]",
+        "value": "tests/functional/checkout/__init__.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_test_files[4]",
+        "value": "tests/functional/checkout/test_session.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_test_files[5]",
+        "value": "tests/functional/customer/test_alert.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_test_files[6]",
+        "value": "tests/functional/customer/test_emails.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "candidate.supporting_test_files[7]",
+        "value": "tests/functional/customer/test_history.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+        "key_path": "stratum.source_id",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+        "key_path": "file",
+        "value": "src/oscar/apps/basket/forms.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+        "key_path": "function",
+        "value": "product"
+      },
+      {
+        "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+        "key_path": "source_id",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\fa377c649a747a7d.json",
+        "key_path": "prior_review.function",
+        "value": "product"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\fa377c649a747a7d.json",
+        "key_path": "prior_review.reason",
+        "value": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision."
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\fa377c649a747a7d.json",
+        "key_path": "prior_review.source",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\fa377c649a747a7d.json",
+        "key_path": "reason",
+        "value": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision."
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\fa377c649a747a7d.json",
+        "key_path": "reason_code",
+        "value": "OBJECT_RETURN"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\fa377c649a747a7d.json",
+        "key_path": "source.class",
+        "value": "AddToBasketForm"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\fa377c649a747a7d.json",
+        "key_path": "source.file",
+        "value": "src/oscar/apps/basket/forms.py"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\fa377c649a747a7d.json",
+        "key_path": "source.function",
+        "value": "product"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\fa377c649a747a7d.json",
+        "key_path": "source.function_sha256",
+        "value": "5e756e22c48b495d1ff8fe9f47592319ac4ae52878224c39716487cfea087f8c"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\fa377c649a747a7d.json",
+        "key_path": "source.source_file_sha256",
+        "value": "a9b0b9c65a8eea91614b82cfb1a2d5ffdb9339b91d34ab3433df9ceee79466a4"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\fa377c649a747a7d.json",
+        "key_path": "source.source_id",
+        "value": "django_oscar"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\fa377c649a747a7d.json",
+        "key_path": "function",
+        "value": "product"
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\fa377c649a747a7d.json",
+        "key_path": "reason",
+        "value": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision."
+      },
+      {
+        "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\fa377c649a747a7d.json",
+        "key_path": "source",
+        "value": "django_oscar"
+      }
+    ],
+    "source_candidate_count": 1,
+    "source_candidates": [
+      {
+        "definitions": [
+          "product"
+        ],
+        "evidence_file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "key_path": "source_slice",
+        "source": "def product(self):\n        \"\"\"\n        The actual product being added to the basket\n        \"\"\"\n        # Note, the child product attribute is saved in the clean_child_id\n        # method\n        return getattr(self, \"child_product\", self.parent_product)"
+      }
+    ]
+  }
+}

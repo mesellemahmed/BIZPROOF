@@ -1,0 +1,20 @@
+{
+  "candidate_id": "8b3e90ca7b531556",
+  "certification_batch": "B4_BATCH1_STRUCTURED_RETURN",
+  "function_name": "parent_pricing_policy",
+  "historical_category": "OTHER_FROZEN_SCOPE_LIMITATION",
+  "normalized_source_sha256": "2bc325044761b017027a05af4c8a5df08b0e10d8581b3432b71c6be773381ed9",
+  "physical_location_count": 1,
+  "representative_class": "FixedRateTax",
+  "representative_lineno": 292,
+  "representative_path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\partner\\strategy.py",
+  "representative_project": "django_oscar",
+  "semantic_family": "STRUCTURED_RETURN",
+  "semantic_observation": "filter children_stock to non-null stockrecords; return unavailable price when empty, otherwise use the first stockrecord and explicit rate/exponent observations to construct fixed price",
+  "semantic_route": "FILTERED_SEQUENCE_PRICING_RETURN",
+  "source": "def parent_pricing_policy(self, product, children_stock):\n        stockrecords = [x[1] for x in children_stock if x[1] is not None]\n        if not stockrecords:\n            return UnavailablePrice()\n\n        # We take price from first record\n        stockrecord = stockrecords[0]\n        rate = self.get_rate(product, stockrecord)\n        exponent = self.get_exponent(stockrecord)\n        tax = (stockrecord.price * rate).quantize(exponent)\n\n        return FixedPrice(\n            currency=stockrecord.price_currency, excl_tax=stockrecord.price, tax=tax\n        )",
+  "source_ast_sha256": "abef02bf496a1a8cf1c8feb911c54dc01e75f7a54716dd4cc3eb9c81f13ff0b5",
+  "source_resolution": "HASH_NAME_RESOLVED",
+  "source_sha256": "2bc325044761b017027a05af4c8a5df08b0e10d8581b3432b71c6be773381ed9",
+  "unique_physical_location_claim": true
+}

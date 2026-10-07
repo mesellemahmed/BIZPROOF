@@ -1,0 +1,15 @@
+{
+  "ast_digest": "4b3cd19d7893c0d76075da063691a2b0a6eeeee10b9bb6d83b8d100ed26c1e06",
+  "candidate_id": "4b57e2d73c695a41",
+  "class_name": "AbstractBasket",
+  "end_lineno": 396,
+  "function_hint": "thaw",
+  "function_name": "thaw",
+  "lineno": 391,
+  "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\basket\\abstract_models.py",
+  "project": "django_oscar",
+  "recovery_claim": false,
+  "requires_manual_or_provenance_confirmation": true,
+  "resolution": "UNIQUE_NAME_CANDIDATE",
+  "source": "def thaw(self):\n        \"\"\"\n        Unfreezes a basket so it can be modified again\n        \"\"\"\n        self.status = self.OPEN\n        self.save()"
+}

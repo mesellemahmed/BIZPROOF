@@ -1,0 +1,62 @@
+{
+  "semantic_scope_families": [
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "6c9c5d18966c42d0"
+      ],
+      "certification_claim": false,
+      "family_id": "SCOPE-8883973f4959",
+      "signature": "NONE_RETURN"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "aa5b28186fcc7696"
+      ],
+      "certification_claim": false,
+      "family_id": "SCOPE-013ee17d63c4",
+      "signature": "PASS_STUB"
+    }
+  ],
+  "structural_review_families": [
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "a09e038870c9b436"
+      ],
+      "certification_claim": false,
+      "family_id": "STRUCT-51303b6a1ec1",
+      "signature": "statement-level If requires branch-state normalization"
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "d28505f251600d52"
+      ],
+      "certification_claim": false,
+      "family_id": "STRUCT-46eb4cd2875b",
+      "signature": "unsupported constant type: bytes"
+    }
+  ],
+  "summary": {
+    "adapter_family_count": 30,
+    "benchmark_version": "0.11.0",
+    "binding_family_count": 58,
+    "certification_claim": false,
+    "cohort_sha256": "3144f973a166ebee41a059c538b81ffac5a5d15737982c6d95e59175325ca108",
+    "execution_family_count": 5,
+    "passed": true,
+    "phase": "GENERALIZATION_FAMILY_CENSUS",
+    "route_counts": {
+      "BINDING_DEFINITION": 36,
+      "CONTROLLED_EXECUTION_REVIEW": 17,
+      "EXPLICIT_ADAPTER": 33,
+      "SEMANTIC_SCOPE_REVIEW": 2,
+      "STRUCTURAL_REVIEW": 2
+    },
+    "semantic_scope_family_count": 2,
+    "structural_review_family_count": 2,
+    "total_candidates": 90
+  }
+}

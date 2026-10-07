@@ -1,0 +1,20 @@
+{
+  "authoritative_source": false,
+  "candidate_id": "674ea6fd35fa6c39",
+  "category": "STATEFUL_SIDE_EFFECTING_LOGIC",
+  "certification_started": false,
+  "evidence_detail": {
+    "direct_hash_name_location_count": 2,
+    "embedded_hash_hit_count": 2,
+    "embedded_hashes": [
+      "f3180e9973eca32f4e6a77d459e25a8759e939c13004190687ca0a2820b3c17d"
+    ],
+    "hash_name_location_count": 2,
+    "name_path_location_count": 3
+  },
+  "prior_status": "UNRESOLVED",
+  "recovery_claim": false,
+  "selected": null,
+  "status": "UNRESOLVED",
+  "support_record_count": 0
+}

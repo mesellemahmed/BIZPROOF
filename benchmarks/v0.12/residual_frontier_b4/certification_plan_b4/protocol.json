@@ -1,0 +1,86 @@
+{
+  "anti_bias_rules": [
+    "All nine candidates remain in the frozen B4 population regardless of certification outcome.",
+    "Batch membership and attack order cannot change after certification begins.",
+    "A failed candidate remains a failed attempted certification in its frozen batch.",
+    "No candidate-specific semantic exception may be introduced solely to obtain a positive result.",
+    "Framework/domain implementations outside the explicit observation boundary are not certified.",
+    "For candidate 674ea6fd35fa6c39 the authoritative claim concerns one exact source body with two equivalent physical locations; no unique-location claim is made."
+  ],
+  "attack_order_basis": "Pre-certification source provenance and semantic shape only: bounded return semantics first, then bounded effects, then vector-domain logic, then nested vector-domain logic, and finally the largest domain-binding expression.",
+  "attack_order_does_not_use": [
+    "future certification outcomes",
+    "future mutant outcomes",
+    "future solver outcomes",
+    "candidate-specific post-hoc exceptions"
+  ],
+  "attack_order_frozen": true,
+  "batches": {
+    "B4_BATCH1_STRUCTURED_RETURN": {
+      "candidate_ids": [
+        "13df73dbd2825f80",
+        "801278c4d91c2185",
+        "8b3e90ca7b531556"
+      ],
+      "order": 1,
+      "rationale": "Bounded return-value semantics with no business-state side effects in the accepted projection."
+    },
+    "B4_BATCH2_STATE_EFFECT": {
+      "candidate_ids": [
+        "674ea6fd35fa6c39",
+        "e8850260c2763222"
+      ],
+      "order": 2,
+      "rationale": "Small local state/effect traces with bounded external dependency observations."
+    },
+    "B4_BATCH3_VECTOR_LOGIC": {
+      "candidate_ids": [
+        "a74d4580a9effb73"
+      ],
+      "order": 3,
+      "rationale": "Vector/domain logic using explicit where/not_/and_/or_ semantics but without a nested helper function."
+    },
+    "B4_BATCH4_NESTED_VECTOR_LOGIC": {
+      "candidate_ids": [
+        "1a2de6edb11465fe",
+        "3fd2d8b8a76b4834"
+      ],
+      "order": 4,
+      "rationale": "Nested helper functions, comprehensions/aggregations and parameterized vector-domain logic."
+    },
+    "B4_BATCH5_LARGE_DOMAIN_BINDING": {
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "order": 5,
+      "rationale": "Largest residual expression with extensive entity bindings, parameter-tree access, enum bindings, date arithmetic and domain logic."
+    }
+  },
+  "certification_started": false,
+  "common_claim_boundary": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "execution_order": [
+    "B4_BATCH1_STRUCTURED_RETURN",
+    "B4_BATCH2_STATE_EFFECT",
+    "B4_BATCH3_VECTOR_LOGIC",
+    "B4_BATCH4_NESTED_VECTOR_LOGIC",
+    "B4_BATCH5_LARGE_DOMAIN_BINDING"
+  ],
+  "population": 9,
+  "provenance_authoritative": 9,
+  "recovery_claims": 0,
+  "required_certification_gates": [
+    "frozen_authoritative_source_sha",
+    "frozen_semantic_route",
+    "structural_source_route_gate",
+    "exact_source_execution",
+    "explicit_dependency_contract",
+    "semantic_projection_replay",
+    "frozen_mutant",
+    "formal_mutant_refutation",
+    "concrete_counterexample_replay",
+    "global_regression"
+  ],
+  "schema_version": "BIZPROOF-V0.12-B4-A2-PLAN9-1",
+  "semantic_routes_frozen": true,
+  "source_checkpoint": "5539a89cffa22fd3fd249c64e9d55199be6d0ec6"
+}

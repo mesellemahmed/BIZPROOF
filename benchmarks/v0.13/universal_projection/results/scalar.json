@@ -1,0 +1,21 @@
+{
+  "capabilities": [
+    "SCALAR_VALUE"
+  ],
+  "case_specific_routing": false,
+  "claim_scope": "generic structural semantic projection only; no business meaning is inferred for opaque bindings, calls, state, or effects",
+  "function_name": "rule",
+  "observations": [
+    {
+      "expression": "x + 1",
+      "kind": "RETURN_COMPONENT",
+      "path": "return",
+      "symbol": null
+    }
+  ],
+  "parameters": [
+    "x"
+  ],
+  "source_sha256": "7f2360c857f4ac3f858854429b99173a49c959db0f2203e8a172c98dcd79ede2",
+  "unsupported_nodes": []
+}
