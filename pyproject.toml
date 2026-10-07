@@ -8,7 +8,6 @@ version = "0.11.0"
 description = "Evidence-carrying business-semantic validation for software systems."
 readme = "README.md"
 requires-python = ">=3.11"
-license = {text = "MIT"}
 authors = [
   {name = "Ahmed Mesellem", email = "ahmed.mesellem@univ-tlemcen.dz"},
   {name = "Mohammed Mana", email = "mohammad.mana@univ-tlemcen.dz"}
