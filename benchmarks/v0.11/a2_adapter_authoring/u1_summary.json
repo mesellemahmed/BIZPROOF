@@ -1,0 +1,16 @@
+{
+  "candidate_count": 33,
+  "complexity_counts": {
+    "HIGH": 15,
+    "LOW": 4,
+    "MEDIUM": 14
+  },
+  "exact_30_family_mapping": true,
+  "phase_e_candidate_coverage": 33,
+  "phase_e_families_detected": 30,
+  "source_counts": {
+    "django_oscar": 15,
+    "openfisca_france": 5,
+    "pretix": 13
+  }
+}

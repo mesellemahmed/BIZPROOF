@@ -1,0 +1,14 @@
+{
+  "candidate_id": "eb12d3a44210a486",
+  "certification_batch": "STATE_CONTAINER_BATCH",
+  "class_name": "OrderPosition",
+  "function_name": "checkin_texts",
+  "lineno": 2676,
+  "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+  "provenance_status": "STRONG_HASH_MATCH",
+  "reason_codes": "NONSCALAR_LIST_SEMANTICS_OUTSIDE_FORMAL_SUBSET",
+  "semantic_observation": "ordered returned sequence under explicit optional-field observations",
+  "semantic_route": "CONDITIONAL_SEQUENCE_RETURN",
+  "source": "def checkin_texts(self):\n        texts = []\n        if self.order.checkin_text:\n            texts.append(self.order.checkin_text)\n        if self.variation_id and self.variation.checkin_text:\n            texts.append(self.variation.checkin_text)\n        if self.item.checkin_text:\n            texts.append(self.item.checkin_text)\n        return texts",
+  "source_sha256": "c0940eb57388bf8cbbaabf04499486b19128fed8e38e5667b6dd5c794fab29ab"
+}

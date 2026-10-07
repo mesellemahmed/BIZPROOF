@@ -1,0 +1,39 @@
+{
+  "all_required_gates_pass": true,
+  "authoritative_source": {
+    "class_harness_only": true,
+    "correct_source_ast_rewritten": false,
+    "matches_frozen_plan": true,
+    "sha256": "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897"
+  },
+  "candidate_id": "a09e038870c9b436",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_mutant_replay": true,
+  "formal_mutant_refutation": {
+    "model": "[description_len = 1, base_len = 1]",
+    "property": "there exists a non-empty description where the conditional formatted result differs from the IGNORE_DESCRIPTION_BRANCH mutant",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "function_name": "__str__",
+  "mutant": {
+    "fault": "the display string never includes the description suffix",
+    "name": "IGNORE_DESCRIPTION_BRANCH"
+  },
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-B3-CERT1-A2-1",
+  "scope": {
+    "certified": "the prospectively frozen semantic projection of the exact authoritative business source",
+    "not_certified": [
+      "correctness of Django/Oscar/Pretix framework implementations",
+      "unobserved persistence or middleware behavior",
+      "arbitrary external dependencies outside the frozen observation boundary"
+    ]
+  },
+  "semantic_capability": "CONDITIONAL_STRING_RETURN",
+  "source_projection_equivalence": {
+    "branch_basis": 2,
+    "controlled_exact_source_replay": true
+  },
+  "v012_outcome": "CERTIFIED_A2"
+}

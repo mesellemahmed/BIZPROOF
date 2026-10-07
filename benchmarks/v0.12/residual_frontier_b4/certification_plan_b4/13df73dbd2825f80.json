@@ -1,0 +1,20 @@
+{
+  "candidate_id": "13df73dbd2825f80",
+  "certification_batch": "B4_BATCH1_STRUCTURED_RETURN",
+  "function_name": "to_result_dict",
+  "historical_category": "COMPLEX_CONTAINER_SEMANTICS",
+  "normalized_source_sha256": "83bc3d5ba2e5d0e531026937ed7caaa92fd3bb434e53ca7e4b91a049fab42da1",
+  "physical_location_count": 1,
+  "representative_class": "OrderSyncResult",
+  "representative_lineno": 140,
+  "representative_path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\datasync.py",
+  "representative_project": "pretix",
+  "semantic_family": "STRUCTURED_RETURN",
+  "semantic_observation": "extensional returned mapping consisting of the six explicit fixed fields followed by mapping expansion of sync_info, including Python overwrite semantics for duplicate keys",
+  "semantic_route": "EXTENSION_MAPPING_RETURN",
+  "source": "def to_result_dict(self):\n        return {\n            \"position\": self.order_position_id,\n            \"object_type\": self.external_object_type,\n            \"external_id_field\": self.external_id_field,\n            \"id_value\": self.id_value,\n            \"external_link_href\": self.external_link_href,\n            \"external_link_display_name\": self.external_link_display_name,\n            **self.sync_info,\n        }",
+  "source_ast_sha256": "5afd6a5569e62a89903d8473f5b7172c694566dd3ad6d26d4565567e961f437e",
+  "source_resolution": "DIRECT_HASH_RESOLVED",
+  "source_sha256": "83bc3d5ba2e5d0e531026937ed7caaa92fd3bb434e53ca7e4b91a049fab42da1",
+  "unique_physical_location_claim": true
+}

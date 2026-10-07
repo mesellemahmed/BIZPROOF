@@ -1,0 +1,34 @@
+{
+  "candidate_id": "674ea6fd35fa6c39",
+  "certification_claim": false,
+  "interpretation": "Unsupported means unsupported by the frozen A2 scalar certification scope. It does not claim that the external function is intrinsically unverifiable by another formalism.",
+  "negative_evidence_digest": "cf5787fb54c02e39ca5ea3569a4925790dfb0224b8117a3858002a5e78ec8b95",
+  "prior_review": {
+    "candidate_id": "674ea6fd35fa6c39",
+    "certification_claim": false,
+    "class": "OrderPosition",
+    "function": "__init__",
+    "reason": "The function is an initializer with state mutation and no scalar return contract.",
+    "reason_code": "INITIALIZER_SIDE_EFFECT",
+    "source": "pretix",
+    "status": "A2_REVIEW_REQUIRED",
+    "terminal_outcome": null
+  },
+  "reason": "The function is an initializer with state mutation and no scalar return contract.",
+  "reason_code": "INITIALIZER_SIDE_EFFECT",
+  "schema_version": "BIZPROOF-V0.11-NEGATIVE-EVIDENCE-1",
+  "scope": "V0.11 A2 explicit scalar semantic adapter",
+  "source": {
+    "class": "OrderPosition",
+    "file": "src/pretix/base/models/orders.py",
+    "function": "__init__",
+    "function_sha256": "f3180e9973eca32f4e6a77d459e25a8759e939c13004190687ca0a2820b3c17d",
+    "lines": [
+      2629,
+      2632
+    ],
+    "source_file_sha256": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef",
+    "source_id": "pretix"
+  },
+  "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+}

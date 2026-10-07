@@ -1,0 +1,51 @@
+{
+  "project_count": 18,
+  "projects": [
+    {
+      "canonical_project_identity": "odoo/odoo",
+      "domain_family": "ERP_CRM_COMMERCE",
+      "frozen_git_commit": "53b04123100626cd1cd4e3dc336c9ae699d92c45",
+      "repository_url": "https://github.com/odoo/odoo.git"
+    },
+    {
+      "canonical_project_identity": "pretalx/pretalx",
+      "domain_family": "EVENT_MANAGEMENT",
+      "frozen_git_commit": "d36cd30c525a80bed63dd1d7ac4483a498c9248c",
+      "repository_url": "https://github.com/pretalx/pretalx.git"
+    },
+    {
+      "canonical_project_identity": "wagtail/wagtail",
+      "domain_family": "CONTENT_MANAGEMENT",
+      "frozen_git_commit": "ae4a16dee644638019dd508b448a5315000745f7",
+      "repository_url": "https://github.com/wagtail/wagtail.git"
+    },
+    {
+      "canonical_project_identity": "django-cms/django-cms",
+      "domain_family": "CONTENT_MANAGEMENT",
+      "frozen_git_commit": "e87eef5bb40d7f674195295f39a0dc60c12b5664",
+      "repository_url": "https://github.com/django-cms/django-cms.git"
+    },
+    {
+      "canonical_project_identity": "openstack/horizon",
+      "domain_family": "CLOUD_MANAGEMENT",
+      "frozen_git_commit": "f92afbc4fa55c1cbdad2caffe11610b6732c728a",
+      "repository_url": "https://github.com/openstack/horizon.git"
+    },
+    {
+      "canonical_project_identity": "ansible/awx",
+      "domain_family": "AUTOMATION",
+      "frozen_git_commit": "33a9eb7d15aedca7222354b68cde834480415913",
+      "repository_url": "https://github.com/ansible/awx.git"
+    }
+  ],
+  "schema_version": "BIZPROOF-V0.12-EXTERNAL-SOURCE-MANIFEST-1",
+  "source_universe_sha256": "e1e04fc1ff5679e0d2fef65937a0fdf470a7fe1b8e3f0578f4264f9840a1d9d8",
+  "v014_confirmatory_subset": {
+    "engine_guided_selection": false,
+    "external_outcomes_observed": 0,
+    "outcome_guided_selection": false,
+    "project_count": 6,
+    "project_selection": "fixed by v0.14-reserve-confirmatory-design-freeze",
+    "target_cases": 60
+  }
+}

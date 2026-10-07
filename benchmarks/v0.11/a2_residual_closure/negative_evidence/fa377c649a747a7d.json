@@ -1,0 +1,34 @@
+{
+  "candidate_id": "fa377c649a747a7d",
+  "certification_claim": false,
+  "interpretation": "Unsupported means unsupported by the frozen A2 scalar certification scope. It does not claim that the external function is intrinsically unverifiable by another formalism.",
+  "negative_evidence_digest": "fea32f968eb3c19762a24d4c624d5afd6c6d24bd11e3b84d6cfb4e447c3a1ed1",
+  "prior_review": {
+    "candidate_id": "fa377c649a747a7d",
+    "certification_claim": false,
+    "class": "AddToBasketForm",
+    "function": "product",
+    "reason": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision.",
+    "return_shape": "OBJECT_RETURN",
+    "source": "django_oscar",
+    "status": "A2_SCALAR_SCOPE_REVIEW_REQUIRED",
+    "terminal_outcome": null
+  },
+  "reason": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision.",
+  "reason_code": "OBJECT_RETURN",
+  "schema_version": "BIZPROOF-V0.11-NEGATIVE-EVIDENCE-1",
+  "scope": "V0.11 A2 explicit scalar semantic adapter",
+  "source": {
+    "class": "AddToBasketForm",
+    "file": "src/oscar/apps/basket/forms.py",
+    "function": "product",
+    "function_sha256": "5e756e22c48b495d1ff8fe9f47592319ac4ae52878224c39716487cfea087f8c",
+    "lines": [
+      323,
+      329
+    ],
+    "source_file_sha256": "a9b0b9c65a8eea91614b82cfb1a2d5ffdb9339b91d34ab3433df9ceee79466a4",
+    "source_id": "django_oscar"
+  },
+  "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+}

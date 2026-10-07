@@ -1,0 +1,14 @@
+{
+  "benchmark_version": "0.8.0",
+  "claim_scope": "V0.8 compares V0.7 adapters against methods extracted directly from the locked external source files and executed in controlled scalar harnesses. Zero observed mismatches is evidence of semantic preservation over the declared validation domains; it is not a universal proof outside those domains.",
+  "correct_adapter_mismatches": 0,
+  "failures": [],
+  "mutant_mismatches": 10354,
+  "passed": true,
+  "rules_checked": 4,
+  "rules_configured": 4,
+  "rules_passed": 4,
+  "runtime_seconds": 0.7418003839993617,
+  "seed": 20260926,
+  "total_comparisons": 52939
+}

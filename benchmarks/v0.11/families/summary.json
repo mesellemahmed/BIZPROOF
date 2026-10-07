@@ -1,0 +1,20 @@
+{
+  "adapter_family_count": 30,
+  "benchmark_version": "0.11.0",
+  "binding_family_count": 58,
+  "certification_claim": false,
+  "cohort_sha256": "3144f973a166ebee41a059c538b81ffac5a5d15737982c6d95e59175325ca108",
+  "execution_family_count": 5,
+  "passed": true,
+  "phase": "GENERALIZATION_FAMILY_CENSUS",
+  "route_counts": {
+    "BINDING_DEFINITION": 36,
+    "CONTROLLED_EXECUTION_REVIEW": 17,
+    "EXPLICIT_ADAPTER": 33,
+    "SEMANTIC_SCOPE_REVIEW": 2,
+    "STRUCTURAL_REVIEW": 2
+  },
+  "semantic_scope_family_count": 2,
+  "structural_review_family_count": 2,
+  "total_candidates": 90
+}

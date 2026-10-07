@@ -1,0 +1,50 @@
+{
+  "attempted_candidates": 40,
+  "benchmark_version": "0.11.0",
+  "binding_kind_counts": {
+    "ATTRIBUTE": 62,
+    "CALL": 107,
+    "GLOBAL_NAME": 1
+  },
+  "binding_occurrences": 171,
+  "binding_primitives": 58,
+  "by_original_feasibility_tier": {
+    "F0_DIRECT_SYMBOLIC": {
+      "SYMBOLIC_FRONTEND_READY": 3
+    },
+    "F1_DECLARATIVE_BINDING": {
+      "STRUCTURAL_REVIEW": 2,
+      "SYMBOLIC_FRONTEND_READY": 35
+    }
+  },
+  "certification_claim": false,
+  "cohort_sha256": "3144f973a166ebee41a059c538b81ffac5a5d15737982c6d95e59175325ca108",
+  "extraction_failures": 0,
+  "free_name_policy": "FUNCTION_PARAMETERS_ARE_INPUTS; UNBOUND_NAMES_ARE_GLOBAL_NAME_BINDINGS",
+  "passed": true,
+  "phase": "SYMBOLIC_FRONTEND_PROBE_HARDENED",
+  "probe_counts": {
+    "STRUCTURAL_REVIEW": 2,
+    "SYMBOLIC_FRONTEND_READY": 38
+  },
+  "ready_binding_count_distribution": {
+    "0": 2,
+    "1": 17,
+    "10": 1,
+    "11": 2,
+    "12": 2,
+    "2": 5,
+    "3": 1,
+    "39": 1,
+    "5": 3,
+    "6": 2,
+    "9": 2
+  },
+  "semantic_shape_counts": {
+    "NAME_RETURN": 1,
+    "NONE_RETURN": 1,
+    "PASS_STUB": 1,
+    "SUBSTANTIVE_EXPRESSION": 35
+  },
+  "source_mismatches": 0
+}

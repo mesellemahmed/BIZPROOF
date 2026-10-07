@@ -1,0 +1,19 @@
+{
+  "action_counts": {
+    "EXTERNAL_DEPENDENCY_LOCK_REQUIRED": 7,
+    "LOCAL_SOURCE_CONTRACT_DRAFT": 1,
+    "TRACE_REVIEW_REQUIRED": 7
+  },
+  "all_contracts_unresolved": true,
+  "benchmark_version": "0.11.0",
+  "certification_claim": false,
+  "cohort_sha256": "3144f973a166ebee41a059c538b81ffac5a5d15737982c6d95e59175325ca108",
+  "contract_candidates": 15,
+  "external_dependency_targets": 12,
+  "local_source_evidence_records": 2,
+  "parameter_protocol_targets": 3,
+  "passed": true,
+  "phase": "CONTRACT_READINESS_AND_DEPENDENCY_MANIFEST",
+  "semantic_contracts_validated": 0,
+  "semantic_types_resolved": 0
+}

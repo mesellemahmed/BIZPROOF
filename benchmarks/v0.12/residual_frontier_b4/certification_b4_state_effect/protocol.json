@@ -1,0 +1,41 @@
+{
+  "attempted": 2,
+  "batch": "B4_BATCH2_STATE_EFFECT",
+  "branch_basis": {
+    "674ea6fd35fa6c39": [
+      "no_deferred_fields_reset_occurs",
+      "deferred_fields_present_reset_omitted"
+    ],
+    "e8850260c2763222": [
+      "no_applicable_lines_zero_discount",
+      "applicable_line_quantity_zero_apply_and_consume",
+      "applicable_line_already_discounted_zero_discount"
+    ]
+  },
+  "candidate_ids": [
+    "674ea6fd35fa6c39",
+    "e8850260c2763222"
+  ],
+  "certification_started": false,
+  "correct_source_ast_rewrite": false,
+  "correct_source_policy": "Execute the exact source body frozen by B4-A2. The correct source is never AST-rewritten.",
+  "mutant_protocol_commit_required": true,
+  "mutants": {
+    "674ea6fd35fa6c39": {
+      "fault": "the constructor delegates to super but never performs _transaction_key_reset when no fields are deferred",
+      "name": "OMIT_TRANSACTION_KEY_RESET"
+    },
+    "e8850260c2763222": {
+      "fault": "the discount is applied and returned, but condition.consume_items is omitted from the successful discount path",
+      "name": "OMIT_CONSUME_ITEMS"
+    }
+  },
+  "mutants_frozen_before_execution": true,
+  "plan_checkpoint": "83917fff7195e73ad7c911d7121eb8c2ebdf10bb",
+  "recovery_claims_before_execution": 0,
+  "schema_version": "BIZPROOF-V0.12-B4-CERT2-PROTOCOL-1",
+  "semantic_routes": {
+    "674ea6fd35fa6c39": "DEFERRED_FIELD_GATED_RESET_EFFECT",
+    "e8850260c2763222": "CONDITIONAL_DISCOUNT_CONSUME_EFFECT"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "accepted_semantics": {
+    "branch": "variation_is_none preserves the frozen choice between item.quotas and variation.quotas.",
+    "filter": "The lazy filter operation is represented declaratively as a field/reference predicate.",
+    "laziness": "No database execution, result materialization or Django runtime behaviour is claimed.",
+    "query_source": "A QuerySet-producing relation is represented by an explicit stable typed source identity.",
+    "subevent": "subevent is represented by a stable typed Subevent reference."
+  },
+  "candidate_id": "9cc9063a46d23cde",
+  "explicit_non_claims": [
+    "No claim about SQL generation.",
+    "No claim about database contents.",
+    "No claim about QuerySet materialization.",
+    "No claim about Django database execution."
+  ],
+  "prior_v011_reason": "QUERYSET_RETURN",
+  "recovery_claims_before_execution": 0,
+  "required_gates": [
+    "frozen_source_slice",
+    "query_plan_candidate_preclassified",
+    "canonical_ast_source_equivalence",
+    "declarative_query_semantics",
+    "mutant_structurally_distinct",
+    "solver_backed_mutant_refutation",
+    "concrete_counterexample_replay"
+  ],
+  "schema_version": "BIZPROOF-V0.12-A6-QUERYPLAN-PROTOCOL-1",
+  "selection_frozen_before_execution": true,
+  "semantic_capability": "DECLARATIVE_QUERY_PLAN",
+  "source_checkpoint": "494026819ae5f70f79201b54226752f43f38d978"
+}

@@ -1,0 +1,42 @@
+{
+  "abstraction_contracts": [
+    "item_id == self.item.id",
+    "variation_present iff self.variation is present",
+    "variation_id == self.variation.id when present",
+    "order_id == str(self.order_id)"
+  ],
+  "all_required_gates_pass": true,
+  "candidate_id": "26a1af8837fe7ae4",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_counterexample_replay": {
+    "correct_value": "'<OrderPosition: item 7, variation 0 for order ORDER-1>'",
+    "mutant_value": "'<OrderPosition: item 7, variation 1 for order ORDER-1>'",
+    "replayed": true,
+    "witness": [
+      7,
+      false,
+      99,
+      "ORDER-1"
+    ]
+  },
+  "formal_mutant_refutation": {
+    "abstraction": "non-negative integer IDs; stringified order identity",
+    "formal_property": "exists an admissible semantic input such that correct_output != mutant_output",
+    "formally_refuted": true,
+    "model": "[item_id = 0, variation_id = 0, variation_present = False]",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "mutant_structurally_distinct": true,
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-A2-NONSCALAR-2",
+  "semantic_capability": "STRUCTURED_SEMANTIC_VALUE",
+  "source_equivalence": {
+    "adapter_ast": "BinOp(left=Constant(value='<OrderPosition: item %d, variation %d for order %s>'), op=Mod(), right=Tuple(elts=[Name(id='item_id', ctx=Load()), IfExp(test=Name(id='variation_present', ctx=Load()), body=Name(id='variation_id', ctx=Load()), orelse=Constant(value=0)), Name(id='order_id', ctx=Load())], ctx=Load()))",
+    "method": "canonical AST identity after explicit abstraction substitution",
+    "proved": true,
+    "source_ast": "BinOp(left=Constant(value='<OrderPosition: item %d, variation %d for order %s>'), op=Mod(), right=Tuple(elts=[Name(id='item_id', ctx=Load()), IfExp(test=Name(id='variation_present', ctx=Load()), body=Name(id='variation_id', ctx=Load()), orelse=Constant(value=0)), Name(id='order_id', ctx=Load())], ctx=Load()))"
+  },
+  "source_slice_sha256": "40ab835b9a39b452546b157de02598efdc1396b7c1d8d75b09e8d3a0a7592b3f",
+  "v012_outcome": "CERTIFIED_A2"
+}

@@ -1,0 +1,96 @@
+{
+  "26a1af8837fe7ae4": {
+    "candidate_id": "26a1af8837fe7ae4",
+    "matches": [
+      {
+        "embedded_evidence_file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "embedded_key_path": "source_slice",
+        "embedded_source": "def __repr__(self):\n        return '<OrderPosition: item %d, variation %d for order %s>' % (\n            self.item.id, self.variation.id if self.variation else 0, self.order_id\n        )",
+        "fingerprint": "8b0e7aa58febd46c5450117e6a60afe28e82d4680816a81e1bbd7f7c5e978ff0",
+        "function_name": "__repr__",
+        "repository_matches": [
+          {
+            "class_name": "OrderPosition",
+            "end_lineno": 2833,
+            "lineno": 2830,
+            "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+            "source": "def __repr__(self):\n        return '<OrderPosition: item %d, variation %d for order %s>' % (\n            self.item.id, self.variation.id if self.variation else 0, self.order_id\n        )"
+          }
+        ]
+      }
+    ],
+    "reason_code": "TEXT_RETURN"
+  },
+  "75e61ddb4dde4f1a": {
+    "candidate_id": "75e61ddb4dde4f1a",
+    "matches": [
+      {
+        "embedded_evidence_file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "embedded_key_path": "source_slice",
+        "embedded_source": "def __str__(self):\n        return _(\"Line '%(number)s' (quantity %(qty)d) price %(price)s\") % {\n            \"number\": self.line,\n            \"qty\": self.quantity,\n            \"price\": self.price_incl_tax,\n        }",
+        "fingerprint": "01531207075b02043825074371553b8e679c1760c0d22edadf555fd7177ac896",
+        "function_name": "__str__",
+        "repository_matches": [
+          {
+            "class_name": "AbstractLinePrice",
+            "end_lineno": 1016,
+            "lineno": 1011,
+            "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\order\\abstract_models.py",
+            "source": "def __str__(self):\n        return _(\"Line '%(number)s' (quantity %(qty)d) price %(price)s\") % {\n            \"number\": self.line,\n            \"qty\": self.quantity,\n            \"price\": self.price_incl_tax,\n        }"
+          }
+        ]
+      }
+    ],
+    "reason_code": "TEXT_RETURN"
+  },
+  "87d2f0b3b15f0ea6": {
+    "candidate_id": "87d2f0b3b15f0ea6",
+    "matches": [
+      {
+        "embedded_evidence_file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "embedded_key_path": "source_slice",
+        "embedded_source": "def description(self):\n        return self._description % {\n            \"value\": self.value,\n            \"range\": range_anchor(self.range),\n        }",
+        "fingerprint": "29676f4e1e73cd350f6760224a218d5ed1037fa24049af0ee14f448edfbb0955",
+        "function_name": "description",
+        "repository_matches": []
+      }
+    ],
+    "reason_code": "TEXT_RETURN"
+  },
+  "d285ecd86455b150": {
+    "candidate_id": "d285ecd86455b150",
+    "matches": [
+      {
+        "embedded_evidence_file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "embedded_key_path": "source_slice",
+        "embedded_source": "def discount_info(subevent_id, item, infos_for_item):\n            infos_for_item = list(infos_for_item)\n            return (\n                subevent_id,\n                item,\n                sum(max_count for (subevent_id, item, discount_rule, max_count, i) in infos_for_item),\n                next(discount_rule for (subevent_id, item, discount_rule, max_count, i) in infos_for_item),\n            )",
+        "fingerprint": "7f8b1059af36de1c5a8faf4cc878d5b96800a6ad9b021d05bb23aa43c622dfbe",
+        "function_name": "discount_info",
+        "repository_matches": []
+      }
+    ],
+    "reason_code": "TUPLE_RETURN"
+  },
+  "e1cf29f02fa0dadc": {
+    "candidate_id": "e1cf29f02fa0dadc",
+    "matches": [
+      {
+        "embedded_evidence_file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+        "embedded_key_path": "source_slice",
+        "embedded_source": "def get_user_offers(self, user):\n        \"\"\"\n        Returns offers linked to this particular user.\n\n        Eg: student users might get 25% off\n        \"\"\"\n        return []",
+        "fingerprint": "10592de513313cf21b5b8053703c1443c1e99d905618024e75c9a2870d26d047",
+        "function_name": "get_user_offers",
+        "repository_matches": [
+          {
+            "class_name": "Applicator",
+            "end_lineno": 102,
+            "lineno": 96,
+            "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\offer\\applicator.py",
+            "source": "def get_user_offers(self, user):\n        \"\"\"\n        Returns offers linked to this particular user.\n\n        Eg: student users might get 25% off\n        \"\"\"\n        return []"
+          }
+        ]
+      }
+    ],
+    "reason_code": "LIST_RETURN"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "acceptance_precedence": [
+    "DIRECT_HASH_NAME_PATH_RESOLVED",
+    "UNIQUE_DIRECT_HASH_NAME_RESOLVED",
+    "EQUIVALENT_SOURCE_BODY_CLUSTER_RESOLVED",
+    "UNRESOLVED"
+  ],
+  "attack_order_frozen": false,
+  "candidate_count": 1,
+  "candidate_id": "674ea6fd35fa6c39",
+  "category": "STATEFUL_SIDE_EFFECTING_LOGIC",
+  "direct_hash_name_path_rule": "Exactly one external location must be supported inside candidate-local structured records by a direct hash, the same clean function name, and a corroborating path suffix.",
+  "equivalent_source_body_cluster_rule": "If multiple strong external locations remain, they may be accepted as one authoritative source-body cluster only when all locations have the same function name, identical AST fingerprint, and identical dedented normalized source fingerprint. All locations must remain recorded.",
+  "location_claim_rule": "A source-body-cluster resolution does not claim that one physical source location is uniquely identified.",
+  "prior_authoritative": 8,
+  "recovery_claims": 0,
+  "schema_version": "BIZPROOF-V0.12-B4-A1R2-PROTOCOL-1",
+  "semantic_certification_started": false,
+  "semantic_routes_frozen": false,
+  "source_checkpoint": "9add23b3bca890b3f6805ba3283e146663fc83e9",
+  "unique_direct_hash_name_rule": "Exactly one external location must be supported by candidate-local direct-hash plus clean-name evidence."
+}

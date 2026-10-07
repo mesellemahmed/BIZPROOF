@@ -1,0 +1,34 @@
+{
+  "candidate_id": "9cc9063a46d23cde",
+  "certification_claim": false,
+  "interpretation": "Unsupported means unsupported by the frozen A2 scalar certification scope. It does not claim that the external function is intrinsically unverifiable by another formalism.",
+  "negative_evidence_digest": "c6ba01f3c7aeb3e5cd5d27b4074c08b4ad971e7e18accca1f444f7b06f65b8d3",
+  "prior_review": {
+    "candidate_id": "9cc9063a46d23cde",
+    "certification_claim": false,
+    "class": "AbstractPosition",
+    "function": "quotas",
+    "reason": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision.",
+    "return_shape": "QUERYSET_RETURN",
+    "source": "pretix",
+    "status": "A2_SCALAR_SCOPE_REVIEW_REQUIRED",
+    "terminal_outcome": null
+  },
+  "reason": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision.",
+  "reason_code": "QUERYSET_RETURN",
+  "schema_version": "BIZPROOF-V0.11-NEGATIVE-EVIDENCE-1",
+  "scope": "V0.11 A2 explicit scalar semantic adapter",
+  "source": {
+    "class": "AbstractPosition",
+    "file": "src/pretix/base/models/orders.py",
+    "function": "quotas",
+    "function_sha256": "94858a131b3ca3260d6f18f28f3117162a572335da93584573c2676c8e24f099",
+    "lines": [
+      1649,
+      1652
+    ],
+    "source_file_sha256": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef",
+    "source_id": "pretix"
+  },
+  "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+}

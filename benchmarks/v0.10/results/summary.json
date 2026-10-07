@@ -1,0 +1,13 @@
+{
+  "benchmark_version": "0.10.0",
+  "certificates_configured": 4,
+  "certificates_failed": 0,
+  "certificates_issued": 4,
+  "claim_scope": "V0.10 certifies selected business-semantic slices only when their locked provenance, V0.7 contract verification evidence, V0.8 source-executed preservation evidence, and V0.9 symbolic equivalence evidence are mutually consistent. CERTIFIED does not mean that the complete external framework has been verified.",
+  "external_system_count": 2,
+  "passed": true,
+  "runtime_seconds": 0.4029721450060606,
+  "v08_correct_mismatches": 0,
+  "v08_total_comparisons": 52939,
+  "v09_equivalences_proved": 4
+}

@@ -1,0 +1,298 @@
+{
+  "anti_bias_rules": [
+    "All eight semantic routes are frozen before certification execution.",
+    "Candidate membership and batch membership cannot change after observing results.",
+    "A failing candidate remains a failed attempt within its frozen batch.",
+    "No framework implementation is claimed correct beyond the explicit accepted semantic projection.",
+    "Source provenance and semantic certification remain separate gates."
+  ],
+  "batches": {
+    "SERVICE_EFFECT_BATCH": [
+      "7460029971aad8de",
+      "63e7979762bf860b"
+    ],
+    "STATE_RETURN_BATCH": [
+      "7cf281a33e5781df",
+      "91b2dc32504282fc",
+      "a09e038870c9b436",
+      "a79d9687185720aa",
+      "bcb091a940a8d0dd"
+    ],
+    "TRANSACTIONAL_SAVE_BATCH": [
+      "03e2adf4e4f323b1"
+    ]
+  },
+  "candidate_count": 8,
+  "candidate_ids": [
+    "03e2adf4e4f323b1",
+    "63e7979762bf860b",
+    "7460029971aad8de",
+    "7cf281a33e5781df",
+    "91b2dc32504282fc",
+    "a09e038870c9b436",
+    "a79d9687185720aa",
+    "bcb091a940a8d0dd"
+  ],
+  "certification_started": false,
+  "mappings": {
+    "03e2adf4e4f323b1": {
+      "candidate_id": "03e2adf4e4f323b1",
+      "certification_batch": "TRANSACTIONAL_SAVE_BATCH",
+      "class_name": "Order",
+      "function_name": "save",
+      "lineno": 584,
+      "matched_provenance_hash": "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+      "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+      "provenance_resolution": "STRUCTURED_DIRECT_HASH_RESOLVED",
+      "reason_codes": "MODEL_SAVE_TRANSACTION_STATE_OUTSIDE_FORMAL_SUBSET",
+      "semantic_observation": "normalized model post-state, expanded update_fields, deferred-field safety outcome, transaction-dirty trace and delegated save result",
+      "semantic_route": "TRANSACTION_AWARE_MODEL_SAVE",
+      "source": "def save(self, **kwargs):\n        if 'update_fields' in kwargs:\n            kwargs['update_fields'] = {'last_modified'}.union(kwargs['update_fields'])\n        if not self.code:\n            self.assign_code()\n            if 'update_fields' in kwargs:\n                kwargs['update_fields'] = {'code'}.union(kwargs['update_fields'])\n        if not self.datetime:\n            self.datetime = now()\n            if 'update_fields' in kwargs:\n                kwargs['update_fields'] = {'datetime'}.union(kwargs['update_fields'])\n        if not self.expires:\n            self.set_expires()\n            if 'update_fields' in kwargs:\n                kwargs['update_fields'] = {'expires'}.union(kwargs['update_fields'])\n        if not self.organizer_id:\n            self.organizer_id = self.event.organizer_id\n            if 'update_fields' in kwargs:\n                kwargs['update_fields'] = {'organizer'}.union(kwargs['update_fields'])\n\n        is_new = not self.pk\n        update_fields = kwargs.get('update_fields', [])\n        if 'require_approval' not in self.get_deferred_fields() and 'status' not in self.get_deferred_fields():\n            status_paid_or_pending = self.status in (Order.STATUS_PENDING, Order.STATUS_PAID) and not self.require_approval\n            if status_paid_or_pending != self.__initial_status_paid_or_pending:\n                _transactions_mark_order_dirty(self.pk, using=kwargs.get('using', None))\n        elif (\n            not kwargs.get('force_save_with_deferred_fields', None) and\n            (not update_fields or ('require_approval' not in update_fields and 'status' not in update_fields))\n        ):\n            _fail(\"It is unsafe to call save() on an Order with deferred fields since we can't check if you missed \"\n                  \"creating a transaction. Call save(force_save_with_deferred_fields=True) if you really want to do \"\n                  \"this.\")\n\n        r = super().save(**kwargs)\n\n        if is_new:\n            _transactions_mark_order_dirty(self.pk, using=kwargs.get('using', None))\n\n        return r",
+      "source_sha256": "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+      "structural_profile": {
+        "attribute_writes": [
+          "datetime",
+          "organizer_id"
+        ],
+        "branch_count": 13,
+        "calls": [
+          "get",
+          "save",
+          "union",
+          "assign_code",
+          "now",
+          "set_expires",
+          "_transactions_mark_order_dirty",
+          "union",
+          "union",
+          "union",
+          "union",
+          "get_deferred_fields",
+          "get_deferred_fields",
+          "_transactions_mark_order_dirty",
+          "_fail",
+          "super",
+          "get",
+          "get",
+          "get"
+        ],
+        "return_count": 1,
+        "subscript_writes": 5
+      }
+    },
+    "63e7979762bf860b": {
+      "candidate_id": "63e7979762bf860b",
+      "certification_batch": "SERVICE_EFFECT_BATCH",
+      "class_name": "BasketAddView",
+      "function_name": "form_valid",
+      "lineno": 359,
+      "matched_provenance_hash": "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34",
+      "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\basket\\views.py",
+      "provenance_resolution": "TIER_A_HASH_RESOLVED",
+      "reason_codes": "FRAMEWORK_SIGNAL_BASKET_SIDE_EFFECTS_OUTSIDE_FORMAL_SUBSET",
+      "semantic_observation": "basket mutation result plus ordered message, offer-message, signal and delegated form-valid effects",
+      "semantic_route": "ORDERED_BASKET_EFFECT_TRACE",
+      "source": "def form_valid(self, form):\n        offers_before = self.request.basket.applied_offers()\n\n        # pylint: disable=W0201\n        self.line, self.line_created = self.request.basket.add_product(\n            form.product, form.cleaned_data[\"quantity\"], form.cleaned_options()\n        )\n\n        messages.success(\n            self.request, self.get_success_message(form), extra_tags=\"safe noicon\"\n        )\n\n        # Check for additional offer messages\n        BasketMessageGenerator().apply_messages(self.request, offers_before)\n\n        # Send signal for basket addition\n        self.add_signal.send(\n            sender=self,\n            product=form.product,\n            user=self.request.user,\n            request=self.request,\n        )\n\n        return super().form_valid(form)",
+      "source_sha256": "a9684341875d75dd6e02d83d7f404bb76640500fcea86e7e948d00ae053f4d34",
+      "structural_profile": {
+        "attribute_writes": [],
+        "branch_count": 0,
+        "calls": [
+          "applied_offers",
+          "add_product",
+          "success",
+          "apply_messages",
+          "send",
+          "form_valid",
+          "cleaned_options",
+          "get_success_message",
+          "BasketMessageGenerator",
+          "super"
+        ],
+        "return_count": 1,
+        "subscript_writes": 0
+      }
+    },
+    "7460029971aad8de": {
+      "candidate_id": "7460029971aad8de",
+      "certification_batch": "SERVICE_EFFECT_BATCH",
+      "class_name": "Quota",
+      "function_name": "availability",
+      "lineno": 2147,
+      "matched_provenance_hash": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+      "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\items.py",
+      "provenance_resolution": "STRUCTURED_DIRECT_HASH_RESOLVED",
+      "reason_codes": "SERVICE_CACHE_OBJECT_SEMANTICS_OUTSIDE_FORMAL_SUBSET",
+      "semantic_observation": "returned availability tuple plus explicit cache clear/hit/write and service queue/compute observations",
+      "semantic_route": "CACHE_BACKED_SERVICE_RESULT",
+      "source": "def availability(\n            self, now_dt: datetime=None, count_waitinglist=True, _cache=None, allow_cache=False\n    ) -> Tuple[int, int]:\n        \"\"\"\n        This method is used to determine whether Items or ItemVariations belonging\n        to this quota should currently be available for sale.\n\n        :param count_waitinglist: Whether or not take waiting list reservations into account. Defaults\n                                  to ``True``.\n        :param _cache: A dictionary mapping quota IDs to availabilities. If this quota is already\n                       contained in that dictionary, this value will be used. Otherwise, the dict\n                       will be populated accordingly.\n        :param allow_cache: Allow for values to be returned from the longer-term cache, see also\n                            the documentation of this model class. Only works if ``count_waitinglist`` is\n                            set to ``True``.\n\n        :returns: a tuple where the first entry is one of the ``Quota.AVAILABILITY_`` constants\n                  and the second is the number of available tickets.\n        \"\"\"\n        from ..services.quotas import QuotaAvailability\n\n        if _cache and count_waitinglist is not _cache.get('_count_waitinglist', True):\n            _cache.clear()\n\n        if _cache is not None and self.pk in _cache:\n            return _cache[self.pk]\n        qa = QuotaAvailability(count_waitinglist=count_waitinglist, early_out=False)\n        qa.queue(self)\n        qa.compute(now_dt=now_dt, allow_cache=allow_cache)\n        res = qa.results[self]\n\n        if _cache is not None:\n            _cache[self.pk] = res\n            _cache['_count_waitinglist'] = count_waitinglist\n        return res",
+      "source_sha256": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed",
+      "structural_profile": {
+        "attribute_writes": [],
+        "branch_count": 3,
+        "calls": [
+          "QuotaAvailability",
+          "queue",
+          "compute",
+          "clear",
+          "get"
+        ],
+        "return_count": 2,
+        "subscript_writes": 2
+      }
+    },
+    "7cf281a33e5781df": {
+      "candidate_id": "7cf281a33e5781df",
+      "certification_batch": "STATE_RETURN_BATCH",
+      "class_name": "OrderFee",
+      "function_name": "price",
+      "lineno": 2511,
+      "matched_provenance_hash": "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f",
+      "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+      "provenance_resolution": "TIER_A_HASH_RESOLVED",
+      "reason_codes": "OBJECT_STATE_TRANSITION_OUTSIDE_FORMAL_SUBSET",
+      "semantic_observation": "post-state of the explicit value attribute after assignment",
+      "semantic_route": "ATTRIBUTE_STATE_WRITE",
+      "source": "def price(self, value):\n        self.value = value",
+      "source_sha256": "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f",
+      "structural_profile": {
+        "attribute_writes": [
+          "value"
+        ],
+        "branch_count": 0,
+        "calls": [],
+        "return_count": 0,
+        "subscript_writes": 0
+      }
+    },
+    "91b2dc32504282fc": {
+      "candidate_id": "91b2dc32504282fc",
+      "certification_batch": "STATE_RETURN_BATCH",
+      "class_name": "LineDiscountRegistry",
+      "function_name": "discount",
+      "lineno": 215,
+      "matched_provenance_hash": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+      "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\basket\\utils.py",
+      "provenance_resolution": "STRUCTURED_DIRECT_HASH_RESOLVED",
+      "reason_codes": "MULTI_STATE_MUTATION_OUTSIDE_FORMAL_SUBSET",
+      "semantic_observation": "ordered discount append, consume effect, and branch-dependent tax-cache invalidation",
+      "semantic_route": "DISCOUNT_SEQUENCE_AND_CACHE_INVALIDATION",
+      "source": "def discount(self, amount, quantity, incl_tax=True, offer=None):\n        self._discounts.append(DiscountApplication(amount, quantity, incl_tax, offer))\n        self.consume(quantity, offer=offer)\n        if incl_tax:\n            self._discount_incl_tax = None\n        else:\n            self._discount_excl_tax = None",
+      "source_sha256": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+      "structural_profile": {
+        "attribute_writes": [
+          "_discount_incl_tax",
+          "_discount_excl_tax"
+        ],
+        "branch_count": 1,
+        "calls": [
+          "append",
+          "consume",
+          "DiscountApplication"
+        ],
+        "return_count": 0,
+        "subscript_writes": 0
+      }
+    },
+    "a09e038870c9b436": {
+      "candidate_id": "a09e038870c9b436",
+      "certification_batch": "STATE_RETURN_BATCH",
+      "class_name": "OrderFee",
+      "function_name": "__str__",
+      "lineno": 2442,
+      "matched_provenance_hash": "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897",
+      "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+      "provenance_resolution": "STRUCTURED_DIRECT_HASH_RESOLVED",
+      "reason_codes": "CONDITIONAL_STRING_CONSTRUCTION_OUTSIDE_FROZEN_FORMAL_SCOPE",
+      "semantic_observation": "returned display string under explicit description and fee-type observations",
+      "semantic_route": "CONDITIONAL_STRING_RETURN",
+      "source": "def __str__(self):\n        if self.description:\n            return '{} - {}'.format(self.get_fee_type_display(), self.description)\n        else:\n            return self.get_fee_type_display()",
+      "source_sha256": "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897",
+      "structural_profile": {
+        "attribute_writes": [],
+        "branch_count": 1,
+        "calls": [
+          "format",
+          "get_fee_type_display",
+          "get_fee_type_display"
+        ],
+        "return_count": 2,
+        "subscript_writes": 0
+      }
+    },
+    "a79d9687185720aa": {
+      "candidate_id": "a79d9687185720aa",
+      "certification_batch": "STATE_RETURN_BATCH",
+      "class_name": "AbstractConditionalOffer",
+      "function_name": "save",
+      "lineno": 288,
+      "matched_provenance_hash": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+      "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\offer\\abstract_models.py",
+      "provenance_resolution": "STRUCTURED_DIRECT_HASH_RESOLVED",
+      "reason_codes": "MODEL_SAVE_STATE_TRANSITION_OUTSIDE_FORMAL_SUBSET",
+      "semantic_observation": "status post-state selected from suspended / application-threshold observations plus persistence delegation",
+      "semantic_route": "CONDITIONAL_STATUS_PLUS_PERSISTENCE",
+      "source": "def save(self, *args, **kwargs):\n        # Check to see if consumption thresholds have been broken\n        if not self.is_suspended:\n            if self.get_max_applications() == 0:\n                self.status = self.CONSUMED\n            else:\n                self.status = self.OPEN\n\n        return super().save(*args, **kwargs)",
+      "source_sha256": "7b7f79f9b3521d6f2b3b6596a97928cf35c94d12af5a0f748804edc23c8b982d",
+      "structural_profile": {
+        "attribute_writes": [
+          "status",
+          "status"
+        ],
+        "branch_count": 2,
+        "calls": [
+          "save",
+          "get_max_applications",
+          "super"
+        ],
+        "return_count": 1,
+        "subscript_writes": 0
+      }
+    },
+    "bcb091a940a8d0dd": {
+      "candidate_id": "bcb091a940a8d0dd",
+      "certification_batch": "STATE_RETURN_BATCH",
+      "class_name": "BasketView",
+      "function_name": "get_formset_kwargs",
+      "lineno": 42,
+      "matched_provenance_hash": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+      "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\basket\\views.py",
+      "provenance_resolution": "STRUCTURED_DIRECT_HASH_RESOLVED",
+      "reason_codes": "FRAMEWORK_DICT_MUTATION_OUTSIDE_FORMAL_SUBSET",
+      "semantic_observation": "extensional returned mapping after adding request.strategy",
+      "semantic_route": "SUPER_MAPPING_EXTENSION",
+      "source": "def get_formset_kwargs(self):\n        kwargs = super().get_formset_kwargs()\n        kwargs[\"strategy\"] = self.request.strategy\n        return kwargs",
+      "source_sha256": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+      "structural_profile": {
+        "attribute_writes": [],
+        "branch_count": 0,
+        "calls": [
+          "get_formset_kwargs",
+          "super"
+        ],
+        "return_count": 1,
+        "subscript_writes": 1
+      }
+    }
+  },
+  "recovery_claims": 0,
+  "required_certification_gates": [
+    "authoritative_source_sha",
+    "frozen_semantic_route",
+    "structural_source_route_gate",
+    "exact_source_execution",
+    "semantic_projection_replay",
+    "frozen_mutant",
+    "formal_mutant_refutation",
+    "concrete_counterexample_replay",
+    "global_regression"
+  ],
+  "schema_version": "BIZPROOF-V0.12-B3-PLAN8-1",
+  "shared_semantic_models": {
+    "cache_service_projection": "(cache_state, service_observations) -> (result, cache_post_state, ordered_service_trace)",
+    "effectful_projection": "(pre_state, explicit_dependencies) -> (post_state, return_value, ordered_effect_trace)",
+    "return_projection": "(explicit_dependencies) -> extensional_return_value",
+    "state_projection": "(pre_state, explicit_dependencies) -> post_state"
+  },
+  "source_checkpoint": "a2d57edc5feca93bd84d5389523292502328b8a4"
+}

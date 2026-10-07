@@ -1,0 +1,10 @@
+{
+  "candidate_id": "9cc9063a46d23cde",
+  "classification": "QUERY_PLAN_CANDIDATE",
+  "next_action": "IMPLEMENT_SEMANTIC_QUERY_PLAN_AND_CERTIFY",
+  "non_scalar_recovered_before_a6": 9,
+  "non_scalar_target": 10,
+  "rationale": "The frozen function constructs a lazy declarative query using recognized QuerySet-transforming methods without eager evaluation, state mutation or side effects.",
+  "recovery_claim": false,
+  "schema_version": "BIZPROOF-V0.12-A6-QUERYSET-DECISION-1"
+}

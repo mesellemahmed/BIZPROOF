@@ -1,0 +1,34 @@
+{
+  "capabilities": [
+    "NESTED_LOGIC",
+    "SCALAR_VALUE"
+  ],
+  "case_specific_routing": false,
+  "claim_scope": "generic structural semantic projection only; no business meaning is inferred for opaque bindings, calls, state, or effects",
+  "function_name": "rule",
+  "observations": [
+    {
+      "expression": "all((value > 0 for value in values))",
+      "kind": "RETURN_COMPONENT",
+      "path": "return",
+      "symbol": null
+    },
+    {
+      "expression": "all((value > 0 for value in values))",
+      "kind": "NESTED_OPERATOR",
+      "path": "all",
+      "symbol": null
+    },
+    {
+      "expression": "(value > 0 for value in values)",
+      "kind": "NESTED_OPERATOR",
+      "path": "GeneratorExp",
+      "symbol": null
+    }
+  ],
+  "parameters": [
+    "values"
+  ],
+  "source_sha256": "f4b5f614c64c9543f1b2af7ca6f66398035d088457c84e8d826f739b668a18a7",
+  "unsupported_nodes": []
+}

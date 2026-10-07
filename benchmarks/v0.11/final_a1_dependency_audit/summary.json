@@ -1,0 +1,13 @@
+{
+  "candidate_ids": [
+    "4c7af63af2f89319",
+    "61cf0e4af667580e",
+    "a74d4580a9effb73",
+    "fd4702ed1d79ff1f"
+  ],
+  "candidates_with_nested_helpers": 4,
+  "certified_a1_candidates": 34,
+  "ledger_modified": false,
+  "nested_helper_findings": 37,
+  "records_examined": 1178
+}

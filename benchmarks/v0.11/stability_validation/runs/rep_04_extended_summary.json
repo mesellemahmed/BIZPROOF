@@ -1,0 +1,83 @@
+{
+  "benchmark_scope": "Frozen CERTIFIED_A2 projection mutation sensitivity.",
+  "bizproof_frozen": {
+    "correct_equivalences_proved": 8,
+    "evidence_source": "Frozen V0.11 A2 symbolic certificates.",
+    "mutant_detection_rate": 1.0,
+    "mutants_disproved": 8
+  },
+  "candidate_ids": [
+    "2906fe3983a1ebe4",
+    "34748d082751e0cc",
+    "41ae4a7df4780001",
+    "7013ce92618a1e33",
+    "7f523a5041034306",
+    "8b98d0147c79c3fc",
+    "d5b65e1d48eca4dd",
+    "f234f0be14cf3ff3"
+  ],
+  "crosshair_by_budget": {
+    "0.5": {
+      "cases": 8,
+      "detected": 2,
+      "detection_rate_over_all": 0.25,
+      "detection_rate_when_conclusive": 0.25,
+      "missed": 6,
+      "runtime_seconds": 8.542039,
+      "unknown_or_error": 0
+    },
+    "2.0": {
+      "cases": 8,
+      "detected": 3,
+      "detection_rate_over_all": 0.375,
+      "detection_rate_when_conclusive": 0.375,
+      "missed": 5,
+      "runtime_seconds": 10.024993,
+      "unknown_or_error": 0
+    }
+  },
+  "hypothesis_by_budget": {
+    "100": {
+      "cases": 8,
+      "detected": 8,
+      "detection_rate_over_all": 1.0,
+      "detection_rate_when_conclusive": 1.0,
+      "missed": 0,
+      "runtime_seconds": 0.783114,
+      "unknown_or_error": 0
+    },
+    "1000": {
+      "cases": 8,
+      "detected": 8,
+      "detection_rate_over_all": 1.0,
+      "detection_rate_when_conclusive": 1.0,
+      "missed": 0,
+      "runtime_seconds": 0.386951,
+      "unknown_or_error": 0
+    },
+    "10000": {
+      "cases": 8,
+      "detected": 8,
+      "detection_rate_over_all": 1.0,
+      "detection_rate_when_conclusive": 1.0,
+      "missed": 0,
+      "runtime_seconds": 0.413039,
+      "unknown_or_error": 0
+    }
+  },
+  "interpretation": {
+    "bizproof": "Formal source-equivalence and mutant-disproof evidence from frozen V0.11.",
+    "crosshair": "No reported counterexample within budget is inconclusive; timeouts/errors are separate.",
+    "hypothesis": "No counterexample within budget is inconclusive.",
+    "runtime": "Runtime values are descriptive only because the tools provide different guarantee levels."
+  },
+  "primary_candidates": 8,
+  "schema_version": "BIZPROOF-V0.11-A2-MATCHED-BASELINE-1",
+  "source_level_certification_comparison": false,
+  "type_distribution": {
+    "EXTEND_DECIMAL": 2,
+    "EXTEND_FINITE_SEQUENCE": 2,
+    "EXTEND_OPTIONAL_SCALAR": 4
+  },
+  "wall_runtime_seconds": 20.292432
+}

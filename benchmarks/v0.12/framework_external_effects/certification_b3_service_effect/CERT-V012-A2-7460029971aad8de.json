@@ -1,0 +1,38 @@
+{
+  "all_required_gates_pass": true,
+  "authoritative_source": {
+    "correct_source_ast_rewritten": false,
+    "matches_frozen_plan": true,
+    "sha256": "043e1cd9628b14e9ea89a9f905f37ce77b4b16e1c8ba9e1995ab3fb7090687ed"
+  },
+  "candidate_id": "7460029971aad8de",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_mutant_replay": true,
+  "formal_mutant_refutation": {
+    "model": "[stale_value = 0,\n service_value = 1,\n policy_mismatch = True,\n cache_nonempty = True,\n has_pk = True]",
+    "property": "there exists a non-empty cache with policy mismatch and stale pk entry where the required clear forces service recomputation while OMIT_CACHE_POLICY_CLEAR returns stale data",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "function_name": "availability",
+  "mutant": {
+    "fault": "when cache policy mismatches, the mutant keeps stale cache entries instead of clearing before the cache-hit test",
+    "name": "OMIT_CACHE_POLICY_CLEAR"
+  },
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-B3-CERT2-A2-1",
+  "scope": {
+    "certified": "the exact frozen business source under the prospectively frozen service/effect semantic projection",
+    "not_certified": [
+      "correctness of Django/Oscar/Pretix framework implementations",
+      "correctness of external cache or signal infrastructure",
+      "hidden database, concurrency or middleware effects outside the frozen observation boundary"
+    ]
+  },
+  "semantic_capability": "CACHE_BACKED_SERVICE_RESULT",
+  "source_projection_equivalence": {
+    "branch_basis": 5,
+    "controlled_exact_source_replay": true
+  },
+  "v012_outcome": "CERTIFIED_A2"
+}

@@ -1,0 +1,33 @@
+{
+  "files_scanned": 1593,
+  "functions_scanned": 10835,
+  "matches": {
+    "1311d905af0ebcb5": [
+      {
+        "class_name": "Quota",
+        "end_lineno": 2145,
+        "function_name": "rebuild_cache",
+        "lineno": 2136,
+        "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\items.py"
+      }
+    ],
+    "4d7d61b18dde0ad5": [
+      {
+        "class_name": "BasketView",
+        "end_lineno": 234,
+        "function_name": "json_response",
+        "lineno": 225,
+        "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\basket\\views.py"
+      }
+    ],
+    "7bc9603bfbda7dc9": [
+      {
+        "class_name": "paje_cmg",
+        "end_lineno": 679,
+        "function_name": "formula_2017_04_01",
+        "lineno": 570,
+        "path": "external_sources\\v0.6\\openfisca_france\\openfisca_france\\model\\prestations\\prestations_familiales\\paje.py"
+      }
+    ]
+  }
+}

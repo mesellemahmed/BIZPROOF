@@ -1,0 +1,82 @@
+{
+  "projects": [
+    {
+      "deficit_fill_count": 0,
+      "eligible_available_after_global_dedup": 3042,
+      "project": "pretalx/pretalx",
+      "selected": 10,
+      "target_per_stratum_results": {
+        "S1_LOCAL_SCALAR_CONTROL": 2,
+        "S2_STRUCTURED_CONTAINER": 2,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 2,
+        "S4_STATE_EFFECT": 2,
+        "S5_BINDING_EXTERNAL_DOMAIN": 2
+      }
+    },
+    {
+      "deficit_fill_count": 0,
+      "eligible_available_after_global_dedup": 4754,
+      "project": "wagtail/wagtail",
+      "selected": 10,
+      "target_per_stratum_results": {
+        "S1_LOCAL_SCALAR_CONTROL": 2,
+        "S2_STRUCTURED_CONTAINER": 2,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 2,
+        "S4_STATE_EFFECT": 2,
+        "S5_BINDING_EXTERNAL_DOMAIN": 2
+      }
+    },
+    {
+      "deficit_fill_count": 0,
+      "eligible_available_after_global_dedup": 1715,
+      "project": "django-cms/django-cms",
+      "selected": 10,
+      "target_per_stratum_results": {
+        "S1_LOCAL_SCALAR_CONTROL": 2,
+        "S2_STRUCTURED_CONTAINER": 2,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 2,
+        "S4_STATE_EFFECT": 2,
+        "S5_BINDING_EXTERNAL_DOMAIN": 2
+      }
+    },
+    {
+      "deficit_fill_count": 0,
+      "eligible_available_after_global_dedup": 4205,
+      "project": "openstack/horizon",
+      "selected": 10,
+      "target_per_stratum_results": {
+        "S1_LOCAL_SCALAR_CONTROL": 2,
+        "S2_STRUCTURED_CONTAINER": 2,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 2,
+        "S4_STATE_EFFECT": 2,
+        "S5_BINDING_EXTERNAL_DOMAIN": 2
+      }
+    },
+    {
+      "deficit_fill_count": 0,
+      "eligible_available_after_global_dedup": 29605,
+      "project": "odoo/odoo",
+      "selected": 10,
+      "target_per_stratum_results": {
+        "S1_LOCAL_SCALAR_CONTROL": 2,
+        "S2_STRUCTURED_CONTAINER": 2,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 2,
+        "S4_STATE_EFFECT": 2,
+        "S5_BINDING_EXTERNAL_DOMAIN": 2
+      }
+    },
+    {
+      "deficit_fill_count": 0,
+      "eligible_available_after_global_dedup": 3307,
+      "project": "ansible/awx",
+      "selected": 10,
+      "target_per_stratum_results": {
+        "S1_LOCAL_SCALAR_CONTROL": 2,
+        "S2_STRUCTURED_CONTAINER": 2,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 2,
+        "S4_STATE_EFFECT": 2,
+        "S5_BINDING_EXTERNAL_DOMAIN": 2
+      }
+    }
+  ]
+}

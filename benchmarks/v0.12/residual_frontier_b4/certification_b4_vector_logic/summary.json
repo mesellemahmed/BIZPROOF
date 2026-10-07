@@ -1,0 +1,12 @@
+{
+  "attempted": 1,
+  "batch": "B4_BATCH3_VECTOR_LOGIC",
+  "candidate_results": {
+    "a74d4580a9effb73": "CERTIFIED_A2"
+  },
+  "certified_a2": 1,
+  "failed": 0,
+  "finite_boolean_basis": 16,
+  "prospective_mutant_protocol": true,
+  "schema_version": "BIZPROOF-V0.12-B4-CERT3-SUMMARY-1"
+}

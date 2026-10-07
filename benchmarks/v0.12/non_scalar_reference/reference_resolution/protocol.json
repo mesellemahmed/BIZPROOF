@@ -1,0 +1,16 @@
+{
+  "candidate_reason_codes": {
+    "0f73ae8d15cf3408": "REFERENCE_DATE_OR_NONE",
+    "6d009b7961c5d116": "LIST_OF_DOMAIN_OBJECTS_RETURN",
+    "6fd8bd69c26e7954": "DOMAIN_OBJECT_RETURN",
+    "d285ecd86455b150": "TUPLE_RETURN_WITH_DOMAIN_REFERENCES",
+    "fa377c649a747a7d": "OBJECT_RETURN"
+  },
+  "queryset_candidate_excluded": "9cc9063a46d23cde",
+  "queryset_exclusion_reason": "QUERYSET_RETURN belongs to the framework/external-effect semantic frontier and is handled separately after reference semantics.",
+  "recovery_claims": 0,
+  "schema_version": "BIZPROOF-V0.12-A5-REFERENCE-TARGET-1",
+  "selection_frozen_before_a5_implementation": true,
+  "source_checkpoint": "787319f146cea584d07c05f2276367640ed796c0",
+  "target_count": 5
+}

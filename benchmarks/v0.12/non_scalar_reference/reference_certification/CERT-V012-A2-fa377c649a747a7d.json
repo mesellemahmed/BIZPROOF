@@ -1,0 +1,28 @@
+{
+  "abstraction_contracts": [
+    "child_present models whether child_product is an available attribute",
+    "child_product_id and parent_product_id are stable Product identities",
+    "parent_product is defined in the accepted source domain, preserving getattr default evaluation semantics"
+  ],
+  "all_required_gates_pass": true,
+  "candidate_id": "fa377c649a747a7d",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_counterexample_replay": {
+    "correct": "{\"identity\":10,\"kind\":\"REFERENCE\",\"type_name\":\"Product\"}",
+    "mutant": "{\"identity\":20,\"kind\":\"REFERENCE\",\"type_name\":\"Product\"}",
+    "passed": true
+  },
+  "formal_mutant_refutation": {
+    "model": "[child_product_id = 0, parent_product_id = 1]",
+    "solver_result": "SAT"
+  },
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-A5-A2-2",
+  "semantic_capability": "TYPED_REFERENCE_SELECTION",
+  "source_equivalence": {
+    "method": "canonical executable AST identity after explicit abstraction substitution",
+    "proved": true
+  },
+  "source_slice_sha256": "d136146b5e0ff6e6459400492bb426ee126f9358ff2c9e3a361d41139e3b7ba5",
+  "v012_outcome": "CERTIFIED_A2"
+}

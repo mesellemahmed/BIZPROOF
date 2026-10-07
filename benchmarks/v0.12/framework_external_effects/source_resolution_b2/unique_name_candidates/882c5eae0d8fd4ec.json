@@ -1,0 +1,15 @@
+{
+  "ast_digest": "6e5993423e876d44f776c93479ec35677e2caf7d4e810bb6d75b6c00348666e2",
+  "candidate_id": "882c5eae0d8fd4ec",
+  "class_name": "OrderPayment",
+  "end_lineno": 2127,
+  "function_hint": "create_external_refund",
+  "function_name": "create_external_refund",
+  "lineno": 2095,
+  "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+  "project": "pretix",
+  "recovery_claim": false,
+  "requires_manual_or_provenance_confirmation": true,
+  "resolution": "UNIQUE_NAME_CANDIDATE",
+  "source": "def create_external_refund(self, amount=None, execution_date=None, info='{}'):\n        \"\"\"\n        This should be called to create an OrderRefund object when a refund has triggered\n        by an external source, e.g. when a credit card payment has been refunded by the\n        credit card provider.\n\n        :param amount: Amount to refund. If not given, the full payment amount will be used.\n        :type amount: Decimal\n        :param execution_date: Date of the refund. Defaults to the current time.\n        :type execution_date: datetime\n        :param info: Additional information, defaults to ``\"{}\"``.\n        :type info: str\n        :return: OrderRefund\n        \"\"\"\n        r = self.order.refunds.create(\n            state=OrderRefund.REFUND_STATE_EXTERNAL,\n            source=OrderRefund.REFUND_SOURCE_EXTERNAL,\n            amount=amount if amount is not None else self.amount,\n            order=self.order,\n            payment=self,\n            execution_date=execution_date or now(),\n            provider=self.provider,\n            info=info\n        )\n        self.order.log_action('pretix.event.order.refund.created.externally', {\n            'local_id': r.local_id,\n            'provider': r.provider,\n        })\n\n        if self.order.pending_sum + r.amount == Decimal('0.00'):\n            r.done()\n\n        return r"
+}

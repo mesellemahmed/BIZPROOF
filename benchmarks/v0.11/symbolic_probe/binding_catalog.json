@@ -1,0 +1,956 @@
+{
+  "benchmark_version": "0.11.0",
+  "bindings": [
+    {
+      "candidate_count": 13,
+      "candidate_ids": [
+        "19d233058899f735",
+        "244130d6ff9953d0",
+        "2dd784251ccc7dce",
+        "4b583322af591973",
+        "4c7af63af2f89319",
+        "4d2eb60abd9c44c8",
+        "61cf0e4af667580e",
+        "78ca19c5e56cefa7",
+        "80788665d9905741",
+        "9ccbe1be4f59b3ce",
+        "b46358e6c871e1bf",
+        "b70f35ae381f7a3b",
+        "fd4702ed1d79ff1f"
+      ],
+      "examples": [
+        "foyer_fiscal('bouclier_imp_gen', period)",
+        "foyer_fiscal('cd_acc75a', period)",
+        "foyer_fiscal('cd_deddiv', period)",
+        "foyer_fiscal('cd_doment', period)",
+        "foyer_fiscal('cd_eparet', period)",
+        "foyer_fiscal('cd_sofipe', period)",
+        "foyer_fiscal('csg_patrimoine_deductible_ir', period)",
+        "foyer_fiscal('epargne_codeveloppement_deduc', period)",
+        "foyer_fiscal('f3vf', period)",
+        "foyer_fiscal('f3vi', period)"
+      ],
+      "kind": "CALL",
+      "occurrences": 44,
+      "primitive": "foyer_fiscal",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 8,
+      "candidate_ids": [
+        "019d3a3df4514bac",
+        "051c7ef379178030",
+        "1458ed128652b359",
+        "61cf0e4af667580e",
+        "d28505f251600d52",
+        "dfd34c86bcd9bfa1",
+        "eb41eb351df073ef",
+        "eff10167a5398559"
+      ],
+      "examples": [
+        "individu('aah', oct_2021)",
+        "individu('aah', period)",
+        "individu('activite', period)",
+        "individu('age', period)",
+        "individu('age_en_mois', period)",
+        "individu('aide_mobilite_categories_demandeur_emploi_eligibles', period)",
+        "individu('aide_mobilite_date_demande', period)",
+        "individu('aide_mobilite_duree_trajet', period)",
+        "individu('aide_mobilite_ressources_eligibles', period)",
+        "individu('alternant', period)"
+      ],
+      "kind": "CALL",
+      "occurrences": 39,
+      "primitive": "individu",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 4,
+      "candidate_ids": [
+        "1b63ce825a129c0a",
+        "55fe61b67000b53a",
+        "5ea2122f340b1558",
+        "d033593e9fc6fbc6"
+      ],
+      "examples": [
+        "other.name",
+        "self.name"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 5,
+      "primitive": "name",
+      "source_ids": [
+        "django_oscar",
+        "pretix"
+      ]
+    },
+    {
+      "candidate_count": 3,
+      "candidate_ids": [
+        "61cf0e4af667580e",
+        "dfd34c86bcd9bfa1",
+        "eb41eb351df073ef"
+      ],
+      "examples": [
+        "not_((activite_en_recherche_emploi == TypesActiviteEnRechercheEmploi.entretien_embauche) + (activite_en_recherche_emploi == TypesActiviteEnRechercheEmploi.indeterminee))",
+        "not_(aah_eligible)",
+        "not_(individu('enfant_a_charge', period.this_year))",
+        "not_(individu('lieu_emploi_ou_formation', period) == TypesLieuEmploiFormation.non_renseigne)",
+        "not_(lieu_de_residence == TypesLieuResidence.non_renseigne)",
+        "not_(reside_en_metropole)"
+      ],
+      "kind": "CALL",
+      "occurrences": 6,
+      "primitive": "not_",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 3,
+      "candidate_ids": [
+        "4c7af63af2f89319",
+        "eb41eb351df073ef",
+        "fd4702ed1d79ff1f"
+      ],
+      "examples": [
+        "min_(contrat_de_travail_debut_en_mois + 1 + (contrat_travail_debut - contrat_de_travail_debut_en_mois), contrat_de_travail_debut_en_mois + 2 - timedelta64(1, 'D'))",
+        "min_(plaf - base_ci, f7df + f7dd)",
+        "min_(plaf, f7db)"
+      ],
+      "kind": "CALL",
+      "occurrences": 4,
+      "primitive": "min_",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 3,
+      "candidate_ids": [
+        "4c7af63af2f89319",
+        "a74d4580a9effb73",
+        "fd4702ed1d79ff1f"
+      ],
+      "examples": [
+        "where(invalide, P.plafond_invalides, where(annee1, min_(P.plafond_maximum_1ere_annee, P.plafond_1ere_annee + P.increment_plafond * (nb_pac_majoration_plafond + f7dl)), min_(P.plafond_maximum, P.plafond + P.increment_plafond * (nb_pac_majoration_plafond + f7dl))))",
+        "where(not_(or_(individu('bourse_criteres_sociaux', juin_2022) > 0, individu('bourse_enseignement_sup', juin_2022) > 0)), False, where(and_(individu.has_role(Famille.PARENT), individu.famille('eligibilite_per', period)), False, True))"
+      ],
+      "kind": "CALL",
+      "occurrences": 3,
+      "primitive": "where",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "0f2fcfc48ffea4af",
+        "55fe61b67000b53a"
+      ],
+      "examples": [
+        "other.code",
+        "self.code"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 3,
+      "primitive": "code",
+      "source_ids": [
+        "pretix"
+      ]
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "4ab5aeba4c85b4c0",
+        "55fe61b67000b53a"
+      ],
+      "examples": [
+        "other.rate",
+        "self.rate"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 3,
+      "primitive": "rate",
+      "source_ids": [
+        "django_oscar",
+        "pretix"
+      ]
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "dfd34c86bcd9bfa1",
+        "eff10167a5398559"
+      ],
+      "examples": [
+        "parameters(period).chomage.allocations_assurance_chomage.ass.age_max",
+        "parameters(period).prestations_sociales.aides_logement.action_logement.locapass.age_max"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 2,
+      "primitive": "age_max",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "dfd34c86bcd9bfa1",
+        "eff10167a5398559"
+      ],
+      "examples": [
+        "TypesActivite.chomeur"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 2,
+      "primitive": "chomeur",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "4c7af63af2f89319",
+        "fd4702ed1d79ff1f"
+      ],
+      "examples": [
+        "parameters(period).impot_revenu.calcul_reductions_impots.emploi_salarie_domicile",
+        "parameters(period).impot_revenu.credits_impots.emploi_salarie_domicile"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 2,
+      "primitive": "emploi_salarie_domicile",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "62aa728fdef86058",
+        "d821bbc9b1df03ae"
+      ],
+      "examples": [
+        "self.full_id"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 2,
+      "primitive": "full_id",
+      "source_ids": [
+        "pretix"
+      ]
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "4c7af63af2f89319",
+        "fd4702ed1d79ff1f"
+      ],
+      "examples": [
+        "P.taux"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 2,
+      "primitive": "taux",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "1458ed128652b359",
+        "eb41eb351df073ef"
+      ],
+      "examples": [
+        "individu.menage('residence', period)",
+        "individu.menage('statut_occupation_logement', period)"
+      ],
+      "kind": "CALL",
+      "occurrences": 2,
+      "primitive": "menage",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 2,
+      "candidate_ids": [
+        "019d3a3df4514bac",
+        "a74d4580a9effb73"
+      ],
+      "examples": [
+        "periods.period('2021-10')",
+        "periods.period('2022-06')"
+      ],
+      "kind": "CALL",
+      "occurrences": 2,
+      "primitive": "period",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "examples": [
+        "ContexteActivitePoleEmploi.formation",
+        "TypesContrat.formation"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 2,
+      "primitive": "formation",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "55fe61b67000b53a"
+      ],
+      "examples": [
+        "other.gross",
+        "self.gross"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 2,
+      "primitive": "gross",
+      "source_ids": [
+        "pretix"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "examples": [
+        "TypesLieuResidence.metropole",
+        "parametres_amob.distance_minimum.metropole"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 2,
+      "primitive": "metropole",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "55fe61b67000b53a"
+      ],
+      "examples": [
+        "other.net",
+        "self.net"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 2,
+      "primitive": "net",
+      "source_ids": [
+        "pretix"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "972b76d53a12b8ad"
+      ],
+      "examples": [
+        "P_micro.microentreprise.regime_micro_bic.marchandises.plafond",
+        "P_micro.microentreprise.regime_micro_bic.services.plafond"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 2,
+      "primitive": "plafond",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "55fe61b67000b53a"
+      ],
+      "examples": [
+        "other.tax",
+        "self.tax"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 2,
+      "primitive": "tax",
+      "source_ids": [
+        "pretix"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "019d3a3df4514bac"
+      ],
+      "examples": [
+        "individu.famille('paje_prepare', oct_2021)",
+        "individu.famille('rsa', oct_2021)"
+      ],
+      "kind": "CALL",
+      "occurrences": 2,
+      "primitive": "famille",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "db6bd6fe0c9b8cd4"
+      ],
+      "examples": [
+        "self._totaldiff_guesstimate"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "_totaldiff_guesstimate",
+      "source_ids": [
+        "pretix"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "972b76d53a12b8ad"
+      ],
+      "examples": [
+        "TypesTnsTypeActivite.achat_revente"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "achat_revente",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "cb937575ad9957d1"
+      ],
+      "examples": [
+        "parameters(period).prestations_sociales.prestations_familiales.prestations_generales.af.af_cm.age1"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "age1",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "1458ed128652b359"
+      ],
+      "examples": [
+        "parameters(period).prestations_sociales.education.mobilite.mobili_jeune.age_maximum"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "age_maximum",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "examples": [
+        "parameters(period).prestations_sociales.transport.aide_mobilite"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "aide_mobilite",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "examples": [
+        "DispositifsDeFormation.autre"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "autre",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "972b76d53a12b8ad"
+      ],
+      "examples": [
+        "TypesTnsTypeActivite.bic"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "bic",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "972b76d53a12b8ad"
+      ],
+      "examples": [
+        "TypesTnsTypeActivite.bnc"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "bnc",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "examples": [
+        "TypesContrat.cdd"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "cdd",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "examples": [
+        "TypesContrat.cdi"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "cdi",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "examples": [
+        "TypesContrat.ctt"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "ctt",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "examples": [
+        "parametres_amob.delai_max"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "delai_max",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "examples": [
+        "parametres_amob.duree_de_contrat_minimum"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "duree_de_contrat_minimum",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "examples": [
+        "parametres_amob.duree_de_formation_minimum"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "duree_de_formation_minimum",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "examples": [
+        "parametres_amob.duree_trajet_minimum"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "duree_trajet_minimum",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "051c7ef379178030"
+      ],
+      "examples": [
+        "TypesScolarite.enseignement_superieur"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "enseignement_superieur",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "examples": [
+        "TypesActiviteEnRechercheEmploi.entretien_embauche"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "entretien_embauche",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eff10167a5398559"
+      ],
+      "examples": [
+        "TypesActivite.etudiant"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "etudiant",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "examples": [
+        "parametres_amob.distance_minimum.hors_metropole"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "hors_metropole",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "28b1b63cc241f487"
+      ],
+      "examples": [
+        "self.internal_name"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "internal_name",
+      "source_ids": [
+        "pretix"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "460c0ee11314458e"
+      ],
+      "examples": [
+        "user.is_staff"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "is_staff",
+      "source_ids": [
+        "django_oscar"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "1458ed128652b359"
+      ],
+      "examples": [
+        "TypesStatutOccupationLogement.locataire_foyer"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "locataire_foyer",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "1458ed128652b359"
+      ],
+      "examples": [
+        "TypesStatutOccupationLogement.locataire_hlm"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "locataire_hlm",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "1458ed128652b359"
+      ],
+      "examples": [
+        "TypesStatutOccupationLogement.locataire_meuble"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "locataire_meuble",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "1458ed128652b359"
+      ],
+      "examples": [
+        "TypesStatutOccupationLogement.locataire_vide"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "locataire_vide",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "972b76d53a12b8ad"
+      ],
+      "examples": [
+        "type_activite.possible_values"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "possible_values",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "examples": [
+        "ContexteActivitePoleEmploi.recherche_emploi"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "recherche_emploi",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "examples": [
+        "ContexteActivitePoleEmploi.reprise_emploi"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "reprise_emploi",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "0fe04e3572c7203e"
+      ],
+      "examples": [
+        "line.unit_effective_price"
+      ],
+      "kind": "ATTRIBUTE",
+      "occurrences": 1,
+      "primitive": "unit_effective_price",
+      "source_ids": [
+        "django_oscar"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "aab5348ee173d6e3"
+      ],
+      "examples": [
+        "D('0.00')"
+      ],
+      "kind": "CALL",
+      "occurrences": 1,
+      "primitive": "D",
+      "source_ids": [
+        "django_oscar"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "eb41eb351df073ef"
+      ],
+      "examples": [
+        "contrat_travail_debut.astype('M8[M]')"
+      ],
+      "kind": "CALL",
+      "occurrences": 1,
+      "primitive": "astype",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "019d3a3df4514bac"
+      ],
+      "examples": [
+        "individu.has_role(Famille.PARENT)"
+      ],
+      "kind": "CALL",
+      "occurrences": 1,
+      "primitive": "has_role",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "244130d6ff9953d0"
+      ],
+      "examples": [
+        "foyer_fiscal.members('maj_cga', period)"
+      ],
+      "kind": "CALL",
+      "occurrences": 1,
+      "primitive": "members",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "cb937575ad9957d1"
+      ],
+      "examples": [
+        "nb_enf(famille, period, age_min_enfant, age_max_enfant - 1)"
+      ],
+      "kind": "CALL",
+      "occurrences": 1,
+      "primitive": "nb_enf",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "244130d6ff9953d0"
+      ],
+      "examples": [
+        "foyer_fiscal.sum(maj_cga_i)"
+      ],
+      "kind": "CALL",
+      "occurrences": 1,
+      "primitive": "sum",
+      "source_ids": [
+        "openfisca_france"
+      ]
+    },
+    {
+      "candidate_count": 1,
+      "candidate_ids": [
+        "635fe113a02cf90b"
+      ],
+      "examples": [
+        "ZERO_DISCOUNT"
+      ],
+      "kind": "GLOBAL_NAME",
+      "occurrences": 1,
+      "primitive": "ZERO_DISCOUNT",
+      "source_ids": [
+        "django_oscar"
+      ]
+    }
+  ],
+  "certification_claim": false,
+  "phase": "SYMBOLIC_BINDING_CATALOG_HARDENED"
+}

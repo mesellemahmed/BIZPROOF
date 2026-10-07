@@ -1,0 +1,755 @@
+{
+  "0f73ae8d15cf3408": {
+    "cohort": {
+      "candidate": {
+        "adaptation_complexity": "HIGH",
+        "business_keyword_sources": {
+          "class": [
+            "order"
+          ],
+          "docstring": [
+            "order"
+          ],
+          "function": [],
+          "path": [
+            "order"
+          ]
+        },
+        "business_keywords": [
+          "order"
+        ],
+        "business_relevance": "STRONG",
+        "business_score": 6,
+        "classification": "ADAPTATION_REQUIRED",
+        "classification_reasons": [
+          "Attribute",
+          "Call",
+          "ListComp",
+          "bound_method",
+          "decorated_function",
+          "local_assignment"
+        ],
+        "decorator_count": 1,
+        "docstring_present": true,
+        "enclosing_class": "Order",
+        "evidence_link_modes": {
+          "doc:EXACT_CLASS_TEXT": 48
+        },
+        "evidence_policy": "EXACT_SYMBOL_OR_EXACT_CLASS",
+        "file": "src/pretix/base/models/orders.py",
+        "function": "ticket_download_date",
+        "function_sha256": "77e520b000e302b92a67ca035d10b5ddb88ae67b71f1457aafb6212530d9f8c6",
+        "line_end": 960,
+        "line_start": 945,
+        "parameter_count": 1,
+        "source_file_sha256": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef",
+        "source_id": "pretix",
+        "supporting_doc_files": [
+          "doc/api/fundamentals.rst",
+          "doc/api/guides/custom_checkout.rst",
+          "doc/api/guides/order_lifecycle.rst",
+          "doc/api/oauth.rst",
+          "doc/api/resources/auto_checkin_rules.rst",
+          "doc/api/resources/banktransfer.rst",
+          "doc/api/resources/carts.rst",
+          "doc/api/resources/certificates.rst"
+        ],
+        "supporting_test_files": []
+      },
+      "candidate_id": "0f73ae8d15cf3408",
+      "evidence_bucket": "DOC_ONLY",
+      "selection_hash": "2607dee2ae9727ca0802eeeaa24ad96b6786d4cf950adce7e7899d361039d1b0",
+      "selection_rank_within_stratum": 8,
+      "stratum": {
+        "adaptation_complexity": "HIGH",
+        "design_weight": 6.3,
+        "design_weight_denominator": 10,
+        "design_weight_numerator": 63,
+        "population_size": 63,
+        "sample_size": 10,
+        "source_id": "pretix"
+      }
+    },
+    "terminal": {
+      "candidate_id": "0f73ae8d15cf3408",
+      "negative_evidence_digest": "3713a65922f38d562f112089e3ad92a6542899501a53db50cd80b6bc63caa394",
+      "state": "TERMINAL_ASSIGNED",
+      "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+    }
+  },
+  "26a1af8837fe7ae4": {
+    "cohort": {
+      "candidate": {
+        "adaptation_complexity": "LOW",
+        "business_keyword_sources": {
+          "class": [
+            "order"
+          ],
+          "docstring": [],
+          "function": [],
+          "path": [
+            "order"
+          ]
+        },
+        "business_keywords": [
+          "order"
+        ],
+        "business_relevance": "STRONG",
+        "business_score": 4,
+        "classification": "ADAPTATION_REQUIRED",
+        "classification_reasons": [
+          "Attribute",
+          "bound_method"
+        ],
+        "decorator_count": 0,
+        "docstring_present": false,
+        "enclosing_class": "OrderPosition",
+        "evidence_link_modes": {
+          "doc:EXACT_CLASS_TEXT": 6
+        },
+        "evidence_policy": "EXACT_SYMBOL_OR_EXACT_CLASS",
+        "file": "src/pretix/base/models/orders.py",
+        "function": "__repr__",
+        "function_sha256": "e1366c084ae7fea6c8fee980c11664194372075053be53568985527dce5564cb",
+        "line_end": 2833,
+        "line_start": 2830,
+        "parameter_count": 1,
+        "source_file_sha256": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef",
+        "source_id": "pretix",
+        "supporting_doc_files": [
+          "doc/api/resources/reusablemedia.rst",
+          "doc/api/resources/seats.rst",
+          "doc/api/resources/ticketoutputpdf.rst",
+          "doc/development/api/datasync.rst",
+          "doc/development/api/email.rst",
+          "doc/development/implementation/models.rst"
+        ],
+        "supporting_test_files": []
+      },
+      "candidate_id": "26a1af8837fe7ae4",
+      "evidence_bucket": "DOC_ONLY",
+      "selection_hash": "564a8c6d85afdeb83fc9423282770af72b1a9a4e681ab5d31543ded4b06418ea",
+      "selection_rank_within_stratum": 7,
+      "stratum": {
+        "adaptation_complexity": "LOW",
+        "design_weight": 1.5,
+        "design_weight_denominator": 10,
+        "design_weight_numerator": 15,
+        "population_size": 15,
+        "sample_size": 10,
+        "source_id": "pretix"
+      }
+    },
+    "terminal": {
+      "candidate_id": "26a1af8837fe7ae4",
+      "negative_evidence_digest": "038b8460617ad2ec804d25a38c49227cc2512d28ad8712c67f1e03bec180d0eb",
+      "state": "TERMINAL_ASSIGNED",
+      "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+    }
+  },
+  "6d009b7961c5d116": {
+    "cohort": {
+      "candidate": {
+        "adaptation_complexity": "HIGH",
+        "business_keyword_sources": {
+          "class": [],
+          "docstring": [
+            "basket",
+            "offer"
+          ],
+          "function": [
+            "offer"
+          ],
+          "path": [
+            "offer"
+          ]
+        },
+        "business_keywords": [
+          "basket",
+          "offer"
+        ],
+        "business_relevance": "STRONG",
+        "business_score": 8,
+        "classification": "ADAPTATION_REQUIRED",
+        "classification_reasons": [
+          "Attribute",
+          "Call",
+          "Lambda",
+          "bound_method",
+          "local_assignment"
+        ],
+        "decorator_count": 0,
+        "docstring_present": true,
+        "enclosing_class": "Applicator",
+        "evidence_link_modes": {
+          "doc:EXACT_CLASS_TEXT": 3,
+          "doc:EXACT_FUNCTION_TEXT": 1,
+          "test:EXACT_CLASS_SYMBOL": 19,
+          "test:EXACT_FUNCTION_SYMBOL": 1
+        },
+        "evidence_policy": "EXACT_SYMBOL_OR_EXACT_CLASS",
+        "file": "src/oscar/apps/offer/applicator.py",
+        "function": "get_offers",
+        "function_sha256": "2dc814115085bd91ed9309b365cbcf4a2c43690dfe742149052cd04917d3d441",
+        "line_end": 64,
+        "line_start": 45,
+        "parameter_count": 4,
+        "source_file_sha256": "82912db74e9b1763905b99c16cf4f723a553acbc70fe88a8fecfa4a47a2d456a",
+        "source_id": "django_oscar",
+        "supporting_doc_files": [
+          "docs/source/howto/how_to_configure_surcharges.rst",
+          "docs/source/releases/v1.1.rst",
+          "docs/source/releases/v1.5.rst"
+        ],
+        "supporting_test_files": [
+          "tests/integration/basket/test_forms.py",
+          "tests/integration/basket/test_utils.py",
+          "tests/integration/checkout/test_calculator.py",
+          "tests/integration/checkout/test_mixins.py",
+          "tests/integration/checkout/test_surcharges.py",
+          "tests/integration/offer/test_absolute_benefit.py",
+          "tests/integration/offer/test_applicator.py",
+          "tests/integration/offer/test_condition.py"
+        ]
+      },
+      "candidate_id": "6d009b7961c5d116",
+      "evidence_bucket": "TEST_AND_DOC",
+      "selection_hash": "05b66dae6d15626290e680a7146368a7a12f6cc7f30b6f2e2b9022bd48a1f7af",
+      "selection_rank_within_stratum": 1,
+      "stratum": {
+        "adaptation_complexity": "HIGH",
+        "design_weight": 5.2,
+        "design_weight_denominator": 10,
+        "design_weight_numerator": 52,
+        "population_size": 52,
+        "sample_size": 10,
+        "source_id": "django_oscar"
+      }
+    },
+    "terminal": {
+      "candidate_id": "6d009b7961c5d116",
+      "negative_evidence_digest": "07c5b4d847429ef8f2f4e831269af21be0cfd9a606b7fce8b9849e38c5ee8872",
+      "state": "TERMINAL_ASSIGNED",
+      "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+    }
+  },
+  "6fd8bd69c26e7954": {
+    "cohort": {
+      "candidate": {
+        "adaptation_complexity": "MEDIUM",
+        "business_keyword_sources": {
+          "class": [
+            "price",
+            "tax"
+          ],
+          "docstring": [],
+          "function": [],
+          "path": [
+            "tax"
+          ]
+        },
+        "business_keywords": [
+          "price",
+          "tax"
+        ],
+        "business_relevance": "STRONG",
+        "business_score": 7,
+        "classification": "ADAPTATION_REQUIRED",
+        "classification_reasons": [
+          "Attribute",
+          "Call",
+          "bound_method",
+          "local_assignment"
+        ],
+        "decorator_count": 0,
+        "docstring_present": false,
+        "enclosing_class": "TaxedPrice",
+        "evidence_link_modes": {},
+        "evidence_policy": "EXACT_SYMBOL_OR_EXACT_CLASS",
+        "file": "src/pretix/base/models/tax.py",
+        "function": "__mul__",
+        "function_sha256": "20981d8df07da04030071dbc857915cf90a8d68eaf7d419ba51dde72aae0bf50",
+        "line_end": 93,
+        "line_start": 81,
+        "parameter_count": 2,
+        "source_file_sha256": "5f27a1d0fa236365d9809f355ceb2e3331191ca931c60ef1d0a0889001db4298",
+        "source_id": "pretix",
+        "supporting_doc_files": [],
+        "supporting_test_files": []
+      },
+      "candidate_id": "6fd8bd69c26e7954",
+      "evidence_bucket": "NONE",
+      "selection_hash": "0b7a51b649f055a1257d857d03f25b4e4baa6f08848178a20300fa34969a7e9c",
+      "selection_rank_within_stratum": 7,
+      "stratum": {
+        "adaptation_complexity": "MEDIUM",
+        "design_weight": 12.4,
+        "design_weight_denominator": 10,
+        "design_weight_numerator": 124,
+        "population_size": 124,
+        "sample_size": 10,
+        "source_id": "pretix"
+      }
+    },
+    "terminal": {
+      "candidate_id": "6fd8bd69c26e7954",
+      "negative_evidence_digest": "a756207a6dad91f0a76323e8fb9cb4d6f876f00c9aba7eaa2f2711fd8c41f630",
+      "state": "TERMINAL_ASSIGNED",
+      "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+    }
+  },
+  "75e61ddb4dde4f1a": {
+    "cohort": {
+      "candidate": {
+        "adaptation_complexity": "MEDIUM",
+        "business_keyword_sources": {
+          "class": [
+            "price"
+          ],
+          "docstring": [],
+          "function": [],
+          "path": [
+            "order"
+          ]
+        },
+        "business_keywords": [
+          "order",
+          "price"
+        ],
+        "business_relevance": "STRONG",
+        "business_score": 4,
+        "classification": "ADAPTATION_REQUIRED",
+        "classification_reasons": [
+          "Attribute",
+          "Call",
+          "bound_method"
+        ],
+        "decorator_count": 0,
+        "docstring_present": false,
+        "enclosing_class": "AbstractLinePrice",
+        "evidence_link_modes": {},
+        "evidence_policy": "EXACT_SYMBOL_OR_EXACT_CLASS",
+        "file": "src/oscar/apps/order/abstract_models.py",
+        "function": "__str__",
+        "function_sha256": "66c178fb8b85f0db06099c88c8409e3310f5533920e772992caaf4a140647362",
+        "line_end": 1016,
+        "line_start": 1011,
+        "parameter_count": 1,
+        "source_file_sha256": "153ae9a7088a748690c97c456dfe2c0ae66f0b7d76406065349823a91dfba665",
+        "source_id": "django_oscar",
+        "supporting_doc_files": [],
+        "supporting_test_files": []
+      },
+      "candidate_id": "75e61ddb4dde4f1a",
+      "evidence_bucket": "NONE",
+      "selection_hash": "0533091ee8668c4a51f68c7bf121cf94d7a6597e84b2d0ecad047c5a0899f215",
+      "selection_rank_within_stratum": 7,
+      "stratum": {
+        "adaptation_complexity": "MEDIUM",
+        "design_weight": 25.1,
+        "design_weight_denominator": 10,
+        "design_weight_numerator": 251,
+        "population_size": 251,
+        "sample_size": 10,
+        "source_id": "django_oscar"
+      }
+    },
+    "terminal": {
+      "candidate_id": "75e61ddb4dde4f1a",
+      "negative_evidence_digest": "7999b4c92c02e8450c933bad0b4df20688c13bc9207b8b5197154e128fe9ef32",
+      "state": "TERMINAL_ASSIGNED",
+      "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+    }
+  },
+  "87d2f0b3b15f0ea6": {
+    "cohort": {
+      "candidate": {
+        "adaptation_complexity": "MEDIUM",
+        "business_keyword_sources": {
+          "class": [
+            "benefit",
+            "discount"
+          ],
+          "docstring": [],
+          "function": [],
+          "path": [
+            "benefit",
+            "offer"
+          ]
+        },
+        "business_keywords": [
+          "benefit",
+          "discount",
+          "offer"
+        ],
+        "business_relevance": "STRONG",
+        "business_score": 8,
+        "classification": "ADAPTATION_REQUIRED",
+        "classification_reasons": [
+          "Attribute",
+          "Call",
+          "bound_method",
+          "decorated_function"
+        ],
+        "decorator_count": 1,
+        "docstring_present": false,
+        "enclosing_class": "PercentageDiscountBenefit",
+        "evidence_link_modes": {
+          "doc:EXACT_FUNCTION_TEXT": 8,
+          "test:EXACT_CLASS_SYMBOL": 3,
+          "test:EXACT_FUNCTION_SYMBOL": 11
+        },
+        "evidence_policy": "EXACT_SYMBOL_OR_EXACT_CLASS",
+        "file": "src/oscar/apps/offer/benefits.py",
+        "function": "description",
+        "function_sha256": "45a854d0f0556c564eeb44c746da3837faec78cca180de724bdb99ac22099f65",
+        "line_end": 58,
+        "line_start": 54,
+        "parameter_count": 1,
+        "source_file_sha256": "8dd2cad6d160d25fcc009817453801672433cfdab59583da131ced04c76038b9",
+        "source_id": "django_oscar",
+        "supporting_doc_files": [
+          "docs/source/conf.py",
+          "docs/source/howto/how_to_configure_shipping.rst",
+          "docs/source/howto/how_to_create_a_custom_benefit.rst",
+          "docs/source/howto/how_to_create_a_custom_condition.rst",
+          "docs/source/howto/how_to_customise_models.rst",
+          "docs/source/internals/contributing/bugs-and-features.rst",
+          "docs/source/ref/apps/offer.rst",
+          "docs/source/ref/templatetags.rst"
+        ],
+        "supporting_test_files": [
+          "tests/_site/model_tests_app/models.py",
+          "tests/functional/test_offer.py",
+          "tests/integration/basket/test_models.py",
+          "tests/integration/dashboard/test_voucher_form.py",
+          "tests/integration/offer/test_benefit.py",
+          "tests/integration/offer/test_combination.py",
+          "tests/integration/offer/test_condition.py",
+          "tests/integration/offer/test_forms.py"
+        ]
+      },
+      "candidate_id": "87d2f0b3b15f0ea6",
+      "evidence_bucket": "TEST_AND_DOC",
+      "selection_hash": "0321cd82a50eb3164f571d9f349bc626e82ec36c9db0e4bc966f8c63e868587d",
+      "selection_rank_within_stratum": 4,
+      "stratum": {
+        "adaptation_complexity": "MEDIUM",
+        "design_weight": 25.1,
+        "design_weight_denominator": 10,
+        "design_weight_numerator": 251,
+        "population_size": 251,
+        "sample_size": 10,
+        "source_id": "django_oscar"
+      }
+    },
+    "terminal": {
+      "candidate_id": "87d2f0b3b15f0ea6",
+      "negative_evidence_digest": "852031b101623a194fddf1a11dad9e7287dbbbc2426e36a4a8ccd50bd0674c31",
+      "state": "TERMINAL_ASSIGNED",
+      "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+    }
+  },
+  "9cc9063a46d23cde": {
+    "cohort": {
+      "candidate": {
+        "adaptation_complexity": "MEDIUM",
+        "business_keyword_sources": {
+          "class": [],
+          "docstring": [],
+          "function": [
+            "quota"
+          ],
+          "path": [
+            "order"
+          ]
+        },
+        "business_keywords": [
+          "order",
+          "quota"
+        ],
+        "business_relevance": "STRONG",
+        "business_score": 4,
+        "classification": "ADAPTATION_REQUIRED",
+        "classification_reasons": [
+          "Attribute",
+          "Call",
+          "bound_method",
+          "decorated_function"
+        ],
+        "decorator_count": 1,
+        "docstring_present": false,
+        "enclosing_class": "AbstractPosition",
+        "evidence_link_modes": {
+          "doc:EXACT_CLASS_TEXT": 1,
+          "doc:EXACT_FUNCTION_TEXT": 8
+        },
+        "evidence_policy": "EXACT_SYMBOL_OR_EXACT_CLASS",
+        "file": "src/pretix/base/models/orders.py",
+        "function": "quotas",
+        "function_sha256": "94858a131b3ca3260d6f18f28f3117162a572335da93584573c2676c8e24f099",
+        "line_end": 1652,
+        "line_start": 1649,
+        "parameter_count": 1,
+        "source_file_sha256": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef",
+        "source_id": "pretix",
+        "supporting_doc_files": [
+          "doc/api/fundamentals.rst",
+          "doc/api/guides/custom_checkout.rst",
+          "doc/api/resources/events.rst",
+          "doc/api/resources/index.rst",
+          "doc/api/resources/orders.rst",
+          "doc/api/resources/quotas.rst",
+          "doc/development/concepts.rst",
+          "doc/development/implementation/locking.rst"
+        ],
+        "supporting_test_files": []
+      },
+      "candidate_id": "9cc9063a46d23cde",
+      "evidence_bucket": "DOC_ONLY",
+      "selection_hash": "018acb5b8db555403eaff58bc4471166da17e3581832e1c8f7df4aba667ca35f",
+      "selection_rank_within_stratum": 1,
+      "stratum": {
+        "adaptation_complexity": "MEDIUM",
+        "design_weight": 12.4,
+        "design_weight_denominator": 10,
+        "design_weight_numerator": 124,
+        "population_size": 124,
+        "sample_size": 10,
+        "source_id": "pretix"
+      }
+    },
+    "terminal": {
+      "candidate_id": "9cc9063a46d23cde",
+      "negative_evidence_digest": "c6ba01f3c7aeb3e5cd5d27b4074c08b4ad971e7e18accca1f444f7b06f65b8d3",
+      "state": "TERMINAL_ASSIGNED",
+      "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+    }
+  },
+  "d285ecd86455b150": {
+    "cohort": {
+      "candidate": {
+        "adaptation_complexity": "MEDIUM",
+        "business_keyword_sources": {
+          "class": [],
+          "docstring": [],
+          "function": [
+            "discount"
+          ],
+          "path": []
+        },
+        "business_keywords": [
+          "discount"
+        ],
+        "business_relevance": "STRONG",
+        "business_score": 3,
+        "classification": "ADAPTATION_REQUIRED",
+        "classification_reasons": [
+          "Call",
+          "GeneratorExp",
+          "local_assignment"
+        ],
+        "decorator_count": 0,
+        "docstring_present": false,
+        "enclosing_class": "CrossSellingService",
+        "evidence_link_modes": {},
+        "evidence_policy": "EXACT_SYMBOL_OR_EXACT_CLASS",
+        "file": "src/pretix/base/services/cross_selling.py",
+        "function": "discount_info",
+        "function_sha256": "f98331733ca429658fa45692f93095b987123e59a2a9434946edb797c8a287a8",
+        "line_end": 148,
+        "line_start": 141,
+        "parameter_count": 3,
+        "source_file_sha256": "bfdca0d7018095654ec420b2a82e9da56fc946c953e4798bfae80fa3a7b110f2",
+        "source_id": "pretix",
+        "supporting_doc_files": [],
+        "supporting_test_files": []
+      },
+      "candidate_id": "d285ecd86455b150",
+      "evidence_bucket": "NONE",
+      "selection_hash": "1074629b3d7e072454a81ff07567399d231cdff4fcd5ae2969d929a425a2ea84",
+      "selection_rank_within_stratum": 10,
+      "stratum": {
+        "adaptation_complexity": "MEDIUM",
+        "design_weight": 12.4,
+        "design_weight_denominator": 10,
+        "design_weight_numerator": 124,
+        "population_size": 124,
+        "sample_size": 10,
+        "source_id": "pretix"
+      }
+    },
+    "terminal": {
+      "candidate_id": "d285ecd86455b150",
+      "negative_evidence_digest": "491d811d07821d49611b74753c8297f089164373fc2ce70aea058c85cab26e1e",
+      "state": "TERMINAL_ASSIGNED",
+      "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+    }
+  },
+  "e1cf29f02fa0dadc": {
+    "cohort": {
+      "candidate": {
+        "adaptation_complexity": "LOW",
+        "business_keyword_sources": {
+          "class": [],
+          "docstring": [
+            "offer"
+          ],
+          "function": [
+            "offer"
+          ],
+          "path": [
+            "offer"
+          ]
+        },
+        "business_keywords": [
+          "offer"
+        ],
+        "business_relevance": "STRONG",
+        "business_score": 6,
+        "classification": "ADAPTATION_REQUIRED",
+        "classification_reasons": [
+          "bound_method"
+        ],
+        "decorator_count": 0,
+        "docstring_present": true,
+        "enclosing_class": "Applicator",
+        "evidence_link_modes": {
+          "doc:EXACT_CLASS_TEXT": 3,
+          "test:EXACT_CLASS_SYMBOL": 19,
+          "test:EXACT_FUNCTION_SYMBOL": 1
+        },
+        "evidence_policy": "EXACT_SYMBOL_OR_EXACT_CLASS",
+        "file": "src/oscar/apps/offer/applicator.py",
+        "function": "get_user_offers",
+        "function_sha256": "9d9809d1d2a2b5232149353e125ae232b56ef75120e59dd8055271093deae74a",
+        "line_end": 102,
+        "line_start": 96,
+        "parameter_count": 2,
+        "source_file_sha256": "82912db74e9b1763905b99c16cf4f723a553acbc70fe88a8fecfa4a47a2d456a",
+        "source_id": "django_oscar",
+        "supporting_doc_files": [
+          "docs/source/howto/how_to_configure_surcharges.rst",
+          "docs/source/releases/v1.1.rst",
+          "docs/source/releases/v1.5.rst"
+        ],
+        "supporting_test_files": [
+          "tests/integration/basket/test_forms.py",
+          "tests/integration/basket/test_utils.py",
+          "tests/integration/checkout/test_calculator.py",
+          "tests/integration/checkout/test_mixins.py",
+          "tests/integration/checkout/test_surcharges.py",
+          "tests/integration/offer/test_absolute_benefit.py",
+          "tests/integration/offer/test_applicator.py",
+          "tests/integration/offer/test_condition.py"
+        ]
+      },
+      "candidate_id": "e1cf29f02fa0dadc",
+      "evidence_bucket": "TEST_AND_DOC",
+      "selection_hash": "067797b167f8186cd88bc8301ec6606942c7625c1b67447a5fd20398cd4209bc",
+      "selection_rank_within_stratum": 2,
+      "stratum": {
+        "adaptation_complexity": "LOW",
+        "design_weight": 3.2,
+        "design_weight_denominator": 10,
+        "design_weight_numerator": 32,
+        "population_size": 32,
+        "sample_size": 10,
+        "source_id": "django_oscar"
+      }
+    },
+    "terminal": {
+      "candidate_id": "e1cf29f02fa0dadc",
+      "negative_evidence_digest": "eadc26d2805b8fde8104f201ed0f015bb2c1475227c12eae28bc8f51407622bf",
+      "state": "TERMINAL_ASSIGNED",
+      "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+    }
+  },
+  "fa377c649a747a7d": {
+    "cohort": {
+      "candidate": {
+        "adaptation_complexity": "MEDIUM",
+        "business_keyword_sources": {
+          "class": [
+            "basket"
+          ],
+          "docstring": [
+            "basket"
+          ],
+          "function": [],
+          "path": [
+            "basket"
+          ]
+        },
+        "business_keywords": [
+          "basket"
+        ],
+        "business_relevance": "STRONG",
+        "business_score": 6,
+        "classification": "ADAPTATION_REQUIRED",
+        "classification_reasons": [
+          "Attribute",
+          "Call",
+          "bound_method",
+          "decorated_function"
+        ],
+        "decorator_count": 1,
+        "docstring_present": true,
+        "enclosing_class": "AddToBasketForm",
+        "evidence_link_modes": {
+          "doc:EXACT_FUNCTION_TEXT": 8,
+          "test:EXACT_CLASS_SYMBOL": 1,
+          "test:EXACT_FUNCTION_SYMBOL": 60
+        },
+        "evidence_policy": "EXACT_SYMBOL_OR_EXACT_CLASS",
+        "file": "src/oscar/apps/basket/forms.py",
+        "function": "product",
+        "function_sha256": "5e756e22c48b495d1ff8fe9f47592319ac4ae52878224c39716487cfea087f8c",
+        "line_end": 329,
+        "line_start": 323,
+        "parameter_count": 1,
+        "source_file_sha256": "a9b0b9c65a8eea91614b82cfb1a2d5ffdb9339b91d34ab3433df9ceee79466a4",
+        "source_id": "django_oscar",
+        "supporting_doc_files": [
+          "docs/source/howto/how_to_configure_stock_messaging.rst",
+          "docs/source/howto/how_to_create_a_custom_benefit.rst",
+          "docs/source/howto/how_to_create_a_custom_condition.rst",
+          "docs/source/howto/how_to_create_a_custom_range.rst",
+          "docs/source/howto/how_to_customise_models.rst",
+          "docs/source/howto/how_to_customise_templates.rst",
+          "docs/source/howto/how_to_setup_solr.rst",
+          "docs/source/howto/importing_a_catalogue.rst"
+        ],
+        "supporting_test_files": [
+          "tests/functional/basket/test_manipulation.py",
+          "tests/functional/catalogue/test_catalogue.py",
+          "tests/functional/catalogue/test_review.py",
+          "tests/functional/checkout/__init__.py",
+          "tests/functional/checkout/test_session.py",
+          "tests/functional/customer/test_alert.py",
+          "tests/functional/customer/test_emails.py",
+          "tests/functional/customer/test_history.py"
+        ]
+      },
+      "candidate_id": "fa377c649a747a7d",
+      "evidence_bucket": "TEST_AND_DOC",
+      "selection_hash": "04309aba0f634e8991055326a85b048e9a82815220a7d13070b50c0bb32314b6",
+      "selection_rank_within_stratum": 5,
+      "stratum": {
+        "adaptation_complexity": "MEDIUM",
+        "design_weight": 25.1,
+        "design_weight_denominator": 10,
+        "design_weight_numerator": 251,
+        "population_size": 251,
+        "sample_size": 10,
+        "source_id": "django_oscar"
+      }
+    },
+    "terminal": {
+      "candidate_id": "fa377c649a747a7d",
+      "negative_evidence_digest": "fea32f968eb3c19762a24d4c624d5afd6c6d24bd11e3b84d6cfb4e447c3a1ed1",
+      "state": "TERMINAL_ASSIGNED",
+      "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+    }
+  }
+}

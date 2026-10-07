@@ -1,0 +1,69 @@
+{
+  "certification_batches": [
+    {
+      "attempted": 3,
+      "batch": "CERT1_STRUCTURED_RETURN",
+      "certification_commit": "83917fff7195e73ad7c911d7121eb8c2ebdf10bb",
+      "certified": 3,
+      "protocol_commit": "ad7f2d34388d3fcc01e1c002775726c0c6215cc4"
+    },
+    {
+      "attempted": 2,
+      "batch": "CERT2_STATE_EFFECT",
+      "certification_commit": "a316ca17c147336db9c009f5f4002bdf5356dbe7",
+      "certified": 2,
+      "protocol_commit": "fc40b9f19512268577c44fbb5ae2cc20ed207794"
+    },
+    {
+      "attempted": 1,
+      "batch": "CERT3_VECTOR_LOGIC",
+      "certification_commit": "f3581d23c7572ec5b9f171691ceb9d56a78dfc01",
+      "certified": 1,
+      "protocol_commit": "4f5183146c21437256f8769e57a131defbc46442"
+    },
+    {
+      "attempted": 2,
+      "batch": "CERT4_NESTED_VECTOR_LOGIC",
+      "certification_commit": "3218e50ec9d9e2dce0b534ea9a96d84d14ee6f41",
+      "certified": 2,
+      "protocol_commit": "629986aa55ff6eeae2c08991484ba8946f76be36"
+    },
+    {
+      "attempted": 1,
+      "batch": "CERT5_LARGE_DOMAIN_BINDING",
+      "certification_commit": "c918b4773796eba4f5579a0c0d7aa00619964b77",
+      "certified": 1,
+      "protocol_commit": "a5231662bcb78e639b0093b61a7da12f329f7a83"
+    }
+  ],
+  "correct_source_rewrite": false,
+  "prospective_protocol_separation": true,
+  "schema_version": "BIZPROOF-V0.12-B4-CHRONOLOGY-1",
+  "source_and_plan_commits": [
+    {
+      "commit": "ea5780fc9d94c9d5aa1f92ca7c82e331ed818418",
+      "phase": "B4-A0",
+      "role": "residual population freeze"
+    },
+    {
+      "commit": "34c07a6d362b7dbd0ffcde4136c961553b77b163",
+      "phase": "B4-A1",
+      "role": "initial source semantic audit"
+    },
+    {
+      "commit": "9add23b3bca890b3f6805ba3283e146663fc83e9",
+      "phase": "B4-A1R1",
+      "role": "refined source provenance"
+    },
+    {
+      "commit": "5539a89cffa22fd3fd249c64e9d55199be6d0ec6",
+      "phase": "B4-A1R2",
+      "role": "final 9/9 authoritative provenance"
+    },
+    {
+      "commit": "40a12fe0be049558bc8c69df1db0da5a9280f859",
+      "phase": "B4-A2",
+      "role": "prospective semantic route and attack-order freeze"
+    }
+  ]
+}

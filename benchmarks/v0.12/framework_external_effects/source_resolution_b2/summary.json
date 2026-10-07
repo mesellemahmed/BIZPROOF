@@ -1,0 +1,32 @@
+{
+  "candidate_count": 16,
+  "certification_started": false,
+  "exact_ast_resolved_ids": [],
+  "multiple_exact_ids": [],
+  "recovery_claims": 0,
+  "schema_version": "BIZPROOF-V0.12-B2-SOURCE-RESOLUTION-SUMMARY-1",
+  "status_counts": {
+    "UNIQUE_NAME_CANDIDATE": 8,
+    "UNRESOLVED": 8
+  },
+  "unique_name_candidate_ids": [
+    "2309036b0c69ad48",
+    "4b57e2d73c695a41",
+    "8048a564541f5408",
+    "882c5eae0d8fd4ec",
+    "8a754dadf1672d0a",
+    "b2996c3dd81aca55",
+    "d7f578c3a5f20b8a",
+    "eb12d3a44210a486"
+  ],
+  "unresolved_ids": [
+    "03e2adf4e4f323b1",
+    "63e7979762bf860b",
+    "7460029971aad8de",
+    "7cf281a33e5781df",
+    "91b2dc32504282fc",
+    "a09e038870c9b436",
+    "a79d9687185720aa",
+    "bcb091a940a8d0dd"
+  ]
+}

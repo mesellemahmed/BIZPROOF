@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BIZPROOF Experiment Record",
+  "type": "object",
+  "required": [
+    "artifact_id",
+    "contract_id",
+    "backend",
+    "verdict",
+    "runtime_seconds"
+  ],
+  "properties": {
+    "artifact_id": {"type": "string"},
+    "contract_id": {"type": "string"},
+    "backend": {"type": "string"},
+    "verdict": {"enum": ["PROVED", "DISPROVED", "UNKNOWN"]},
+    "runtime_seconds": {"type": "number", "minimum": 0},
+    "counterexample": {"type": ["object", "null"]},
+    "postcondition_satisfied": {"type": ["boolean", "null"]},
+    "replay_validated": {"type": ["boolean", "null"]},
+    "reason_code": {"type": ["string", "null"]},
+    "commit": {"type": ["string", "null"]},
+    "solver_version": {"type": ["string", "null"]},
+    "seed": {"type": ["integer", "null"]}
+  }
+}

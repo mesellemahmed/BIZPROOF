@@ -1,0 +1,117 @@
+{
+  "certification_claim": false,
+  "groups": [
+    {
+      "candidate_certification": false,
+      "certification_claim": false,
+      "occurrences": 43,
+      "primitive": "foyer_fiscal",
+      "resolution_status": "FUNCTION_PARAMETER_BOUNDARY",
+      "semantic_return_type": "UNRESOLVED",
+      "semantic_value_contract": "UNRESOLVED",
+      "signatures": {
+        "FUNCTION|pos=CONST_STR,NAME|kw=": 43
+      },
+      "structural_protocol_status": "VALIDATED",
+      "subject": "foyer_fiscal"
+    },
+    {
+      "candidate_certification": false,
+      "certification_claim": false,
+      "occurrences": 38,
+      "primitive": "individu",
+      "resolution_status": "FUNCTION_PARAMETER_BOUNDARY",
+      "semantic_return_type": "UNRESOLVED",
+      "semantic_value_contract": "UNRESOLVED",
+      "signatures": {
+        "FUNCTION|pos=CONST_STR,NAME|kw=": 38
+      },
+      "structural_protocol_status": "VALIDATED",
+      "subject": "individu"
+    },
+    {
+      "candidate_certification": false,
+      "certification_claim": false,
+      "occurrences": 2,
+      "primitive": "famille",
+      "resolution_status": "PARAMETER_METHOD_BOUNDARY",
+      "semantic_return_type": "UNRESOLVED",
+      "semantic_value_contract": "UNRESOLVED",
+      "signatures": {
+        "METHOD:NAME|pos=CONST_STR,NAME|kw=": 2
+      },
+      "structural_protocol_status": "VALIDATED",
+      "subject": "individu"
+    },
+    {
+      "candidate_certification": false,
+      "certification_claim": false,
+      "occurrences": 2,
+      "primitive": "menage",
+      "resolution_status": "PARAMETER_METHOD_BOUNDARY",
+      "semantic_return_type": "UNRESOLVED",
+      "semantic_value_contract": "UNRESOLVED",
+      "signatures": {
+        "METHOD:NAME|pos=CONST_STR,NAME|kw=": 2
+      },
+      "structural_protocol_status": "VALIDATED",
+      "subject": "individu"
+    },
+    {
+      "candidate_certification": false,
+      "certification_claim": false,
+      "occurrences": 1,
+      "primitive": "foyer_fiscal",
+      "resolution_status": "PARAMETER_METHOD_BOUNDARY",
+      "semantic_return_type": "UNRESOLVED",
+      "semantic_value_contract": "UNRESOLVED",
+      "signatures": {
+        "METHOD:NAME|pos=CONST_STR,ATTRIBUTE|kw=": 1
+      },
+      "structural_protocol_status": "VALIDATED",
+      "subject": "individu"
+    },
+    {
+      "candidate_certification": false,
+      "certification_claim": false,
+      "occurrences": 1,
+      "primitive": "has_role",
+      "resolution_status": "PARAMETER_METHOD_BOUNDARY",
+      "semantic_return_type": "UNRESOLVED",
+      "semantic_value_contract": "UNRESOLVED",
+      "signatures": {
+        "METHOD:NAME|pos=ATTRIBUTE|kw=": 1
+      },
+      "structural_protocol_status": "VALIDATED",
+      "subject": "individu"
+    },
+    {
+      "candidate_certification": false,
+      "certification_claim": false,
+      "occurrences": 1,
+      "primitive": "members",
+      "resolution_status": "PARAMETER_METHOD_BOUNDARY",
+      "semantic_return_type": "UNRESOLVED",
+      "semantic_value_contract": "UNRESOLVED",
+      "signatures": {
+        "METHOD:NAME|pos=CONST_STR,NAME|kw=": 1
+      },
+      "structural_protocol_status": "VALIDATED",
+      "subject": "foyer_fiscal"
+    },
+    {
+      "candidate_certification": false,
+      "certification_claim": false,
+      "occurrences": 1,
+      "primitive": "sum",
+      "resolution_status": "PARAMETER_METHOD_BOUNDARY",
+      "semantic_return_type": "UNRESOLVED",
+      "semantic_value_contract": "UNRESOLVED",
+      "signatures": {
+        "METHOD:NAME|pos=NAME|kw=": 1
+      },
+      "structural_protocol_status": "VALIDATED",
+      "subject": "foyer_fiscal"
+    }
+  ]
+}

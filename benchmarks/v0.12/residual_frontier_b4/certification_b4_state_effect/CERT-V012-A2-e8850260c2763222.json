@@ -1,0 +1,42 @@
+{
+  "all_required_gates_pass": true,
+  "authoritative_source": {
+    "correct_source_ast_rewritten": false,
+    "matches_frozen_plan": true,
+    "physical_location_count": 1,
+    "sha256": "43caf35ba88294b43ebf679eb34e8e77c76d4ed43dbd2676aaef38e9010280af",
+    "unique_physical_location_claim": true
+  },
+  "candidate_id": "e8850260c2763222",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_mutant_replay": true,
+  "formal_mutant_refutation": {
+    "model": "[has_applicable_line = True,\n quantity_with_offer_discount_is_zero = True]",
+    "property": "there exists an applicable undiscounted line where the authoritative successful path emits one consume-items effect while OMIT_CONSUME_ITEMS emits none",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "function_name": "apply",
+  "historical_category": "STATEFUL_SIDE_EFFECTING_LOGIC",
+  "mutant": {
+    "fault": "the discount is applied and returned, but condition.consume_items is omitted from the successful discount path",
+    "name": "OMIT_CONSUME_ITEMS"
+  },
+  "mutant_protocol_committed_before_execution": true,
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-B4-CERT2-A2-1",
+  "scope": {
+    "certified": "the prospectively frozen state/effect projection of the exact authoritative source body",
+    "not_certified": [
+      "correctness of surrounding Pretix/Oscar framework implementations",
+      "hidden persistence or transactional behavior outside the accepted trace",
+      "arbitrary side effects not present in the frozen observation contract"
+    ]
+  },
+  "semantic_capability": "CONDITIONAL_DISCOUNT_CONSUME_EFFECT",
+  "source_projection_equivalence": {
+    "branch_basis": 3,
+    "controlled_exact_source_replay": true
+  },
+  "v012_outcome": "CERTIFIED_A2"
+}

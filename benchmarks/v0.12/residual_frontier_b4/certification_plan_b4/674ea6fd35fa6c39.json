@@ -1,0 +1,20 @@
+{
+  "candidate_id": "674ea6fd35fa6c39",
+  "certification_batch": "B4_BATCH2_STATE_EFFECT",
+  "function_name": "__init__",
+  "historical_category": "STATEFUL_SIDE_EFFECTING_LOGIC",
+  "normalized_source_sha256": "f3180e9973eca32f4e6a77d459e25a8759e939c13004190687ca0a2820b3c17d",
+  "physical_location_count": 2,
+  "representative_class": "OrderFee",
+  "representative_lineno": 2414,
+  "representative_path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+  "representative_project": "pretix",
+  "semantic_family": "STATE_EFFECT",
+  "semantic_observation": "ordered constructor-effect trace consisting of delegated super initialization followed by conditional transaction-key reset iff get_deferred_fields() is empty",
+  "semantic_route": "DEFERRED_FIELD_GATED_RESET_EFFECT",
+  "source": "def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        if not self.get_deferred_fields():\n            self._transaction_key_reset()",
+  "source_ast_sha256": "bbc177741fa7ac46cd40ad4638bb4f4fc4a7455ba9cd7690e9328e4e42ae01d9",
+  "source_resolution": "EQUIVALENT_SOURCE_BODY_CLUSTER_RESOLVED",
+  "source_sha256": "f3180e9973eca32f4e6a77d459e25a8759e939c13004190687ca0a2820b3c17d",
+  "unique_physical_location_claim": false
+}

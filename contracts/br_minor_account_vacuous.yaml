@@ -1,0 +1,22 @@
+id: BR-001-VACUOUS
+title: Unsatisfiable minor account domain
+
+target:
+  source: examples/banking/account_policy_correct.py
+  function: can_open_account
+
+inputs:
+  age:
+    type: int
+    min: 0
+    max: 120
+    label: Customer age
+  guardian_present:
+    type: bool
+    label: Legal guardian present
+
+precondition: "age < 0"
+postcondition: "result == ((age >= 18) or guardian_present)"
+
+business:
+  expected_outcome: "A minor may open an account only when a legal guardian is present."

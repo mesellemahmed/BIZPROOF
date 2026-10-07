@@ -1,0 +1,128 @@
+{
+  "assistance_level": "A1",
+  "authoring_mode": "DECLARATIVE_BINDINGS_FROZEN_BSIR",
+  "bindings": [
+    {
+      "binding_id": "feb20a1f9ceb522f",
+      "kind": "ATTRIBUTE",
+      "primitive": "age_maximum",
+      "source_expression": "parameters(period).prestations_sociales.education.mobilite.mobili_jeune.age_maximum"
+    },
+    {
+      "binding_id": "a64aa6a000521855",
+      "kind": "ATTRIBUTE",
+      "primitive": "locataire_foyer",
+      "source_expression": "TypesStatutOccupationLogement.locataire_foyer"
+    },
+    {
+      "binding_id": "8f8294b917c95106",
+      "kind": "ATTRIBUTE",
+      "primitive": "locataire_hlm",
+      "source_expression": "TypesStatutOccupationLogement.locataire_hlm"
+    },
+    {
+      "binding_id": "67f10bbaa87feef5",
+      "kind": "ATTRIBUTE",
+      "primitive": "locataire_meuble",
+      "source_expression": "TypesStatutOccupationLogement.locataire_meuble"
+    },
+    {
+      "binding_id": "b2c1b56fcbffaae6",
+      "kind": "ATTRIBUTE",
+      "primitive": "locataire_vide",
+      "source_expression": "TypesStatutOccupationLogement.locataire_vide"
+    },
+    {
+      "binding_id": "ed56ad19dae5a1e6",
+      "kind": "CALL",
+      "primitive": "individu",
+      "source_expression": "individu('age', period)"
+    },
+    {
+      "binding_id": "dac5e7d41ce76952",
+      "kind": "CALL",
+      "primitive": "individu",
+      "source_expression": "individu('alternant', period)"
+    },
+    {
+      "binding_id": "f9d786928cf1fe17",
+      "kind": "CALL",
+      "primitive": "individu",
+      "source_expression": "individu('peec_employeur', period)"
+    },
+    {
+      "binding_id": "9578fc1ed4ddd6df",
+      "kind": "CALL",
+      "primitive": "individu",
+      "source_expression": "individu('salaire_de_base', period)"
+    },
+    {
+      "binding_id": "a2c997e4515a8c08",
+      "kind": "CALL",
+      "primitive": "individu",
+      "source_expression": "individu('smic_proratise', period)"
+    },
+    {
+      "binding_id": "1eabdd6ae43c39c9",
+      "kind": "CALL",
+      "primitive": "menage",
+      "source_expression": "individu.menage('statut_occupation_logement', period)"
+    }
+  ],
+  "candidate_id": "1458ed128652b359",
+  "certificate_digest": "5d5737ca12c9145c04a417cdd2d6ac5d6948592929c31f6f8011d0774389ef0a",
+  "certificate_id": "CERT-V011-A1-1458ED128652B359",
+  "claim_scope": "Certification proves equivalence between the locked source AST and the frozen BSIR under the explicit declarative bindings listed here. External framework/database values and helper semantics without a validated semantic contract remain outside the certificate.",
+  "evidence": {
+    "concrete_replays": 12,
+    "correct_solver_status": "unsat",
+    "ir_sha256": "446013dbf529607f6bb3c6e211aaf3446f06dd3dd274c292d71605b53cca54ef",
+    "mutant_solver_status": "sat",
+    "mutant_witness": {
+      "b_1458ed_0": "1",
+      "b_1458ed_1": "0",
+      "b_1458ed_10": "0",
+      "b_1458ed_2": "1",
+      "b_1458ed_3": "1",
+      "b_1458ed_4": "1",
+      "b_1458ed_5": "0",
+      "b_1458ed_6": "0",
+      "b_1458ed_7": "0",
+      "b_1458ed_8": "1",
+      "b_1458ed_9": "0"
+    },
+    "mutation": "mul-to-add",
+    "proof_digest": "bf367d26665db88cf17c594d0a845df247c3021b185900e287d83ae5b74f9724",
+    "proof_obligations": {
+      "bsir_compile": true,
+      "concrete_replay": true,
+      "declarative_bindings": true,
+      "frozen_bsir": true,
+      "independent_source_ast_compile": true,
+      "locked_source_commit": true,
+      "mutant_detected_sat": true,
+      "mutant_witness_replayed": true,
+      "symbolic_equivalence_unsat": true,
+      "validated_semantic_abstractions": true
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 74,
+    "text": "- `CERTIFIED_A1`: certified with declarative source-to-BVC bindings only."
+  },
+  "schema_version": "BIZPROOF-V0.11-A1-CERTIFICATE-1",
+  "semantic_contracts": {},
+  "source": {
+    "class": "mobili_jeune_eligibilite",
+    "file": "openfisca_france/model/prestations/jeunes/mobili_jeune.py",
+    "function": "formula_2022_06",
+    "function_sha256": "a6efb82ef62474236fe18e5b807494f3212d08ab32acb256d318aa5aeeee47c7",
+    "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+    "source_file_sha256": "cd3f0d830344323ecd7639588283c6d41f597ec5f2fa428cbc6a1c7b019be524",
+    "source_id": "openfisca_france"
+  },
+  "status": "CERTIFIED_A1",
+  "terminal_outcome": "CERTIFIED_A1",
+  "terminal_outcome_assigned": true
+}

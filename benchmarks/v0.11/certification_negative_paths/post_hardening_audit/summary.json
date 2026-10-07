@@ -1,0 +1,20 @@
+{
+  "certification_claim": false,
+  "discovered_function_count": 20,
+  "passed": true,
+  "phase": "CERTIFICATION_ENGINE_SAFETY_AUDIT",
+  "relevant_source_file_count": 12,
+  "relevant_test_file_count": 14,
+  "reviewer_report_direct_parameter_subscripts": 6,
+  "reviewer_report_negative_path_review_required": true,
+  "semantic_contracts_validated": 0,
+  "sha256_missing_path_review_required": true,
+  "target_callsite_counts": {
+    "_reviewer_report": 2,
+    "_sha256_file": 6
+  },
+  "target_definition_counts": {
+    "_reviewer_report": 2,
+    "_sha256_file": 3
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "candidate_id": "53abfcd7d20a9cd6",
+  "certification_claim": false,
+  "correct_proved": true,
+  "correct_solver_status": "unsat",
+  "function_sha256": "653fd8c2ec5f05ffe7a827976c2ffc3e9d8755d74acaa61ebc692cc426844c88",
+  "mutant_counterexample": {
+    "caseE": "0",
+    "caseK": "0",
+    "caseL": "1",
+    "caseN": "0",
+    "celibataire_ou_divorce": "0",
+    "nbH": "0",
+    "nb_pac": "0",
+    "not32": "2"
+  },
+  "mutant_disproved": true,
+  "mutant_solver_status": "sat",
+  "passed": true,
+  "semantic_domain": "Boolean source flags in {0,1}; count inputs are nonnegative integers; quotient-familial parameters are nonnegative rationals."
+}

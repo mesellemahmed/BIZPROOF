@@ -1,0 +1,376 @@
+{
+  "projects": [
+    {
+      "audit_counts": {
+        "below_min_ast_nodes": 231,
+        "decode_failures": 0,
+        "excluded_files": 357,
+        "generated_files": 1,
+        "historical_body_overlap": 0,
+        "parse_failures": 19,
+        "trivial_functions": 78,
+        "within_project_duplicate_bodies": 32
+      },
+      "canonical_project_identity": "ckan/ckan",
+      "domain_family": "DATA_MANAGEMENT",
+      "eligible": true,
+      "eligible_inventory_sha256": "6eed76fdccc26fbd3f8cc571f1a4e121bcc40d8f67b37335da93d15aa1803b50",
+      "eligible_unique_functions": 2571,
+      "frozen_git_commit": "cb8172446c463316efdf12a3e5aa0e0d386adf32",
+      "functions_seen": 2912,
+      "project_rank": "0339f19de28c8f37b754a991b08bfaa54b278fd2809ba2407e8c487f67cac746",
+      "python_file_count": 725,
+      "repository_url": "https://github.com/ckan/ckan.git",
+      "selected": true,
+      "snapshot_sha256": "b57e3881eb5eab8d6558d7f69e2a5da5ff8a88b48b5148ed87fae692c6180ee8",
+      "stratum_counts": {
+        "S1_LOCAL_SCALAR_CONTROL": 387,
+        "S2_STRUCTURED_CONTAINER": 616,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 112,
+        "S4_STATE_EFFECT": 594,
+        "S5_BINDING_EXTERNAL_DOMAIN": 862
+      }
+    },
+    {
+      "audit_counts": {
+        "below_min_ast_nodes": 458,
+        "decode_failures": 0,
+        "excluded_files": 8610,
+        "generated_files": 1,
+        "historical_body_overlap": 0,
+        "parse_failures": 384,
+        "trivial_functions": 62,
+        "within_project_duplicate_bodies": 1861
+      },
+      "canonical_project_identity": "home-assistant/core",
+      "domain_family": "IOT_AUTOMATION",
+      "eligible": true,
+      "eligible_inventory_sha256": "00bd8d8ed73732d694c6c3eba19507814cf028bb9797e1b55798e07ee3bc868f",
+      "eligible_unique_functions": 51857,
+      "frozen_git_commit": "a57de59dade26cbe074a449938ac1853f2085c9a",
+      "functions_seen": 54238,
+      "project_rank": "2376ba823162c69088f35460480da42299ed12b3513d50ee8fe3c7c136bc2739",
+      "python_file_count": 19104,
+      "repository_url": "https://github.com/home-assistant/core.git",
+      "selected": true,
+      "snapshot_sha256": "984f48d97b009352577329944cef0eef25033f8a00627bc92c13c7d8c0a3189e",
+      "stratum_counts": {
+        "S1_LOCAL_SCALAR_CONTROL": 16771,
+        "S2_STRUCTURED_CONTAINER": 11330,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 3990,
+        "S4_STATE_EFFECT": 17682,
+        "S5_BINDING_EXTERNAL_DOMAIN": 2084
+      }
+    },
+    {
+      "audit_counts": {
+        "below_min_ast_nodes": 145,
+        "decode_failures": 0,
+        "excluded_files": 3196,
+        "generated_files": 1,
+        "historical_body_overlap": 0,
+        "parse_failures": 0,
+        "trivial_functions": 70,
+        "within_project_duplicate_bodies": 91
+      },
+      "canonical_project_identity": "saleor/saleor",
+      "domain_family": "ECOMMERCE",
+      "eligible": true,
+      "eligible_inventory_sha256": "e6a4c80acd2f81b4562682b2f5ca088a93f4677f3c8176c26bf25732113bcf89",
+      "eligible_unique_functions": 6454,
+      "frozen_git_commit": "8385ca60ecefa3a068aed3d1a28188e096cdc543",
+      "functions_seen": 6760,
+      "project_rank": "3d6bbd45bcfea4c31ea53db660972f0072f7983fef97f0efa27a84f1a7e2c5fa",
+      "python_file_count": 4344,
+      "repository_url": "https://github.com/saleor/saleor.git",
+      "selected": true,
+      "snapshot_sha256": "e1bd3e4f5d0c2cce26df3736b00e84f35404f7228213ae3a20ddc4295a85f1bf",
+      "stratum_counts": {
+        "S1_LOCAL_SCALAR_CONTROL": 1493,
+        "S2_STRUCTURED_CONTAINER": 1325,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 845,
+        "S4_STATE_EFFECT": 1234,
+        "S5_BINDING_EXTERNAL_DOMAIN": 1557
+      }
+    },
+    {
+      "audit_counts": {
+        "below_min_ast_nodes": 119,
+        "decode_failures": 0,
+        "excluded_files": 410,
+        "generated_files": 1,
+        "historical_body_overlap": 0,
+        "parse_failures": 0,
+        "trivial_functions": 205,
+        "within_project_duplicate_bodies": 101
+      },
+      "canonical_project_identity": "element-hq/synapse",
+      "domain_family": "MESSAGING",
+      "eligible": true,
+      "eligible_inventory_sha256": "d41074ec52ccd26ccd5c35be7970d71586717394cbf419a72c3b51edc07c0a99",
+      "eligible_unique_functions": 6047,
+      "frozen_git_commit": "4f5524043c40985eb39900d7c459ace4bf804ee9",
+      "functions_seen": 6472,
+      "project_rank": "3e603666f6aa5ca9da7ccce2c0c61a2b47cf0983736999df039408b3a31e668d",
+      "python_file_count": 1019,
+      "repository_url": "https://github.com/element-hq/synapse.git",
+      "selected": true,
+      "snapshot_sha256": "241f2c99c7c895c31b701e86609685a54ce60de3e366c76069d7b49d8bbe49bd",
+      "stratum_counts": {
+        "S1_LOCAL_SCALAR_CONTROL": 1251,
+        "S2_STRUCTURED_CONTAINER": 1326,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 462,
+        "S4_STATE_EFFECT": 2337,
+        "S5_BINDING_EXTERNAL_DOMAIN": 671
+      }
+    },
+    {
+      "audit_counts": {
+        "below_min_ast_nodes": 265,
+        "decode_failures": 0,
+        "excluded_files": 514,
+        "generated_files": 0,
+        "historical_body_overlap": 0,
+        "parse_failures": 0,
+        "trivial_functions": 7,
+        "within_project_duplicate_bodies": 184
+      },
+      "canonical_project_identity": "netbox-community/netbox",
+      "domain_family": "NETWORK_INFRASTRUCTURE",
+      "eligible": true,
+      "eligible_inventory_sha256": "7b1ba844832c9d5334c39fc8f8ed62805615ca5a0ffcfe6f8e4d379f2275fe34",
+      "eligible_unique_functions": 3156,
+      "frozen_git_commit": "5a9a9d2a25318ff68fdd567959a2d4f1f7080b21",
+      "functions_seen": 3612,
+      "project_rank": "49ebcd520eaf7e94cf5920873aaa3f56d84b5acc62f1c901cbed4eb922ef6382",
+      "python_file_count": 1290,
+      "repository_url": "https://github.com/netbox-community/netbox.git",
+      "selected": true,
+      "snapshot_sha256": "0cefab94ed1cf1f86658b1e71f984964880b1300223b805ff6bf15685e90df39",
+      "stratum_counts": {
+        "S1_LOCAL_SCALAR_CONTROL": 669,
+        "S2_STRUCTURED_CONTAINER": 468,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 308,
+        "S4_STATE_EFFECT": 796,
+        "S5_BINDING_EXTERNAL_DOMAIN": 915
+      }
+    },
+    {
+      "audit_counts": {
+        "below_min_ast_nodes": 9,
+        "decode_failures": 0,
+        "excluded_files": 426,
+        "generated_files": 0,
+        "historical_body_overlap": 0,
+        "parse_failures": 0,
+        "trivial_functions": 7,
+        "within_project_duplicate_bodies": 20
+      },
+      "canonical_project_identity": "healthchecks/healthchecks",
+      "domain_family": "MONITORING",
+      "eligible": true,
+      "eligible_inventory_sha256": "c9bf29c9d3cde45ab898e5e44627fd4ab45af607393f153665eb302d91a1c7dc",
+      "eligible_unique_functions": 713,
+      "frozen_git_commit": "3addc677dbcb8ce1d36c1e4b801d034d40e2843d",
+      "functions_seen": 749,
+      "project_rank": "548aa5b97b83ca845c2c01595a8ba9f8ee5de37ffa6a35523e3f783a1af7afb4",
+      "python_file_count": 653,
+      "repository_url": "https://github.com/healthchecks/healthchecks.git",
+      "selected": true,
+      "snapshot_sha256": "ef7abd5bcfaee6b0c7efd39cea175c0d6de49c81fd2da0834db4a6a65cea3092",
+      "stratum_counts": {
+        "S1_LOCAL_SCALAR_CONTROL": 167,
+        "S2_STRUCTURED_CONTAINER": 135,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 23,
+        "S4_STATE_EFFECT": 107,
+        "S5_BINDING_EXTERNAL_DOMAIN": 281
+      }
+    },
+    {
+      "audit_counts": {
+        "below_min_ast_nodes": 64,
+        "decode_failures": 0,
+        "excluded_files": 242,
+        "generated_files": 0,
+        "historical_body_overlap": 0,
+        "parse_failures": 0,
+        "trivial_functions": 26,
+        "within_project_duplicate_bodies": 13
+      },
+      "canonical_project_identity": "paperless-ngx/paperless-ngx",
+      "domain_family": "DOCUMENT_MANAGEMENT",
+      "eligible": true,
+      "eligible_inventory_sha256": "642880968cfd9b3db4bdc2c3ff03d6ccddd4268421609f1eba5c16ff4938345f",
+      "eligible_unique_functions": 1339,
+      "frozen_git_commit": "f1ae9c00ac02df7b5c8c4b6d3e8c7db08555fb17",
+      "functions_seen": 1442,
+      "project_rank": "65c9b55f326047feb63ae42254866e9767624caefb6e67b881ef695d9768a243",
+      "python_file_count": 407,
+      "repository_url": "https://github.com/paperless-ngx/paperless-ngx.git",
+      "selected": true,
+      "snapshot_sha256": "c16a6f3c9a823f8c9df6bed841a373945ae58e9857291c75ae2697b492cb8867",
+      "stratum_counts": {
+        "S1_LOCAL_SCALAR_CONTROL": 339,
+        "S2_STRUCTURED_CONTAINER": 206,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 124,
+        "S4_STATE_EFFECT": 311,
+        "S5_BINDING_EXTERNAL_DOMAIN": 359
+      }
+    },
+    {
+      "audit_counts": {
+        "below_min_ast_nodes": 252,
+        "decode_failures": 0,
+        "excluded_files": 552,
+        "generated_files": 446,
+        "historical_body_overlap": 0,
+        "parse_failures": 0,
+        "trivial_functions": 30,
+        "within_project_duplicate_bodies": 63
+      },
+      "canonical_project_identity": "frappe/erpnext",
+      "domain_family": "ERP",
+      "eligible": true,
+      "eligible_inventory_sha256": "316838100963726a0be09a7c7451b3ccb090ccdd4b0ef7e535e8b90d58563676",
+      "eligible_unique_functions": 8686,
+      "frozen_git_commit": "83904a65a1ccaf7bfcacbeb5fb8ab78bce48cb19",
+      "functions_seen": 9031,
+      "project_rank": "7067b205ab677abc96db368a723eb7452442f2f9ee4b55d8cd46985a509fdb99",
+      "python_file_count": 3028,
+      "repository_url": "https://github.com/frappe/erpnext.git",
+      "selected": true,
+      "snapshot_sha256": "9889934bc17d12e62f1e93c001cb23f1a239e1bca3ca078bbf13557bb440f5cd",
+      "stratum_counts": {
+        "S1_LOCAL_SCALAR_CONTROL": 1846,
+        "S2_STRUCTURED_CONTAINER": 1867,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 488,
+        "S4_STATE_EFFECT": 3346,
+        "S5_BINDING_EXTERNAL_DOMAIN": 1139
+      }
+    },
+    {
+      "audit_counts": {
+        "below_min_ast_nodes": 443,
+        "decode_failures": 0,
+        "excluded_files": 4478,
+        "generated_files": 225,
+        "historical_body_overlap": 0,
+        "parse_failures": 0,
+        "trivial_functions": 377,
+        "within_project_duplicate_bodies": 856
+      },
+      "canonical_project_identity": "apache/airflow",
+      "domain_family": "WORKFLOW_ORCHESTRATION",
+      "eligible": true,
+      "eligible_inventory_sha256": "d0055d4926f798eb1ded3baa6180f5753f4f16811250d5ba001d4edf63bd4caf",
+      "eligible_unique_functions": 21120,
+      "frozen_git_commit": "7800fc44c07a2fc2457a4aee41cf12db9579538c",
+      "functions_seen": 22796,
+      "project_rank": "73fe32c7346664e8db33244720a3eb304bb5156e3085f74e5a301da3b0d83b4a",
+      "python_file_count": 8177,
+      "repository_url": "https://github.com/apache/airflow.git",
+      "selected": true,
+      "snapshot_sha256": "df9627f7c45d3c3b09d18d0f3193245b3208be427744912c7353b04deb26f52c",
+      "stratum_counts": {
+        "S1_LOCAL_SCALAR_CONTROL": 5352,
+        "S2_STRUCTURED_CONTAINER": 4468,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 1773,
+        "S4_STATE_EFFECT": 5629,
+        "S5_BINDING_EXTERNAL_DOMAIN": 3898
+      }
+    },
+    {
+      "audit_counts": {
+        "below_min_ast_nodes": 237,
+        "decode_failures": 0,
+        "excluded_files": 690,
+        "generated_files": 1,
+        "historical_body_overlap": 0,
+        "parse_failures": 0,
+        "trivial_functions": 8,
+        "within_project_duplicate_bodies": 85
+      },
+      "canonical_project_identity": "nautobot/nautobot",
+      "domain_family": "NETWORK_AUTOMATION",
+      "eligible": true,
+      "eligible_inventory_sha256": "1f594e8b1070a195b8bc39a963cdf5e5f9c55aeb1d9c226d9c8e3cbd99666985",
+      "eligible_unique_functions": 3843,
+      "frozen_git_commit": "86658f87b35d655a47545234522ddf9e67d0cd8f",
+      "functions_seen": 4173,
+      "project_rank": "8a22ef26a9f33f8e7172baec407a6aedd6f636dd01a5fdef299715d75d8cc892",
+      "python_file_count": 1260,
+      "repository_url": "https://github.com/nautobot/nautobot.git",
+      "selected": true,
+      "snapshot_sha256": "3b9ea55e6ea93635d61af3c191953a777f67bbd877f867e3bd897f54a890de26",
+      "stratum_counts": {
+        "S1_LOCAL_SCALAR_CONTROL": 799,
+        "S2_STRUCTURED_CONTAINER": 438,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 386,
+        "S4_STATE_EFFECT": 787,
+        "S5_BINDING_EXTERNAL_DOMAIN": 1433
+      }
+    },
+    {
+      "audit_counts": {
+        "below_min_ast_nodes": 158,
+        "decode_failures": 0,
+        "excluded_files": 1682,
+        "generated_files": 0,
+        "historical_body_overlap": 0,
+        "parse_failures": 0,
+        "trivial_functions": 110,
+        "within_project_duplicate_bodies": 119
+      },
+      "canonical_project_identity": "apache/superset",
+      "domain_family": "ANALYTICS",
+      "eligible": true,
+      "eligible_inventory_sha256": "f1dae45f42c20d6d320a7568fb1426172da2b49f32f5a6997bc2b17e4aea45ac",
+      "eligible_unique_functions": 7003,
+      "frozen_git_commit": "f6155b9e9ea438986914366807cb7ef8cffa9d60",
+      "functions_seen": 7390,
+      "project_rank": "acfb950d6173875c110abb0829afdbcd82edae8ac84928bf170a032a694b3d36",
+      "python_file_count": 2866,
+      "repository_url": "https://github.com/apache/superset.git",
+      "selected": true,
+      "snapshot_sha256": "dabeaf48ed1c85bda12a4aca2eb6a79ca96b2f3dd6e5eb0f76c1293205125279",
+      "stratum_counts": {
+        "S1_LOCAL_SCALAR_CONTROL": 1512,
+        "S2_STRUCTURED_CONTAINER": 1771,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 885,
+        "S4_STATE_EFFECT": 1716,
+        "S5_BINDING_EXTERNAL_DOMAIN": 1119
+      }
+    },
+    {
+      "audit_counts": {
+        "below_min_ast_nodes": 145,
+        "decode_failures": 0,
+        "excluded_files": 230,
+        "generated_files": 1,
+        "historical_body_overlap": 0,
+        "parse_failures": 0,
+        "trivial_functions": 7,
+        "within_project_duplicate_bodies": 72
+      },
+      "canonical_project_identity": "openstack/keystone",
+      "domain_family": "IDENTITY_ACCESS",
+      "eligible": true,
+      "eligible_inventory_sha256": "0cba8571304f9fb42f72bbac665d6404662492667fc6c26be2c4400e55726c2b",
+      "eligible_unique_functions": 2163,
+      "frozen_git_commit": "77db3e62a449b7cadda589fa24407124766bdba8",
+      "functions_seen": 2387,
+      "project_rank": "b8448b9d6ff62561971c894ca03d28491b8081d90eeb207643c176c7adc759ab",
+      "python_file_count": 572,
+      "repository_url": "https://github.com/openstack/keystone.git",
+      "selected": true,
+      "snapshot_sha256": "71b038cf9a7f2102e4e7e0991ec53921a91ae20fe7f7aebe9c91e396572d605d",
+      "stratum_counts": {
+        "S1_LOCAL_SCALAR_CONTROL": 791,
+        "S2_STRUCTURED_CONTAINER": 458,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 135,
+        "S4_STATE_EFFECT": 572,
+        "S5_BINDING_EXTERNAL_DOMAIN": 207
+      }
+    }
+  ]
+}

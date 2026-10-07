@@ -1,0 +1,36 @@
+{
+  "RQ1_external_generalization": {
+    "CERTIFIED_A1": 33,
+    "CERTIFIED_A2": 17,
+    "certified": 50,
+    "sample_size": 90,
+    "semantic_ambiguity": 2,
+    "unsupported": 38,
+    "unweighted_certification_yield": 0.5555555555555556,
+    "weighted_certification_yield": 0.459041095890411
+  },
+  "RQ2_structural_variation": {
+    "complexity_table": "results_by_complexity.csv",
+    "source_table": "results_by_source.csv",
+    "weighted_breakdowns": "weighted_breakdowns.json"
+  },
+  "RQ3_matched_baseline": {
+    "BIZPROOF_correct_equivalences_proved": 14,
+    "BIZPROOF_mutants_disproved": 14,
+    "CrossHair_0.5_detected": 5,
+    "CrossHair_0.5_rate": 0.35714285714285715,
+    "CrossHair_2.0_detected": 7,
+    "CrossHair_2.0_rate": 0.5,
+    "Hypothesis_10000_detected": 14,
+    "Hypothesis_1000_detected": 14,
+    "Hypothesis_100_detected": 14,
+    "interpretation": "BIZPROOF and Hypothesis both detect all frozen mutants in the matched 14-case benchmark, but only the frozen BIZPROOF evidence establishes formal correct-program equivalence. CrossHair detection improves with the analysis budget.",
+    "matched_cases": 14
+  },
+  "RQ4_limitations": {
+    "semantic_ambiguity": 2,
+    "taxonomy_file": "unsupported_taxonomy_preliminary.csv",
+    "taxonomy_status": "preliminary; evidence-backed manual review still required",
+    "unsupported": 38
+  }
+}

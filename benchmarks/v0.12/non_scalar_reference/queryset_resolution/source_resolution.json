@@ -1,0 +1,748 @@
+{
+  "candidate_id": "9cc9063a46d23cde",
+  "reason_code": "QUERYSET_RETURN",
+  "relevant_fields": [
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\candidate_profiles.jsonl",
+      "key_path": "function",
+      "value": "quotas"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\candidate_profiles.jsonl",
+      "key_path": "source",
+      "value": "pretix"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\family_profiles.json",
+      "key_path": "function",
+      "value": "quotas"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\family_profiles.json",
+      "key_path": "source",
+      "value": "pretix"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+      "key_path": "file",
+      "value": "src/pretix/base/models/orders.py"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+      "key_path": "function",
+      "value": "quotas"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+      "key_path": "function_sha256",
+      "value": "94858a131b3ca3260d6f18f28f3117162a572335da93584573c2676c8e24f099"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\phase_v_plan.json",
+      "key_path": "source",
+      "value": "pretix"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "key_path": "file",
+      "value": "src/pretix/base/models/orders.py"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "key_path": "function",
+      "value": "quotas"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "key_path": "function_sha256",
+      "value": "94858a131b3ca3260d6f18f28f3117162a572335da93584573c2676c8e24f099"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "key_path": "profile.adapter_shape",
+      "value": "SIMPLE_RETURN_EXPRESSION"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "key_path": "profile.attributes[0]",
+      "value": "self.item"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "key_path": "profile.attributes[1]",
+      "value": "self.item.quotas"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "key_path": "profile.attributes[2]",
+      "value": "self.item.quotas.filter"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "key_path": "profile.attributes[3]",
+      "value": "self.subevent"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "key_path": "profile.attributes[4]",
+      "value": "self.variation"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "key_path": "profile.attributes[5]",
+      "value": "self.variation.quotas"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "key_path": "profile.attributes[6]",
+      "value": "self.variation.quotas.filter"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "key_path": "profile.authoring_route",
+      "value": "V1_SCALAR_EXPRESSION"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "key_path": "profile.calls[0]",
+      "value": "self.item.quotas.filter"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "key_path": "profile.calls[1]",
+      "value": "self.variation.quotas.filter"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "key_path": "profile.returns[0]",
+      "value": "self.item.quotas.filter(subevent=self.subevent) if self.variation is None else self.variation.quotas.filter(subevent=self.subevent)"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "key_path": "profile.top_level_statements[0]",
+      "value": "Return"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "key_path": "source",
+      "value": "pretix"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "key_path": "source_file_sha256",
+      "value": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+      "key_path": "source_slice",
+      "value": "def quotas(self):\n        return (self.item.quotas.filter(subevent=self.subevent)\n                if self.variation is None\n                else self.variation.quotas.filter(subevent=self.subevent))"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+      "key_path": "prior_review.candidate_id",
+      "value": "9cc9063a46d23cde"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+      "key_path": "prior_review.class",
+      "value": "AbstractPosition"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+      "key_path": "prior_review.function",
+      "value": "quotas"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+      "key_path": "prior_review.reason",
+      "value": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision."
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+      "key_path": "prior_review.return_shape",
+      "value": "QUERYSET_RETURN"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+      "key_path": "prior_review.source",
+      "value": "pretix"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+      "key_path": "prior_review.status",
+      "value": "A2_SCALAR_SCOPE_REVIEW_REQUIRED"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+      "key_path": "reason",
+      "value": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision."
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+      "key_path": "reason_code",
+      "value": "QUERYSET_RETURN"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+      "key_path": "source.class",
+      "value": "AbstractPosition"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+      "key_path": "source.file",
+      "value": "src/pretix/base/models/orders.py"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+      "key_path": "source.function",
+      "value": "quotas"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+      "key_path": "source.function_sha256",
+      "value": "94858a131b3ca3260d6f18f28f3117162a572335da93584573c2676c8e24f099"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+      "key_path": "source.source_file_sha256",
+      "value": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+      "key_path": "source.source_id",
+      "value": "pretix"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+      "key_path": "function",
+      "value": "quotas"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+      "key_path": "reason",
+      "value": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision."
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\unsupported.jsonl",
+      "key_path": "source",
+      "value": "pretix"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_v1_scalar_proofs\\non_scalar_review.jsonl",
+      "key_path": "function",
+      "value": "quotas"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_v1_scalar_proofs\\non_scalar_review.jsonl",
+      "key_path": "reason",
+      "value": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision."
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_v1_scalar_proofs\\non_scalar_review.jsonl",
+      "key_path": "source",
+      "value": "pretix"
+    },
+    {
+      "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+      "key_path": "file",
+      "value": "src/pretix/base/models/orders.py"
+    },
+    {
+      "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+      "key_path": "function",
+      "value": "quotas"
+    },
+    {
+      "file": "benchmarks\\v0.11\\candidate_proof_frontier\\candidate_frontier.jsonl",
+      "key_path": "source",
+      "value": "pretix"
+    },
+    {
+      "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+      "key_path": "provenance.file",
+      "value": "src/pretix/base/models/orders.py"
+    },
+    {
+      "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+      "key_path": "provenance.function",
+      "value": "quotas"
+    },
+    {
+      "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+      "key_path": "provenance.source_file_sha256",
+      "value": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef"
+    },
+    {
+      "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+      "key_path": "provenance.source_id",
+      "value": "pretix"
+    },
+    {
+      "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+      "key_path": "stratum.source_id",
+      "value": "pretix"
+    },
+    {
+      "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+      "key_path": "v0.6_classification.classification_reasons[0]",
+      "value": "Attribute"
+    },
+    {
+      "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+      "key_path": "v0.6_classification.classification_reasons[1]",
+      "value": "Call"
+    },
+    {
+      "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+      "key_path": "v0.6_classification.classification_reasons[2]",
+      "value": "bound_method"
+    },
+    {
+      "file": "benchmarks\\v0.11\\feasibility\\assessment.jsonl",
+      "key_path": "v0.6_classification.classification_reasons[3]",
+      "value": "decorated_function"
+    },
+    {
+      "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+      "key_path": "file",
+      "value": "src/pretix/base/models/orders.py"
+    },
+    {
+      "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+      "key_path": "function",
+      "value": "quotas"
+    },
+    {
+      "file": "benchmarks\\v0.11\\feasibility\\next_actions.jsonl",
+      "key_path": "source_id",
+      "value": "pretix"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[0].key_path",
+      "value": "adapter_shape"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[1].key_path",
+      "value": "adapter_shape"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[2].key_path",
+      "value": "profile.adapter_shape"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[3].key_path",
+      "value": "prior_review.reason"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[4].key_path",
+      "value": "prior_review.status"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[5].key_path",
+      "value": "reason"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[6].key_path",
+      "value": "reason_code"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[7].key_path",
+      "value": "status"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[8].key_path",
+      "value": "reason"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[9].key_path",
+      "value": "status"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[10].key_path",
+      "value": "frontier_status"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[11].key_path",
+      "value": "feasibility.adapter_blockers.0"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[12].key_path",
+      "value": "feasibility.adapter_blockers.1"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[13].key_path",
+      "value": "feasibility.adapter_blockers.2"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[14].key_path",
+      "value": "v0.6_classification.classification_reasons.0"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[15].key_path",
+      "value": "v0.6_classification.classification_reasons.1"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[16].key_path",
+      "value": "v0.6_classification.classification_reasons.2"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[17].key_path",
+      "value": "v0.6_classification.classification_reasons.3"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[18].key_path",
+      "value": "adapter_blockers.0"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[19].key_path",
+      "value": "adapter_blockers.1"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[20].key_path",
+      "value": "adapter_blockers.2"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[21].key_path",
+      "value": "frontier_status"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[22].key_path",
+      "value": "frontier_status"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[23].key_path",
+      "value": "candidate.classification_reasons.0"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[24].key_path",
+      "value": "candidate.classification_reasons.1"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[25].key_path",
+      "value": "candidate.classification_reasons.2"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[26].key_path",
+      "value": "candidate.classification_reasons.3"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[27].key_path",
+      "value": "prior_review.reason"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[28].key_path",
+      "value": "prior_review.status"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[29].key_path",
+      "value": "reason"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[30].key_path",
+      "value": "reason_code"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "evidence[31].key_path",
+      "value": "status"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_evidence_inventory.jsonl",
+      "key_path": "source",
+      "value": "pretix"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_manual_review.csv",
+      "key_path": "source",
+      "value": "pretix"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_manual_review.csv",
+      "key_path": "review_status",
+      "value": "PENDING_MANUAL_VALIDATION"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+      "key_path": "source",
+      "value": "pretix"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+      "key_path": "reason_codes",
+      "value": "QUERYSET_RETURN"
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_final.csv",
+      "key_path": "reviewed_reasons",
+      "value": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision."
+    },
+    {
+      "file": "benchmarks\\v0.11\\paper_results\\unsupported_taxonomy_preliminary.csv",
+      "key_path": "source",
+      "value": "pretix"
+    },
+    {
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\a2_worklist.jsonl",
+      "key_path": "function",
+      "value": "quotas"
+    },
+    {
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\a2_worklist.jsonl",
+      "key_path": "source",
+      "value": "pretix"
+    },
+    {
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\remaining_candidates.jsonl",
+      "key_path": "function",
+      "value": "quotas"
+    },
+    {
+      "file": "benchmarks\\v0.11\\remaining_cohort_sweep\\remaining_candidates.jsonl",
+      "key_path": "source",
+      "value": "pretix"
+    },
+    {
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "key_path": "candidate.business_keyword_sources.function[0]",
+      "value": "quota"
+    },
+    {
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "key_path": "candidate.business_keyword_sources.path[0]",
+      "value": "order"
+    },
+    {
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "key_path": "candidate.classification_reasons[0]",
+      "value": "Attribute"
+    },
+    {
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "key_path": "candidate.classification_reasons[1]",
+      "value": "Call"
+    },
+    {
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "key_path": "candidate.classification_reasons[2]",
+      "value": "bound_method"
+    },
+    {
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "key_path": "candidate.classification_reasons[3]",
+      "value": "decorated_function"
+    },
+    {
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "key_path": "candidate.file",
+      "value": "src/pretix/base/models/orders.py"
+    },
+    {
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "key_path": "candidate.function",
+      "value": "quotas"
+    },
+    {
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "key_path": "candidate.function_sha256",
+      "value": "94858a131b3ca3260d6f18f28f3117162a572335da93584573c2676c8e24f099"
+    },
+    {
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "key_path": "candidate.source_file_sha256",
+      "value": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef"
+    },
+    {
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "key_path": "candidate.source_id",
+      "value": "pretix"
+    },
+    {
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "key_path": "candidate.supporting_doc_files[0]",
+      "value": "doc/api/fundamentals.rst"
+    },
+    {
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "key_path": "candidate.supporting_doc_files[1]",
+      "value": "doc/api/guides/custom_checkout.rst"
+    },
+    {
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "key_path": "candidate.supporting_doc_files[2]",
+      "value": "doc/api/resources/events.rst"
+    },
+    {
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "key_path": "candidate.supporting_doc_files[3]",
+      "value": "doc/api/resources/index.rst"
+    },
+    {
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "key_path": "candidate.supporting_doc_files[4]",
+      "value": "doc/api/resources/orders.rst"
+    },
+    {
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "key_path": "candidate.supporting_doc_files[5]",
+      "value": "doc/api/resources/quotas.rst"
+    },
+    {
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "key_path": "candidate.supporting_doc_files[6]",
+      "value": "doc/development/concepts.rst"
+    },
+    {
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "key_path": "candidate.supporting_doc_files[7]",
+      "value": "doc/development/implementation/locking.rst"
+    },
+    {
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "key_path": "stratum.source_id",
+      "value": "pretix"
+    },
+    {
+      "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+      "key_path": "file",
+      "value": "src/pretix/base/models/orders.py"
+    },
+    {
+      "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+      "key_path": "function",
+      "value": "quotas"
+    },
+    {
+      "file": "benchmarks\\v0.11\\workplan\\queue.jsonl",
+      "key_path": "source_id",
+      "value": "pretix"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\9cc9063a46d23cde.json",
+      "key_path": "prior_review.candidate_id",
+      "value": "9cc9063a46d23cde"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\9cc9063a46d23cde.json",
+      "key_path": "prior_review.class",
+      "value": "AbstractPosition"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\9cc9063a46d23cde.json",
+      "key_path": "prior_review.function",
+      "value": "quotas"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\9cc9063a46d23cde.json",
+      "key_path": "prior_review.reason",
+      "value": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision."
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\9cc9063a46d23cde.json",
+      "key_path": "prior_review.return_shape",
+      "value": "QUERYSET_RETURN"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\9cc9063a46d23cde.json",
+      "key_path": "prior_review.source",
+      "value": "pretix"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\9cc9063a46d23cde.json",
+      "key_path": "prior_review.status",
+      "value": "A2_SCALAR_SCOPE_REVIEW_REQUIRED"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\9cc9063a46d23cde.json",
+      "key_path": "reason",
+      "value": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision."
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\9cc9063a46d23cde.json",
+      "key_path": "reason_code",
+      "value": "QUERYSET_RETURN"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\9cc9063a46d23cde.json",
+      "key_path": "source.class",
+      "value": "AbstractPosition"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\9cc9063a46d23cde.json",
+      "key_path": "source.file",
+      "value": "src/pretix/base/models/orders.py"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\9cc9063a46d23cde.json",
+      "key_path": "source.function",
+      "value": "quotas"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\9cc9063a46d23cde.json",
+      "key_path": "source.function_sha256",
+      "value": "94858a131b3ca3260d6f18f28f3117162a572335da93584573c2676c8e24f099"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\9cc9063a46d23cde.json",
+      "key_path": "source.source_file_sha256",
+      "value": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\9cc9063a46d23cde.json",
+      "key_path": "source.source_id",
+      "value": "pretix"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\9cc9063a46d23cde.json",
+      "key_path": "function",
+      "value": "quotas"
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\9cc9063a46d23cde.json",
+      "key_path": "reason",
+      "value": "The V1 function is AST-simple but its externally observable return semantics are not directly scalar. No scalar projection is certified without an additional business-semantic scope decision."
+    },
+    {
+      "file": "benchmarks\\v0.11\\a2_residual_closure\\negative_evidence\\9cc9063a46d23cde.json",
+      "key_path": "source",
+      "value": "pretix"
+    }
+  ],
+  "selected": {
+    "evidence_file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+    "function_name": "quotas",
+    "key_path": "source_slice",
+    "source": "def quotas(self):\n        return (self.item.quotas.filter(subevent=self.subevent)\n                if self.variation is None\n                else self.variation.quotas.filter(subevent=self.subevent))"
+  },
+  "source_candidate_count": 1
+}

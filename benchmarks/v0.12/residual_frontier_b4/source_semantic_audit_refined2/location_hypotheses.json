@@ -1,0 +1,142 @@
+[
+  {
+    "all_hash_name_records": [
+      5,
+      6,
+      8,
+      33,
+      36
+    ],
+    "best_path_score": 5,
+    "direct_hash_name_path_records": [
+      5,
+      6,
+      8,
+      33,
+      36
+    ],
+    "direct_hash_name_records": [
+      5,
+      6,
+      8,
+      33,
+      36
+    ],
+    "location": {
+      "class_name": "OrderFee",
+      "end_lineno": 2417,
+      "fingerprints": {
+        "ast_dump": "bbc177741fa7ac46cd40ad4638bb4f4fc4a7455ba9cd7690e9328e4e42ae01d9",
+        "ast_unparse": "a3e85755ca36f671530f03ce99e92fe6b24653d8f3efaf05fd1266570e6abfaa",
+        "dedent_strip": "f3180e9973eca32f4e6a77d459e25a8759e939c13004190687ca0a2820b3c17d",
+        "dedent_strip_newline": "54c10a0cbc3d26a092dda6e700e8b4173c3e5d10af1277a28795332536ee14cd",
+        "lf": "f3180e9973eca32f4e6a77d459e25a8759e939c13004190687ca0a2820b3c17d",
+        "raw": "f3180e9973eca32f4e6a77d459e25a8759e939c13004190687ca0a2820b3c17d"
+      },
+      "function_name": "__init__",
+      "lineno": 2414,
+      "matched_hash": "f3180e9973eca32f4e6a77d459e25a8759e939c13004190687ca0a2820b3c17d",
+      "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+      "project": "pretix",
+      "source": "def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        if not self.get_deferred_fields():\n            self._transaction_key_reset()"
+    },
+    "name_path_records": [
+      5,
+      6,
+      8,
+      14,
+      17,
+      18,
+      33,
+      35,
+      36
+    ]
+  },
+  {
+    "all_hash_name_records": [
+      5,
+      6,
+      8,
+      33,
+      36
+    ],
+    "best_path_score": 5,
+    "direct_hash_name_path_records": [
+      5,
+      6,
+      8,
+      33,
+      36
+    ],
+    "direct_hash_name_records": [
+      5,
+      6,
+      8,
+      33,
+      36
+    ],
+    "location": {
+      "class_name": "OrderPosition",
+      "end_lineno": 2632,
+      "fingerprints": {
+        "ast_dump": "bbc177741fa7ac46cd40ad4638bb4f4fc4a7455ba9cd7690e9328e4e42ae01d9",
+        "ast_unparse": "a3e85755ca36f671530f03ce99e92fe6b24653d8f3efaf05fd1266570e6abfaa",
+        "dedent_strip": "f3180e9973eca32f4e6a77d459e25a8759e939c13004190687ca0a2820b3c17d",
+        "dedent_strip_newline": "54c10a0cbc3d26a092dda6e700e8b4173c3e5d10af1277a28795332536ee14cd",
+        "lf": "f3180e9973eca32f4e6a77d459e25a8759e939c13004190687ca0a2820b3c17d",
+        "raw": "f3180e9973eca32f4e6a77d459e25a8759e939c13004190687ca0a2820b3c17d"
+      },
+      "function_name": "__init__",
+      "lineno": 2629,
+      "matched_hash": "f3180e9973eca32f4e6a77d459e25a8759e939c13004190687ca0a2820b3c17d",
+      "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+      "project": "pretix",
+      "source": "def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        if not self.get_deferred_fields():\n            self._transaction_key_reset()"
+    },
+    "name_path_records": [
+      5,
+      6,
+      8,
+      14,
+      17,
+      18,
+      33,
+      35,
+      36
+    ]
+  },
+  {
+    "all_hash_name_records": [],
+    "best_path_score": 5,
+    "direct_hash_name_path_records": [],
+    "direct_hash_name_records": [],
+    "location": {
+      "class_name": "Order",
+      "end_lineno": 351,
+      "fingerprints": {
+        "ast_dump": "a6b33d801fd64436e7d1e9c60292d843882097ebc933f3a1a4bd802f76cf6cf1",
+        "ast_unparse": "892742bf613c52019d59aaa67764b5653be4b5e66a0f19c8331f7c19268cf0bb",
+        "dedent_strip": "0a35a81ec382588b274b0332c76dd871ff8770c78511d49f832156707ad80878",
+        "dedent_strip_newline": "aaaf28c43ad088d48b7b47adaf6e984bd4a3912d0460cf77d12c75774b57c8aa",
+        "lf": "0a35a81ec382588b274b0332c76dd871ff8770c78511d49f832156707ad80878",
+        "raw": "0a35a81ec382588b274b0332c76dd871ff8770c78511d49f832156707ad80878"
+      },
+      "function_name": "__init__",
+      "lineno": 348,
+      "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+      "project": "pretix",
+      "source": "def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        if 'require_approval' not in self.get_deferred_fields() and 'status' not in self.get_deferred_fields():\n            self._transaction_key_reset()"
+    },
+    "name_path_records": [
+      5,
+      6,
+      8,
+      14,
+      17,
+      18,
+      33,
+      35,
+      36
+    ]
+  }
+]

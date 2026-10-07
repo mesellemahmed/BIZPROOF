@@ -1,0 +1,14 @@
+{
+  "candidate_id": "882c5eae0d8fd4ec",
+  "certification_batch": "RICH_FRAMEWORK_BATCH",
+  "class_name": "OrderPayment",
+  "function_name": "create_external_refund",
+  "lineno": 2095,
+  "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+  "provenance_status": "STRONG_HASH_MATCH",
+  "reason_codes": "REFUND_OBJECT_SIDE_EFFECTS_OUTSIDE_FORMAL_SUBSET",
+  "semantic_observation": "created refund semantic record, ordered effect trace, conditional completion state",
+  "semantic_route": "EXTERNAL_OBJECT_CREATION_EFFECT_TRACE",
+  "source": "def create_external_refund(self, amount=None, execution_date=None, info='{}'):\n        \"\"\"\n        This should be called to create an OrderRefund object when a refund has triggered\n        by an external source, e.g. when a credit card payment has been refunded by the\n        credit card provider.\n\n        :param amount: Amount to refund. If not given, the full payment amount will be used.\n        :type amount: Decimal\n        :param execution_date: Date of the refund. Defaults to the current time.\n        :type execution_date: datetime\n        :param info: Additional information, defaults to ``\"{}\"``.\n        :type info: str\n        :return: OrderRefund\n        \"\"\"\n        r = self.order.refunds.create(\n            state=OrderRefund.REFUND_STATE_EXTERNAL,\n            source=OrderRefund.REFUND_SOURCE_EXTERNAL,\n            amount=amount if amount is not None else self.amount,\n            order=self.order,\n            payment=self,\n            execution_date=execution_date or now(),\n            provider=self.provider,\n            info=info\n        )\n        self.order.log_action('pretix.event.order.refund.created.externally', {\n            'local_id': r.local_id,\n            'provider': r.provider,\n        })\n\n        if self.order.pending_sum + r.amount == Decimal('0.00'):\n            r.done()\n\n        return r",
+  "source_sha256": "0c1d9b50bfa377b3f8004844ef99266333a9da475e368e05a278bae67a67e7d8"
+}

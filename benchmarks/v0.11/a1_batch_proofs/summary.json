@@ -1,0 +1,32 @@
+{
+  "a1_candidates_attempted": 11,
+  "a1_candidates_proved": 11,
+  "a1_candidates_review_required": 0,
+  "a1_certificates_issued": 11,
+  "a1_certified_candidate_ids": [
+    "19d233058899f735",
+    "244130d6ff9953d0",
+    "2dd784251ccc7dce",
+    "4b583322af591973",
+    "4d2eb60abd9c44c8",
+    "61cf0e4af667580e",
+    "78ca19c5e56cefa7",
+    "80788665d9905741",
+    "9ccbe1be4f59b3ce",
+    "b46358e6c871e1bf",
+    "b70f35ae381f7a3b"
+  ],
+  "benchmark_version": "0.11.0",
+  "final_certification_complete": false,
+  "passed": true,
+  "phase": "BATCH_A1_SYMBOLIC_PROOFS",
+  "review_required": [],
+  "terminal_distribution": {
+    "CERTIFIED_A0": 0,
+    "CERTIFIED_A1": 11,
+    "CERTIFIED_A2": 1
+  },
+  "terminal_outcomes_assigned_total": 12,
+  "terminal_outcomes_pending": 78,
+  "weighted_metrics_ready": false
+}

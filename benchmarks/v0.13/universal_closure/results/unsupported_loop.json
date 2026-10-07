@@ -1,0 +1,16 @@
+{
+  "a_level": null,
+  "capabilities": [
+    "SCALAR_VALUE"
+  ],
+  "case_specific_routing": false,
+  "certified": false,
+  "evidence_id": "v013-closure::unsupported_loop",
+  "full_arbitrary_source_equivalence": false,
+  "reason": [
+    "While"
+  ],
+  "reason_code": "unsupported_source_nodes",
+  "scientific_outcome": "UNSUPPORTED",
+  "source_sha256": "dc49ee9c4a459b8642e3fcf7bf1685dbf23b534650a6cbe45cfab5e03ac6a3da"
+}

@@ -1,0 +1,28 @@
+{
+  "attempted": 1,
+  "batch": "TRANSACTIONAL_SAVE_BATCH",
+  "branch_basis_frozen": [
+    "existing_normalization_plus_pre_dirty",
+    "existing_no_status_transition",
+    "new_object_post_save_dirty",
+    "unsafe_deferred_fields_rejected",
+    "deferred_field_explicitly_updated",
+    "forced_deferred_save"
+  ],
+  "candidate_ids": [
+    "03e2adf4e4f323b1"
+  ],
+  "certification_started": false,
+  "correct_source_ast_rewrite": false,
+  "correct_source_policy": "Execute the exact authoritative frozen Order.save source body inside a controlled class harness preserving zero-argument super().",
+  "mutant": {
+    "fault": "an existing order changing paid/pending transactional status reaches persistence without the required pre-save transaction dirty mark",
+    "name": "OMIT_PRE_SAVE_TRANSACTION_DIRTY_MARK",
+    "target": "first _transactions_mark_order_dirty(self.pk, ...) call"
+  },
+  "mutant_frozen_before_execution": true,
+  "recovery_claims_before_execution": 0,
+  "schema_version": "BIZPROOF-V0.12-B3-CERT3-PROTOCOL-1",
+  "semantic_route": "TRANSACTION_AWARE_MODEL_SAVE",
+  "source_checkpoint": "c7628dee7efbb745ba03613439f3e2793f57a6ec"
+}

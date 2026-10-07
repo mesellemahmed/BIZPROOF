@@ -1,0 +1,47 @@
+{
+  "b4": {
+    "authoritative_source_provenance": 9,
+    "batch_count": 5,
+    "certified_a2": 9,
+    "failed": 0,
+    "recovery_rate": 1.0,
+    "residual_population": 9
+  },
+  "claim_boundary": {
+    "supported": "formal equivalence evidence for the accepted projections and formal mutant refutation within supported semantics",
+    "unsupported_claims": [
+      "universal semantic coverage of arbitrary business software",
+      "formal equivalence of arbitrary source programs without an explicit accepted projection",
+      "90/90 certification of the historical cohort",
+      "resolution of the two historical ambiguity cases",
+      "external generalization from this development cohort",
+      "complete OpenFisca, Django, Pretix or Oscar framework correctness"
+    ]
+  },
+  "cohort_role": "historical_development_boundary_cohort",
+  "cohort_size": 90,
+  "methodology": {
+    "external_cohort_started": false,
+    "future_external_cohort_required": true,
+    "historical_unsupported_frontier_closed": true,
+    "overall_v012_campaign_complete": false,
+    "v012_historical_cohort_is_development_evidence": true
+  },
+  "schema_version": "BIZPROOF-V0.12-HISTORICAL-RESULT-FREEZE-1",
+  "v011": {
+    "ambiguity": 2,
+    "certified": 50,
+    "unsupported": 38,
+    "unweighted_certification_yield": 0.5555555555555556
+  },
+  "v012": {
+    "certified": 88,
+    "historical_ambiguity_remaining": 2,
+    "not_certified": 2,
+    "remaining_unsupported": 0,
+    "unsupported_recovered": 38,
+    "unsupported_recovery_rate": 1.0,
+    "unsupported_total": 38,
+    "unweighted_certification_yield": 0.9777777777777777
+  }
+}

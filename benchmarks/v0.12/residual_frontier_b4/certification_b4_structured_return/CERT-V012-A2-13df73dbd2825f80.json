@@ -1,0 +1,40 @@
+{
+  "all_required_gates_pass": true,
+  "authoritative_source": {
+    "correct_source_ast_rewritten": false,
+    "matches_frozen_plan": true,
+    "sha256": "83bc3d5ba2e5d0e531026937ed7caaa92fd3bb434e53ca7e4b91a049fab42da1"
+  },
+  "candidate_id": "13df73dbd2825f80",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_mutant_replay": true,
+  "formal_mutant_refutation": {
+    "model": "[sync_has_extra = True]",
+    "property": "there exists an admissible sync_info mapping containing an extra key; authoritative mapping expansion preserves it while OMIT_SYNC_INFO_EXPANSION does not",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "function_name": "to_result_dict",
+  "historical_category": "COMPLEX_CONTAINER_SEMANTICS",
+  "mutant": {
+    "fault": "the returned result mapping contains only the six explicit fixed fields and omits the trailing **sync_info expansion",
+    "name": "OMIT_SYNC_INFO_EXPANSION"
+  },
+  "mutant_protocol_committed_before_execution": true,
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-B4-CERT1-A2-1",
+  "scope": {
+    "certified": "the prospectively frozen structured-return projection of the exact authoritative source",
+    "not_certified": [
+      "correctness of surrounding framework implementations",
+      "unobserved external objects or services outside the frozen dependency contract",
+      "arbitrary behavior beyond the explicit accepted semantic projection"
+    ]
+  },
+  "semantic_capability": "EXTENSION_MAPPING_RETURN",
+  "source_projection_equivalence": {
+    "branch_basis": 3,
+    "controlled_exact_source_replay": true
+  },
+  "v012_outcome": "CERTIFIED_A2"
+}

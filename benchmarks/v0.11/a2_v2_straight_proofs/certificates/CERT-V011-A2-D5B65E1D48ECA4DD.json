@@ -1,0 +1,52 @@
+{
+  "adapter": {
+    "function": "adapt_locapass_student_contract",
+    "function_sha256": "6bbacc7f17edfa6dd159ff220c4189d30496fb6c933a539d7f90191313a4610b",
+    "mutant_function": "mutant_locapass_student_contract",
+    "mutant_function_sha256": "16c787a351d3ebbdb35098579b23f1eb08ff4eb6c24fdc7d5981ab5c53a0dad0",
+    "semantic_adapter": "LOCAPASS_STUDENT_CONTRACT"
+  },
+  "assistance_level": "A2",
+  "authoring_mode": "EXPLICIT_MANUAL_SCALAR_SEMANTIC_ADAPTER",
+  "candidate_id": "d5b65e1d48eca4dd",
+  "certificate_digest": "53b6f629ee8867a9053ab44d66ffa0e497b02ac927ba49c1e516eda1ffe8f5c0",
+  "certificate_id": "CERT-V011-A2-D5B65E1D48ECA4DD",
+  "claim_scope": "Certification is restricted to the explicit scalar semantic projection and primitive-output bindings represented by this evidence bundle.",
+  "evidence": {
+    "proof_digest": "dcd23b255fa591c4231cf5739f43ccfea066df9636c91fed72750381b74bfde0",
+    "runtime": {
+      "adapter_mismatches": 0,
+      "comparisons": 729,
+      "mutant_mismatches": 240,
+      "validation_domain": "six monthly salaries in {-1,0,1}"
+    },
+    "symbolic": {
+      "correct_proved": true,
+      "correct_solver_status": "unsat",
+      "mutant_disproved": true,
+      "mutant_solver_status": "sat",
+      "symbolic_domain": "six unrestricted integer salaries"
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 75,
+    "text": "- `CERTIFIED_A2`: certified with an explicit human-authored scalar semantic adapter."
+  },
+  "schema_version": "BIZPROOF-V0.11-A2-CERTIFICATE-1",
+  "source": {
+    "class": "locapass_eligibilite_etudiant_contrat",
+    "file": "openfisca_france/model/prestations/locapass.py",
+    "function": "formula",
+    "function_sha256": "5f6651d421628e53cf3f1946af49cea09f3aaa41db14311fd3da0f2f73e8e958",
+    "lines": [
+      95,
+      97
+    ],
+    "source_file_sha256": "0dccef9a4ac9f8d459128845352795477396f638d3ebf572511b970bebf39fb3",
+    "source_id": "openfisca_france"
+  },
+  "status": "CERTIFIED_A2",
+  "terminal_outcome": "CERTIFIED_A2",
+  "terminal_outcome_assigned": true
+}

@@ -1,0 +1,51 @@
+{
+  "all_hash_count": 438,
+  "authoritative_source": true,
+  "candidate_id": "a74d4580a9effb73",
+  "category": "NESTED_OR_HIGHER_ORDER_LOGIC",
+  "certification_started": false,
+  "direct_hash_count": 8,
+  "direct_hit_count": 1,
+  "hash_name_location_count": 0,
+  "historical_record_count": 481,
+  "local_hit_count": 100,
+  "name_hints": [
+    "True",
+    "dcc51cdc8b19bef34bcd4fa812d19b75e8e2ce09aa9d228dc3befd25fef666c6",
+    "formula_2022",
+    "individu",
+    "period",
+    "where"
+  ],
+  "path_hint_count": 34,
+  "recovery_claim": false,
+  "selected": {
+    "class_name": "eligibilite_per_etudiant",
+    "end_lineno": 59,
+    "fingerprints": {
+      "ast_dump": "990a4d679e2afb147473c5f439dc3ed1af12d3bfc52c886df9fdb813b4aa5103",
+      "ast_unparse": "649ba93d2c41192899bdce8261587926eefef0f6581d9c486f12bba486e1b6dd",
+      "dedent_strip": "dcc51cdc8b19bef34bcd4fa812d19b75e8e2ce09aa9d228dc3befd25fef666c6",
+      "dedent_strip_newline": "d10bbfc1d4cae414887ddf3997dfe93b7d11435327e0ab69030d27ce4e1af883",
+      "lf": "dcc51cdc8b19bef34bcd4fa812d19b75e8e2ce09aa9d228dc3befd25fef666c6",
+      "raw": "dcc51cdc8b19bef34bcd4fa812d19b75e8e2ce09aa9d228dc3befd25fef666c6"
+    },
+    "function_name": "formula_2022",
+    "lineno": 47,
+    "matched_hash": "dcc51cdc8b19bef34bcd4fa812d19b75e8e2ce09aa9d228dc3befd25fef666c6",
+    "path": "external_sources\\v0.6\\openfisca_france\\openfisca_france\\model\\prestations\\aides_exceptionnelles\\prime_exceptionnelle_rentree.py",
+    "project": "openfisca_france",
+    "source": "def formula_2022(individu, period):\n        juin_2022 = periods.period('2022-06')\n        eligibilite_etudiant = where(\n            not_(or_(individu('bourse_criteres_sociaux', juin_2022) > 0, individu('bourse_enseignement_sup', juin_2022) > 0)),\n            False,\n            where(\n                and_(individu.has_role(Famille.PARENT), individu.famille('eligibilite_per', period)),\n                False,\n                True\n                )\n            )\n\n        return eligibilite_etudiant"
+  },
+  "source": "def formula_2022(individu, period):\n        juin_2022 = periods.period('2022-06')\n        eligibilite_etudiant = where(\n            not_(or_(individu('bourse_criteres_sociaux', juin_2022) > 0, individu('bourse_enseignement_sup', juin_2022) > 0)),\n            False,\n            where(\n                and_(individu.has_role(Famille.PARENT), individu.famille('eligibilite_per', period)),\n                False,\n                True\n                )\n            )\n\n        return eligibilite_etudiant",
+  "source_fingerprints": {
+    "ast_dump": "990a4d679e2afb147473c5f439dc3ed1af12d3bfc52c886df9fdb813b4aa5103",
+    "ast_unparse": "649ba93d2c41192899bdce8261587926eefef0f6581d9c486f12bba486e1b6dd",
+    "dedent_strip": "dcc51cdc8b19bef34bcd4fa812d19b75e8e2ce09aa9d228dc3befd25fef666c6",
+    "dedent_strip_newline": "d10bbfc1d4cae414887ddf3997dfe93b7d11435327e0ab69030d27ce4e1af883",
+    "lf": "dcc51cdc8b19bef34bcd4fa812d19b75e8e2ce09aa9d228dc3befd25fef666c6",
+    "raw": "dcc51cdc8b19bef34bcd4fa812d19b75e8e2ce09aa9d228dc3befd25fef666c6"
+  },
+  "status": "DIRECT_HASH_RESOLVED",
+  "support_records": []
+}

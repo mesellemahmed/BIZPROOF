@@ -1,0 +1,44 @@
+{
+  "authoritative_source": true,
+  "candidate_id": "1a2de6edb11465fe",
+  "category": "NESTED_OR_HIGHER_ORDER_LOGIC",
+  "certification_started": false,
+  "evidence_detail": {
+    "direct_hash_name_location_count": 1,
+    "embedded_hash_hit_count": 0,
+    "embedded_hashes": [],
+    "hash_name_location_count": 0,
+    "name_path_location_count": 0
+  },
+  "prior_status": "UNRESOLVED",
+  "recovery_claim": false,
+  "selected": {
+    "class_name": "bail_reel_solidaire_plafond_total",
+    "end_lineno": 69,
+    "fingerprints": {
+      "ast_dump": "55f490ab4d9ac5627a8a3baf3f0ffd832a026e5f29d5fe0d8a2c98b7dd5f0754",
+      "ast_unparse": "a6a7acb53934ed536be9ee000a5fa842165be09bbc2fb94dffc930e84e070b2c",
+      "dedent_strip": "27d6ae56e7604c3f313a7f4a5d86d4928004dd6ed0768fc87bf34dc449660036",
+      "dedent_strip_newline": "aaa0373ce3768951af26dc847464a6cb107da9b3f580a5d770524bcd1a3cf2c0",
+      "lf": "27d6ae56e7604c3f313a7f4a5d86d4928004dd6ed0768fc87bf34dc449660036",
+      "raw": "27d6ae56e7604c3f313a7f4a5d86d4928004dd6ed0768fc87bf34dc449660036"
+    },
+    "function_name": "formula",
+    "lineno": 45,
+    "matched_hash": "27d6ae56e7604c3f313a7f4a5d86d4928004dd6ed0768fc87bf34dc449660036",
+    "path": "external_sources\\v0.6\\openfisca_france\\openfisca_france\\model\\prestations\\bail_reel_solidaire.py",
+    "project": "openfisca_france",
+    "source": "def formula(menage, period, parameters):\n        params = parameters(period).prestations_sociales.bail_reel_solidaire\n        zones_abc_eligibles = params.parametres_generaux.zones_abc_eligibles\n        plafonds_par_zones = params.plafonds_par_zones\n        zones_menage = menage('bail_reel_solidaire_zones_menage', period)\n        nb_personnes = menage.nb_persons()\n        nb_personnes_max = params.parametres_generaux.nombre_personnes_maximum\n\n        def calcul_plafonds_zone(zone):\n            plafond_zone = plafonds_par_zones[f'zone_{zone}']\n            plafond_base = select(\n                [nb_personnes == i if i < 6 else nb_personnes >= i for i in range(1, 7)],\n                [plafond_zone[f'nb_personnes_{i}'] for i in range(1, 7)]\n                )\n            plafond_supp = where(\n                nb_personnes > nb_personnes_max,\n                (nb_personnes - nb_personnes_max) * plafond_zone.nb_personnes_supplementaires,\n                0\n                )\n            return plafond_base + plafond_supp\n\n        return select(\n            [zones_menage == zone for zone in zones_abc_eligibles],\n            [calcul_plafonds_zone(zone) for zone in zones_abc_eligibles]\n            )"
+  },
+  "source": "def formula(menage, period, parameters):\n        params = parameters(period).prestations_sociales.bail_reel_solidaire\n        zones_abc_eligibles = params.parametres_generaux.zones_abc_eligibles\n        plafonds_par_zones = params.plafonds_par_zones\n        zones_menage = menage('bail_reel_solidaire_zones_menage', period)\n        nb_personnes = menage.nb_persons()\n        nb_personnes_max = params.parametres_generaux.nombre_personnes_maximum\n\n        def calcul_plafonds_zone(zone):\n            plafond_zone = plafonds_par_zones[f'zone_{zone}']\n            plafond_base = select(\n                [nb_personnes == i if i < 6 else nb_personnes >= i for i in range(1, 7)],\n                [plafond_zone[f'nb_personnes_{i}'] for i in range(1, 7)]\n                )\n            plafond_supp = where(\n                nb_personnes > nb_personnes_max,\n                (nb_personnes - nb_personnes_max) * plafond_zone.nb_personnes_supplementaires,\n                0\n                )\n            return plafond_base + plafond_supp\n\n        return select(\n            [zones_menage == zone for zone in zones_abc_eligibles],\n            [calcul_plafonds_zone(zone) for zone in zones_abc_eligibles]\n            )",
+  "source_fingerprints": {
+    "ast_dump": "55f490ab4d9ac5627a8a3baf3f0ffd832a026e5f29d5fe0d8a2c98b7dd5f0754",
+    "ast_unparse": "a6a7acb53934ed536be9ee000a5fa842165be09bbc2fb94dffc930e84e070b2c",
+    "dedent_strip": "27d6ae56e7604c3f313a7f4a5d86d4928004dd6ed0768fc87bf34dc449660036",
+    "dedent_strip_newline": "aaa0373ce3768951af26dc847464a6cb107da9b3f580a5d770524bcd1a3cf2c0",
+    "lf": "27d6ae56e7604c3f313a7f4a5d86d4928004dd6ed0768fc87bf34dc449660036",
+    "raw": "27d6ae56e7604c3f313a7f4a5d86d4928004dd6ed0768fc87bf34dc449660036"
+  },
+  "status": "SAME_RECORD_DIRECT_HASH_NAME_RESOLVED",
+  "support_record_count": 4
+}

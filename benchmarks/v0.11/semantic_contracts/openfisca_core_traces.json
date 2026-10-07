@@ -1,0 +1,120 @@
+{
+  "certification_claim": false,
+  "dependency_lock": {
+    "certification_claim": false,
+    "dependency": "openfisca-core",
+    "expected_wheel_sha256": "7d34b4a02f024a436e06b76aac993d44b6552a061e72630a2a3bd2144a22b242",
+    "extracted_model_api_sha256": "f31dea0d97dd5affb050147f8e2d321a38ed6fe044a8eeaa325c58670f406008",
+    "lock_file": "external_sources/v0.6/openfisca_france/uv.lock",
+    "selection_basis": "uv.lock marker python_full_version < '3.13'",
+    "selection_environment": "CPython 3.12",
+    "selection_lines": [
+      809
+    ],
+    "version": "44.0.4",
+    "wheel_filename": "openfisca_core-44.0.4-py3-none-any.whl",
+    "wheel_hash_verified": true,
+    "wheel_lines": [
+      791
+    ],
+    "wheel_sha256": "7d34b4a02f024a436e06b76aac993d44b6552a061e72630a2a3bd2144a22b242"
+  },
+  "symbols": [
+    {
+      "candidate_certification": false,
+      "certification_claim": false,
+      "dependency": "openfisca-core",
+      "semantic_contract_status": "UNRESOLVED",
+      "symbol": "not_",
+      "trace": {
+        "initial_module": "openfisca_core.model_api",
+        "initial_symbol": "not_",
+        "steps": [
+          {
+            "file": "openfisca_core/model_api.py",
+            "file_sha256": "f31dea0d97dd5affb050147f8e2d321a38ed6fe044a8eeaa325c58670f406008",
+            "line": 3,
+            "module": "openfisca_core.model_api",
+            "source": "from numpy import logical_not as not_, maximum as max_, minimum as min_, round as round_, select, where",
+            "step_kind": "IMPORT_EDGE",
+            "symbol": "not_",
+            "target_module": "numpy",
+            "target_symbol": "logical_not"
+          },
+          {
+            "module": "numpy",
+            "step_kind": "EXTERNAL_DEPENDENCY_BOUNDARY",
+            "symbol": "logical_not"
+          }
+        ],
+        "terminal_status": "EXTERNAL_DEPENDENCY_BOUNDARY"
+      },
+      "version": "44.0.4",
+      "wheel_sha256": "7d34b4a02f024a436e06b76aac993d44b6552a061e72630a2a3bd2144a22b242"
+    },
+    {
+      "candidate_certification": false,
+      "certification_claim": false,
+      "dependency": "openfisca-core",
+      "semantic_contract_status": "UNRESOLVED",
+      "symbol": "min_",
+      "trace": {
+        "initial_module": "openfisca_core.model_api",
+        "initial_symbol": "min_",
+        "steps": [
+          {
+            "file": "openfisca_core/model_api.py",
+            "file_sha256": "f31dea0d97dd5affb050147f8e2d321a38ed6fe044a8eeaa325c58670f406008",
+            "line": 3,
+            "module": "openfisca_core.model_api",
+            "source": "from numpy import logical_not as not_, maximum as max_, minimum as min_, round as round_, select, where",
+            "step_kind": "IMPORT_EDGE",
+            "symbol": "min_",
+            "target_module": "numpy",
+            "target_symbol": "minimum"
+          },
+          {
+            "module": "numpy",
+            "step_kind": "EXTERNAL_DEPENDENCY_BOUNDARY",
+            "symbol": "minimum"
+          }
+        ],
+        "terminal_status": "EXTERNAL_DEPENDENCY_BOUNDARY"
+      },
+      "version": "44.0.4",
+      "wheel_sha256": "7d34b4a02f024a436e06b76aac993d44b6552a061e72630a2a3bd2144a22b242"
+    },
+    {
+      "candidate_certification": false,
+      "certification_claim": false,
+      "dependency": "openfisca-core",
+      "semantic_contract_status": "UNRESOLVED",
+      "symbol": "where",
+      "trace": {
+        "initial_module": "openfisca_core.model_api",
+        "initial_symbol": "where",
+        "steps": [
+          {
+            "file": "openfisca_core/model_api.py",
+            "file_sha256": "f31dea0d97dd5affb050147f8e2d321a38ed6fe044a8eeaa325c58670f406008",
+            "line": 3,
+            "module": "openfisca_core.model_api",
+            "source": "from numpy import logical_not as not_, maximum as max_, minimum as min_, round as round_, select, where",
+            "step_kind": "IMPORT_EDGE",
+            "symbol": "where",
+            "target_module": "numpy",
+            "target_symbol": "where"
+          },
+          {
+            "module": "numpy",
+            "step_kind": "EXTERNAL_DEPENDENCY_BOUNDARY",
+            "symbol": "where"
+          }
+        ],
+        "terminal_status": "EXTERNAL_DEPENDENCY_BOUNDARY"
+      },
+      "version": "44.0.4",
+      "wheel_sha256": "7d34b4a02f024a436e06b76aac993d44b6552a061e72630a2a3bd2144a22b242"
+    }
+  ]
+}

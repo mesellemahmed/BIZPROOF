@@ -1,0 +1,117 @@
+{
+  "assistance_level": "A1",
+  "authoring_mode": "DECLARATIVE_BINDINGS_FROZEN_BSIR",
+  "bindings": [
+    {
+      "binding_id": "cf6108124a2af152",
+      "kind": "ATTRIBUTE",
+      "primitive": "emploi_salarie_domicile",
+      "source_expression": "parameters(period).impot_revenu.credits_impots.emploi_salarie_domicile"
+    },
+    {
+      "binding_id": "f78c20713e8f6754",
+      "kind": "ATTRIBUTE",
+      "primitive": "taux",
+      "source_expression": "P.taux"
+    },
+    {
+      "binding_id": "f5803c562ce10d82",
+      "kind": "CALL",
+      "primitive": "foyer_fiscal",
+      "source_expression": "foyer_fiscal('f7db', period)"
+    },
+    {
+      "binding_id": "227294ec64902004",
+      "kind": "CALL",
+      "primitive": "foyer_fiscal",
+      "source_expression": "foyer_fiscal('f7dg', period)"
+    },
+    {
+      "binding_id": "f08c0e2f27256a9f",
+      "kind": "CALL",
+      "primitive": "foyer_fiscal",
+      "source_expression": "foyer_fiscal('f7dl', period)"
+    },
+    {
+      "binding_id": "c3568a0d7c71ce35",
+      "kind": "CALL",
+      "primitive": "foyer_fiscal",
+      "source_expression": "foyer_fiscal('f7dq', period)"
+    },
+    {
+      "binding_id": "639135dbea89d83a",
+      "kind": "CALL",
+      "primitive": "foyer_fiscal",
+      "source_expression": "foyer_fiscal('nb_pac2', period)"
+    },
+    {
+      "binding_id": "b93213118568e946",
+      "kind": "CALL",
+      "primitive": "min_",
+      "source_expression": "min_(plaf, f7db)"
+    },
+    {
+      "binding_id": "6af92d8a3d17d209",
+      "kind": "CALL",
+      "primitive": "where",
+      "source_expression": "where(invalide, P.plafond_invalides, where(annee1, min_(P.plafond_maximum_1ere_annee, P.plafond_1ere_annee + P.increment_plafond * (nb_pac_majoration_plafond + f7dl)), min_(P.plafond_maximum, P.plafond + P.increment_plafond * (nb_pac_majoration_plafond + f7dl))))"
+    }
+  ],
+  "candidate_id": "4c7af63af2f89319",
+  "certificate_digest": "3578ca05ed0cbad34c8032173b8ebe26feaea7030425bf7fb73b3d5f38a92410",
+  "certificate_id": "CERT-V011-A1-4C7AF63AF2F89319",
+  "claim_scope": "Certification proves equivalence between the locked source AST and the frozen BSIR under the explicit declarative bindings listed here. External framework/database values and helper semantics without a validated semantic contract remain outside the certificate.",
+  "evidence": {
+    "concrete_replays": 12,
+    "correct_solver_status": "unsat",
+    "ir_sha256": "3642065907a25b764937bdf7c622db4406743a208ef71fb04bd42cc3c3da4b2d",
+    "mutant_solver_status": "sat",
+    "mutant_witness": {
+      "b_4c7af6_0": "0",
+      "b_4c7af6_1": "0",
+      "b_4c7af6_2": "0",
+      "b_4c7af6_3": "0",
+      "b_4c7af6_4": "0",
+      "b_4c7af6_5": "0",
+      "b_4c7af6_6": "0",
+      "b_4c7af6_7": "-1",
+      "b_4c7af6_8": "0"
+    },
+    "mutation": "mul-to-add",
+    "proof_digest": "d9a2fb89ba73cb99b1e759a7e92ab5b8b966830256101bb092a039223bc6a590",
+    "proof_obligations": {
+      "bsir_compile": true,
+      "concrete_replay": true,
+      "declarative_bindings": true,
+      "frozen_bsir": true,
+      "independent_source_ast_compile": true,
+      "locked_source_commit": true,
+      "mutant_detected_sat": true,
+      "mutant_witness_replayed": true,
+      "symbolic_equivalence_unsat": true,
+      "validated_semantic_abstractions": true
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 74,
+    "text": "- `CERTIFIED_A1`: certified with declarative source-to-BVC bindings only."
+  },
+  "schema_version": "BIZPROOF-V0.11-A1-CERTIFICATE-1",
+  "semantic_contracts": {
+    "min_": "SC-NP-MIN-001",
+    "where": "SC-NP-WHERE-001"
+  },
+  "source": {
+    "class": "ci_saldom",
+    "file": "openfisca_france/model/prelevements_obligatoires/impot_revenu/credits_impot.py",
+    "function": "formula_2011_01_01",
+    "function_sha256": "e825b78c06e24ad712bff82e85dcd9ad769f900a69b191628d44901eb782e072",
+    "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+    "source_file_sha256": "d46500513acd73384bfc46aa56218e79aa1bc9cedd2b58a7faac624095d76f35",
+    "source_id": "openfisca_france"
+  },
+  "status": "CERTIFIED_A1",
+  "terminal_outcome": "CERTIFIED_A1",
+  "terminal_outcome_assigned": true
+}

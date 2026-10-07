@@ -1,0 +1,167 @@
+{
+  "anti_bias_rules": [
+    "All eight source mappings and semantic routes are frozen before certification.",
+    "Candidates remain in their frozen batch even if certification fails.",
+    "No candidate-specific exception may be introduced solely to obtain a positive outcome.",
+    "External framework implementations are not claimed correct; only explicit supported semantic projections are certified."
+  ],
+  "batches": {
+    "RICH_FRAMEWORK_BATCH": [
+      "8a754dadf1672d0a",
+      "882c5eae0d8fd4ec"
+    ],
+    "STATE_CONTAINER_BATCH": [
+      "2309036b0c69ad48",
+      "4b57e2d73c695a41",
+      "8048a564541f5408",
+      "b2996c3dd81aca55",
+      "d7f578c3a5f20b8a",
+      "eb12d3a44210a486"
+    ]
+  },
+  "candidate_count": 8,
+  "candidate_ids": [
+    "2309036b0c69ad48",
+    "4b57e2d73c695a41",
+    "8048a564541f5408",
+    "882c5eae0d8fd4ec",
+    "8a754dadf1672d0a",
+    "b2996c3dd81aca55",
+    "d7f578c3a5f20b8a",
+    "eb12d3a44210a486"
+  ],
+  "certification_started": false,
+  "mappings": {
+    "2309036b0c69ad48": {
+      "candidate_id": "2309036b0c69ad48",
+      "certification_batch": "STATE_CONTAINER_BATCH",
+      "class_name": "AddToBasketForm",
+      "function_name": "_add_option_field",
+      "lineno": 278,
+      "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\basket\\forms.py",
+      "provenance_status": "STRONG_HASH_MATCH",
+      "reason_codes": "FORM_STATE_MUTATION_OUTSIDE_FORMAL_SUBSET",
+      "semantic_observation": "post-state of explicit mapping after one key/value write",
+      "semantic_route": "MAPPING_STATE_WRITE",
+      "source": "def _add_option_field(self, product, option):\n        \"\"\"\n        Creates the appropriate form field for the product option.\n\n        This is designed to be overridden so that specific widgets can be used\n        for certain types of options.\n        \"\"\"\n        option_field = self.OPTION_FIELD_FACTORIES.get(option.type, _option_text_field)(\n            self, product, option\n        )\n        self.fields[option.code] = option_field",
+      "source_sha256": "eddb810f17547f52e721d8014ab13075b4e1d1e919384c096157e1e7d299d94a"
+    },
+    "4b57e2d73c695a41": {
+      "candidate_id": "4b57e2d73c695a41",
+      "certification_batch": "STATE_CONTAINER_BATCH",
+      "class_name": "AbstractBasket",
+      "function_name": "thaw",
+      "lineno": 391,
+      "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\basket\\abstract_models.py",
+      "provenance_status": "STRONG_HASH_MATCH",
+      "reason_codes": "OBJECT_STATE_TRANSITION_OUTSIDE_FORMAL_SUBSET",
+      "semantic_observation": "object attribute post-state plus ordered persistence-effect trace",
+      "semantic_route": "OBJECT_STATE_PLUS_EFFECT_TRACE",
+      "source": "def thaw(self):\n        \"\"\"\n        Unfreezes a basket so it can be modified again\n        \"\"\"\n        self.status = self.OPEN\n        self.save()",
+      "source_sha256": "04d0c6d989e859716852320a74d4cdc881f86e1c70aba60820dc4919985dad2d"
+    },
+    "8048a564541f5408": {
+      "candidate_id": "8048a564541f5408",
+      "certification_batch": "STATE_CONTAINER_BATCH",
+      "class_name": "OrderChangeManager",
+      "function_name": "regenerate_secret",
+      "lineno": 1809,
+      "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\services\\orders.py",
+      "provenance_status": "STRONG_HASH_MATCH",
+      "reason_codes": "OPERATION_LIST_MUTATION_OUTSIDE_FORMAL_SUBSET",
+      "semantic_observation": "ordered operation-sequence post-state",
+      "semantic_route": "OPERATION_SEQUENCE_APPEND",
+      "source": "def regenerate_secret(self, position: OrderPosition):\n        self._operations.append(self.RegenerateSecretOperation(position))",
+      "source_sha256": "d16fad3b28669e38484c20256968af8c36ae2b57f9bd09b78f618347570d6173"
+    },
+    "882c5eae0d8fd4ec": {
+      "candidate_id": "882c5eae0d8fd4ec",
+      "certification_batch": "RICH_FRAMEWORK_BATCH",
+      "class_name": "OrderPayment",
+      "function_name": "create_external_refund",
+      "lineno": 2095,
+      "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+      "provenance_status": "STRONG_HASH_MATCH",
+      "reason_codes": "REFUND_OBJECT_SIDE_EFFECTS_OUTSIDE_FORMAL_SUBSET",
+      "semantic_observation": "created refund semantic record, ordered effect trace, conditional completion state",
+      "semantic_route": "EXTERNAL_OBJECT_CREATION_EFFECT_TRACE",
+      "source": "def create_external_refund(self, amount=None, execution_date=None, info='{}'):\n        \"\"\"\n        This should be called to create an OrderRefund object when a refund has triggered\n        by an external source, e.g. when a credit card payment has been refunded by the\n        credit card provider.\n\n        :param amount: Amount to refund. If not given, the full payment amount will be used.\n        :type amount: Decimal\n        :param execution_date: Date of the refund. Defaults to the current time.\n        :type execution_date: datetime\n        :param info: Additional information, defaults to ``\"{}\"``.\n        :type info: str\n        :return: OrderRefund\n        \"\"\"\n        r = self.order.refunds.create(\n            state=OrderRefund.REFUND_STATE_EXTERNAL,\n            source=OrderRefund.REFUND_SOURCE_EXTERNAL,\n            amount=amount if amount is not None else self.amount,\n            order=self.order,\n            payment=self,\n            execution_date=execution_date or now(),\n            provider=self.provider,\n            info=info\n        )\n        self.order.log_action('pretix.event.order.refund.created.externally', {\n            'local_id': r.local_id,\n            'provider': r.provider,\n        })\n\n        if self.order.pending_sum + r.amount == Decimal('0.00'):\n            r.done()\n\n        return r",
+      "source_sha256": "0c1d9b50bfa377b3f8004844ef99266333a9da475e368e05a278bae67a67e7d8"
+    },
+    "8a754dadf1672d0a": {
+      "candidate_id": "8a754dadf1672d0a",
+      "certification_batch": "RICH_FRAMEWORK_BATCH",
+      "class_name": "Order",
+      "function_name": "positions_with_tickets",
+      "lineno": 1203,
+      "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+      "provenance_status": "STRONG_HASH_MATCH",
+      "reason_codes": "PLUGIN_SIGNAL_SET_SEMANTICS_OUTSIDE_FORMAL_SUBSET",
+      "semantic_observation": "extensional set/list result under explicit plugin-signal response observations",
+      "semantic_route": "SIGNAL_GATED_SET_SEMANTICS",
+      "source": "def positions_with_tickets(self):\n        signal_response = allow_ticket_download.send(self.event, order=self)\n        if all([r is True for rr, r in signal_response]):\n            return self.positions_with_tickets_ignoring_plugins\n        elif any([r is False for rr, r in signal_response]):\n            return []\n        else:\n            return set.intersection(set(self.positions_with_tickets_ignoring_plugins), *[set(r) for rr, r in signal_response if isinstance(r, Iterable)])",
+      "source_sha256": "6333627389e891ba1a54761c7ab06169a3cd2fca9a647e81a3154760db0824f7"
+    },
+    "b2996c3dd81aca55": {
+      "candidate_id": "b2996c3dd81aca55",
+      "certification_batch": "STATE_CONTAINER_BATCH",
+      "class_name": null,
+      "function_name": "add_payment_to_cart_session",
+      "lineno": 1588,
+      "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\services\\cart.py",
+      "provenance_status": "STRONG_HASH_MATCH",
+      "reason_codes": "SESSION_STATE_MUTATION_OUTSIDE_FORMAL_SUBSET",
+      "semantic_observation": "session mapping post-state with explicit generated-id observation",
+      "semantic_route": "SESSION_MAPPING_SEQUENCE_MUTATION",
+      "source": "def add_payment_to_cart_session(cart_session, provider, min_value: Decimal=None, max_value: Decimal=None, info_data: dict=None):\n    \"\"\"\n    :param cart_session: The current cart session.\n    :param provider: The instance of your payment provider.\n    :param min_value: The minimum value this payment instrument supports, or ``None`` for unlimited.\n    :param max_value: The maximum value this payment instrument supports, or ``None`` for unlimited. Highly discouraged\n                      to use for payment providers which charge a payment fee, as this can be very user-unfriendly if\n                      users need a second payment method just for the payment fee of the first method.\n    :param info_data: A dictionary of information that will be passed through to the ``OrderPayment.info_data`` attribute.\n    :return:\n    \"\"\"\n    cart_session.setdefault('payments', [])\n    cart_session['payments'].append({\n        'id': str(uuid.uuid4()),\n        'provider': provider.identifier,\n        'multi_use_supported': provider.multi_use_supported,\n        'min_value': str(min_value) if min_value is not None else None,\n        'max_value': str(max_value) if max_value is not None else None,\n        'info_data': info_data or {},\n    })\n    cart_session['payments_postpone'] = False",
+      "source_sha256": "17b1c4649a6abb9206960628c4668dfec2b0607265f0e2752991f33d66720b04"
+    },
+    "d7f578c3a5f20b8a": {
+      "candidate_id": "d7f578c3a5f20b8a",
+      "certification_batch": "STATE_CONTAINER_BATCH",
+      "class_name": "OrderChangeManager",
+      "function_name": "change_fee",
+      "lineno": 1898,
+      "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\services\\orders.py",
+      "provenance_status": "STRONG_HASH_MATCH",
+      "reason_codes": "MULTI_OBJECT_STATE_TRANSITION_OUTSIDE_FORMAL_SUBSET",
+      "semantic_observation": "multi-field post-state plus ordered operation append after explicit tax helper",
+      "semantic_route": "MULTI_STATE_PLUS_OPERATION_APPEND",
+      "source": "def change_fee(self, fee: OrderFee, value: Decimal):\n        value = (fee.tax_rule or TaxRule.zero()).tax(value, base_price_is='gross', invoice_address=self._invoice_address,\n                                                     force_fixed_gross_price=True)\n        self._totaldiff_guesstimate += value.gross - fee.value\n        self._invoice_dirty = True\n        self._operations.append(self.FeeValueOperation(fee, value, value.gross - fee.value))",
+      "source_sha256": "1fe1783cc607250e8b4e239f14bf18597d16a99fcb0e516bd623723a93a4f715"
+    },
+    "eb12d3a44210a486": {
+      "candidate_id": "eb12d3a44210a486",
+      "certification_batch": "STATE_CONTAINER_BATCH",
+      "class_name": "OrderPosition",
+      "function_name": "checkin_texts",
+      "lineno": 2676,
+      "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+      "provenance_status": "STRONG_HASH_MATCH",
+      "reason_codes": "NONSCALAR_LIST_SEMANTICS_OUTSIDE_FORMAL_SUBSET",
+      "semantic_observation": "ordered returned sequence under explicit optional-field observations",
+      "semantic_route": "CONDITIONAL_SEQUENCE_RETURN",
+      "source": "def checkin_texts(self):\n        texts = []\n        if self.order.checkin_text:\n            texts.append(self.order.checkin_text)\n        if self.variation_id and self.variation.checkin_text:\n            texts.append(self.variation.checkin_text)\n        if self.item.checkin_text:\n            texts.append(self.item.checkin_text)\n        return texts",
+      "source_sha256": "c0940eb57388bf8cbbaabf04499486b19128fed8e38e5667b6dd5c794fab29ab"
+    }
+  },
+  "recovery_claims": 0,
+  "required_certification_gates": [
+    "frozen_authoritative_source_sha",
+    "source_projection_equivalence",
+    "explicit_dependency_contract",
+    "deterministic_semantic_replay",
+    "frozen_mutant",
+    "formal_mutant_refutation",
+    "concrete_counterexample_replay",
+    "global_regression"
+  ],
+  "schema_version": "BIZPROOF-V0.12-B2-PLAN8-1",
+  "shared_semantic_model": {
+    "effectful_transition": "(pre_state, explicit_dependencies) -> (post_state, return_value, ordered_effect_trace)",
+    "sequence_semantics": "finite ordered semantic sequence with extensional element observations",
+    "set_semantics": "finite extensional set semantics independent of concrete framework collection identity",
+    "state_transition": "(pre_state, explicit_dependencies) -> post_state"
+  },
+  "source_checkpoint": "8c014278103f00bc419eec0b0b77607fac008a82"
+}

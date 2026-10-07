@@ -1,0 +1,14 @@
+{
+  "candidate_id": "b2996c3dd81aca55",
+  "certification_batch": "STATE_CONTAINER_BATCH",
+  "class_name": null,
+  "function_name": "add_payment_to_cart_session",
+  "lineno": 1588,
+  "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\services\\cart.py",
+  "provenance_status": "STRONG_HASH_MATCH",
+  "reason_codes": "SESSION_STATE_MUTATION_OUTSIDE_FORMAL_SUBSET",
+  "semantic_observation": "session mapping post-state with explicit generated-id observation",
+  "semantic_route": "SESSION_MAPPING_SEQUENCE_MUTATION",
+  "source": "def add_payment_to_cart_session(cart_session, provider, min_value: Decimal=None, max_value: Decimal=None, info_data: dict=None):\n    \"\"\"\n    :param cart_session: The current cart session.\n    :param provider: The instance of your payment provider.\n    :param min_value: The minimum value this payment instrument supports, or ``None`` for unlimited.\n    :param max_value: The maximum value this payment instrument supports, or ``None`` for unlimited. Highly discouraged\n                      to use for payment providers which charge a payment fee, as this can be very user-unfriendly if\n                      users need a second payment method just for the payment fee of the first method.\n    :param info_data: A dictionary of information that will be passed through to the ``OrderPayment.info_data`` attribute.\n    :return:\n    \"\"\"\n    cart_session.setdefault('payments', [])\n    cart_session['payments'].append({\n        'id': str(uuid.uuid4()),\n        'provider': provider.identifier,\n        'multi_use_supported': provider.multi_use_supported,\n        'min_value': str(min_value) if min_value is not None else None,\n        'max_value': str(max_value) if max_value is not None else None,\n        'info_data': info_data or {},\n    })\n    cart_session['payments_postpone'] = False",
+  "source_sha256": "17b1c4649a6abb9206960628c4668dfec2b0607265f0e2752991f33d66720b04"
+}

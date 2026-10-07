@@ -1,0 +1,234 @@
+{
+  "candidate_id": "aab5348ee173d6e3",
+  "candidate_proof_status": "PROVED_SOURCE_SLICE",
+  "certification_claim": false,
+  "class": "AbstractBenefit",
+  "evidence_complete": true,
+  "frontier": {
+    "candidate_certification": false,
+    "candidate_id": "aab5348ee173d6e3",
+    "class": "AbstractBenefit",
+    "complexity": "LOW",
+    "contract_occurrence_count": 1,
+    "contract_primitives": [
+      "D"
+    ],
+    "evidence": "TEST_AND_DOC",
+    "file": "src/oscar/apps/offer/abstract_models.py",
+    "frontier_status": "PRIMITIVE_CONTRACTS_CLOSED",
+    "function": "shipping_discount",
+    "source": "django_oscar",
+    "structural_semantics_remaining": [],
+    "terminal_outcome_assigned": false,
+    "unresolved_primitives_remaining": [],
+    "validated_semantic_primitives": [
+      "D"
+    ]
+  },
+  "frozen_candidate_metadata": {
+    "_cohort_schema": {
+      "class_alias": "enclosing_class",
+      "complexity_alias": "adaptation_complexity",
+      "evidence_alias": "evidence_bucket",
+      "nested_candidate": true,
+      "source_alias": "source_id"
+    },
+    "adaptation_complexity": "LOW",
+    "business_keyword_sources": {
+      "class": [
+        "benefit"
+      ],
+      "docstring": [],
+      "function": [
+        "discount",
+        "shipping"
+      ],
+      "path": [
+        "offer"
+      ]
+    },
+    "business_keywords": [
+      "benefit",
+      "discount",
+      "offer",
+      "shipping"
+    ],
+    "business_relevance": "STRONG",
+    "business_score": 10,
+    "candidate_id": "aab5348ee173d6e3",
+    "class": "AbstractBenefit",
+    "classification": "ADAPTATION_REQUIRED",
+    "classification_reasons": [
+      "Call",
+      "bound_method"
+    ],
+    "complexity": "LOW",
+    "decorator_count": 0,
+    "docstring_present": false,
+    "enclosing_class": "AbstractBenefit",
+    "evidence": "TEST_AND_DOC",
+    "evidence_bucket": "TEST_AND_DOC",
+    "evidence_link_modes": {
+      "doc:EXACT_FUNCTION_TEXT": 2,
+      "test:EXACT_FUNCTION_SYMBOL": 1
+    },
+    "evidence_policy": "EXACT_SYMBOL_OR_EXACT_CLASS",
+    "file": "src/oscar/apps/offer/abstract_models.py",
+    "function": "shipping_discount",
+    "function_sha256": "61b4a802fdf262e5bab6692bc7978326417675b78cbb64c93d1d532e7a38fa9a",
+    "line_end": 820,
+    "line_start": 819,
+    "lines": [
+      819,
+      820
+    ],
+    "parameter_count": 3,
+    "selection_hash": "13c33de27d601c65972b0309e14126f99ac645533f985de09e6f5dbbd431321c",
+    "selection_rank_within_stratum": 5,
+    "source": "django_oscar",
+    "source_file_sha256": "d1508fbc726b868c4c849cd88e7669f3bc1ca31a2e7f2ccb26ec3a119f29b78e",
+    "source_id": "django_oscar",
+    "stratum": {
+      "adaptation_complexity": "LOW",
+      "design_weight": 3.2,
+      "design_weight_denominator": 10,
+      "design_weight_numerator": 32,
+      "population_size": 32,
+      "sample_size": 10,
+      "source_id": "django_oscar"
+    },
+    "supporting_doc_files": [
+      "docs/source/ref/templatetags.rst",
+      "docs/source/releases/v3.0.rst"
+    ],
+    "supporting_test_files": [
+      "tests/integration/shipping/test_discount.py"
+    ]
+  },
+  "function": "shipping_discount",
+  "locked_commit": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+  "mutant_sensitivity": {
+    "passed": true,
+    "runtime_cases": 18,
+    "runtime_mutant_mismatches": 18,
+    "symbolic_mutant_status": "sat"
+  },
+  "primitive_contracts_satisfied": true,
+  "proof_digest_sha256": "52efb425b35c4c7262ae038a730ec572c0225feae3779cc9e8f8de5274797ed1",
+  "proof_id": "PROOF-V011-OSCAR-SHIPPING-001",
+  "proof_obligations": {
+    "frozen_candidate_identity": true,
+    "locked_provenance": true,
+    "mutant_sensitivity": true,
+    "primitive_semantics_closed": true,
+    "source_executed_preservation": true,
+    "symbolic_equivalence": true
+  },
+  "required_primitive_contracts": [
+    "SC-D-DECIMAL-001"
+  ],
+  "semantic_shape": {
+    "constructor": "decimal.Decimal",
+    "literal": "0.00",
+    "parameters": [
+      "self",
+      "charge",
+      "currency"
+    ],
+    "semantic_shape": "CONSTANT_DECIMAL_RETURN"
+  },
+  "source": "django_oscar",
+  "source_executed_preservation": {
+    "adapter_mismatches": 0,
+    "adapter_representation": {
+      "coefficient": 0,
+      "exponent": -2,
+      "sign": 0,
+      "string": "0.00"
+    },
+    "comparisons": 18,
+    "examples": [
+      {
+        "adapter": "0.00",
+        "charge_type": "Decimal",
+        "currency": "None",
+        "external": "0.00",
+        "mutant": "0.01"
+      },
+      {
+        "adapter": "0.00",
+        "charge_type": "Decimal",
+        "currency": "'USD'",
+        "external": "0.00",
+        "mutant": "0.01"
+      },
+      {
+        "adapter": "0.00",
+        "charge_type": "Decimal",
+        "currency": "'EUR'",
+        "external": "0.00",
+        "mutant": "0.01"
+      },
+      {
+        "adapter": "0.00",
+        "charge_type": "Decimal",
+        "currency": "None",
+        "external": "0.00",
+        "mutant": "0.01"
+      }
+    ],
+    "external_representation": {
+      "coefficient": 0,
+      "exponent": -2,
+      "sign": 0,
+      "string": "0.00"
+    },
+    "mutant_mismatches": 18,
+    "mutant_representation": {
+      "coefficient": 1,
+      "exponent": -2,
+      "sign": 0,
+      "string": "0.01"
+    },
+    "passed": true
+  },
+  "source_file": "src/oscar/apps/offer/abstract_models.py",
+  "source_file_sha256": "d1508fbc726b868c4c849cd88e7669f3bc1ca31a2e7f2ccb26ec3a119f29b78e",
+  "source_lines": [
+    819,
+    820
+  ],
+  "source_slice": "def shipping_discount(self, charge, currency=None):\n        return D(\"0.00\")",
+  "source_slice_sha256": "61b4a802fdf262e5bab6692bc7978326417675b78cbb64c93d1d532e7a38fa9a",
+  "symbolic_equivalence": {
+    "correct_equivalence_proved": true,
+    "correct_solver_status": "unsat",
+    "mutant_disproved": true,
+    "mutant_solver_status": "sat",
+    "representation": {
+      "adapter": [
+        0,
+        -2,
+        0
+      ],
+      "fields": [
+        "coefficient",
+        "exponent",
+        "sign"
+      ],
+      "mutant": [
+        1,
+        -2,
+        0
+      ],
+      "source": [
+        0,
+        -2,
+        0
+      ]
+    }
+  },
+  "terminal_level_mapping_status": "PROTOCOL_CONTEXT_FOUND_REVIEW_REQUIRED",
+  "terminal_outcome": null,
+  "terminal_outcome_assigned": false
+}

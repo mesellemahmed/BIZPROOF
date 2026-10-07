@@ -1,0 +1,32 @@
+{
+  "abstraction_contracts": [],
+  "all_required_gates_pass": true,
+  "candidate_id": "e1cf29f02fa0dadc",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_counterexample_replay": {
+    "correct_value": "[]",
+    "mutant_value": "['unexpected']",
+    "replayed": true,
+    "witness": []
+  },
+  "formal_mutant_refutation": {
+    "abstraction": "finite-sequence semantic observation by exact length and elements",
+    "formal_property": "exists an admissible semantic input such that correct_output != mutant_output",
+    "formally_refuted": true,
+    "model": "[]",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "mutant_structurally_distinct": true,
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-A2-NONSCALAR-2",
+  "semantic_capability": "STRUCTURED_SEMANTIC_VALUE",
+  "source_equivalence": {
+    "adapter_ast": "List(elts=[], ctx=Load())",
+    "method": "canonical AST identity after explicit abstraction substitution",
+    "proved": true,
+    "source_ast": "List(elts=[], ctx=Load())"
+  },
+  "source_slice_sha256": "ce5badceb1889764191d07b23d6e29aa0bd4082eb1b2d8c512bace7758755cd4",
+  "v012_outcome": "CERTIFIED_A2"
+}

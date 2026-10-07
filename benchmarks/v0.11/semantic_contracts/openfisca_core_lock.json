@@ -1,0 +1,19 @@
+{
+  "certification_claim": false,
+  "dependency": "openfisca-core",
+  "expected_wheel_sha256": "7d34b4a02f024a436e06b76aac993d44b6552a061e72630a2a3bd2144a22b242",
+  "extracted_model_api_sha256": "f31dea0d97dd5affb050147f8e2d321a38ed6fe044a8eeaa325c58670f406008",
+  "lock_file": "external_sources/v0.6/openfisca_france/uv.lock",
+  "selection_basis": "uv.lock marker python_full_version < '3.13'",
+  "selection_environment": "CPython 3.12",
+  "selection_lines": [
+    809
+  ],
+  "version": "44.0.4",
+  "wheel_filename": "openfisca_core-44.0.4-py3-none-any.whl",
+  "wheel_hash_verified": true,
+  "wheel_lines": [
+    791
+  ],
+  "wheel_sha256": "7d34b4a02f024a436e06b76aac993d44b6552a061e72630a2a3bd2144a22b242"
+}

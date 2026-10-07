@@ -1,0 +1,20 @@
+{
+  "analysis_executed": false,
+  "case_map_sha256": "e4a836cade875da20e736cde6e300c8d5f82c4b342f3f60f7d6895f194120f3f",
+  "case_substitutions": 0,
+  "cohort_tag": "v0.14-confirmatory60-cohort-freeze",
+  "completed_case_reruns": 0,
+  "engine_modifications": 0,
+  "engine_tag": "v0.14-engine-freeze",
+  "execution_order": "EXACT_FROZEN_ORDER",
+  "outcome_summary_generated": false,
+  "process_resume_count": 0,
+  "protocol_commit": "c76a998c06c89206bdedde199d847082fdb27273",
+  "protocol_sha256": "52081963f00d5f368394153d45e04065cc1314d6d3e3c71b247acf0cd1e57639",
+  "protocol_tag": "v0.14-confirmatory60-protocol-freeze",
+  "raw_sha256": "c346b9d42a13fc918149a039169fd5bc36326a2109be474bd720f1251761bbf2",
+  "record_count": 60,
+  "run_state_sha256": "223d29c4bc3d6ddf5ae8f3725dabc6924562afd98f8db2a70375a1f8897abfc8",
+  "runner_sha256": "96c30ba78fec831eafed84f6589ec6538028458e90bf00e38460dbc85c6f511e",
+  "schema_version": "BIZPROOF-V0.14-CONFIRMATORY60-EXECUTION-METADATA-1"
+}

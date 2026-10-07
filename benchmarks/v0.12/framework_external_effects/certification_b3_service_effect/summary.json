@@ -1,0 +1,11 @@
+{
+  "attempted": 2,
+  "batch": "SERVICE_EFFECT_BATCH",
+  "candidate_results": {
+    "63e7979762bf860b": "CERTIFIED_A2",
+    "7460029971aad8de": "CERTIFIED_A2"
+  },
+  "certified_a2": 2,
+  "failed": 0,
+  "schema_version": "BIZPROOF-V0.12-B3-CERT2-SUMMARY-1"
+}

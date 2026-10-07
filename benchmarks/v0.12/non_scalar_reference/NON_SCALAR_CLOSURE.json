@@ -1,0 +1,14 @@
+{
+  "campaign_status": "IN_PROGRESS",
+  "category": "NON_SCALAR_OR_REFERENCE_SEMANTICS",
+  "historical_yield_so_far": 0.6666666666666666,
+  "interpretation": "All ten frozen V0.11 candidates in the NON_SCALAR_OR_REFERENCE_SEMANTICS category received V0.12 certification evidence under explicit structured, reference, temporal, sequence or declarative-query semantic contracts.",
+  "recovery_rate": 1.0,
+  "schema_version": "BIZPROOF-V0.12-NONSCALAR-CLOSURE-1",
+  "status": "CLOSED_10_OF_10",
+  "v011_certified_total": 50,
+  "v011_target": 10,
+  "v012_certified_total_so_far": 60,
+  "v012_recovered": 10,
+  "v012_unresolved": 0
+}

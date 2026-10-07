@@ -1,0 +1,138 @@
+{
+  "assistance_level": "A1",
+  "authoring_mode": "DECLARATIVE_BINDINGS_FROZEN_BSIR",
+  "bindings": [
+    {
+      "binding_id": "e46e76c80e35422f",
+      "kind": "ATTRIBUTE",
+      "primitive": "emploi_salarie_domicile",
+      "source_expression": "parameters(period).impot_revenu.calcul_reductions_impots.emploi_salarie_domicile"
+    },
+    {
+      "binding_id": "f78c20713e8f6754",
+      "kind": "ATTRIBUTE",
+      "primitive": "taux",
+      "source_expression": "P.taux"
+    },
+    {
+      "binding_id": "f5803c562ce10d82",
+      "kind": "CALL",
+      "primitive": "foyer_fiscal",
+      "source_expression": "foyer_fiscal('f7db', period)"
+    },
+    {
+      "binding_id": "96d443b9b2580065",
+      "kind": "CALL",
+      "primitive": "foyer_fiscal",
+      "source_expression": "foyer_fiscal('f7dd_2016', period)"
+    },
+    {
+      "binding_id": "087ce3c6f8bc1db3",
+      "kind": "CALL",
+      "primitive": "foyer_fiscal",
+      "source_expression": "foyer_fiscal('f7df_2016', period)"
+    },
+    {
+      "binding_id": "227294ec64902004",
+      "kind": "CALL",
+      "primitive": "foyer_fiscal",
+      "source_expression": "foyer_fiscal('f7dg', period)"
+    },
+    {
+      "binding_id": "f08c0e2f27256a9f",
+      "kind": "CALL",
+      "primitive": "foyer_fiscal",
+      "source_expression": "foyer_fiscal('f7dl', period)"
+    },
+    {
+      "binding_id": "c3568a0d7c71ce35",
+      "kind": "CALL",
+      "primitive": "foyer_fiscal",
+      "source_expression": "foyer_fiscal('f7dq', period)"
+    },
+    {
+      "binding_id": "639135dbea89d83a",
+      "kind": "CALL",
+      "primitive": "foyer_fiscal",
+      "source_expression": "foyer_fiscal('nb_pac2', period)"
+    },
+    {
+      "binding_id": "9e7728a4fea5ff09",
+      "kind": "CALL",
+      "primitive": "min_",
+      "source_expression": "min_(plaf - base_ci, f7df + f7dd)"
+    },
+    {
+      "binding_id": "b93213118568e946",
+      "kind": "CALL",
+      "primitive": "min_",
+      "source_expression": "min_(plaf, f7db)"
+    },
+    {
+      "binding_id": "6af92d8a3d17d209",
+      "kind": "CALL",
+      "primitive": "where",
+      "source_expression": "where(invalide, P.plafond_invalides, where(annee1, min_(P.plafond_maximum_1ere_annee, P.plafond_1ere_annee + P.increment_plafond * (nb_pac_majoration_plafond + f7dl)), min_(P.plafond_maximum, P.plafond + P.increment_plafond * (nb_pac_majoration_plafond + f7dl))))"
+    }
+  ],
+  "candidate_id": "fd4702ed1d79ff1f",
+  "certificate_digest": "d0d19c19684314fc8965af1b6c214a44edd7ccef78dcc167c61a52d11d501767",
+  "certificate_id": "CERT-V011-A1-FD4702ED1D79FF1F",
+  "claim_scope": "Certification proves equivalence between the locked source AST and the frozen BSIR under the explicit declarative bindings listed here. External framework/database values and helper semantics without a validated semantic contract remain outside the certificate.",
+  "evidence": {
+    "concrete_replays": 12,
+    "correct_solver_status": "unsat",
+    "ir_sha256": "9c5b35a047471690bcf5f50392f4427b7b5d9883c2771d8c38f969ffbe87a49f",
+    "mutant_solver_status": "sat",
+    "mutant_witness": {
+      "b_fd4702_0": "0",
+      "b_fd4702_1": "0",
+      "b_fd4702_10": "0",
+      "b_fd4702_11": "0",
+      "b_fd4702_2": "0",
+      "b_fd4702_3": "0",
+      "b_fd4702_4": "0",
+      "b_fd4702_5": "0",
+      "b_fd4702_6": "0",
+      "b_fd4702_7": "0",
+      "b_fd4702_8": "0",
+      "b_fd4702_9": "-1"
+    },
+    "mutation": "mul-to-add",
+    "proof_digest": "a1ad7c71e0ce5d5a74e5d52a42a5192e8246993b63448a513750835648e4d246",
+    "proof_obligations": {
+      "bsir_compile": true,
+      "concrete_replay": true,
+      "declarative_bindings": true,
+      "frozen_bsir": true,
+      "independent_source_ast_compile": true,
+      "locked_source_commit": true,
+      "mutant_detected_sat": true,
+      "mutant_witness_replayed": true,
+      "symbolic_equivalence_unsat": true,
+      "validated_semantic_abstractions": true
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 74,
+    "text": "- `CERTIFIED_A1`: certified with declarative source-to-BVC bindings only."
+  },
+  "schema_version": "BIZPROOF-V0.11-A1-CERTIFICATE-1",
+  "semantic_contracts": {
+    "min_": "SC-NP-MIN-001",
+    "where": "SC-NP-WHERE-001"
+  },
+  "source": {
+    "class": "ri_saldom",
+    "file": "openfisca_france/model/prelevements_obligatoires/impot_revenu/reductions_impot_plafonnees.py",
+    "function": "formula_2011_01_01",
+    "function_sha256": "2fe1aebc6cdc2c5453da7ce4977c2763d06a4815f87167873118d706e706b5f8",
+    "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+    "source_file_sha256": "b5b96e5fa4da09962ddb9db0b1040c154012d88e41b7f9d2c49f7facd2758afa",
+    "source_id": "openfisca_france"
+  },
+  "status": "CERTIFIED_A1",
+  "terminal_outcome": "CERTIFIED_A1",
+  "terminal_outcome_assigned": true
+}

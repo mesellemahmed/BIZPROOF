@@ -1,0 +1,160 @@
+{
+  "projects": [
+    {
+      "deficit_fill_count": 0,
+      "eligible_available_after_global_dedup": 2571,
+      "project": "ckan/ckan",
+      "selected": 10,
+      "target_per_stratum_results": {
+        "S1_LOCAL_SCALAR_CONTROL": 2,
+        "S2_STRUCTURED_CONTAINER": 2,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 2,
+        "S4_STATE_EFFECT": 2,
+        "S5_BINDING_EXTERNAL_DOMAIN": 2
+      }
+    },
+    {
+      "deficit_fill_count": 0,
+      "eligible_available_after_global_dedup": 51857,
+      "project": "home-assistant/core",
+      "selected": 10,
+      "target_per_stratum_results": {
+        "S1_LOCAL_SCALAR_CONTROL": 2,
+        "S2_STRUCTURED_CONTAINER": 2,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 2,
+        "S4_STATE_EFFECT": 2,
+        "S5_BINDING_EXTERNAL_DOMAIN": 2
+      }
+    },
+    {
+      "deficit_fill_count": 0,
+      "eligible_available_after_global_dedup": 6454,
+      "project": "saleor/saleor",
+      "selected": 10,
+      "target_per_stratum_results": {
+        "S1_LOCAL_SCALAR_CONTROL": 2,
+        "S2_STRUCTURED_CONTAINER": 2,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 2,
+        "S4_STATE_EFFECT": 2,
+        "S5_BINDING_EXTERNAL_DOMAIN": 2
+      }
+    },
+    {
+      "deficit_fill_count": 0,
+      "eligible_available_after_global_dedup": 6047,
+      "project": "element-hq/synapse",
+      "selected": 10,
+      "target_per_stratum_results": {
+        "S1_LOCAL_SCALAR_CONTROL": 2,
+        "S2_STRUCTURED_CONTAINER": 2,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 2,
+        "S4_STATE_EFFECT": 2,
+        "S5_BINDING_EXTERNAL_DOMAIN": 2
+      }
+    },
+    {
+      "deficit_fill_count": 0,
+      "eligible_available_after_global_dedup": 3156,
+      "project": "netbox-community/netbox",
+      "selected": 10,
+      "target_per_stratum_results": {
+        "S1_LOCAL_SCALAR_CONTROL": 2,
+        "S2_STRUCTURED_CONTAINER": 2,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 2,
+        "S4_STATE_EFFECT": 2,
+        "S5_BINDING_EXTERNAL_DOMAIN": 2
+      }
+    },
+    {
+      "deficit_fill_count": 0,
+      "eligible_available_after_global_dedup": 713,
+      "project": "healthchecks/healthchecks",
+      "selected": 10,
+      "target_per_stratum_results": {
+        "S1_LOCAL_SCALAR_CONTROL": 2,
+        "S2_STRUCTURED_CONTAINER": 2,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 2,
+        "S4_STATE_EFFECT": 2,
+        "S5_BINDING_EXTERNAL_DOMAIN": 2
+      }
+    },
+    {
+      "deficit_fill_count": 0,
+      "eligible_available_after_global_dedup": 1339,
+      "project": "paperless-ngx/paperless-ngx",
+      "selected": 10,
+      "target_per_stratum_results": {
+        "S1_LOCAL_SCALAR_CONTROL": 2,
+        "S2_STRUCTURED_CONTAINER": 2,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 2,
+        "S4_STATE_EFFECT": 2,
+        "S5_BINDING_EXTERNAL_DOMAIN": 2
+      }
+    },
+    {
+      "deficit_fill_count": 0,
+      "eligible_available_after_global_dedup": 8686,
+      "project": "frappe/erpnext",
+      "selected": 10,
+      "target_per_stratum_results": {
+        "S1_LOCAL_SCALAR_CONTROL": 2,
+        "S2_STRUCTURED_CONTAINER": 2,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 2,
+        "S4_STATE_EFFECT": 2,
+        "S5_BINDING_EXTERNAL_DOMAIN": 2
+      }
+    },
+    {
+      "deficit_fill_count": 0,
+      "eligible_available_after_global_dedup": 21120,
+      "project": "apache/airflow",
+      "selected": 10,
+      "target_per_stratum_results": {
+        "S1_LOCAL_SCALAR_CONTROL": 2,
+        "S2_STRUCTURED_CONTAINER": 2,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 2,
+        "S4_STATE_EFFECT": 2,
+        "S5_BINDING_EXTERNAL_DOMAIN": 2
+      }
+    },
+    {
+      "deficit_fill_count": 0,
+      "eligible_available_after_global_dedup": 3843,
+      "project": "nautobot/nautobot",
+      "selected": 10,
+      "target_per_stratum_results": {
+        "S1_LOCAL_SCALAR_CONTROL": 2,
+        "S2_STRUCTURED_CONTAINER": 2,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 2,
+        "S4_STATE_EFFECT": 2,
+        "S5_BINDING_EXTERNAL_DOMAIN": 2
+      }
+    },
+    {
+      "deficit_fill_count": 0,
+      "eligible_available_after_global_dedup": 7003,
+      "project": "apache/superset",
+      "selected": 10,
+      "target_per_stratum_results": {
+        "S1_LOCAL_SCALAR_CONTROL": 2,
+        "S2_STRUCTURED_CONTAINER": 2,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 2,
+        "S4_STATE_EFFECT": 2,
+        "S5_BINDING_EXTERNAL_DOMAIN": 2
+      }
+    },
+    {
+      "deficit_fill_count": 0,
+      "eligible_available_after_global_dedup": 2163,
+      "project": "openstack/keystone",
+      "selected": 10,
+      "target_per_stratum_results": {
+        "S1_LOCAL_SCALAR_CONTROL": 2,
+        "S2_STRUCTURED_CONTAINER": 2,
+        "S3_NESTED_VECTOR_HIGHER_ORDER": 2,
+        "S4_STATE_EFFECT": 2,
+        "S5_BINDING_EXTERNAL_DOMAIN": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "certification_started": false,
+  "new_authoritative_count": 4,
+  "new_authoritative_ids": [
+    "1a2de6edb11465fe",
+    "3fd2d8b8a76b4834",
+    "801278c4d91c2185",
+    "e8850260c2763222"
+  ],
+  "prior_authoritative": 4,
+  "recovery_claims": 0,
+  "refinement_population": 5,
+  "remaining_ids": [
+    "674ea6fd35fa6c39"
+  ],
+  "schema_version": "BIZPROOF-V0.12-B4-A1R1-SOURCE-SUMMARY-1",
+  "status_counts": {
+    "SAME_RECORD_DIRECT_HASH_NAME_RESOLVED": 4,
+    "UNRESOLVED": 1
+  },
+  "total_authoritative_after_refinement": 8
+}

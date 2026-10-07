@@ -1,0 +1,48 @@
+{
+  "attempted": 2,
+  "batch": "RICH_FRAMEWORK_BATCH",
+  "candidate_ids": [
+    "8a754dadf1672d0a",
+    "882c5eae0d8fd4ec"
+  ],
+  "certification_started": false,
+  "correct_source_policy": "Execute the exact authoritative frozen source without AST rewriting under explicit controlled framework observations.",
+  "mutants": {
+    "882c5eae0d8fd4ec": {
+      "name": "OMIT_DONE_ON_ZERO_BALANCE",
+      "replacement": "pass",
+      "semantic_fault": "zero-balance external refund is created and logged but not completed",
+      "target": "r.done()"
+    },
+    "8a754dadf1672d0a": {
+      "name": "UNION_INSTEAD_OF_INTERSECTION",
+      "replacement": "set.union",
+      "semantic_fault": "plugin restrictions are broadened instead of intersected",
+      "target": "set.intersection"
+    }
+  },
+  "mutants_frozen_before_execution": true,
+  "parent_plan": "benchmarks/v0.12/framework_external_effects/certification_plan_b2/protocol.json",
+  "projection_policy": {
+    "882c5eae0d8fd4ec": "semantic refund record plus ordered CREATE, LOG and conditional DONE effects",
+    "8a754dadf1672d0a": "extensional set semantics over the base ticket-position set and explicit plugin signal response values"
+  },
+  "recovery_claims_before_execution": 0,
+  "required_gates": [
+    "authoritative_source_sha",
+    "structural_source_route_gate",
+    "exact_source_execution",
+    "semantic_projection_replay",
+    "frozen_exact_source_mutant",
+    "z3_mutant_refutation",
+    "concrete_mutant_replay",
+    "global_regression"
+  ],
+  "schema_version": "BIZPROOF-V0.12-B2-CERT2-PROTOCOL-1",
+  "selection_frozen_before_execution": true,
+  "semantic_routes": {
+    "882c5eae0d8fd4ec": "EXTERNAL_OBJECT_CREATION_EFFECT_TRACE",
+    "8a754dadf1672d0a": "SIGNAL_GATED_SET_SEMANTICS"
+  },
+  "source_checkpoint": "8fa6e085af549c48df4542f2d2173a4d104ef8b2"
+}

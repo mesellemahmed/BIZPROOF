@@ -1,0 +1,43 @@
+{
+  "all_required_gates_pass": true,
+  "authoritative_source": {
+    "correct_source_ast_rewritten": false,
+    "matches_frozen_plan": true,
+    "sha256": "27d6ae56e7604c3f313a7f4a5d86d4928004dd6ed0768fc87bf34dc449660036"
+  },
+  "candidate_id": "1a2de6edb11465fe",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_mutant_replay": true,
+  "formal_mutant_refutation": {
+    "model": "[supplement = 1, persons = 0, max_persons = -1]",
+    "property": "there exists a matched-zone household above the maximum size with positive supplementary ceiling where the authoritative helper adds the increment and the mutant does not",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "function_name": "formula",
+  "historical_category": "NESTED_OR_HIGHER_ORDER_LOGIC",
+  "mutant": {
+    "fault": "households larger than the configured maximum receive the base ceiling only, without the per-additional-person increment",
+    "name": "OMIT_SUPPLEMENTARY_PERSON_INCREMENT",
+    "target": "true branch of where(nb_personnes > nb_personnes_max, ...)"
+  },
+  "mutant_protocol_committed_before_execution": true,
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-B4-CERT4-A2-1",
+  "scope": {
+    "certified": "the exact frozen nested formula under the prospectively frozen finite parameter/family observation domain",
+    "not_certified": [
+      "the complete OpenFisca runtime",
+      "arbitrary NumPy/vector broadcasting",
+      "parameter values outside the frozen finite observation domain",
+      "entity aggregation behavior outside the explicit dependency contract"
+    ]
+  },
+  "semantic_capability": "NESTED_PARAMETERIZED_SELECT_RETURN",
+  "source_projection_equivalence": {
+    "controlled_exact_source_replay": true,
+    "dependency_contract_verified": true,
+    "finite_basis": 28
+  },
+  "v012_outcome": "CERTIFIED_A2"
+}

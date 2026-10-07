@@ -1,0 +1,191 @@
+{
+  "1311d905af0ebcb5": {
+    "arguments": [
+      "self",
+      "now_dt"
+    ],
+    "assignments": [
+      "Assign([Name('rc', Store())], Call(Attribute(Name('django_redis', Load()), 'get_redis_connection', Load()), [Constant('redis')], []))",
+      "Assign([Name('p', Store())], Call(Attribute(Name('rc', Load()), 'pipeline', Load()), [], []))"
+    ],
+    "branch_count": 1,
+    "calls": [
+      "django_redis.get_redis_connection",
+      "rc.pipeline",
+      "p.hdel",
+      "p.hdel",
+      "p.hdel",
+      "p.hdel",
+      "p.execute",
+      "self.availability",
+      "str",
+      "str",
+      "str",
+      "str"
+    ],
+    "candidate_id": "1311d905af0ebcb5",
+    "comprehensions": [],
+    "constants": [
+      null,
+      "redis",
+      "quotas:",
+      ":availabilitycache",
+      "quotas:",
+      ":availabilitycache:nocw",
+      "quotas:",
+      ":availabilitycache:igcl",
+      "quotas:",
+      ":availabilitycache:nocw:igcl"
+    ],
+    "explicit_mutations": [],
+    "function_name": "rebuild_cache",
+    "loop_count": 0,
+    "returns": [],
+    "self_attributes": [
+      "availability",
+      "event_id",
+      "pk"
+    ],
+    "source": "def rebuild_cache(self, now_dt=None):\n        if settings.HAS_REDIS:\n            rc = django_redis.get_redis_connection(\"redis\")\n            p = rc.pipeline()\n            p.hdel(f'quotas:{self.event_id}:availabilitycache', str(self.pk))\n            p.hdel(f'quotas:{self.event_id}:availabilitycache:nocw', str(self.pk))\n            p.hdel(f'quotas:{self.event_id}:availabilitycache:igcl', str(self.pk))\n            p.hdel(f'quotas:{self.event_id}:availabilitycache:nocw:igcl', str(self.pk))\n            p.execute()\n            self.availability(now_dt=now_dt)"
+  },
+  "4d7d61b18dde0ad5": {
+    "arguments": [
+      "self",
+      "ctx",
+      "flash_messages"
+    ],
+    "assignments": [
+      "Assign([Name('basket_html', Store())], Call(Name('render_to_string', Load()), [Constant('oscar/basket/partials/basket_content.html')], [keyword('context', Name('ctx', Load())), keyword('request', Attribute(Name('self', Load()), 'request', Load()))]))"
+    ],
+    "branch_count": 0,
+    "calls": [
+      "render_to_string",
+      "JsonResponse",
+      "flash_messages.as_dict"
+    ],
+    "candidate_id": "4d7d61b18dde0ad5",
+    "comprehensions": [],
+    "constants": [
+      "oscar/basket/partials/basket_content.html",
+      "content_html",
+      "messages"
+    ],
+    "explicit_mutations": [],
+    "function_name": "json_response",
+    "loop_count": 0,
+    "returns": [
+      "Call(Name('JsonResponse', Load()), [Dict([Constant('content_html'), Constant('messages')], [Name('basket_html', Load()), Call(Attribute(Name('flash_messages', Load()), 'as_dict', Load()), [], [])])], [])"
+    ],
+    "self_attributes": [
+      "request"
+    ],
+    "source": "def json_response(self, ctx, flash_messages):\n        basket_html = render_to_string(\n            \"oscar/basket/partials/basket_content.html\",\n            context=ctx,\n            request=self.request,\n        )\n\n        return JsonResponse(\n            {\"content_html\": basket_html, \"messages\": flash_messages.as_dict()}\n        )"
+  },
+  "7bc9603bfbda7dc9": {
+    "arguments": [
+      "famille",
+      "period",
+      "parameters"
+    ],
+    "assignments": [
+      "Assign([Name('inactif', Store())], Call(Name('famille', Load()), [Constant('inactif'), Name('period', Load())], []))",
+      "Assign([Name('partiel1', Store())], Call(Name('famille', Load()), [Constant('partiel1'), Name('period', Load())], []))",
+      "Assign([Name('nombre_enfants', Store())], Call(Name('famille', Load()), [Constant('af_nbenf'), Name('period', Load())], []))",
+      "Assign([Name('base_ressources', Store())], Call(Name('famille', Load()), [Constant('prestations_familiales_base_ressources'), Attribute(Name('period', Load()), 'first_month', Load())], []))",
+      "Assign([Name('emploi_direct', Store())], Call(Name('famille', Load()), [Constant('empl_dir'), Name('period', Load())], []))",
+      "Assign([Name('assistant_maternel', Store())], Call(Name('famille', Load()), [Constant('ass_mat'), Name('period', Load())], []))",
+      "Assign([Name('garde_a_domicile', Store())], Call(Name('famille', Load()), [Constant('gar_dom'), Name('period', Load())], []))",
+      "Assign([Name('paje_prepare', Store())], Call(Name('famille', Load()), [Constant('paje_prepare'), Name('period', Load())], []))",
+      "Assign([Name('paje', Store())], Attribute(Attribute(Attribute(Attribute(Call(Name('parameters', Load()), [Name('period', Load())], []), 'prestations_sociales', Load()), 'prestations_familiales', Load()), 'petite_enfance', Load()), 'paje', Load()))",
+      "Assign([Name('bmaf', Store())], Attribute(Attribute(Attribute(Attribute(Call(Name('parameters', Load()), [Name('period', Load())], []), 'prestations_sociales', Load()), 'prestations_familiales', Load()), 'bmaf', Load()), 'bmaf', Load()))",
+      "Assign([Name('aah_i', Store())], Call(Attribute(Name('famille', Load()), 'members', Load()), [Constant('aah'), Name('period', Load())], []))",
+      "Assign([Name('aah', Store())], Call(Attribute(Name('famille', Load()), 'sum', Load()), [Name('aah_i', Load())], []))",
+      "Assign([Name('etudiant_i', Store())], Call(Attribute(Name('famille', Load()), 'members', Load()), [Constant('etudiant'), Name('period', Load())], []))",
+      "Assign([Name('parent_etudiant', Store())], Call(Attribute(Name('famille', Load()), 'any', Load()), [Name('etudiant_i', Load())], [keyword('role', Attribute(Name('Famille', Load()), 'PARENT', Load()))]))",
+      "Assign([Name('cond_age_enf', Store())], Compare(Call(Name('nb_enf', Load()), [Name('famille', Load()), Name('period', Load()), Constant(0), BinOp(Attribute(Attribute(Attribute(Name('paje', Load()), 'paje_cmg', Load()), 'limite_age', Load()), 'reduite', Load()), Sub(), Constant(1))], []), [Gt()], [Constant(0)]))",
+      "Assign([Name('cond_nonact', Store())], BinOp(Compare(Name('aah', Load()), [Gt()], [Constant(0)]), BitOr(), Name('parent_etudiant', Load())))",
+      "Assign([Name('cond_eligibilite', Store())], BinOp(Name('cond_age_enf', Load()), BitAnd(), BinOp(Call(Name('not_', Load()), [Name('inactif', Load())], []), BitOr(), Name('cond_nonact', Load()))))",
+      "Assign([Name('paje_prepare_inactif', Store())], BinOp(Compare(Name('paje_prepare', Load()), [Gt()], [Constant(0)]), Mult(), Name('inactif', Load())))",
+      "Assign([Name('eligible', Store())], BinOp(Name('cond_eligibilite', Load()), Mult(), Call(Name('not_', Load()), [Name('paje_prepare_inactif', Load())], [])))",
+      "Assign([Name('seuil_revenus_1', Store())], BinOp(BinOp(BinOp(Compare(Name('nombre_enfants', Load()), [Eq()], [Constant(1)]), Mult(), Attribute(Attribute(Attribute(Name('paje', Load()), 'plaf_cmg', Load()), 'premier_plafond_ne_adopte_apres_04_2014', Load()), 'enfant', Load())), Add(), BinOp(Compare(Name('nombre_enfants', Load()), [GtE()], [Constant(2)]), Mult(), Attribute(Attribute(Attribute(Name('paje', Load()), 'plaf_cmg', Load()), 'premier_plafond_ne_adopte_apres_04_2014', Load()), 'deux_enfants', Load()))), Add(), BinOp(Call(Name('max_', Load()), [BinOp(Name('nombre_enfants', Load()), Sub(), Constant(2)), Constant(0)], []), Mult(), Attribute(Attribute(Attribute(Name('paje', Load()), 'plaf_cmg', Load()), 'premier_plafond_ne_adopte_apres_04_2014', Load()), 'majoration_enfant_supp', Load()))))",
+      "Assign([Name('seuil_revenus_2', Store())], BinOp(BinOp(BinOp(Compare(Name('nombre_enfants', Load()), [Eq()], [Constant(1)]), Mult(), Attribute(Attribute(Attribute(Name('paje', Load()), 'plaf_cmg', Load()), 'deuxieme_plafond_ne_adopte_apres_04_2014', Load()), 'enfant', Load())), Add(), BinOp(Compare(Name('nombre_enfants', Load()), [GtE()], [Constant(2)]), Mult(), Attribute(Attribute(Attribute(Name('paje', Load()), 'plaf_cmg', Load()), 'deuxieme_plafond_ne_adopte_apres_04_2014', Load()), 'deux_enfants', Load()))), Add(), BinOp(Call(Name('max_', Load()), [BinOp(Name('nombre_enfants', Load()), Sub(), Constant(2)), Constant(0)], []), Mult(), Attribute(Attribute(Attribute(Name('paje', Load()), 'plaf_cmg', Load()), 'deuxieme_plafond_ne_adopte_apres_04_2014', Load()), 'majoration_enfant_supp', Load()))))",
+      "Assign([Name('paje_prepare_temps_partiel', Store())], BinOp(Compare(Name('paje_prepare', Load()), [Gt()], [Constant(0)]), Mult(), Name('partiel1', Load())))",
+      "Assign([Name('seuil_revenus_1', Store())], BinOp(Name('seuil_revenus_1', Load()), Mult(), BinOp(Constant(1), Sub(), BinOp(Constant(0.5), Mult(), Name('paje_prepare_temps_partiel', Load())))))",
+      "Assign([Name('seuil_revenus_2', Store())], BinOp(Name('seuil_revenus_2', Load()), Mult(), BinOp(Constant(1), Sub(), BinOp(Constant(0.5), Mult(), Name('paje_prepare_temps_partiel', Load())))))",
+      "Assign([Name('montant_cmg', Store())], BinOp(BinOp(Name('bmaf', Load()), Mult(), BinOp(BinOp(Constant(1.0), Mult(), Compare(Call(Name('nb_enf', Load()), [Name('famille', Load()), Name('period', Load()), Constant(0), BinOp(Attribute(Attribute(Attribute(Name('paje', Load()), 'paje_cmg', Load()), 'limite_age', Load()), 'pleine', Load()), Sub(), Constant(1))], []), [Gt()], [Constant(0)])), Add(), BinOp(BinOp(Constant(1), Sub(), Attribute(Attribute(Name('paje', Load()), 'paje_cmg', Load()), 'taux_reduit', Load())), Mult(), Compare(Call(Name('nb_enf', Load()), [Name('famille', Load()), Name('period', Load()), Attribute(Attribute(Attribute(Name('paje', Load()), 'paje_cmg', Load()), 'limite_age', Load()), 'pleine', Load()), BinOp(Attribute(Attribute(Attribute(Name('paje', Load()), 'paje_cmg', Load()), 'limite_age', Load()), 'reduite', Load()), Sub(), Constant(1))], []), [Gt()], [Constant(0)])))), Mult(), BinOp(BinOp(BinOp(Name('emploi_direct', Load()), Mult(), BinOp(BinOp(BinOp(Compare(Name('base_ressources', Load()), [Lt()], [Name('seuil_revenus_1', Load())]), Mult(), Attribute(Attribute(Attribute(Name('paje', Load()), 'paje_cmg', Load()), 'complement_libre_choix_mode_garde', Load()), 'revenus_inferieurs_45_plaf', Load())), Add(), BinOp(BinOp(Compare(Name('base_ressources', Load()), [GtE()], [Name('seuil_revenus_1', Load())]), BitAnd(), Compare(Name('base_ressources', Load()), [Lt()], [Name('seuil_revenus_2', Load())])), Mult(), Attribute(Attribute(Attribute(Name('paje', Load()), 'paje_cmg', Load()), 'complement_libre_choix_mode_garde', Load()), 'revenus_superieurs_45_plaf', Load()))), Add(), BinOp(Compare(Name('base_ressources', Load()), [GtE()], [Name('seuil_revenus_2', Load())]), Mult(), Attribute(Attribute(Attribute(Name('paje', Load()), 'paje_cmg', Load()), 'complement_libre_choix_mode_garde', Load()), 'revenus_superieurs_plaf', Load())))), Add(), BinOp(Name('assistant_maternel', Load()), Mult(), BinOp(BinOp(BinOp(Compare(Name('base_ressources', Load()), [Lt()], [Name('seuil_revenus_1', Load())]), Mult(), Attribute(Attribute(Attribute(Name('paje', Load()), 'paje_cmg', Load()), 'assistante_mat_asso_entreprise_microcreche', Load()), 'sous_premier_plafond', Load())), Add(), BinOp(BinOp(Compare(Name('base_ressources', Load()), [GtE()], [Name('seuil_revenus_1', Load())]), BitAnd(), Compare(Name('base_ressources', Load()), [Lt()], [Name('seuil_revenus_2', Load())])), Mult(), Attribute(Attribute(Attribute(Name('paje', Load()), 'paje_cmg', Load()), 'assistante_mat_asso_entreprise_microcreche', Load()), 'sous_second_plafond', Load()))), Add(), BinOp(Compare(Name('base_ressources', Load()), [GtE()], [Name('seuil_revenus_2', Load())]), Mult(), Attribute(Attribute(Attribute(Name('paje', Load()), 'paje_cmg', Load()), 'assistante_mat_asso_entreprise_microcreche', Load()), 'apres_second_plafond', Load()))))), Add(), BinOp(Name('garde_a_domicile', Load()), Mult(), BinOp(BinOp(BinOp(Compare(Name('base_ressources', Load()), [Lt()], [Name('seuil_revenus_1', Load())]), Mult(), Attribute(Attribute(Attribute(Name('paje', Load()), 'paje_cmg', Load()), 'garde_domicile', Load()), 'sous_premier_plafond', Load())), Add(), BinOp(BinOp(Compare(Name('base_ressources', Load()), [GtE()], [Name('seuil_revenus_1', Load())]), BitAnd(), Compare(Name('base_ressources', Load()), [Lt()], [Name('seuil_revenus_2', Load())])), Mult(), Attribute(Attribute(Attribute(Name('paje', Load()), 'paje_cmg', Load()), 'garde_domicile', Load()), 'sous_second_plafond', Load()))), Add(), BinOp(Compare(Name('base_ressources', Load()), [GtE()], [Name('seuil_revenus_2', Load())]), Mult(), Attribute(Attribute(Attribute(Name('paje', Load()), 'paje_cmg', Load()), 'garde_domicile', Load()), 'apres_second_plafond', Load())))))))",
+      "Assign([Name('paje_cmg', Store())], BinOp(Name('eligible', Load()), Mult(), Name('montant_cmg', Load())))"
+    ],
+    "branch_count": 0,
+    "calls": [
+      "famille",
+      "famille",
+      "famille",
+      "famille",
+      "famille",
+      "famille",
+      "famille",
+      "famille",
+      "famille.members",
+      "famille.sum",
+      "famille.members",
+      "famille.any",
+      "nb_enf",
+      "not_",
+      "not_",
+      "max_",
+      "max_",
+      "parameters",
+      "parameters",
+      "nb_enf",
+      "nb_enf"
+    ],
+    "candidate_id": "7bc9603bfbda7dc9",
+    "comprehensions": [],
+    "constants": [
+      "\n        Prestation d accueil du jeune enfant - Compl\u00e9ment de libre choix du mode de garde\n\n        Les conditions\n\n        Vous devez :\n\n            avoir un enfant de moins de 6 ans n\u00e9, adopt\u00e9 ou recueilli en vue d'adoption \u00e0 partir du 1er janvier 2004\n            employer une assistante maternelle agr\u00e9\u00e9e ou une garde \u00e0 domicile.\n\n        Vous n'avez pas besoin de justifier d'une activit\u00e9 min_ si vous \u00eates :\n\n            b\u00e9n\u00e9ficiaire de l'allocation aux adultes handicap\u00e9s (Aah)\n            au ch\u00f4mage et b\u00e9n\u00e9ficiaire de l'allocation d'insertion ou de l'allocation de solidarit\u00e9 sp\u00e9cifique\n            b\u00e9n\u00e9ficiaire du Revenu de solidarit\u00e9 active (Rsa), sous certaines conditions de ressources \u00e9tudi\u00e9es par\n            votre Caf, et inscrit dans une d\u00e9marche d'insertion\u00e9tudiant (si vous vivez en couple,\n            vous devez \u00eatre tous les deux \u00e9tudiants).\n\n        Autres conditions \u00e0 remplir : Assistante maternelle agr\u00e9\u00e9e     Garde \u00e0 domicile\n        Son salaire brut ne doit pas d\u00e9passer par jour de garde et par enfant 5 fois le montant du Smic horaire brut,\n        soit au max 45,00 \u20ac.\n        Vous ne devez pas b\u00e9n\u00e9ficier de l'exon\u00e9ration des cotisations sociales dues pour la personne employ\u00e9e.\n        ",
+      "inactif",
+      "partiel1",
+      "af_nbenf",
+      "prestations_familiales_base_ressources",
+      "empl_dir",
+      "ass_mat",
+      "gar_dom",
+      "paje_prepare",
+      "aah",
+      "etudiant",
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0.5,
+      0.5,
+      1,
+      2,
+      2,
+      1,
+      2,
+      2,
+      1.0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1
+    ],
+    "explicit_mutations": [],
+    "function_name": "formula_2017_04_01",
+    "loop_count": 0,
+    "returns": [
+      "Name('paje_cmg', Load())"
+    ],
+    "self_attributes": [],
+    "source": "def formula_2017_04_01(famille, period, parameters):\n        '''\n        Prestation d accueil du jeune enfant - Compl\u00e9ment de libre choix du mode de garde\n\n        Les conditions\n\n        Vous devez :\n\n            avoir un enfant de moins de 6 ans n\u00e9, adopt\u00e9 ou recueilli en vue d'adoption \u00e0 partir du 1er janvier 2004\n            employer une assistante maternelle agr\u00e9\u00e9e ou une garde \u00e0 domicile.\n\n        Vous n'avez pas besoin de justifier d'une activit\u00e9 min_ si vous \u00eates :\n\n            b\u00e9n\u00e9ficiaire de l'allocation aux adultes handicap\u00e9s (Aah)\n            au ch\u00f4mage et b\u00e9n\u00e9ficiaire de l'allocation d'insertion ou de l'allocation de solidarit\u00e9 sp\u00e9cifique\n            b\u00e9n\u00e9ficiaire du Revenu de solidarit\u00e9 active (Rsa), sous certaines conditions de ressources \u00e9tudi\u00e9es par\n            votre Caf, et inscrit dans une d\u00e9marche d'insertion\u00e9tudiant (si vous vivez en couple,\n            vous devez \u00eatre tous les deux \u00e9tudiants).\n\n        Autres conditions \u00e0 remplir : Assistante maternelle agr\u00e9\u00e9e     Garde \u00e0 domicile\n        Son salaire brut ne doit pas d\u00e9passer par jour de garde et par enfant 5 fois le montant du Smic horaire brut,\n        soit au max 45,00 \u20ac.\n        Vous ne devez pas b\u00e9n\u00e9ficier de l'exon\u00e9ration des cotisations sociales dues pour la personne employ\u00e9e.\n        '''\n        # R\u00e9cup\u00e9ration des donn\u00e9es\n\n        inactif = famille('inactif', period)\n        partiel1 = famille('partiel1', period)\n        nombre_enfants = famille('af_nbenf', period)\n        base_ressources = famille('prestations_familiales_base_ressources', period.first_month)\n        emploi_direct = famille('empl_dir', period)\n        assistant_maternel = famille('ass_mat', period)\n        garde_a_domicile = famille('gar_dom', period)\n        paje_prepare = famille('paje_prepare', period)\n        paje = parameters(period).prestations_sociales.prestations_familiales.petite_enfance.paje\n        bmaf = parameters(period).prestations_sociales.prestations_familiales.bmaf.bmaf\n\n        aah_i = famille.members('aah', period)\n        aah = famille.sum(aah_i)\n\n        etudiant_i = famille.members('etudiant', period)\n        parent_etudiant = famille.any(etudiant_i, role = Famille.PARENT)\n\n        # condition de revenu minimal\n\n        cond_age_enf = (nb_enf(famille, period, 0, paje.paje_cmg.limite_age.reduite - 1) > 0)\n\n        # TODO:    cond_rpns    =\n        # TODO: RSA insertion, alloc insertion, ass\n        cond_nonact = (aah > 0) | parent_etudiant  # | (ass>0)\n\n        cond_eligibilite = cond_age_enf & (not_(inactif) | cond_nonact)\n\n        # Si vous b\u00e9n\u00e9ficiez de la PreParE taux plein\n        # (= vous ne travaillez plus ou interrompez votre activit\u00e9 professionnelle),\n        # vous ne pouvez pas b\u00e9n\u00e9ficier du Cmg.\n        paje_prepare_inactif = (paje_prepare > 0) * inactif\n        eligible = cond_eligibilite * not_(paje_prepare_inactif)\n\n        # Les plafonds de ressource\n\n        seuil_revenus_1 = (\n            (nombre_enfants == 1) * paje.plaf_cmg.premier_plafond_ne_adopte_apres_04_2014.enfant\n            + (nombre_enfants >= 2) * paje.plaf_cmg.premier_plafond_ne_adopte_apres_04_2014.deux_enfants\n            + max_(nombre_enfants - 2, 0) * paje.plaf_cmg.premier_plafond_ne_adopte_apres_04_2014.majoration_enfant_supp\n            )\n\n        seuil_revenus_2 = (\n            (nombre_enfants == 1) * paje.plaf_cmg.deuxieme_plafond_ne_adopte_apres_04_2014.enfant\n            + (nombre_enfants >= 2) * paje.plaf_cmg.deuxieme_plafond_ne_adopte_apres_04_2014.deux_enfants\n            + max_(nombre_enfants - 2, 0) * paje.plaf_cmg.deuxieme_plafond_ne_adopte_apres_04_2014.majoration_enfant_supp\n            )\n\n        # Si vous b\u00e9n\u00e9ficiez du PreParE taux partiel (= vous travaillez entre 50 et 80% de la dur\u00e9e du travail fix\u00e9e\n        # dans l'entreprise), vous cumulez int\u00e9gralement la PreParE et le Cmg.\n        # Si vous b\u00e9n\u00e9ficiez du PreParE taux partiel (= vous travaillez \u00e0 50% ou moins de la dur\u00e9e\n        # du travail fix\u00e9e dans l'entreprise), le montant des plafonds Cmg est divis\u00e9 par 2.\n\n        paje_prepare_temps_partiel = (paje_prepare > 0) * partiel1\n        seuil_revenus_1 = seuil_revenus_1 * (1 - .5 * paje_prepare_temps_partiel)\n        seuil_revenus_2 = seuil_revenus_2 * (1 - .5 * paje_prepare_temps_partiel)\n\n        # calcul du montant\n\n        montant_cmg = (\n            bmaf * (\n                1.0 * (nb_enf(famille, period, 0, paje.paje_cmg.limite_age.pleine - 1) > 0)\n                + (1 - paje.paje_cmg.taux_reduit) * (nb_enf(famille, period, paje.paje_cmg.limite_age.pleine, paje.paje_cmg.limite_age.reduite - 1) > 0)\n                ) * (\n                    emploi_direct * (\n                        (base_ressources < seuil_revenus_1) * paje.paje_cmg.complement_libre_choix_mode_garde.revenus_inferieurs_45_plaf\n                        + ((base_ressources >= seuil_revenus_1) & (base_ressources < seuil_revenus_2)) * paje.paje_cmg.complement_libre_choix_mode_garde.revenus_superieurs_45_plaf\n                        + (base_ressources >= seuil_revenus_2) * paje.paje_cmg.complement_libre_choix_mode_garde.revenus_superieurs_plaf\n                        )\n                    + assistant_maternel * (\n                        (base_ressources < seuil_revenus_1) * paje.paje_cmg.assistante_mat_asso_entreprise_microcreche.sous_premier_plafond\n                        + ((base_ressources >= seuil_revenus_1) & (base_ressources < seuil_revenus_2)) * paje.paje_cmg.assistante_mat_asso_entreprise_microcreche.sous_second_plafond\n                        + (base_ressources >= seuil_revenus_2) * paje.paje_cmg.assistante_mat_asso_entreprise_microcreche.apres_second_plafond\n                        )\n                    + garde_a_domicile * (\n                        (base_ressources < seuil_revenus_1) * paje.paje_cmg.garde_domicile.sous_premier_plafond\n                        + ((base_ressources >= seuil_revenus_1) & (base_ressources < seuil_revenus_2)) * paje.paje_cmg.garde_domicile.sous_second_plafond\n                        + (base_ressources >= seuil_revenus_2) * paje.paje_cmg.garde_domicile.apres_second_plafond)\n                    )\n            )\n\n        paje_cmg = eligible * montant_cmg\n        # TODO: connecter avec le cr\u00e9dit d'imp\u00f4t\n        # TODO v\u00e9rfiez les r\u00e8gles de cumul\n        return paje_cmg"
+  }
+}

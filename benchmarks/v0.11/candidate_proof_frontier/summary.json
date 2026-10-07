@@ -1,0 +1,33 @@
+{
+  "benchmark_version": "0.11.0",
+  "candidate_certifications_issued": 0,
+  "candidate_frontier_status_counts": {
+    "NO_CONTRACT_OCCURRENCES": 54,
+    "PRIMITIVE_CONTRACTS_CLOSED": 1,
+    "STRUCTURAL_PROTOCOL_SEMANTICS_REMAIN": 11,
+    "UNRESOLVED_PRIMITIVES_REMAIN": 24
+  },
+  "certification_claim": false,
+  "cohort_sha256": "3144f973a166ebee41a059c538b81ffac5a5d15737982c6d95e59175325ca108",
+  "cohort_size": 90,
+  "mutant_mismatches": 18,
+  "passed": true,
+  "phase": "FIRST_CANDIDATE_PROOF",
+  "proofs_completed": 1,
+  "proved_candidate_ids": [
+    "aab5348ee173d6e3"
+  ],
+  "proved_candidate_status": "PROVED_SOURCE_SLICE",
+  "source_execution_comparisons": 18,
+  "source_execution_mismatches": 0,
+  "symbolic_equivalences_proved": 1,
+  "terminal_level_mapping_status": "PROTOCOL_CONTEXT_FOUND_REVIEW_REQUIRED",
+  "terminal_outcomes_assigned": 0,
+  "validated_semantic_primitives": [
+    "D",
+    "min_",
+    "nb_enf",
+    "not_",
+    "where"
+  ]
+}

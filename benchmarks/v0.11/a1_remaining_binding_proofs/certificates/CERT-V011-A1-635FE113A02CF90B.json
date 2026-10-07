@@ -1,0 +1,58 @@
+{
+  "assistance_level": "A1",
+  "authoring_mode": "DECLARATIVE_BINDINGS_FROZEN_BSIR",
+  "bindings": [
+    {
+      "binding_id": "e5b7fbb95db16086",
+      "kind": "GLOBAL_NAME",
+      "primitive": "ZERO_DISCOUNT",
+      "source_expression": "ZERO_DISCOUNT"
+    }
+  ],
+  "candidate_id": "635fe113a02cf90b",
+  "certificate_digest": "e900fb89ce047ff69a20b8f53d1bb4dea6a53fb557366734c1b1169d53433f64",
+  "certificate_id": "CERT-V011-A1-635FE113A02CF90B",
+  "claim_scope": "Certification proves equivalence between the locked source AST and the frozen BSIR under the explicit declarative bindings listed here. External framework/database values and helper semantics without a validated semantic contract remain outside the certificate.",
+  "evidence": {
+    "concrete_replays": 5,
+    "correct_solver_status": "unsat",
+    "ir_sha256": "895a5f01163d2a5b2bf14d1b49a027bf90fe1eb60aa64babca4ac56d4b643b65",
+    "mutant_solver_status": "sat",
+    "mutant_witness": {
+      "b_635fe1_0": "0"
+    },
+    "mutation": "binding-plus-one",
+    "proof_digest": "d55ecae3cf2aac7671df863f7409168026550c4eb4ab4a445b81149aa30feee8",
+    "proof_obligations": {
+      "bsir_compile": true,
+      "concrete_replay": true,
+      "declarative_bindings": true,
+      "frozen_bsir": true,
+      "independent_source_ast_compile": true,
+      "locked_source_commit": true,
+      "mutant_detected_sat": true,
+      "mutant_witness_replayed": true,
+      "symbolic_equivalence_unsat": true,
+      "validated_semantic_abstractions": true
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 74,
+    "text": "- `CERTIFIED_A1`: certified with declarative source-to-BVC bindings only."
+  },
+  "schema_version": "BIZPROOF-V0.11-A1-CERTIFICATE-1",
+  "semantic_contracts": {},
+  "source": {
+    "class": "AbstractBenefit",
+    "file": "src/oscar/apps/offer/abstract_models.py",
+    "function": "apply",
+    "function_sha256": "0d25024dc9750c9dbf3dbcf004ce37c41395944a336447120811b1b45c491a5c",
+    "resolved_commit": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+    "source_file_sha256": "d1508fbc726b868c4c849cd88e7669f3bc1ca31a2e7f2ccb26ec3a119f29b78e",
+    "source_id": "django_oscar"
+  },
+  "status": "CERTIFIED_A1",
+  "terminal_outcome": "CERTIFIED_A1",
+  "terminal_outcome_assigned": true
+}

@@ -1,0 +1,45 @@
+{
+  "candidate_id": "03e2adf4e4f323b1",
+  "certification_batch": "TRANSACTIONAL_SAVE_BATCH",
+  "class_name": "Order",
+  "function_name": "save",
+  "lineno": 584,
+  "matched_provenance_hash": "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+  "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+  "provenance_resolution": "STRUCTURED_DIRECT_HASH_RESOLVED",
+  "reason_codes": "MODEL_SAVE_TRANSACTION_STATE_OUTSIDE_FORMAL_SUBSET",
+  "semantic_observation": "normalized model post-state, expanded update_fields, deferred-field safety outcome, transaction-dirty trace and delegated save result",
+  "semantic_route": "TRANSACTION_AWARE_MODEL_SAVE",
+  "source": "def save(self, **kwargs):\n        if 'update_fields' in kwargs:\n            kwargs['update_fields'] = {'last_modified'}.union(kwargs['update_fields'])\n        if not self.code:\n            self.assign_code()\n            if 'update_fields' in kwargs:\n                kwargs['update_fields'] = {'code'}.union(kwargs['update_fields'])\n        if not self.datetime:\n            self.datetime = now()\n            if 'update_fields' in kwargs:\n                kwargs['update_fields'] = {'datetime'}.union(kwargs['update_fields'])\n        if not self.expires:\n            self.set_expires()\n            if 'update_fields' in kwargs:\n                kwargs['update_fields'] = {'expires'}.union(kwargs['update_fields'])\n        if not self.organizer_id:\n            self.organizer_id = self.event.organizer_id\n            if 'update_fields' in kwargs:\n                kwargs['update_fields'] = {'organizer'}.union(kwargs['update_fields'])\n\n        is_new = not self.pk\n        update_fields = kwargs.get('update_fields', [])\n        if 'require_approval' not in self.get_deferred_fields() and 'status' not in self.get_deferred_fields():\n            status_paid_or_pending = self.status in (Order.STATUS_PENDING, Order.STATUS_PAID) and not self.require_approval\n            if status_paid_or_pending != self.__initial_status_paid_or_pending:\n                _transactions_mark_order_dirty(self.pk, using=kwargs.get('using', None))\n        elif (\n            not kwargs.get('force_save_with_deferred_fields', None) and\n            (not update_fields or ('require_approval' not in update_fields and 'status' not in update_fields))\n        ):\n            _fail(\"It is unsafe to call save() on an Order with deferred fields since we can't check if you missed \"\n                  \"creating a transaction. Call save(force_save_with_deferred_fields=True) if you really want to do \"\n                  \"this.\")\n\n        r = super().save(**kwargs)\n\n        if is_new:\n            _transactions_mark_order_dirty(self.pk, using=kwargs.get('using', None))\n\n        return r",
+  "source_sha256": "5bcdb7e54fd57224a99828aea6483678c29681ca486633ee10c9ec73198e4437",
+  "structural_profile": {
+    "attribute_writes": [
+      "datetime",
+      "organizer_id"
+    ],
+    "branch_count": 13,
+    "calls": [
+      "get",
+      "save",
+      "union",
+      "assign_code",
+      "now",
+      "set_expires",
+      "_transactions_mark_order_dirty",
+      "union",
+      "union",
+      "union",
+      "union",
+      "get_deferred_fields",
+      "get_deferred_fields",
+      "_transactions_mark_order_dirty",
+      "_fail",
+      "super",
+      "get",
+      "get",
+      "get"
+    ],
+    "return_count": 1,
+    "subscript_writes": 5
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "assistance_level": "A1",
+  "authoring_mode": "DECLARATIVE_BINDINGS_FROZEN_BSIR",
+  "bindings": [
+    {
+      "binding_id": "f75118c287d88785",
+      "kind": "ATTRIBUTE",
+      "primitive": "enseignement_superieur",
+      "source_expression": "TypesScolarite.enseignement_superieur"
+    },
+    {
+      "binding_id": "87f51771861554a3",
+      "kind": "CALL",
+      "primitive": "individu",
+      "source_expression": "individu('scolarite', period)"
+    }
+  ],
+  "candidate_id": "051c7ef379178030",
+  "certificate_digest": "ff1a0ee1ad1cc7f81054ba90784d82381be21e10aa05d84e46e9f346676e7cdd",
+  "certificate_id": "CERT-V011-A1-051C7EF379178030",
+  "claim_scope": "Certification proves equivalence between the locked source AST and the frozen BSIR under the explicit declarative bindings listed here. External framework/database values and helper semantics without a validated semantic contract remain outside the certificate.",
+  "evidence": {
+    "concrete_replays": 6,
+    "correct_solver_status": "unsat",
+    "ir_sha256": "d640ca9017c03746d7a2749314318e435df47036a7aba05520c6fdddde2524d9",
+    "mutant_solver_status": "sat",
+    "mutant_witness": {
+      "b_051c7e_0": "0",
+      "b_051c7e_1": "0"
+    },
+    "mutation": "comparison-operator-change",
+    "proof_digest": "5ec6f9a510e3febd3ae3742ac765ce80e883a1577aa084ed847ff75ec89f822e",
+    "proof_obligations": {
+      "bsir_compile": true,
+      "concrete_replay": true,
+      "declarative_bindings": true,
+      "frozen_bsir": true,
+      "independent_source_ast_compile": true,
+      "locked_source_commit": true,
+      "mutant_detected_sat": true,
+      "mutant_witness_replayed": true,
+      "symbolic_equivalence_unsat": true,
+      "validated_semantic_abstractions": true
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 74,
+    "text": "- `CERTIFIED_A1`: certified with declarative source-to-BVC bindings only."
+  },
+  "schema_version": "BIZPROOF-V0.11-A1-CERTIFICATE-1",
+  "semantic_contracts": {},
+  "source": {
+    "class": "crous_repas_un_euro_eligibilite",
+    "file": "openfisca_france/model/prestations/alimentation.py",
+    "function": "formula_2021_01",
+    "function_sha256": "d898c1194daf90d6b19644d19f9a8ce7c356664b3d658311f7a90d48b0bc5aa5",
+    "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+    "source_file_sha256": "be01dd83aabaa7a0508637501323c1071fd4794aa9abf1f9be5361b1559fb9c5",
+    "source_id": "openfisca_france"
+  },
+  "status": "CERTIFIED_A1",
+  "terminal_outcome": "CERTIFIED_A1",
+  "terminal_outcome_assigned": true
+}

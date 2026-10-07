@@ -1,0 +1,1659 @@
+{
+  "version": "0.11.0",
+  "validation_scope": "Docker",
+  "quality_gate": {
+    "command": "./run.sh check",
+    "result": "PASS",
+    "ruff": "PASS",
+    "format": "PASS",
+    "mypy": "PASS",
+    "pytest": "PASS"
+  },
+  "regression_validation": {
+    "command": "./run.sh differential",
+    "contracts_checked": 3,
+    "enum_z3_verdict_disagreements": 0,
+    "invalid_z3_counterexamples_after_replay": 0,
+    "unexpected_unknown_verdicts": 0,
+    "result": "PASS"
+  },
+  "differential_semantic_fuzzing": {
+    "cases_checked": 1000,
+    "cases_requested": 1000,
+    "crashes": 0,
+    "enum_unknowns": 0,
+    "expected_disproved": 500,
+    "expected_proved": 500,
+    "false_disproved": 0,
+    "false_proved": 0,
+    "invalid_replays": 0,
+    "oracle_label_mismatches": 0,
+    "passed": true,
+    "runtime_seconds": 179.2112244910095,
+    "seed": 20260923,
+    "templates": {
+      "arithmetic": 167,
+      "boolean": 167,
+      "branch": 167,
+      "early_return": 166,
+      "nested": 166,
+      "threshold": 167
+    },
+    "verdict_disagreements": 0,
+    "z3_unknowns": 0,
+    "command": "./run.sh fuzz-differential",
+    "result": "PASS"
+  },
+  "business_validation_benchmark": {
+    "benchmark_version": "0.3.0",
+    "cases_checked": 300,
+    "catalog": "benchmarks/v0.3/catalog.json",
+    "correct_cases": 60,
+    "counterexample_coverage": 1.0,
+    "enum_false_disproved": 0,
+    "enum_false_proved": 0,
+    "enum_unknowns": 0,
+    "enum_z3_verdict_disagreements": 0,
+    "expected_disproved": 240,
+    "expected_proved": 60,
+    "invalid_replays": 0,
+    "missing_counterexamples": 0,
+    "mutant_cases": 240,
+    "mutation_kill_rate": 1.0,
+    "oracle_label_mismatches": 0,
+    "passed": true,
+    "per_domain": {
+      "banking": {
+        "cases": 100,
+        "disagreements": 0,
+        "expected_disproved": 80,
+        "expected_proved": 20,
+        "z3_disproved": 80,
+        "z3_proved": 20,
+        "z3_unknown": 0
+      },
+      "ecommerce": {
+        "cases": 100,
+        "disagreements": 0,
+        "expected_disproved": 80,
+        "expected_proved": 20,
+        "z3_disproved": 80,
+        "z3_proved": 20,
+        "z3_unknown": 0
+      },
+      "insurance": {
+        "cases": 100,
+        "disagreements": 0,
+        "expected_disproved": 80,
+        "expected_proved": 20,
+        "z3_disproved": 80,
+        "z3_proved": 20,
+        "z3_unknown": 0
+      }
+    },
+    "per_family": {
+      "conditional_flag": {
+        "cases": 30,
+        "disagreements": 0,
+        "expected_disproved": 24,
+        "expected_proved": 6,
+        "z3_disproved": 24,
+        "z3_proved": 6,
+        "z3_unknown": 0
+      },
+      "dual_and": {
+        "cases": 30,
+        "disagreements": 0,
+        "expected_disproved": 24,
+        "expected_proved": 6,
+        "z3_disproved": 24,
+        "z3_proved": 6,
+        "z3_unknown": 0
+      },
+      "dual_or": {
+        "cases": 30,
+        "disagreements": 0,
+        "expected_disproved": 24,
+        "expected_proved": 6,
+        "z3_disproved": 24,
+        "z3_proved": 6,
+        "z3_unknown": 0
+      },
+      "not_blocked_threshold": {
+        "cases": 30,
+        "disagreements": 0,
+        "expected_disproved": 24,
+        "expected_proved": 6,
+        "z3_disproved": 24,
+        "z3_proved": 6,
+        "z3_unknown": 0
+      },
+      "range_and_flag": {
+        "cases": 30,
+        "disagreements": 0,
+        "expected_disproved": 24,
+        "expected_proved": 6,
+        "z3_disproved": 24,
+        "z3_proved": 6,
+        "z3_unknown": 0
+      },
+      "threshold_and_flag": {
+        "cases": 30,
+        "disagreements": 0,
+        "expected_disproved": 24,
+        "expected_proved": 6,
+        "z3_disproved": 24,
+        "z3_proved": 6,
+        "z3_unknown": 0
+      },
+      "threshold_or_flag": {
+        "cases": 30,
+        "disagreements": 0,
+        "expected_disproved": 24,
+        "expected_proved": 6,
+        "z3_disproved": 24,
+        "z3_proved": 6,
+        "z3_unknown": 0
+      },
+      "tiered_threshold": {
+        "cases": 30,
+        "disagreements": 0,
+        "expected_disproved": 24,
+        "expected_proved": 6,
+        "z3_disproved": 24,
+        "z3_proved": 6,
+        "z3_unknown": 0
+      },
+      "two_bool_and": {
+        "cases": 30,
+        "disagreements": 0,
+        "expected_disproved": 24,
+        "expected_proved": 6,
+        "z3_disproved": 24,
+        "z3_proved": 6,
+        "z3_unknown": 0
+      },
+      "two_bool_or": {
+        "cases": 30,
+        "disagreements": 0,
+        "expected_disproved": 24,
+        "expected_proved": 6,
+        "z3_disproved": 24,
+        "z3_proved": 6,
+        "z3_unknown": 0
+      }
+    },
+    "proof_coverage": 1.0,
+    "rules_checked": 60,
+    "runtime_seconds": 4.709285251999972,
+    "unexpected_crashes": 0,
+    "z3_false_disproved": 0,
+    "z3_false_proved": 0,
+    "z3_mutants_killed": 240,
+    "z3_unknowns": 0
+  },
+  "baseline_comparison": {
+    "benchmark_version": "0.4.1",
+    "cases_checked": 300,
+    "catalog": "benchmarks/v0.3/catalog.json",
+    "crosshair_per_condition_timeout": 0.5,
+    "crosshair_process_timeout": 5.0,
+    "environment": {
+      "crosshair_tool": "0.0.110",
+      "hypothesis": "6.168.1",
+      "python": "3.12.14"
+    },
+    "hypothesis_max_examples": 100,
+    "interpretation": {
+      "bizproof_no_counterexample": "formal verdict PROVED within the supported BIZPROOF semantics",
+      "classification_accuracy": "not reported for search-based baselines because absence of a counterexample is not a proof of correctness",
+      "crosshair_no_counterexample": "no counterexample reported within the configured analysis budget; reported as inconclusive on correct cases, not as a proof",
+      "hypothesis_no_counterexample": "no counterexample found within the configured search budget; reported as inconclusive on correct cases, not as a proof"
+    },
+    "methods": {
+      "bizproof": {
+        "cases": 300,
+        "conclusive_case_rate": 1.0,
+        "correct_cases": 60,
+        "correct_cases_inconclusive": 0,
+        "correct_cases_proved": 60,
+        "correct_false_alarm_rate": 0.0,
+        "correct_false_alarms": 0,
+        "missed_mutants": 0,
+        "mutant_detection_rate": 1.0,
+        "mutants": 240,
+        "mutants_detected": 240,
+        "no_counterexample_on_correct": 60,
+        "proof_capable": true,
+        "proof_rate_on_correct": 1.0,
+        "runtime_seconds": 2.381691,
+        "unknown_or_error": 0
+      },
+      "crosshair": {
+        "cases": 300,
+        "conclusive_case_rate": 0.8,
+        "correct_cases": 60,
+        "correct_cases_inconclusive": 60,
+        "correct_cases_proved": 0,
+        "correct_false_alarm_rate": 0.0,
+        "correct_false_alarms": 0,
+        "missed_mutants": 0,
+        "mutant_detection_rate": 1.0,
+        "mutants": 240,
+        "mutants_detected": 240,
+        "no_counterexample_on_correct": 60,
+        "proof_capable": false,
+        "proof_rate_on_correct": 0.0,
+        "runtime_seconds": 257.885089,
+        "unknown_or_error": 0
+      },
+      "hypothesis": {
+        "cases": 300,
+        "conclusive_case_rate": 0.8,
+        "correct_cases": 60,
+        "correct_cases_inconclusive": 60,
+        "correct_cases_proved": 0,
+        "correct_false_alarm_rate": 0.0,
+        "correct_false_alarms": 0,
+        "missed_mutants": 0,
+        "mutant_detection_rate": 1.0,
+        "mutants": 240,
+        "mutants_detected": 240,
+        "no_counterexample_on_correct": 60,
+        "proof_capable": false,
+        "proof_rate_on_correct": 0.0,
+        "runtime_seconds": 8.830778,
+        "unknown_or_error": 0
+      }
+    },
+    "mutants_per_rule": 4,
+    "pairwise_mutant_detection": {
+      "bizproof_vs_crosshair": {
+        "both_detected": 240
+      },
+      "bizproof_vs_hypothesis": {
+        "both_detected": 240
+      }
+    },
+    "passed": true,
+    "per_domain": {
+      "banking": {
+        "bizproof": {
+          "cases": 100,
+          "conclusive_case_rate": 1.0,
+          "correct_cases": 20,
+          "correct_cases_inconclusive": 0,
+          "correct_cases_proved": 20,
+          "correct_false_alarm_rate": 0.0,
+          "correct_false_alarms": 0,
+          "missed_mutants": 0,
+          "mutant_detection_rate": 1.0,
+          "mutants": 80,
+          "mutants_detected": 80,
+          "no_counterexample_on_correct": 20,
+          "proof_capable": true,
+          "proof_rate_on_correct": 1.0,
+          "runtime_seconds": 0.83603,
+          "unknown_or_error": 0
+        },
+        "crosshair": {
+          "cases": 100,
+          "conclusive_case_rate": 0.8,
+          "correct_cases": 20,
+          "correct_cases_inconclusive": 20,
+          "correct_cases_proved": 0,
+          "correct_false_alarm_rate": 0.0,
+          "correct_false_alarms": 0,
+          "missed_mutants": 0,
+          "mutant_detection_rate": 1.0,
+          "mutants": 80,
+          "mutants_detected": 80,
+          "no_counterexample_on_correct": 20,
+          "proof_capable": false,
+          "proof_rate_on_correct": 0.0,
+          "runtime_seconds": 85.800372,
+          "unknown_or_error": 0
+        },
+        "hypothesis": {
+          "cases": 100,
+          "conclusive_case_rate": 0.8,
+          "correct_cases": 20,
+          "correct_cases_inconclusive": 20,
+          "correct_cases_proved": 0,
+          "correct_false_alarm_rate": 0.0,
+          "correct_false_alarms": 0,
+          "missed_mutants": 0,
+          "mutant_detection_rate": 1.0,
+          "mutants": 80,
+          "mutants_detected": 80,
+          "no_counterexample_on_correct": 20,
+          "proof_capable": false,
+          "proof_rate_on_correct": 0.0,
+          "runtime_seconds": 3.227778,
+          "unknown_or_error": 0
+        }
+      },
+      "ecommerce": {
+        "bizproof": {
+          "cases": 100,
+          "conclusive_case_rate": 1.0,
+          "correct_cases": 20,
+          "correct_cases_inconclusive": 0,
+          "correct_cases_proved": 20,
+          "correct_false_alarm_rate": 0.0,
+          "correct_false_alarms": 0,
+          "missed_mutants": 0,
+          "mutant_detection_rate": 1.0,
+          "mutants": 80,
+          "mutants_detected": 80,
+          "no_counterexample_on_correct": 20,
+          "proof_capable": true,
+          "proof_rate_on_correct": 1.0,
+          "runtime_seconds": 0.758576,
+          "unknown_or_error": 0
+        },
+        "crosshair": {
+          "cases": 100,
+          "conclusive_case_rate": 0.8,
+          "correct_cases": 20,
+          "correct_cases_inconclusive": 20,
+          "correct_cases_proved": 0,
+          "correct_false_alarm_rate": 0.0,
+          "correct_false_alarms": 0,
+          "missed_mutants": 0,
+          "mutant_detection_rate": 1.0,
+          "mutants": 80,
+          "mutants_detected": 80,
+          "no_counterexample_on_correct": 20,
+          "proof_capable": false,
+          "proof_rate_on_correct": 0.0,
+          "runtime_seconds": 84.217743,
+          "unknown_or_error": 0
+        },
+        "hypothesis": {
+          "cases": 100,
+          "conclusive_case_rate": 0.8,
+          "correct_cases": 20,
+          "correct_cases_inconclusive": 20,
+          "correct_cases_proved": 0,
+          "correct_false_alarm_rate": 0.0,
+          "correct_false_alarms": 0,
+          "missed_mutants": 0,
+          "mutant_detection_rate": 1.0,
+          "mutants": 80,
+          "mutants_detected": 80,
+          "no_counterexample_on_correct": 20,
+          "proof_capable": false,
+          "proof_rate_on_correct": 0.0,
+          "runtime_seconds": 2.752206,
+          "unknown_or_error": 0
+        }
+      },
+      "insurance": {
+        "bizproof": {
+          "cases": 100,
+          "conclusive_case_rate": 1.0,
+          "correct_cases": 20,
+          "correct_cases_inconclusive": 0,
+          "correct_cases_proved": 20,
+          "correct_false_alarm_rate": 0.0,
+          "correct_false_alarms": 0,
+          "missed_mutants": 0,
+          "mutant_detection_rate": 1.0,
+          "mutants": 80,
+          "mutants_detected": 80,
+          "no_counterexample_on_correct": 20,
+          "proof_capable": true,
+          "proof_rate_on_correct": 1.0,
+          "runtime_seconds": 0.787084,
+          "unknown_or_error": 0
+        },
+        "crosshair": {
+          "cases": 100,
+          "conclusive_case_rate": 0.8,
+          "correct_cases": 20,
+          "correct_cases_inconclusive": 20,
+          "correct_cases_proved": 0,
+          "correct_false_alarm_rate": 0.0,
+          "correct_false_alarms": 0,
+          "missed_mutants": 0,
+          "mutant_detection_rate": 1.0,
+          "mutants": 80,
+          "mutants_detected": 80,
+          "no_counterexample_on_correct": 20,
+          "proof_capable": false,
+          "proof_rate_on_correct": 0.0,
+          "runtime_seconds": 87.866975,
+          "unknown_or_error": 0
+        },
+        "hypothesis": {
+          "cases": 100,
+          "conclusive_case_rate": 0.8,
+          "correct_cases": 20,
+          "correct_cases_inconclusive": 20,
+          "correct_cases_proved": 0,
+          "correct_false_alarm_rate": 0.0,
+          "correct_false_alarms": 0,
+          "missed_mutants": 0,
+          "mutant_detection_rate": 1.0,
+          "mutants": 80,
+          "mutants_detected": 80,
+          "no_counterexample_on_correct": 20,
+          "proof_capable": false,
+          "proof_rate_on_correct": 0.0,
+          "runtime_seconds": 2.850794,
+          "unknown_or_error": 0
+        }
+      }
+    },
+    "rules_checked": 60,
+    "tool_errors": [],
+    "wall_runtime_seconds": 269.258921
+  },
+  "rare_witness_challenge": {
+    "benchmark_version": "0.5.0",
+    "bizproof": {
+      "cases": 60,
+      "correct_cases": 30,
+      "correct_proved": 30,
+      "false_disproved": 0,
+      "false_proved": 0,
+      "mutant_detection_rate": 1.0,
+      "mutants": 30,
+      "mutants_detected": 30,
+      "proof_rate_on_correct": 1.0,
+      "runtime_seconds": 0.68626,
+      "unknown": 0
+    },
+    "cases_checked": 60,
+    "catalog": "benchmarks/v0.5/catalog.json",
+    "crosshair_by_budget": {
+      "0.5": {
+        "correct_cases": 30,
+        "correct_false_alarm_rate": 0.0,
+        "correct_false_alarms": 0,
+        "correct_inconclusive": 30,
+        "mutant_detection_rate": 1.0,
+        "mutants": 30,
+        "mutants_detected": 30,
+        "mutants_inconclusive": 0,
+        "mutants_missed": 0,
+        "runtime_seconds": 58.649701
+      },
+      "2.0": {
+        "correct_cases": 30,
+        "correct_false_alarm_rate": 0.0,
+        "correct_false_alarms": 0,
+        "correct_inconclusive": 30,
+        "mutant_detection_rate": 1.0,
+        "mutants": 30,
+        "mutants_detected": 30,
+        "mutants_inconclusive": 0,
+        "mutants_missed": 0,
+        "runtime_seconds": 58.581976
+      }
+    },
+    "hypothesis_by_budget": {
+      "100": {
+        "correct_cases": 30,
+        "correct_false_alarm_rate": 0.0,
+        "correct_false_alarms": 0,
+        "correct_inconclusive": 30,
+        "mutant_detection_rate": 0.0,
+        "mutants": 30,
+        "mutants_detected": 0,
+        "mutants_inconclusive": 0,
+        "mutants_missed": 30,
+        "runtime_seconds": 7.300479
+      },
+      "1000": {
+        "correct_cases": 30,
+        "correct_false_alarm_rate": 0.0,
+        "correct_false_alarms": 0,
+        "correct_inconclusive": 30,
+        "mutant_detection_rate": 0.03333333333333333,
+        "mutants": 30,
+        "mutants_detected": 1,
+        "mutants_inconclusive": 0,
+        "mutants_missed": 29,
+        "runtime_seconds": 61.256144
+      },
+      "10000": {
+        "correct_cases": 30,
+        "correct_false_alarm_rate": 0.0,
+        "correct_false_alarms": 0,
+        "correct_inconclusive": 30,
+        "mutant_detection_rate": 0.2,
+        "mutants": 30,
+        "mutants_detected": 6,
+        "mutants_inconclusive": 0,
+        "mutants_missed": 24,
+        "runtime_seconds": 599.33127
+      }
+    },
+    "interpretation": {
+      "bizproof_proved": "formal proof within the supported BIZPROOF semantics",
+      "crosshair_no_counterexample": "inconclusive under the configured symbolic-analysis budget",
+      "hypothesis_no_counterexample": "inconclusive under the configured search budget"
+    },
+    "passed": true,
+    "per_family": {
+      "guarded_magic": {
+        "domain_size_sum": 1000010,
+        "max_witness_density": 9.99990000099999e-06,
+        "min_witness_density": 9.99990000099999e-06,
+        "rules": 5,
+        "witness_count_sum": 10
+      },
+      "linear_magic": {
+        "domain_size_sum": 50001000005,
+        "max_witness_density": 1.969060618590722e-06,
+        "min_witness_density": 1.1386772263416054e-06,
+        "rules": 5,
+        "witness_count_sum": 77695
+      },
+      "narrow_boundary": {
+        "domain_size_sum": 5000005,
+        "max_witness_density": 9.99999000001e-07,
+        "min_witness_density": 9.99999000001e-07,
+        "rules": 5,
+        "witness_count_sum": 5
+      },
+      "pair_magic": {
+        "domain_size_sum": 20020005,
+        "max_witness_density": 4.995003747501561e-07,
+        "min_witness_density": 4.995003747501561e-07,
+        "rules": 5,
+        "witness_count_sum": 10
+      },
+      "single_magic": {
+        "domain_size_sum": 500005,
+        "max_witness_density": 1.999980000199998e-05,
+        "min_witness_density": 1.999980000199998e-05,
+        "rules": 5,
+        "witness_count_sum": 10
+      },
+      "triple_magic": {
+        "domain_size_sum": 5151505,
+        "max_witness_density": 1.941180295855289e-06,
+        "min_witness_density": 1.941180295855289e-06,
+        "rules": 5,
+        "witness_count_sum": 10
+      }
+    },
+    "rules_checked": 30,
+    "tool_errors": [],
+    "wall_runtime_seconds": 785.850229
+  },
+  "external_corpus_audit": {
+    "adaptable_or_direct_rate": 0.7340425531914894,
+    "adaptation_complexity_counts": {
+      "HIGH": 181,
+      "LOW": 116,
+      "MEDIUM": 600
+    },
+    "adaptation_required": 897,
+    "benchmark_version": "0.6.2",
+    "business_candidates": 1222,
+    "candidates_with_any_evidence": 859,
+    "candidates_with_doc_evidence": 640,
+    "candidates_with_test_evidence": 511,
+    "classification_counts": {
+      "ADAPTATION_REQUIRED": 897,
+      "UNSUPPORTED": 325
+    },
+    "code_files_examined": 243,
+    "direct_candidate_rate": 0.0,
+    "direct_candidates": 0,
+    "functions_examined": 3269,
+    "interpretation": {
+      "ADAPTATION_REQUIRED": "business-relevant external function that requires an explicit interface or scalar adaptation before formal verification",
+      "DIRECT_CANDIDATE": "structurally close to the current BIZPROOF supported subset; still requires an independently sourced business contract",
+      "UNSUPPORTED": "contains control-flow or language constructs intentionally outside the current verifier semantics"
+    },
+    "relevance_counts": {
+      "CONTEXTUAL": 207,
+      "STRONG": 1015
+    },
+    "sources": [
+      {
+        "adaptation_complexity_counts": {
+          "HIGH": 39,
+          "LOW": 42,
+          "MEDIUM": 165
+        },
+        "business_candidates": 251,
+        "candidates_with_any_evidence": 151,
+        "candidates_with_doc_evidence": 0,
+        "candidates_with_test_evidence": 151,
+        "classification_counts": {
+          "ADAPTATION_REQUIRED": 246,
+          "UNSUPPORTED": 5
+        },
+        "code_files_examined": 133,
+        "domain": "tax_and_social_benefits",
+        "functions_examined": 1625,
+        "license": "AGPL-3.0-or-later",
+        "name": "OpenFisca-France",
+        "relevance_counts": {
+          "CONTEXTUAL": 51,
+          "STRONG": 200
+        },
+        "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+        "source_id": "openfisca_france",
+        "syntax_errors": 0
+      },
+      {
+        "adaptation_complexity_counts": {
+          "HIGH": 61,
+          "LOW": 52,
+          "MEDIUM": 282
+        },
+        "business_candidates": 539,
+        "candidates_with_any_evidence": 434,
+        "candidates_with_doc_evidence": 366,
+        "candidates_with_test_evidence": 360,
+        "classification_counts": {
+          "ADAPTATION_REQUIRED": 395,
+          "UNSUPPORTED": 144
+        },
+        "code_files_examined": 52,
+        "domain": "ecommerce",
+        "functions_examined": 556,
+        "license": "BSD-3-Clause",
+        "name": "Django-Oscar",
+        "relevance_counts": {
+          "CONTEXTUAL": 72,
+          "STRONG": 467
+        },
+        "resolved_commit": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+        "source_id": "django_oscar",
+        "syntax_errors": 0
+      },
+      {
+        "adaptation_complexity_counts": {
+          "HIGH": 81,
+          "LOW": 22,
+          "MEDIUM": 153
+        },
+        "business_candidates": 432,
+        "candidates_with_any_evidence": 274,
+        "candidates_with_doc_evidence": 274,
+        "candidates_with_test_evidence": 0,
+        "classification_counts": {
+          "ADAPTATION_REQUIRED": 256,
+          "UNSUPPORTED": 176
+        },
+        "code_files_examined": 58,
+        "domain": "ticketing_and_payments",
+        "functions_examined": 1088,
+        "license": "AGPL-3.0-with-additional-terms",
+        "name": "pretix",
+        "relevance_counts": {
+          "CONTEXTUAL": 84,
+          "STRONG": 348
+        },
+        "resolved_commit": "2af8d29ca99510612fdb005d4ec7d39d83aed6ba",
+        "source_id": "pretix",
+        "syntax_errors": 0
+      }
+    ],
+    "sources_checked": 3,
+    "unsupported": 325
+  },
+  "external_semantic_validation": {
+    "benchmark_version": "0.7.0",
+    "external_systems": [
+      "django_oscar",
+      "openfisca_france"
+    ],
+    "external_system_count": 2,
+    "rules_checked": 4,
+    "correct_adapters_proved": 4,
+    "mutants_disproved": 4,
+    "invalid_mutant_replays": 0,
+    "provenance_failures": [],
+    "runtime_seconds": 1.4748547399940435,
+    "passed": true,
+    "claim_scope": "BIZPROOF verifies explicit scalar semantic adapters derived from locked external business-rule implementations and independently traceable tests/specifications. It does not claim end-to-end proof of the original frameworks."
+  },
+  "adapter_semantic_preservation": {
+    "benchmark_version": "0.8.0",
+    "method": "AST extraction and execution of methods from locked external source files, differentially compared with V0.7 semantic adapters",
+    "rules_checked": 4,
+    "rules_passed": 4,
+    "total_comparisons": 52939,
+    "correct_adapter_mismatches": 0,
+    "mutant_mismatches": 10354,
+    "failures": 0,
+    "seed": 20260926,
+    "runtime_seconds": 0.3790851040103007,
+    "passed": true,
+    "claim_scope": "V0.8 compares V0.7 adapters against methods extracted directly from the locked external source files and executed in controlled scalar harnesses. Zero observed mismatches is evidence of semantic preservation over the declared validation domains; it is not a universal proof outside those domains."
+  },
+  "symbolic_adapter_equivalence": {
+    "benchmark_version": "0.9.0",
+    "method": "Symbolic translation of locked external AST semantic slices and SMT equivalence certification",
+    "rules_checked": 4,
+    "correct_equivalences_proved": 4,
+    "mutants_disproved": 4,
+    "unknown_results": 0,
+    "failures": 0,
+    "runtime_seconds": 0.23762281201197766,
+    "passed": true,
+    "claim_scope": "V0.9 symbolically translates selected semantic slices directly from locked external Python ASTs and proves their equivalence to the corresponding V0.7 adapters over the declared BVC domains. For the Django-Oscar satisfaction case, the certified external slice is explicitly the post-aggregation threshold predicate, not the preceding basket aggregation loop."
+  },
+  "evidence_carrying_certification": {
+    "benchmark_version": "0.10.0",
+    "certificates_configured": 4,
+    "certificates_issued": 4,
+    "certificates_failed": 0,
+    "external_system_count": 2,
+    "v08_total_comparisons": 52939,
+    "v08_correct_mismatches": 0,
+    "v09_equivalences_proved": 4,
+    "certificate_index_digest": "93e7732e6004946f403bd87810a8e3d323dc7ca1fc14efd1665c8c84abae85c1",
+    "passed": true,
+    "claim_scope": "V0.10 certifies selected business-semantic slices only when their locked provenance, V0.7 contract verification evidence, V0.8 source-executed preservation evidence, and V0.9 symbolic equivalence evidence are mutually consistent. CERTIFIED does not mean that the complete external framework has been verified."
+  },
+  "evidence_snapshot_policy": {
+    "version": "0.10.1",
+    "frozen_under": "benchmarks/v0.10/evidence",
+    "historical_results_restored_from_tags": {
+      "v0.7": "v0.7.0",
+      "v0.8": "v0.8.0",
+      "v0.9": "v0.9.0"
+    },
+    "certification_reads_frozen_evidence": true
+  },
+  "external_generalization": {
+    "benchmark_version": "0.11.0",
+    "status": "IN_PROGRESS",
+    "cohort": {
+      "eligible_population": 730,
+      "sample_size": 90,
+      "cohort_sha256": "3144f973a166ebee41a059c538b81ffac5a5d15737982c6d95e59175325ca108",
+      "allocation": "10_PER_SOURCE_X_COMPLEXITY_STRATUM"
+    },
+    "static_feasibility": {
+      "assessed_candidates": 90,
+      "source_mismatches": 0,
+      "extraction_failures": 0,
+      "feasibility_counts": {
+        "F0_DIRECT_SYMBOLIC": 3,
+        "F1_DECLARATIVE_BINDING": 37,
+        "F2_EXPLICIT_ADAPTER": 33,
+        "F3_SEMANTIC_EXECUTION_REVIEW": 17
+      },
+      "weighted_estimates": {
+        "F0_DIRECT_SYMBOLIC": {
+          "approx_ci95_high": 0.024032665183926393,
+          "approx_ci95_low": 0.0022687046790873036,
+          "approx_standard_error": 0.00555203074103038,
+          "ci_interpretation": "Approximate design-based interval under the preregistered hash-as-uniform stratified sampling assumption.",
+          "estimated_population_count": 9.6,
+          "estimated_rate": 0.013150684931506848
+        },
+        "F1_DECLARATIVE_BINDING": {
+          "approx_ci95_high": 0.32428485221787134,
+          "approx_ci95_low": 0.22557816148075885,
+          "approx_standard_error": 0.025180278249263395,
+          "ci_interpretation": "Approximate design-based interval under the preregistered hash-as-uniform stratified sampling assumption.",
+          "estimated_population_count": 200.70000000000002,
+          "estimated_rate": 0.2749315068493151
+        },
+        "F2_EXPLICIT_ADAPTER": {
+          "approx_ci95_high": 0.6077321383043972,
+          "approx_ci95_low": 0.3796651219695755,
+          "approx_standard_error": 0.058180361309903485,
+          "ci_interpretation": "Approximate design-based interval under the preregistered hash-as-uniform stratified sampling assumption.",
+          "estimated_population_count": 360.40000000000003,
+          "estimated_rate": 0.49369863013698634
+        },
+        "F3_SEMANTIC_EXECUTION_REVIEW": {
+          "approx_ci95_high": 0.3262851048600045,
+          "approx_ci95_low": 0.11015325130437911,
+          "approx_standard_error": 0.055135676927455454,
+          "ci_interpretation": "Approximate design-based interval under the preregistered hash-as-uniform stratified sampling assumption.",
+          "estimated_population_count": 159.3,
+          "estimated_rate": 0.2182191780821918
+        }
+      },
+      "certification_claim": false,
+      "passed": true
+    },
+    "final_certification_complete": false,
+    "symbolic_frontend_probe": {
+      "attempted_candidates": 40,
+      "probe_counts": {
+        "STRUCTURAL_REVIEW": 2,
+        "SYMBOLIC_FRONTEND_READY": 38
+      },
+      "binding_primitives": 57,
+      "binding_occurrences": 170,
+      "source_mismatches": 0,
+      "extraction_failures": 0,
+      "certification_claim": false,
+      "passed": true
+    },
+    "execution_workplan": {
+      "total_candidates": 90,
+      "route_counts": {
+        "BINDING_DEFINITION": 36,
+        "CONTROLLED_EXECUTION_REVIEW": 17,
+        "EXPLICIT_ADAPTER": 33,
+        "SEMANTIC_SCOPE_REVIEW": 2,
+        "STRUCTURAL_REVIEW": 2
+      },
+      "semantic_scope_gate": true,
+      "certification_claim": false,
+      "passed": true
+    },
+    "symbolic_frontend_hardening": {
+      "free_name_policy": "FUNCTION_PARAMETERS_ARE_INPUTS; UNBOUND_NAMES_ARE_GLOBAL_NAME_BINDINGS",
+      "semantic_shape_counts": {
+        "NAME_RETURN": 1,
+        "NONE_RETURN": 1,
+        "PASS_STUB": 1,
+        "SUBSTANTIVE_EXPRESSION": 35
+      },
+      "binding_kind_counts": {
+        "ATTRIBUTE": 62,
+        "CALL": 107,
+        "GLOBAL_NAME": 1
+      },
+      "probe_counts": {
+        "STRUCTURAL_REVIEW": 2,
+        "SYMBOLIC_FRONTEND_READY": 38
+      },
+      "certification_claim": false,
+      "passed": true
+    },
+    "family_census": {
+      "binding_family_count": 58,
+      "adapter_family_count": 30,
+      "execution_family_count": 5,
+      "structural_review_family_count": 2,
+      "semantic_scope_family_count": 2,
+      "certification_claim": false,
+      "passed": true
+    },
+    "contract_binding_skeleton": {
+      "binding_candidates": 36,
+      "readiness_counts": {
+        "TYPE_SKELETON_PARTIAL": 30,
+        "TYPE_SKELETON_READY": 6
+      },
+      "family_class_counts": {
+        "EXTERNAL_CALL": 8,
+        "GLOBAL_CONSTANT": 1,
+        "OBJECT_ATTRIBUTE": 62,
+        "OPENFISCA_ENTITY_LOOKUP": 86,
+        "SEMANTIC_LIBRARY_PRIMITIVE": 13
+      },
+      "inferred_type_counts": {
+        "ANY": 90,
+        "NUMERIC": 57,
+        "ORDERABLE": 23
+      },
+      "binding_registry_entries": 58,
+      "all_bindings_unresolved": true,
+      "certification_claim": false,
+      "passed": true
+    },
+    "semantic_source_evidence": {
+      "contract_candidates": 36,
+      "registry_entries": 58,
+      "binding_occurrences": 170,
+      "evidence_status_counts": {
+        "CONTEXT_EVIDENCE_ONLY": 62,
+        "NO_SOURCE_EVIDENCE": 4,
+        "SOURCE_EVIDENCE_IDENTIFIED": 93,
+        "SOURCE_EVIDENCE_PARTIAL": 11
+      },
+      "context_type_variation_entries": 4,
+      "semantic_types_resolved": 0,
+      "all_semantic_types_unresolved": true,
+      "certification_claim": false,
+      "passed": true
+    },
+    "symbol_definition_trace": {
+      "registry_entries": 58,
+      "binding_occurrences": 170,
+      "semantic_contract_candidates": 15,
+      "terminal_status_counts": {
+        "ATTRIBUTE_CONTEXT_BOUNDARY": 30,
+        "ATTRIBUTE_PARAMETER_BOUNDARY": 32,
+        "EXTERNAL_DEPENDENCY_BOUNDARY": 18,
+        "FUNCTION_PARAMETER_BOUNDARY": 25,
+        "LOCAL_ASSIGNMENT": 1,
+        "MIXED_TRACE_BOUNDARY": 60,
+        "NO_TRACE_EVIDENCE": 4
+      },
+      "contract_trace_readiness": {
+        "TRACE_COMPLETE": 8,
+        "TRACE_REVIEW": 7
+      },
+      "semantic_types_resolved": 0,
+      "all_semantic_types_unresolved": true,
+      "certification_claim": false,
+      "passed": true
+    },
+    "contract_readiness": {
+      "contract_candidates": 15,
+      "action_counts": {
+        "EXTERNAL_DEPENDENCY_LOCK_REQUIRED": 7,
+        "LOCAL_SOURCE_CONTRACT_DRAFT": 1,
+        "TRACE_REVIEW_REQUIRED": 7
+      },
+      "external_dependency_targets": 12,
+      "parameter_protocol_targets": 3,
+      "local_source_evidence_records": 2,
+      "semantic_types_resolved": 0,
+      "semantic_contracts_validated": 0,
+      "all_contracts_unresolved": true,
+      "certification_claim": false,
+      "passed": true
+    },
+    "python_name_resolution_hardening": {
+      "registry_entries": 58,
+      "binding_occurrences": 170,
+      "semantic_contract_candidates": 15,
+      "resolution_status_counts": {
+        "ATTRIBUTE_CONTEXT_BOUNDARY": 30,
+        "EXTERNAL_DEPENDENCY_BOUNDARY": 7,
+        "FUNCTION_PARAMETER_BOUNDARY": 81,
+        "LOCAL_ASSIGNMENT": 1,
+        "LOCAL_DEFINITION": 1,
+        "METHOD_CONTEXT_BOUNDARY": 3,
+        "PARAMETER_ATTRIBUTE_BOUNDARY": 32,
+        "PARAMETER_METHOD_BOUNDARY": 8,
+        "WILDCARD_IMPORT_BOUNDARY": 7
+      },
+      "contract_action_counts": {
+        "EXTERNAL_DEPENDENCY_LOCK_REQUIRED": 1,
+        "LOCAL_SOURCE_CONTRACT_DRAFT": 2,
+        "METHOD_CONTEXT_REVIEW": 2,
+        "PARAMETER_METHOD_PROTOCOL_DRAFT": 5,
+        "PARAMETER_PROTOCOL_DRAFT": 1,
+        "RESOLUTION_REVIEW_REQUIRED": 3,
+        "WILDCARD_EXPORT_REVIEW": 1
+      },
+      "previous_mixed_trace_occurrences": 60,
+      "current_unresolved_occurrences": 0,
+      "mixed_trace_status_eliminated": true,
+      "semantic_types_resolved": 0,
+      "semantic_contracts_validated": 0,
+      "certification_claim": false,
+      "passed": true
+    },
+    "protocol_dependency_closure": {
+      "binding_occurrences": 170,
+      "contract_candidates": 15,
+      "protocol_groups": 8,
+      "dependency_targets": 3,
+      "local_source_targets": 2,
+      "closure_action_counts": {
+        "DEPENDENCY_VERSION_RESOLUTION_REQUIRED": 3,
+        "LOCAL_DEFINITION_CONTRACT_SEED": 1,
+        "METHOD_RECEIVER_REVIEW": 2,
+        "PARAMETER_METHOD_PROTOCOL_SPEC_READY": 5,
+        "PARAMETER_PROTOCOL_SPEC_READY": 1,
+        "SPLIT_PROTOCOL_FAMILIES": 1,
+        "STDLIB_CONTRACT_SEED": 1,
+        "TRANSITIVE_FACTORY_REVIEW": 1
+      },
+      "dependency_lock_status_counts": {
+        "CONSTRAINT_DISCOVERED": 2,
+        "PYTHON_STDLIB": 1
+      },
+      "local_analysis_status_counts": {
+        "LOCAL_DEFINITION_SEED": 1,
+        "TRANSITIVE_FACTORY_REVIEW": 1
+      },
+      "semantic_types_resolved": 0,
+      "semantic_contracts_validated": 0,
+      "certification_claim": false,
+      "passed": true
+    },
+    "certification_engine_safety_audit": {
+      "target_definition_counts": {
+        "_reviewer_report": 2,
+        "_sha256_file": 3
+      },
+      "target_callsite_counts": {
+        "_reviewer_report": 2,
+        "_sha256_file": 8
+      },
+      "discovered_function_count": 20,
+      "relevant_source_file_count": 12,
+      "relevant_test_file_count": 13,
+      "reviewer_report_direct_parameter_subscripts": 15,
+      "semantic_contracts_validated": 0,
+      "certification_claim": false,
+      "passed": true
+    },
+    "certification_negative_path_hardening": {
+      "aggregate_reviewer_definition_count": 2,
+      "aggregate_reviewer_direct_subscripts": 6,
+      "audit_certification_pipeline_reviewer_direct_subscripts": [],
+      "benchmark_version": "0.11.0",
+      "certification_claim": false,
+      "certification_pipeline_reviewer_direct_subscripts": [],
+      "direct_critical_hashes": [],
+      "existence_guard_lines": {
+        "adapter_path": [
+          257
+        ],
+        "contract_path": [
+          263
+        ],
+        "external_path": [
+          251
+        ]
+      },
+      "missing_file_safe": true,
+      "passed": true,
+      "phase": "CERTIFICATION_NEGATIVE_PATH_HARDENING",
+      "reduced_failed_report_safe": true,
+      "runtime_probe_passed": true,
+      "safe_critical_hashes": [
+        {
+          "argument": "external_path",
+          "helper": "_sha256_or_missing",
+          "line": 394
+        },
+        {
+          "argument": "adapter_path",
+          "helper": "_sha256_or_missing",
+          "line": 395
+        },
+        {
+          "argument": "contract_path",
+          "helper": "_sha256_or_missing",
+          "line": 396
+        }
+      ],
+      "semantic_contracts_validated": 0
+    },
+    "semantic_ambiguity_policy": {
+      "frozen_before_terminal_outcome_assignment": true,
+      "terminal_outcomes": [
+        "CERTIFIED_A0",
+        "CERTIFIED_A1",
+        "CERTIFIED_A2",
+        "NOT_CERTIFIED_UNKNOWN",
+        "NOT_CERTIFIED_UNSUPPORTED",
+        "NOT_CERTIFIED_PROVENANCE",
+        "NOT_CERTIFIED_EXECUTION",
+        "NOT_CERTIFIED_SEMANTIC_AMBIGUITY"
+      ],
+      "certification_claim": false,
+      "passed": true
+    },
+    "first_semantic_contract_batch": {
+      "semantic_contracts_validated": 1,
+      "validated_semantic_contract_ids": [
+        "SC-D-DECIMAL-001"
+      ],
+      "structural_protocols_validated": 8,
+      "nb_enf_binding_resolved": true,
+      "nb_enf_definition_kind": "FUNCTION",
+      "dependency_locks_validated": 1,
+      "openfisca_core_version": "44.0.4",
+      "dependency_symbol_traces": 3,
+      "zero_discount_factory_traced": true,
+      "candidate_certifications_issued": 0,
+      "terminal_outcomes_assigned": 0,
+      "certification_claim": false,
+      "passed": true
+    },
+    "semantic_contract_closure": {
+      "new_semantic_contracts_validated": 4,
+      "cumulative_semantic_contracts_validated": 5,
+      "new_contract_ids": [
+        "SC-NB-ENF-001",
+        "SC-NP-MIN-001",
+        "SC-NP-NOT-001",
+        "SC-NP-WHERE-001"
+      ],
+      "numpy_alias_contracts_validated": 3,
+      "numpy_version": "1.26.4",
+      "numpy_wheel_sha256": "675d61ffbfa78604709862923189bad94014bef562cc35cf61d3a07bba02a7ed",
+      "nb_enf_contract_status": "VALIDATED_BOUNDED_EXHAUSTIVE",
+      "nb_enf_exhaustive_comparisons": 657,
+      "zero_discount_trace_status": "DEFAULT_SOURCE_AND_LOADER_RESOLVED_RUNTIME_CONFIGURATION_UNRESOLVED",
+      "zero_discount_semantic_contract_status": "UNRESOLVED_DYNAMIC_LOADING_CONTEXT",
+      "candidate_certifications_issued": 0,
+      "terminal_outcomes_assigned": 0,
+      "certification_claim": false,
+      "passed": true
+    },
+    "first_candidate_proof": {
+      "candidate_id": "aab5348ee173d6e3",
+      "proof_id": "PROOF-V011-OSCAR-SHIPPING-001",
+      "candidate_proof_status": "PROVED_SOURCE_SLICE",
+      "proof_digest_sha256": "52efb425b35c4c7262ae038a730ec572c0225feae3779cc9e8f8de5274797ed1",
+      "primitive_contracts_satisfied": true,
+      "source_execution_comparisons": 18,
+      "source_execution_mismatches": 0,
+      "mutant_mismatches": 18,
+      "symbolic_equivalences_proved": 1,
+      "terminal_outcome_assigned": false,
+      "candidate_certification_issued": false,
+      "certification_claim": false,
+      "passed": true
+    },
+    "candidate_frontier_status_counts": {
+      "NO_CONTRACT_OCCURRENCES": 54,
+      "PRIMITIVE_CONTRACTS_CLOSED": 1,
+      "STRUCTURAL_PROTOCOL_SEMANTICS_REMAIN": 11,
+      "UNRESOLVED_PRIMITIVES_REMAIN": 24
+    },
+    "first_terminal_certification": {
+      "candidate_id": "aab5348ee173d6e3",
+      "certificate_id": "CERT-V011-OSCAR-SHIPPING-001",
+      "terminal_outcome": "CERTIFIED_A2",
+      "certificate_digest": "39eac47f3c71bde8cddf3d35e0e56b5e4825e93eb10b5af23045c06341cfd033",
+      "terminal_outcomes_assigned": 1,
+      "terminal_outcomes_pending": 89,
+      "certificates_issued": 1,
+      "certificates_failed": 0,
+      "weighted_metrics_ready": false,
+      "final_certification_complete": false,
+      "passed": true
+    },
+    "structural_declarative_binding_closure": {
+      "checkout_verification_digest": "4a2406da9ee68368192114f3324d79397ecc68f3b184c3e0c12e689ae36ad797",
+      "checkout_sources": [
+        "openfisca_france"
+      ],
+      "structural_candidates_targeted": 11,
+      "structural_candidates_binding_closed": 11,
+      "structural_occurrences_bound": 35,
+      "declarative_bindings_created": 35,
+      "a1_proof_ready_candidates": 11,
+      "a1_proof_ready_candidate_ids": [
+        "19d233058899f735",
+        "244130d6ff9953d0",
+        "2dd784251ccc7dce",
+        "4b583322af591973",
+        "4d2eb60abd9c44c8",
+        "61cf0e4af667580e",
+        "78ca19c5e56cefa7",
+        "80788665d9905741",
+        "9ccbe1be4f59b3ce",
+        "b46358e6c871e1bf",
+        "b70f35ae381f7a3b"
+      ],
+      "terminal_outcomes_assigned_this_phase": 0,
+      "terminal_outcomes_pending": 89,
+      "certification_claim": false,
+      "passed": true
+    },
+    "a1_batch_symbolic_proofs": {
+      "a1_candidates_attempted": 11,
+      "a1_candidates_proved": 11,
+      "a1_candidates_review_required": 0,
+      "a1_certificates_issued": 11,
+      "a1_certified_candidate_ids": [
+        "19d233058899f735",
+        "244130d6ff9953d0",
+        "2dd784251ccc7dce",
+        "4b583322af591973",
+        "4d2eb60abd9c44c8",
+        "61cf0e4af667580e",
+        "78ca19c5e56cefa7",
+        "80788665d9905741",
+        "9ccbe1be4f59b3ce",
+        "b46358e6c871e1bf",
+        "b70f35ae381f7a3b"
+      ],
+      "terminal_outcomes_assigned_total": 12,
+      "terminal_outcomes_pending": 78,
+      "terminal_distribution": {
+        "CERTIFIED_A0": 0,
+        "CERTIFIED_A1": 11,
+        "CERTIFIED_A2": 1
+      },
+      "weighted_metrics_ready": false,
+      "final_certification_complete": false,
+      "passed": true
+    },
+    "remaining_cohort_sweep": {
+      "a0_worklist_size": 0,
+      "a2_worklist_size": 33,
+      "benchmark_version": "0.11.0",
+      "binding_worklist_size": 24,
+      "cohort_size": 90,
+      "controlled_execution_worklist_size": 17,
+      "final_certification_complete": false,
+      "frontier_route_cross_table": {
+        "NO_CONTRACT_OCCURRENCES | CONTROLLED_EXECUTION_REVIEW": 17,
+        "NO_CONTRACT_OCCURRENCES | EXPLICIT_ADAPTER": 33,
+        "NO_CONTRACT_OCCURRENCES | STRUCTURAL_REVIEW": 2,
+        "UNRESOLVED_PRIMITIVES_REMAIN | BINDING_DEFINITION": 24
+      },
+      "passed": true,
+      "pending_after": 76,
+      "pending_frontier_counts": {
+        "NO_CONTRACT_OCCURRENCES": 52,
+        "UNRESOLVED_PRIMITIVES_REMAIN": 24
+      },
+      "pending_workplan_route_counts": {
+        "BINDING_DEFINITION": 24,
+        "CONTROLLED_EXECUTION_REVIEW": 17,
+        "EXPLICIT_ADAPTER": 33,
+        "STRUCTURAL_REVIEW": 2
+      },
+      "phase": "REMAINING_COHORT_SWEEP",
+      "semantic_ambiguity_terminalized": 2,
+      "structural_review_worklist_size": 2,
+      "terminal_distribution": {
+        "CERTIFIED_A0": 0,
+        "CERTIFIED_A1": 11,
+        "CERTIFIED_A2": 1,
+        "NOT_CERTIFIED_EXECUTION": 0,
+        "NOT_CERTIFIED_PROVENANCE": 0,
+        "NOT_CERTIFIED_SEMANTIC_AMBIGUITY": 2,
+        "NOT_CERTIFIED_UNKNOWN": 0,
+        "NOT_CERTIFIED_UNSUPPORTED": 0
+      },
+      "terminalized_after": 14,
+      "terminalized_before": 12,
+      "unresolved_primitive_candidate_counts": {
+        "ZERO_DISCOUNT": 1,
+        "_totaldiff_guesstimate": 1,
+        "achat_revente": 1,
+        "age1": 1,
+        "age_max": 2,
+        "age_maximum": 1,
+        "aide_mobilite": 1,
+        "astype": 1,
+        "autre": 1,
+        "bic": 1,
+        "bnc": 1,
+        "cdd": 1,
+        "cdi": 1,
+        "chomeur": 2,
+        "code": 2,
+        "ctt": 1,
+        "delai_max": 1,
+        "duree_de_contrat_minimum": 1,
+        "duree_de_formation_minimum": 1,
+        "duree_trajet_minimum": 1,
+        "emploi_salarie_domicile": 2,
+        "enseignement_superieur": 1,
+        "entretien_embauche": 1,
+        "etudiant": 1,
+        "formation": 1,
+        "full_id": 2,
+        "gross": 1,
+        "hors_metropole": 1,
+        "internal_name": 1,
+        "is_staff": 1,
+        "locataire_foyer": 1,
+        "locataire_hlm": 1,
+        "locataire_meuble": 1,
+        "locataire_vide": 1,
+        "metropole": 1,
+        "name": 4,
+        "net": 1,
+        "period": 2,
+        "plafond": 1,
+        "possible_values": 1,
+        "rate": 2,
+        "recherche_emploi": 1,
+        "reprise_emploi": 1,
+        "taux": 2,
+        "tax": 1,
+        "unit_effective_price": 1
+      },
+      "weighted_metrics_ready": false
+    },
+    "next_batch_priority": {
+      "largest_batch": {
+        "candidate_count": 33,
+        "candidate_ids": [
+          "0f73ae8d15cf3408",
+          "1311d905af0ebcb5",
+          "13df73dbd2825f80",
+          "26a1af8837fe7ae4",
+          "2906fe3983a1ebe4",
+          "331f175e4aa92eef",
+          "34748d082751e0cc",
+          "4008a63ee1ef3b44",
+          "41ae4a7df4780001",
+          "4d7d61b18dde0ad5",
+          "53abfcd7d20a9cd6",
+          "674ea6fd35fa6c39",
+          "6d009b7961c5d116",
+          "6fd8bd69c26e7954",
+          "7013ce92618a1e33",
+          "75e61ddb4dde4f1a",
+          "7bc9603bfbda7dc9",
+          "7f523a5041034306",
+          "801278c4d91c2185",
+          "87d2f0b3b15f0ea6",
+          "8b3e90ca7b531556",
+          "8b98d0147c79c3fc",
+          "9603b9192132171c",
+          "9cc9063a46d23cde",
+          "d285ecd86455b150",
+          "d5b65e1d48eca4dd",
+          "e1cf29f02fa0dadc",
+          "e293930485085dac",
+          "e8850260c2763222",
+          "f234f0be14cf3ff3",
+          "f3ebe6cce422947e",
+          "f5d217dec0cf902b",
+          "fa377c649a747a7d"
+        ],
+        "frontier_counts": {
+          "NO_CONTRACT_OCCURRENCES": 33
+        },
+        "route": "EXPLICIT_ADAPTER"
+      },
+      "pending_candidates": 76,
+      "priority_order": [
+        {
+          "candidate_count": 33,
+          "candidate_ids": [
+            "0f73ae8d15cf3408",
+            "1311d905af0ebcb5",
+            "13df73dbd2825f80",
+            "26a1af8837fe7ae4",
+            "2906fe3983a1ebe4",
+            "331f175e4aa92eef",
+            "34748d082751e0cc",
+            "4008a63ee1ef3b44",
+            "41ae4a7df4780001",
+            "4d7d61b18dde0ad5",
+            "53abfcd7d20a9cd6",
+            "674ea6fd35fa6c39",
+            "6d009b7961c5d116",
+            "6fd8bd69c26e7954",
+            "7013ce92618a1e33",
+            "75e61ddb4dde4f1a",
+            "7bc9603bfbda7dc9",
+            "7f523a5041034306",
+            "801278c4d91c2185",
+            "87d2f0b3b15f0ea6",
+            "8b3e90ca7b531556",
+            "8b98d0147c79c3fc",
+            "9603b9192132171c",
+            "9cc9063a46d23cde",
+            "d285ecd86455b150",
+            "d5b65e1d48eca4dd",
+            "e1cf29f02fa0dadc",
+            "e293930485085dac",
+            "e8850260c2763222",
+            "f234f0be14cf3ff3",
+            "f3ebe6cce422947e",
+            "f5d217dec0cf902b",
+            "fa377c649a747a7d"
+          ],
+          "frontier_counts": {
+            "NO_CONTRACT_OCCURRENCES": 33
+          },
+          "route": "EXPLICIT_ADAPTER"
+        },
+        {
+          "candidate_count": 24,
+          "candidate_ids": [
+            "019d3a3df4514bac",
+            "051c7ef379178030",
+            "0f2fcfc48ffea4af",
+            "0fe04e3572c7203e",
+            "1458ed128652b359",
+            "1b63ce825a129c0a",
+            "28b1b63cc241f487",
+            "460c0ee11314458e",
+            "4ab5aeba4c85b4c0",
+            "4c7af63af2f89319",
+            "55fe61b67000b53a",
+            "5ea2122f340b1558",
+            "62aa728fdef86058",
+            "635fe113a02cf90b",
+            "972b76d53a12b8ad",
+            "a74d4580a9effb73",
+            "cb937575ad9957d1",
+            "d033593e9fc6fbc6",
+            "d821bbc9b1df03ae",
+            "db6bd6fe0c9b8cd4",
+            "dfd34c86bcd9bfa1",
+            "eb41eb351df073ef",
+            "eff10167a5398559",
+            "fd4702ed1d79ff1f"
+          ],
+          "frontier_counts": {
+            "UNRESOLVED_PRIMITIVES_REMAIN": 24
+          },
+          "route": "BINDING_DEFINITION"
+        },
+        {
+          "candidate_count": 17,
+          "candidate_ids": [
+            "03e2adf4e4f323b1",
+            "1a2de6edb11465fe",
+            "2309036b0c69ad48",
+            "3fd2d8b8a76b4834",
+            "4b57e2d73c695a41",
+            "63e7979762bf860b",
+            "7460029971aad8de",
+            "7cf281a33e5781df",
+            "8048a564541f5408",
+            "882c5eae0d8fd4ec",
+            "8a754dadf1672d0a",
+            "91b2dc32504282fc",
+            "a79d9687185720aa",
+            "b2996c3dd81aca55",
+            "bcb091a940a8d0dd",
+            "d7f578c3a5f20b8a",
+            "eb12d3a44210a486"
+          ],
+          "frontier_counts": {
+            "NO_CONTRACT_OCCURRENCES": 17
+          },
+          "route": "CONTROLLED_EXECUTION_REVIEW"
+        },
+        {
+          "candidate_count": 2,
+          "candidate_ids": [
+            "a09e038870c9b436",
+            "d28505f251600d52"
+          ],
+          "frontier_counts": {
+            "NO_CONTRACT_OCCURRENCES": 2
+          },
+          "route": "STRUCTURAL_REVIEW"
+        }
+      ]
+    },
+    "a2_adapter_authoring": {
+      "authoring_route_family_counts": {
+        "V1_SCALAR_EXPRESSION": 9,
+        "V2_STRAIGHT_LINE": 9,
+        "V3_BRANCHING": 12
+      },
+      "benchmark_version": "0.11.0",
+      "candidate_count": 33,
+      "certification_claim": false,
+      "complexity_counts": {
+        "HIGH": 15,
+        "LOW": 4,
+        "MEDIUM": 14
+      },
+      "family_count": 30,
+      "passed": true,
+      "pending_total": 76,
+      "phase": "A2_AUTHORING_PROFILE",
+      "source_counts": {
+        "django_oscar": 15,
+        "openfisca_france": 5,
+        "pretix": 13
+      },
+      "source_verified_candidates": 33,
+      "terminal_outcomes_assigned": 0,
+      "terminalized_total": 14
+    },
+    "a2_v1_scalar_proofs": {
+      "benchmark_version": "0.11.0",
+      "certificates_issued": 4,
+      "final_certification_complete": false,
+      "non_scalar_review_required": 7,
+      "passed": true,
+      "pending_after": 72,
+      "phase": "A2_V1_SCALAR_PROOFS",
+      "scalar_candidates_attempted": 4,
+      "scalar_candidates_proved": 4,
+      "terminal_distribution": {
+        "CERTIFIED_A1": 11,
+        "CERTIFIED_A2": 5,
+        "NOT_CERTIFIED_SEMANTIC_AMBIGUITY": 2
+      },
+      "terminalized_after": 18,
+      "terminalized_before": 14,
+      "v1_candidates": 11,
+      "weighted_metrics_ready": false
+    },
+    "a2_v2_straight_proofs": {
+      "benchmark_version": "0.11.0",
+      "certificates_issued": 3,
+      "complex_scalar_review": 2,
+      "final_certification_complete": false,
+      "non_scalar_review": 4,
+      "passed": true,
+      "pending_after": 69,
+      "phase": "A2_V2_STRAIGHT_LINE",
+      "scalar_candidates_attempted": 3,
+      "scalar_candidates_proved": 3,
+      "terminal_distribution": {
+        "CERTIFIED_A1": 11,
+        "CERTIFIED_A2": 8,
+        "NOT_CERTIFIED_SEMANTIC_AMBIGUITY": 2
+      },
+      "terminalized_after": 21,
+      "terminalized_before": 18,
+      "v2_candidates_reviewed": 9,
+      "weighted_metrics_ready": false
+    },
+    "a2_v3_branching_proofs": {
+      "benchmark_version": "0.11.0",
+      "certificates_issued": 5,
+      "final_certification_complete": false,
+      "passed": true,
+      "pending_after": 64,
+      "phase": "A2_V3_BRANCHING",
+      "review_required": 8,
+      "scalar_candidates_attempted": 5,
+      "scalar_candidates_proved": 5,
+      "terminal_distribution": {
+        "CERTIFIED_A1": 11,
+        "CERTIFIED_A2": 13,
+        "NOT_CERTIFIED_SEMANTIC_AMBIGUITY": 2
+      },
+      "terminalized_after": 26,
+      "terminalized_before": 21,
+      "v3_candidates_reviewed": 13,
+      "weighted_metrics_ready": false
+    },
+    "a2_residual_closure": {
+      "a2_remaining_worklist": [
+        "53abfcd7d20a9cd6",
+        "7bc9603bfbda7dc9"
+      ],
+      "benchmark_version": "0.11.0",
+      "complex_scalar_pending": 2,
+      "final_certification_complete": false,
+      "passed": true,
+      "pending_after": 45,
+      "phase": "A2_RESIDUAL_CLOSURE",
+      "residual_a2_candidates": 21,
+      "scalar_projections_attempted": 2,
+      "scalar_projections_proved": 2,
+      "terminal_distribution": {
+        "CERTIFIED_A1": 11,
+        "CERTIFIED_A2": 15,
+        "NOT_CERTIFIED_SEMANTIC_AMBIGUITY": 2,
+        "NOT_CERTIFIED_UNSUPPORTED": 17
+      },
+      "terminalized_after": 45,
+      "terminalized_before": 26,
+      "unsupported_terminalized": 17,
+      "weighted_metrics_ready": false
+    },
+    "a1_leaf_binding_batch": {
+      "benchmark_version": "0.11.0",
+      "candidates_attempted": 12,
+      "candidates_proved": 12,
+      "certificates_issued": 12,
+      "final_certification_complete": false,
+      "passed": true,
+      "pending_after": 33,
+      "phase": "A1_DECLARATIVE_LEAF_BINDINGS",
+      "review_required": 0,
+      "terminalized_after": 57,
+      "terminalized_before": 45,
+      "weighted_metrics_ready": false
+    },
+    "a1_remaining_binding_proofs": {
+      "benchmark_version": "0.11.0",
+      "candidates_attempted": 12,
+      "candidates_proved": 10,
+      "certificates_issued": 10,
+      "final_certification_complete": false,
+      "passed": true,
+      "pending_after": 23,
+      "phase": "A1_REMAINING_DECLARATIVE_BINDINGS",
+      "proved_candidate_ids": [
+        "019d3a3df4514bac",
+        "051c7ef379178030",
+        "1458ed128652b359",
+        "4c7af63af2f89319",
+        "635fe113a02cf90b",
+        "a74d4580a9effb73",
+        "cb937575ad9957d1",
+        "dfd34c86bcd9bfa1",
+        "eff10167a5398559",
+        "fd4702ed1d79ff1f"
+      ],
+      "review_candidate_ids": [
+        "972b76d53a12b8ad",
+        "eb41eb351df073ef"
+      ],
+      "review_required": 2,
+      "terminalized_after": 67,
+      "terminalized_before": 57,
+      "weighted_metrics_ready": false
+    },
+    "residual_binding_closure": {
+      "a2_attempted": 1,
+      "a2_certified": 1,
+      "benchmark_version": "0.11.0",
+      "candidates_reviewed": 2,
+      "final_certification_complete": false,
+      "passed": true,
+      "pending_after": 21,
+      "phase": "RESIDUAL_BINDING_CLOSURE",
+      "terminalized_after": 69,
+      "terminalized_before": 67,
+      "unsupported_terminalized": 1,
+      "weighted_metrics_ready": false
+    },
+    "controlled_state_closure": {
+      "benchmark_version": "0.11.0",
+      "candidates_reviewed": 8,
+      "controlled_execution_established": 8,
+      "final_certification_complete": false,
+      "not_certified_execution": 0,
+      "not_certified_unsupported": 8,
+      "passed": true,
+      "pending_after": 13,
+      "phase": "CONTROLLED_STATE_EXECUTION_CLOSURE",
+      "terminalized_after": 77,
+      "terminalized_before": 69,
+      "weighted_metrics_ready": false
+    }
+  }
+}

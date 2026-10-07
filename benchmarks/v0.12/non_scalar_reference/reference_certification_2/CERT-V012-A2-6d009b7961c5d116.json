@@ -1,0 +1,24 @@
+{
+  "all_required_gates_pass": true,
+  "candidate_id": "6d009b7961c5d116",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_counterexample_replay": {
+    "correct": "{\"items\":[{\"identity\":2,\"kind\":\"REFERENCE\",\"type_name\":\"Offer\"},{\"identity\":3,\"kind\":\"REFERENCE\",\"type_name\":\"Offer\"},{\"identity\":1,\"kind\":\"REFERENCE\",\"type_name\":\"Offer\"}],\"kind\":\"LIST\"}",
+    "mutant": "{\"items\":[{\"identity\":1,\"kind\":\"REFERENCE\",\"type_name\":\"Offer\"},{\"identity\":3,\"kind\":\"REFERENCE\",\"type_name\":\"Offer\"},{\"identity\":2,\"kind\":\"REFERENCE\",\"type_name\":\"Offer\"}],\"kind\":\"LIST\"}",
+    "passed": true
+  },
+  "formal_mutant_refutation": {
+    "model": "[id_a = 0, priority_a = 1, priority_b = 0, id_b = 1]",
+    "property": "descending and ascending priority order differ when priorities are distinct",
+    "solver_result": "SAT"
+  },
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-A5-A2-CERT2-1",
+  "semantic_capability": "ORDERED_SEQUENCE_OF_TYPED_REFERENCES",
+  "source_equivalence": {
+    "method": "canonical executable AST identity after explicit dependency substitution",
+    "proved": true
+  },
+  "source_slice_sha256": "be345aa55cc723499a749e69bcb7b86a2341585edaf2e848cfd47e11bb296f2e",
+  "v012_outcome": "CERTIFIED_A2"
+}

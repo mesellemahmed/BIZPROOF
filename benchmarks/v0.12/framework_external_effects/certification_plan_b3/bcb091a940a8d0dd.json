@@ -1,0 +1,25 @@
+{
+  "candidate_id": "bcb091a940a8d0dd",
+  "certification_batch": "STATE_RETURN_BATCH",
+  "class_name": "BasketView",
+  "function_name": "get_formset_kwargs",
+  "lineno": 42,
+  "matched_provenance_hash": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+  "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\basket\\views.py",
+  "provenance_resolution": "STRUCTURED_DIRECT_HASH_RESOLVED",
+  "reason_codes": "FRAMEWORK_DICT_MUTATION_OUTSIDE_FORMAL_SUBSET",
+  "semantic_observation": "extensional returned mapping after adding request.strategy",
+  "semantic_route": "SUPER_MAPPING_EXTENSION",
+  "source": "def get_formset_kwargs(self):\n        kwargs = super().get_formset_kwargs()\n        kwargs[\"strategy\"] = self.request.strategy\n        return kwargs",
+  "source_sha256": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+  "structural_profile": {
+    "attribute_writes": [],
+    "branch_count": 0,
+    "calls": [
+      "get_formset_kwargs",
+      "super"
+    ],
+    "return_count": 1,
+    "subscript_writes": 1
+  }
+}

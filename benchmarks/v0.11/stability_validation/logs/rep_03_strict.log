@@ -1,0 +1,16 @@
+Matched A2 baseline
+Primary candidates: 6
+
+BIZPROOF frozen:
+  mutants disproved: 6 / 6
+
+Hypothesis:
+  budget=100 detected=6/6 unknown=0
+  budget=1000 detected=6/6 unknown=0
+  budget=10000 detected=6/6 unknown=0
+
+CrossHair:
+  budget=0.5 detected=3/6 unknown=0
+  budget=2.0 detected=4/6 unknown=0
+
+MATCHED BASELINE EXECUTION: PASS

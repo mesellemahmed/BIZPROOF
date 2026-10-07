@@ -1,0 +1,39 @@
+{
+  "all_required_gates_pass": true,
+  "authoritative_source": {
+    "class_harness_only": true,
+    "correct_source_ast_rewritten": false,
+    "matches_frozen_plan": true,
+    "sha256": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72"
+  },
+  "candidate_id": "bcb091a940a8d0dd",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_mutant_replay": true,
+  "formal_mutant_refutation": {
+    "model": "[pre_has_strategy = False]",
+    "property": "there exists a delegated mapping without strategy where required extension differs from the OMIT_STRATEGY_EXTENSION mutant",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "function_name": "get_formset_kwargs",
+  "mutant": {
+    "fault": "the mapping returned by super is returned without injecting request.strategy",
+    "name": "OMIT_STRATEGY_EXTENSION"
+  },
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-B3-CERT1-A2-1",
+  "scope": {
+    "certified": "the prospectively frozen semantic projection of the exact authoritative business source",
+    "not_certified": [
+      "correctness of Django/Oscar/Pretix framework implementations",
+      "unobserved persistence or middleware behavior",
+      "arbitrary external dependencies outside the frozen observation boundary"
+    ]
+  },
+  "semantic_capability": "SUPER_MAPPING_EXTENSION",
+  "source_projection_equivalence": {
+    "branch_basis": 1,
+    "controlled_exact_source_replay": true
+  },
+  "v012_outcome": "CERTIFIED_A2"
+}

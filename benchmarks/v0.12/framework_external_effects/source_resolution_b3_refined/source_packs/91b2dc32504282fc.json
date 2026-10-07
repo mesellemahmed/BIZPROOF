@@ -1,0 +1,326 @@
+{
+  "authoritative_source": true,
+  "candidate_id": "91b2dc32504282fc",
+  "certification_started": false,
+  "class_name": "LineDiscountRegistry",
+  "end_lineno": 221,
+  "fingerprints": {
+    "ast_dump": "20ccbedea033cf4698bc0dab52b59c80106a8d43565a5f1bb8a1b875a59a9db4",
+    "ast_unparse": "8c615f29a84d19818817d7c11d2c955b6db82f0f7783ce2f65700caf77071b67",
+    "dedent_strip": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+    "dedent_strip_newline": "62156758869d8447e85f09f7ded2384d355530941af471edd5af57dedf2b8f61",
+    "lf": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+    "raw": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475"
+  },
+  "function_name": "discount",
+  "lineno": 215,
+  "matched_hash": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+  "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\basket\\utils.py",
+  "project": "django_oscar",
+  "reason_codes": "MULTI_STATE_MUTATION_OUTSIDE_FORMAL_SUBSET",
+  "recovery_claim": false,
+  "resolution": "STRUCTURED_DIRECT_HASH_RESOLVED",
+  "source": "def discount(self, amount, quantity, incl_tax=True, offer=None):\n        self._discounts.append(DiscountApplication(amount, quantity, incl_tax, offer))\n        self.consume(quantity, offer=offer)\n        if incl_tax:\n            self._discount_incl_tax = None\n        else:\n            self._discount_excl_tax = None",
+  "support_records": [
+    {
+      "direct_hashes": [
+        "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+        "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_state_closure\\execution_evidence.jsonl",
+      "function_names": [
+        "discount"
+      ],
+      "hashes": [
+        "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+        "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+      ],
+      "object_path": "$line[5]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        },
+        {
+          "key_path": "$.execution_evidence_digest",
+          "value": "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+        },
+        {
+          "key_path": "$.function",
+          "value": "discount"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+        "5fec4457e1d6a0a9b67a9c1a6b4002097905014884df147f6e8839dd27c39b64",
+        "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_state_closure\\negative_outcomes.jsonl",
+      "function_names": [
+        "discount"
+      ],
+      "hashes": [
+        "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+        "5fec4457e1d6a0a9b67a9c1a6b4002097905014884df147f6e8839dd27c39b64",
+        "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+      ],
+      "object_path": "$line[5]",
+      "path_hints": [
+        "src/oscar/apps/basket/utils.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        },
+        {
+          "key_path": "$.execution_evidence_digest",
+          "value": "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "5fec4457e1d6a0a9b67a9c1a6b4002097905014884df147f6e8839dd27c39b64"
+        },
+        {
+          "key_path": "$.source.class",
+          "value": "LineDiscountRegistry"
+        },
+        {
+          "key_path": "$.source.file",
+          "value": "src/oscar/apps/basket/utils.py"
+        },
+        {
+          "key_path": "$.source.function",
+          "value": "discount"
+        },
+        {
+          "key_path": "$.source.function_sha256",
+          "value": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475"
+        },
+        {
+          "key_path": "$.source.source_id",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "003d9efbfee890158dc4e6557c6d90da07eb3462c9e4771b0b82df73755e8d3a",
+        "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+        "4ee54178efed633f82c4ecea7f251f6806407fdd13b58041b0d48490ccc65ff2"
+      ],
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "function_names": [
+        "discount"
+      ],
+      "hashes": [
+        "003d9efbfee890158dc4e6557c6d90da07eb3462c9e4771b0b82df73755e8d3a",
+        "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+        "4ee54178efed633f82c4ecea7f251f6806407fdd13b58041b0d48490ccc65ff2"
+      ],
+      "object_path": "$line[21]",
+      "path_hints": [
+        "docs/source/howto/how_to_create_a_custom_benefit.rst",
+        "docs/source/ref/apps/offer.rst",
+        "docs/source/ref/settings.rst",
+        "docs/source/ref/templatetags.rst",
+        "docs/source/releases/v0.2.x.rst",
+        "docs/source/releases/v0.3.x.rst",
+        "docs/source/releases/v0.5.rst",
+        "docs/source/releases/v1.6.rst",
+        "src/oscar/apps/basket/utils.py",
+        "tests/functional/checkout/__init__.py",
+        "tests/integration/offer/test_absolute_benefit.py",
+        "tests/integration/offer/test_combination.py",
+        "tests/integration/offer/test_fixed_price_benefit.py",
+        "tests/integration/offer/test_fixed_unit_benefit.py",
+        "tests/integration/offer/test_multibuy_benefit.py",
+        "tests/integration/offer/test_percentage_benefit.py",
+        "tests/integration/offer/test_post_order_action.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate.business_keyword_sources.class[0]",
+          "value": "discount"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.function[0]",
+          "value": "discount"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.path[0]",
+          "value": "basket"
+        },
+        {
+          "key_path": "$.candidate.evidence_link_modes.doc:EXACT_FUNCTION_TEXT",
+          "value": "8"
+        },
+        {
+          "key_path": "$.candidate.evidence_link_modes.test:EXACT_FUNCTION_SYMBOL",
+          "value": "15"
+        },
+        {
+          "key_path": "$.candidate.file",
+          "value": "src/oscar/apps/basket/utils.py"
+        },
+        {
+          "key_path": "$.candidate.function",
+          "value": "discount"
+        },
+        {
+          "key_path": "$.candidate.function_sha256",
+          "value": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475"
+        },
+        {
+          "key_path": "$.candidate.source_file_sha256",
+          "value": "4ee54178efed633f82c4ecea7f251f6806407fdd13b58041b0d48490ccc65ff2"
+        },
+        {
+          "key_path": "$.candidate.source_id",
+          "value": "django_oscar"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[0]",
+          "value": "docs/source/howto/how_to_create_a_custom_benefit.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[1]",
+          "value": "docs/source/ref/apps/offer.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[2]",
+          "value": "docs/source/ref/settings.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[3]",
+          "value": "docs/source/ref/templatetags.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[4]",
+          "value": "docs/source/releases/v0.2.x.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[5]",
+          "value": "docs/source/releases/v0.3.x.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[6]",
+          "value": "docs/source/releases/v0.5.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[7]",
+          "value": "docs/source/releases/v1.6.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_test_files[0]",
+          "value": "tests/functional/checkout/__init__.py"
+        },
+        {
+          "key_path": "$.candidate.supporting_test_files[1]",
+          "value": "tests/integration/offer/test_absolute_benefit.py"
+        },
+        {
+          "key_path": "$.candidate.supporting_test_files[2]",
+          "value": "tests/integration/offer/test_combination.py"
+        },
+        {
+          "key_path": "$.candidate.supporting_test_files[3]",
+          "value": "tests/integration/offer/test_fixed_price_benefit.py"
+        },
+        {
+          "key_path": "$.candidate.supporting_test_files[4]",
+          "value": "tests/integration/offer/test_fixed_unit_benefit.py"
+        },
+        {
+          "key_path": "$.candidate.supporting_test_files[5]",
+          "value": "tests/integration/offer/test_multibuy_benefit.py"
+        },
+        {
+          "key_path": "$.candidate.supporting_test_files[6]",
+          "value": "tests/integration/offer/test_percentage_benefit.py"
+        },
+        {
+          "key_path": "$.candidate.supporting_test_files[7]",
+          "value": "tests/integration/offer/test_post_order_action.py"
+        },
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        },
+        {
+          "key_path": "$.selection_hash",
+          "value": "003d9efbfee890158dc4e6557c6d90da07eb3462c9e4771b0b82df73755e8d3a"
+        },
+        {
+          "key_path": "$.stratum.source_id",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+        "5fec4457e1d6a0a9b67a9c1a6b4002097905014884df147f6e8839dd27c39b64",
+        "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_state_closure\\negative_evidence\\91b2dc32504282fc.json",
+      "function_names": [
+        "discount"
+      ],
+      "hashes": [
+        "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+        "5fec4457e1d6a0a9b67a9c1a6b4002097905014884df147f6e8839dd27c39b64",
+        "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+      ],
+      "object_path": "$",
+      "path_hints": [
+        "src/oscar/apps/basket/utils.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "91b2dc32504282fc"
+        },
+        {
+          "key_path": "$.execution_evidence_digest",
+          "value": "624e02296a841bf74b40202ffb1ca3f9262478323658cd892bedee85ed2e26a1"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "5fec4457e1d6a0a9b67a9c1a6b4002097905014884df147f6e8839dd27c39b64"
+        },
+        {
+          "key_path": "$.source.class",
+          "value": "LineDiscountRegistry"
+        },
+        {
+          "key_path": "$.source.file",
+          "value": "src/oscar/apps/basket/utils.py"
+        },
+        {
+          "key_path": "$.source.function",
+          "value": "discount"
+        },
+        {
+          "key_path": "$.source.function_sha256",
+          "value": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475"
+        },
+        {
+          "key_path": "$.source.source_id",
+          "value": "django_oscar"
+        }
+      ]
+    }
+  ]
+}

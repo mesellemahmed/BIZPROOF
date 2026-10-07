@@ -1,0 +1,53 @@
+{
+  "adapter": {
+    "function": "adapt_completed_payment_sum",
+    "function_sha256": "afc2f23e70b5f5cc593dc6c397e16fab2be92bcdde5b81be24214d25d8411b1c",
+    "mutant_function": "mutant_completed_payment_sum",
+    "mutant_function_sha256": "e9d2bb8e3314aba97fa0c6a5ea14f0070a11a5e2289a3703e7f2f5340c1c702e",
+    "semantic_adapter": "COMPLETED_PAYMENT_SUM"
+  },
+  "assistance_level": "A2",
+  "authoring_mode": "EXPLICIT_MANUAL_SCALAR_SEMANTIC_ADAPTER",
+  "candidate_id": "8b98d0147c79c3fc",
+  "certificate_digest": "6351e9f2952d67c7b8a340df310d99e086f3740d2f2c2d091891b6560c5b6edd",
+  "certificate_id": "CERT-V011-A2-8B98D0147C79C3FC",
+  "claim_scope": "Certification applies only to the explicit scalar semantic projection and declared source-to-adapter bindings. It does not certify database, ORM, localization or framework behavior outside that projection.",
+  "evidence": {
+    "proof_digest": "a3c3905fdaed6625c5e232f68100700bee4acc6e0cf1e5259292795d4854c2ca",
+    "runtime": {
+      "adapter_mismatches": 0,
+      "comparisons": 16,
+      "mutant_mismatches": 8,
+      "validation_domain": "payment/refund aggregate scalars in {None,0,4.50,10.00}"
+    },
+    "symbolic": {
+      "correct_proved": true,
+      "correct_solver_status": "unsat",
+      "mutant_disproved": true,
+      "mutant_solver_status": "sat",
+      "symbolic_domain": "unrestricted numeric aggregate scalars after source None-to-zero binding"
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 75,
+    "text": "- `CERTIFIED_A2`: certified with an explicit human-authored scalar semantic adapter."
+  },
+  "schema_version": "BIZPROOF-V0.11-A2-CERTIFICATE-1",
+  "semantic_binding_scope": "payment_sum and refund_sum are the scalar aggregate outputs of the locked source queries; missing aggregate values bind to Decimal zero exactly as in the source.",
+  "source": {
+    "class": "OrderChangeManager",
+    "file": "src/pretix/base/services/orders.py",
+    "function": "completed_payment_sum",
+    "function_sha256": "ab90677d560c3d540b5de81f3246be1b1745dbf66c2c8c9829170bf6edcaad49",
+    "lines": [
+      2899,
+      2906
+    ],
+    "source_file_sha256": "6c5127e66313b1ca4f5a568897ec41699b3aa084fb5ef2ad292d0b459d7af778",
+    "source_id": "pretix"
+  },
+  "status": "CERTIFIED_A2",
+  "terminal_outcome": "CERTIFIED_A2",
+  "terminal_outcome_assigned": true
+}

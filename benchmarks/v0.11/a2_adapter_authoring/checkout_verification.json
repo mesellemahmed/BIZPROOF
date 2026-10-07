@@ -1,0 +1,25 @@
+{
+  "all_passed": true,
+  "candidate_count": 33,
+  "manifest_digest": "79a775eec60d1ee7c797fa74bf9953cfd1218f43bbe7eac44fbb3fbda20372e0",
+  "records": [
+    {
+      "actual_commit": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+      "expected_commit": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+      "passed": true,
+      "source_id": "django_oscar"
+    },
+    {
+      "actual_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+      "expected_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+      "passed": true,
+      "source_id": "openfisca_france"
+    },
+    {
+      "actual_commit": "2af8d29ca99510612fdb005d4ec7d39d83aed6ba",
+      "expected_commit": "2af8d29ca99510612fdb005d4ec7d39d83aed6ba",
+      "passed": true,
+      "source_id": "pretix"
+    }
+  ]
+}

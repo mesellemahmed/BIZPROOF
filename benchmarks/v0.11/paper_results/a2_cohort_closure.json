@@ -1,0 +1,28 @@
+{
+  "a2_total": 17,
+  "deferred_secondary": {
+    "candidate_ids": [
+      "4008a63ee1ef3b44"
+    ],
+    "count": 1,
+    "reason": "Finite-set/domain-specific enum case kept outside the predeclared 14-case paper benchmark."
+  },
+  "latest_manifest_ready": 17,
+  "original_freeze_matched": 15,
+  "paper_matched_breakdown": {
+    "EXTENDED_TYPED_SUPPORTED": 8,
+    "STRICT_CORE": 6
+  },
+  "paper_matched_execution": 14,
+  "partition_complete": true,
+  "recovered_after_original_freeze": {
+    "candidate_ids": [
+      "53abfcd7d20a9cd6",
+      "972b76d53a12b8ad"
+    ],
+    "count": 2,
+    "reason": "Harness pairs were recovered after the original selection freeze and were therefore not promoted into the primary paper benchmark."
+  },
+  "schema_version": "BIZPROOF-V0.11-A2-COHORT-CLOSURE-1",
+  "selection_changed_using_baseline_outcomes": false
+}

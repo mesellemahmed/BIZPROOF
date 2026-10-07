@@ -1,0 +1,7 @@
+method,budget,detected,cases,detection_rate,runtime_seconds,guarantee
+BIZPROOF,frozen-proof,14,14,1.0,,formal source-equivalence plus mutant disproof
+Hypothesis,100,14,14,1.0,1.9760870000000001,counterexample search; absence is inconclusive
+Hypothesis,1000,14,14,1.0,0.7985169999999999,counterexample search; absence is inconclusive
+Hypothesis,10000,14,14,1.0,0.8130999999999999,counterexample search; absence is inconclusive
+CrossHair,0.5,5,14,0.35714285714285715,15.552223000000001,symbolic assertion search; absence is inconclusive
+CrossHair,2.0,7,14,0.5,17.13859,symbolic assertion search; absence is inconclusive

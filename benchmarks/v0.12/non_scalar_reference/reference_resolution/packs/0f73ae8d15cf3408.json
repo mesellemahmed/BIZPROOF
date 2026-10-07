@@ -1,0 +1,11 @@
+{
+  "candidate_id": "0f73ae8d15cf3408",
+  "evidence_file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+  "function_name": "ticket_download_date",
+  "key_path": "source_slice",
+  "reason_code": "REFERENCE_DATE_OR_NONE",
+  "selection_rule": "smallest parseable evidence item containing exactly one complete function",
+  "sha256": "77e520b000e302b92a67ca035d10b5ddb88ae67b71f1457aafb6212530d9f8c6",
+  "source": "def ticket_download_date(self):\n        \"\"\"\n        Returns the first date the tickets for this order can be downloaded or ``None`` if there is no\n        restriction.\n        \"\"\"\n        dl_date = self.event.settings.get('ticket_download_date', as_type=RelativeDateWrapper)\n        if dl_date:\n            if self.event.has_subevents:\n                dates = [\n                    dl_date.datetime(se)\n                    for se in self.event.subevents.filter(id__in=self.positions.values_list('subevent', flat=True))\n                ]\n                dl_date = min(dates) if dates else None\n            else:\n                dl_date = dl_date.datetime(self.event)\n        return dl_date",
+  "source_length": 688
+}

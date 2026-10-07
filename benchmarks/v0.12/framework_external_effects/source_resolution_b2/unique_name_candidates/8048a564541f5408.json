@@ -1,0 +1,15 @@
+{
+  "ast_digest": "ac12e26b450d09c372aa5b441d24637983770b522a248509898666ce80e71eeb",
+  "candidate_id": "8048a564541f5408",
+  "class_name": "OrderChangeManager",
+  "end_lineno": 1810,
+  "function_hint": "regenerate_secret",
+  "function_name": "regenerate_secret",
+  "lineno": 1809,
+  "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\services\\orders.py",
+  "project": "pretix",
+  "recovery_claim": false,
+  "requires_manual_or_provenance_confirmation": true,
+  "resolution": "UNIQUE_NAME_CANDIDATE",
+  "source": "def regenerate_secret(self, position: OrderPosition):\n        self._operations.append(self.RegenerateSecretOperation(position))"
+}

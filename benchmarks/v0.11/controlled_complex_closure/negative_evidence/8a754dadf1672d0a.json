@@ -1,0 +1,15 @@
+{
+  "candidate_id": "8a754dadf1672d0a",
+  "certification_claim": false,
+  "class": "Order",
+  "controlled_execution_status": "ESTABLISHED",
+  "execution_cases": 3,
+  "execution_probe_digest": "5503043894d03188fa287d002a7aacb6319d41c65d2e857d8147e9118fc27be6",
+  "function": "positions_with_tickets",
+  "function_sha256": "6333627389e891ba1a54761c7ab06169a3cd2fca9a647e81a3154760db0824f7",
+  "interpretation": "Controlled execution is established, but certification is withheld because the required mutable framework, object, service, cache, signal, request, model, or collection semantics exceed the frozen V0.11 formal subset.",
+  "negative_evidence_digest": "0b2698908553146b26346665de21b88f9dd23d47ebcd44d384c62b3fc2009ffd",
+  "reason_code": "PLUGIN_SIGNAL_SET_SEMANTICS_OUTSIDE_FORMAL_SUBSET",
+  "source": "pretix",
+  "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+}

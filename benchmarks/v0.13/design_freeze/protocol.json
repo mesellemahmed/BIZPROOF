@@ -1,0 +1,49 @@
+{
+  "A2_requirements": {
+    "NO_COUNTEREXAMPLE_is_proof": false,
+    "formal_mutant_refutation": true,
+    "projection_scope_reported": true
+  },
+  "architecture": [
+    "SOURCE_FRONTEND",
+    "CONTEXT_EXTRACTOR",
+    "CAPABILITY_RESOLVER",
+    "SEMANTIC_PROJECTION",
+    "CONCRETE_REPLAY",
+    "MUTANT_ENGINE",
+    "FORMAL_REFUTATION",
+    "VERDICT_AGGREGATOR",
+    "EVIDENCE_SERIALIZER"
+  ],
+  "current_state": {
+    "engine_frozen": false,
+    "external_execution_started": false,
+    "implementation_started": false
+  },
+  "development_policy": {
+    "external_120_cases_allowed": false,
+    "historical_cases_allowed": true,
+    "synthetic_cases_allowed": true
+  },
+  "external_holdout": {
+    "cases": 120,
+    "cohort_sha256": "8278187b459ce67d400230b7acce84943968e2ba502e7e9371c53987251f9033",
+    "development_use": false,
+    "scientific_outcomes_observed": 0
+  },
+  "objective": "GENERIC_SOURCE_LEVEL_CERTIFICATION_ENGINE",
+  "required_entrypoint": "python -m bizproof.universal_certifier",
+  "required_inputs": [
+    "--source-file",
+    "--case-id",
+    "--output"
+  ],
+  "reuse_v012_components": true,
+  "schema_version": "BIZPROOF-V0.13-GENERIC-ENGINE-DESIGN-1",
+  "scientific_outcomes": [
+    "CERTIFIED_A1",
+    "CERTIFIED_A2",
+    "AMBIGUOUS",
+    "UNSUPPORTED"
+  ]
+}

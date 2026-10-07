@@ -1,0 +1,30 @@
+{
+  "benchmark_version": "0.10.0",
+  "certificates": [
+    {
+      "certificate_digest": "f046d436e553f8a5a46fcceaa09c1b00c105898aa386ebeb08750c72f9c2c190",
+      "certificate_id": "CERT-OF-TA-001",
+      "path": "benchmarks/v0.10/certificates/CERT-OF-TA-001.json",
+      "status": "CERTIFIED"
+    },
+    {
+      "certificate_digest": "f9938f1c41fa80c8a7433e73ff1412614981fc18b30a0e09d0745a355c26998b",
+      "certificate_id": "CERT-OF-TH-001",
+      "path": "benchmarks/v0.10/certificates/CERT-OF-TH-001.json",
+      "status": "CERTIFIED"
+    },
+    {
+      "certificate_digest": "edc205b70dcf2a4cbaedd3e8cda583df4d50e8aab82b35dd2f1ba150fa791dac",
+      "certificate_id": "CERT-OSCAR-PARTIAL-001",
+      "path": "benchmarks/v0.10/certificates/CERT-OSCAR-PARTIAL-001.json",
+      "status": "CERTIFIED"
+    },
+    {
+      "certificate_digest": "5426cde635accd91c815d38bbd45abfc9629fc570c84d37d1f8443a0d197290b",
+      "certificate_id": "CERT-OSCAR-SAT-001",
+      "path": "benchmarks/v0.10/certificates/CERT-OSCAR-SAT-001.json",
+      "status": "CERTIFIED"
+    }
+  ],
+  "index_digest": "93e7732e6004946f403bd87810a8e3d323dc7ca1fc14efd1665c8c84abae85c1"
+}

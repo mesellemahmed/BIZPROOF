@@ -1,0 +1,128 @@
+{
+  "13df73dbd2825f80": {
+    "candidate_id": "13df73dbd2825f80",
+    "category": "COMPLEX_CONTAINER_SEMANTICS",
+    "interesting_fields": [
+      {
+        "key": "$.v011_terminal_outcome",
+        "value": "NOT_CERTIFIED_UNSUPPORTED"
+      },
+      {
+        "key": "$.v012_terminal_outcome",
+        "value": null
+      }
+    ]
+  },
+  "1a2de6edb11465fe": {
+    "candidate_id": "1a2de6edb11465fe",
+    "category": "NESTED_OR_HIGHER_ORDER_LOGIC",
+    "interesting_fields": [
+      {
+        "key": "$.v011_terminal_outcome",
+        "value": "NOT_CERTIFIED_UNSUPPORTED"
+      },
+      {
+        "key": "$.v012_terminal_outcome",
+        "value": null
+      }
+    ]
+  },
+  "3fd2d8b8a76b4834": {
+    "candidate_id": "3fd2d8b8a76b4834",
+    "category": "NESTED_OR_HIGHER_ORDER_LOGIC",
+    "interesting_fields": [
+      {
+        "key": "$.v011_terminal_outcome",
+        "value": "NOT_CERTIFIED_UNSUPPORTED"
+      },
+      {
+        "key": "$.v012_terminal_outcome",
+        "value": null
+      }
+    ]
+  },
+  "674ea6fd35fa6c39": {
+    "candidate_id": "674ea6fd35fa6c39",
+    "category": "STATEFUL_SIDE_EFFECTING_LOGIC",
+    "interesting_fields": [
+      {
+        "key": "$.v011_terminal_outcome",
+        "value": "NOT_CERTIFIED_UNSUPPORTED"
+      },
+      {
+        "key": "$.v012_terminal_outcome",
+        "value": null
+      }
+    ]
+  },
+  "801278c4d91c2185": {
+    "candidate_id": "801278c4d91c2185",
+    "category": "OTHER_FROZEN_SCOPE_LIMITATION",
+    "interesting_fields": [
+      {
+        "key": "$.v011_terminal_outcome",
+        "value": "NOT_CERTIFIED_UNSUPPORTED"
+      },
+      {
+        "key": "$.v012_terminal_outcome",
+        "value": null
+      }
+    ]
+  },
+  "8b3e90ca7b531556": {
+    "candidate_id": "8b3e90ca7b531556",
+    "category": "OTHER_FROZEN_SCOPE_LIMITATION",
+    "interesting_fields": [
+      {
+        "key": "$.v011_terminal_outcome",
+        "value": "NOT_CERTIFIED_UNSUPPORTED"
+      },
+      {
+        "key": "$.v012_terminal_outcome",
+        "value": null
+      }
+    ]
+  },
+  "a74d4580a9effb73": {
+    "candidate_id": "a74d4580a9effb73",
+    "category": "NESTED_OR_HIGHER_ORDER_LOGIC",
+    "interesting_fields": [
+      {
+        "key": "$.v011_terminal_outcome",
+        "value": "NOT_CERTIFIED_UNSUPPORTED"
+      },
+      {
+        "key": "$.v012_terminal_outcome",
+        "value": null
+      }
+    ]
+  },
+  "e8850260c2763222": {
+    "candidate_id": "e8850260c2763222",
+    "category": "STATEFUL_SIDE_EFFECTING_LOGIC",
+    "interesting_fields": [
+      {
+        "key": "$.v011_terminal_outcome",
+        "value": "NOT_CERTIFIED_UNSUPPORTED"
+      },
+      {
+        "key": "$.v012_terminal_outcome",
+        "value": null
+      }
+    ]
+  },
+  "eb41eb351df073ef": {
+    "candidate_id": "eb41eb351df073ef",
+    "category": "BINDING_OR_DOMAIN_UNRESOLVED",
+    "interesting_fields": [
+      {
+        "key": "$.v011_terminal_outcome",
+        "value": "NOT_CERTIFIED_UNSUPPORTED"
+      },
+      {
+        "key": "$.v012_terminal_outcome",
+        "value": null
+      }
+    ]
+  }
+}

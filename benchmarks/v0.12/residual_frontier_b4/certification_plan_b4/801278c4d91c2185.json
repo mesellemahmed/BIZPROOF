@@ -1,0 +1,20 @@
+{
+  "candidate_id": "801278c4d91c2185",
+  "certification_batch": "B4_BATCH1_STRUCTURED_RETURN",
+  "function_name": "__str__",
+  "historical_category": "OTHER_FROZEN_SCOPE_LIMITATION",
+  "normalized_source_sha256": "6418e54ffc42b44e738215947f3e359854424c8f743c91be530f7c3324620179",
+  "physical_location_count": 1,
+  "representative_class": "TaxRule",
+  "representative_lineno": 437,
+  "representative_path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\tax.py",
+  "representative_project": "pretix",
+  "semantic_family": "STRUCTURED_RETURN",
+  "semantic_observation": "returned string under explicit observations for price_includes_tax, rate, name, eu_reverse_charge, internal_name and translation results",
+  "semantic_route": "CONDITIONAL_LOCALIZED_STRING_RETURN",
+  "source": "def __str__(self):\n        if self.price_includes_tax:\n            s = _('incl. {rate}% {name}').format(rate=self.rate, name=self.name)\n        else:\n            s = _('plus {rate}% {name}').format(rate=self.rate, name=self.name)\n        if self.eu_reverse_charge:\n            s += ' ({})'.format(_('reverse charge enabled'))\n        if self.internal_name:\n            return f'{self.internal_name} ({s})'\n        return str(s)",
+  "source_ast_sha256": "83aeffd61150e22d84231d3b907d35878a1edb59aafc12fcfb433f0acf90c52f",
+  "source_resolution": "SAME_RECORD_DIRECT_HASH_NAME_RESOLVED",
+  "source_sha256": "6418e54ffc42b44e738215947f3e359854424c8f743c91be530f7c3324620179",
+  "unique_physical_location_claim": true
+}

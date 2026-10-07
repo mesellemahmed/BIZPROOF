@@ -1,0 +1,40 @@
+{
+  "all_required_gates_pass": true,
+  "authoritative_source": {
+    "correct_source_ast_rewritten": false,
+    "matches_frozen_plan": true,
+    "sha256": "6418e54ffc42b44e738215947f3e359854424c8f743c91be530f7c3324620179"
+  },
+  "candidate_id": "801278c4d91c2185",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_mutant_replay": true,
+  "formal_mutant_refutation": {
+    "model": "[base_string_len = 0, internal_name_len = 1]",
+    "property": "there exists a non-empty internal name where the authoritative wrapped string differs from IGNORE_INTERNAL_NAME_WRAPPER",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "function_name": "__str__",
+  "historical_category": "OTHER_FROZEN_SCOPE_LIMITATION",
+  "mutant": {
+    "fault": "the internal_name branch is disabled, so the localized tax string is returned without the internal-name wrapper",
+    "name": "IGNORE_INTERNAL_NAME_WRAPPER"
+  },
+  "mutant_protocol_committed_before_execution": true,
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-B4-CERT1-A2-1",
+  "scope": {
+    "certified": "the prospectively frozen structured-return projection of the exact authoritative source",
+    "not_certified": [
+      "correctness of surrounding framework implementations",
+      "unobserved external objects or services outside the frozen dependency contract",
+      "arbitrary behavior beyond the explicit accepted semantic projection"
+    ]
+  },
+  "semantic_capability": "CONDITIONAL_LOCALIZED_STRING_RETURN",
+  "source_projection_equivalence": {
+    "branch_basis": 8,
+    "controlled_exact_source_replay": true
+  },
+  "v012_outcome": "CERTIFIED_A2"
+}

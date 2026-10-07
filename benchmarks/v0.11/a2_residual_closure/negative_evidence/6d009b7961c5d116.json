@@ -1,0 +1,33 @@
+{
+  "candidate_id": "6d009b7961c5d116",
+  "certification_claim": false,
+  "interpretation": "Unsupported means unsupported by the frozen A2 scalar certification scope. It does not claim that the external function is intrinsically unverifiable by another formalism.",
+  "negative_evidence_digest": "07c5b4d847429ef8f2f4e831269af21be0cfd9a606b7fce8b9849e38c5ee8872",
+  "prior_review": {
+    "candidate_id": "6d009b7961c5d116",
+    "certification_claim": false,
+    "class": "Applicator",
+    "function": "get_offers",
+    "reason_code": "LIST_OF_DOMAIN_OBJECTS_RETURN",
+    "review_kind": "NON_SCALAR_RETURN",
+    "source": "django_oscar",
+    "terminal_outcome": null
+  },
+  "reason": "The reviewed source does not provide a defensible single scalar business-semantic projection under the frozen V0.11 A2 protocol.",
+  "reason_code": "LIST_OF_DOMAIN_OBJECTS_RETURN",
+  "schema_version": "BIZPROOF-V0.11-NEGATIVE-EVIDENCE-1",
+  "scope": "V0.11 A2 explicit scalar semantic adapter",
+  "source": {
+    "class": "Applicator",
+    "file": "src/oscar/apps/offer/applicator.py",
+    "function": "get_offers",
+    "function_sha256": "2dc814115085bd91ed9309b365cbcf4a2c43690dfe742149052cd04917d3d441",
+    "lines": [
+      45,
+      64
+    ],
+    "source_file_sha256": "82912db74e9b1763905b99c16cf4f723a553acbc70fe88a8fecfa4a47a2d456a",
+    "source_id": "django_oscar"
+  },
+  "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"
+}

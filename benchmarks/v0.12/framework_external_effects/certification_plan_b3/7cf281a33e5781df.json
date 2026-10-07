@@ -1,0 +1,24 @@
+{
+  "candidate_id": "7cf281a33e5781df",
+  "certification_batch": "STATE_RETURN_BATCH",
+  "class_name": "OrderFee",
+  "function_name": "price",
+  "lineno": 2511,
+  "matched_provenance_hash": "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f",
+  "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+  "provenance_resolution": "TIER_A_HASH_RESOLVED",
+  "reason_codes": "OBJECT_STATE_TRANSITION_OUTSIDE_FORMAL_SUBSET",
+  "semantic_observation": "post-state of the explicit value attribute after assignment",
+  "semantic_route": "ATTRIBUTE_STATE_WRITE",
+  "source": "def price(self, value):\n        self.value = value",
+  "source_sha256": "f0accaef8a5a1f74d9bcbbc75d868c2ad7b73bc1d32095a5080e5e6fd195563f",
+  "structural_profile": {
+    "attribute_writes": [
+      "value"
+    ],
+    "branch_count": 0,
+    "calls": [],
+    "return_count": 0,
+    "subscript_writes": 0
+  }
+}

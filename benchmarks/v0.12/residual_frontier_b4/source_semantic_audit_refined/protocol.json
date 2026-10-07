@@ -1,0 +1,27 @@
+{
+  "already_authoritative_before_r1": 4,
+  "attack_order_frozen": false,
+  "candidate_count": 5,
+  "candidate_ids": [
+    "1a2de6edb11465fe",
+    "3fd2d8b8a76b4834",
+    "674ea6fd35fa6c39",
+    "801278c4d91c2185",
+    "e8850260c2763222"
+  ],
+  "certification_started": false,
+  "domain_shape_extension": "In addition to generic AST features, classify vectorized logical/domain combinators such as where, not_, and_, or_, min_, max_, astype and entity/parameter calls.",
+  "methodological_rule": "Only evidence co-located with the candidate ID inside one structured historical record may create a new authoritative mapping. Global unions of candidate evidence are diagnostic only.",
+  "name_filter_rule": "Boolean-like tokens and 64-hex digests are not treated as function names.",
+  "recovery_claims": 0,
+  "resolution_precedence": [
+    "EMBEDDED_HASH_RESOLVED",
+    "SAME_RECORD_DIRECT_HASH_NAME_RESOLVED",
+    "SAME_RECORD_HASH_NAME_RESOLVED",
+    "SAME_RECORD_NAME_PATH_RESOLVED",
+    "UNRESOLVED"
+  ],
+  "schema_version": "BIZPROOF-V0.12-B4-A1R1-PROTOCOL-1",
+  "semantic_routes_frozen": false,
+  "source_checkpoint": "34c07a6d362b7dbd0ffcde4136c961553b77b163"
+}

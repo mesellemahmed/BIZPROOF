@@ -1,0 +1,30 @@
+{
+  "closure_commit": "1e2baf2c91433ccd3f4abeb866eecb370a2cc45a",
+  "closure_tag": "v0.13-universal-certification-closure",
+  "engine_source_changed_after_closure": false,
+  "external_validation": {
+    "cases_executed": 0,
+    "holdout_size": 120,
+    "outcomes_observed": 0,
+    "status": "UNTOUCHED_BEFORE_ENGINE_FREEZE"
+  },
+  "genericity": {
+    "case_specific_routing": false,
+    "development_oracles_used_by_engine": false,
+    "historical_TARGETS": false,
+    "manual_engine_ADAPTERS": false
+  },
+  "hardening": {
+    "determinism": "6/6",
+    "independent_external_mutants": "6/6",
+    "independent_runtime_oracle": "6/6",
+    "metamorphic_preservation": "6/6",
+    "negative_controls": "3/3"
+  },
+  "next_phase": "PROSPECTIVE_EXTERNAL_EVALUATION",
+  "schema_version": "BIZPROOF-V0.13-ENGINE-FREEZE-1",
+  "scientific_boundary": {
+    "external_effect_semantics_inferred": false,
+    "full_arbitrary_python_equivalence": false
+  }
+}

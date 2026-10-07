@@ -1,0 +1,18 @@
+{
+  "capability_occurrences": {
+    "NESTED_LOGIC": 2,
+    "OPAQUE_BINDING": 3,
+    "SCALAR_VALUE": 5,
+    "STATE_EFFECT": 2,
+    "STRUCTURED_VALUE": 3
+  },
+  "case_specific_routing": false,
+  "certification_claim": false,
+  "development_cases": 8,
+  "external_holdout_cases_used": 0,
+  "external_outcomes_observed": 0,
+  "historical_target_tables_used": false,
+  "human_authored_case_adapters_used": false,
+  "schema_version": "BIZPROOF-V0.13-UNIVERSAL-PROJECTION-1",
+  "status": "GENERIC_PROJECTION_LAYER_READY"
+}

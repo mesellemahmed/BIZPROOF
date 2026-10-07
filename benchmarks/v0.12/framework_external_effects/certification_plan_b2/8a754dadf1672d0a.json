@@ -1,0 +1,14 @@
+{
+  "candidate_id": "8a754dadf1672d0a",
+  "certification_batch": "RICH_FRAMEWORK_BATCH",
+  "class_name": "Order",
+  "function_name": "positions_with_tickets",
+  "lineno": 1203,
+  "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+  "provenance_status": "STRONG_HASH_MATCH",
+  "reason_codes": "PLUGIN_SIGNAL_SET_SEMANTICS_OUTSIDE_FORMAL_SUBSET",
+  "semantic_observation": "extensional set/list result under explicit plugin-signal response observations",
+  "semantic_route": "SIGNAL_GATED_SET_SEMANTICS",
+  "source": "def positions_with_tickets(self):\n        signal_response = allow_ticket_download.send(self.event, order=self)\n        if all([r is True for rr, r in signal_response]):\n            return self.positions_with_tickets_ignoring_plugins\n        elif any([r is False for rr, r in signal_response]):\n            return []\n        else:\n            return set.intersection(set(self.positions_with_tickets_ignoring_plugins), *[set(r) for rr, r in signal_response if isinstance(r, Iterable)])",
+  "source_sha256": "6333627389e891ba1a54761c7ab06169a3cd2fca9a647e81a3154760db0824f7"
+}

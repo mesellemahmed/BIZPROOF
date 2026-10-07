@@ -1,0 +1,14 @@
+{
+  "candidate_id": "2309036b0c69ad48",
+  "certification_batch": "STATE_CONTAINER_BATCH",
+  "class_name": "AddToBasketForm",
+  "function_name": "_add_option_field",
+  "lineno": 278,
+  "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\basket\\forms.py",
+  "provenance_status": "STRONG_HASH_MATCH",
+  "reason_codes": "FORM_STATE_MUTATION_OUTSIDE_FORMAL_SUBSET",
+  "semantic_observation": "post-state of explicit mapping after one key/value write",
+  "semantic_route": "MAPPING_STATE_WRITE",
+  "source": "def _add_option_field(self, product, option):\n        \"\"\"\n        Creates the appropriate form field for the product option.\n\n        This is designed to be overridden so that specific widgets can be used\n        for certain types of options.\n        \"\"\"\n        option_field = self.OPTION_FIELD_FACTORIES.get(option.type, _option_text_field)(\n            self, product, option\n        )\n        self.fields[option.code] = option_field",
+  "source_sha256": "eddb810f17547f52e721d8014ab13075b4e1d1e919384c096157e1e7d299d94a"
+}

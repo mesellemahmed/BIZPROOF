@@ -1,0 +1,27 @@
+========================================================================
+candidate = 4008a63ee1ef3b44
+module    = bizproof.generalization_a2_v3_proof
+adapter   = adapt_event_permission
+mutant    = mutant_event_permission
+signature = (all_events: 'bool', organizer_matches: 'bool', event_in_limit: 'bool', permission_set: 'frozenset[str]', perm_name: 'PermissionName') -> 'bool'
+pair      = MATCH
+hints     = RESOLVED
+========================================================================
+candidate = 53abfcd7d20a9cd6
+module    = bizproof.generalization_final_nbptr_a2
+adapter   = adapt_nbptr
+mutant    = mutant_nbptr
+signature = (v: 'dict[str, Any]', q: 'dict[str, Any]') -> 'Any'
+pair      = MATCH
+hints     = RESOLVED
+========================================================================
+candidate = 972b76d53a12b8ad
+module    = bizproof.generalization_residual_binding_closure
+adapter   = adapt_rsa_tns_turnover_eligibility
+mutant    = mutant_rsa_tns_turnover_eligibility
+signature = (ca: 'int', activity_is_purchase_resale: 'bool', activity_is_bic: 'bool', activity_is_bnc: 'bool', sales_ceiling: 'int', service_ceiling: 'int') -> 'int'
+pair      = MATCH
+hints     = RESOLVED
+
+three callable pairs = PASS
+signature equality   = PASS

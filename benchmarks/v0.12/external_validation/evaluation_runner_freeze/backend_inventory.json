@@ -1,0 +1,250 @@
+{
+  "external_outcomes_observed": false,
+  "modules": [
+    {
+      "classes": [],
+      "cli_flags": [
+        "--binding-registry",
+        "--contract-skeletons",
+        "--contract-summary",
+        "--external-root",
+        "--lock",
+        "--output-dir"
+      ],
+      "exists": true,
+      "functions": [
+        "_attribute_root",
+        "_callable_root",
+        "_load_json",
+        "_load_jsonl",
+        "_module_definition_evidence",
+        "_module_import_evidence",
+        "_occurrence_evidence",
+        "_sha256_bytes",
+        "_verify_locked_commits",
+        "build_semantic_evidence",
+        "main"
+      ],
+      "mentions_certification_claim_false": true,
+      "mentions_certified_a1": false,
+      "mentions_certified_a2": false,
+      "module": "bizproof.generalization_semantic_evidence",
+      "path": "src/bizproof/generalization_semantic_evidence.py"
+    },
+    {
+      "classes": [],
+      "cli_flags": [
+        "--cohort",
+        "--cohort-summary",
+        "--external-root",
+        "--lock",
+        "--output-dir"
+      ],
+      "exists": true,
+      "functions": [
+        "_assignment_mutates_state",
+        "_call_name",
+        "_classify_function",
+        "_extract_function",
+        "_leaf_call_name",
+        "_load_json",
+        "_load_jsonl",
+        "_nearest_class",
+        "_reviewer_report",
+        "_semantic_nodes",
+        "_sha256_bytes",
+        "_verify_external_commits",
+        "_weighted_estimate",
+        "main",
+        "run_feasibility"
+      ],
+      "mentions_certification_claim_false": true,
+      "mentions_certified_a1": false,
+      "mentions_certified_a2": false,
+      "module": "bizproof.generalization_feasibility",
+      "path": "src/bizproof/generalization_feasibility.py"
+    },
+    {
+      "classes": [],
+      "cli_flags": [
+        "--output-dir",
+        "--repo-root"
+      ],
+      "exists": true,
+      "functions": [
+        "_body_without_docstring",
+        "_classify_return",
+        "_compile_function",
+        "_digest",
+        "_expression_text",
+        "_extract_function",
+        "_flatten_and",
+        "_load_jsonl",
+        "_parameter_names",
+        "_protocol_definition",
+        "_runtime_direct",
+        "_runtime_equality",
+        "_sha256_file",
+        "_split_binding",
+        "_symbolic_direct",
+        "_symbolic_equality",
+        "build",
+        "main"
+      ],
+      "mentions_certification_claim_false": true,
+      "mentions_certified_a1": true,
+      "mentions_certified_a2": false,
+      "module": "bizproof.generalization_a1_leaf_binding",
+      "path": "src/bizproof/generalization_a1_leaf_binding.py"
+    },
+    {
+      "classes": [
+        "BindingAwareSourceCompiler"
+      ],
+      "cli_flags": [
+        "--output-dir",
+        "--repo-root"
+      ],
+      "exists": true,
+      "functions": [
+        "_extract_function",
+        "_load_jsonl",
+        "_mutant_witness_replay",
+        "_prove_candidate",
+        "_sha256_file",
+        "_sha256_text",
+        "_validate_binding_semantics",
+        "build",
+        "main"
+      ],
+      "mentions_certification_claim_false": true,
+      "mentions_certified_a1": true,
+      "mentions_certified_a2": false,
+      "module": "bizproof.generalization_a1_remaining_binding_proof",
+      "path": "src/bizproof/generalization_a1_remaining_binding_proof.py"
+    },
+    {
+      "classes": [
+        "_Allowance",
+        "_HousingMenage",
+        "_MembersProxy",
+        "_Period",
+        "_SpecialFoyer"
+      ],
+      "cli_flags": [
+        "--output-dir",
+        "--repo-root"
+      ],
+      "exists": true,
+      "functions": [
+        "_digest",
+        "_exec_function",
+        "_function_digest",
+        "_load_jsonl",
+        "_protocol_definition",
+        "_runtime_housing_tax",
+        "_runtime_locapass",
+        "_runtime_special_allowance",
+        "_symbolic_housing_tax",
+        "_symbolic_locapass",
+        "_symbolic_special_allowance",
+        "_verify_live_source",
+        "adapt_housing_tax_exemption",
+        "adapt_locapass_student_contract",
+        "adapt_special_allowance",
+        "build",
+        "main",
+        "mutant_housing_tax_exemption",
+        "mutant_locapass_student_contract",
+        "mutant_special_allowance"
+      ],
+      "mentions_certification_claim_false": true,
+      "mentions_certified_a1": false,
+      "mentions_certified_a2": true,
+      "module": "bizproof.generalization_a2_v2_proof",
+      "path": "src/bizproof/generalization_a2_v2_proof.py"
+    },
+    {
+      "classes": [
+        "_AggregateQuery",
+        "_AllCollection"
+      ],
+      "cli_flags": [
+        "--output-dir",
+        "--repo-root"
+      ],
+      "exists": true,
+      "functions": [
+        "_digest",
+        "_exec_function",
+        "_function_digest",
+        "_load_jsonl",
+        "_protocol_definition",
+        "_runtime_completed_payment",
+        "_runtime_event_permission",
+        "_runtime_net_stock",
+        "_runtime_pending_sum",
+        "_runtime_product_quantity",
+        "_solver_result",
+        "_sum_marker",
+        "_symbolic_completed_payment",
+        "_symbolic_event_permission",
+        "_symbolic_net_stock",
+        "_symbolic_pending_sum",
+        "_symbolic_product_quantity",
+        "_verify_live_source",
+        "adapt_completed_payment_sum",
+        "adapt_event_permission",
+        "adapt_net_stock_level",
+        "adapt_pending_order_sum",
+        "adapt_product_quantity",
+        "build",
+        "main",
+        "mutant_completed_payment_sum",
+        "mutant_event_permission",
+        "mutant_net_stock_level",
+        "mutant_pending_order_sum",
+        "mutant_product_quantity"
+      ],
+      "mentions_certification_claim_false": true,
+      "mentions_certified_a1": false,
+      "mentions_certified_a2": true,
+      "module": "bizproof.generalization_a2_v3_proof",
+      "path": "src/bizproof/generalization_a2_v3_proof.py"
+    }
+  ],
+  "run_sh_candidate_modes": [
+    "certification-bundle",
+    "external-semantic",
+    "generalization-a1-batch-proof",
+    "generalization-a1-leaf-binding",
+    "generalization-a1-remaining-bindings",
+    "generalization-a2-authoring",
+    "generalization-a2-residual-closure",
+    "generalization-a2-v1-proof",
+    "generalization-a2-v2-proof",
+    "generalization-a2-v3-proof",
+    "generalization-candidate-proof",
+    "generalization-certification-audit",
+    "generalization-cohort",
+    "generalization-contract-readiness",
+    "generalization-contract-skeleton",
+    "generalization-controlled-state-closure",
+    "generalization-declarative-binding-closure",
+    "generalization-families",
+    "generalization-feasibility",
+    "generalization-name-resolution",
+    "generalization-protocol-closure",
+    "generalization-remaining-cohort-sweep",
+    "generalization-residual-binding-closure",
+    "generalization-semantic-contract-batch",
+    "generalization-semantic-contract-closure",
+    "generalization-semantic-evidence",
+    "generalization-symbol-trace",
+    "generalization-symbolic-probe",
+    "generalization-terminal-certification",
+    "generalization-workplan"
+  ],
+  "schema_version": "BIZPROOF-V0.12-EXTERNAL-RUNNER-BACKEND-INVENTORY-1",
+  "semantic_implementation_modified": false
+}

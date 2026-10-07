@@ -1,0 +1,53 @@
+{
+  "adapter": {
+    "function": "adapt_net_stock_level",
+    "function_sha256": "ba58ffbbf9e557e0197b51627b64cfc6b43ffbadf12bd76dcb8a536ae2f561a9",
+    "mutant_function": "mutant_net_stock_level",
+    "mutant_function_sha256": "779f4987efdca4685f56d5874302848a955d0007d4db9b243aff6bedda852eba",
+    "semantic_adapter": "NET_STOCK_LEVEL"
+  },
+  "assistance_level": "A2",
+  "authoring_mode": "EXPLICIT_MANUAL_SCALAR_SEMANTIC_ADAPTER",
+  "candidate_id": "2906fe3983a1ebe4",
+  "certificate_digest": "606ae845a86fd5e0d0d2f40d0caf9a626091a278317f87a0af110d1b05278b34",
+  "certificate_id": "CERT-V011-A2-2906FE3983A1EBE4",
+  "claim_scope": "Certification applies only to the explicit scalar semantic projection and declared source-to-adapter bindings. It does not certify database, ORM, localization or framework behavior outside that projection.",
+  "evidence": {
+    "proof_digest": "93911dfcc86b851602b3677f26e9408fdbcf2a515e561df92e395ee925019a5d",
+    "runtime": {
+      "adapter_mismatches": 0,
+      "comparisons": 25,
+      "mutant_mismatches": 12,
+      "validation_domain": "optional stock/allocation integers in {None,0,1,3,10}"
+    },
+    "symbolic": {
+      "correct_proved": true,
+      "correct_solver_status": "unsat",
+      "mutant_disproved": true,
+      "mutant_solver_status": "sat",
+      "symbolic_domain": "optional integer stock/allocation fields"
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 75,
+    "text": "- `CERTIFIED_A2`: certified with an explicit human-authored scalar semantic adapter."
+  },
+  "schema_version": "BIZPROOF-V0.11-A2-CERTIFICATE-1",
+  "semantic_binding_scope": "num_in_stock and num_allocated preserve the locked source's optional numeric-field semantics.",
+  "source": {
+    "class": "AbstractStockRecord",
+    "file": "src/oscar/apps/partner/abstract_models.py",
+    "function": "net_stock_level",
+    "function_sha256": "ad97bbc6723b5a0f75b82871371d2435f4c665b5aa46af4ecbd0c1c090b294ab",
+    "lines": [
+      170,
+      182
+    ],
+    "source_file_sha256": "10ecc8a374e8ed242bf456a83a91bd964364f672406c77fcd369474478f09f23",
+    "source_id": "django_oscar"
+  },
+  "status": "CERTIFIED_A2",
+  "terminal_outcome": "CERTIFIED_A2",
+  "terminal_outcome_assigned": true
+}

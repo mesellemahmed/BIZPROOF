@@ -1,0 +1,75 @@
+{
+  "schema_version": "BIZPROOF-V0.14-CONFIRMATORY60-STATISTICAL-PLAN-1",
+  "status": "FROZEN_BEFORE_OUTCOMES",
+  "denominator": 60,
+  "project_count": 6,
+  "cases_per_project": 10,
+  "stratum_count": 5,
+  "cases_per_stratum": 12,
+  "cases_per_project_stratum": 2,
+  "primary_endpoints": [
+    {
+      "name": "certification_yield",
+      "numerator": "CERTIFIED_A1 + CERTIFIED_A2",
+      "denominator": 60,
+      "confidence_interval": "Wilson score 95%"
+    },
+    {
+      "name": "a2_rate",
+      "numerator": "CERTIFIED_A2",
+      "denominator": 60,
+      "confidence_interval": "Wilson score 95%"
+    }
+  ],
+  "secondary_endpoints": [
+    "CERTIFIED_A1 count and rate",
+    "UNSUPPORTED count and rate",
+    "AMBIGUOUS count and rate",
+    "INFRA_ERROR count and rate",
+    "per-project certification yield with Wilson 95% intervals",
+    "per-stratum certification yield with Wilson 95% intervals",
+    "unweighted macro-project certification yield",
+    "terminal reason-code taxonomy",
+    "formal obligation count",
+    "A2 obligation count",
+    "hardened OSSS activation count",
+    "hardened OSSS certification count",
+    "descriptive runtime only"
+  ],
+  "confidence": {
+    "level": 0.95,
+    "z": 1.959963984540054
+  },
+  "infra_error_policy": {
+    "category": "INFRA_ERROR",
+    "kept_separate_from_unsupported": true,
+    "denominator_remains_60": true,
+    "silent_reclassification": false,
+    "case_rerun_after_durable_record": false
+  },
+  "campaign_status_rule": {
+    "COMPLETE": "60 raw records and 0 INFRA_ERROR",
+    "INCOMPLETE_INFRA": "60 raw records and at least 1 INFRA_ERROR"
+  },
+  "weighting": {
+    "primary_estimate": "case-level unweighted",
+    "weighted_external_estimate": false,
+    "macro_project_yield": "unweighted mean of six project-level yields"
+  },
+  "hypothesis_testing": {
+    "formal_null_hypothesis": false,
+    "p_values": false,
+    "binary_success_threshold": false,
+    "rationale": "prospective estimation of supported certification coverage rather than superiority testing"
+  },
+  "subgroup_inference": {
+    "per_project": "descriptive",
+    "per_stratum": "descriptive",
+    "multiplicity_adjustment": "not applicable because no subgroup hypothesis tests are performed"
+  },
+  "runtime": {
+    "role": "descriptive_only",
+    "used_for_certification_claim": false
+  },
+  "outcomes_observed_when_frozen": 0
+}

@@ -1,0 +1,160 @@
+{
+  "a2_obligation_count": 2,
+  "a_level": "A2",
+  "bindings": [],
+  "capabilities": [
+    "STRUCTURED_VALUE"
+  ],
+  "case_specific_routing": false,
+  "certified": true,
+  "claim_scope": "formal equivalence evidence for scalarized observational projections under explicit parameter/binding abstraction; external effect occurrence is structurally recorded but external effect semantics are not inferred",
+  "effect_semantics_formally_proved": null,
+  "effects": [],
+  "evidence_id": "v013-closure::structured_tuple",
+  "external_holdout_used": false,
+  "formal_obligation_count": 2,
+  "formal_obligations": [
+    {
+      "obligation_id": "return[0]",
+      "result": {
+        "a_level": "A2",
+        "capability": "PURE_SCALAR",
+        "case_id": "v013-closure::structured_tuple::return[0]",
+        "certified": true,
+        "claim_scope": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+        "dedented": false,
+        "formal": {
+          "backend": "z3",
+          "contract_id": "v013-closure::structured_tuple::return[0]::projection",
+          "counterexample": null,
+          "metadata": {
+            "path_count": 1,
+            "runtime_seconds": 0.002825997013133019,
+            "timeout_ms": 10000,
+            "z3_version": "5.1.0"
+          },
+          "observed_result": null,
+          "postcondition_satisfied": null,
+          "reason": null,
+          "reason_code": null,
+          "replay_validated": null,
+          "verdict": "PROVED"
+        },
+        "full_arbitrary_source_equivalence": false,
+        "function_name": "rule",
+        "inputs": [
+          {
+            "name": "x",
+            "type": "int"
+          }
+        ],
+        "mutant": {
+          "backend": "z3",
+          "contract_id": "v013-closure::structured_tuple::return[0]::mutant",
+          "counterexample": {
+            "x": 0
+          },
+          "metadata": {
+            "path_count": 1,
+            "path_index": 0,
+            "runtime_seconds": 0.0025538740446791053,
+            "timeout_ms": 10000,
+            "z3_version": "5.1.0"
+          },
+          "observed_result": 1,
+          "postcondition_satisfied": false,
+          "reason": null,
+          "reason_code": null,
+          "replay_validated": true,
+          "verdict": "DISPROVED"
+        },
+        "mutant_operator": "INT_CONSTANT_PLUS_ONE",
+        "mutant_projection": "x + 2",
+        "mutant_refuted": true,
+        "projection": "x + 1",
+        "reason": "accepted by generic scalar normalization frontend",
+        "reason_code": "supported",
+        "resolution": "SUPPORTED",
+        "schema_version": "BIZPROOF-V0.13-UNIVERSAL-CERTIFIER-1",
+        "scientific_outcome": "CERTIFIED_A2",
+        "source_file": "/tmp/bizproof-v013-universal-closure-zymer3d5/obligation_0.py",
+        "source_sha256": "5654b3fe7c7e60ed17d303684fb247ccca8a6aca23439ca41871216098f3360d"
+      },
+      "source_sha256": "5654b3fe7c7e60ed17d303684fb247ccca8a6aca23439ca41871216098f3360d"
+    },
+    {
+      "obligation_id": "return[1]",
+      "result": {
+        "a_level": "A2",
+        "capability": "PURE_SCALAR",
+        "case_id": "v013-closure::structured_tuple::return[1]",
+        "certified": true,
+        "claim_scope": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+        "dedented": false,
+        "formal": {
+          "backend": "z3",
+          "contract_id": "v013-closure::structured_tuple::return[1]::projection",
+          "counterexample": null,
+          "metadata": {
+            "path_count": 1,
+            "runtime_seconds": 0.0021725280093960464,
+            "timeout_ms": 10000,
+            "z3_version": "5.1.0"
+          },
+          "observed_result": null,
+          "postcondition_satisfied": null,
+          "reason": null,
+          "reason_code": null,
+          "replay_validated": null,
+          "verdict": "PROVED"
+        },
+        "full_arbitrary_source_equivalence": false,
+        "function_name": "rule",
+        "inputs": [
+          {
+            "name": "x",
+            "type": "int"
+          }
+        ],
+        "mutant": {
+          "backend": "z3",
+          "contract_id": "v013-closure::structured_tuple::return[1]::mutant",
+          "counterexample": {
+            "x": 1
+          },
+          "metadata": {
+            "path_count": 1,
+            "path_index": 0,
+            "runtime_seconds": 0.003783205000218004,
+            "timeout_ms": 10000,
+            "z3_version": "5.1.0"
+          },
+          "observed_result": true,
+          "postcondition_satisfied": false,
+          "reason": null,
+          "reason_code": null,
+          "replay_validated": true,
+          "verdict": "DISPROVED"
+        },
+        "mutant_operator": "INT_CONSTANT_PLUS_ONE",
+        "mutant_projection": "x > 1",
+        "mutant_refuted": true,
+        "projection": "x > 0",
+        "reason": "accepted by generic scalar normalization frontend",
+        "reason_code": "supported",
+        "resolution": "SUPPORTED",
+        "schema_version": "BIZPROOF-V0.13-UNIVERSAL-CERTIFIER-1",
+        "scientific_outcome": "CERTIFIED_A2",
+        "source_file": "/tmp/bizproof-v013-universal-closure-zymer3d5/obligation_1.py",
+        "source_sha256": "af4a3b10aeea83812e7d0d4510b15aafb33e2b55c7e3dc01d27c609f9b84df63"
+      },
+      "source_sha256": "af4a3b10aeea83812e7d0d4510b15aafb33e2b55c7e3dc01d27c609f9b84df63"
+    }
+  ],
+  "full_arbitrary_source_equivalence": false,
+  "historical_target_tables_used": false,
+  "human_authored_case_adapters_used": false,
+  "scientific_outcome": "CERTIFIED_A2",
+  "source_sha256": "15b82032e22095f17620b2959c09274f22e361361d9140289a6d02c94d1412ed",
+  "state_bindings": []
+}

@@ -1,0 +1,90 @@
+{"candidate_id": "6d009b7961c5d116", "negative_evidence_digest": "07c5b4d847429ef8f2f4e831269af21be0cfd9a606b7fce8b9849e38c5ee8872", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"}
+{"candidate_id": "34748d082751e0cc", "certificate_digest": "b2ce0ed7b29d55d4f2be24313e9870b2cf8ebe2e1ed192fe1ac677cf83103e58", "certificate_id": "CERT-V011-A2-34748D082751E0CC", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A2"}
+{"candidate_id": "63e7979762bf860b", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "bcb091a940a8d0dd", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "e8850260c2763222", "negative_evidence_digest": "19001fc0d8db014c3d000879299184788c4f35e2e32dc90d927c845452049073", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"}
+{"candidate_id": "7013ce92618a1e33", "certificate_digest": "8ee119755e2f2b398f356dd9f2788f5e01987e597dc20cfa4fa63ae73270ad8c", "certificate_id": "CERT-V011-A2-7013CE92618A1E33", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A2"}
+{"candidate_id": "a79d9687185720aa", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "7f523a5041034306", "certificate_digest": "c0f91d60675248d5e58c27165ab810f93e2b263bf5dd2625b2c495fe3e498a8f", "certificate_id": "CERT-V011-A2-7F523A5041034306", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A2"}
+{"candidate_id": "8b3e90ca7b531556", "negative_evidence_digest": "504cdab993f52ac75a75c1462de43a62775e4271a944796e29d634e91e1c0fa8", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"}
+{"candidate_id": "2309036b0c69ad48", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "0fe04e3572c7203e", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "e1cf29f02fa0dadc", "negative_evidence_digest": "eadc26d2805b8fde8104f201ed0f015bb2c1475227c12eae28bc8f51407622bf", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"}
+{"candidate_id": "aa5b28186fcc7696", "certificate_id": null, "evidence_digest": "3cff02d24097a8782a182fc7bc11b7be60eac10964eaf7e0aaa33ac3e871a8e4", "negative_evidence": "benchmarks/v0.11/remaining_cohort_sweep/evidence/aa5b28186fcc7696.json", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "NOT_CERTIFIED_SEMANTIC_AMBIGUITY"}
+{"candidate_id": "4ab5aeba4c85b4c0", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "aab5348ee173d6e3", "certificate_digest": "39eac47f3c71bde8cddf3d35e0e56b5e4825e93eb10b5af23045c06341cfd033", "certificate_id": "CERT-V011-OSCAR-SHIPPING-001", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A2"}
+{"candidate_id": "460c0ee11314458e", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "6c9c5d18966c42d0", "certificate_id": null, "evidence_digest": "ca6c9fda7ebc71e72db629ea2cb74cfa1fd663330cf2a588ac40a04091b2e070", "negative_evidence": "benchmarks/v0.11/remaining_cohort_sweep/evidence/6c9c5d18966c42d0.json", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "NOT_CERTIFIED_SEMANTIC_AMBIGUITY"}
+{"candidate_id": "1b63ce825a129c0a", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "635fe113a02cf90b", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "d033593e9fc6fbc6", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "91b2dc32504282fc", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "331f175e4aa92eef", "certificate_digest": "40eb24848e298bf642733a6c7d68ba6c9d4f675f267f54a54c1d8413b23e6805", "certificate_id": "CERT-V011-A2-331F175E4AA92EEF", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A2"}
+{"candidate_id": "f3ebe6cce422947e", "certificate_digest": "66e886bf43e51944291bafa6b48be8478e07d0d08a310486ca3c47f2e7013f1d", "certificate_id": "CERT-V011-A2-F3EBE6CCE422947E", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A2"}
+{"candidate_id": "87d2f0b3b15f0ea6", "negative_evidence_digest": "852031b101623a194fddf1a11dad9e7287dbbbc2426e36a4a8ccd50bd0674c31", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"}
+{"candidate_id": "fa377c649a747a7d", "negative_evidence_digest": "fea32f968eb3c19762a24d4c624d5afd6c6d24bd11e3b84d6cfb4e447c3a1ed1", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"}
+{"candidate_id": "4d7d61b18dde0ad5", "negative_evidence_digest": "bef7bbbb75797e111633a3edd40afbf4cc667ee7f86e4e98163b218ca1cc9284", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"}
+{"candidate_id": "75e61ddb4dde4f1a", "negative_evidence_digest": "7999b4c92c02e8450c933bad0b4df20688c13bc9207b8b5197154e128fe9ef32", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"}
+{"candidate_id": "2906fe3983a1ebe4", "certificate_digest": "606ae845a86fd5e0d0d2f40d0caf9a626091a278317f87a0af110d1b05278b34", "certificate_id": "CERT-V011-A2-2906FE3983A1EBE4", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A2"}
+{"candidate_id": "4b57e2d73c695a41", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "9603b9192132171c", "certificate_digest": "7fe005fe94f5fe59fd7ba52d7df334a098d06aadc4e417bd6a53742a55de736d", "certificate_id": "CERT-V011-A2-9603B9192132171C", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A2"}
+{"candidate_id": "244130d6ff9953d0", "certificate_digest": "487408cac25c7c3578bacec446bae92dfaef3b4095ddaf4f3298e9abc7baf6d7", "certificate_id": "CERT-V011-A1-244130D6FF9953D0", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A1"}
+{"candidate_id": "fd4702ed1d79ff1f", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "1a2de6edb11465fe", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "4c7af63af2f89319", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "53abfcd7d20a9cd6", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "eb41eb351df073ef", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "e293930485085dac", "certificate_digest": "bc199dd741d164e724b16913a515f96fc6750c55dac7c07e393e03cfc35bd1ce", "certificate_id": "CERT-V011-A2-E293930485085DAC", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A2"}
+{"candidate_id": "7bc9603bfbda7dc9", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "f5d217dec0cf902b", "certificate_digest": "2651a5ce89a95254db1d2d52e87cdbfa9a5b9ca3df60d442b955714b57841905", "certificate_id": "CERT-V011-A2-F5D217DEC0CF902B", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A2"}
+{"candidate_id": "3fd2d8b8a76b4834", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "80788665d9905741", "certificate_digest": "665d5b04a838402bd12bc4534baae9056695ef916044d8e648fb72b28dbba2d3", "certificate_id": "CERT-V011-A1-80788665D9905741", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A1"}
+{"candidate_id": "19d233058899f735", "certificate_digest": "eda0ac0c0adb4c94ae13180fd125875a6c46da30a116964936fce06bb276efd8", "certificate_id": "CERT-V011-A1-19D233058899F735", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A1"}
+{"candidate_id": "051c7ef379178030", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "78ca19c5e56cefa7", "certificate_digest": "4b06cccb3cf2e4a32993e158e1b6cad8837c429f2712b89b3e0a14d07bd0d607", "certificate_id": "CERT-V011-A1-78CA19C5E56CEFA7", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A1"}
+{"candidate_id": "2dd784251ccc7dce", "certificate_digest": "01c4910ce35a5339befece821e26bc90c27ccc5176f6e4d77e8f6150d391099c", "certificate_id": "CERT-V011-A1-2DD784251CCC7DCE", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A1"}
+{"candidate_id": "4d2eb60abd9c44c8", "certificate_digest": "341ccf68ff49c89a076678d8a705cfd5492bcdf226ecdfe941eebcb390b4f519", "certificate_id": "CERT-V011-A1-4D2EB60ABD9C44C8", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A1"}
+{"candidate_id": "4b583322af591973", "certificate_digest": "75860d1d34783430ea3701931d53f11e7cbf93f771d8d0e206035c419c6893eb", "certificate_id": "CERT-V011-A1-4B583322AF591973", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A1"}
+{"candidate_id": "b70f35ae381f7a3b", "certificate_digest": "8d42c57322179e154e423b0df7a1480ceece7250bcef8e2b9b9817108e28122c", "certificate_id": "CERT-V011-A1-B70F35AE381F7A3B", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A1"}
+{"candidate_id": "b46358e6c871e1bf", "certificate_digest": "7e7613abe287b8ee2fd18331d5142f45c28e6baf63b35f58847d3018f3650db2", "certificate_id": "CERT-V011-A1-B46358E6C871E1BF", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A1"}
+{"candidate_id": "9ccbe1be4f59b3ce", "certificate_digest": "b98812c61bbbc5bcaab84c2099144cab30e4094084c314abe5f0f663118fd136", "certificate_id": "CERT-V011-A1-9CCBE1BE4F59B3CE", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A1"}
+{"candidate_id": "1458ed128652b359", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "d28505f251600d52", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "019d3a3df4514bac", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "61cf0e4af667580e", "certificate_digest": "f5bdd2a66483b5d52203612049b2b9c6c43feed03de42a070af0017909cc7544", "certificate_id": "CERT-V011-A1-61CF0E4AF667580E", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A1"}
+{"candidate_id": "972b76d53a12b8ad", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "cb937575ad9957d1", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "a74d4580a9effb73", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "eff10167a5398559", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "dfd34c86bcd9bfa1", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "d5b65e1d48eca4dd", "certificate_digest": "53b6f629ee8867a9053ab44d66ffa0e497b02ac927ba49c1e516eda1ffe8f5c0", "certificate_id": "CERT-V011-A2-D5B65E1D48ECA4DD", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A2"}
+{"candidate_id": "882c5eae0d8fd4ec", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "674ea6fd35fa6c39", "negative_evidence_digest": "cf5787fb54c02e39ca5ea3569a4925790dfb0224b8117a3858002a5e78ec8b95", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"}
+{"candidate_id": "03e2adf4e4f323b1", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "4008a63ee1ef3b44", "certificate_digest": "fd2f3cd418cc89de120747162c47a4190b2a8750330a7bd8327b6c8d5737452c", "certificate_id": "CERT-V011-A2-4008A63EE1EF3B44", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A2"}
+{"candidate_id": "8b98d0147c79c3fc", "certificate_digest": "6351e9f2952d67c7b8a340df310d99e086f3740d2f2c2d091891b6560c5b6edd", "certificate_id": "CERT-V011-A2-8B98D0147C79C3FC", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A2"}
+{"candidate_id": "7460029971aad8de", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "41ae4a7df4780001", "certificate_digest": "a4b5ddfee72ae7d07d4fa771df741d81fcab306f9e3fa90838383287ec729194", "certificate_id": "CERT-V011-A2-41AE4A7DF4780001", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A2"}
+{"candidate_id": "0f73ae8d15cf3408", "negative_evidence_digest": "3713a65922f38d562f112089e3ad92a6542899501a53db50cd80b6bc63caa394", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"}
+{"candidate_id": "eb12d3a44210a486", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "8a754dadf1672d0a", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "55fe61b67000b53a", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "28b1b63cc241f487", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "0f2fcfc48ffea4af", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "62aa728fdef86058", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "13df73dbd2825f80", "negative_evidence_digest": "a7f61ad74ea9a6d42f797a9358cb651dc0cbcf80a25ce3c71f37de66a97b06be", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"}
+{"candidate_id": "f234f0be14cf3ff3", "certificate_digest": "daee92f664a23bf26a23455ae88c341d095de2940f39189d232b04ddec357890", "certificate_id": "CERT-V011-A2-F234F0BE14CF3FF3", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "CERTIFIED_A2"}
+{"candidate_id": "26a1af8837fe7ae4", "negative_evidence_digest": "038b8460617ad2ec804d25a38c49227cc2512d28ad8712c67f1e03bec180d0eb", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"}
+{"candidate_id": "5ea2122f340b1558", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "db6bd6fe0c9b8cd4", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "d821bbc9b1df03ae", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "9cc9063a46d23cde", "negative_evidence_digest": "c6ba01f3c7aeb3e5cd5d27b4074c08b4ad971e7e18accca1f444f7b06f65b8d3", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"}
+{"candidate_id": "1311d905af0ebcb5", "negative_evidence_digest": "52b89b9b1c322814cfe09323316eedb130200ff9edad5f7d556fb60f1ae19e60", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"}
+{"candidate_id": "d7f578c3a5f20b8a", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "801278c4d91c2185", "negative_evidence_digest": "0bf5f489f0441d83cc2b51601f94cd7ba69d3163d60330da497e16531cda2caa", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"}
+{"candidate_id": "a09e038870c9b436", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "b2996c3dd81aca55", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "6fd8bd69c26e7954", "negative_evidence_digest": "a756207a6dad91f0a76323e8fb9cb4d6f876f00c9aba7eaa2f2711fd8c41f630", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"}
+{"candidate_id": "8048a564541f5408", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "7cf281a33e5781df", "certificate_id": null, "state": "PENDING_UNASSIGNED", "terminal_outcome": null}
+{"candidate_id": "d285ecd86455b150", "negative_evidence_digest": "491d811d07821d49611b74753c8297f089164373fc2ce70aea058c85cab26e1e", "state": "TERMINAL_ASSIGNED", "terminal_outcome": "NOT_CERTIFIED_UNSUPPORTED"}

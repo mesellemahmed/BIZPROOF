@@ -1,0 +1,24 @@
+{
+  "attack_order": [
+    "B4_BATCH1_STRUCTURED_RETURN",
+    "B4_BATCH2_STATE_EFFECT",
+    "B4_BATCH3_VECTOR_LOGIC",
+    "B4_BATCH4_NESTED_VECTOR_LOGIC",
+    "B4_BATCH5_LARGE_DOMAIN_BINDING"
+  ],
+  "attack_order_frozen": true,
+  "authoritative_sources": 9,
+  "batch_count": 5,
+  "batch_sizes": {
+    "B4_BATCH1_STRUCTURED_RETURN": 3,
+    "B4_BATCH2_STATE_EFFECT": 2,
+    "B4_BATCH3_VECTOR_LOGIC": 1,
+    "B4_BATCH4_NESTED_VECTOR_LOGIC": 2,
+    "B4_BATCH5_LARGE_DOMAIN_BINDING": 1
+  },
+  "certification_started": false,
+  "population": 9,
+  "recovery_claims": 0,
+  "schema_version": "BIZPROOF-V0.12-B4-A2-SUMMARY-1",
+  "semantic_routes_frozen": true
+}

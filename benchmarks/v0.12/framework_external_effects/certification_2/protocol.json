@@ -1,0 +1,35 @@
+{
+  "candidate_id": "7bc9603bfbda7dc9",
+  "correct_source_policy": "Execute the exact frozen source slice without AST rewriting under an explicit controlled helper environment.",
+  "dependency_contract": {
+    "famille_any": "deterministic any over supplied members",
+    "famille_members": "explicit finite member observations",
+    "famille_scalar_reads": "explicit scalar observations",
+    "famille_sum": "deterministic sum over supplied members",
+    "max_": "deterministic binary maximum",
+    "nb_enf": "explicit child-count observation indexed by the requested age interval",
+    "not_": "boolean negation",
+    "parameters": "explicit scalar values addressed by stable dotted semantic paths",
+    "period": "controlled temporal token exposing first_month"
+  },
+  "mutant": {
+    "correct_expression": "eligible * montant_cmg",
+    "frozen_before_execution": true,
+    "mutant_expression": "eligible + montant_cmg",
+    "name": "FINAL_COMPOSITION_MULT_TO_ADD",
+    "target_assignment": "paje_cmg"
+  },
+  "recovery_claims_before_execution": 0,
+  "required_gates": [
+    "exact_frozen_source_execution",
+    "explicit_helper_environment",
+    "no_correct_source_rewrite",
+    "deterministic_controlled_replay",
+    "solver_backed_mutant_refutation",
+    "concrete_full_source_counterexample_replay"
+  ],
+  "schema_version": "BIZPROOF-V0.12-B1-CERT2-PROTOCOL-1",
+  "selection_frozen_before_execution": true,
+  "semantic_capability": "COMPOSITIONAL_SCALAR_HELPER_CLOSURE",
+  "source_checkpoint": "186c3fb5f2e918556992ef9a18c39d8965b45265"
+}

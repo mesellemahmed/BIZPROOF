@@ -1,0 +1,31 @@
+{
+  "authoritative_candidate_ids": [
+    "2309036b0c69ad48",
+    "4b57e2d73c695a41",
+    "8048a564541f5408",
+    "882c5eae0d8fd4ec",
+    "8a754dadf1672d0a",
+    "b2996c3dd81aca55",
+    "d7f578c3a5f20b8a",
+    "eb12d3a44210a486"
+  ],
+  "candidate_count": 8,
+  "certification_started": false,
+  "corroborated_context_ids": [],
+  "function_name_only_ids": [],
+  "recovery_claims": 0,
+  "schema_version": "BIZPROOF-V0.12-B2-PROV8-SUMMARY-1",
+  "status_counts": {
+    "STRONG_HASH_MATCH": 8
+  },
+  "strong_hash_match_ids": [
+    "2309036b0c69ad48",
+    "4b57e2d73c695a41",
+    "8048a564541f5408",
+    "882c5eae0d8fd4ec",
+    "8a754dadf1672d0a",
+    "b2996c3dd81aca55",
+    "d7f578c3a5f20b8a",
+    "eb12d3a44210a486"
+  ]
+}

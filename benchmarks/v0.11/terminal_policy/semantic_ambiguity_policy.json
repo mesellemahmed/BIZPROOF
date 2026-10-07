@@ -1,0 +1,42 @@
+{
+  "benchmark_version": "0.11.0",
+  "policy": "SEMANTIC_AMBIGUITY_TERMINAL_POLICY",
+  "frozen_before_terminal_outcome_assignment": true,
+  "scope": "preregistered V0.11 90-candidate deep cohort",
+  "terminal_outcomes": [
+    "CERTIFIED_A0",
+    "CERTIFIED_A1",
+    "CERTIFIED_A2",
+    "NOT_CERTIFIED_UNKNOWN",
+    "NOT_CERTIFIED_UNSUPPORTED",
+    "NOT_CERTIFIED_PROVENANCE",
+    "NOT_CERTIFIED_EXECUTION",
+    "NOT_CERTIFIED_SEMANTIC_AMBIGUITY"
+  ],
+  "semantic_ambiguity_rule": {
+    "outcome": "NOT_CERTIFIED_SEMANTIC_AMBIGUITY",
+    "all_required": [
+      "source_identity_and_provenance_checks_have_passed",
+      "relevant_symbol_name_resolution_has_been_exhausted",
+      "relevant_dependency_and_protocol_resolution_has_been_exhausted",
+      "at_least_two_mutually_incompatible_source_consistent_semantic_interpretations_remain",
+      "available_BVC_source_domain_and_execution_evidence_does_not_select_a_unique_interpretation"
+    ]
+  },
+  "exclusions": {
+    "missing_or_mismatched_source_identity": "NOT_CERTIFIED_PROVENANCE",
+    "required_construct_outside_supported_semantics": "NOT_CERTIFIED_UNSUPPORTED",
+    "supported_semantics_but_verifier_cannot_decide": "NOT_CERTIFIED_UNKNOWN",
+    "required_concrete_execution_cannot_be_completed": "NOT_CERTIFIED_EXECUTION",
+    "single_interpretation_with_missing_evidence": "NOT_CERTIFIED_UNKNOWN"
+  },
+  "anti_inflation_rules": [
+    "difficulty_is_not_semantic_ambiguity",
+    "wildcard_import_alone_is_not_semantic_ambiguity",
+    "unlocked_dependency_alone_is_not_semantic_ambiguity",
+    "missing_type_information_alone_is_not_semantic_ambiguity",
+    "candidate_must_not_be_dropped_or_replaced",
+    "no_terminal_certification_outcome_may_be_assigned_from_contextual_type_inference_only"
+  ],
+  "certification_claim": false
+}

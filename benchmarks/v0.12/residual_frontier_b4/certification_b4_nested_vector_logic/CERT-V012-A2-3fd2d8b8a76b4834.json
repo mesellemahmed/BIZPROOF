@@ -1,0 +1,43 @@
+{
+  "all_required_gates_pass": true,
+  "authoritative_source": {
+    "correct_source_ast_rewritten": false,
+    "matches_frozen_plan": true,
+    "sha256": "34d5615cad6fa576eb275925c470057151eb960aa06447d4a4bdd0cca87970cb"
+  },
+  "candidate_id": "3fd2d8b8a76b4834",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_mutant_replay": true,
+  "formal_mutant_refutation": {
+    "model": "[resources = 30,\n majoration_active = True,\n base_child_eligible = True]",
+    "property": "there exists an otherwise eligible child with majoration active and resources in [30,50) where the authoritative majoration threshold accepts the child and the mutant general threshold rejects it",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "function_name": "formula_2009_06_01",
+  "historical_category": "NESTED_OR_HIGHER_ORDER_LOGIC",
+  "mutant": {
+    "fault": "the mutant always uses the general resource threshold even when the nested majoration helper is true",
+    "name": "IGNORE_MAJORATION_RESOURCE_THRESHOLD",
+    "target": "majoration branch of the final where(ouvre_droit_majoration(), major_threshold, general_threshold)"
+  },
+  "mutant_protocol_committed_before_execution": true,
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-B4-CERT4-A2-1",
+  "scope": {
+    "certified": "the exact frozen nested formula under the prospectively frozen finite parameter/family observation domain",
+    "not_certified": [
+      "the complete OpenFisca runtime",
+      "arbitrary NumPy/vector broadcasting",
+      "parameter values outside the frozen finite observation domain",
+      "entity aggregation behavior outside the explicit dependency contract"
+    ]
+  },
+  "semantic_capability": "NESTED_FAMILY_VECTOR_CONDITION_RETURN",
+  "source_projection_equivalence": {
+    "controlled_exact_source_replay": true,
+    "dependency_contract_verified": true,
+    "finite_basis": 384
+  },
+  "v012_outcome": "CERTIFIED_A2"
+}

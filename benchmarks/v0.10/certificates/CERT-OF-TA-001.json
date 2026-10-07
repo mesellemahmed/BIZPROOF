@@ -1,0 +1,201 @@
+{
+  "artifacts": {
+    "adapter_function": "is_apprenticeship_tax_liable",
+    "adapter_path": "benchmarks/v0.7/adapters/openfisca_apprenticeship.py",
+    "adapter_sha256": "9962017188d963faa9ff690fdbc7b385ae3c070e2d8b4f73234672946ab8056d",
+    "contract_path": "contracts/external/v0.7/of_apprenticeship_correct.yaml",
+    "contract_sha256": "63a14c1987e2475799ce61923cd14ab4200c19b133c77683680193b4f7912ec2"
+  },
+  "certificate_digest": "f046d436e553f8a5a46fcceaa09c1b00c105898aa386ebeb08750c72f9c2c190",
+  "certificate_id": "CERT-OF-TA-001",
+  "certificate_version": "0.10.0",
+  "certification_scope": "RETURN_EXPRESSION",
+  "checks": [
+    {
+      "detail": "openfisca_france",
+      "name": "lock-source-present",
+      "passed": true
+    },
+    {
+      "detail": "ebcb7782d17058495c6ca33c278e373e167b641b",
+      "name": "registry-lock-commit",
+      "passed": true
+    },
+    {
+      "detail": "ebcb7782d17058495c6ca33c278e373e167b641b",
+      "name": "checkout-lock-commit",
+      "passed": true
+    },
+    {
+      "detail": "openfisca_france/model/prelevements_obligatoires/prelevements_sociaux/taxes_salaires_main_oeuvre.py",
+      "name": "external-source-present",
+      "passed": true
+    },
+    {
+      "detail": "benchmarks/v0.7/adapters/openfisca_apprenticeship.py",
+      "name": "adapter-present",
+      "passed": true
+    },
+    {
+      "detail": "contracts/external/v0.7/of_apprenticeship_correct.yaml",
+      "name": "contract-present",
+      "passed": true
+    },
+    {
+      "detail": "EXT-OF-TA-001",
+      "name": "v0.7-evidence-present",
+      "passed": true
+    },
+    {
+      "detail": "PRES-OF-TA-001",
+      "name": "v0.8-evidence-present",
+      "passed": true
+    },
+    {
+      "detail": "SYM-OF-TA-001",
+      "name": "v0.9-evidence-present",
+      "passed": true
+    },
+    {
+      "detail": "summary passed",
+      "name": "v0.7-summary-pass",
+      "passed": true
+    },
+    {
+      "detail": "summary passed",
+      "name": "v0.8-summary-pass",
+      "passed": true
+    },
+    {
+      "detail": "summary passed",
+      "name": "v0.9-summary-pass",
+      "passed": true
+    },
+    {
+      "detail": "PROVED",
+      "name": "v0.7-correct-proved",
+      "passed": true
+    },
+    {
+      "detail": "DISPROVED",
+      "name": "v0.7-mutant-disproved",
+      "passed": true
+    },
+    {
+      "detail": "True",
+      "name": "v0.7-mutant-replay",
+      "passed": true
+    },
+    {
+      "detail": "0",
+      "name": "v0.8-zero-correct-mismatch",
+      "passed": true
+    },
+    {
+      "detail": "2",
+      "name": "v0.8-mutant-sensitive",
+      "passed": true
+    },
+    {
+      "detail": "True",
+      "name": "v0.8-rule-pass",
+      "passed": true
+    },
+    {
+      "detail": "PROVED",
+      "name": "v0.9-correct-proved",
+      "passed": true
+    },
+    {
+      "detail": "unsat",
+      "name": "v0.9-correct-unsat",
+      "passed": true
+    },
+    {
+      "detail": "DISPROVED",
+      "name": "v0.9-mutant-disproved",
+      "passed": true
+    },
+    {
+      "detail": "sat",
+      "name": "v0.9-mutant-sat",
+      "passed": true
+    },
+    {
+      "detail": "{'nonprofit_association': False}",
+      "name": "v0.9-mutant-witness",
+      "passed": true
+    },
+    {
+      "detail": "ebcb7782d17058495c6ca33c278e373e167b641b",
+      "name": "v0.8-commit-consistency",
+      "passed": true
+    },
+    {
+      "detail": "ebcb7782d17058495c6ca33c278e373e167b641b",
+      "name": "v0.9-commit-consistency",
+      "passed": true
+    },
+    {
+      "detail": "ff84932a59b238328b8a5f4633378fd9ba9824d51403aef3717a24534dce30b1",
+      "name": "v0.8-source-hash",
+      "passed": true
+    },
+    {
+      "detail": "ff84932a59b238328b8a5f4633378fd9ba9824d51403aef3717a24534dce30b1",
+      "name": "v0.9-source-hash",
+      "passed": true
+    },
+    {
+      "detail": "9962017188d963faa9ff690fdbc7b385ae3c070e2d8b4f73234672946ab8056d",
+      "name": "v0.8-adapter-hash",
+      "passed": true
+    },
+    {
+      "detail": "9962017188d963faa9ff690fdbc7b385ae3c070e2d8b4f73234672946ab8056d",
+      "name": "v0.9-adapter-hash",
+      "passed": true
+    }
+  ],
+  "claim_scope": "V0.10 certifies selected business-semantic slices only when their locked provenance, V0.7 contract verification evidence, V0.8 source-executed preservation evidence, and V0.9 symbolic equivalence evidence are mutually consistent. CERTIFIED does not mean that the complete external framework has been verified.",
+  "evidence": {
+    "v0.7": {
+      "correct_verdict": "PROVED",
+      "evidence_sha256": "1f57335d352283b2aff600311bd0bc8c7d2bbed4dd8ee182b688581dedd08ea8",
+      "mutant_replay_validated": true,
+      "mutant_verdict": "DISPROVED",
+      "rule_id": "EXT-OF-TA-001"
+    },
+    "v0.8": {
+      "comparisons": 2,
+      "correct_mismatches": 0,
+      "evidence_sha256": "3439b21888ed9907e51eb4e2fe6dbdcf0190d7d7f20446756113d32f8b7f1a88",
+      "mutant_mismatches": 2,
+      "rule_id": "PRES-OF-TA-001"
+    },
+    "v0.9": {
+      "correct_verdict": "PROVED",
+      "evidence_sha256": "a4db2040f897fb4729ab08c0051c673f73c074e17f174e222172c48badcb9255",
+      "external_mode": "FULL_FUNCTION",
+      "external_slice": "def formula(individu, period):\n    association = individu('entreprise_est_association_non_lucrative', period)\n    return not_(association)",
+      "external_slice_sha256": "120c42e074595de233ec3e5db9c83d365e0e01c7ddc9736ec7bec569fd13336a",
+      "mutant_counterexample": {
+        "nonprofit_association": false
+      },
+      "mutant_solver_status": "sat",
+      "mutant_verdict": "DISPROVED",
+      "rule_id": "SYM-OF-TA-001",
+      "solver_status": "unsat"
+    }
+  },
+  "failed_checks": [],
+  "provenance": {
+    "external_class": "redevable_taxe_apprentissage",
+    "external_method": "formula",
+    "external_source": "openfisca_france/model/prelevements_obligatoires/prelevements_sociaux/taxes_salaires_main_oeuvre.py",
+    "external_source_sha256": "ff84932a59b238328b8a5f4633378fd9ba9824d51403aef3717a24534dce30b1",
+    "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+    "source_id": "openfisca_france"
+  },
+  "status": "CERTIFIED"
+}

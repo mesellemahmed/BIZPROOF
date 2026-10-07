@@ -1,0 +1,26 @@
+{
+  "authoritative_resolved_count": 4,
+  "authoritative_resolved_ids": [
+    "13df73dbd2825f80",
+    "8b3e90ca7b531556",
+    "a74d4580a9effb73",
+    "eb41eb351df073ef"
+  ],
+  "candidate_count": 9,
+  "certification_started": false,
+  "recovery_claims": 0,
+  "remaining_non_authoritative_ids": [
+    "1a2de6edb11465fe",
+    "3fd2d8b8a76b4834",
+    "674ea6fd35fa6c39",
+    "801278c4d91c2185",
+    "e8850260c2763222"
+  ],
+  "schema_version": "BIZPROOF-V0.12-B4-A1-SOURCE-SUMMARY-1",
+  "status_counts": {
+    "DIRECT_HASH_RESOLVED": 3,
+    "HASH_NAME_RESOLVED": 1,
+    "NAME_PATH_REVIEW": 1,
+    "UNRESOLVED": 4
+  }
+}

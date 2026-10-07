@@ -1,0 +1,800 @@
+{
+  "claim_boundary": {
+    "case_specific_adapters": false,
+    "nullable_semantics": false,
+    "observation_scoped_a1": true,
+    "opaque_ordering": false,
+    "pure_boundary_passthrough": false,
+    "whole_program_equivalence": false
+  },
+  "confirmatory_reserve": {
+    "cases_per_project": 10,
+    "cases_per_project_stratum": 2,
+    "cases_target": 60,
+    "outcomes_observed": 0,
+    "projects": 6,
+    "strata": 5
+  },
+  "development_result": {
+    "certification_delta_vs_wave4": 2,
+    "certified": 3,
+    "certified_a1": 3,
+    "denominator": 120,
+    "status": "DEVELOPMENT_ONLY"
+  },
+  "engine_source_commit": "678c2325ec253b053fe01ac2fe936bb593ab6291",
+  "file_count": 154,
+  "files": [
+    {
+      "bytes": 86,
+      "path": "src/bizproof/__init__.py",
+      "sha256": "091e18cc9c632adecae703776ecdf38cb7628d8e3bb1fb109cf94cfcaa819954"
+    },
+    {
+      "bytes": 18445,
+      "path": "src/bizproof/adapter_preservation.py",
+      "sha256": "37f233d32ae5df7d7aae201253866230e6c7f91e8deff843b62ae14e799ed2cd"
+    },
+    {
+      "bytes": 24116,
+      "path": "src/bizproof/baseline_comparison.py",
+      "sha256": "a3b69dc303b27eab90b52d4821c367d70cf28032346f5b1834b2d4597c52c794"
+    },
+    {
+      "bytes": 25620,
+      "path": "src/bizproof/business_benchmark.py",
+      "sha256": "c7fe273d99ca07275da84c087289307a0c8f46d1ced362e2c24fb313acbe0d77"
+    },
+    {
+      "bytes": 21041,
+      "path": "src/bizproof/certification_pipeline.py",
+      "sha256": "0297df85d2f86d4afb26fedcfe3cb2eaf162a38c8383d4614cb29c1945b3e12f"
+    },
+    {
+      "bytes": 26533,
+      "path": "src/bizproof/challenge_benchmark.py",
+      "sha256": "3a03560c85a0bae183a7e597d3054c41fb45361df0c65b79ee1eb2fe5d98e889"
+    },
+    {
+      "bytes": 4588,
+      "path": "src/bizproof/cli.py",
+      "sha256": "aafe7c946e7189f5a775333a3a69d3ca4117f76f68f57d664edb2a5c0a4dfb13"
+    },
+    {
+      "bytes": 6287,
+      "path": "src/bizproof/compositional_helper_runtime_v012.py",
+      "sha256": "3bce83e07ed20b75dcc406d2e5c638323d3dbc1a7da4b75c8973fe0dcc7d2caa"
+    },
+    {
+      "bytes": 3823,
+      "path": "src/bizproof/contracts.py",
+      "sha256": "2d3d7fc169466b01cfd90aad813cad98d2135bfaae813f36c67359722cf7dd13"
+    },
+    {
+      "bytes": 1538,
+      "path": "src/bizproof/differential.py",
+      "sha256": "a4f1f1dde02ac0f283a9445fa8d4125a4108443274868bfd2648c77c14d67078"
+    },
+    {
+      "bytes": 4744,
+      "path": "src/bizproof/enum_backend.py",
+      "sha256": "27d13dedd2096700475eef56e66e2d3f67d6c66db6e16a83b7e5bd0b8b03a765"
+    },
+    {
+      "bytes": 1445,
+      "path": "src/bizproof/expressions.py",
+      "sha256": "f3d7cdc2350449941142a72a8d8fe2dd6bbd0d7d0e7eff8265c7b30fd513c01a"
+    },
+    {
+      "bytes": 26578,
+      "path": "src/bizproof/external_corpus.py",
+      "sha256": "0a93503a338624c58a9da851efe08c43124e88975fbc4fa769116468d2b04d7d"
+    },
+    {
+      "bytes": 12264,
+      "path": "src/bizproof/external_semantic_validation.py",
+      "sha256": "427a0e3c731e839a92f4111f3e698a7e9d08afdb5d61519929d1c2561f68a76c"
+    },
+    {
+      "bytes": 11698,
+      "path": "src/bizproof/fuzzing.py",
+      "sha256": "183627c92fb32aff0b2be7139551c6f0e1d128926a088b302372054aa4366239"
+    },
+    {
+      "bytes": 45274,
+      "path": "src/bizproof/generalization_a1_batch_proof.py",
+      "sha256": "867b919f77cd078a288dbfa02e5b441bc09f26fe91a19e181edc67ef19fab231"
+    },
+    {
+      "bytes": 17339,
+      "path": "src/bizproof/generalization_a1_dependency_repair.py",
+      "sha256": "31ad006a1c0cab143af6202c4f7a2221e8ff2936070a6cee64d8ede3334d61b9"
+    },
+    {
+      "bytes": 28931,
+      "path": "src/bizproof/generalization_a1_leaf_binding.py",
+      "sha256": "aca784c7c9e806212170d95c77b13799f24c11288e4dea2d07cb02b285a1a56f"
+    },
+    {
+      "bytes": 23621,
+      "path": "src/bizproof/generalization_a1_remaining_binding_proof.py",
+      "sha256": "a204be2cd2ed823050d3efca2d4e2efe45a9116e2cbb73fc7061b4cd0428a882"
+    },
+    {
+      "bytes": 20740,
+      "path": "src/bizproof/generalization_a2_authoring.py",
+      "sha256": "8399f5a67fa69a90d8c444a0a961aad24eb23e7343a3af54bfaf48aa0d4bf62f"
+    },
+    {
+      "bytes": 27744,
+      "path": "src/bizproof/generalization_a2_residual_closure.py",
+      "sha256": "5d7adc99c1bec9403b55665b8a0d1d1b642de93a6e9f4ab86759cb7a6cdf0744"
+    },
+    {
+      "bytes": 25527,
+      "path": "src/bizproof/generalization_a2_v1_proof.py",
+      "sha256": "65e29348c95f9d285dcbebf98cfa66bef0507888b5a8901ca0f90dbc3a75fb58"
+    },
+    {
+      "bytes": 35868,
+      "path": "src/bizproof/generalization_a2_v2_proof.py",
+      "sha256": "22d23e5b5535201becf6dfe3262123d3f0565aab51d2ba608dd6866e8680db4c"
+    },
+    {
+      "bytes": 36417,
+      "path": "src/bizproof/generalization_a2_v3_proof.py",
+      "sha256": "e096c93e57b0024a407ae5938d2e0ab9b84e85a5c76e6a5a545a4577ce9dc0bb"
+    },
+    {
+      "bytes": 35348,
+      "path": "src/bizproof/generalization_candidate_proof.py",
+      "sha256": "f766e700bca6d0829ef2fc8bd08aefc61ee7ab9a482702573198038e526096d9"
+    },
+    {
+      "bytes": 14625,
+      "path": "src/bizproof/generalization_certification_audit.py",
+      "sha256": "39277c5b3dda517b2450b49c983646876cfe364d71c81d65508599dcc6521a82"
+    },
+    {
+      "bytes": 9982,
+      "path": "src/bizproof/generalization_cohort.py",
+      "sha256": "c3f3140d70715527fef85a5ea42e27329382c2b3dcb34ab693af88af032dcc44"
+    },
+    {
+      "bytes": 15516,
+      "path": "src/bizproof/generalization_contract_readiness.py",
+      "sha256": "750600bcb66bb7709a9c90aba7096f9e92b6fab8695befd348b682cd07ea237c"
+    },
+    {
+      "bytes": 20063,
+      "path": "src/bizproof/generalization_contract_skeleton.py",
+      "sha256": "54b4b38415a3ef007452f101b4efb42b0dcc6733c01e440f1bb9c15004396388"
+    },
+    {
+      "bytes": 45039,
+      "path": "src/bizproof/generalization_controlled_complex_closure.py",
+      "sha256": "067765686ba6cf38008a0e9892b24a3b20f7ce76e230455c826f416454fb9ccb"
+    },
+    {
+      "bytes": 5328,
+      "path": "src/bizproof/generalization_controlled_complex_terminal.py",
+      "sha256": "fbb091ec3169610e519efbc9f4f7207a3b240dc57b6a773091e15aba38aeb718"
+    },
+    {
+      "bytes": 23655,
+      "path": "src/bizproof/generalization_controlled_state_closure.py",
+      "sha256": "866979f33f0948ce1a3ba3b5fa79f0c81e625f5010f0affcad26bf262d3da4ed"
+    },
+    {
+      "bytes": 27922,
+      "path": "src/bizproof/generalization_declarative_binding_closure.py",
+      "sha256": "64dc9d874f37560f20ac4eb99660b3f356037b50872307aa95b37db1bdb43cbd"
+    },
+    {
+      "bytes": 12368,
+      "path": "src/bizproof/generalization_families.py",
+      "sha256": "0a2b46d19f355e35bfb3177b8adf56152adcd19045173c7be3e5756663e5e329"
+    },
+    {
+      "bytes": 23699,
+      "path": "src/bizproof/generalization_feasibility.py",
+      "sha256": "44b6800533953719f2440c95162303984b69f7321197fbba22082355df9de458"
+    },
+    {
+      "bytes": 29121,
+      "path": "src/bizproof/generalization_final_nbptr_a2.py",
+      "sha256": "847c5d0be0ad930ceac4670c5eda94941652d75d778d18873618e36070a6efae"
+    },
+    {
+      "bytes": 26073,
+      "path": "src/bizproof/generalization_name_resolution.py",
+      "sha256": "12f26923b73376cec59708597217f6143b997dd7498befea43978c5788cd9f43"
+    },
+    {
+      "bytes": 25041,
+      "path": "src/bizproof/generalization_protocol_closure.py",
+      "sha256": "192a277b043c9bf43f793560607d8018d11d943013c464183871affe23c9b4b0"
+    },
+    {
+      "bytes": 17359,
+      "path": "src/bizproof/generalization_remaining_cohort_sweep.py",
+      "sha256": "074567baacc375d4d8f4074d68572e35d2c9b645ad082a927ebddae9dbb1f319"
+    },
+    {
+      "bytes": 20124,
+      "path": "src/bizproof/generalization_residual_binding_closure.py",
+      "sha256": "23a9f496535bb2e61a335c734b68f4306e57a6642ef5cfc71fe2506fb810fb1f"
+    },
+    {
+      "bytes": 24429,
+      "path": "src/bizproof/generalization_semantic_contract_batch.py",
+      "sha256": "1a24a325d08e3db3bceab9bfbef93ddfcb7f8d2b1bcf1b610a23e30ad43eaf48"
+    },
+    {
+      "bytes": 19485,
+      "path": "src/bizproof/generalization_semantic_contract_closure.py",
+      "sha256": "561b0d42b76ad369fe653bd15daf0c6e9c0fb34abc4daebcfbb09fc0ea25fe71"
+    },
+    {
+      "bytes": 22086,
+      "path": "src/bizproof/generalization_semantic_evidence.py",
+      "sha256": "c60b603e691d8230bb7de3bcd71d746779589889faa7ad52d7b47e7ab066f80a"
+    },
+    {
+      "bytes": 7956,
+      "path": "src/bizproof/generalization_structural_nationality_a1.py",
+      "sha256": "308e7b5309f7bd0166709c505477c46f8b3f360c63b6d34a041338942b5f4ecd"
+    },
+    {
+      "bytes": 12641,
+      "path": "src/bizproof/generalization_structural_nationality_symbolic.py",
+      "sha256": "506bd58aeac82b975d3c7a693bf17c8153ac6483c52e78dd5f6259beb6d68cb3"
+    },
+    {
+      "bytes": 29698,
+      "path": "src/bizproof/generalization_symbol_trace.py",
+      "sha256": "f419fba19b699213e32f1ade79ec59acf2cdac3d619ffa900a7debf7173d74f7"
+    },
+    {
+      "bytes": 24871,
+      "path": "src/bizproof/generalization_symbolic_probe.py",
+      "sha256": "7590df4c68772c9e0b53fb007b5dff53a188a275c430f6a5331a657d09dd1435"
+    },
+    {
+      "bytes": 22296,
+      "path": "src/bizproof/generalization_terminal_certification.py",
+      "sha256": "94f86799c72490967d741dd09db416c82f364e892472bc55835d5e530a49462f"
+    },
+    {
+      "bytes": 5930,
+      "path": "src/bizproof/generalization_v012_framework_effects_a2.py",
+      "sha256": "77b7adaf5c6a5b2a7a0fcc48e69a45ecd3080225658179c0f8a6c12b87822b95"
+    },
+    {
+      "bytes": 7596,
+      "path": "src/bizproof/generalization_v012_large_domain_binding_a2.py",
+      "sha256": "298663c7cde08b438f8aecaecd3627f00d2a46d01e73a3acf264a474e32b2944"
+    },
+    {
+      "bytes": 2313,
+      "path": "src/bizproof/generalization_v012_nested_vector_a2.py",
+      "sha256": "f43b7933ea25c45859002d97cdd5dfc7f96167473cb72a25f2e8f8424a9b83e1"
+    },
+    {
+      "bytes": 1900,
+      "path": "src/bizproof/generalization_v012_non_scalar_a2.py",
+      "sha256": "aa4a7d2a0cbc278eaadbd15edaedb67a584ebe28ed1765153c56cbc3ec1fe724"
+    },
+    {
+      "bytes": 3131,
+      "path": "src/bizproof/generalization_v012_queryset_a2.py",
+      "sha256": "228d2ce03d43bc23c90057e4aceecb9c41138561a0032127bb13f0b454f14826"
+    },
+    {
+      "bytes": 6211,
+      "path": "src/bizproof/generalization_v012_reference_a2.py",
+      "sha256": "9a089718196ff94e3662a6a48d76afda744ee46f3a53732a64fa780496a2a8b2"
+    },
+    {
+      "bytes": 6302,
+      "path": "src/bizproof/generalization_v012_reference_cert2.py",
+      "sha256": "bf3400d637796114d097cd194259f36e4c3a2b7094a94b3d20b5d1262fe88576"
+    },
+    {
+      "bytes": 3406,
+      "path": "src/bizproof/generalization_v012_rich_framework_a2.py",
+      "sha256": "6fef305208aab69e559ca34a409d68e0b324da7035e47a7034b81643ef643475"
+    },
+    {
+      "bytes": 4647,
+      "path": "src/bizproof/generalization_v012_service_effect_a2.py",
+      "sha256": "9a577b6a80cf17bfd83c76bae80be3cbb81b5131ab5910f9e0061d9da7ef03f1"
+    },
+    {
+      "bytes": 2728,
+      "path": "src/bizproof/generalization_v012_state_container_a2.py",
+      "sha256": "854fd09b76239287f5a45d2751cafe91749c4511903077295bc76f5bd65ea965"
+    },
+    {
+      "bytes": 2740,
+      "path": "src/bizproof/generalization_v012_state_effect_a2.py",
+      "sha256": "8779d77b489d3e256821da920e9273b6c60bf546bf0674c128bb37148d8cbc58"
+    },
+    {
+      "bytes": 2129,
+      "path": "src/bizproof/generalization_v012_state_return_a2.py",
+      "sha256": "c47557aa7987f8d124f39595888d2ade0cae438c04ebae1dd7c471c3cf0056d3"
+    },
+    {
+      "bytes": 2834,
+      "path": "src/bizproof/generalization_v012_structured_return_a2.py",
+      "sha256": "34a99e600fc3fc1dfbac147b36d624d33fbe83be26a07a213a1c3f271023fcd4"
+    },
+    {
+      "bytes": 4773,
+      "path": "src/bizproof/generalization_v012_transactional_save_a2.py",
+      "sha256": "5b9ab6e9c6bbfeae4e10b2a4abe1020ce7c5e4a0b5a8022d613651fd52147ed3"
+    },
+    {
+      "bytes": 1227,
+      "path": "src/bizproof/generalization_v012_vector_boolean_a2.py",
+      "sha256": "ce7833019b62884073195efe98d6668aa97a7194608f1beaccd37d903919bdec"
+    },
+    {
+      "bytes": 9445,
+      "path": "src/bizproof/generalization_workplan.py",
+      "sha256": "3054bc316e594267f69a4e2ecdc117fa99a72571a4d4bafa41c470bd45d8adbf"
+    },
+    {
+      "bytes": 1078,
+      "path": "src/bizproof/loader.py",
+      "sha256": "2137d5d3f1ee9486e033eaff86c64df5eb666eae89649f89ce07045c0d6b685a"
+    },
+    {
+      "bytes": 1126,
+      "path": "src/bizproof/model.py",
+      "sha256": "bb9db90781b72d70deb34a6b72baea8086dde4d16cf65003d49ecb5ff41af4b8"
+    },
+    {
+      "bytes": 19677,
+      "path": "src/bizproof/paper_a2_baseline.py",
+      "sha256": "7f380e89427fd95b4613ce22246535071ff6c70bf388e75940e18e5dd3e1b429"
+    },
+    {
+      "bytes": 6648,
+      "path": "src/bizproof/python_symbolic.py",
+      "sha256": "c7f2b6bb42c84646100ec3a4cc48736065679972fe58ee91d26594a4add8f759"
+    },
+    {
+      "bytes": 2311,
+      "path": "src/bizproof/replay.py",
+      "sha256": "162034607b94bdac1e1b52f43bf71f9166139cd4f79cceba56e22d13a5a46e93"
+    },
+    {
+      "bytes": 2509,
+      "path": "src/bizproof/reporting.py",
+      "sha256": "fa6b7f3369489f39e2a6e9a7a20783ec7fde3c75c8c92d67e8fe16d2abec7f70"
+    },
+    {
+      "bytes": 6981,
+      "path": "src/bizproof/semantic_values_v012.py",
+      "sha256": "ff17a5c4a28c3aefd061a64d838574b379c8da148901c8b18f2e3a7a29bc171e"
+    },
+    {
+      "bytes": 23853,
+      "path": "src/bizproof/symbolic_equivalence.py",
+      "sha256": "02256b5f6d17836785a78a6e099918fa39560793fccbec1e5006d6e417d4e7e0"
+    },
+    {
+      "bytes": 28879,
+      "path": "src/bizproof/universal_certifier.py",
+      "sha256": "76558aedefc56b87be6014761cb412afbbb3db11727ac2d24ee122a557ea2e87"
+    },
+    {
+      "bytes": 26519,
+      "path": "src/bizproof/universal_closure.py",
+      "sha256": "7f141fbc35a5dcc0cb5218e6c01c6236d1a7224d2e33b1bce20f0b3ad694ac21"
+    },
+    {
+      "bytes": 14814,
+      "path": "src/bizproof/universal_projection.py",
+      "sha256": "57e4b7a4113af7dca2ca98be84b865e13ffd5390fd1c94e33d2a62f3d2c6babc"
+    },
+    {
+      "bytes": 25263,
+      "path": "src/bizproof/v014_boundary.py",
+      "sha256": "3492a87bddf784d15ba652e3e80aa9bafac5b21d15f61d038b4e14297690a731"
+    },
+    {
+      "bytes": 26822,
+      "path": "src/bizproof/v014_highcoverage.py",
+      "sha256": "3d825d5945865c4bf3ffeca92c7f19e29e9918d7b668e9c431a0087c04fe813f"
+    },
+    {
+      "bytes": 13082,
+      "path": "src/bizproof/v014_obligation.py",
+      "sha256": "c9ccf5fc09d4f60d48617fb4545bffaa073bb5df46bdb53374e3e89b3b3ea914"
+    },
+    {
+      "bytes": 12129,
+      "path": "src/bizproof/v014_obligation_localtypes.py",
+      "sha256": "95d93745bcf076d5ea9e5bf84705f46aa6984111514575642b77df0fb3b5d370"
+    },
+    {
+      "bytes": 18275,
+      "path": "src/bizproof/v014_osss.py",
+      "sha256": "5815a26d17b2df5cc32884302b3982f4a96f97f866c3cfe991d3e4a8b28e153b"
+    },
+    {
+      "bytes": 21295,
+      "path": "src/bizproof/v014_osss_hardened.py",
+      "sha256": "8c134cac096fbb7d369c8fea1867ef64809e5647fe68b62cffb0b598ff070160"
+    },
+    {
+      "bytes": 10588,
+      "path": "src/bizproof/z3_backend.py",
+      "sha256": "d9aa34d5db3047cd7c868535a3703ba77bcc379c3258b37c52830c83dfca9880"
+    },
+    {
+      "bytes": 6022,
+      "path": "src/bizproof/z3expr.py",
+      "sha256": "5b8c858e3b897b37ac8d9c8c6c0a829b324b1b9ab5873cbb45e14d63faafd9f8"
+    },
+    {
+      "bytes": 1951,
+      "path": "tests/test_adapter_preservation.py",
+      "sha256": "d306fe2f3498314cff286229a8e7c97055d41a2fc077ce325bc359573c2d15bd"
+    },
+    {
+      "bytes": 1821,
+      "path": "tests/test_baseline_comparison.py",
+      "sha256": "337397d155a80729ded3d6a7d06de9c08bea37a8538a0f4a6d1723b4a060d7b0"
+    },
+    {
+      "bytes": 1603,
+      "path": "tests/test_business_benchmark.py",
+      "sha256": "b28c88340f14082fa0ff9f9ec8679dc1f7e58e74ff6b281d08a38ab820533274"
+    },
+    {
+      "bytes": 1530,
+      "path": "tests/test_certification_negative_paths.py",
+      "sha256": "a2bf81cdce629ca8083ef4b9b3b8e67c319f53c61b0c5760c55333a63e79f677"
+    },
+    {
+      "bytes": 2936,
+      "path": "tests/test_certification_pipeline.py",
+      "sha256": "d5c62cde3bc8d2e28cc332800e6ea2465001b32042c05dfc0b61f3981bd47d8c"
+    },
+    {
+      "bytes": 2441,
+      "path": "tests/test_challenge_benchmark.py",
+      "sha256": "1236c916bee5fb814fe9c543b89226dc3a8450ea13f2a4ebb6ab917cab0899a4"
+    },
+    {
+      "bytes": 2101,
+      "path": "tests/test_compositional_helper_runtime_v012.py",
+      "sha256": "75fcab87ea0e7be5aedaaf4f7a64e9d59dfbbc17cbbcec7a25fa5c6794ade845"
+    },
+    {
+      "bytes": 411,
+      "path": "tests/test_contracts.py",
+      "sha256": "b4ef317f503ebddab508acc85d276e8ef5d1f4fb707be37934c94442f5efc2d9"
+    },
+    {
+      "bytes": 459,
+      "path": "tests/test_differential.py",
+      "sha256": "11adb1758f18c3a7cfd7165f154cf4d931039e9b7926aebba68aa71a99326f1e"
+    },
+    {
+      "bytes": 1276,
+      "path": "tests/test_enum_backend.py",
+      "sha256": "8d99406c9e19243d2d07e8d35dbf14417d56b7a747c370b4653aff7c7717a15a"
+    },
+    {
+      "bytes": 5886,
+      "path": "tests/test_external_corpus.py",
+      "sha256": "21f17341fb522b927154579869eb360990f95459c28bef70a93ea56c99a8740c"
+    },
+    {
+      "bytes": 1764,
+      "path": "tests/test_external_semantic_validation.py",
+      "sha256": "5ef44482b0ec7f3bca5d388404e4e6e7408866a7bc589e5d044c14c12607993e"
+    },
+    {
+      "bytes": 1167,
+      "path": "tests/test_fuzzing.py",
+      "sha256": "1ddbdd9553747f52c86ab3b04947c65d96f3677fad6547466632e076bf9c6903"
+    },
+    {
+      "bytes": 1891,
+      "path": "tests/test_generalization_a1_batch_proof.py",
+      "sha256": "dd7217f47bcbed9a0b193d3a559ed325715cdea4f1dd9d6a78346377af222157"
+    },
+    {
+      "bytes": 1455,
+      "path": "tests/test_generalization_a1_leaf_binding.py",
+      "sha256": "59b4b56135b58401ccf7956372fa642961b5184304b0a22741f1de47717f4ed2"
+    },
+    {
+      "bytes": 2397,
+      "path": "tests/test_generalization_a1_remaining_binding_proof.py",
+      "sha256": "e842a85d068d9d75d604543284ec038bd7dc3aeae6f847b112518eef05f91960"
+    },
+    {
+      "bytes": 1251,
+      "path": "tests/test_generalization_a2_authoring.py",
+      "sha256": "9686363b95b49a0624f14d9eaf25d92c4b0bf0e8a203abedd68713d21dc67cb8"
+    },
+    {
+      "bytes": 1776,
+      "path": "tests/test_generalization_a2_residual_closure.py",
+      "sha256": "1dfaddd3082277f91aebd9e2b5d4b3ed7b9b658eccd310b689769e728948ad2b"
+    },
+    {
+      "bytes": 1094,
+      "path": "tests/test_generalization_a2_v1_proof.py",
+      "sha256": "6c8ffc13dbf67bc68661e3a716be68423f57a0f53d7aae6b9c9355b92f995f2a"
+    },
+    {
+      "bytes": 1884,
+      "path": "tests/test_generalization_a2_v2_proof.py",
+      "sha256": "167381e3b47751332dc862ab66886c4001aca7db5d8f5271e50a7a4d1e93ecdf"
+    },
+    {
+      "bytes": 2505,
+      "path": "tests/test_generalization_a2_v3_proof.py",
+      "sha256": "5d2f50d8d217c93c508d509bf32801985284d30a87bb5b23639e43022a43133a"
+    },
+    {
+      "bytes": 5990,
+      "path": "tests/test_generalization_candidate_proof.py",
+      "sha256": "ffdc1e2be9eaa7d4f2f77a92667c2ab90dd6ffea89af369e12611da9bece0046"
+    },
+    {
+      "bytes": 1225,
+      "path": "tests/test_generalization_certification_audit.py",
+      "sha256": "b93928ebb915c57ea3384d71288e7be48d7de389eab37c75a43f289254b21982"
+    },
+    {
+      "bytes": 2450,
+      "path": "tests/test_generalization_cohort.py",
+      "sha256": "0e35b972d550b89b62c10c3590c482f3b6e4e0e8bb7b287d3d4a6c77c7f66017"
+    },
+    {
+      "bytes": 2025,
+      "path": "tests/test_generalization_contract_readiness.py",
+      "sha256": "f0e3a0fed7ebe90e4429161f9a1ad615177d006a15119f237b1fe512ef57c952"
+    },
+    {
+      "bytes": 2636,
+      "path": "tests/test_generalization_contract_skeleton.py",
+      "sha256": "8aa9eb6c9e267ff57ef3db777bd3633713f82862b00117d551d37e2d5d77e77f"
+    },
+    {
+      "bytes": 634,
+      "path": "tests/test_generalization_controlled_state_closure.py",
+      "sha256": "8298257c08cf6d8f2d345d7f1608e5b4937629b8f56a466a9795aa48f7daaf7e"
+    },
+    {
+      "bytes": 3175,
+      "path": "tests/test_generalization_declarative_binding_closure.py",
+      "sha256": "193f0f0973b068a67c8b6d60f2abd665c4c9072c8929173e98d80b1d192aa193"
+    },
+    {
+      "bytes": 579,
+      "path": "tests/test_generalization_families.py",
+      "sha256": "bc3ae04164ea4a0b3d44165b073df281b6a17f31504ef442b78f385f076cee25"
+    },
+    {
+      "bytes": 2924,
+      "path": "tests/test_generalization_feasibility.py",
+      "sha256": "160bb48ff189c5e52f02a8545d118dfa26c19b431011bc47c4887e938b76fcad"
+    },
+    {
+      "bytes": 3489,
+      "path": "tests/test_generalization_name_resolution.py",
+      "sha256": "b3e52974f1af671e60c4145b2f7587ffc60c0f3c2c0572e5bacd91565cb92693"
+    },
+    {
+      "bytes": 2323,
+      "path": "tests/test_generalization_protocol_closure.py",
+      "sha256": "631d1fcfc9de30195cc5b507515caed01ed98d32ed090e5a8d36391af782e233"
+    },
+    {
+      "bytes": 1119,
+      "path": "tests/test_generalization_remaining_cohort_sweep.py",
+      "sha256": "49ad948a9d25879297ed34f5abc6c04d24e3b0a685749e930792003d7cf254f5"
+    },
+    {
+      "bytes": 1377,
+      "path": "tests/test_generalization_residual_binding_closure.py",
+      "sha256": "0483d958859d27b37db61f5123b27d4a7724539cb6731fd1ef97549ce7bcf329"
+    },
+    {
+      "bytes": 4264,
+      "path": "tests/test_generalization_semantic_contract_batch.py",
+      "sha256": "302a0f895a246ff4bdcf0fd5f56631a8ef96a38e66d42a909e4c9913f92f2ed2"
+    },
+    {
+      "bytes": 991,
+      "path": "tests/test_generalization_semantic_contract_closure.py",
+      "sha256": "ccd9fe83d276609357099e2ed5bff6f0b351288aa5ed65f1b39d62c85ae1950d"
+    },
+    {
+      "bytes": 2692,
+      "path": "tests/test_generalization_semantic_evidence.py",
+      "sha256": "469919d5ddd206487926f80a9ca66c9faa1bbda082f1680e74d761b7911acbe3"
+    },
+    {
+      "bytes": 2848,
+      "path": "tests/test_generalization_symbol_trace.py",
+      "sha256": "ddb127dc8f90f6d5d70381418f2e7a967c5c20f613f69898d35f445e5ba167a6"
+    },
+    {
+      "bytes": 1946,
+      "path": "tests/test_generalization_symbolic_probe.py",
+      "sha256": "a0410eada5e3bec944b8da30c4cc3b499e87e5dd74a4be55bfb6a140f23f48e8"
+    },
+    {
+      "bytes": 1861,
+      "path": "tests/test_generalization_terminal_certification.py",
+      "sha256": "cdfebcb4861821b45de0aab7f7ddf6de69275149a4a337bd7b25b1a1054b6b63"
+    },
+    {
+      "bytes": 2572,
+      "path": "tests/test_generalization_v011_final_closure.py",
+      "sha256": "c77b3b43b3d9bed179126758deee1543bd645809281e75e07020aa4e1cd60083"
+    },
+    {
+      "bytes": 2201,
+      "path": "tests/test_generalization_v012_framework_effects_a2.py",
+      "sha256": "07c4d72a2878d45ec331c8b61d730748d4f19a82ffc2bb56fa54c182266376f0"
+    },
+    {
+      "bytes": 2966,
+      "path": "tests/test_generalization_v012_large_domain_binding_a2.py",
+      "sha256": "d6484da651b9f793acfa9d6c43d6339cd7892c032d1f6e72ba6103485403c23d"
+    },
+    {
+      "bytes": 2321,
+      "path": "tests/test_generalization_v012_nested_vector_a2.py",
+      "sha256": "691602f4193ae7c946b4c0edaa34994f16da0455cebd940c4025483148525c3f"
+    },
+    {
+      "bytes": 2304,
+      "path": "tests/test_generalization_v012_non_scalar_a2.py",
+      "sha256": "09c1d88e1b1876b4ce0d51d293baded2cfd799947aedeb7f291a0fed8f52916e"
+    },
+    {
+      "bytes": 2663,
+      "path": "tests/test_generalization_v012_queryset_a2.py",
+      "sha256": "188ece9fb15f1b49e2d88abe99567d4d368f4b367a31bd7f0ab87ac4a6bfdc64"
+    },
+    {
+      "bytes": 3417,
+      "path": "tests/test_generalization_v012_reference_a2.py",
+      "sha256": "5b4d2eb1a79dfb7dba4f5795ed605624494c11e75c93cd8ded9943a67517c920"
+    },
+    {
+      "bytes": 5517,
+      "path": "tests/test_generalization_v012_reference_cert2.py",
+      "sha256": "57f6a4c0f70fa724bbf326b123f144dd8f0528d04b38b9d0fd1fc7944f68524d"
+    },
+    {
+      "bytes": 2652,
+      "path": "tests/test_generalization_v012_rich_framework_a2.py",
+      "sha256": "039aa6340cdf405daf0a26beb6e74e02271ff1ac8fe41ff30c5459d8cad89076"
+    },
+    {
+      "bytes": 2732,
+      "path": "tests/test_generalization_v012_service_effect_a2.py",
+      "sha256": "87bb28260eb3b95c787fb1053480421e14c972d13a25512f10617af444528246"
+    },
+    {
+      "bytes": 2474,
+      "path": "tests/test_generalization_v012_state_container_a2.py",
+      "sha256": "cef038acbeb834df8980710c9e9e1273cc894dc87f2d751393a8137ef44da532"
+    },
+    {
+      "bytes": 2015,
+      "path": "tests/test_generalization_v012_state_effect_a2.py",
+      "sha256": "08be83c8c403fef9225298b1993c5644f153aed42fc578752ccdc1bd18c12b55"
+    },
+    {
+      "bytes": 2894,
+      "path": "tests/test_generalization_v012_state_return_a2.py",
+      "sha256": "568b13c5b398d87553129cdacb9ad802d1b18e9270faf7b7a4cf0b9928793cfd"
+    },
+    {
+      "bytes": 3092,
+      "path": "tests/test_generalization_v012_structured_return_a2.py",
+      "sha256": "4e7f59a92073942617e42d3ea431149a616c5786528dd0db75e2a14d0ec4bbf2"
+    },
+    {
+      "bytes": 3930,
+      "path": "tests/test_generalization_v012_transactional_save_a2.py",
+      "sha256": "3efde6b3bba00664c7a746e9185dfc84d1a9589d3ff95c4df1b6d670808ef23c"
+    },
+    {
+      "bytes": 1773,
+      "path": "tests/test_generalization_v012_vector_boolean_a2.py",
+      "sha256": "933986494fb5d760bfad6f57424b6caf3c0dca8a0aec896faf398f9553434027"
+    },
+    {
+      "bytes": 2321,
+      "path": "tests/test_generalization_w8_w9_closure.py",
+      "sha256": "4aedae50c076d7e89fba885ece84fdfb81c4b7cea288febdfab9c0cacb59c0f3"
+    },
+    {
+      "bytes": 2742,
+      "path": "tests/test_generalization_workplan.py",
+      "sha256": "daa2c83fcc082cc6db189f012b0fece10cf3a1d20104cece8e3d1c6f2045267e"
+    },
+    {
+      "bytes": 5070,
+      "path": "tests/test_semantic_values_v012.py",
+      "sha256": "3f38aa585c4ca02188f3db68ca88dc86cc940aa52bedb1ac88304d62210f98d0"
+    },
+    {
+      "bytes": 2142,
+      "path": "tests/test_symbolic_equivalence.py",
+      "sha256": "d232ddf172ef48d285717d2f5c1c1faa1d477bc55b862dc320e38f45135a996e"
+    },
+    {
+      "bytes": 7581,
+      "path": "tests/test_universal_certifier.py",
+      "sha256": "81c221ba2b5c93b31d59e4106077c458431d881000b8a6558992ab4cdd78665d"
+    },
+    {
+      "bytes": 2139,
+      "path": "tests/test_universal_closure.py",
+      "sha256": "75d2aa8d64f73d865abbb9ddf011a72728afbed593996cb1899fe82438df9e66"
+    },
+    {
+      "bytes": 11962,
+      "path": "tests/test_universal_hardening.py",
+      "sha256": "ef52159487d3caeb6e085278cd291d2da92de9778bc6b842657f5309b6218450"
+    },
+    {
+      "bytes": 2758,
+      "path": "tests/test_universal_projection.py",
+      "sha256": "6e1e689636382b6ea403901464ca674d7d676ec44a9aef37903a4af70a1a0700"
+    },
+    {
+      "bytes": 7458,
+      "path": "tests/test_v014_boundary.py",
+      "sha256": "3dfe90fb7db4e3b76b5a1aaa5da42e4869ae88758690e57d8e2746d1ccce0421"
+    },
+    {
+      "bytes": 6132,
+      "path": "tests/test_v014_highcoverage.py",
+      "sha256": "bb1ee34e97a19f0a53e350ca3f2273c834bc5996b234c9c2eb8ff60d211826b1"
+    },
+    {
+      "bytes": 3911,
+      "path": "tests/test_v014_obligation.py",
+      "sha256": "7c737c9f2ecd1ead86c6df2abf06470a01a99ed887cef92dec38ddfcefcf8af1"
+    },
+    {
+      "bytes": 3887,
+      "path": "tests/test_v014_obligation_localtypes.py",
+      "sha256": "3113f7b2bb5887addfe92db60844483d856fcfa79675a245f5605097113faa17"
+    },
+    {
+      "bytes": 3829,
+      "path": "tests/test_v014_osss.py",
+      "sha256": "66b7a1c3eed1fda297dd856dd4081b910d4e85a62ec8372ade5df01511298bc7"
+    },
+    {
+      "bytes": 3994,
+      "path": "tests/test_v014_osss_hardened.py",
+      "sha256": "580230aea807739b7d009b698a67043002473068b638145e5db496327f286301"
+    },
+    {
+      "bytes": 2484,
+      "path": "tests/test_z3_backend.py",
+      "sha256": "5d0b0f69e9da1fd7fd69f35a99be7816d0407e2bee912e8c5990c7522ef822a9"
+    }
+  ],
+  "schema_version": "BIZPROOF-V0.14-ENGINE-FREEZE-1"
+}

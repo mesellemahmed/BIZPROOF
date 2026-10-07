@@ -1,0 +1,8 @@
+{
+  "candidate_id": "1311d905af0ebcb5",
+  "evidence_file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+  "function_name": "rebuild_cache",
+  "key_path": "source_slice",
+  "sha256": "9b086241aacbe574b946f552eb689139f0c67a4f22cc273bb3583e601ecae443",
+  "source": "def rebuild_cache(self, now_dt=None):\n        if settings.HAS_REDIS:\n            rc = django_redis.get_redis_connection(\"redis\")\n            p = rc.pipeline()\n            p.hdel(f'quotas:{self.event_id}:availabilitycache', str(self.pk))\n            p.hdel(f'quotas:{self.event_id}:availabilitycache:nocw', str(self.pk))\n            p.hdel(f'quotas:{self.event_id}:availabilitycache:igcl', str(self.pk))\n            p.hdel(f'quotas:{self.event_id}:availabilitycache:nocw:igcl', str(self.pk))\n            p.execute()\n            self.availability(now_dt=now_dt)"
+}

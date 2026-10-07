@@ -1,0 +1,123 @@
+{
+  "certification_claim": false,
+  "contracts": [
+    {
+      "candidate_certification": false,
+      "certification_claim": false,
+      "contract_id": "SC-NP-NOT-001",
+      "import_edge": {
+        "file": "openfisca_core/model_api.py",
+        "file_sha256": "f31dea0d97dd5affb050147f8e2d321a38ed6fe044a8eeaa325c58670f406008",
+        "line": 3,
+        "module": "openfisca_core.model_api",
+        "source": "from numpy import logical_not as not_, maximum as max_, minimum as min_, round as round_, select, where",
+        "step_kind": "IMPORT_EDGE",
+        "symbol": "not_",
+        "target_module": "numpy",
+        "target_symbol": "logical_not"
+      },
+      "numpy_symbol": "logical_not",
+      "numpy_version": "1.26.4",
+      "openfisca_core_version": "44.0.4",
+      "primitive": "not_",
+      "runtime_callable_type": "ufunc",
+      "runtime_checks": [
+        {
+          "actual": [
+            true,
+            false,
+            true,
+            false,
+            false
+          ],
+          "case": "boolean_and_numeric_truthiness",
+          "expected": [
+            true,
+            false,
+            true,
+            false,
+            false
+          ]
+        }
+      ],
+      "semantic_contract_status": "VALIDATED_DELEGATED_LOCKED_RUNTIME",
+      "semantic_definition": "Exact source-level alias to numpy.logical_not"
+    },
+    {
+      "candidate_certification": false,
+      "certification_claim": false,
+      "contract_id": "SC-NP-MIN-001",
+      "import_edge": {
+        "file": "openfisca_core/model_api.py",
+        "file_sha256": "f31dea0d97dd5affb050147f8e2d321a38ed6fe044a8eeaa325c58670f406008",
+        "line": 3,
+        "module": "openfisca_core.model_api",
+        "source": "from numpy import logical_not as not_, maximum as max_, minimum as min_, round as round_, select, where",
+        "step_kind": "IMPORT_EDGE",
+        "symbol": "min_",
+        "target_module": "numpy",
+        "target_symbol": "minimum"
+      },
+      "numpy_symbol": "minimum",
+      "numpy_version": "1.26.4",
+      "openfisca_core_version": "44.0.4",
+      "primitive": "min_",
+      "runtime_callable_type": "ufunc",
+      "runtime_checks": [
+        {
+          "actual": [
+            2,
+            -1,
+            5
+          ],
+          "case": "elementwise_numeric_minimum",
+          "expected": [
+            2,
+            -1,
+            5
+          ]
+        }
+      ],
+      "semantic_contract_status": "VALIDATED_DELEGATED_LOCKED_RUNTIME",
+      "semantic_definition": "Exact source-level alias to numpy.minimum"
+    },
+    {
+      "candidate_certification": false,
+      "certification_claim": false,
+      "contract_id": "SC-NP-WHERE-001",
+      "import_edge": {
+        "file": "openfisca_core/model_api.py",
+        "file_sha256": "f31dea0d97dd5affb050147f8e2d321a38ed6fe044a8eeaa325c58670f406008",
+        "line": 3,
+        "module": "openfisca_core.model_api",
+        "source": "from numpy import logical_not as not_, maximum as max_, minimum as min_, round as round_, select, where",
+        "step_kind": "IMPORT_EDGE",
+        "symbol": "where",
+        "target_module": "numpy",
+        "target_symbol": "where"
+      },
+      "numpy_symbol": "where",
+      "numpy_version": "1.26.4",
+      "openfisca_core_version": "44.0.4",
+      "primitive": "where",
+      "runtime_callable_type": "_ArrayFunctionDispatcher",
+      "runtime_checks": [
+        {
+          "actual": [
+            1,
+            8,
+            3
+          ],
+          "case": "elementwise_selection",
+          "expected": [
+            1,
+            8,
+            3
+          ]
+        }
+      ],
+      "semantic_contract_status": "VALIDATED_DELEGATED_LOCKED_RUNTIME",
+      "semantic_definition": "Exact source-level alias to numpy.where"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "all_semantic_types_unresolved": true,
+  "benchmark_version": "0.11.0",
+  "binding_occurrences": 170,
+  "certification_claim": false,
+  "cohort_sha256": "3144f973a166ebee41a059c538b81ffac5a5d15737982c6d95e59175325ca108",
+  "context_type_variation_entries": 4,
+  "contract_candidates": 36,
+  "evidence_status_counts": {
+    "CONTEXT_EVIDENCE_ONLY": 62,
+    "NO_SOURCE_EVIDENCE": 4,
+    "SOURCE_EVIDENCE_IDENTIFIED": 93,
+    "SOURCE_EVIDENCE_PARTIAL": 11
+  },
+  "passed": true,
+  "phase": "SEMANTIC_SOURCE_EVIDENCE",
+  "registry_entries": 58,
+  "semantic_contract_class_counts": {
+    "EXTERNAL_CALL": 7,
+    "GLOBAL_CONSTANT": 1,
+    "OPENFISCA_ENTITY_LOOKUP": 4,
+    "SEMANTIC_LIBRARY_PRIMITIVE": 3
+  },
+  "semantic_types_resolved": 0
+}

@@ -1,0 +1,284 @@
+[
+  {
+    "adaptation_scope": "RETURN_EXPRESSION",
+    "adapter": "benchmarks/v0.7/adapters/openfisca_apprenticeship.py",
+    "adapter_loc": 10,
+    "adapter_operations": [
+      "flatten one external entity lookup into one boolean input",
+      "replace OpenFisca vectorized not_ with scalar boolean not"
+    ],
+    "correct": {
+      "backend": "z3",
+      "contract_id": "EXT-OF-TA-001",
+      "counterexample": null,
+      "metadata": {
+        "path_count": 1,
+        "runtime_seconds": 0.03173365899419878,
+        "timeout_ms": 10000,
+        "z3_version": "5.1.0"
+      },
+      "observed_result": null,
+      "postcondition_satisfied": null,
+      "reason": null,
+      "reason_code": null,
+      "replay_validated": null,
+      "verdict": "PROVED"
+    },
+    "correct_expectation_met": true,
+    "domain": "tax_and_social_benefits",
+    "expected_correct_verdict": "PROVED",
+    "expected_mutant_verdict": "DISPROVED",
+    "mutant": {
+      "backend": "z3",
+      "contract_id": "EXT-OF-TA-001-MUT",
+      "counterexample": {
+        "nonprofit_association": false
+      },
+      "metadata": {
+        "path_count": 1,
+        "path_index": 0,
+        "runtime_seconds": 0.0329207890026737,
+        "timeout_ms": 10000,
+        "z3_version": "5.1.0"
+      },
+      "observed_result": false,
+      "postcondition_satisfied": false,
+      "reason": null,
+      "reason_code": null,
+      "replay_validated": true,
+      "verdict": "DISPROVED"
+    },
+    "mutant_expectation_met": true,
+    "provenance": {
+      "evidence_anchor_lines": {
+        "redevable_taxe_apprentissage": 30
+      },
+      "evidence_file": "tests/fiches_de_paie/apprenti.yaml",
+      "evidence_sha256": "6b5421e017efdcecf38c5a85910a24eb74612f6833c337452e000e109ea344f0",
+      "external_source": "openfisca_france/model/prelevements_obligatoires/prelevements_sociaux/taxes_salaires_main_oeuvre.py",
+      "external_source_sha256": "ff84932a59b238328b8a5f4633378fd9ba9824d51403aef3717a24534dce30b1",
+      "external_symbol": "redevable_taxe_apprentissage.formula",
+      "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+      "source_anchor_lines": {
+        "class redevable_taxe_apprentissage(Variable):": 41,
+        "return not_(association)": 54
+      },
+      "source_id": "openfisca_france"
+    },
+    "representation_change": "none",
+    "rule_id": "EXT-OF-TA-001"
+  },
+  {
+    "adaptation_scope": "RETURN_EXPRESSION_WITH_REPRESENTATION",
+    "adapter": "benchmarks/v0.7/adapters/openfisca_housing_tax.py",
+    "adapter_loc": 14,
+    "adapter_operations": [
+      "flatten two OpenFisca entity lookups into scalar inputs",
+      "replace max_(x, 0) with equivalent branch semantics"
+    ],
+    "correct": {
+      "backend": "z3",
+      "contract_id": "EXT-OF-TH-001",
+      "counterexample": null,
+      "metadata": {
+        "path_count": 2,
+        "runtime_seconds": 0.05908308399375528,
+        "timeout_ms": 10000,
+        "z3_version": "5.1.0"
+      },
+      "observed_result": null,
+      "postcondition_satisfied": null,
+      "reason": null,
+      "reason_code": null,
+      "replay_validated": null,
+      "verdict": "PROVED"
+    },
+    "correct_expectation_met": true,
+    "domain": "tax_and_social_benefits",
+    "expected_correct_verdict": "PROVED",
+    "expected_mutant_verdict": "DISPROVED",
+    "mutant": {
+      "backend": "z3",
+      "contract_id": "EXT-OF-TH-001-MUT",
+      "counterexample": {
+        "relief": 1,
+        "tax_before_relief": 0
+      },
+      "metadata": {
+        "path_count": 1,
+        "path_index": 0,
+        "runtime_seconds": 0.0449810440040892,
+        "timeout_ms": 10000,
+        "z3_version": "5.1.0"
+      },
+      "observed_result": -1,
+      "postcondition_satisfied": false,
+      "reason": null,
+      "reason_code": null,
+      "replay_validated": true,
+      "verdict": "DISPROVED"
+    },
+    "mutant_expectation_met": true,
+    "provenance": {
+      "evidence_anchor_lines": {
+        "taxe_habitation_commune_epci_apres_degrevement_plafonnement": 419
+      },
+      "evidence_file": "tests/formulas/taxe_habitation.yaml",
+      "evidence_sha256": "6113b36da1730bfa1ed2621aa3a51beb61e27a3ccd5cbe39841794f9c2e6c914",
+      "external_source": "openfisca_france/model/prelevements_obligatoires/taxe_habitation/taxe_habitation.py",
+      "external_source_sha256": "23a5d0046648b12616caa113be5df727c6e77ac885d23ce7c7eac1dd48ba588f",
+      "external_symbol": "taxe_habitation_commune_epci_apres_degrevement_plafonnement.formula_2017_01_01",
+      "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+      "source_anchor_lines": {
+        "class taxe_habitation_commune_epci_apres_degrevement_plafonnement(Variable):": 362,
+        "return max_(taxe_habitation_commune_epci_avant_degrevement - degrevement_plafonnement_taxe_habitation, 0)": 372
+      },
+      "source_id": "openfisca_france"
+    },
+    "representation_change": "external monetary float values are represented as non-negative integer monetary units; the clamped-subtraction ordering property is preserved",
+    "rule_id": "EXT-OF-TH-001"
+  },
+  {
+    "adaptation_scope": "POST_AGGREGATION_THRESHOLD",
+    "adapter": "benchmarks/v0.7/adapters/oscar_count_partial.py",
+    "adapter_loc": 12,
+    "adapter_operations": [
+      "replace _get_num_matches(...) with its scalar aggregated result",
+      "replace self.value with required_count scalar input"
+    ],
+    "correct": {
+      "backend": "z3",
+      "contract_id": "EXT-OSCAR-COUNT-PARTIAL-001",
+      "counterexample": null,
+      "metadata": {
+        "path_count": 1,
+        "runtime_seconds": 0.03726124900276773,
+        "timeout_ms": 10000,
+        "z3_version": "5.1.0"
+      },
+      "observed_result": null,
+      "postcondition_satisfied": null,
+      "reason": null,
+      "reason_code": null,
+      "replay_validated": null,
+      "verdict": "PROVED"
+    },
+    "correct_expectation_met": true,
+    "domain": "ecommerce",
+    "expected_correct_verdict": "PROVED",
+    "expected_mutant_verdict": "DISPROVED",
+    "mutant": {
+      "backend": "z3",
+      "contract_id": "EXT-OSCAR-COUNT-PARTIAL-001-MUT",
+      "counterexample": {
+        "num_matches": 1,
+        "required_count": 1
+      },
+      "metadata": {
+        "path_count": 1,
+        "path_index": 0,
+        "runtime_seconds": 0.05144537799060345,
+        "timeout_ms": 10000,
+        "z3_version": "5.1.0"
+      },
+      "observed_result": true,
+      "postcondition_satisfied": false,
+      "reason": null,
+      "reason_code": null,
+      "replay_validated": true,
+      "verdict": "DISPROVED"
+    },
+    "mutant_expectation_met": true,
+    "provenance": {
+      "evidence_anchor_lines": {
+        "test_empty_basket_fails_partial_condition": 94,
+        "test_matching_quantity_basket_fails_partial_condition": 114,
+        "test_smaller_quantity_basket_passes_partial_condition": 97
+      },
+      "evidence_file": "tests/integration/offer/test_condition.py",
+      "evidence_sha256": "a9ae632457305ec3b34bc91d37b21256d1b8642e7a279e870bba9f7604cc1bd8",
+      "external_source": "src/oscar/apps/offer/conditions.py",
+      "external_source_sha256": "c0d503080546b2e85e4a028df8322496ecdfde4924355afb1cc9ebedb123925b",
+      "external_symbol": "CountCondition.is_partially_satisfied",
+      "resolved_commit": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+      "source_anchor_lines": {
+        "class CountCondition(Condition):": 16,
+        "return 0 < num_matches < self.value": 69
+      },
+      "source_id": "django_oscar"
+    },
+    "representation_change": "none",
+    "rule_id": "EXT-OSCAR-COUNT-PARTIAL-001"
+  },
+  {
+    "adaptation_scope": "POST_AGGREGATION_THRESHOLD",
+    "adapter": "benchmarks/v0.7/adapters/oscar_count_satisfied.py",
+    "adapter_loc": 12,
+    "adapter_operations": [
+      "abstract the basket iteration as final scalar num_matches",
+      "replace self.value with required_count scalar input"
+    ],
+    "correct": {
+      "backend": "z3",
+      "contract_id": "EXT-OSCAR-COUNT-SAT-001",
+      "counterexample": null,
+      "metadata": {
+        "path_count": 1,
+        "runtime_seconds": 0.01989327599585522,
+        "timeout_ms": 10000,
+        "z3_version": "5.1.0"
+      },
+      "observed_result": null,
+      "postcondition_satisfied": null,
+      "reason": null,
+      "reason_code": null,
+      "replay_validated": null,
+      "verdict": "PROVED"
+    },
+    "correct_expectation_met": true,
+    "domain": "ecommerce",
+    "expected_correct_verdict": "PROVED",
+    "expected_mutant_verdict": "DISPROVED",
+    "mutant": {
+      "backend": "z3",
+      "contract_id": "EXT-OSCAR-COUNT-SAT-001-MUT",
+      "counterexample": {
+        "num_matches": 1,
+        "required_count": 1
+      },
+      "metadata": {
+        "path_count": 1,
+        "path_index": 0,
+        "runtime_seconds": 0.04051407599763479,
+        "timeout_ms": 10000,
+        "z3_version": "5.1.0"
+      },
+      "observed_result": false,
+      "postcondition_satisfied": false,
+      "reason": null,
+      "reason_code": null,
+      "replay_validated": true,
+      "verdict": "DISPROVED"
+    },
+    "mutant_expectation_met": true,
+    "provenance": {
+      "evidence_anchor_lines": {
+        "test_greater_quantity_basket_passes_condition": 128,
+        "test_matching_quantity_basket_passes_condition": 121
+      },
+      "evidence_file": "tests/integration/offer/test_condition.py",
+      "evidence_sha256": "a9ae632457305ec3b34bc91d37b21256d1b8642e7a279e870bba9f7604cc1bd8",
+      "external_source": "src/oscar/apps/offer/conditions.py",
+      "external_source_sha256": "c0d503080546b2e85e4a028df8322496ecdfde4924355afb1cc9ebedb123925b",
+      "external_symbol": "CountCondition.is_satisfied threshold subrule",
+      "resolved_commit": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+      "source_anchor_lines": {
+        "class CountCondition(Condition):": 16,
+        "if num_matches >= self.value:": 52
+      },
+      "source_id": "django_oscar"
+    },
+    "representation_change": "none",
+    "rule_id": "EXT-OSCAR-COUNT-SAT-001"
+  }
+]

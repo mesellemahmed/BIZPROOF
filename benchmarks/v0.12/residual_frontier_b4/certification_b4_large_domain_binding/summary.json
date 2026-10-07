@@ -1,0 +1,15 @@
+{
+  "attempted": 1,
+  "batch": "B4_BATCH5_LARGE_DOMAIN_BINDING",
+  "candidate_results": {
+    "eb41eb351df073ef": "CERTIFIED_A2"
+  },
+  "certified_a2": 1,
+  "failed": 0,
+  "finite_basis_exhaustive": false,
+  "finite_decision_basis": 30,
+  "negative_cases": 17,
+  "positive_cases": 13,
+  "prospective_mutant_protocol": true,
+  "schema_version": "BIZPROOF-V0.12-B4-CERT5-SUMMARY-1"
+}

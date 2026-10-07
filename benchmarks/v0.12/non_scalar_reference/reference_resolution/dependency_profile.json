@@ -1,0 +1,192 @@
+{
+  "0f73ae8d15cf3408": {
+    "arguments": [
+      "self"
+    ],
+    "calls": [
+      "datetime",
+      "filter",
+      "get",
+      "min",
+      "values_list"
+    ],
+    "candidate_id": "0f73ae8d15cf3408",
+    "free_names": [
+      "RelativeDateWrapper"
+    ],
+    "function_name": "ticket_download_date",
+    "has_attribute_mutation": false,
+    "has_comprehension": true,
+    "has_list": false,
+    "has_none": true,
+    "has_tuple": false,
+    "planned_reference_strategy": "OPTIONAL_TEMPORAL_OR_REFERENCE",
+    "reason_code": "REFERENCE_DATE_OR_NONE",
+    "recovery_claim": false,
+    "repository_matches": [],
+    "return_expressions": [
+      "Name(id='dl_date', ctx=Load())"
+    ],
+    "self_attributes": [
+      "event",
+      "positions"
+    ],
+    "source": "def ticket_download_date(self):\n        \"\"\"\n        Returns the first date the tickets for this order can be downloaded or ``None`` if there is no\n        restriction.\n        \"\"\"\n        dl_date = self.event.settings.get('ticket_download_date', as_type=RelativeDateWrapper)\n        if dl_date:\n            if self.event.has_subevents:\n                dates = [\n                    dl_date.datetime(se)\n                    for se in self.event.subevents.filter(id__in=self.positions.values_list('subevent', flat=True))\n                ]\n                dl_date = min(dates) if dates else None\n            else:\n                dl_date = dl_date.datetime(self.event)\n        return dl_date"
+  },
+  "6d009b7961c5d116": {
+    "arguments": [
+      "self",
+      "basket",
+      "user",
+      "request"
+    ],
+    "calls": [
+      "chain",
+      "get_basket_offers",
+      "get_session_offers",
+      "get_site_offers",
+      "get_user_offers",
+      "list",
+      "sorted"
+    ],
+    "candidate_id": "6d009b7961c5d116",
+    "free_names": [
+      "chain",
+      "o",
+      "sorted"
+    ],
+    "function_name": "get_offers",
+    "has_attribute_mutation": false,
+    "has_comprehension": false,
+    "has_list": false,
+    "has_none": true,
+    "has_tuple": false,
+    "planned_reference_strategy": "FINITE_SEQUENCE_OF_TYPED_REFERENCES",
+    "reason_code": "LIST_OF_DOMAIN_OBJECTS_RETURN",
+    "recovery_claim": false,
+    "repository_matches": [
+      {
+        "class_name": "Applicator",
+        "end_lineno": 64,
+        "function_name": "get_offers",
+        "lineno": 45,
+        "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\offer\\applicator.py"
+      }
+    ],
+    "return_expressions": [
+      "Call(func=Name(id='list', ctx=Load()), args=[Call(func=Name(id='sorted', ctx=Load()), args=[Call(func=Name(id='chain', ctx=Load()), args=[Name(id='session_offers', ctx=Load()), Name(id='basket_offers', ctx=Load()), Name(id='user_offers', ctx=Load()), Name(id='site_offers', ctx=Load())], keywords=[])], keywords=[keyword(arg='key', value=Lambda(args=arguments(posonlyargs=[], args=[arg(arg='o')], kwonlyargs=[], kw_defaults=[], defaults=[]), body=Attribute(value=Name(id='o', ctx=Load()), attr='priority', ctx=Load()))), keyword(arg='reverse', value=Constant(value=True))])], keywords=[])"
+    ],
+    "self_attributes": [
+      "get_basket_offers",
+      "get_session_offers",
+      "get_site_offers",
+      "get_user_offers"
+    ],
+    "source": "def get_offers(self, basket, user=None, request=None):\n        \"\"\"\n        Return all offers to apply to the basket.\n\n        This method should be subclassed and extended to provide more\n        sophisticated behaviour.  For instance, you could load extra offers\n        based on the session or the user type.\n        \"\"\"\n        site_offers = self.get_site_offers()\n        basket_offers = self.get_basket_offers(basket, user)\n        user_offers = self.get_user_offers(user)\n        session_offers = self.get_session_offers(request)\n\n        return list(\n            sorted(\n                chain(session_offers, basket_offers, user_offers, site_offers),\n                key=lambda o: o.priority,\n                reverse=True,\n            )\n        )"
+  },
+  "6fd8bd69c26e7954": {
+    "arguments": [
+      "self",
+      "other"
+    ],
+    "calls": [
+      "Decimal",
+      "TaxedPrice",
+      "as_tuple",
+      "quantize",
+      "round_decimal"
+    ],
+    "candidate_id": "6fd8bd69c26e7954",
+    "free_names": [
+      "Decimal",
+      "TaxedPrice",
+      "round_decimal"
+    ],
+    "function_name": "__mul__",
+    "has_attribute_mutation": false,
+    "has_comprehension": false,
+    "has_list": false,
+    "has_none": false,
+    "has_tuple": false,
+    "planned_reference_strategy": "OPTIONAL_OR_DIRECT_TYPED_REFERENCE",
+    "reason_code": "DOMAIN_OBJECT_RETURN",
+    "recovery_claim": false,
+    "repository_matches": [
+      {
+        "class_name": "TaxedPrice",
+        "end_lineno": 93,
+        "function_name": "__mul__",
+        "lineno": 81,
+        "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\tax.py"
+      }
+    ],
+    "return_expressions": [
+      "Call(func=Name(id='TaxedPrice', ctx=Load()), args=[], keywords=[keyword(arg='gross', value=Name(id='newgross', ctx=Load())), keyword(arg='net', value=Name(id='newnet', ctx=Load())), keyword(arg='tax', value=BinOp(left=Name(id='newgross', ctx=Load()), op=Sub(), right=Name(id='newnet', ctx=Load()))), keyword(arg='rate', value=Attribute(value=Name(id='self', ctx=Load()), attr='rate', ctx=Load())), keyword(arg='name', value=Attribute(value=Name(id='self', ctx=Load()), attr='name', ctx=Load())), keyword(arg='code', value=Attribute(value=Name(id='self', ctx=Load()), attr='code', ctx=Load()))])"
+    ],
+    "self_attributes": [
+      "code",
+      "gross",
+      "name",
+      "rate"
+    ],
+    "source": "def __mul__(self, other):\n        newgross = self.gross * other\n        newnet = round_decimal(newgross - (newgross * (1 - 100 / (100 + self.rate)))).quantize(\n            Decimal('10') ** self.gross.as_tuple().exponent\n        )\n        return TaxedPrice(\n            gross=newgross,\n            net=newnet,\n            tax=newgross - newnet,\n            rate=self.rate,\n            name=self.name,\n            code=self.code,\n        )"
+  },
+  "d285ecd86455b150": {
+    "arguments": [
+      "subevent_id",
+      "item",
+      "infos_for_item"
+    ],
+    "calls": [
+      "list",
+      "next",
+      "sum"
+    ],
+    "candidate_id": "d285ecd86455b150",
+    "free_names": [],
+    "function_name": "discount_info",
+    "has_attribute_mutation": false,
+    "has_comprehension": true,
+    "has_list": false,
+    "has_none": false,
+    "has_tuple": true,
+    "planned_reference_strategy": "STRUCTURED_TUPLE_WITH_TYPED_REFERENCES",
+    "reason_code": "TUPLE_RETURN_WITH_DOMAIN_REFERENCES",
+    "recovery_claim": false,
+    "repository_matches": [],
+    "return_expressions": [
+      "Tuple(elts=[Name(id='subevent_id', ctx=Load()), Name(id='item', ctx=Load()), Call(func=Name(id='sum', ctx=Load()), args=[GeneratorExp(elt=Name(id='max_count', ctx=Load()), generators=[comprehension(target=Tuple(elts=[Name(id='subevent_id', ctx=Store()), Name(id='item', ctx=Store()), Name(id='discount_rule', ctx=Store()), Name(id='max_count', ctx=Store()), Name(id='i', ctx=Store())], ctx=Store()), iter=Name(id='infos_for_item', ctx=Load()), ifs=[], is_async=0)])], keywords=[]), Call(func=Name(id='next', ctx=Load()), args=[GeneratorExp(elt=Name(id='discount_rule', ctx=Load()), generators=[comprehension(target=Tuple(elts=[Name(id='subevent_id', ctx=Store()), Name(id='item', ctx=Store()), Name(id='discount_rule', ctx=Store()), Name(id='max_count', ctx=Store()), Name(id='i', ctx=Store())], ctx=Store()), iter=Name(id='infos_for_item', ctx=Load()), ifs=[], is_async=0)])], keywords=[])], ctx=Load())"
+    ],
+    "self_attributes": [],
+    "source": "def discount_info(subevent_id, item, infos_for_item):\n            infos_for_item = list(infos_for_item)\n            return (\n                subevent_id,\n                item,\n                sum(max_count for (subevent_id, item, discount_rule, max_count, i) in infos_for_item),\n                next(discount_rule for (subevent_id, item, discount_rule, max_count, i) in infos_for_item),\n            )"
+  },
+  "fa377c649a747a7d": {
+    "arguments": [
+      "self"
+    ],
+    "calls": [
+      "getattr"
+    ],
+    "candidate_id": "fa377c649a747a7d",
+    "free_names": [
+      "getattr"
+    ],
+    "function_name": "product",
+    "has_attribute_mutation": false,
+    "has_comprehension": false,
+    "has_list": false,
+    "has_none": false,
+    "has_tuple": false,
+    "planned_reference_strategy": "OPTIONAL_OR_DIRECT_TYPED_REFERENCE",
+    "reason_code": "OBJECT_RETURN",
+    "recovery_claim": false,
+    "repository_matches": [],
+    "return_expressions": [
+      "Call(func=Name(id='getattr', ctx=Load()), args=[Name(id='self', ctx=Load()), Constant(value='child_product'), Attribute(value=Name(id='self', ctx=Load()), attr='parent_product', ctx=Load())], keywords=[])"
+    ],
+    "self_attributes": [
+      "parent_product"
+    ],
+    "source": "def product(self):\n        \"\"\"\n        The actual product being added to the basket\n        \"\"\"\n        # Note, the child product attribute is saved in the clean_child_id\n        # method\n        return getattr(self, \"child_product\", self.parent_product)"
+  }
+}

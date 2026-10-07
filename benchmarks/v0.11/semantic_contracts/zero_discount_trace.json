@@ -1,0 +1,25 @@
+{
+  "assignment": "ZERO_DISCOUNT = get_class('offer.results', 'ZERO_DISCOUNT')",
+  "candidate_certification": false,
+  "candidate_id": "635fe113a02cf90b",
+  "certification_claim": false,
+  "factory": "get_class",
+  "factory_arguments": [
+    "'offer.results'",
+    "'ZERO_DISCOUNT'"
+  ],
+  "factory_trace": {
+    "initial_module": "oscar.apps.offer.abstract_models",
+    "initial_symbol": "get_class",
+    "steps": [
+      {
+        "module": "oscar.apps.offer.abstract_models",
+        "step_kind": "EXTERNAL_DEPENDENCY_BOUNDARY",
+        "symbol": "get_class"
+      }
+    ],
+    "terminal_status": "EXTERNAL_DEPENDENCY_BOUNDARY"
+  },
+  "primitive": "ZERO_DISCOUNT",
+  "semantic_contract_status": "UNRESOLVED"
+}

@@ -1,0 +1,20 @@
+{
+  "candidate_id": "1a2de6edb11465fe",
+  "certification_batch": "B4_BATCH4_NESTED_VECTOR_LOGIC",
+  "function_name": "formula",
+  "historical_category": "NESTED_OR_HIGHER_ORDER_LOGIC",
+  "normalized_source_sha256": "27d6ae56e7604c3f313a7f4a5d86d4928004dd6ed0768fc87bf34dc449660036",
+  "physical_location_count": 1,
+  "representative_class": "bail_reel_solidaire_plafond_total",
+  "representative_lineno": 45,
+  "representative_path": "external_sources\\v0.6\\openfisca_france\\openfisca_france\\model\\prestations\\bail_reel_solidaire.py",
+  "representative_project": "openfisca_france",
+  "semantic_family": "NESTED_VECTOR_DOMAIN_LOGIC",
+  "semantic_observation": "parameter-derived zone ceilings, nested calcul_plafonds_zone evaluation, list comprehension predicates, select and where semantics, and final selected ceiling result",
+  "semantic_route": "NESTED_PARAMETERIZED_SELECT_RETURN",
+  "source": "def formula(menage, period, parameters):\n        params = parameters(period).prestations_sociales.bail_reel_solidaire\n        zones_abc_eligibles = params.parametres_generaux.zones_abc_eligibles\n        plafonds_par_zones = params.plafonds_par_zones\n        zones_menage = menage('bail_reel_solidaire_zones_menage', period)\n        nb_personnes = menage.nb_persons()\n        nb_personnes_max = params.parametres_generaux.nombre_personnes_maximum\n\n        def calcul_plafonds_zone(zone):\n            plafond_zone = plafonds_par_zones[f'zone_{zone}']\n            plafond_base = select(\n                [nb_personnes == i if i < 6 else nb_personnes >= i for i in range(1, 7)],\n                [plafond_zone[f'nb_personnes_{i}'] for i in range(1, 7)]\n                )\n            plafond_supp = where(\n                nb_personnes > nb_personnes_max,\n                (nb_personnes - nb_personnes_max) * plafond_zone.nb_personnes_supplementaires,\n                0\n                )\n            return plafond_base + plafond_supp\n\n        return select(\n            [zones_menage == zone for zone in zones_abc_eligibles],\n            [calcul_plafonds_zone(zone) for zone in zones_abc_eligibles]\n            )",
+  "source_ast_sha256": "55f490ab4d9ac5627a8a3baf3f0ffd832a026e5f29d5fe0d8a2c98b7dd5f0754",
+  "source_resolution": "SAME_RECORD_DIRECT_HASH_NAME_RESOLVED",
+  "source_sha256": "27d6ae56e7604c3f313a7f4a5d86d4928004dd6ed0768fc87bf34dc449660036",
+  "unique_physical_location_claim": true
+}

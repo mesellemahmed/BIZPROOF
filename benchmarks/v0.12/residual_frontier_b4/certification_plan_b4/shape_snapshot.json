@@ -1,0 +1,74 @@
+{
+  "13df73dbd2825f80": {
+    "ast_nodes": 39,
+    "control_score": 0,
+    "function": "to_result_dict",
+    "higher_order_score": 0,
+    "state_effect_score": 0,
+    "vector_logic_score": 0
+  },
+  "1a2de6edb11465fe": {
+    "ast_nodes": 184,
+    "control_score": 6,
+    "function": "formula",
+    "higher_order_score": 8,
+    "state_effect_score": 0,
+    "vector_logic_score": 5
+  },
+  "3fd2d8b8a76b4834": {
+    "ast_nodes": 254,
+    "control_score": 5,
+    "function": "formula_2009_06_01",
+    "higher_order_score": 8,
+    "state_effect_score": 0,
+    "vector_logic_score": 11
+  },
+  "674ea6fd35fa6c39": {
+    "ast_nodes": 33,
+    "control_score": 1,
+    "function": "__init__",
+    "higher_order_score": 0,
+    "state_effect_score": 0,
+    "vector_logic_score": 0
+  },
+  "801278c4d91c2185": {
+    "ast_nodes": 88,
+    "control_score": 3,
+    "function": "__str__",
+    "higher_order_score": 0,
+    "state_effect_score": 0,
+    "vector_logic_score": 0
+  },
+  "8b3e90ca7b531556": {
+    "ast_nodes": 99,
+    "control_score": 2,
+    "function": "parent_pricing_policy",
+    "higher_order_score": 1,
+    "state_effect_score": 0,
+    "vector_logic_score": 1
+  },
+  "a74d4580a9effb73": {
+    "ast_nodes": 72,
+    "control_score": 2,
+    "function": "formula_2022",
+    "higher_order_score": 5,
+    "state_effect_score": 0,
+    "vector_logic_score": 9
+  },
+  "e8850260c2763222": {
+    "ast_nodes": 94,
+    "control_score": 3,
+    "function": "apply",
+    "higher_order_score": 0,
+    "state_effect_score": 0,
+    "vector_logic_score": 0
+  },
+  "eb41eb351df073ef": {
+    "ast_nodes": 597,
+    "control_score": 21,
+    "function": "formula_2021_06_09",
+    "higher_order_score": 5,
+    "state_effect_score": 0,
+    "vector_logic_score": 24
+  }
+}

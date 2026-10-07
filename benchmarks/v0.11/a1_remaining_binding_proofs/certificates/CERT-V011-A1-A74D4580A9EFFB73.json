@@ -1,0 +1,67 @@
+{
+  "assistance_level": "A1",
+  "authoring_mode": "DECLARATIVE_BINDINGS_FROZEN_BSIR",
+  "bindings": [
+    {
+      "binding_id": "f952f0796fe9c3fe",
+      "kind": "CALL",
+      "primitive": "period",
+      "source_expression": "periods.period('2022-06')"
+    },
+    {
+      "binding_id": "9f0166b03d166af2",
+      "kind": "CALL",
+      "primitive": "where",
+      "source_expression": "where(not_(or_(individu('bourse_criteres_sociaux', juin_2022) > 0, individu('bourse_enseignement_sup', juin_2022) > 0)), False, where(and_(individu.has_role(Famille.PARENT), individu.famille('eligibilite_per', period)), False, True))"
+    }
+  ],
+  "candidate_id": "a74d4580a9effb73",
+  "certificate_digest": "e9b17a175072b3a24a323bbfa564cb7a1a2d133466ab73416cb2b9116edd3983",
+  "certificate_id": "CERT-V011-A1-A74D4580A9EFFB73",
+  "claim_scope": "Certification proves equivalence between the locked source AST and the frozen BSIR under the explicit declarative bindings listed here. External framework/database values and helper semantics without a validated semantic contract remain outside the certificate.",
+  "evidence": {
+    "concrete_replays": 6,
+    "correct_solver_status": "unsat",
+    "ir_sha256": "72ed8cabf7db61942793250703c446465e82823331cc4e8df4f78a2bd2490a08",
+    "mutant_solver_status": "sat",
+    "mutant_witness": {
+      "b_a74d45_0": "0",
+      "b_a74d45_1": "0"
+    },
+    "mutation": "binding-plus-one",
+    "proof_digest": "cc68e9fa4a5f02e28189f69a8dbb1f34d34204dcceffba234d89879b74565658",
+    "proof_obligations": {
+      "bsir_compile": true,
+      "concrete_replay": true,
+      "declarative_bindings": true,
+      "frozen_bsir": true,
+      "independent_source_ast_compile": true,
+      "locked_source_commit": true,
+      "mutant_detected_sat": true,
+      "mutant_witness_replayed": true,
+      "symbolic_equivalence_unsat": true,
+      "validated_semantic_abstractions": true
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 74,
+    "text": "- `CERTIFIED_A1`: certified with declarative source-to-BVC bindings only."
+  },
+  "schema_version": "BIZPROOF-V0.11-A1-CERTIFICATE-1",
+  "semantic_contracts": {
+    "where": "SC-NP-WHERE-001"
+  },
+  "source": {
+    "class": "eligibilite_per_etudiant",
+    "file": "openfisca_france/model/prestations/aides_exceptionnelles/prime_exceptionnelle_rentree.py",
+    "function": "formula_2022",
+    "function_sha256": "dcc51cdc8b19bef34bcd4fa812d19b75e8e2ce09aa9d228dc3befd25fef666c6",
+    "resolved_commit": "ebcb7782d17058495c6ca33c278e373e167b641b",
+    "source_file_sha256": "7905c00474c82d6348c3c97c7262e7c92847782967558e2535fc701bc23aecae",
+    "source_id": "openfisca_france"
+  },
+  "status": "CERTIFIED_A1",
+  "terminal_outcome": "CERTIFIED_A1",
+  "terminal_outcome_assigned": true
+}

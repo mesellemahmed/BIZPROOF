@@ -1,0 +1,28 @@
+{
+  "capabilities": [
+    "OPAQUE_BINDING",
+    "SCALAR_VALUE"
+  ],
+  "case_specific_routing": false,
+  "claim_scope": "generic structural semantic projection only; no business meaning is inferred for opaque bindings, calls, state, or effects",
+  "function_name": "rule",
+  "observations": [
+    {
+      "expression": "user.is_staff",
+      "kind": "RETURN_COMPONENT",
+      "path": "return",
+      "symbol": null
+    },
+    {
+      "expression": "user.is_staff",
+      "kind": "OPAQUE_ATTRIBUTE",
+      "path": "user.is_staff",
+      "symbol": "beta_0"
+    }
+  ],
+  "parameters": [
+    "user"
+  ],
+  "source_sha256": "b37f4dd1b0e4a561ca502e068df670139a9aa993d8562c202361df3ba3f9fb21",
+  "unsupported_nodes": []
+}

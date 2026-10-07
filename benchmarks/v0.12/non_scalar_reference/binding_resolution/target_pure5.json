@@ -1,0 +1,11 @@
+{
+  "candidate_reason_codes": {
+    "26a1af8837fe7ae4": "TEXT_RETURN",
+    "75e61ddb4dde4f1a": "TEXT_RETURN",
+    "87d2f0b3b15f0ea6": "TEXT_RETURN",
+    "d285ecd86455b150": "TUPLE_RETURN",
+    "e1cf29f02fa0dadc": "LIST_RETURN"
+  },
+  "schema_version": "BIZPROOF-V0.12-PURE5-BINDING-TARGET-1",
+  "target_count": 5
+}

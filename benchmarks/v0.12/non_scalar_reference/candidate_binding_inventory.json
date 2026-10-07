@@ -1,0 +1,171 @@
+{
+  "0f73ae8d15cf3408": {
+    "candidate_id": "0f73ae8d15cf3408",
+    "path_hints": [
+      "src/pretix/base/models/orders.py"
+    ],
+    "reason_code": "REFERENCE_DATE_OR_NONE",
+    "resolved_python_symbols": [],
+    "resolved_repository_paths": [],
+    "semantic_family": "OPTIONAL_REFERENCE_OR_DATE",
+    "symbol_hints": [
+      "ticket_download_date"
+    ]
+  },
+  "26a1af8837fe7ae4": {
+    "candidate_id": "26a1af8837fe7ae4",
+    "path_hints": [
+      "src/pretix/base/models/orders.py"
+    ],
+    "reason_code": "TEXT_RETURN",
+    "resolved_python_symbols": [],
+    "resolved_repository_paths": [],
+    "semantic_family": "TEXT_VALUE",
+    "symbol_hints": [
+      "__repr__",
+      "e1366c084ae7fea6c8fee980c11664194372075053be53568985527dce5564cb"
+    ]
+  },
+  "6d009b7961c5d116": {
+    "candidate_id": "6d009b7961c5d116",
+    "path_hints": [
+      "src/oscar/apps/offer/applicator.py",
+      "tests/integration/basket/test_forms.py",
+      "tests/integration/basket/test_utils.py",
+      "tests/integration/checkout/test_calculator.py",
+      "tests/integration/checkout/test_mixins.py",
+      "tests/integration/checkout/test_surcharges.py",
+      "tests/integration/offer/test_absolute_benefit.py",
+      "tests/integration/offer/test_applicator.py",
+      "tests/integration/offer/test_condition.py"
+    ],
+    "reason_code": "LIST_OF_DOMAIN_OBJECTS_RETURN",
+    "resolved_python_symbols": [],
+    "resolved_repository_paths": [],
+    "semantic_family": "FINITE_SEQUENCE_VALUE",
+    "symbol_hints": [
+      "get_offers",
+      "offer"
+    ]
+  },
+  "6fd8bd69c26e7954": {
+    "candidate_id": "6fd8bd69c26e7954",
+    "path_hints": [
+      "src/pretix/base/models/tax.py"
+    ],
+    "reason_code": "DOMAIN_OBJECT_RETURN",
+    "resolved_python_symbols": [],
+    "resolved_repository_paths": [],
+    "semantic_family": "DOMAIN_OBJECT_REFERENCE",
+    "symbol_hints": [
+      "__mul__"
+    ]
+  },
+  "75e61ddb4dde4f1a": {
+    "candidate_id": "75e61ddb4dde4f1a",
+    "path_hints": [
+      "src/oscar/apps/order/abstract_models.py"
+    ],
+    "reason_code": "TEXT_RETURN",
+    "resolved_python_symbols": [],
+    "resolved_repository_paths": [],
+    "semantic_family": "TEXT_VALUE",
+    "symbol_hints": [
+      "__str__"
+    ]
+  },
+  "87d2f0b3b15f0ea6": {
+    "candidate_id": "87d2f0b3b15f0ea6",
+    "path_hints": [
+      "docs/source/conf.py",
+      "src/oscar/apps/offer/benefits.py",
+      "tests/_site/model_tests_app/models.py",
+      "tests/functional/test_offer.py",
+      "tests/integration/basket/test_models.py",
+      "tests/integration/dashboard/test_voucher_form.py",
+      "tests/integration/offer/test_benefit.py",
+      "tests/integration/offer/test_combination.py",
+      "tests/integration/offer/test_condition.py",
+      "tests/integration/offer/test_forms.py"
+    ],
+    "reason_code": "TEXT_RETURN",
+    "resolved_python_symbols": [],
+    "resolved_repository_paths": [],
+    "semantic_family": "TEXT_VALUE",
+    "symbol_hints": [
+      "description"
+    ]
+  },
+  "9cc9063a46d23cde": {
+    "candidate_id": "9cc9063a46d23cde",
+    "path_hints": [
+      "src/pretix/base/models/orders.py"
+    ],
+    "reason_code": "QUERYSET_RETURN",
+    "resolved_python_symbols": [],
+    "resolved_repository_paths": [],
+    "semantic_family": "QUERYSET_SUMMARY",
+    "symbol_hints": [
+      "quota",
+      "quotas"
+    ]
+  },
+  "d285ecd86455b150": {
+    "candidate_id": "d285ecd86455b150",
+    "path_hints": [
+      "src/pretix/base/services/cross_selling.py"
+    ],
+    "reason_code": "TUPLE_RETURN",
+    "resolved_python_symbols": [],
+    "resolved_repository_paths": [],
+    "semantic_family": "FINITE_SEQUENCE_VALUE",
+    "symbol_hints": [
+      "discount",
+      "discount_info",
+      "f98331733ca429658fa45692f93095b987123e59a2a9434946edb797c8a287a8"
+    ]
+  },
+  "e1cf29f02fa0dadc": {
+    "candidate_id": "e1cf29f02fa0dadc",
+    "path_hints": [
+      "src/oscar/apps/offer/applicator.py",
+      "tests/integration/basket/test_forms.py",
+      "tests/integration/basket/test_utils.py",
+      "tests/integration/checkout/test_calculator.py",
+      "tests/integration/checkout/test_mixins.py",
+      "tests/integration/checkout/test_surcharges.py",
+      "tests/integration/offer/test_absolute_benefit.py",
+      "tests/integration/offer/test_applicator.py",
+      "tests/integration/offer/test_condition.py"
+    ],
+    "reason_code": "LIST_RETURN",
+    "resolved_python_symbols": [],
+    "resolved_repository_paths": [],
+    "semantic_family": "FINITE_SEQUENCE_VALUE",
+    "symbol_hints": [
+      "get_user_offers",
+      "offer"
+    ]
+  },
+  "fa377c649a747a7d": {
+    "candidate_id": "fa377c649a747a7d",
+    "path_hints": [
+      "src/oscar/apps/basket/forms.py",
+      "tests/functional/basket/test_manipulation.py",
+      "tests/functional/catalogue/test_catalogue.py",
+      "tests/functional/catalogue/test_review.py",
+      "tests/functional/checkout/__init__.py",
+      "tests/functional/checkout/test_session.py",
+      "tests/functional/customer/test_alert.py",
+      "tests/functional/customer/test_emails.py",
+      "tests/functional/customer/test_history.py"
+    ],
+    "reason_code": "OBJECT_RETURN",
+    "resolved_python_symbols": [],
+    "resolved_repository_paths": [],
+    "semantic_family": "DOMAIN_OBJECT_REFERENCE",
+    "symbol_hints": [
+      "product"
+    ]
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "26a1af8837fe7ae4": {
+    "candidate_id": "26a1af8837fe7ae4",
+    "functions": [
+      {
+        "args": [
+          "self"
+        ],
+        "calls": [],
+        "comprehensions": 0,
+        "external_calls": [],
+        "free_names": [],
+        "function_name": "__repr__",
+        "has_attribute_mutation": false,
+        "has_await": false,
+        "has_yield": false,
+        "repository_matches": [
+          {
+            "class_name": "OrderPosition",
+            "end_lineno": 2833,
+            "lineno": 2830,
+            "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+            "source": "def __repr__(self):\n        return '<OrderPosition: item %d, variation %d for order %s>' % (\n            self.item.id, self.variation.id if self.variation else 0, self.order_id\n        )"
+          }
+        ],
+        "return_count": 1,
+        "self_attributes": [
+          "item",
+          "order_id",
+          "variation"
+        ],
+        "source": "def __repr__(self):\n        return '<OrderPosition: item %d, variation %d for order %s>' % (\n            self.item.id, self.variation.id if self.variation else 0, self.order_id\n        )"
+      }
+    ],
+    "reason_code": "TEXT_RETURN"
+  },
+  "75e61ddb4dde4f1a": {
+    "candidate_id": "75e61ddb4dde4f1a",
+    "functions": [
+      {
+        "args": [
+          "self"
+        ],
+        "calls": [
+          "_"
+        ],
+        "comprehensions": 0,
+        "external_calls": [
+          "_"
+        ],
+        "free_names": [
+          "_"
+        ],
+        "function_name": "__str__",
+        "has_attribute_mutation": false,
+        "has_await": false,
+        "has_yield": false,
+        "repository_matches": [
+          {
+            "class_name": "AbstractLinePrice",
+            "end_lineno": 1016,
+            "lineno": 1011,
+            "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\order\\abstract_models.py",
+            "source": "def __str__(self):\n        return _(\"Line '%(number)s' (quantity %(qty)d) price %(price)s\") % {\n            \"number\": self.line,\n            \"qty\": self.quantity,\n            \"price\": self.price_incl_tax,\n        }"
+          }
+        ],
+        "return_count": 1,
+        "self_attributes": [
+          "line",
+          "price_incl_tax",
+          "quantity"
+        ],
+        "source": "def __str__(self):\n        return _(\"Line '%(number)s' (quantity %(qty)d) price %(price)s\") % {\n            \"number\": self.line,\n            \"qty\": self.quantity,\n            \"price\": self.price_incl_tax,\n        }"
+      }
+    ],
+    "reason_code": "TEXT_RETURN"
+  },
+  "87d2f0b3b15f0ea6": {
+    "candidate_id": "87d2f0b3b15f0ea6",
+    "functions": [
+      {
+        "args": [
+          "self"
+        ],
+        "calls": [
+          "range_anchor"
+        ],
+        "comprehensions": 0,
+        "external_calls": [
+          "range_anchor"
+        ],
+        "free_names": [
+          "range_anchor"
+        ],
+        "function_name": "description",
+        "has_attribute_mutation": false,
+        "has_await": false,
+        "has_yield": false,
+        "repository_matches": [],
+        "return_count": 1,
+        "self_attributes": [
+          "_description",
+          "range",
+          "value"
+        ],
+        "source": "def description(self):\n        return self._description % {\n            \"value\": self.value,\n            \"range\": range_anchor(self.range),\n        }"
+      }
+    ],
+    "reason_code": "TEXT_RETURN"
+  },
+  "d285ecd86455b150": {
+    "candidate_id": "d285ecd86455b150",
+    "functions": [
+      {
+        "args": [
+          "subevent_id",
+          "item",
+          "infos_for_item"
+        ],
+        "calls": [
+          "list",
+          "next",
+          "sum"
+        ],
+        "comprehensions": 2,
+        "external_calls": [
+          "next"
+        ],
+        "free_names": [
+          "next"
+        ],
+        "function_name": "discount_info",
+        "has_attribute_mutation": false,
+        "has_await": false,
+        "has_yield": false,
+        "repository_matches": [],
+        "return_count": 1,
+        "self_attributes": [],
+        "source": "def discount_info(subevent_id, item, infos_for_item):\n            infos_for_item = list(infos_for_item)\n            return (\n                subevent_id,\n                item,\n                sum(max_count for (subevent_id, item, discount_rule, max_count, i) in infos_for_item),\n                next(discount_rule for (subevent_id, item, discount_rule, max_count, i) in infos_for_item),\n            )"
+      }
+    ],
+    "reason_code": "TUPLE_RETURN"
+  },
+  "e1cf29f02fa0dadc": {
+    "candidate_id": "e1cf29f02fa0dadc",
+    "functions": [
+      {
+        "args": [
+          "self",
+          "user"
+        ],
+        "calls": [],
+        "comprehensions": 0,
+        "external_calls": [],
+        "free_names": [],
+        "function_name": "get_user_offers",
+        "has_attribute_mutation": false,
+        "has_await": false,
+        "has_yield": false,
+        "repository_matches": [
+          {
+            "class_name": "Applicator",
+            "end_lineno": 102,
+            "lineno": 96,
+            "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\offer\\applicator.py",
+            "source": "def get_user_offers(self, user):\n        \"\"\"\n        Returns offers linked to this particular user.\n\n        Eg: student users might get 25% off\n        \"\"\"\n        return []"
+          }
+        ],
+        "return_count": 1,
+        "self_attributes": [],
+        "source": "def get_user_offers(self, user):\n        \"\"\"\n        Returns offers linked to this particular user.\n\n        Eg: student users might get 25% off\n        \"\"\"\n        return []"
+      }
+    ],
+    "reason_code": "LIST_RETURN"
+  }
+}

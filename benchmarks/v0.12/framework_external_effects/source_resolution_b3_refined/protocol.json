@@ -1,0 +1,31 @@
+{
+  "acceptance_precedence": [
+    "TIER_A_HASH_RESOLVED",
+    "STRUCTURED_DIRECT_HASH_RESOLVED",
+    "STRUCTURED_HASH_NAME_RESOLVED",
+    "REVIEW_ONLY",
+    "UNRESOLVED"
+  ],
+  "automatic_acceptance": {
+    "STRUCTURED_DIRECT_HASH_RESOLVED": "candidate-local structured historical record contains an explicit hash/digest field that identifies exactly one external function",
+    "STRUCTURED_HASH_NAME_RESOLVED": "candidate-local structured record supplies hash evidence and candidate-linked function name evidence whose conjunction identifies exactly one external function",
+    "TIER_A_HASH_RESOLVED": "exactly one external source location identified by candidate-specific Tier-A hash"
+  },
+  "candidate_count": 8,
+  "candidate_ids": [
+    "03e2adf4e4f323b1",
+    "63e7979762bf860b",
+    "7460029971aad8de",
+    "7cf281a33e5781df",
+    "91b2dc32504282fc",
+    "a09e038870c9b436",
+    "a79d9687185720aa",
+    "bcb091a940a8d0dd"
+  ],
+  "certification_started": false,
+  "methodological_correction": "Tier-A evidence has strict precedence over noisier Tier-B context. Tier-B is no longer unioned with Tier-A before resolution.",
+  "recovery_claims": 0,
+  "schema_version": "BIZPROOF-V0.12-B3-R1-FREEZE-1",
+  "source_checkpoint": "ae13410b43d2e238e00f7e8c82e743c1a2d15f83",
+  "structured_search_rule": "For unresolved candidates, provenance is reconstructed from structured historical records directly containing the candidate ID."
+}

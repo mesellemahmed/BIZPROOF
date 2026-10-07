@@ -1,0 +1,14 @@
+{
+  "certified_a1": 33,
+  "certified_a2": 17,
+  "certified_total": 50,
+  "cohort_total": 90,
+  "primary_recovery_population": 38,
+  "schema_version": "BIZPROOF-V0.12-V011-FRONTIER-SNAPSHOT-1",
+  "secondary_ambiguity_population": 2,
+  "semantic_ambiguity": 2,
+  "source_commit": "89213df19502d295f0ad293b4bb9e1ffbcf7dd04",
+  "source_tag": "v0.11-paper-evidence-final",
+  "unsupported": 38,
+  "v011_results_mutable": false
+}

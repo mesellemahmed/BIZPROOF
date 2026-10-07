@@ -1,0 +1,16 @@
+{
+  "allowed_use": [
+    "failure diagnosis",
+    "generic capability development",
+    "regression development",
+    "ablation development"
+  ],
+  "confirmatory_source": "six frozen reserve projects",
+  "forbidden_use": [
+    "prospective V0.14 validation claim",
+    "unbiased confirmatory estimate"
+  ],
+  "schema_version": "BIZPROOF-V0.14-DIAGNOSTIC-POLICY-1",
+  "v0_13_external_cases": 120,
+  "v0_13_outcomes_observed": true
+}

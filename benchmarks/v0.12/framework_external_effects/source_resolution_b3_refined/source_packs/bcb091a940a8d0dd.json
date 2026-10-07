@@ -1,0 +1,238 @@
+{
+  "authoritative_source": true,
+  "candidate_id": "bcb091a940a8d0dd",
+  "certification_started": false,
+  "class_name": "BasketView",
+  "end_lineno": 45,
+  "fingerprints": {
+    "ast_dump": "144c2ecd547173c35cedd21e36fdab845a2d5339f71b7176fd874b745f7ac84c",
+    "ast_unparse": "7474258665d55dff505ab9bf34be3313d5ac25d759d8fb3f53aa6d2ef1b644b6",
+    "dedent_strip": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+    "dedent_strip_newline": "971d928c2e3da3967e34ca8f12bb33e1c6ee032544f01547aaed1925bea92cf3",
+    "lf": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+    "raw": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72"
+  },
+  "function_name": "get_formset_kwargs",
+  "lineno": 42,
+  "matched_hash": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+  "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\basket\\views.py",
+  "project": "django_oscar",
+  "reason_codes": "FRAMEWORK_DICT_MUTATION_OUTSIDE_FORMAL_SUBSET",
+  "recovery_claim": false,
+  "resolution": "STRUCTURED_DIRECT_HASH_RESOLVED",
+  "source": "def get_formset_kwargs(self):\n        kwargs = super().get_formset_kwargs()\n        kwargs[\"strategy\"] = self.request.strategy\n        return kwargs",
+  "support_records": [
+    {
+      "direct_hashes": [
+        "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89",
+        "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\execution_probe.jsonl",
+      "function_names": [
+        "get_formset_kwargs"
+      ],
+      "hashes": [
+        "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89",
+        "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72"
+      ],
+      "object_path": "$line[9]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89"
+        },
+        {
+          "key_path": "$.function",
+          "value": "get_formset_kwargs"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89",
+        "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+        "bec79c3c035f95d04c822c14f18d4839b03fb1d92c5ff92af29d650b9740d2b6"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_outcomes.jsonl",
+      "function_names": [
+        "get_formset_kwargs"
+      ],
+      "hashes": [
+        "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89",
+        "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+        "bec79c3c035f95d04c822c14f18d4839b03fb1d92c5ff92af29d650b9740d2b6"
+      ],
+      "object_path": "$line[7]",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89"
+        },
+        {
+          "key_path": "$.function",
+          "value": "get_formset_kwargs"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "bec79c3c035f95d04c822c14f18d4839b03fb1d92c5ff92af29d650b9740d2b6"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "131a79559dd1374fd21a988b1d1f177352fbf4ac0c246edbb015de4710bb48b3",
+        "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+        "d978ce9eb54de7473cc5f6ba2882acf4a4bca4573eb75af56b32ca0e26866413"
+      ],
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "function_names": [
+        "get_formset_kwargs"
+      ],
+      "hashes": [
+        "131a79559dd1374fd21a988b1d1f177352fbf4ac0c246edbb015de4710bb48b3",
+        "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+        "d978ce9eb54de7473cc5f6ba2882acf4a4bca4573eb75af56b32ca0e26866413"
+      ],
+      "object_path": "$line[4]",
+      "path_hints": [
+        "docs/source/releases/v0.7.2.rst",
+        "docs/source/releases/v1.6.rst",
+        "src/oscar/apps/basket/views.py",
+        "tests/integration/basket/test_views.py",
+        "tests/integration/offer/test_upsell_messages.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate.business_keyword_sources.class[0]",
+          "value": "basket"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.path[0]",
+          "value": "basket"
+        },
+        {
+          "key_path": "$.candidate.evidence_link_modes.test:EXACT_CLASS_SYMBOL",
+          "value": "2"
+        },
+        {
+          "key_path": "$.candidate.file",
+          "value": "src/oscar/apps/basket/views.py"
+        },
+        {
+          "key_path": "$.candidate.function",
+          "value": "get_formset_kwargs"
+        },
+        {
+          "key_path": "$.candidate.function_sha256",
+          "value": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72"
+        },
+        {
+          "key_path": "$.candidate.source_file_sha256",
+          "value": "d978ce9eb54de7473cc5f6ba2882acf4a4bca4573eb75af56b32ca0e26866413"
+        },
+        {
+          "key_path": "$.candidate.source_id",
+          "value": "django_oscar"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[0]",
+          "value": "docs/source/releases/v0.7.2.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[1]",
+          "value": "docs/source/releases/v1.6.rst"
+        },
+        {
+          "key_path": "$.candidate.supporting_test_files[0]",
+          "value": "tests/integration/basket/test_views.py"
+        },
+        {
+          "key_path": "$.candidate.supporting_test_files[1]",
+          "value": "tests/integration/offer/test_upsell_messages.py"
+        },
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        },
+        {
+          "key_path": "$.selection_hash",
+          "value": "131a79559dd1374fd21a988b1d1f177352fbf4ac0c246edbb015de4710bb48b3"
+        },
+        {
+          "key_path": "$.stratum.source_id",
+          "value": "django_oscar"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89",
+        "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+        "bec79c3c035f95d04c822c14f18d4839b03fb1d92c5ff92af29d650b9740d2b6"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_evidence\\bcb091a940a8d0dd.json",
+      "function_names": [
+        "get_formset_kwargs"
+      ],
+      "hashes": [
+        "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89",
+        "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72",
+        "bec79c3c035f95d04c822c14f18d4839b03fb1d92c5ff92af29d650b9740d2b6"
+      ],
+      "object_path": "$",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "bcb091a940a8d0dd"
+        },
+        {
+          "key_path": "$.execution_probe_digest",
+          "value": "6acdba32e139ae2207c1415addb9ad5dbf825bcec740ebfa012c3d5f8221ca89"
+        },
+        {
+          "key_path": "$.function",
+          "value": "get_formset_kwargs"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "7d84fb99ad2262850084dae8686bdb577c6ff097272a2e79ff6c0f5709646a72"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "bec79c3c035f95d04c822c14f18d4839b03fb1d92c5ff92af29d650b9740d2b6"
+        },
+        {
+          "key_path": "$.source",
+          "value": "django_oscar"
+        }
+      ]
+    }
+  ]
+}

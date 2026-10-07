@@ -1,0 +1,47 @@
+{
+  "all_required_gates_pass": true,
+  "authoritative_source": {
+    "ast_rewritten": false,
+    "matches_frozen_plan": true,
+    "sha256": "0c1d9b50bfa377b3f8004844ef99266333a9da475e368e05a278bae67a67e7d8"
+  },
+  "candidate_id": "882c5eae0d8fd4ec",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_mutant_replay": {
+    "correct_completed": true,
+    "correct_effect_count": 3,
+    "different": true,
+    "mutant_completed": false,
+    "mutant_effect_count": 2
+  },
+  "formal_mutant_refutation": {
+    "model": "[refund_amount = 1/2, pending = -1/2]",
+    "property": "there exists a positive refund amount with zero post-refund balance where the source must call done() and the frozen omit-done mutant does not",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "function_name": "create_external_refund",
+  "mutant": {
+    "name": "OMIT_DONE_ON_ZERO_BALANCE",
+    "replacement": "pass",
+    "semantic_fault": "zero-balance external refund is created and logged but not completed",
+    "target": "r.done()"
+  },
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-B2-CERT2-A2-1",
+  "scope": {
+    "certified": "the exact frozen business source under the prospectively frozen rich framework semantic projection",
+    "not_certified": [
+      "correctness of Pretix plugin, database or ORM implementations",
+      "correctness of arbitrary external signal providers",
+      "transaction scheduling, concurrency or hidden middleware effects"
+    ]
+  },
+  "semantic_capability": "EXTERNAL_OBJECT_CREATION_EFFECT_TRACE",
+  "source_projection_equivalence": {
+    "branch_basis": 8,
+    "controlled_exact_source_replay": true,
+    "structural_route_gate": true
+  },
+  "v012_outcome": "CERTIFIED_A2"
+}

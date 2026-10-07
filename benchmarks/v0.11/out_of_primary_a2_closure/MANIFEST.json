@@ -1,0 +1,36 @@
+{
+  "article_results_changed": false,
+  "artifacts": [
+    {
+      "bytes": 2364,
+      "path": "benchmarks\\v0.11\\out_of_primary_a2_closure\\pair_runtime_validation.json",
+      "sha256": "d5e04d600778789d43400039c8a121feca4aafab417d5dd802cc6153aacb7cfc"
+    },
+    {
+      "bytes": 1242,
+      "path": "benchmarks\\v0.11\\out_of_primary_a2_closure\\pair_runtime_validation.txt",
+      "sha256": "387d0e8ff92cb20e83aca0dfcb4de2da076d5c3b7d18da974efab8c5284e43f3"
+    },
+    {
+      "bytes": 11833,
+      "path": "benchmarks\\v0.11\\out_of_primary_a2_closure\\provenance_audit.json",
+      "sha256": "831c1a7edb3c93cae5c815a90e8ec775c2d51b010b682eb3b7e1338c91588c39"
+    },
+    {
+      "bytes": 1608,
+      "path": "benchmarks\\v0.11\\out_of_primary_a2_closure\\README.md",
+      "sha256": "5d8bca09f3eca38a925fbd25d14da2cd5e15157122781268a344a7c35bf30abc"
+    },
+    {
+      "bytes": 2043,
+      "path": "benchmarks\\v0.11\\out_of_primary_a2_closure\\W23_CLOSURE.json",
+      "sha256": "8c9c03665b00ff3958dcd8d30efd214e9ba70842488baa5d311ee4ef2a60fb0e"
+    }
+  ],
+  "certified_a2_total": 17,
+  "outside_primary_total": 3,
+  "paper_benchmark_total": 14,
+  "schema_version": "BIZPROOF-V0.11-W23-MANIFEST-2",
+  "source_commit": "c5995120d62764f07dce4d98f7ba0b4767f5dc11",
+  "unresolved_membership_total": 0
+}

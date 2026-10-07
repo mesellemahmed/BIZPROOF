@@ -1,0 +1,34 @@
+{
+  "bizproof_execution_started": false,
+  "case_count": 60,
+  "cases_per_project": 10,
+  "cases_per_project_stratum": 2,
+  "cases_per_stratum": 12,
+  "development120_overlap": 0,
+  "engine_guided_selection": false,
+  "evaluation_order_sha256": "ca74897a6d997db81e32fab369f806a6956365c3a9d07ab59aae681d063bc423",
+  "external_outcomes_observed": 0,
+  "historical_overlap": 0,
+  "outcome_guided_selection": false,
+  "project_count": 6,
+  "project_distribution": {
+    "ansible/awx": 10,
+    "django-cms/django-cms": 10,
+    "odoo/odoo": 10,
+    "openstack/horizon": 10,
+    "pretalx/pretalx": 10,
+    "wagtail/wagtail": 10
+  },
+  "project_stratum_cells": 30,
+  "schema_version": "BIZPROOF-V0.14-CONFIRMATORY60-FREEZE-AUDIT-1",
+  "stratum_count": 5,
+  "stratum_distribution": {
+    "S1_LOCAL_SCALAR_CONTROL": 12,
+    "S2_STRUCTURED_CONTAINER": 12,
+    "S3_NESTED_VECTOR_HIGHER_ORDER": 12,
+    "S4_STATE_EFFECT": 12,
+    "S5_BINDING_EXTERNAL_DOMAIN": 12
+  },
+  "unique_case_ids": 60,
+  "unique_source_bodies": 60
+}

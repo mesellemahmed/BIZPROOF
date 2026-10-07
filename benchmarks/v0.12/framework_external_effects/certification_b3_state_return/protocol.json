@@ -1,0 +1,47 @@
+{
+  "attempted": 5,
+  "batch": "STATE_RETURN_BATCH",
+  "candidate_ids": [
+    "7cf281a33e5781df",
+    "91b2dc32504282fc",
+    "a09e038870c9b436",
+    "a79d9687185720aa",
+    "bcb091a940a8d0dd"
+  ],
+  "certification_started": false,
+  "correct_source_policy": "Execute the exact frozen source body. Methods requiring zero-argument super() are embedded unchanged inside a controlled class harness solely to provide the Python __class__ cell.",
+  "mutants": {
+    "7cf281a33e5781df": {
+      "fault": "the source receives a new price value but the mutant preserves self.value",
+      "name": "KEEP_OLD_ATTRIBUTE_VALUE"
+    },
+    "91b2dc32504282fc": {
+      "fault": "the discount application is consumed and caches are invalidated, but the ordered discount record is not appended",
+      "name": "OMIT_DISCOUNT_APPEND"
+    },
+    "a09e038870c9b436": {
+      "fault": "the display string never includes the description suffix",
+      "name": "IGNORE_DESCRIPTION_BRANCH"
+    },
+    "a79d9687185720aa": {
+      "fault": "a non-suspended offer with zero remaining applications is marked OPEN instead of CONSUMED",
+      "name": "CONSUMED_TO_OPEN"
+    },
+    "bcb091a940a8d0dd": {
+      "fault": "the mapping returned by super is returned without injecting request.strategy",
+      "name": "OMIT_STRATEGY_EXTENSION"
+    }
+  },
+  "mutants_frozen_before_execution": true,
+  "recovery_claims_before_execution": 0,
+  "schema_version": "BIZPROOF-V0.12-B3-CERT1-PROTOCOL-1",
+  "semantic_routes": {
+    "7cf281a33e5781df": "ATTRIBUTE_STATE_WRITE",
+    "91b2dc32504282fc": "DISCOUNT_SEQUENCE_AND_CACHE_INVALIDATION",
+    "a09e038870c9b436": "CONDITIONAL_STRING_RETURN",
+    "a79d9687185720aa": "CONDITIONAL_STATUS_PLUS_PERSISTENCE",
+    "bcb091a940a8d0dd": "SUPER_MAPPING_EXTENSION"
+  },
+  "source_checkpoint": "9fb0dfebd0e4c41c2ed8259e6006142646f26250",
+  "source_rewrite_policy": "NONE_FOR_CORRECT_SOURCE"
+}

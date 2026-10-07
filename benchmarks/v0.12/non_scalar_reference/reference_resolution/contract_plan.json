@@ -1,0 +1,64 @@
+{
+  "candidates": {
+    "0f73ae8d15cf3408": {
+      "candidate_id": "0f73ae8d15cf3408",
+      "contracts": [
+        "None remains explicit None and is not conflated with a reference.",
+        "Temporal values are represented by canonical ISO date/datetime semantics.",
+        "Non-temporal domain values require an explicit stable typed identity."
+      ],
+      "has_state_mutation": false,
+      "source_dependency_count": 3,
+      "status": "READY_FOR_CONTRACT_IMPLEMENTATION",
+      "strategy": "OPTIONAL_TEMPORAL_OR_REFERENCE"
+    },
+    "6d009b7961c5d116": {
+      "candidate_id": "6d009b7961c5d116",
+      "contracts": [
+        "Sequence order and cardinality are semantically observable.",
+        "Every domain element requires an explicit stable typed identity."
+      ],
+      "has_state_mutation": false,
+      "source_dependency_count": 7,
+      "status": "READY_FOR_CONTRACT_IMPLEMENTATION",
+      "strategy": "FINITE_SEQUENCE_OF_TYPED_REFERENCES"
+    },
+    "6fd8bd69c26e7954": {
+      "candidate_id": "6fd8bd69c26e7954",
+      "contracts": [
+        "Returned domain objects are represented only by an explicit stable typed identity.",
+        "No arbitrary framework object internals are silently projected."
+      ],
+      "has_state_mutation": false,
+      "source_dependency_count": 7,
+      "status": "READY_FOR_CONTRACT_IMPLEMENTATION",
+      "strategy": "OPTIONAL_OR_DIRECT_TYPED_REFERENCE"
+    },
+    "d285ecd86455b150": {
+      "candidate_id": "d285ecd86455b150",
+      "contracts": [
+        "Tuple arity and positional semantics are preserved.",
+        "Scalar fields remain scalar.",
+        "Domain-object tuple fields use explicit stable typed identities."
+      ],
+      "has_state_mutation": false,
+      "source_dependency_count": 0,
+      "status": "READY_FOR_CONTRACT_IMPLEMENTATION",
+      "strategy": "STRUCTURED_TUPLE_WITH_TYPED_REFERENCES"
+    },
+    "fa377c649a747a7d": {
+      "candidate_id": "fa377c649a747a7d",
+      "contracts": [
+        "Returned domain objects are represented only by an explicit stable typed identity.",
+        "No arbitrary framework object internals are silently projected."
+      ],
+      "has_state_mutation": false,
+      "source_dependency_count": 2,
+      "status": "READY_FOR_CONTRACT_IMPLEMENTATION",
+      "strategy": "OPTIONAL_OR_DIRECT_TYPED_REFERENCE"
+    }
+  },
+  "recovery_claims": 0,
+  "schema_version": "BIZPROOF-V0.12-A5-CONTRACT-PLAN-1",
+  "target_count": 5
+}

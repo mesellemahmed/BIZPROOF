@@ -1,0 +1,14 @@
+{
+  "cohort_modified": false,
+  "cohort_source_hashes_reverified": 120,
+  "external_outcomes_observed": 0,
+  "frozen_external_case_lint_scope": "EXCLUDED",
+  "implementation_lint_scope": [
+    "src/",
+    "tests/",
+    "benchmarks/v0.12/external_validation/evaluation_runner_freeze/runner.py"
+  ],
+  "reason": "External cohort case files are immutable source-body evidence extracted from their original module/class contexts. They may intentionally contain unresolved module names or class-method indentation and must not be reformatted, lint-fixed, or semantically altered.",
+  "schema_version": "BIZPROOF-V0.12-E2B-VALIDATION-SCOPE-1",
+  "semantic_implementation_modified": false
+}

@@ -1,0 +1,135 @@
+{
+  "authoritative_source": true,
+  "candidate_id": "a09e038870c9b436",
+  "certification_started": false,
+  "class_name": "OrderFee",
+  "end_lineno": 2446,
+  "fingerprints": {
+    "ast_dump": "c407533af2834706dd2ab00755279a1bbe3a2c7c44f9b2a4e81d94e97a7b9f63",
+    "ast_unparse": "d264b03132b96dae693ba626b0554c953ee649b72e85e75df50453cf3d9786aa",
+    "dedent_strip": "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897",
+    "dedent_strip_newline": "a615d2838cebd9069f2884676d6f685dc5266b95985ab6860b7027eda37237ba",
+    "lf": "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897",
+    "raw": "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897"
+  },
+  "function_name": "__str__",
+  "lineno": 2442,
+  "matched_hash": "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897",
+  "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\orders.py",
+  "project": "pretix",
+  "reason_codes": "CONDITIONAL_STRING_CONSTRUCTION_OUTSIDE_FROZEN_FORMAL_SCOPE",
+  "recovery_claim": false,
+  "resolution": "STRUCTURED_DIRECT_HASH_RESOLVED",
+  "source": "def __str__(self):\n        if self.description:\n            return '{} - {}'.format(self.get_fee_type_display(), self.description)\n        else:\n            return self.get_fee_type_display()",
+  "support_records": [
+    {
+      "direct_hashes": [
+        "08d793e984e66bc559b14ed55f295b4693531ac07aec4104a69214647b87e94c",
+        "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef",
+        "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897"
+      ],
+      "file": "benchmarks\\v0.11\\results\\cohort.jsonl",
+      "function_names": [
+        "__str__"
+      ],
+      "hashes": [
+        "08d793e984e66bc559b14ed55f295b4693531ac07aec4104a69214647b87e94c",
+        "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef",
+        "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897"
+      ],
+      "object_path": "$line[85]",
+      "path_hints": [
+        "doc/development/implementation/models.rst",
+        "src/pretix/base/models/orders.py"
+      ],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate.business_keyword_sources.class[0]",
+          "value": "fee"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.class[1]",
+          "value": "order"
+        },
+        {
+          "key_path": "$.candidate.business_keyword_sources.path[0]",
+          "value": "order"
+        },
+        {
+          "key_path": "$.candidate.file",
+          "value": "src/pretix/base/models/orders.py"
+        },
+        {
+          "key_path": "$.candidate.function",
+          "value": "__str__"
+        },
+        {
+          "key_path": "$.candidate.function_sha256",
+          "value": "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897"
+        },
+        {
+          "key_path": "$.candidate.source_file_sha256",
+          "value": "289123548a8922d0b6b204a98ed8490a6923867fc8937cb3235c9b3e66fffcef"
+        },
+        {
+          "key_path": "$.candidate.source_id",
+          "value": "pretix"
+        },
+        {
+          "key_path": "$.candidate.supporting_doc_files[0]",
+          "value": "doc/development/implementation/models.rst"
+        },
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        },
+        {
+          "key_path": "$.selection_hash",
+          "value": "08d793e984e66bc559b14ed55f295b4693531ac07aec4104a69214647b87e94c"
+        },
+        {
+          "key_path": "$.stratum.source_id",
+          "value": "pretix"
+        }
+      ]
+    },
+    {
+      "direct_hashes": [
+        "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897",
+        "d1c12d1c956dd72b362bdb493a2405d5eb5f1be91d05b057145a9942366643e8"
+      ],
+      "file": "benchmarks\\v0.11\\controlled_complex_closure\\negative_evidence\\a09e038870c9b436.json",
+      "function_names": [
+        "__str__"
+      ],
+      "hashes": [
+        "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897",
+        "d1c12d1c956dd72b362bdb493a2405d5eb5f1be91d05b057145a9942366643e8"
+      ],
+      "object_path": "$",
+      "path_hints": [],
+      "relevant_fields": [
+        {
+          "key_path": "$.candidate_id",
+          "value": "a09e038870c9b436"
+        },
+        {
+          "key_path": "$.function",
+          "value": "__str__"
+        },
+        {
+          "key_path": "$.function_sha256",
+          "value": "2da727e10ebc45b55605d355ce6fb4169fe69351cb2a2d4ca0460958d26ea897"
+        },
+        {
+          "key_path": "$.negative_evidence_digest",
+          "value": "d1c12d1c956dd72b362bdb493a2405d5eb5f1be91d05b057145a9942366643e8"
+        },
+        {
+          "key_path": "$.source",
+          "value": "pretix"
+        }
+      ]
+    }
+  ]
+}

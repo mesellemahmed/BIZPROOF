@@ -1,0 +1,34 @@
+{
+  "all_required_gates_pass": true,
+  "candidate_id": "1311d905af0ebcb5",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_counterexample_replay": {
+    "correct": "{\"repr\":\"SemanticEffectTrace(effects=(SemanticEffect(kind='REDIS_CONNECT', target='redis', arguments=()), SemanticEffect(kind='REDIS_PIPELINE_OPEN', target='redis', arguments=()), SemanticEffect(kind='REDIS_HDEL', target='quotas:7:availabilitycache', arguments=(\\\"'11'\\\",)), SemanticEffect(kind='REDIS_HDEL', target='quotas:7:availabilitycache:nocw', arguments=(\\\"'11'\\\",)), SemanticEffect(kind='REDIS_HDEL', target='quotas:7:availabilitycache:igcl', arguments=(\\\"'11'\\\",)), SemanticEffect(kind='REDIS_HDEL', target='quotas:7:availabilitycache:nocw:igcl', arguments=(\\\"'11'\\\",)), SemanticEffect(kind='REDIS_PIPELINE_EXECUTE', target='redis', arguments=()), SemanticEffect(kind='AVAILABILITY_REFRESH', target='quota', arguments=(\\\"'NOW'\\\",))))\"}",
+    "mutant": "{\"repr\":\"SemanticEffectTrace(effects=(SemanticEffect(kind='REDIS_CONNECT', target='redis', arguments=()), SemanticEffect(kind='REDIS_PIPELINE_OPEN', target='redis', arguments=()), SemanticEffect(kind='REDIS_HDEL', target='quotas:7:availabilitycache', arguments=(\\\"'11'\\\",)), SemanticEffect(kind='REDIS_HDEL', target='quotas:7:availabilitycache:nocw', arguments=(\\\"'11'\\\",)), SemanticEffect(kind='REDIS_HDEL', target='quotas:7:availabilitycache:igcl', arguments=(\\\"'11'\\\",)), SemanticEffect(kind='REDIS_PIPELINE_EXECUTE', target='redis', arguments=()), SemanticEffect(kind='AVAILABILITY_REFRESH', target='quota', arguments=(\\\"'NOW'\\\",))))\"}",
+    "passed": true
+  },
+  "formal_mutant_refutation": {
+    "model": "[has_redis = True]",
+    "property": "when Redis is enabled, omission of one frozen HDEL operation changes the ordered external-effect trace",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-B1-A2-1",
+  "scope": {
+    "certified": "ordered dependency-effect trace for Redis invalidation and availability refresh",
+    "not_certified": [
+      "Redis server implementation",
+      "network delivery",
+      "Redis persistence",
+      "concurrent external clients"
+    ]
+  },
+  "semantic_capability": "EXPLICIT_EXTERNAL_EFFECT_TRACE",
+  "source_equivalence": {
+    "method": "canonical executable AST identity after explicit framework/dependency abstraction substitution",
+    "proved": true
+  },
+  "source_sha256": "9b086241aacbe574b946f552eb689139f0c67a4f22cc273bb3583e601ecae443",
+  "v012_outcome": "CERTIFIED_A2"
+}

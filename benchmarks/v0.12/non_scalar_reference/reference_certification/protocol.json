@@ -1,0 +1,37 @@
+{
+  "candidate_domain_contracts": {
+    "6fd8bd69c26e7954": [
+      "gross is a finite Decimal",
+      "rate is a finite Decimal",
+      "gross.as_tuple().exponent is therefore an integer exponent",
+      "round_decimal_fn represents the frozen round_decimal dependency",
+      "TaxedPriceProjection preserves gross, net, tax, rate, name and code as observable value fields"
+    ]
+  },
+  "candidate_ids": [
+    "6fd8bd69c26e7954",
+    "d285ecd86455b150",
+    "fa377c649a747a7d"
+  ],
+  "certification_execution_started_before_revision": false,
+  "protocol_revision": "PRE_PROOF_FINITE_DECIMAL_DOMAIN_1",
+  "protocol_revision_reason": "Python DecimalTuple.exponent is statically typed as int or a non-finite sentinel. The frozen source performs Decimal('10') ** exponent, so the accepted business-semantic domain is explicitly restricted to finite gross Decimal values.",
+  "recovery_claims_before_execution": 0,
+  "required_gates": [
+    "frozen_source_slice",
+    "explicit_abstraction_contract",
+    "canonical_ast_source_equivalence",
+    "deterministic_semantic_projection",
+    "mutant_structurally_distinct",
+    "solver_backed_mutant_refutation",
+    "concrete_counterexample_replay"
+  ],
+  "schema_version": "BIZPROOF-V0.12-A5-CERT1-PROTOCOL-1",
+  "selection_frozen_before_execution": true,
+  "semantic_classes": {
+    "6fd8bd69c26e7954": "STRUCTURED_VALUE_OBJECT",
+    "d285ecd86455b150": "MIXED_TUPLE_WITH_TYPED_REFERENCES",
+    "fa377c649a747a7d": "TYPED_REFERENCE_SELECTION"
+  },
+  "source_checkpoint": "23ebe3031bec6d058ee1c8c62c74a6b94c9bb1a5"
+}

@@ -1,0 +1,14 @@
+{
+  "candidate_id": "d7f578c3a5f20b8a",
+  "certification_batch": "STATE_CONTAINER_BATCH",
+  "class_name": "OrderChangeManager",
+  "function_name": "change_fee",
+  "lineno": 1898,
+  "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\services\\orders.py",
+  "provenance_status": "STRONG_HASH_MATCH",
+  "reason_codes": "MULTI_OBJECT_STATE_TRANSITION_OUTSIDE_FORMAL_SUBSET",
+  "semantic_observation": "multi-field post-state plus ordered operation append after explicit tax helper",
+  "semantic_route": "MULTI_STATE_PLUS_OPERATION_APPEND",
+  "source": "def change_fee(self, fee: OrderFee, value: Decimal):\n        value = (fee.tax_rule or TaxRule.zero()).tax(value, base_price_is='gross', invoice_address=self._invoice_address,\n                                                     force_fixed_gross_price=True)\n        self._totaldiff_guesstimate += value.gross - fee.value\n        self._invoice_dirty = True\n        self._operations.append(self.FeeValueOperation(fee, value, value.gross - fee.value))",
+  "source_sha256": "1fe1783cc607250e8b4e239f14bf18597d16a99fcb0e516bd623723a93a4f715"
+}

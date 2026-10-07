@@ -1,0 +1,24 @@
+id: EXT-OF-TH-001
+title: OpenFisca housing tax after relief semantic slice
+
+target:
+  source: benchmarks/v0.7/adapters/openfisca_housing_tax.py
+  function: housing_tax_after_relief
+
+inputs:
+  tax_before_relief:
+    type: int
+    min: 0
+    max: 1000000
+    label: Tax before relief in integer monetary units
+  relief:
+    type: int
+    min: 0
+    max: 1000000
+    label: Relief in the same integer monetary units
+
+precondition: "tax_before_relief >= 0 and relief >= 0"
+postcondition: "((tax_before_relief >= relief) and (result == tax_before_relief - relief)) or ((tax_before_relief < relief) and (result == 0))"
+
+business:
+  expected_outcome: "The tax after relief is the non-negative remainder of tax minus relief."

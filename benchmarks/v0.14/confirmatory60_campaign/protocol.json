@@ -1,0 +1,99 @@
+{
+  "artifacts": {
+    "analyzer_sha256": "ed6e3ccc1a6661ceb026962ecc080428e195d2cb2ad8357a424e942ced37f560",
+    "case_map_sha256": "e4a836cade875da20e736cde6e300c8d5f82c4b342f3f60f7d6895f194120f3f",
+    "runner_sha256": "96c30ba78fec831eafed84f6589ec6538028458e90bf00e38460dbc85c6f511e",
+    "statistical_plan_sha256": "ec2dd819f27d3eeb4111957ce5c7df02a63c70ecc709e9c3951be51ed0a297f8"
+  },
+  "chronology": "ENGINE_FREEZE -> COHORT_FREEZE -> COHORT_INTEGRITY_REPAIR -> RUNNER_ANALYSIS_FREEZE -> RAW_EXECUTION -> RAW_FREEZE -> ANALYSIS",
+  "cohort": {
+    "cases_per_project": 10,
+    "cases_per_project_stratum": 2,
+    "cases_per_stratum": 12,
+    "commit": "ad4af5a04d87bdac49015aff9615e92871be94e9",
+    "integrity_repair_commit": "3131c798395b0476a9aac232417b216d14102a58",
+    "integrity_repair_tag": "v0.14-confirmatory60-integrity-repair",
+    "projects": 6,
+    "size": 60,
+    "source_modification": false,
+    "source_substitution": false,
+    "strata": 5,
+    "tag": "v0.14-confirmatory60-cohort-freeze"
+  },
+  "construction": {
+    "commit": "22b0ef043dcb58bc395b3215ed207a5d5ab3dc11",
+    "tag": "v0.14-confirmatory60-construction-freeze"
+  },
+  "engine": {
+    "commit": "97e0d94fe0e8b616c4c66c409b104dc4b012ee0f",
+    "manifest": "benchmarks/v0.14/engine_freeze/engine_manifest.json",
+    "manifest_sha256": "23651f8fe4fa97c848ab3912f7b678c0b4674fd277bcdb80b7eaeb2b14c04ee3",
+    "modifiable": false,
+    "tag": "v0.14-engine-freeze"
+  },
+  "evaluation": {
+    "all_cases_evaluated": true,
+    "case_level_retry_after_durable_result": 0,
+    "case_specific_exceptions": false,
+    "case_substitution": false,
+    "completed_case_rerun": false,
+    "denominator": 60,
+    "early_stopping": false,
+    "engine_retuning": false,
+    "evaluation_order": "case_map.jsonl frozen line order",
+    "evaluation_order_sha256": "ca74897a6d997db81e32fab369f806a6956365c3a9d07ab59aae681d063bc423",
+    "interrupted_active_case_policy": "do not rerun; record INFRA::InterruptedExecution when no durable raw record exists",
+    "maximum_process_resumes": 2,
+    "raw_outcome_display_during_execution": false,
+    "raw_write_policy": "append-only JSONL; flush+fsync after every case",
+    "runner_source_normalization": "NONE \u2014 exact frozen source bytes are copied to engine",
+    "threshold_retuning": false
+  },
+  "external_outcomes_observed": 0,
+  "outcomes": {
+    "infra_silent_conversion_to_unsupported": false,
+    "infrastructure": "INFRA_ERROR",
+    "scientific": [
+      "CERTIFIED_A1",
+      "CERTIFIED_A2",
+      "UNSUPPORTED",
+      "AMBIGUOUS"
+    ]
+  },
+  "primary_endpoints": [
+    "(CERTIFIED_A1 + CERTIFIED_A2) / 60",
+    "CERTIFIED_A2 / 60"
+  ],
+  "raw": {
+    "analysis_before_raw_freeze": false,
+    "authoritative_result": "first complete append-only raw campaign",
+    "future_tag": "v0.14-confirmatory60-raw"
+  },
+  "runtime": "descriptive_only",
+  "schema_version": "BIZPROOF-V0.14-CONFIRMATORY60-PROTOCOL-1",
+  "secondary_endpoints": [
+    "CERTIFIED_A1 count and rate",
+    "UNSUPPORTED count and rate",
+    "AMBIGUOUS count and rate",
+    "INFRA_ERROR count and rate",
+    "per-project certification yield",
+    "per-stratum certification yield",
+    "macro-project certification yield",
+    "terminal reason-code taxonomy",
+    "formal obligation count",
+    "A2 obligation count",
+    "hardened OSSS activation count",
+    "hardened OSSS certification count",
+    "descriptive runtime"
+  ],
+  "statistics": {
+    "binary_success_threshold": false,
+    "confidence_interval": "Wilson 95%",
+    "p_values": false,
+    "plan": "benchmarks/v0.14/confirmatory60_campaign/statistical_plan.json",
+    "plan_sha256": "ec2dd819f27d3eeb4111957ce5c7df02a63c70ecc709e9c3951be51ed0a297f8",
+    "weighted_external_estimate": false,
+    "z": 1.959963984540054
+  },
+  "status": "FROZEN_BEFORE_OUTCOMES"
+}

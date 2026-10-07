@@ -1,0 +1,202 @@
+{
+  "artifacts": {
+    "adapter_function": "count_condition_satisfied",
+    "adapter_path": "benchmarks/v0.7/adapters/oscar_count_satisfied.py",
+    "adapter_sha256": "4f9671b32aef5561526577b107f00316682792b88dc3543c0864d57e7be9463d",
+    "contract_path": "contracts/external/v0.7/oscar_count_satisfied_correct.yaml",
+    "contract_sha256": "92a351a3d11e0b1133e6a7d38f1851cbf14ce8c9aed0a880c15d227d703cb72f"
+  },
+  "certificate_digest": "5426cde635accd91c815d38bbd45abfc9629fc570c84d37d1f8443a0d197290b",
+  "certificate_id": "CERT-OSCAR-SAT-001",
+  "certificate_version": "0.10.0",
+  "certification_scope": "POST_AGGREGATION_THRESHOLD",
+  "checks": [
+    {
+      "detail": "django_oscar",
+      "name": "lock-source-present",
+      "passed": true
+    },
+    {
+      "detail": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+      "name": "registry-lock-commit",
+      "passed": true
+    },
+    {
+      "detail": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+      "name": "checkout-lock-commit",
+      "passed": true
+    },
+    {
+      "detail": "src/oscar/apps/offer/conditions.py",
+      "name": "external-source-present",
+      "passed": true
+    },
+    {
+      "detail": "benchmarks/v0.7/adapters/oscar_count_satisfied.py",
+      "name": "adapter-present",
+      "passed": true
+    },
+    {
+      "detail": "contracts/external/v0.7/oscar_count_satisfied_correct.yaml",
+      "name": "contract-present",
+      "passed": true
+    },
+    {
+      "detail": "EXT-OSCAR-COUNT-SAT-001",
+      "name": "v0.7-evidence-present",
+      "passed": true
+    },
+    {
+      "detail": "PRES-OSCAR-SAT-001",
+      "name": "v0.8-evidence-present",
+      "passed": true
+    },
+    {
+      "detail": "SYM-OSCAR-SAT-001",
+      "name": "v0.9-evidence-present",
+      "passed": true
+    },
+    {
+      "detail": "summary passed",
+      "name": "v0.7-summary-pass",
+      "passed": true
+    },
+    {
+      "detail": "summary passed",
+      "name": "v0.8-summary-pass",
+      "passed": true
+    },
+    {
+      "detail": "summary passed",
+      "name": "v0.9-summary-pass",
+      "passed": true
+    },
+    {
+      "detail": "PROVED",
+      "name": "v0.7-correct-proved",
+      "passed": true
+    },
+    {
+      "detail": "DISPROVED",
+      "name": "v0.7-mutant-disproved",
+      "passed": true
+    },
+    {
+      "detail": "True",
+      "name": "v0.7-mutant-replay",
+      "passed": true
+    },
+    {
+      "detail": "0",
+      "name": "v0.8-zero-correct-mismatch",
+      "passed": true
+    },
+    {
+      "detail": "189",
+      "name": "v0.8-mutant-sensitive",
+      "passed": true
+    },
+    {
+      "detail": "True",
+      "name": "v0.8-rule-pass",
+      "passed": true
+    },
+    {
+      "detail": "PROVED",
+      "name": "v0.9-correct-proved",
+      "passed": true
+    },
+    {
+      "detail": "unsat",
+      "name": "v0.9-correct-unsat",
+      "passed": true
+    },
+    {
+      "detail": "DISPROVED",
+      "name": "v0.9-mutant-disproved",
+      "passed": true
+    },
+    {
+      "detail": "sat",
+      "name": "v0.9-mutant-sat",
+      "passed": true
+    },
+    {
+      "detail": "{'num_matches': 1, 'required_count': 1}",
+      "name": "v0.9-mutant-witness",
+      "passed": true
+    },
+    {
+      "detail": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+      "name": "v0.8-commit-consistency",
+      "passed": true
+    },
+    {
+      "detail": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+      "name": "v0.9-commit-consistency",
+      "passed": true
+    },
+    {
+      "detail": "c0d503080546b2e85e4a028df8322496ecdfde4924355afb1cc9ebedb123925b",
+      "name": "v0.8-source-hash",
+      "passed": true
+    },
+    {
+      "detail": "c0d503080546b2e85e4a028df8322496ecdfde4924355afb1cc9ebedb123925b",
+      "name": "v0.9-source-hash",
+      "passed": true
+    },
+    {
+      "detail": "4f9671b32aef5561526577b107f00316682792b88dc3543c0864d57e7be9463d",
+      "name": "v0.8-adapter-hash",
+      "passed": true
+    },
+    {
+      "detail": "4f9671b32aef5561526577b107f00316682792b88dc3543c0864d57e7be9463d",
+      "name": "v0.9-adapter-hash",
+      "passed": true
+    }
+  ],
+  "claim_scope": "V0.10 certifies selected business-semantic slices only when their locked provenance, V0.7 contract verification evidence, V0.8 source-executed preservation evidence, and V0.9 symbolic equivalence evidence are mutually consistent. CERTIFIED does not mean that the complete external framework has been verified.",
+  "evidence": {
+    "v0.7": {
+      "correct_verdict": "PROVED",
+      "evidence_sha256": "81ecee0ae56aa3644492c6f28ddd5d13f92ceb1a1ae5985c5fe89936a6bd302d",
+      "mutant_replay_validated": true,
+      "mutant_verdict": "DISPROVED",
+      "rule_id": "EXT-OSCAR-COUNT-SAT-001"
+    },
+    "v0.8": {
+      "comparisons": 24512,
+      "correct_mismatches": 0,
+      "evidence_sha256": "e9ca604da734d234903f3413df76d5d2f38a0c348e55360b31a2ecac00356681",
+      "mutant_mismatches": 189,
+      "rule_id": "PRES-OSCAR-SAT-001"
+    },
+    "v0.9": {
+      "correct_verdict": "PROVED",
+      "evidence_sha256": "7c35a60c10880299c361b798157967552491f2efc0b4b35802ecac1d7d9e8526",
+      "external_mode": "IF_CONDITION",
+      "external_slice": "num_matches >= self.value",
+      "external_slice_sha256": "8b10fc3c5d17d3ae07f34d3a9afd2f5e9156b51e81fdb541e575e3dac3f8fa6d",
+      "mutant_counterexample": {
+        "num_matches": 1,
+        "required_count": 1
+      },
+      "mutant_solver_status": "sat",
+      "mutant_verdict": "DISPROVED",
+      "rule_id": "SYM-OSCAR-SAT-001",
+      "solver_status": "unsat"
+    }
+  },
+  "failed_checks": [],
+  "provenance": {
+    "external_class": "CountCondition",
+    "external_method": "is_satisfied",
+    "external_source": "src/oscar/apps/offer/conditions.py",
+    "external_source_sha256": "c0d503080546b2e85e4a028df8322496ecdfde4924355afb1cc9ebedb123925b",
+    "resolved_commit": "5699d78449954f047d6d715fd2b6c5d19594e0f3",
+    "source_id": "django_oscar"
+  },
+  "status": "CERTIFIED"
+}

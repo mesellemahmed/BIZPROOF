@@ -1,0 +1,292 @@
+{
+  "a2_obligation_count": 1,
+  "a_level": "A1",
+  "bindings": [
+    {
+      "expression": "user.accepted",
+      "parameter": "obs_user_accepted",
+      "type_name": "bool"
+    },
+    {
+      "expression": "user.code",
+      "parameter": "obs_user_code",
+      "type_name": "int"
+    }
+  ],
+  "capabilities": [
+    "NESTED_LOGIC",
+    "OPAQUE_BINDING",
+    "STATE_EFFECT",
+    "STRUCTURED_VALUE"
+  ],
+  "case_specific_routing": false,
+  "certified": true,
+  "claim_scope": "formal equivalence evidence for scalarized observational projections under explicit parameter/binding abstraction; external effect occurrence is structurally recorded but external effect semantics are not inferred",
+  "effect_semantics_formally_proved": false,
+  "effects": [
+    "user.save()"
+  ],
+  "evidence_id": "v013-closure::mixed",
+  "external_holdout_used": false,
+  "formal_obligation_count": 3,
+  "formal_obligations": [
+    {
+      "obligation_id": "return[0]",
+      "result": {
+        "a_level": "A1",
+        "capability": "CONTROL_FLOW_SCALAR",
+        "case_id": "v013-closure::mixed::return[0]",
+        "certified": true,
+        "claim_scope": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+        "dedented": false,
+        "formal": {
+          "backend": "z3",
+          "contract_id": "v013-closure::mixed::return[0]::projection",
+          "counterexample": null,
+          "metadata": {
+            "path_count": 2,
+            "runtime_seconds": 0.010609891964122653,
+            "timeout_ms": 10000,
+            "z3_version": "5.1.0"
+          },
+          "observed_result": null,
+          "postcondition_satisfied": null,
+          "reason": null,
+          "reason_code": null,
+          "replay_validated": null,
+          "verdict": "PROVED"
+        },
+        "full_arbitrary_source_equivalence": false,
+        "function_name": "rule",
+        "inputs": [
+          {
+            "name": "values_0",
+            "type": "int"
+          },
+          {
+            "name": "values_1",
+            "type": "int"
+          },
+          {
+            "name": "values_2",
+            "type": "int"
+          },
+          {
+            "name": "obs_user_accepted",
+            "type": "bool"
+          },
+          {
+            "name": "obs_user_code",
+            "type": "int"
+          }
+        ],
+        "mutant": {
+          "backend": "z3",
+          "contract_id": "v013-closure::mixed::return[0]::mutant",
+          "counterexample": null,
+          "metadata": {
+            "path_count": 2,
+            "runtime_seconds": 0.005792170995846391,
+            "timeout_ms": 10000,
+            "z3_version": "5.1.0"
+          },
+          "observed_result": null,
+          "postcondition_satisfied": null,
+          "reason": null,
+          "reason_code": null,
+          "replay_validated": null,
+          "verdict": "PROVED"
+        },
+        "mutant_operator": "INT_CONSTANT_PLUS_ONE",
+        "mutant_projection": "values_0 > 0 and values_1 > 0 and (values_2 > 0) if values_0 > 1 and values_1 > 0 and (values_2 > 0) else values_0 > 0 and values_1 > 0 and (values_2 > 0)",
+        "mutant_refuted": false,
+        "projection": "values_0 > 0 and values_1 > 0 and (values_2 > 0) if values_0 > 0 and values_1 > 0 and (values_2 > 0) else values_0 > 0 and values_1 > 0 and (values_2 > 0)",
+        "reason": "accepted by generic scalar normalization frontend",
+        "reason_code": "supported",
+        "resolution": "SUPPORTED",
+        "schema_version": "BIZPROOF-V0.13-UNIVERSAL-CERTIFIER-1",
+        "scientific_outcome": "CERTIFIED_A1",
+        "source_file": "/tmp/bizproof-v013-universal-closure-cqflxs_8/obligation_0.py",
+        "source_sha256": "ec8cd10cb2f3dd6adf02b3a0aefd69fb536a2786a695ed786350a9ff1f046ae0"
+      },
+      "source_sha256": "ec8cd10cb2f3dd6adf02b3a0aefd69fb536a2786a695ed786350a9ff1f046ae0"
+    },
+    {
+      "obligation_id": "return[1]",
+      "result": {
+        "a_level": "A1",
+        "capability": "CONTROL_FLOW_SCALAR",
+        "case_id": "v013-closure::mixed::return[1]",
+        "certified": true,
+        "claim_scope": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+        "dedented": false,
+        "formal": {
+          "backend": "z3",
+          "contract_id": "v013-closure::mixed::return[1]::projection",
+          "counterexample": null,
+          "metadata": {
+            "path_count": 2,
+            "runtime_seconds": 0.005036347021814436,
+            "timeout_ms": 10000,
+            "z3_version": "5.1.0"
+          },
+          "observed_result": null,
+          "postcondition_satisfied": null,
+          "reason": null,
+          "reason_code": null,
+          "replay_validated": null,
+          "verdict": "PROVED"
+        },
+        "full_arbitrary_source_equivalence": false,
+        "function_name": "rule",
+        "inputs": [
+          {
+            "name": "values_0",
+            "type": "int"
+          },
+          {
+            "name": "values_1",
+            "type": "int"
+          },
+          {
+            "name": "values_2",
+            "type": "int"
+          },
+          {
+            "name": "obs_user_accepted",
+            "type": "bool"
+          },
+          {
+            "name": "obs_user_code",
+            "type": "int"
+          }
+        ],
+        "mutant": {
+          "backend": "z3",
+          "contract_id": "v013-closure::mixed::return[1]::mutant",
+          "counterexample": null,
+          "metadata": {
+            "path_count": 2,
+            "runtime_seconds": 0.004731264023575932,
+            "timeout_ms": 10000,
+            "z3_version": "5.1.0"
+          },
+          "observed_result": null,
+          "postcondition_satisfied": null,
+          "reason": null,
+          "reason_code": null,
+          "replay_validated": null,
+          "verdict": "PROVED"
+        },
+        "mutant_operator": "INT_CONSTANT_PLUS_ONE",
+        "mutant_projection": "obs_user_code if values_0 > 1 and values_1 > 0 and (values_2 > 0) else obs_user_code",
+        "mutant_refuted": false,
+        "projection": "obs_user_code if values_0 > 0 and values_1 > 0 and (values_2 > 0) else obs_user_code",
+        "reason": "accepted by generic scalar normalization frontend",
+        "reason_code": "supported",
+        "resolution": "SUPPORTED",
+        "schema_version": "BIZPROOF-V0.13-UNIVERSAL-CERTIFIER-1",
+        "scientific_outcome": "CERTIFIED_A1",
+        "source_file": "/tmp/bizproof-v013-universal-closure-cqflxs_8/obligation_1.py",
+        "source_sha256": "11a8208869d03f3c255a29e971bc7d423c4ab28411c1feecc95e00d418452d1c"
+      },
+      "source_sha256": "11a8208869d03f3c255a29e971bc7d423c4ab28411c1feecc95e00d418452d1c"
+    },
+    {
+      "obligation_id": "state::obs_user_accepted",
+      "result": {
+        "a_level": "A2",
+        "capability": "CONTROL_FLOW_SCALAR",
+        "case_id": "v013-closure::mixed::state::obs_user_accepted",
+        "certified": true,
+        "claim_scope": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+        "dedented": false,
+        "formal": {
+          "backend": "z3",
+          "contract_id": "v013-closure::mixed::state::obs_user_accepted::projection",
+          "counterexample": null,
+          "metadata": {
+            "path_count": 2,
+            "runtime_seconds": 0.006981837039347738,
+            "timeout_ms": 10000,
+            "z3_version": "5.1.0"
+          },
+          "observed_result": null,
+          "postcondition_satisfied": null,
+          "reason": null,
+          "reason_code": null,
+          "replay_validated": null,
+          "verdict": "PROVED"
+        },
+        "full_arbitrary_source_equivalence": false,
+        "function_name": "rule",
+        "inputs": [
+          {
+            "name": "values_0",
+            "type": "int"
+          },
+          {
+            "name": "values_1",
+            "type": "int"
+          },
+          {
+            "name": "values_2",
+            "type": "int"
+          },
+          {
+            "name": "obs_user_accepted",
+            "type": "bool"
+          },
+          {
+            "name": "obs_user_code",
+            "type": "int"
+          }
+        ],
+        "mutant": {
+          "backend": "z3",
+          "contract_id": "v013-closure::mixed::state::obs_user_accepted::mutant",
+          "counterexample": {
+            "obs_user_accepted": false,
+            "obs_user_code": 0,
+            "values_0": 1,
+            "values_1": 1,
+            "values_2": 1
+          },
+          "metadata": {
+            "path_count": 2,
+            "path_index": 0,
+            "runtime_seconds": 0.0058828070177696645,
+            "timeout_ms": 10000,
+            "z3_version": "5.1.0"
+          },
+          "observed_result": true,
+          "postcondition_satisfied": false,
+          "reason": null,
+          "reason_code": null,
+          "replay_validated": true,
+          "verdict": "DISPROVED"
+        },
+        "mutant_operator": "INT_CONSTANT_PLUS_ONE",
+        "mutant_projection": "True if values_0 > 1 and values_1 > 0 and (values_2 > 0) else obs_user_accepted",
+        "mutant_refuted": true,
+        "projection": "True if values_0 > 0 and values_1 > 0 and (values_2 > 0) else obs_user_accepted",
+        "reason": "accepted by generic scalar normalization frontend",
+        "reason_code": "supported",
+        "resolution": "SUPPORTED",
+        "schema_version": "BIZPROOF-V0.13-UNIVERSAL-CERTIFIER-1",
+        "scientific_outcome": "CERTIFIED_A2",
+        "source_file": "/tmp/bizproof-v013-universal-closure-cqflxs_8/obligation_2.py",
+        "source_sha256": "6fb31646d67eb52c7ff7808fddf3262fc5857a5c01e9a103dd260bc30c755d7d"
+      },
+      "source_sha256": "6fb31646d67eb52c7ff7808fddf3262fc5857a5c01e9a103dd260bc30c755d7d"
+    }
+  ],
+  "full_arbitrary_source_equivalence": false,
+  "historical_target_tables_used": false,
+  "human_authored_case_adapters_used": false,
+  "scientific_outcome": "CERTIFIED_A1",
+  "source_sha256": "dccb315ae5da78add8ab3ed5ced4e30d9e76037e6497fa95278f43c59e3a3842",
+  "state_bindings": [
+    "obs_user_accepted"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "adapter": {
+    "function": "adapt_housing_tax_exemption",
+    "function_sha256": "737018af6a47ec54d4ddde259aaa19b5f356fbd13d499d104664a81c2fe574f7",
+    "mutant_function": "mutant_housing_tax_exemption",
+    "mutant_function_sha256": "f515f6797eb6b20787ec211a7e722c6bf7b609330c2b32d593e27aef38abf9c2",
+    "semantic_adapter": "HOUSING_TAX_EXEMPTION"
+  },
+  "assistance_level": "A2",
+  "authoring_mode": "EXPLICIT_MANUAL_SCALAR_SEMANTIC_ADAPTER",
+  "candidate_id": "e293930485085dac",
+  "certificate_digest": "bc199dd741d164e724b16913a515f96fc6750c55dac7c07e393e03cfc35bd1ce",
+  "certificate_id": "CERT-V011-A2-E293930485085DAC",
+  "claim_scope": "Certification is restricted to the explicit scalar semantic projection and primitive-output bindings represented by this evidence bundle.",
+  "evidence": {
+    "proof_digest": "046ecd2b959a75849bf53c2df1080890da99507414d33cd25d6e4093f7276bed",
+    "runtime": {
+      "adapter_mismatches": 0,
+      "comparisons": 576,
+      "mutant_mismatches": 212,
+      "validation_domain": "bounded ages and boolean/0-1 benefit-tax-condition grid"
+    },
+    "symbolic": {
+      "correct_proved": true,
+      "correct_solver_status": "unsat",
+      "mutant_disproved": true,
+      "mutant_solver_status": "sat",
+      "symbolic_domain": "nonnegative ages/benefit/tax scalars with boolean widow/RFR"
+    }
+  },
+  "final_study_complete": false,
+  "protocol_definition": {
+    "line": 75,
+    "text": "- `CERTIFIED_A2`: certified with an explicit human-authored scalar semantic adapter."
+  },
+  "schema_version": "BIZPROOF-V0.11-A2-CERTIFICATE-1",
+  "source": {
+    "class": "exonere_taxe_habitation",
+    "file": "openfisca_france/model/prelevements_obligatoires/taxe_habitation/taxe_habitation.py",
+    "function": "formula_2017_01_01",
+    "function_sha256": "380c76df8507d93708822b52e0aebd111d688b9101cbda6ca71710347fc4859d",
+    "lines": [
+      48,
+      81
+    ],
+    "source_file_sha256": "23a5d0046648b12616caa113be5df727c6e77ac885d23ce7c7eac1dd48ba588f",
+    "source_id": "openfisca_france"
+  },
+  "status": "CERTIFIED_A2",
+  "terminal_outcome": "CERTIFIED_A2",
+  "terminal_outcome_assigned": true
+}

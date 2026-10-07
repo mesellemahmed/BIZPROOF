@@ -1,0 +1,11 @@
+{
+  "candidate_id": "6d009b7961c5d116",
+  "evidence_file": "benchmarks\\v0.11\\a2_adapter_authoring\\source_slices.jsonl",
+  "function_name": "get_offers",
+  "key_path": "source_slice",
+  "reason_code": "LIST_OF_DOMAIN_OBJECTS_RETURN",
+  "selection_rule": "smallest parseable evidence item containing exactly one complete function",
+  "sha256": "2dc814115085bd91ed9309b365cbcf4a2c43690dfe742149052cd04917d3d441",
+  "source": "def get_offers(self, basket, user=None, request=None):\n        \"\"\"\n        Return all offers to apply to the basket.\n\n        This method should be subclassed and extended to provide more\n        sophisticated behaviour.  For instance, you could load extra offers\n        based on the session or the user type.\n        \"\"\"\n        site_offers = self.get_site_offers()\n        basket_offers = self.get_basket_offers(basket, user)\n        user_offers = self.get_user_offers(user)\n        session_offers = self.get_session_offers(request)\n\n        return list(\n            sorted(\n                chain(session_offers, basket_offers, user_offers, site_offers),\n                key=lambda o: o.priority,\n                reverse=True,\n            )\n        )",
+  "source_length": 753
+}

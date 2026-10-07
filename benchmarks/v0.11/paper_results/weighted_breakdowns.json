@@ -1,0 +1,155 @@
+{
+  "by_complexity_weighted": {
+    "HIGH": {
+      "sample_count": 30,
+      "weighted_certification_rate": 0.371523178807947,
+      "weighted_certified_population": 56.1,
+      "weighted_population": 151.0
+    },
+    "LOW": {
+      "sample_count": 30,
+      "weighted_certification_rate": 0.8342105263157895,
+      "weighted_certified_population": 63.4,
+      "weighted_population": 76.0
+    },
+    "MEDIUM": {
+      "sample_count": 30,
+      "weighted_certification_rate": 0.4286282306163022,
+      "weighted_certified_population": 215.6,
+      "weighted_population": 503.0
+    }
+  },
+  "by_source_weighted": {
+    "django_oscar": {
+      "sample_count": 30,
+      "weighted_certification_rate": 0.41313432835820896,
+      "weighted_certified_population": 138.4,
+      "weighted_population": 335.0
+    },
+    "openfisca_france": {
+      "sample_count": 30,
+      "weighted_certification_rate": 0.8590673575129534,
+      "weighted_certified_population": 165.8,
+      "weighted_population": 193.0
+    },
+    "pretix": {
+      "sample_count": 30,
+      "weighted_certification_rate": 0.15297029702970297,
+      "weighted_certified_population": 30.9,
+      "weighted_population": 202.0
+    }
+  },
+  "by_stratum_unweighted": {
+    "django_oscar|HIGH": {
+      "certification_rate_unweighted": 0.3,
+      "certified_count": 3,
+      "complexity": "HIGH",
+      "outcome_counts": {
+        "CERTIFIED_A2": 3,
+        "NOT_CERTIFIED_UNSUPPORTED": 7
+      },
+      "population_size": 52,
+      "sample_size": 10,
+      "source": "django_oscar"
+    },
+    "django_oscar|LOW": {
+      "certification_rate_unweighted": 0.7,
+      "certified_count": 7,
+      "complexity": "LOW",
+      "outcome_counts": {
+        "CERTIFIED_A1": 6,
+        "CERTIFIED_A2": 1,
+        "NOT_CERTIFIED_SEMANTIC_AMBIGUITY": 2,
+        "NOT_CERTIFIED_UNSUPPORTED": 1
+      },
+      "population_size": 32,
+      "sample_size": 10,
+      "source": "django_oscar"
+    },
+    "django_oscar|MEDIUM": {
+      "certification_rate_unweighted": 0.4,
+      "certified_count": 4,
+      "complexity": "MEDIUM",
+      "outcome_counts": {
+        "CERTIFIED_A2": 4,
+        "NOT_CERTIFIED_UNSUPPORTED": 6
+      },
+      "population_size": 251,
+      "sample_size": 10,
+      "source": "django_oscar"
+    },
+    "openfisca_france|HIGH": {
+      "certification_rate_unweighted": 0.6,
+      "certified_count": 6,
+      "complexity": "HIGH",
+      "outcome_counts": {
+        "CERTIFIED_A1": 3,
+        "CERTIFIED_A2": 3,
+        "NOT_CERTIFIED_UNSUPPORTED": 4
+      },
+      "population_size": 36,
+      "sample_size": 10,
+      "source": "openfisca_france"
+    },
+    "openfisca_france|LOW": {
+      "certification_rate_unweighted": 1.0,
+      "certified_count": 10,
+      "complexity": "LOW",
+      "outcome_counts": {
+        "CERTIFIED_A1": 10
+      },
+      "population_size": 29,
+      "sample_size": 10,
+      "source": "openfisca_france"
+    },
+    "openfisca_france|MEDIUM": {
+      "certification_rate_unweighted": 0.9,
+      "certified_count": 9,
+      "complexity": "MEDIUM",
+      "outcome_counts": {
+        "CERTIFIED_A1": 7,
+        "CERTIFIED_A2": 2,
+        "NOT_CERTIFIED_UNSUPPORTED": 1
+      },
+      "population_size": 128,
+      "sample_size": 10,
+      "source": "openfisca_france"
+    },
+    "pretix|HIGH": {
+      "certification_rate_unweighted": 0.3,
+      "certified_count": 3,
+      "complexity": "HIGH",
+      "outcome_counts": {
+        "CERTIFIED_A2": 3,
+        "NOT_CERTIFIED_UNSUPPORTED": 7
+      },
+      "population_size": 63,
+      "sample_size": 10,
+      "source": "pretix"
+    },
+    "pretix|LOW": {
+      "certification_rate_unweighted": 0.8,
+      "certified_count": 8,
+      "complexity": "LOW",
+      "outcome_counts": {
+        "CERTIFIED_A1": 7,
+        "CERTIFIED_A2": 1,
+        "NOT_CERTIFIED_UNSUPPORTED": 2
+      },
+      "population_size": 15,
+      "sample_size": 10,
+      "source": "pretix"
+    },
+    "pretix|MEDIUM": {
+      "certification_rate_unweighted": 0.0,
+      "certified_count": 0,
+      "complexity": "MEDIUM",
+      "outcome_counts": {
+        "NOT_CERTIFIED_UNSUPPORTED": 10
+      },
+      "population_size": 124,
+      "sample_size": 10,
+      "source": "pretix"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "artifacts": [
+    {
+      "bytes": 6084,
+      "path": "src\\bizproof\\semantic_values_v012.py",
+      "sha256": "61f0961b36447b2eb70b65857e1b5b54fe9c57518857e53a031e2314591b0979"
+    },
+    {
+      "bytes": 5070,
+      "path": "tests\\test_semantic_values_v012.py",
+      "sha256": "3f38aa585c4ca02188f3db68ca88dc86cc940aa52bedb1ac88304d62210f98d0"
+    }
+  ],
+  "needs_framework_queryset_summary": 1,
+  "needs_reference_identity_contract": 4,
+  "recovered_candidates": 0,
+  "recovery_claim_made": false,
+  "representation_ready_for_adapter": 5,
+  "schema_version": "BIZPROOF-V0.12-A3-EVIDENCE-1",
+  "scientific_interpretation": "A3 establishes reusable semantic representations for text, bounded ordered sequences, temporal values and explicitly identified references. Candidate recovery requires subsequent adapter replay and certification evidence.",
+  "semantic_layer": "STRUCTURED_SEMANTIC_VALUE",
+  "status": "PASS",
+  "target_population": 10
+}

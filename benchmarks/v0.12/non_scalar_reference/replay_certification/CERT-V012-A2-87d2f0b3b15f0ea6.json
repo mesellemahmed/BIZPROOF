@@ -1,0 +1,40 @@
+{
+  "abstraction_contracts": [
+    "description_template == self._description",
+    "value == str(self.value)",
+    "range_anchor_value == str(range_anchor(self.range))"
+  ],
+  "all_required_gates_pass": true,
+  "candidate_id": "87d2f0b3b15f0ea6",
+  "claim": "formal equivalence evidence for the accepted projection and formal mutant refutation within supported semantics",
+  "concrete_counterexample_replay": {
+    "correct_value": "'25% on Books'",
+    "mutant_value": "'Books on 25%'",
+    "replayed": true,
+    "witness": [
+      "%(value)s on %(range)s",
+      "25%",
+      "Books"
+    ]
+  },
+  "formal_mutant_refutation": {
+    "abstraction": "description template instance '%(value)s on %(range)s'",
+    "formal_property": "exists an admissible semantic input such that correct_output != mutant_output",
+    "formally_refuted": true,
+    "model": "[range_anchor_value = \"\", value = \"A\"]",
+    "solver": "Z3",
+    "solver_result": "SAT"
+  },
+  "mutant_structurally_distinct": true,
+  "prior_v011_outcome": "NOT_CERTIFIED_UNSUPPORTED",
+  "schema_version": "BIZPROOF-V0.12-A2-NONSCALAR-2",
+  "semantic_capability": "STRUCTURED_SEMANTIC_VALUE",
+  "source_equivalence": {
+    "adapter_ast": "BinOp(left=Name(id='description_template', ctx=Load()), op=Mod(), right=Dict(keys=[Constant(value='value'), Constant(value='range')], values=[Name(id='value', ctx=Load()), Name(id='range_anchor_value', ctx=Load())]))",
+    "method": "canonical AST identity after explicit abstraction substitution",
+    "proved": true,
+    "source_ast": "BinOp(left=Name(id='description_template', ctx=Load()), op=Mod(), right=Dict(keys=[Constant(value='value'), Constant(value='range')], values=[Name(id='value', ctx=Load()), Name(id='range_anchor_value', ctx=Load())]))"
+  },
+  "source_slice_sha256": "d95bc113e3f533b19d870bb280fb6effd54c0f97e6c4a62a40fd32b872e20665",
+  "v012_outcome": "CERTIFIED_A2"
+}

@@ -1,0 +1,63 @@
+{
+  "candidate_id": "f5d217dec0cf902b",
+  "candidate_role": "STRICT_CORE",
+  "classification": "SHORT_BUDGET_TIME_SENSITIVE",
+  "frozen_article_results_changed": false,
+  "interpretation": "The 0.5-second CrossHair result is a time-bounded search outcome and is not bitwise/verdict deterministic for the identified candidate. This does not affect BIZPROOF's frozen formal certificate. The 2.0-second budget is evaluated separately for targeted stability.",
+  "original_five_replication_result": {
+    "crosshair_2s_aggregate_stable": true,
+    "exact_match_rate": 0.9971428571428571,
+    "exact_matches": 349,
+    "history": [
+      false,
+      true,
+      true,
+      true,
+      true
+    ],
+    "hypothesis_all_budgets_stable": true,
+    "mismatches": 1,
+    "only_unstable_vector": "f5d217dec0cf902b / CrossHair / 0.5 s",
+    "total_verdict_comparisons": 350
+  },
+  "schema_version": "BIZPROOF-V0.11-CROSSHAIR-TIMING-DIAGNOSTIC-1",
+  "targeted_trials": {
+    "0.5": {
+      "detected": 30,
+      "detection_rate": 1.0,
+      "detection_rate_ci95_wilson": [
+        0.8864866068260312,
+        0.9999999999999999
+      ],
+      "errors": 0,
+      "missed": 0,
+      "runtime_cv": 0.039184548662466366,
+      "runtime_max_seconds": 1.7142930860281922,
+      "runtime_mean_seconds": 1.4575046688939135,
+      "runtime_median_seconds": 1.448310802981723,
+      "runtime_min_seconds": 1.4012640520231798,
+      "runtime_stdev_seconds": 0.05711166262404548,
+      "trials": 30,
+      "unknown": 0
+    },
+    "2.0": {
+      "detected": 30,
+      "detection_rate": 1.0,
+      "detection_rate_ci95_wilson": [
+        0.8864866068260312,
+        0.9999999999999999
+      ],
+      "errors": 0,
+      "missed": 0,
+      "runtime_cv": 0.0677880882018737,
+      "runtime_max_seconds": 1.7807443930068985,
+      "runtime_mean_seconds": 1.4260865463914039,
+      "runtime_median_seconds": 1.4086057045205962,
+      "runtime_min_seconds": 1.2907958249561489,
+      "runtime_stdev_seconds": 0.09667168059028593,
+      "trials": 30,
+      "unknown": 0
+    }
+  },
+  "two_second_targeted_stability": true
+}

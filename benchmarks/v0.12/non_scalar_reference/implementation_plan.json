@@ -1,0 +1,58 @@
+{
+  "first_engineering_goal": "Implement ranks 1 and 2 together if the existing symbolic core permits it. They cover six of the ten frozen target cases.",
+  "implementation_order": [
+    {
+      "capability": "SYMBOLIC_TEXT_VALUE",
+      "rank": 1,
+      "semantic_extension": "First-class text/string value semantics with equality and branch-preserving observations.",
+      "target_candidates": 3,
+      "target_reason_codes": [
+        "TEXT_RETURN"
+      ]
+    },
+    {
+      "capability": "FINITE_STRUCTURED_SEQUENCE",
+      "rank": 2,
+      "semantic_extension": "Bounded ordered sequence semantics with length, positional observation and element abstraction.",
+      "target_candidates": 3,
+      "target_reason_codes": [
+        "LIST_RETURN",
+        "TUPLE_RETURN",
+        "LIST_OF_DOMAIN_OBJECTS_RETURN"
+      ]
+    },
+    {
+      "capability": "DOMAIN_OBJECT_REFERENCE",
+      "rank": 3,
+      "semantic_extension": "Opaque typed reference identity with selected observable fields, without modeling the complete framework object.",
+      "target_candidates": 2,
+      "target_reason_codes": [
+        "DOMAIN_OBJECT_RETURN",
+        "OBJECT_RETURN"
+      ]
+    },
+    {
+      "capability": "OPTIONAL_REFERENCE_OR_DATE",
+      "rank": 4,
+      "semantic_extension": "Tagged optional semantic value with None/present distinction and typed date/reference observation.",
+      "target_candidates": 1,
+      "target_reason_codes": [
+        "REFERENCE_DATE_OR_NONE"
+      ]
+    },
+    {
+      "capability": "QUERYSET_SUMMARY",
+      "rank": 5,
+      "semantic_extension": "Extensional bounded summary of query results rather than a full ORM execution model.",
+      "target_candidates": 1,
+      "target_reason_codes": [
+        "QUERYSET_RETURN"
+      ]
+    }
+  ],
+  "recovery_claims_before_execution": 0,
+  "schema_version": "BIZPROOF-V0.12-A3-IMPLEMENTATION-PLAN-1",
+  "selection_basis": "Frozen W19 reason-code frequencies. All ten candidates remain in the denominator regardless of implementation outcome.",
+  "status": "PLANNED_NOT_EXECUTED",
+  "target_population": 10
+}

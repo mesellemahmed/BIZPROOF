@@ -1,0 +1,10 @@
+{
+  "attempted": 1,
+  "batch": "TRANSACTIONAL_SAVE_BATCH",
+  "candidate_results": {
+    "03e2adf4e4f323b1": "CERTIFIED_A2"
+  },
+  "certified_a2": 1,
+  "failed": 0,
+  "schema_version": "BIZPROOF-V0.12-B3-CERT3-SUMMARY-1"
+}

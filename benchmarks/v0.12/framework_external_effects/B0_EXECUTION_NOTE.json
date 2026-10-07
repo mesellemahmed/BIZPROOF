@@ -1,0 +1,9 @@
+{
+  "correction": "Report generation now reads the frozen target population directly from target_19.json and uses the non-ambiguous name taxonomy_targets.",
+  "effect": "The taxonomy-target list was shadowed before human-report generation, producing a KeyError. The already-generated target, reason-code, source-resolution, AST-profile and attack-order artifacts were unaffected.",
+  "issue": "The initial B0 script reused the top-level variable name 'targets' while inspecting AST assignment targets.",
+  "recovery_claims": 0,
+  "recovery_outcomes_changed": false,
+  "schema_version": "BIZPROOF-V0.12-B0-EXECUTION-NOTE-1",
+  "scientific_data_changed": false
+}

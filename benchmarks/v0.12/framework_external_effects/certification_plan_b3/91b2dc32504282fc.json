@@ -1,0 +1,29 @@
+{
+  "candidate_id": "91b2dc32504282fc",
+  "certification_batch": "STATE_RETURN_BATCH",
+  "class_name": "LineDiscountRegistry",
+  "function_name": "discount",
+  "lineno": 215,
+  "matched_provenance_hash": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+  "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\basket\\utils.py",
+  "provenance_resolution": "STRUCTURED_DIRECT_HASH_RESOLVED",
+  "reason_codes": "MULTI_STATE_MUTATION_OUTSIDE_FORMAL_SUBSET",
+  "semantic_observation": "ordered discount append, consume effect, and branch-dependent tax-cache invalidation",
+  "semantic_route": "DISCOUNT_SEQUENCE_AND_CACHE_INVALIDATION",
+  "source": "def discount(self, amount, quantity, incl_tax=True, offer=None):\n        self._discounts.append(DiscountApplication(amount, quantity, incl_tax, offer))\n        self.consume(quantity, offer=offer)\n        if incl_tax:\n            self._discount_incl_tax = None\n        else:\n            self._discount_excl_tax = None",
+  "source_sha256": "013e10398bd80cee91264ec81f916c01eea7ce95585b475196f7f2fae88dc475",
+  "structural_profile": {
+    "attribute_writes": [
+      "_discount_incl_tax",
+      "_discount_excl_tax"
+    ],
+    "branch_count": 1,
+    "calls": [
+      "append",
+      "consume",
+      "DiscountApplication"
+    ],
+    "return_count": 0,
+    "subscript_writes": 0
+  }
+}

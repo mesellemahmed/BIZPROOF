@@ -1,0 +1,156 @@
+{
+  "current_state": {
+    "external_certification_started": false,
+    "external_cohort_frozen": false,
+    "external_outcomes_observed": false,
+    "functions_classified": false,
+    "functions_selected": false,
+    "project_source_snapshots_materialized": false,
+    "projects_ranked": false,
+    "projects_selected": false,
+    "source_universe_frozen": true
+  },
+  "future_steps_locked": {
+    "BIZPROOF_execution_before_cohort_freeze": false,
+    "apply_E0_project_hash_ranking": true,
+    "apply_E0_stratified_function_selection": true,
+    "classify_functions_before_certification": true,
+    "clone_exact_commits": true,
+    "compute_full_python_snapshot_identity": true,
+    "exclude_historical_source_body_overlap": true,
+    "reconstruct_historical_source_body_hashes": true,
+    "select_exactly_10_functions_per_project": true,
+    "select_exactly_120_cases": true,
+    "select_exactly_12_projects": true
+  },
+  "important_interpretation": "The 18-project universe is prospectively declared before function extraction or BIZPROOF evaluation. The eventual 12-project cohort is not manually chosen from these repositories; it must be obtained by the deterministic hash ranking frozen in E0.",
+  "parent_design": {
+    "commit": "3932cdc304497404c80695635f95789a6bf0a052",
+    "tag": "v0.12-external-design-freeze"
+  },
+  "phase": "V0.12-E1A",
+  "projects": [
+    {
+      "canonical_project_identity": "odoo/odoo",
+      "domain_family": "ERP_CRM_COMMERCE",
+      "frozen_git_commit": "53b04123100626cd1cd4e3dc336c9ae699d92c45",
+      "repository_url": "https://github.com/odoo/odoo.git"
+    },
+    {
+      "canonical_project_identity": "saleor/saleor",
+      "domain_family": "ECOMMERCE",
+      "frozen_git_commit": "8385ca60ecefa3a068aed3d1a28188e096cdc543",
+      "repository_url": "https://github.com/saleor/saleor.git"
+    },
+    {
+      "canonical_project_identity": "frappe/erpnext",
+      "domain_family": "ERP",
+      "frozen_git_commit": "83904a65a1ccaf7bfcacbeb5fb8ab78bce48cb19",
+      "repository_url": "https://github.com/frappe/erpnext.git"
+    },
+    {
+      "canonical_project_identity": "netbox-community/netbox",
+      "domain_family": "NETWORK_INFRASTRUCTURE",
+      "frozen_git_commit": "5a9a9d2a25318ff68fdd567959a2d4f1f7080b21",
+      "repository_url": "https://github.com/netbox-community/netbox.git"
+    },
+    {
+      "canonical_project_identity": "nautobot/nautobot",
+      "domain_family": "NETWORK_AUTOMATION",
+      "frozen_git_commit": "86658f87b35d655a47545234522ddf9e67d0cd8f",
+      "repository_url": "https://github.com/nautobot/nautobot.git"
+    },
+    {
+      "canonical_project_identity": "healthchecks/healthchecks",
+      "domain_family": "MONITORING",
+      "frozen_git_commit": "3addc677dbcb8ce1d36c1e4b801d034d40e2843d",
+      "repository_url": "https://github.com/healthchecks/healthchecks.git"
+    },
+    {
+      "canonical_project_identity": "paperless-ngx/paperless-ngx",
+      "domain_family": "DOCUMENT_MANAGEMENT",
+      "frozen_git_commit": "f1ae9c00ac02df7b5c8c4b6d3e8c7db08555fb17",
+      "repository_url": "https://github.com/paperless-ngx/paperless-ngx.git"
+    },
+    {
+      "canonical_project_identity": "pretalx/pretalx",
+      "domain_family": "EVENT_MANAGEMENT",
+      "frozen_git_commit": "d36cd30c525a80bed63dd1d7ac4483a498c9248c",
+      "repository_url": "https://github.com/pretalx/pretalx.git"
+    },
+    {
+      "canonical_project_identity": "wagtail/wagtail",
+      "domain_family": "CONTENT_MANAGEMENT",
+      "frozen_git_commit": "ae4a16dee644638019dd508b448a5315000745f7",
+      "repository_url": "https://github.com/wagtail/wagtail.git"
+    },
+    {
+      "canonical_project_identity": "django-cms/django-cms",
+      "domain_family": "CONTENT_MANAGEMENT",
+      "frozen_git_commit": "e87eef5bb40d7f674195295f39a0dc60c12b5664",
+      "repository_url": "https://github.com/django-cms/django-cms.git"
+    },
+    {
+      "canonical_project_identity": "ckan/ckan",
+      "domain_family": "DATA_MANAGEMENT",
+      "frozen_git_commit": "cb8172446c463316efdf12a3e5aa0e0d386adf32",
+      "repository_url": "https://github.com/ckan/ckan.git"
+    },
+    {
+      "canonical_project_identity": "element-hq/synapse",
+      "domain_family": "MESSAGING",
+      "frozen_git_commit": "4f5524043c40985eb39900d7c459ace4bf804ee9",
+      "repository_url": "https://github.com/element-hq/synapse.git"
+    },
+    {
+      "canonical_project_identity": "apache/superset",
+      "domain_family": "ANALYTICS",
+      "frozen_git_commit": "f6155b9e9ea438986914366807cb7ef8cffa9d60",
+      "repository_url": "https://github.com/apache/superset.git"
+    },
+    {
+      "canonical_project_identity": "openstack/keystone",
+      "domain_family": "IDENTITY_ACCESS",
+      "frozen_git_commit": "77db3e62a449b7cadda589fa24407124766bdba8",
+      "repository_url": "https://github.com/openstack/keystone.git"
+    },
+    {
+      "canonical_project_identity": "openstack/horizon",
+      "domain_family": "CLOUD_MANAGEMENT",
+      "frozen_git_commit": "f92afbc4fa55c1cbdad2caffe11610b6732c728a",
+      "repository_url": "https://github.com/openstack/horizon.git"
+    },
+    {
+      "canonical_project_identity": "ansible/awx",
+      "domain_family": "AUTOMATION",
+      "frozen_git_commit": "33a9eb7d15aedca7222354b68cde834480415913",
+      "repository_url": "https://github.com/ansible/awx.git"
+    },
+    {
+      "canonical_project_identity": "apache/airflow",
+      "domain_family": "WORKFLOW_ORCHESTRATION",
+      "frozen_git_commit": "7800fc44c07a2fc2457a4aee41cf12db9579538c",
+      "repository_url": "https://github.com/apache/airflow.git"
+    },
+    {
+      "canonical_project_identity": "home-assistant/core",
+      "domain_family": "IOT_AUTOMATION",
+      "frozen_git_commit": "a57de59dade26cbe074a449938ac1853f2085c9a",
+      "repository_url": "https://github.com/home-assistant/core.git"
+    }
+  ],
+  "role": "prospective source universe from which the E0 deterministic project ranking will select the external 12-project holdout",
+  "schema_version": "BIZPROOF-V0.12-EXTERNAL-SOURCE-UNIVERSE-1",
+  "source_universe_sha256": "e1e04fc1ff5679e0d2fef65937a0fdf470a7fe1b8e3f0578f4264f9840a1d9d8",
+  "universe_construction": {
+    "construction_mode": "prospective_domain_diverse_public_repository_universe",
+    "declared_before_BIZPROOF_external_outcomes": true,
+    "declared_project_count": 18,
+    "exact_git_HEAD_commit_frozen": true,
+    "manual_outcome_based_exclusion": false,
+    "manual_outcome_based_inclusion": false,
+    "repository_availability_checked_before_freeze": true,
+    "reserve_project_count": 6,
+    "selection_target_project_count": 12
+  }
+}

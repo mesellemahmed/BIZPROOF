@@ -1,0 +1,24 @@
+{
+  "attributes": [
+    "filter",
+    "item",
+    "quotas",
+    "subevent",
+    "variation"
+  ],
+  "candidate_id": "9cc9063a46d23cde",
+  "classification": "QUERY_PLAN_CANDIDATE",
+  "eager_methods": [],
+  "function_name": "quotas",
+  "has_attribute_mutation": false,
+  "has_await": false,
+  "has_yield": false,
+  "query_methods": [
+    "filter",
+    "filter"
+  ],
+  "recovery_claim": false,
+  "schema_version": "BIZPROOF-V0.12-A6-QUERYSET-AUDIT-1",
+  "side_effect_methods": [],
+  "unknown_calls": []
+}

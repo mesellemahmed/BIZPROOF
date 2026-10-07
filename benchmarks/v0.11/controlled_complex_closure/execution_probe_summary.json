@@ -1,0 +1,15 @@
+{
+  "attempted": 9,
+  "benchmark_version": "0.11.0",
+  "certification_claim": false,
+  "execution_established": 9,
+  "execution_not_established": 0,
+  "failed_candidate_ids": [],
+  "passed": true,
+  "pending_after": 13,
+  "pending_before": 13,
+  "phase": "COMPLEX_CONTROLLED_EXECUTION_PROBE",
+  "terminal_outcomes_assigned": 0,
+  "terminalized_after": 77,
+  "terminalized_before": 77
+}

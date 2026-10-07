@@ -1,0 +1,12 @@
+{
+  "attempted": 2,
+  "batch": "B4_BATCH2_STATE_EFFECT",
+  "candidate_results": {
+    "674ea6fd35fa6c39": "CERTIFIED_A2",
+    "e8850260c2763222": "CERTIFIED_A2"
+  },
+  "certified_a2": 2,
+  "failed": 0,
+  "prospective_mutant_protocol": true,
+  "schema_version": "BIZPROOF-V0.12-B4-CERT2-SUMMARY-1"
+}

@@ -1,0 +1,37 @@
+{
+  "bizproof_external_execution_started": false,
+  "case_count": 120,
+  "cases_per_project": 10,
+  "cohort_sha256": "8278187b459ce67d400230b7acce84943968e2ba502e7e9371c53987251f9033",
+  "construction_algorithm": "prospectively frozen before source materialization",
+  "eligible_project_count": 18,
+  "evaluation_order_frozen": true,
+  "external_outcomes_observed": false,
+  "historical_source_overlap": 0,
+  "project_distribution": {
+    "apache/airflow": 10,
+    "apache/superset": 10,
+    "ckan/ckan": 10,
+    "element-hq/synapse": 10,
+    "frappe/erpnext": 10,
+    "healthchecks/healthchecks": 10,
+    "home-assistant/core": 10,
+    "nautobot/nautobot": 10,
+    "netbox-community/netbox": 10,
+    "openstack/keystone": 10,
+    "paperless-ngx/paperless-ngx": 10,
+    "saleor/saleor": 10
+  },
+  "python_runtime": "3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)]",
+  "schema_version": "BIZPROOF-V0.12-EXTERNAL-COHORT-1",
+  "selected_project_count": 12,
+  "source_universe_project_count": 18,
+  "stratum_distribution": {
+    "S1_LOCAL_SCALAR_CONTROL": 24,
+    "S2_STRUCTURED_CONTAINER": 24,
+    "S3_NESTED_VECTOR_HIGHER_ORDER": 24,
+    "S4_STATE_EFFECT": 24,
+    "S5_BINDING_EXTERNAL_DOMAIN": 24
+  },
+  "unique_selected_source_bodies": 120
+}

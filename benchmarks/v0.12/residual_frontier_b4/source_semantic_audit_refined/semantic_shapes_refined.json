@@ -1,0 +1,563 @@
+{
+  "13df73dbd2825f80": {
+    "candidate_id": "13df73dbd2825f80",
+    "category": "COMPLEX_CONTAINER_SEMANTICS",
+    "class_name": "OrderSyncResult",
+    "function_name": "to_result_dict",
+    "lineno": 140,
+    "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\datasync.py",
+    "project": "pretix",
+    "semantic_shape_available": true,
+    "shape": {
+      "arguments": [
+        "self"
+      ],
+      "ast_node_count": 39,
+      "attribute_writes": [],
+      "bool_operation_count": 0,
+      "branch_count": 0,
+      "calls": [],
+      "comparison_count": 0,
+      "comprehensions": {
+        "dict": 0,
+        "generator": 0,
+        "list": 0,
+        "set": 0
+      },
+      "container_mutation_calls": [],
+      "container_score": 0,
+      "control_score": 0,
+      "domain_logic_calls": [],
+      "entity_like_calls": [],
+      "function_name": "to_result_dict",
+      "higher_order_score": 0,
+      "lambda_count": 0,
+      "loop_count": 0,
+      "nested_functions": [],
+      "parameter_like_calls": [],
+      "raise_count": 0,
+      "return_count": 1,
+      "sequence_transform_calls": [],
+      "state_effect_calls": [],
+      "state_effect_score": 0,
+      "subscript_writes": [],
+      "try_count": 0,
+      "type_domain_calls": [],
+      "vector_logic_score": 0
+    },
+    "source": "def to_result_dict(self):\n        return {\n            \"position\": self.order_position_id,\n            \"object_type\": self.external_object_type,\n            \"external_id_field\": self.external_id_field,\n            \"id_value\": self.id_value,\n            \"external_link_href\": self.external_link_href,\n            \"external_link_display_name\": self.external_link_display_name,\n            **self.sync_info,\n        }",
+    "source_status": "DIRECT_HASH_RESOLVED"
+  },
+  "1a2de6edb11465fe": {
+    "candidate_id": "1a2de6edb11465fe",
+    "category": "NESTED_OR_HIGHER_ORDER_LOGIC",
+    "class_name": "bail_reel_solidaire_plafond_total",
+    "function_name": "formula",
+    "lineno": 45,
+    "path": "external_sources\\v0.6\\openfisca_france\\openfisca_france\\model\\prestations\\bail_reel_solidaire.py",
+    "project": "openfisca_france",
+    "semantic_shape_available": true,
+    "shape": {
+      "arguments": [
+        "menage",
+        "parameters",
+        "period"
+      ],
+      "ast_node_count": 184,
+      "attribute_writes": [],
+      "bool_operation_count": 0,
+      "branch_count": 1,
+      "calls": [
+        "menage",
+        "nb_persons",
+        "select",
+        "select",
+        "where",
+        "parameters",
+        "calcul_plafonds_zone",
+        "range",
+        "range"
+      ],
+      "comparison_count": 5,
+      "comprehensions": {
+        "dict": 0,
+        "generator": 0,
+        "list": 4,
+        "set": 0
+      },
+      "container_mutation_calls": [],
+      "container_score": 4,
+      "control_score": 6,
+      "domain_logic_calls": [
+        "select",
+        "select",
+        "where"
+      ],
+      "entity_like_calls": [
+        "menage"
+      ],
+      "function_name": "formula",
+      "higher_order_score": 8,
+      "lambda_count": 0,
+      "loop_count": 0,
+      "nested_functions": [
+        "calcul_plafonds_zone"
+      ],
+      "parameter_like_calls": [
+        "parameters"
+      ],
+      "raise_count": 0,
+      "return_count": 2,
+      "sequence_transform_calls": [],
+      "state_effect_calls": [],
+      "state_effect_score": 0,
+      "subscript_writes": [],
+      "try_count": 0,
+      "type_domain_calls": [],
+      "vector_logic_score": 5
+    },
+    "source": "def formula(menage, period, parameters):\n        params = parameters(period).prestations_sociales.bail_reel_solidaire\n        zones_abc_eligibles = params.parametres_generaux.zones_abc_eligibles\n        plafonds_par_zones = params.plafonds_par_zones\n        zones_menage = menage('bail_reel_solidaire_zones_menage', period)\n        nb_personnes = menage.nb_persons()\n        nb_personnes_max = params.parametres_generaux.nombre_personnes_maximum\n\n        def calcul_plafonds_zone(zone):\n            plafond_zone = plafonds_par_zones[f'zone_{zone}']\n            plafond_base = select(\n                [nb_personnes == i if i < 6 else nb_personnes >= i for i in range(1, 7)],\n                [plafond_zone[f'nb_personnes_{i}'] for i in range(1, 7)]\n                )\n            plafond_supp = where(\n                nb_personnes > nb_personnes_max,\n                (nb_personnes - nb_personnes_max) * plafond_zone.nb_personnes_supplementaires,\n                0\n                )\n            return plafond_base + plafond_supp\n\n        return select(\n            [zones_menage == zone for zone in zones_abc_eligibles],\n            [calcul_plafonds_zone(zone) for zone in zones_abc_eligibles]\n            )",
+    "source_status": "SAME_RECORD_DIRECT_HASH_NAME_RESOLVED"
+  },
+  "3fd2d8b8a76b4834": {
+    "candidate_id": "3fd2d8b8a76b4834",
+    "category": "NESTED_OR_HIGHER_ORDER_LOGIC",
+    "class_name": "rsa_enfant_a_charge",
+    "function_name": "formula_2009_06_01",
+    "lineno": 322,
+    "path": "external_sources\\v0.6\\openfisca_france\\openfisca_france\\model\\prestations\\minima_sociaux\\rsa.py",
+    "project": "openfisca_france",
+    "semantic_shape_available": true,
+    "shape": {
+      "arguments": [
+        "individu",
+        "parameters",
+        "period"
+      ],
+      "ast_node_count": 254,
+      "attribute_writes": [],
+      "bool_operation_count": 0,
+      "branch_count": 0,
+      "calls": [
+        "individu",
+        "individu",
+        "individu",
+        "individu",
+        "famille",
+        "not_",
+        "famille",
+        "where",
+        "famille",
+        "sum",
+        "not_",
+        "ouvre_droit_majoration",
+        "not_",
+        "parameters",
+        "not_",
+        "not_"
+      ],
+      "comparison_count": 5,
+      "comprehensions": {
+        "dict": 0,
+        "generator": 0,
+        "list": 0,
+        "set": 0
+      },
+      "container_mutation_calls": [],
+      "container_score": 0,
+      "control_score": 5,
+      "domain_logic_calls": [
+        "not_",
+        "where",
+        "not_",
+        "not_",
+        "not_",
+        "not_"
+      ],
+      "entity_like_calls": [
+        "individu",
+        "individu",
+        "individu",
+        "individu"
+      ],
+      "function_name": "formula_2009_06_01",
+      "higher_order_score": 8,
+      "lambda_count": 0,
+      "loop_count": 0,
+      "nested_functions": [
+        "ouvre_droit_majoration"
+      ],
+      "parameter_like_calls": [
+        "parameters"
+      ],
+      "raise_count": 0,
+      "return_count": 2,
+      "sequence_transform_calls": [
+        "sum"
+      ],
+      "state_effect_calls": [],
+      "state_effect_score": 0,
+      "subscript_writes": [],
+      "try_count": 0,
+      "type_domain_calls": [],
+      "vector_logic_score": 11
+    },
+    "source": "def formula_2009_06_01(individu, period, parameters):\n        P_rsa = parameters(period).prestations_sociales.solidarite_insertion.minima_sociaux.rsa\n\n        enfant = individu('est_enfant_dans_famille', period)\n        age = individu('age', period)\n        autonomie_financiere = individu('autonomie_financiere', period)\n\n        ressources = individu('rsa_revenus_determination_enfant_a_charge', period)\n\n        age_pac = P_rsa.rsa_cond.age_pac\n        majo_rsa_femmes_enceintes = P_rsa.rsa_maj.majoration_isolement_en_base_rsa.femmes_enceintes\n        majo_rsa_par_enfant_a_charge = P_rsa.rsa_maj.majoration_isolement_en_base_rsa.par_enfant_a_charge\n        montant_base_rsa = P_rsa.rsa_m.montant_de_base_du_rsa\n        taux_personne_supp = P_rsa.rsa_maj.maj_montant_max.par_enfant_supplementaire\n\n        # R\u00e8gle CAF: Si un enfant touche des ressources, et que son impact global\n        # (augmentation du montant forfaitaire - ressources prises en compte) fait baisser le montant du RSA, alors\n        # il doit \u00eatre exclu du calcul du RSA.\n        # Cette r\u00e8gle est complexe, on applique donc l'approximation suivante:\n        #       - Cas g\u00e9n\u00e9ral: enfant pris en compte si ressources <= augmentation du MF pour un enfant\n        #                      suppl\u00e9mentaire (taux marginal).\n        #       - Si la pr\u00e9sence de l'enfant ouvre droit au RSA major\u00e9, pris en compte si\n        #                      ressources <= majoration du RSA pour isolement avec un enfant.\n        def ouvre_droit_majoration():\n            famille = individu.famille\n            enceinte_fam = famille('enceinte_fam', period)\n            isole = not_(famille('en_couple', period))\n            isolement_recent = famille('rsa_isolement_recent', period)\n\n            presence_autres_enfants = famille.sum(enfant * not_(autonomie_financiere) * (age < age_pac)) > 1\n\n            return (\n                not_(enceinte_fam)\n                * isole\n                * isolement_recent\n                * not_(presence_autres_enfants)\n                )\n\n        rsa_enf_charge = (\n            enfant\n            * not_(autonomie_financiere)\n            * (age < age_pac)\n            * where(\n                ouvre_droit_majoration(),\n                ressources < (majo_rsa_femmes_enceintes - 1 + majo_rsa_par_enfant_a_charge) * montant_base_rsa,\n                ressources < taux_personne_supp * montant_base_rsa\n                )\n            )\n\n        return rsa_enf_charge",
+    "source_status": "SAME_RECORD_DIRECT_HASH_NAME_RESOLVED"
+  },
+  "674ea6fd35fa6c39": {
+    "candidate_id": "674ea6fd35fa6c39",
+    "semantic_shape_available": false
+  },
+  "801278c4d91c2185": {
+    "candidate_id": "801278c4d91c2185",
+    "category": "OTHER_FROZEN_SCOPE_LIMITATION",
+    "class_name": "TaxRule",
+    "function_name": "__str__",
+    "lineno": 437,
+    "path": "external_sources\\v0.6\\pretix\\src\\pretix\\base\\models\\tax.py",
+    "project": "pretix",
+    "semantic_shape_available": true,
+    "shape": {
+      "arguments": [
+        "self"
+      ],
+      "ast_node_count": 88,
+      "attribute_writes": [],
+      "bool_operation_count": 0,
+      "branch_count": 3,
+      "calls": [
+        "str",
+        "format",
+        "format",
+        "format",
+        "_",
+        "_",
+        "_"
+      ],
+      "comparison_count": 0,
+      "comprehensions": {
+        "dict": 0,
+        "generator": 0,
+        "list": 0,
+        "set": 0
+      },
+      "container_mutation_calls": [],
+      "container_score": 0,
+      "control_score": 3,
+      "domain_logic_calls": [],
+      "entity_like_calls": [],
+      "function_name": "__str__",
+      "higher_order_score": 0,
+      "lambda_count": 0,
+      "loop_count": 0,
+      "nested_functions": [],
+      "parameter_like_calls": [],
+      "raise_count": 0,
+      "return_count": 2,
+      "sequence_transform_calls": [],
+      "state_effect_calls": [],
+      "state_effect_score": 0,
+      "subscript_writes": [],
+      "try_count": 0,
+      "type_domain_calls": [],
+      "vector_logic_score": 0
+    },
+    "source": "def __str__(self):\n        if self.price_includes_tax:\n            s = _('incl. {rate}% {name}').format(rate=self.rate, name=self.name)\n        else:\n            s = _('plus {rate}% {name}').format(rate=self.rate, name=self.name)\n        if self.eu_reverse_charge:\n            s += ' ({})'.format(_('reverse charge enabled'))\n        if self.internal_name:\n            return f'{self.internal_name} ({s})'\n        return str(s)",
+    "source_status": "SAME_RECORD_DIRECT_HASH_NAME_RESOLVED"
+  },
+  "8b3e90ca7b531556": {
+    "candidate_id": "8b3e90ca7b531556",
+    "category": "OTHER_FROZEN_SCOPE_LIMITATION",
+    "class_name": "FixedRateTax",
+    "function_name": "parent_pricing_policy",
+    "lineno": 292,
+    "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\partner\\strategy.py",
+    "project": "django_oscar",
+    "semantic_shape_available": true,
+    "shape": {
+      "arguments": [
+        "children_stock",
+        "product",
+        "self"
+      ],
+      "ast_node_count": 99,
+      "attribute_writes": [],
+      "bool_operation_count": 0,
+      "branch_count": 1,
+      "calls": [
+        "get_rate",
+        "get_exponent",
+        "quantize",
+        "FixedPrice",
+        "UnavailablePrice"
+      ],
+      "comparison_count": 1,
+      "comprehensions": {
+        "dict": 0,
+        "generator": 0,
+        "list": 1,
+        "set": 0
+      },
+      "container_mutation_calls": [],
+      "container_score": 1,
+      "control_score": 2,
+      "domain_logic_calls": [],
+      "entity_like_calls": [],
+      "function_name": "parent_pricing_policy",
+      "higher_order_score": 1,
+      "lambda_count": 0,
+      "loop_count": 0,
+      "nested_functions": [],
+      "parameter_like_calls": [],
+      "raise_count": 0,
+      "return_count": 2,
+      "sequence_transform_calls": [],
+      "state_effect_calls": [],
+      "state_effect_score": 0,
+      "subscript_writes": [],
+      "try_count": 0,
+      "type_domain_calls": [
+        "quantize"
+      ],
+      "vector_logic_score": 1
+    },
+    "source": "def parent_pricing_policy(self, product, children_stock):\n        stockrecords = [x[1] for x in children_stock if x[1] is not None]\n        if not stockrecords:\n            return UnavailablePrice()\n\n        # We take price from first record\n        stockrecord = stockrecords[0]\n        rate = self.get_rate(product, stockrecord)\n        exponent = self.get_exponent(stockrecord)\n        tax = (stockrecord.price * rate).quantize(exponent)\n\n        return FixedPrice(\n            currency=stockrecord.price_currency, excl_tax=stockrecord.price, tax=tax\n        )",
+    "source_status": "HASH_NAME_RESOLVED"
+  },
+  "a74d4580a9effb73": {
+    "candidate_id": "a74d4580a9effb73",
+    "category": "NESTED_OR_HIGHER_ORDER_LOGIC",
+    "class_name": "eligibilite_per_etudiant",
+    "function_name": "formula_2022",
+    "lineno": 47,
+    "path": "external_sources\\v0.6\\openfisca_france\\openfisca_france\\model\\prestations\\aides_exceptionnelles\\prime_exceptionnelle_rentree.py",
+    "project": "openfisca_france",
+    "semantic_shape_available": true,
+    "shape": {
+      "arguments": [
+        "individu",
+        "period"
+      ],
+      "ast_node_count": 72,
+      "attribute_writes": [],
+      "bool_operation_count": 0,
+      "branch_count": 0,
+      "calls": [
+        "period",
+        "where",
+        "not_",
+        "where",
+        "or_",
+        "and_",
+        "has_role",
+        "famille",
+        "individu",
+        "individu"
+      ],
+      "comparison_count": 2,
+      "comprehensions": {
+        "dict": 0,
+        "generator": 0,
+        "list": 0,
+        "set": 0
+      },
+      "container_mutation_calls": [],
+      "container_score": 0,
+      "control_score": 2,
+      "domain_logic_calls": [
+        "where",
+        "not_",
+        "where",
+        "or_",
+        "and_"
+      ],
+      "entity_like_calls": [
+        "individu.has_role",
+        "individu.famille",
+        "individu",
+        "individu"
+      ],
+      "function_name": "formula_2022",
+      "higher_order_score": 5,
+      "lambda_count": 0,
+      "loop_count": 0,
+      "nested_functions": [],
+      "parameter_like_calls": [],
+      "raise_count": 0,
+      "return_count": 1,
+      "sequence_transform_calls": [],
+      "state_effect_calls": [],
+      "state_effect_score": 0,
+      "subscript_writes": [],
+      "try_count": 0,
+      "type_domain_calls": [],
+      "vector_logic_score": 9
+    },
+    "source": "def formula_2022(individu, period):\n        juin_2022 = periods.period('2022-06')\n        eligibilite_etudiant = where(\n            not_(or_(individu('bourse_criteres_sociaux', juin_2022) > 0, individu('bourse_enseignement_sup', juin_2022) > 0)),\n            False,\n            where(\n                and_(individu.has_role(Famille.PARENT), individu.famille('eligibilite_per', period)),\n                False,\n                True\n                )\n            )\n\n        return eligibilite_etudiant",
+    "source_status": "DIRECT_HASH_RESOLVED"
+  },
+  "e8850260c2763222": {
+    "candidate_id": "e8850260c2763222",
+    "category": "STATEFUL_SIDE_EFFECTING_LOGIC",
+    "class_name": "MultibuyDiscountBenefit",
+    "function_name": "apply",
+    "lineno": 346,
+    "path": "external_sources\\v0.6\\django_oscar\\src\\oscar\\apps\\offer\\benefits.py",
+    "project": "django_oscar",
+    "semantic_shape_available": true,
+    "shape": {
+      "arguments": [
+        "basket",
+        "condition",
+        "offer",
+        "self"
+      ],
+      "ast_node_count": 94,
+      "attribute_writes": [],
+      "bool_operation_count": 0,
+      "branch_count": 2,
+      "calls": [
+        "get_applicable_lines",
+        "quantity_with_offer_discount",
+        "apply_discount",
+        "consume_items",
+        "BasketDiscount"
+      ],
+      "comparison_count": 1,
+      "comprehensions": {
+        "dict": 0,
+        "generator": 0,
+        "list": 0,
+        "set": 0
+      },
+      "container_mutation_calls": [],
+      "container_score": 0,
+      "control_score": 3,
+      "domain_logic_calls": [],
+      "entity_like_calls": [],
+      "function_name": "apply",
+      "higher_order_score": 0,
+      "lambda_count": 0,
+      "loop_count": 0,
+      "nested_functions": [],
+      "parameter_like_calls": [],
+      "raise_count": 0,
+      "return_count": 3,
+      "sequence_transform_calls": [],
+      "state_effect_calls": [],
+      "state_effect_score": 0,
+      "subscript_writes": [],
+      "try_count": 0,
+      "type_domain_calls": [],
+      "vector_logic_score": 0
+    },
+    "source": "def apply(self, basket, condition, offer, **kwargs):\n        line_tuples = self.get_applicable_lines(offer, basket)\n        if not line_tuples:\n            return ZERO_DISCOUNT\n\n        # Cheapest line gives free product\n        discount, line = line_tuples[0]\n        if line.quantity_with_offer_discount(offer) == 0:\n            apply_discount(line, discount, 1, offer)\n\n            affected_lines = [(line, discount, 1)]\n            condition.consume_items(offer, basket, affected_lines)\n\n            return BasketDiscount(discount)\n        else:\n            return ZERO_DISCOUNT",
+    "source_status": "SAME_RECORD_DIRECT_HASH_NAME_RESOLVED"
+  },
+  "eb41eb351df073ef": {
+    "candidate_id": "eb41eb351df073ef",
+    "category": "BINDING_OR_DOMAIN_UNRESOLVED",
+    "class_name": "aide_mobilite_eligible",
+    "function_name": "formula_2021_06_09",
+    "lineno": 227,
+    "path": "external_sources\\v0.6\\openfisca_france\\openfisca_france\\model\\prestations\\aide_mobilite.py",
+    "project": "openfisca_france",
+    "semantic_shape_available": true,
+    "shape": {
+      "arguments": [
+        "individu",
+        "parameters",
+        "period"
+      ],
+      "ast_node_count": 597,
+      "attribute_writes": [],
+      "bool_operation_count": 0,
+      "branch_count": 0,
+      "calls": [
+        "individu",
+        "individu",
+        "individu",
+        "astype",
+        "individu",
+        "min_",
+        "individu",
+        "individu",
+        "individu",
+        "individu",
+        "individu",
+        "individu",
+        "individu",
+        "not_",
+        "menage",
+        "individu",
+        "not_",
+        "individu",
+        "not_",
+        "individu",
+        "individu",
+        "timedelta64",
+        "individu",
+        "parameters",
+        "not_"
+      ],
+      "comparison_count": 21,
+      "comprehensions": {
+        "dict": 0,
+        "generator": 0,
+        "list": 0,
+        "set": 0
+      },
+      "container_mutation_calls": [],
+      "container_score": 0,
+      "control_score": 21,
+      "domain_logic_calls": [
+        "min_",
+        "not_",
+        "not_",
+        "not_",
+        "not_"
+      ],
+      "entity_like_calls": [
+        "individu",
+        "individu",
+        "individu",
+        "individu",
+        "individu",
+        "individu",
+        "individu",
+        "individu",
+        "individu",
+        "individu",
+        "individu",
+        "individu.menage",
+        "individu",
+        "individu",
+        "individu",
+        "individu",
+        "individu"
+      ],
+      "function_name": "formula_2021_06_09",
+      "higher_order_score": 5,
+      "lambda_count": 0,
+      "loop_count": 0,
+      "nested_functions": [],
+      "parameter_like_calls": [
+        "parameters"
+      ],
+      "raise_count": 0,
+      "return_count": 1,
+      "sequence_transform_calls": [],
+      "state_effect_calls": [],
+      "state_effect_score": 0,
+      "subscript_writes": [],
+      "try_count": 0,
+      "type_domain_calls": [
+        "astype"
+      ],
+      "vector_logic_score": 24
+    },
+    "source": "def formula_2021_06_09(individu, period, parameters):\n\n        #  1\n        contexte = individu('contexte_activite_pole_emploi', period)\n        contrat_travail_debut = individu('contrat_de_travail_debut', period)\n        date_debut_type_activite_recherche_emploi = individu('date_debut_recherche_emploi', period)\n        contrat_de_travail_debut_en_mois = contrat_travail_debut.astype('M8[M]')\n        amob_date_de_demande = individu('aide_mobilite_date_demande', period)\n        parametres_amob = parameters(period).prestations_sociales.transport.aide_mobilite\n        date_contrat_limite_contexte_formation_reprise = min_((contrat_de_travail_debut_en_mois + 1) + (contrat_travail_debut - contrat_de_travail_debut_en_mois),\n                                               (contrat_de_travail_debut_en_mois + 2) - timedelta64(1, 'D'))\n        dates_demandes_amob_eligibles_formation_reprise = amob_date_de_demande <= date_contrat_limite_contexte_formation_reprise\n\n        date_limite_contrat_contexte_recherche = date_debut_type_activite_recherche_emploi + (parametres_amob.delai_max - 1)  # 7 jours de date \u00e0 date\n        dates_demandes_amob_eligibles_recherche = amob_date_de_demande <= date_limite_contrat_contexte_recherche\n\n        en_recherche_emploi = contexte == ContexteActivitePoleEmploi.recherche_emploi\n        en_reprise_emploi = contexte == ContexteActivitePoleEmploi.reprise_emploi\n        en_formation = contexte == ContexteActivitePoleEmploi.formation\n\n        contextes_eligibles = (en_recherche_emploi * dates_demandes_amob_eligibles_recherche)\\\n            + ((en_reprise_emploi + en_formation) * dates_demandes_amob_eligibles_formation_reprise)\n\n        #  2\n        activite_en_recherche_emploi = individu('types_activite_en_recherche_emploi', period)\n        reprises_emploi_types_activites = individu('contrat_de_travail_type', period)\n        formation_validee = individu('formation_validee_pole_emploi', period)\n        formation_financee = individu('formation_financee_ou_cofinancee', period)\n\n        # Activites en recherche d'emploi\n        en_entretien_embauche = (activite_en_recherche_emploi == TypesActiviteEnRechercheEmploi.entretien_embauche) * en_recherche_emploi\n\n        activites_en_recherche_emploi_eligibles = not_((activite_en_recherche_emploi == TypesActiviteEnRechercheEmploi.entretien_embauche)\n            + (activite_en_recherche_emploi == TypesActiviteEnRechercheEmploi.indeterminee))\\\n            * en_recherche_emploi\n\n        reprises_types_activites_formation = reprises_emploi_types_activites == TypesContrat.formation\n        reprises_types_activites_cdi = reprises_emploi_types_activites == TypesContrat.cdi\n        reprises_types_activites_cdd_ctt = (reprises_emploi_types_activites == TypesContrat.cdd) + (reprises_emploi_types_activites == TypesContrat.ctt)\n\n        #  La formation doit \u00eatre sup\u00e9rieure ou \u00e9gale \u00e0 40 heures\n        duree_formation = individu('duree_formation', period)\n        periode_formation_eligible = duree_formation >= parametres_amob.duree_de_formation_minimum\n\n        #  La dur\u00e9e de contrat de l'emploi doit \u00eatre d'au moins 3 mois\n        duree_de_contrat_3_mois_minimum = individu('contrat_de_travail_duree', period) >= parametres_amob.duree_de_contrat_minimum\n\n        reprises_cdd_ctt_eligibles = reprises_types_activites_cdd_ctt * duree_de_contrat_3_mois_minimum\n\n        types_et_duree_activite_eligibles = (((reprises_types_activites_cdi + reprises_cdd_ctt_eligibles) * (en_reprise_emploi + en_entretien_embauche))\n                                            + (reprises_types_activites_formation\n                                               * en_formation\n                                               * formation_validee\n                                               * formation_financee\n                                               * periode_formation_eligible))\n\n        activites_eligibles = (types_et_duree_activite_eligibles + activites_en_recherche_emploi_eligibles)\n\n        #  3\n        categories_eligibles = individu('aide_mobilite_categories_demandeur_emploi_eligibles', period)\n\n        #  4\n        montants_allocations_eligibles = individu('aide_mobilite_ressources_eligibles', period)\n\n        #  5\n        lieux_activite_eligibles = not_(individu('lieu_emploi_ou_formation', period) == TypesLieuEmploiFormation.non_renseigne)\n\n        #  6\n        lieu_de_residence = individu.menage('residence', period)\n        temps_de_trajet = individu('aide_mobilite_duree_trajet', period)\n        distance_aller_retour = individu('distance_activite_domicile', period) * 2\n\n        temps_de_trajet_min = parametres_amob.duree_trajet_minimum\n        reside_en_metropole = lieu_de_residence == TypesLieuResidence.metropole\n        residence_renseignee = not_(lieu_de_residence == TypesLieuResidence.non_renseigne)\n\n        distances_et_durees_aller_retour_eligibles = (((distance_aller_retour > parametres_amob.distance_minimum.metropole) * reside_en_metropole)\n                                                    + ((distance_aller_retour > parametres_amob.distance_minimum.hors_metropole) * (not_(reside_en_metropole) * residence_renseignee))\n                                                    + ((temps_de_trajet > temps_de_trajet_min) * residence_renseignee))\n\n        #  7\n        dispositifs_formations = individu('dispositifs_formation', period)\n        dispositifs_formations_eligibles = dispositifs_formations == DispositifsDeFormation.autre\n\n        eligibilite_amob = (contextes_eligibles\n                       * activites_eligibles\n                       * categories_eligibles\n                       * montants_allocations_eligibles\n                       * lieux_activite_eligibles\n                       * distances_et_durees_aller_retour_eligibles\n                       * dispositifs_formations_eligibles)\n\n        return eligibilite_amob",
+    "source_status": "DIRECT_HASH_RESOLVED"
+  }
+}
